@@ -9,10 +9,6 @@ import theme from "../theme"
 import styled from '@emotion/styled'
 
 interface Props {
-  issue: {
-    short: string
-    path: string
-  }
   doi: string
 }
 
@@ -47,22 +43,12 @@ const styles = {
   }
 }
 
-const Info = ({doi, issue}: Props) => (
+const Info = ({ doi }: Props) => (
   <Wrapper>
     <Container maxWidth="md">
       <Grid container={true}>
-        <Grid item={true} xs={4}>
-          <Button
-            color="default"
-            size="large"
-            sx={styles.navBtn}
-            onClick={() => location.href = issue.path}
-          >
-            <ChevronLeftIcon/> {issue.short}
-          </Button>
-        </Grid>
         <Grid item={true} xs={8} sx={styles.info}>
-          Micro-Edition | DOI: <a href={`https://doi.org/${doi}`}>{doi}</a>
+          DOI: <a href={`https://doi.org/${doi}`}>{doi}</a>
         </Grid>
       </Grid>
     </Container>

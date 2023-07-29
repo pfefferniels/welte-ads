@@ -12,7 +12,7 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import { Close, Code, FolderOpen, GetApp } from "@mui/icons-material"
+import { Close, Code, GetApp } from "@mui/icons-material"
 import { navigate } from 'gatsby'
 
 interface Props {
@@ -62,54 +62,6 @@ const Download = ({open, close, repository}: Props) => {
                   edge="end"
                   aria-label="download"
                   onClick={() => navigate('/data/edition.xml')}
-                  size="large">
-                  <GetApp />
-                </IconButton>
-              </ListItemSecondaryAction>
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <Code />
-              </ListItemIcon>
-              <ListItemText primary="Customization ODD" />
-              <ListItemSecondaryAction>
-                {/* THESE ARE EXAMPLES. ADJUST AS NEEDED */}
-                <IconButton
-                  edge="end"
-                  aria-label="download"
-                  onClick={() => navigate('/edition.odd')}
-                  size="large">
-                  <GetApp />
-                </IconButton>
-              </ListItemSecondaryAction>
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <Code />
-              </ListItemIcon>
-              <ListItemText primary="RelaxNG schema" />
-              <ListItemSecondaryAction>
-                {/* THESE ARE EXAMPLES. ADJUST AS NEEDED */}
-                <IconButton
-                  edge="end"
-                  aria-label="download"
-                  onClick={() => navigate('/edition.rng')}
-                  size="large">
-                  <GetApp />
-                </IconButton>
-              </ListItemSecondaryAction>
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <FolderOpen />
-              </ListItemIcon>
-              <ListItemText primary="Download all (zipped)" />
-              {/* THESE ARE EXAMPLES. ADJUST AS NEEDED */}
-              <ListItemSecondaryAction>
-                <IconButton
-                  edge="end"
-                  aria-label="download"
-                  onClick={() => navigate('/edition.zip')}
                   size="large">
                   <GetApp />
                 </IconButton>

@@ -21,10 +21,6 @@ interface Props {
   siteTitle: string
   menuLinks: Links[]
   doi: string
-  issue: {
-    short: string
-    path: string
-  }
 }
 
 // Styled components
@@ -65,20 +61,10 @@ const LogoBkgr = styled.span(() => ({
 
 // Main Component
 
-const Header = ({ location, menuLinks, doi, issue }: Props) => (
+const Header = ({ location, menuLinks, doi }: Props) => (
     <Wrapper>
-      <Banner>
-        <Container maxWidth="md">
-          <Logo>
-            <Link to="/">
-              <LogoBkgr />
-              <img src={titleImg} alt="Scholarly Editing Logo" width={200} />
-            </Link>
-          </Logo>
-        </Container>
-      </Banner>
-      <Info doi={doi} issue={issue}/>
       <Nav location={location} menuLinks={menuLinks} />
+      <Info doi={doi} />
     </Wrapper>
 )
 

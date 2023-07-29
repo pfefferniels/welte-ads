@@ -40,10 +40,6 @@ const Layout = ({ location, children, editionPage = false }: Props) => {
         siteMetadata {
           title
           doi
-          issue {
-            short
-            path
-          }
           repository
           menuLinks {
             name
@@ -54,7 +50,7 @@ const Layout = ({ location, children, editionPage = false }: Props) => {
     }
   `)
   
-  const {repository, title, menuLinks, doi, issue} = data.site.siteMetadata
+  const { repository, title, menuLinks, doi } = data.site.siteMetadata
 
   let footer = <Footer repository={repository}/>
   if (editionPage) {
@@ -68,7 +64,6 @@ const Layout = ({ location, children, editionPage = false }: Props) => {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Header
-            issue={issue}
             location={location || ''}
             siteTitle={title}
             menuLinks={menuLinks}

@@ -19,8 +19,6 @@ const metadata = {
   authors: config.siteMetadata.authors,
   authors_struct: config.siteMetadata.authors_struct,
   doi: config.siteMetadata.doi,
-  issue: config.siteMetadata.issue.full,
-  group_order: config.siteMetadata.group_order
 }
 
 fs.writeFile('public/metadata.json', JSON.stringify(metadata, null, 2), (err) => {

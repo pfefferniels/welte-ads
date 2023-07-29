@@ -1,41 +1,34 @@
-const basePath = "/se-microedition-template"
-const title = "Micro-Edition Template"
-const htmlTitle = "Micro-Edition <em>Template</em>"
+const basePath = "/ads"
+const title = "Welte Ads"
+const htmlTitle = "Collection Welte Ads"
 
 module.exports = {
   pathPrefix: basePath,
   trailingSlash: `always`,
   siteMetadata: {
-    issue: {
-      full: "Example Volume",
-      short: "Vol XX",
-      path: "/issues/path"
-    },
     doi: '10.55520/TBA',
-    group_order: 1, // Oder of this micro-edition in the volume's micro-edition section.
     title,
     htmlTitle,
-    description: `A Scholarly Editing micro-edition. ${title}. Edited by AUTHORS.`,
+    description: `A collection of Welte Advertisements. Edited by Niels Pfeffer.`,
     authors: [
       {
-        "first": "First",
-        "middle": "M. N.",
-        "last": "Last",
+        "first": "Niels",
+        "last": "Pfeffer",
         "affiliations": [
-          "Institution"
+          "..."
         ],
         orcid:"0000-0000-0000-0000"
       }
     ],
-    repository: "https://gitlab.com/scholarly-editing/se-microedition-template",
+    repository: "https://gitlab.com/pfefferniels/welte-ads",
     menuLinks: [
       {
         name: 'introduction',
         link: '/'
       },
       {
-        name: 'edition',
-        link: '/ad001' // This needs to match the filename of the TEI
+        name: 'Overview',
+        link: '/overview'
       },
     ]
   },
@@ -48,13 +41,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/images/`,
+        path: `../images`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `static/tei`,
+        path: `../tei`,
       },
     },
     {
@@ -71,7 +64,7 @@ module.exports = {
         name: `Scholarly Editing`,
         short_name: `Scholarly Editing`,
         start_url: `/`,
-        icon: `src/images/se-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/se-icon.png`,
       },
     },
   ],

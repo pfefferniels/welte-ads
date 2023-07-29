@@ -47,14 +47,6 @@ const Footer = ({repository} : Props) => (
           <br /> © {new Date().getFullYear()} Scholarly Editing.
           <br /> ISSN 2167-1257 | DOI <a href="https://doi.org/10.55520/6ZH06EW2">10.55520/6ZH06EW2</a>
         </Grid>
-        <Grid item={true} xs={3} sx={styles.logo}>
-          <a href="http://www.documentaryediting.org">
-            <img
-              src="https://scholarlyediting.reclaim.hosting/se-archive/template_images/adelogo.png"
-              alt="Logo of the Association for Documentary Editing"
-            />
-          </a>
-        </Grid>
       </Grid>
     </Container>
   </Box>

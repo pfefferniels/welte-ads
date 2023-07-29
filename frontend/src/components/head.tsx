@@ -14,9 +14,6 @@ const Head = ({ description, lang, title }: Props) => {
       query {
         site {
           siteMetadata {
-            issue {
-              full
-            }
             title
             description
             authors {
@@ -30,7 +27,7 @@ const Head = ({ description, lang, title }: Props) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const fullTitle = `${title} | ${site.siteMetadata.title} | ${site.siteMetadata.issue.full} | Scholarly Editing` 
+  const fullTitle = `${title} | ${site.siteMetadata.title}` 
 
   return (
     <>

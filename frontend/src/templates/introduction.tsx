@@ -61,7 +61,6 @@ export default function Introduction({pageContext}: Props) {
             htmlTitle
             authors {
               first
-              middle
               last
               affiliations
               orcid
@@ -86,7 +85,7 @@ export default function Introduction({pageContext}: Props) {
       {a.first} {a.middle || ''} {a.last}, {a.affiliations.join(', ')}
       {a.orcid && 
         <a href={`https://orcid.org/${a.orcid}`} className={classes.orcid}>
-          <GatsbyImage image={orcid.nodes[0].childImageSharp.gatsbyImageData} alt="ORCID logo"/>
+          <GatsbyImage image={orcid?.nodes[0]?.childImageSharp.gatsbyImageData || ''} alt="ORCID logo"/>
         </a>
       }
       <br/>
