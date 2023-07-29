@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="BL_0003212_19220601_201_0005.pdf_page_1.png" />
+            <zone points="1744,2989 1744,2645 2050,2645 2050,2989"
+                id="eSc_textblock_a280cbcc" />
+            <zone points="1723,2659 1723,2802 2312,2802 2312,2659"
+                id="eSc_textblock_d3d372a6" />
+            <zone points="1737,2995 1737,3040 2030,3040 2030,2995"
+                id="eSc_textblock_ea3bd570" />
+            <zone points="2055,2960 2055,3239 2310,3239 2310,2960"
+                id="eSc_textblock_083f7a78" />
+            <zone points="1731,3258 1731,3391 2321,3391 2321,3258"
+                id="eSc_textblock_6282f9b6" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_a280cbcc">
+            <lb />Steinway-Welte
+        </div>
+        <div facs="#eSc_textblock_d3d372a6">
+            <lb />Piano Player
+        </div>
+        <div facs="#eSc_textblock_ea3bd570">
+            <lb />The Instrument of the Immortals
+        </div>
+        <div facs="#eSc_textblock_083f7a78">
+            <lb />The first recording
+            <lb />piano ever invented
+            <lb />the Welte Mignon re-<lb />mains
+            unchallanged as
+            <lb />the world's greatest in-
+            <lb />strument of reproduction
+            <lb />Renderings by
+            <lb />
+            <persName>Grieg</persName>,
+            <persName>Paderewski</persName>,
+            <persName>Busoni</persName>,
+            <lb />
+            <persName>Pachmann</persName>,
+            <persName>Josef Hofmann</persName>,
+            <lb />
+            <persName>Hambourg</persName>,
+            <persName>
+                Leonard
+                <lb />Borwick
+            </persName>,
+            <persName>Fanny Davies</persName>, etc.
+        </div>
+        <div facs="#eSc_textblock_6282f9b6">
+            <lb />Steinway &amp; Sons
+            <lb />Steinway Hall
+            <lb />15 &amp; 17 Lower Seymour St., London W.I
+            <lb />Branches and Agencies throughout the World
+            <lb />Write for particulars</div>
+    </text>
+</TEI>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+</teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="BL_0001578_19131115_121_0032.pdf_page_1.png"/>
+         <zone points="315,2071 315,2460 929,2460 929,2071"
+               id="eSc_textblock_6103b8eb"/>
+         <zone points="347,2483 347,2655 865,2655 865,2483"
+               id="eSc_textblock_f7822bda"/>
+         <zone points="249,2677 249,2840 978,2840 978,2677"
+               id="eSc_textblock_7146ee55"/>
+         <zone points="372,2877 372,2978 860,2978 860,2877"
+               id="eSc_textblock_527025e7"/>
+         <zone points="249,3032 249,3251 988,3251 988,3032"
+               id="eSc_textblock_0ca5f1e3"/>
+      </surface>
+   </facsimile>
+   <text>
+      <div facs="#eSc_textblock_6103b8eb">
+         <lb/>The <corpName>Welte-
+         <lb/>Mignon</corpName>
+      </div>
+      <div facs="#eSc_textblock_f7822bda">
+         <lb/>After many inventions
+         <lb/>and many failures
+         <lb/>the perfect instrument
+      </div>
+      <div facs="#eSc_textblock_7146ee55">
+         <lb/>The <corpName>Welte-Mignon</corpName>
+         faithfully reproduces the
+         <lb/>individual interpretation of the
+         <lb/>greatest Pianists
+      </div>
+      <div facs="#eSc_textblock_527025e7">
+         <lb/>Call and hear it or
+         <lb/>write for catalogue
+      </div>
+      <div facs="#eSc_textblock_0ca5f1e3">
+         <lb/><corpName>Steinway and Sons</corpName>,
+         <lb/><placeName>Steinway Hall,<lb/>Lower Seymour Street, W.</placeName>
+      </div>
+   </text>
+</TEI>
