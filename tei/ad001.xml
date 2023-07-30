@@ -98,14 +98,24 @@
             <lb />
             <hi rendition="#u">
                 <hi rendition="#i">
-                    The Instrument of the Immortals
+                    <seg ana="#analysis001">
+                        The Instrument of the Immortals
+                    </seg>
+                    <interp
+                        xml:id="analysis001"
+                        resp="#np"
+                        type="topic">immortality</interp>
                 </hi>
             </hi>
         </div>
         <div facs="#eSc_textblock_083f7a78">
-            <lb /><hi rendition="#i">T</hi>he first recording <lb />piano ever invented <lb />the <orgName>Welte Mignon</orgName>
-            re-<lb />mains unchallanged as <lb />the world's greatest in- <lb />strument of
-            reproduction <lb />
+            <lb /><hi rendition="#i">T</hi>he first recording
+            <lb />piano ever invented
+            <lb />the <orgName>Welte Mignon</orgName> re-
+            <lb />mains unchallanged as
+            <lb />the world's greatest in-
+            <lb />strument of reproduction
+            <lb />
             <hi rendition="#c">
                 <hi rendition="#i">
                     Renderings by

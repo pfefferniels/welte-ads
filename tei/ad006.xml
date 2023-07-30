@@ -161,10 +161,21 @@
             career when<lb />those marvelous fingers performed miracles, you could<lb />count it a
             great event in your life. This is what the<lb />WELTE MIGNON Reproducing Piano will do
             for you.<lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
-            played his soul into the Welte, knowing<lb />full well that thus could he better pass on
-            to coming gen-<lb />erations the perfect expression of his genius. It is the soul-<lb />expression
-            that you feel when you listen to the Welte; and<lb />you may hear it not only once, but
-            as often as you wish.<lb /><persName corresp="https://d-nb.info/gnd/118986724">
+            <seg ana="#analysis001">played his soul into the Welte</seg>,
+            <interp xml:id="analysis001" resp="#np" type="topic">soul imprint</interp>
+            knowing<lb />full well that thus could he better pass on
+            to coming gen-<lb />erations the perfect expression of his genius. It is the
+            <seg ana="#analysis001">soul-<lb />expression</seg>
+            that 
+            <seg ana="#analysis002">you feel when you listen to the Welte</seg>
+            <interp xml:id="analysis002" resp="#np" type="topic">touched listener</interp>;
+            and<lb />
+            <seg ana="#analysis003">
+                you may hear it not only once, but
+                as often as you wish.
+            </seg>
+            <interp xml:id="analysis003" resp="#np" type="topic">repeatability</interp>
+            <lb /><persName corresp="https://d-nb.info/gnd/118986724">
             Paderewski</persName>, <persName>Lhevinne</persName>, <persName corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
             <persName corresp="https://d-nb.info/gnd/116014490">de
             Pachman</persName>, <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>
@@ -172,8 +183,12 @@
             <persName>Saint-<lb />Saens</persName>, <persName
                 corresp="https://d-nb.info/gnd/118697641">Grieg</persName>, <persname>d'Albert</persname>–156
             masters in all have played into the Welte<lb />for you the very essence of their musical
-            personalities, for Welte re-<lb />production is not "stencil cutting," but absolute
-            tonal duplication.<lb />There are over 5,000 record-rolls in the Welte repertoire. Come<lb />in
+            personalities, for Welte re-<lb />production is not "stencil cutting," but
+            <seg ana="#analysis004">
+                absolute tonal duplication.
+            </seg>
+            <interp xml:id="analysis004" resp="#np" type="topic">faithful reproduction</interp>
+            <lb />There are over 5,000 record-rolls in the Welte repertoire. Come<lb />in
             to-day and hear your favorites. And bear in mind that the Welte<lb />is within your
             means, for it is sold on terms–your own within reason.</div>
         <div facs="#eSc_textblock_80803b8a">

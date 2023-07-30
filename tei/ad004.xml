@@ -107,15 +107,22 @@
                 </hi>
             </head>
             <lb />REPRODUKTIONS-PIANO
-            und -FLÜGEL <lb />Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen. </div>
+            und -FLÜGEL <lb />
+            <seg ana="#analysis000">
+                Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen.
+            </seg>
+            <interp xml:id="analysis000" resp="#np" type="topic">faithful reproduction</interp>
+        </div>
         <div facs="#eSc_textblock_5f4c4dd1">
             <lb />Welte-Philharmonie-Orgel<lb />für Privat-Salons,<lb />das individuelle Spiel
-            erster Orgel-Virtuosen wiedergebend. </div>
+            erster Orgel-Virtuosen wiedergebend.
+        </div>
         <div facs="#eSc_textblock_1a33dd7c">
             <lb />M. Welte &amp; Söhne G.m.b.H.<lb />Gegründet 1832.<lb />Freiburg in Baden.<lb />Vertreten
             an allen grösseren Plätzen der Welt. Erprobt in jedem Klima.<lb />Höchste Auszeichnungen
             auf allen Weltausstellungen.<lb />Ausstellung zur Messe bei <orgName>Hug &amp; Co.</orgName>,
-            Markgrafenstr.10. </div>
+            Markgrafenstr.10.
+        </div>
         <div facs="#eSc_textblock_0cb55a56" />
         <div facs="#eSc_textblock_648b9252" />
         <div facs="#eSc_textblock_931f14ec" />

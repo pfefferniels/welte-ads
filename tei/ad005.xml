@@ -116,7 +116,11 @@
             <persName>Felix Weingartner</persName>
         </div>
         <div facs="#eSc_textblock_bbaf7988">
-            <lb />Das Welte Mignon ist das Wunder der Wunder.<lb /><persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>.</div>
+            <lb />Das Welte Mignon ist das
+            <seg ana="#analysis000">Wunder der Wunder</seg>.
+            <interp xml:id="analysis000" resp="#np" type="topic">miracle</interp>
+            <lb />
+            <persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>.</div>
         <div facs="#eSc_textblock_0ace7367">
             <lb />Eine unbedingt geniale Erfindung von hohem <lb />künstlerischen Wert.<lb />Mottl.</div>
         <div facs="#eSc_textblock_910008bc">
@@ -127,7 +131,12 @@
             Wirkung dieses<lb />Instruments noch seiner kolossalen Bedeutung ent-<lb />spricht. <lb /><persName
                 corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>.</div>
         <div facs="#eSc_textblock_d5bad035">
-            <lb />Man muss das Wunder gehört haben, um es<lb />zu glauben.<lb />Max Pauer.</div>
+            <lb />
+            <seg ana="#analysis001">
+                Man muss das Wunder gehört haben, um es<lb />zu glauben.
+            </seg>
+            <interp xml:id="analysis001" resp="#np" type="topic">miracle</interp>
+            <lb />Max Pauer.</div>
         <div facs="#eSc_textblock_c91feaa0">
             <lb />Welte Mignon ist für mich das unerreichte Ideal<lb />aller Musikinstrumente.<lb />Max
             Reger.</div>
@@ -138,14 +147,22 @@
             <lb />Mit dem Welte Mignon ist, wie die berühmtesten Künstler anerkennen, ein
             phantastisch scheinender<lb />Gedanke verwirklicht, nämlich das Klavierspiel eines
             Künstlers mit all' seinen persönlichen Eigenschaften –<lb />des Anschlags, der
-            Phrasierung, des Pedalgebrauchs etc. zu verewigen. Die Wiedergaben des Mignon haben<lb />hedeb
+            Phrasierung, des Pedalgebrauchs etc.
+            <seg ana="#analysis002">zu verewigen</seg>
+            <interp xml:id="analysis002" resp="#np" type="topic">immortality</interp>. Die Wiedergaben des Mignon haben
+            <lb />jeden
             Rest des mechanischen verloren. Dass es sich um eine Erfindung von ausserordentlicher
             künstlerischer<lb />Bedeutung handelt, beweist ihr Gebrauch im <orgName>K. K. Konservatorium in
-            Wien</orgName> zu Studienzwecken. Der Besitzer<lb />eines Welte Mignon kann sich jederzeit von den
-            berühmtesten Musikern, wie <persName>d'Albert</persName>, <persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>,
-            <persName>Lamond</persName>, <persName>Mottl</persName>
-            <lb /><persName>Reger</persName>, <persName>Strauss</persName>,
-            <persName corresp="https://d-nb.info/gnd/118986724">Paderewsky</persName> etc. vorspielen lassen.<lb />
+            Wien</orgName> zu Studienzwecken.
+            <seg ana="#analysis003">
+                Der Besitzer<lb />eines Welte Mignon kann sich jederzeit von den
+                berühmtesten Musikern, wie <persName>d'Albert</persName>, <persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>,
+                <persName>Lamond</persName>, <persName>Mottl</persName>
+                <lb /><persName>Reger</persName>, <persName>Strauss</persName>,
+                <persName corresp="https://d-nb.info/gnd/118986724">Paderewsky</persName> etc. vorspielen lassen.
+            </seg>
+            <interp xml:id="analysis003" resp="#np" type="topic">permanent availability</interp>
+            <lb />
             
             <hi rendition="#c">
                 <hi rendition="#b">

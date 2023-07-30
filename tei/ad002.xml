@@ -90,8 +90,14 @@
             <hi rendition="#c">
                 <hi rendition="#i">
                     <hi rendition="#u">
-                        The Instrument of the Immortals
-                    </hi>
+                        <seg ana="#analysis001">
+                            The Instrument of the Immortals
+                        </seg>
+                        <interp
+                            xml:id="analysis001"
+                            resp="#np"
+                            type="topic">immortality</interp>
+                        </hi>
                 </hi>
             </hi>
         </div>
@@ -100,8 +106,13 @@
             <head>
                 <orgName>Steinway</orgName><lb />Welte<lb />Grand
             </head>
-            <lb />The Welte-Mignon, which<lb />reproduces
-            absolutely the<lb />Artists' original renderings,<lb />retains its position amongst<lb />the
+            <lb />The Welte-Mignon, which<lb />
+            <seg ana="#analysis002">
+                reproduces absolutely the
+                <lb />Artists' original renderings
+            </seg>,
+            <interp xml:id="analysis002" resp="#np" type="topic">faithful reproduction</interp>
+            <lb />retains its position amongst<lb />the
             World's foremost and<lb />greatest reproducing instru-<lb />ments.<lb />The Steinway
             Welte is<lb />made also as a self-contained<lb />upright piano. Welte cabi-<lb />nets
             when desired can be<lb />supplied separately for at-<lb />tachment to any pianoforte.<lb />Renderings
@@ -161,7 +172,9 @@
             <hi rendition="#i">U</hi>ntil the Welte-Mignon<lb />made its appearance all the<lb />piano-playing
             <sic>'</sic>instruments<lb />aimed at making the interpretation<lb />of a piece of music
             mechanically<lb />correct; the Welte-Mignon<lb />caught the great masters in the act of<lb />playing,
-            and fixed their style for ever. </div>
+            and <seg ana="#analysis003">fixed their style for ever</seg>. 
+            <interp xml:id="analysis003" resp="#np" type="topic">immortality</interp>
+        </div>
         <div facs="#eSc_textblock_c6563afe">
             <lb />
             <head>

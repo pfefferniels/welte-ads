@@ -99,10 +99,15 @@
             <lb />bietet die Möglichkeit, das Originalspiel der<lb />ersten Pianisten der Welt im
             eigenen<lb />Heim zu hören.</div>
         <div facs="#eSc_textblock_77dbd8b9">
-            <lb />Ein Druck auf den Knopf genügt, um einen <persName>d'Albert</persName>, <persName
+            <lb />
+            <seg ana="#analysis000">
+                Ein Druck auf den Knopf genügt, um einen <persName>d'Albert</persName>, <persName
                 corresp="https://d-nb.info/gnd/118518011">
                 Busoni</persName>, <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
-            , <lb /><persName>Reisenauer</persName> etc. zu zitieren.</div>
+            , <lb /><persName>Reisenauer</persName> etc. zu zitieren.
+            </seg>
+            <interp xml:id="analysis000" resp="#np" type="topic">permanent availability</interp>
+        </div>
         <div facs="#eSc_textblock_5dbfb787">
             <lb />M. Welte &amp; Söhne<lb />Hoflieferanten<lb />Freiburg i. Baden.</div>
         <div facs="#eSc_textblock_8679924f" />

@@ -11,7 +11,7 @@
                </orgName>
             </author>
             <respStmt>
-               <persName>
+               <persName xml:id="#np">
                   <surname>Pfeffer</surname>
                   <forename>Niels</forename>
                </persName>
@@ -99,8 +99,17 @@
       <div facs="#eSc_textblock_7146ee55">
          <hi rendition="#c">
             <hi rendition="#i">
-               <lb />The <orgName>Welte-Mignon</orgName> faithfully reproduces the <lb />individual
-               interpretation of the <lb />greatest Pianists </hi>
+               <lb />The <orgName>Welte-Mignon</orgName>
+               <seg ana="#analysis001">
+                  faithfully reproduces the
+                  <lb />individual interpretation of the
+                  <lb />greatest Pianists
+               </seg>
+               <interp
+                  xml:id="analysis001"
+                  resp="#np"
+                  type="topic">faithful reproduction</interp>
+            </hi>
          </hi>
       </div>
       <div facs="#eSc_textblock_527025e7">
