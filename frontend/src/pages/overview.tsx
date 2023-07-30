@@ -39,7 +39,7 @@ const Overview = () => {
     } as Metadata));
 
     return (
-        <Layout location="/overview" editionPage={false}>
+        <Layout location="Overview" editionPage={false}>
             <Container component="main" maxWidth="md">
                 <TableContainer>
                     <Table sx={{ minWidth: 650 }}>
