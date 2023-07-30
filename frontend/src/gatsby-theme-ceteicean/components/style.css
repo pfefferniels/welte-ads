@@ -1,4 +1,5 @@
-tei-persname, tei-orgname {
+.name {
+    cursor: pointer;
     text-decoration-line: underline;
     text-decoration-style: dotted;
 }

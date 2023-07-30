@@ -10,6 +10,7 @@ import Pb from "./Pb"
 import Layout from "../../components/layout"
 import Container from "@mui/material/Container"
 import './style.css'
+import Name from "./Name"
 
 interface Props {
   pageContext: {
@@ -46,6 +47,8 @@ const facs: Fac[] = queryData.facs.nodes
     "tei-tei": Tei,
     "tei-teiheader": TeiHeader,
     "tei-pb": (props) => <Pb facs={facs} {...props}/>,
+    "tei-persname": Name,
+    "tei-orgname": Name
   }
 
   return(
