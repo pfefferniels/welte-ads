@@ -28,7 +28,6 @@ export interface Fac {
 }
 
 const EditionCeteicean = ({pageContext}: Props) => {
-
   const queryData = useStaticQuery(graphql`
   query general {
     facs: allFile(filter: {relativeDirectory: {in: "facs"}}) {

@@ -88,14 +88,22 @@
     <text>
         <div facs="#eSc_textblock_a280cbcc">
             <lb />
-            <orgName>Steinway-Welte</orgName>
+            <head>
+                <orgName>Steinway-Welte</orgName>
+            </head>
         </div>
         <div facs="#eSc_textblock_d3d372a6">
             <lb />Piano Player </div>
         <div facs="#eSc_textblock_ea3bd570">
-            <lb />The Instrument of the Immortals </div>
+            <lb />
+            <hi rendition="#u">
+                <hi rendition="#i">
+                    The Instrument of the Immortals
+                </hi>
+            </hi>
+        </div>
         <div facs="#eSc_textblock_083f7a78">
-            <lb />The first recording <lb />piano ever invented <lb />the <orgName>Welte Mignon</orgName>
+            <lb /><hi rendition="#i">T</hi>he first recording <lb />piano ever invented <lb />the <orgName>Welte Mignon</orgName>
             re-<lb />mains unchallanged as <lb />the world's greatest in- <lb />strument of
             reproduction <lb />
             <hi rendition="#c">

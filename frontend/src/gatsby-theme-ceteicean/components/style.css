@@ -1,10 +1,10 @@
-tei-persname {
+tei-persname, tei-orgname {
     text-decoration-line: underline;
-    text-decoration-style: double;
+    text-decoration-style: dotted;
 }
 
-tei-orgName {
-    text-decoration: underline;
+tei-head {
+    font-size: 1.5em;
 }
 
 tei-div {

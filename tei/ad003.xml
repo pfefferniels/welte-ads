@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Ad in "The Tatler"</title>
+                <title type="sub">Dec 6 1922</title>
+                <author>
+                    <orgName key="steinway">
+                        Steinway &amp; Sons
+                    </orgName>
+                </author>
+                <respStmt>
+                    <persName>
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <persName>
+                        <persName>
+                            <surname>Pfeffer</surname>
+                            <forename>Niels</forename>
+                        </persName>
+                    </persName>
+                </publisher>
+                <pubPlace>Tübingen</pubPlace>
+                <date>2023</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <p>
+                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            License
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>The instrument of the immortals: Steinway Welte Grand</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">The instrument of the immortals</title>
+                        <title level="m" type="sub">Steinway Welte Grand</title>
+                        <author>
+                            <orgName>Steinway &amp; Sons</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>The Tatler</orgName>
+                        </publisher>
+                        <pubPlace>London</pubPlace>
+                        <date type="publication">1922</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">The Tatler</title>
+                        <biblScope unit="issue">No. 1119, Dec 6 1922</biblScope>
+                        <biblScope unit="pages">XIX</biblScope>
+                    </seriesStmt>
+                </biblFull>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="eng">English</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="BL_0001852_19221206_062_0067.pdf_page_1.png" />
+            <zone points="2149,413 2196,436 2196,551 2173,582 202,582 148,465 148,420 200,389"
+                id="eSc_textblock_183da727" />
+            <zone points="163,952 163,2626 1067,2626 1067,952"
+                id="eSc_textblock_6984ced5" />
+            <zone points="1121,2032 1121,2643 2082,2643 2082,2032"
+                id="eSc_textblock_9478645f" />
+            <zone points="165,2653 165,3155 2201,3155 2201,2653 835,2653"
+                id="eSc_textblock_c6563afe" />
+            <zone points="1674,1962 1668,1962 1668,1956 1674,1956"
+                id="eSc_textblock_732637de" />
+            <zone points="" id="eSc_dummyblock_" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_183da727">
+            <lb />
+            <hi rendition="#c">
+                <hi rendition="#i">
+                    <hi rendition="#u">
+                        The Instrument of the Immortals
+                    </hi>
+                </hi>
+            </hi>
+        </div>
+        <div facs="#eSc_dummyblock_">
+            <lb />
+            <head>
+                <orgName>Steinway</orgName><lb />Welte<lb />Grand
+            </head>
+            <lb />The Welte-Mignon, which<lb />reproduces
+            absolutely the<lb />Artists' original renderings,<lb />retains its position amongst<lb />the
+            World's foremost and<lb />greatest reproducing instru-<lb />ments.<lb />The Steinway
+            Welte is<lb />made also as a self-contained<lb />upright piano. Welte cabi-<lb />nets
+            when desired can be<lb />supplied separately for at-<lb />tachment to any pianoforte.<lb />Renderings
+            by: </div>
+        <div facs="#eSc_textblock_6984ced5">
+            <lb />
+            <persName>Paderewski</persName>,
+            <persName>Pachmann</persName>,
+            <lb />
+            <persName>Busoni</persName>,
+            <persName>Josef Hofmann</persName>,
+            <lb />
+            <persName>Mark Hambourg</persName>,
+            <persName>
+                Puish-<lb />noff
+            </persName>,
+            <persName>Fanny Davies</persName>,
+            <persName>
+                d'Al-<lb />bert
+            </persName>,
+            <persName>
+                Bloomfield-Zeisler
+            </persName>,
+            <lb />
+            <persName>
+                Carreño
+            </persName>,
+            <persName>
+                Debussy
+            </persName>,
+            <persName>
+                Doh-<lb />nányi
+            </persName>,
+            <persName>
+                Grieg
+            </persName>,
+            <persName>
+                Grünfeld
+            </persName><lb />
+            <persName>
+                Lamond
+            </persName>,
+            <persName>Leschetitzky</persName>,
+            <lb />
+            <perName>Lhevinne</perName>,
+            <persName>Pugno</persName>,
+            <persName>Saint-<lb />Saens</persName>,
+            <persName>Samaroff</persName>,
+            <persName>Sapellni-<lb />koff</persName>,
+            <persName>Scharwenka</persName>,
+            <persName>Schelling</persName>,
+            <persName>Strauss</persName>,
+            <persName>Schumann</persName>, etc.
+        </div>
+        <div facs="#eSc_textblock_9478645f">
+            <lb />
+            <hi rendition="#i">U</hi>ntil the Welte-Mignon<lb />made its appearance all the<lb />piano-playing
+            <sic>'</sic>instruments<lb />aimed at making the interpretation<lb />of a piece of music
+            mechanically<lb />correct; the Welte-Mignon<lb />caught the great masters in the act of<lb />playing,
+            and fixed their style for ever. </div>
+        <div facs="#eSc_textblock_c6563afe">
+            <lb />
+            <head>
+                <orgName>Steinway &amp; Sons</orgName>
+            </head><lb />Steinway Hall<lb />15 &amp; 17, Lower Seymour Street,
+            London S.W.1<lb />Steinway &amp; Sons and their Agents make it conveniently possible for
+            music lovers to own a Steinway. Pianos<lb />of other makes takes taken in exchange.
+            Write for particulars. Branches and Agencies throughout the World </div>
+        <div facs="#eSc_textblock_732637de" />
+    </text>
+</TEI>

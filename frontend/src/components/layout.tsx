@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import CssBaseline from "@mui/material/CssBaseline"
 import { ThemeProvider, Theme, StyledEngineProvider } from "@mui/material/styles";
 
 import theme from "../theme"

@@ -38,7 +38,7 @@
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <bibl>The Welte-Mignon.</bibl>
+            <bibl>The Welte-Mignon</bibl>
             <biblFull>
                <titleStmt>
                   <title level="m" type="main">The Welte-Mignon</title>
@@ -84,18 +84,34 @@
    </facsimile>
    <text>
       <div facs="#eSc_textblock_6103b8eb">
-         <lb />The <orgName>Welte- <lb />Mignon</orgName>
+         <hi rendition="#c">
+            <lb />The <lb />
+               <head>
+               <orgName>Welte- <lb />Mignon</orgName>
+            </head>
+         </hi>
       </div>
+
       <div facs="#eSc_textblock_f7822bda">
-         <lb />After many inventions <lb />and many failures <lb />the perfect instrument </div>
+         <hi rendition="#c">
+            <lb />After many inventions <lb />and many failures <lb />the perfect instrument </hi>
+      </div>
       <div facs="#eSc_textblock_7146ee55">
-         <lb />The <orgName>Welte-Mignon</orgName> faithfully reproduces the <lb />individual
-         interpretation of the <lb />greatest Pianists </div>
+         <hi rendition="#c">
+            <hi rendition="#i">
+               <lb />The <orgName>Welte-Mignon</orgName> faithfully reproduces the <lb />individual
+               interpretation of the <lb />greatest Pianists </hi>
+         </hi>
+      </div>
       <div facs="#eSc_textblock_527025e7">
-         <lb />Call and hear it or <lb />write for catalogue </div>
+         <hi rendition="#c">
+            <lb />Call and hear it or <lb />write for catalogue </hi>
+      </div>
       <div facs="#eSc_textblock_0ca5f1e3">
-         <lb /><orgName>Steinway and Sons</orgName>, <lb /><placeName>Steinway Hall,<lb />Lower
-         Seymour Street, W.</placeName>
+         <hi rendition="#c">
+            <lb /><orgName>Steinway and Sons</orgName>, <lb /><placeName>Steinway Hall,<lb />Lower
+            Seymour Street, W.</placeName>
+         </hi>
       </div>
    </text>
 </TEI>

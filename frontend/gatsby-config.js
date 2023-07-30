@@ -20,7 +20,7 @@ module.exports = {
         orcid:"0000-0000-0000-0000"
       }
     ],
-    repository: "https://gitlab.com/pfefferniels/welte-ads",
+    repository: "https://github.com/pfefferniels/welte-ads",
     menuLinks: [
       {
         name: 'introduction',
