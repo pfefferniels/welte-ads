@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Ad in "Zeitschrift für Instrumentenbau"</title>
+                <title type="sub">Bd. 40, 1919/20</title>
+                <author>
+                    <orgName key="m.welte">
+                        M. Welte &amp; Söhne G.m.b.H.
+                    </orgName>
+                </author>
+                <respStmt>
+                    <persName>
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <persName>
+                        <persName>
+                            <surname>Pfeffer</surname>
+                            <forename>Niels</forename>
+                        </persName>
+                    </persName>
+                </publisher>
+                <pubPlace>Tübingen</pubPlace>
+                <date>2023</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <p>
+                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            License
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>Welte-Mignon Reproduktions-Piano und Flügel</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Welte-Mignon</title>
+                        <title level="m" type="sub">Reproduktions-Piano und -Flügel</title>
+                        <author>
+                            <orgName>M. Welte &amp; Söhne G.m.b.H.</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Zeitschrift für Instrumentenbau</orgName>
+                        </publisher>
+                        <pubPlace>Leipzig</pubPlace>
+                        <date type="publication">1919</date>
+                        <date type="publication">1920</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Zeitschrift für Instrumentenbau</title>
+                        <biblScope unit="issue">40 (1919/20)</biblScope>
+                        <biblScope unit="pages">1044</biblScope>
+                    </seriesStmt>
+                </biblFull>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="ger">German</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="v2_bsb00004266_01138_full_full_0_default.pdf_page_1.png" />
+            <zone
+                points="2165,1941 2219,1980 2227,2079 2056,2243 1775,2252 1231,2279 647,2282 420,2235 395,2188 296,2149 280,1956 325,1917"
+                id="eSc_textblock_5f4c4dd1" />
+            <zone
+                points="1510,2401 2188,2447 2227,2533 2196,2671 1909,2671 1876,2697 1894,2759 2017,2798 2032,2913 1970,2975 2134,3009 2149,3069 2126,3092 1603,3116 350,3100 335,3009 374,2985 1013,2975 576,2960 459,2905 459,2783 491,2759 606,2767 639,2705 598,2656 296,2586 272,2447 296,2401 495,2385"
+                id="eSc_textblock_1a33dd7c" />
+            <zone points="476,492 476,956 852,956 852,492" id="eSc_textblock_0cb55a56" />
+            <zone points="1097,494 1097,752 1097,980 1463,980 1463,494"
+                id="eSc_textblock_648b9252" />
+            <zone points="1654,492 1654,953 1792,953 2047,953 2047,630 2047,492"
+                id="eSc_textblock_931f14ec" />
+            <zone points="277,1183 277,1845 2217,1845 2217,1183"
+                id="eSc_textblock_851a1f28" />
+            <zone points="" id="eSc_dummyblock_" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_dummyblock_">
+            <lb />
+            <persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>
+            <lb />
+            <persName>Prof. Arthur Nickisch</persName>
+            <lb />
+            <persName>Alfred Reisenauer</persName>
+            <lb />
+            <persName>Prof. Arthur Nickisch</persName>
+        </div>
+        <div facs="#eSc_textblock_851a1f28">
+            <lb />
+            <head>
+                <hi rendition="#b">
+                    <orgName>WELTE-MIGNON</orgName>
+                </hi>
+            </head>
+            <lb />REPRODUKTIONS-PIANO
+            und -FLÜGEL <lb />Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen. </div>
+        <div facs="#eSc_textblock_5f4c4dd1">
+            <lb />Welte-Philharmonie-Orgel<lb />für Privat-Salons,<lb />das individuelle Spiel
+            erster Orgel-Virtuosen wiedergebend. </div>
+        <div facs="#eSc_textblock_1a33dd7c">
+            <lb />M. Welte &amp; Söhne G.m.b.H.<lb />Gegründet 1832.<lb />Freiburg in Baden.<lb />Vertreten
+            an allen grösseren Plätzen der Welt. Erprobt in jedem Klima.<lb />Höchste Auszeichnungen
+            auf allen Weltausstellungen.<lb />Ausstellung zur Messe bei Hug &amp; Co.,
+            Markgrafenstr.10. </div>
+        <div facs="#eSc_textblock_0cb55a56" />
+        <div facs="#eSc_textblock_648b9252" />
+        <div facs="#eSc_textblock_931f14ec" />
+    </text>
+</TEI>

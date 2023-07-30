@@ -112,8 +112,9 @@
                 </hi>
             </hi>
             <lb />
-            <persName>
-            Grieg</persName>, <persName>Paderewski</persName>, <persName>Busoni</persName>, <lb />
+            <persName corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
+            <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+            <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>, <lb />
             <persName>
             Pachmann</persName>, <persName>Josef Hofmann</persName>, <lb />
             <persName>Hambourg</persName>

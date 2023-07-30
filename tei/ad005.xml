@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Ad in "Münchner neueste Nachrichten"</title>
+                <title type="sub">7.12.1910</title>
+                <author>
+                    <orgName key="m.welte">
+                        M. Welte &amp; Söhne G.m.b.H.
+                    </orgName>
+                </author>
+                <respStmt>
+                    <persName>
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <persName>
+                        <persName>
+                            <surname>Pfeffer</surname>
+                            <forename>Niels</forename>
+                        </persName>
+                    </persName>
+                </publisher>
+                <pubPlace>Tübingen</pubPlace>
+                <date>2023</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <p>
+                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            License
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>Mit dem Welte Mignon ist ...</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Mit dem Welte Mignon ...</title>
+                        <author>
+                            <orgName>M. Welte &amp; Söhne G.m.b.H.</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Münchner neueste Nachrichten</orgName>
+                        </publisher>
+                        <pubPlace>München</pubPlace>
+                        <date type="publication">1910</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Münchner neueste Nachrichten</title>
+                        <biblScope unit="issue">7.12.1910</biblScope>
+                        <biblScope unit="pages">3</biblScope>
+                    </seriesStmt>
+                </biblFull>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="ger">German</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="v2_bsb00130833_00141_2656_3632_1751_2424_full_0_default.pdf_page_1.png" />
+            <zone points="60,170 60,1500 1166,1500 1166,170" id="eSc_textblock_c57eebad" />
+            <zone points="1226,183 1226,1480 2365,1480 2365,183"
+                id="eSc_textblock_38858a02" />
+            <zone points="134,1580 134,1755 1169,1755 1169,1580"
+                id="eSc_textblock_bbaf7988" />
+            <zone points="54,1826 54,1967 1176,1967 1176,1826"
+                id="eSc_textblock_0ace7367" />
+            <zone points="64,2004 64,2155 1149,2155 1149,2004"
+                id="eSc_textblock_910008bc" />
+            <zone points="1273,1587 1273,1826 2351,1826 2351,1587"
+                id="eSc_textblock_9c944536" />
+            <zone points="74,2195 74,2353 1159,2353 1159,2195"
+                id="eSc_textblock_d5bad035" />
+            <zone points="1273,1849 1273,1980 2345,1980 2345,1849"
+                id="eSc_textblock_c91feaa0" />
+            <zone points="1266,2004 1266,2178 2355,2178 2355,2004"
+                id="eSc_textblock_031c0fe4" />
+            <zone points="54,2444 54,3293 2351,3293 2351,2444"
+                id="eSc_textblock_fce1a771" />
+            <zone points="1263,2198 1263,2397 2355,2397 2355,2198"
+                id="eSc_textblock_c8ece5c3" />
+            <zone points="" id="eSc_dummyblock_" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_c57eebad">
+            <lb />
+            <persName>Teresa Carreno</persName>
+            <lb />
+            <persName>Felix Mottl</persName>
+            <lb />
+            <persName>Artur Nickisch</persName>
+            <lb />
+            <persName>Max Pauer</persName>
+        </div>
+        <div facs="#eSc_textblock_38858a02">
+            <lb />
+            <persName corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>
+            <lb />
+            <persName>Max Reger</persName>
+            <lb />
+            <persName>Richard Strauss</persName>
+            <lb />
+            <persName>Felix Weingartner</persName>
+        </div>
+        <div facs="#eSc_textblock_bbaf7988">
+            <lb />Das Welte Mignon ist das Wunder der Wunder.<lb />Carreno.</div>
+        <div facs="#eSc_textblock_0ace7367">
+            <lb />Eine unbedingt geniale Erfindung von hohem <lb />künstlerischen Wert.<lb />Mottl.</div>
+        <div facs="#eSc_textblock_910008bc">
+            <lb />Man meint den betreffenden Künstler in Person<lb />vor sich zu haben und ihn
+            spielen zu hören.<lb />Nickisch.</div>
+        <div facs="#eSc_textblock_9c944536">
+            <lb />Was ich Mignon vorzuwerfen hae, ist sein<lb />Name, weil es weder der gewaltigen
+            Wirkung dieses<lb />Instruments noch seiner kolossalen Bedeutung ent-<lb />spricht. <lb /><persName
+                corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>.</div>
+        <div facs="#eSc_textblock_d5bad035">
+            <lb />Man muss das Wunder gehört haben, um es<lb />zu glauben.<lb />Max Pauer.</div>
+        <div facs="#eSc_textblock_c91feaa0">
+            <lb />Welte Mignon ist für mich das unerreichte Ideal<lb />aller Musikinstrumente.<lb />Max
+            Reger.</div>
+        <div facs="#eSc_textblock_031c0fe4">
+            <lb />Der einzige Apparat der auf künstlerische<lb />Bedeutung Anspruch machen kann.<lb />Richard
+            Strauss.</div>
+        <div facs="#eSc_textblock_fce1a771">
+            <lb />Mit dem Welte Mignon ist, wie die berühmtesten Künstler anerkennen, ein
+            phantastisch scheinender<lb />Gedanke verwirklicht, nämlich das Klavierspiel eines
+            Künstlers mit all' seinen persönlichen Eigenschaften –<lb />des Anschlags, der
+            Phrasierung, des Pedalgebrauchs etc. zu verewigen. Die Wiedergaben des Mignon haben<lb />hedeb
+            Rest des mechanischen verloren. Dass es sich um eine Erfindung von ausserordentlicher
+            künstlerischer<lb />Bedeutung handelt, beweist ihr Gebrauch im <orgName>K. K. Konservatorium in
+            Wien</orgName> zu Studienzwecken. Der Besitzer<lb />eines Welte Mignon kann sich jederzeit von den
+            berühmtesten Musikern, wie <persName>d'Albert</persName>, <persName>Carreno</persName>,
+            <persName>Lamond</persName>, <persName>Mottl</persName>
+            <lb /><persName>Reger</persName>, <persName>Strauss</persName>,
+            <persName corresp="https://d-nb.info/gnd/118986724">Paderewsky</persName> etc. vorspielen lassen.<lb />
+            
+            <hi rendition="#c">
+                <hi rendition="#b">
+                    Vorführung Donnerstag 8. Dezember<lb />Nachmittags
+                    4 Uhr im Konzertsaal<lb />des Bayerischen Hofes.
+                </hi>
+            </hi>
+            <lb />Eintrittskarten zu 1.50, 1. – u.
+            50 Pf. sind bei Alfred Schmid Nachf. Theatinerstr. 34, zu haben.<lb />Donnerstag
+            Nachmittag am 3 1/2 Uhr auch am Saaleingang.</div>
+        <div facs="#eSc_textblock_c8ece5c3">
+            <lb />Diese Erfindung ist das unglaublichste an Vol-<lb />lendung, das man sich denken
+            kann.<lb />Felix Weingartner.</div>
+    </text>
+</TEI>
