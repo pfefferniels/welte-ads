@@ -112,7 +112,7 @@
             <persName corresp="https://d-nb.info/gnd/116014490">Pachmann</persName>,
             <lb />
             <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>,
-            <persName>Josef Hofmann</persName>,
+            <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>,
             <lb />
             <persName>Mark Hambourg</persName>,
             <persName>
@@ -135,7 +135,7 @@
             <persName>
                 Doh-<lb />nányi
             </persName>,
-            <persName>
+            <persName corresp="https://d-nb.info/gnd/118697641">
                 Grieg
             </persName>,
             <persName>

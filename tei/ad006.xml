@@ -165,7 +165,8 @@
             to coming gen-<lb />erations the perfect expression of his genius. It is the soul-<lb />expression
             that you feel when you listen to the Welte; and<lb />you may hear it not only once, but
             as often as you wish.<lb /><persName corresp="https://d-nb.info/gnd/118986724">
-            Paderewski</persName>, <persName>Lhevinne</persName>, <persName>Hofmann</persName>, <persName>de
+            Paderewski</persName>, <persName>Lhevinne</persName>, <persName corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
+            <persName corresp="https://d-nb.info/gnd/116014490">de
             Pachman</persName>, <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>
             ,
             <persName>Saint-<lb />Saens</persName>, <persName
@@ -247,6 +248,5 @@
         <div facs="#eSc_textblock_7021785f" />
         <div facs="#eSc_textblock_7a8d435f" />
         <div facs="#eSc_textblock_5618094e" />
-        <div facs="#eSc_dummyblock_">
     </text>
 </TEI>
