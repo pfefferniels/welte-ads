@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import { graphql, useStaticQuery } from 'gatsby'
 import { Container, Typography } from '@mui/material'
 import * as d3 from 'd3'
+import { names } from "./names"
 
 const stringToColour = (str: string) => {
     let hash = 0;
@@ -114,7 +115,7 @@ const Statistics = () => {
             .attr('x', 10)
             .attr('y', (_, i) => y(i))
             .style('dominant-baseline', 'central')
-            .text(d => d)
+            .text(d => names[d] || d)
 
         svgElement.append('g')
             .selectAll("dot")
@@ -143,10 +144,17 @@ const Statistics = () => {
                 <svg ref={artistsSvg} />
                 {selectedMention && (
                     <div>
-                        In {selectedMention.year}, {selectedMention.name} was
+                        In {selectedMention.year}, {names[selectedMention.name] || selectedMention.name} was
                         mentioned {selectedMention.count} times.
                     </div>
                 )}
+
+                <h2>Topics</h2>
+                <Typography>
+                    Shows which typical topics, such as the illustration of a 
+                    half-transparent "ghost" sitting at the piano, evolve over 
+                    time.
+                </Typography>
             </Container>
         </Layout>
     )
