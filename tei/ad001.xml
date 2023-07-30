@@ -1,8 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
-        <title>Werbung 1</title>
-        <date>1917</date>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Ad in "The Daily News"</title>
+                <title type="sub">Jun 1 1922</title>
+                <author>
+                    <orgName key="steinway">
+                        Steinway &amp; Sons
+                    </orgName>
+                </author>
+                <respStmt>
+                    <persName>
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <persName>
+                        <persName>
+                            <surname>Pfeffer</surname>
+                            <forename>Niels</forename>
+                        </persName>
+                    </persName>
+                </publisher>
+                <pubPlace>Tübingen</pubPlace>
+                <date>2023</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <p>
+                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            License
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>Steinway-Welte: The instrument of the immortals</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Steinway-Welte</title>
+                        <title level="m" type="sub">The instrument of the immortals</title>
+                        <author>
+                            <orgName>Steinway &amp; Sons</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>The Daily News</orgName>
+                        </publisher>
+                        <pubPlace>London</pubPlace>
+                        <date type="publication">1922</date>
+                        <!-- possibly multiple date elements 
+                            if the same ad was used several times -->
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">The Daily News</title>
+                        <biblScope unit="issue">Jun 1 1922</biblScope>
+                        <biblScope unit="pages">3</biblScope>
+                    </seriesStmt>
+                </biblFull>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="eng">English</language>
+            </langUsage>
+        </profileDesc>
     </teiHeader>
     <facsimile>
         <surface>
@@ -21,42 +87,33 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_a280cbcc">
-            <lb />Steinway-Welte
+            <lb />
+            <orgName>Steinway-Welte</orgName>
         </div>
         <div facs="#eSc_textblock_d3d372a6">
-            <lb />Piano Player
-        </div>
+            <lb />Piano Player </div>
         <div facs="#eSc_textblock_ea3bd570">
-            <lb />The Instrument of the Immortals
-        </div>
+            <lb />The Instrument of the Immortals </div>
         <div facs="#eSc_textblock_083f7a78">
-            <lb />The first recording
-            <lb />piano ever invented
-            <lb />the Welte Mignon re-<lb />mains
-            unchallanged as
-            <lb />the world's greatest in-
-            <lb />strument of reproduction
-            <lb />Renderings by
+            <lb />The first recording <lb />piano ever invented <lb />the <orgName>Welte Mignon</orgName>
+            re-<lb />mains unchallanged as <lb />the world's greatest in- <lb />strument of
+            reproduction <lb />
+            <hi rendition="#c">
+                <hi rendition="#i">
+                    Renderings by
+                </hi>
+            </hi>
             <lb />
-            <persName>Grieg</persName>,
-            <persName>Paderewski</persName>,
-            <persName>Busoni</persName>,
-            <lb />
-            <persName>Pachmann</persName>,
-            <persName>Josef Hofmann</persName>,
-            <lb />
-            <persName>Hambourg</persName>,
             <persName>
-                Leonard
-                <lb />Borwick
-            </persName>,
-            <persName>Fanny Davies</persName>, etc.
-        </div>
+            Grieg</persName>, <persName>Paderewski</persName>, <persName>Busoni</persName>, <lb />
+            <persName>
+            Pachmann</persName>, <persName>Josef Hofmann</persName>, <lb />
+            <persName>Hambourg</persName>
+            , <persName> Leonard <lb />Borwick </persName>, <persName>Fanny Davies</persName>, etc. </div>
         <div facs="#eSc_textblock_6282f9b6">
-            <lb />Steinway &amp; Sons
-            <lb />Steinway Hall
-            <lb />15 &amp; 17 Lower Seymour St., London W.I
-            <lb />Branches and Agencies throughout the World
-            <lb />Write for particulars</div>
+            <lb /><orgName>Steinway &amp; Sons</orgName>
+            <lb />Steinway Hall <lb />15 &amp; 17 Lower
+            Seymour St., London W.I <lb />Branches and Agencies throughout the World <lb />Write for
+            particulars </div>
     </text>
 </TEI>

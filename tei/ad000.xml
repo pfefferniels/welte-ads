@@ -1,47 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
-      <title>Werbung 2</title>
-      <date>1914</date>
-  </teiHeader>
- <facsimile>
+      <fileDesc>
+         <titleStmt>
+            <title type="main">Ad in "The Illustrated London News"</title>
+            <title type="sub">Nov 15 1913</title>
+            <author>
+               <orgName key="steinway">
+                  Steinway &amp; Sons
+               </orgName>
+            </author>
+            <respStmt>
+               <persName>
+                  <surname>Pfeffer</surname>
+                  <forename>Niels</forename>
+               </persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <persName>
+                  <persName>
+                     <surname>Pfeffer</surname>
+                     <forename>Niels</forename>
+                  </persName>
+               </persName>
+            </publisher>
+            <pubPlace>Tübingen</pubPlace>
+            <date>2023</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <p>
+                     Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                     License
+                  </p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>The Welte-Mignon.</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">The Welte-Mignon</title>
+                  <author>
+                     <orgName>Steinway &amp; Sons</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>The Daily News</orgName>
+                  </publisher>
+                  <pubPlace>London</pubPlace>
+                  <date type="publication">1913</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">The Illustrated London News</title>
+                  <biblScope unit="issue">Nov 15 1913</biblScope>
+                  <biblScope unit="pages">806</biblScope>
+               </seriesStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="eng">English</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <facsimile>
       <surface>
-         <graphic url="BL_0001578_19131115_121_0032.pdf_page_1.png"/>
+         <graphic url="BL_0001578_19131115_121_0032.pdf_page_1.png" />
          <zone points="315,2071 315,2460 929,2460 929,2071"
-               id="eSc_textblock_6103b8eb"/>
+            id="eSc_textblock_6103b8eb" />
          <zone points="347,2483 347,2655 865,2655 865,2483"
-               id="eSc_textblock_f7822bda"/>
+            id="eSc_textblock_f7822bda" />
          <zone points="249,2677 249,2840 978,2840 978,2677"
-               id="eSc_textblock_7146ee55"/>
+            id="eSc_textblock_7146ee55" />
          <zone points="372,2877 372,2978 860,2978 860,2877"
-               id="eSc_textblock_527025e7"/>
+            id="eSc_textblock_527025e7" />
          <zone points="249,3032 249,3251 988,3251 988,3032"
-               id="eSc_textblock_0ca5f1e3"/>
+            id="eSc_textblock_0ca5f1e3" />
       </surface>
    </facsimile>
    <text>
       <div facs="#eSc_textblock_6103b8eb">
-         <lb/>The <corpName>Welte-
-         <lb/>Mignon</corpName>
+         <lb />The <orgName>Welte- <lb />Mignon</orgName>
       </div>
       <div facs="#eSc_textblock_f7822bda">
-         <lb/>After many inventions
-         <lb/>and many failures
-         <lb/>the perfect instrument
-      </div>
+         <lb />After many inventions <lb />and many failures <lb />the perfect instrument </div>
       <div facs="#eSc_textblock_7146ee55">
-         <lb/>The <corpName>Welte-Mignon</corpName>
-         faithfully reproduces the
-         <lb/>individual interpretation of the
-         <lb/>greatest Pianists
-      </div>
+         <lb />The <orgName>Welte-Mignon</orgName> faithfully reproduces the <lb />individual
+         interpretation of the <lb />greatest Pianists </div>
       <div facs="#eSc_textblock_527025e7">
-         <lb/>Call and hear it or
-         <lb/>write for catalogue
-      </div>
+         <lb />Call and hear it or <lb />write for catalogue </div>
       <div facs="#eSc_textblock_0ca5f1e3">
-         <lb/><corpName>Steinway and Sons</corpName>,
-         <lb/><placeName>Steinway Hall,<lb/>Lower Seymour Street, W.</placeName>
+         <lb /><orgName>Steinway and Sons</orgName>, <lb /><placeName>Steinway Hall,<lb />Lower
+         Seymour Street, W.</placeName>
       </div>
    </text>
 </TEI>

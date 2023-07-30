@@ -17,16 +17,19 @@ async function onCreateNode({
 
   const rawXml = await loadNodeContent(node)
   const { document } = (new JSDOM(rawXml)).window
-  const date = document.querySelectorAll('date')[0].innerHTML
-  const title = document.querySelectorAll('title')[0].innerHTML
 
-  console.log('date, title', date, title, date.innerHTML, title.innerHTML)
-
-  if (!date || !title) return
+  const company = document.querySelector('orgName[key]')?.getAttribute('key') || ''
+  const title = document.querySelector('bibl')?.innerHTML || ''
+  const dates = [...document.querySelectorAll('date[type="publication"]')]
+    .map(date => date.innerHTML)
+  const newspapers = [...document.querySelectorAll('title[level="j"]')]
+    .map(title => title.innerHTML)
 
   const metadataNode = {
-    date,
+    company,
     title,
+    newspapers,
+    dates,
     id: createNodeId(`${node.id}-metadata`),
     children: [],
     parent: node.id,

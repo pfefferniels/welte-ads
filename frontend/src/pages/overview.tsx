@@ -1,11 +1,13 @@
 import React from 'react'
 import Layout from "../components/layout"
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import { Container } from '@mui/material'
+import { Container, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material'
 
 interface Metadata {
+    company: string,
     title: string,
-    date: string,
+    dates: string[],
+    newspapers: string[],
     path: string
 }
 
@@ -14,8 +16,10 @@ const Overview = () => {
         query {
           allMetadata {
             nodes {
-              date
+              company
+              dates
               title
+              newspapers
               parent {
                 ... on File {
                   name
@@ -27,26 +31,50 @@ const Overview = () => {
     `)
 
     const metadata: Metadata[] = data.allMetadata.nodes.map((node: any) => ({
-        date: node.date,
+        company: node.company,
         title: node.title,
+        dates: node.dates,
+        newspapers: node.newspapers,
         path: node.parent.name
     } as Metadata));
 
     return (
         <Layout location="/overview" editionPage={false}>
             <Container component="main" maxWidth="md">
-                <ul>
-                    {metadata.map((metadata, i) => (
-                        <li key={`metadata_${i}`}>
-                            <Link to={"/" + metadata.path}>
-                                {metadata.title} –
-                                {metadata.date}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                <TableContainer>
+                    <Table sx={{ minWidth: 650 }}>
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>Company</TableCell>
+                                <TableCell>Name</TableCell>
+                                <TableCell>Dates</TableCell>
+                                <TableCell>Newspapers</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {metadata.map((metadata, i) => (
+                                <TableRow key={`metadata_${i}`}>
+                                    <TableCell>
+                                        {metadata.company}
+                                    </TableCell>
+                                    <TableCell>
+                                        <Link to={"/" + metadata.path}>
+                                            {metadata.title}
+                                        </Link>
+                                    </TableCell>
+                                    <TableCell>
+                                        {metadata.dates.join(',')}
+                                    </TableCell>
+                                    <TableCell>
+                                        {metadata.newspapers.join(',')}
+                                    </TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
             </Container>
-        </Layout>
+        </Layout >
     )
 }
 
