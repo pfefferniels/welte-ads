@@ -1,5 +1,5 @@
 {
-  "name": "se-microedition-template",
+  "name": "welte-ads",
   "version": "3.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -19,6 +19,7 @@
     "gatsby-theme-ceteicean": "^3.2.1",
     "gatsby-transformer-remark": "^6.11.0",
     "gatsby-transformer-sharp": "^5.11.0",
+    "jsdom": "^22.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-teirouter": "^3.0.0"

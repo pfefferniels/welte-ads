@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
+        <title>Werbung 1</title>
+        <date>1917</date>
     </teiHeader>
     <facsimile>
         <surface>

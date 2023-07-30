@@ -26,8 +26,7 @@ interface Props {
 }
 
 const Main = styled.div(() => ({
-  paddingBottom: '1.45rem',
-  minHeight: "60vh",
+  minHeight: "65vh",
   "& h2, & h3": {
     paddingBottom: '1rem'
   }
@@ -50,7 +49,7 @@ const Layout = ({ location, children, editionPage = false }: Props) => {
     }
   `)
   
-  const { repository, title, menuLinks, doi } = data.site.siteMetadata
+  const { repository, title, menuLinks } = data.site.siteMetadata
 
   let footer = <Footer repository={repository}/>
   if (editionPage) {
@@ -62,12 +61,11 @@ const Layout = ({ location, children, editionPage = false }: Props) => {
       <Head title={location || ""} />
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={theme}>
-          <CssBaseline />
+          
           <Header
             location={location || ''}
             siteTitle={title}
             menuLinks={menuLinks}
-            doi={doi}
           />
           <Main>{children}</Main>
           {footer}

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
-</teiHeader>
-   <facsimile>
+      <title>Werbung 2</title>
+      <date>1914</date>
+  </teiHeader>
+ <facsimile>
       <surface>
          <graphic url="BL_0001578_19131115_121_0032.pdf_page_1.png"/>
          <zone points="315,2071 315,2460 929,2460 929,2071"

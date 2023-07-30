@@ -9,6 +9,7 @@ import {
 import Pb from "./Pb"
 import Layout from "../../components/layout"
 import Container from "@mui/material/Container"
+import './style.css'
 
 interface Props {
   pageContext: {

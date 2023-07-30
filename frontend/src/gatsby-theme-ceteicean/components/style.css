@@ -1,0 +1,16 @@
+tei-persname {
+    text-decoration-line: underline;
+    text-decoration-style: double;
+}
+
+tei-lb {
+    display: block;
+}
+
+tei-div {
+    display: block;
+}
+
+tei-text {
+    line-height: 1.5rem;
+}

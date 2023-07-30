@@ -1,6 +1,6 @@
 const basePath = "/ads"
 const title = "Welte Ads"
-const htmlTitle = "Collection Welte Ads"
+const htmlTitle = "Welte-Mignon Advertisements Collection"
 
 module.exports = {
   pathPrefix: basePath,
@@ -15,7 +15,7 @@ module.exports = {
         "first": "Niels",
         "last": "Pfeffer",
         "affiliations": [
-          "..."
+          "University Tübingen"
         ],
         orcid:"0000-0000-0000-0000"
       }

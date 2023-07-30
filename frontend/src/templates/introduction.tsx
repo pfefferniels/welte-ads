@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography"
 
 import Layout from "../components/layout"
 import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import orcidImg from "../images/orcid.png"
 
 
 declare module '@mui/styles/defaultTheme' {
@@ -53,7 +53,7 @@ const useStyles = makeStyles({
 })
 
 export default function Introduction({pageContext}: Props) {
-  const { site, orcid } = useStaticQuery(
+  const { site } = useStaticQuery(
     graphql`
       query {
         site {
@@ -64,13 +64,6 @@ export default function Introduction({pageContext}: Props) {
               last
               affiliations
               orcid
-            }
-          }
-        }
-        orcid: allFile(filter: {relativePath: {eq: "orcid.png"}}) {
-          nodes {
-            childImageSharp {
-              gatsbyImageData(width: 16)
             }
           }
         }
@@ -85,7 +78,7 @@ export default function Introduction({pageContext}: Props) {
       {a.first} {a.middle || ''} {a.last}, {a.affiliations.join(', ')}
       {a.orcid && 
         <a href={`https://orcid.org/${a.orcid}`} className={classes.orcid}>
-          <GatsbyImage image={orcid?.nodes[0]?.childImageSharp.gatsbyImageData || ''} alt="ORCID logo"/>
+          <img src={orcidImg} width={20} alt="ORCID logo"/>
         </a>
       }
       <br/>

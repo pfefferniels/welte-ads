@@ -43,8 +43,8 @@ const Footer = ({repository} : Props) => (
             International License
           </a>
           . 
-          <br /> The open source code for this micro-edition is available at <a href={repository}>{repository}</a>.
-          <br /> © {new Date().getFullYear()} Scholarly Editing.
+          <br /> The open source code for this collection is available at <a href={repository}>{repository}</a>.
+          <br /> © {new Date().getFullYear()} Niels Pfeffer.
           <br /> ISSN 2167-1257 | DOI <a href="https://doi.org/10.55520/6ZH06EW2">10.55520/6ZH06EW2</a>
         </Grid>
       </Grid>
