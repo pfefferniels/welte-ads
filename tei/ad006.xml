@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Ad in "The Sun and New York Herald"</title>
+                <title type="sub">April 30, 1920</title>
+                <author>
+                    <orgName key="welte.studios">
+                        Welte Mignon Studios
+                    </orgName>
+                </author>
+                <respStmt>
+                    <persName>
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <persName>
+                        <persName>
+                            <surname>Pfeffer</surname>
+                            <forename>Niels</forename>
+                        </persName>
+                    </persName>
+                </publisher>
+                <pubPlace>Tübingen</pubPlace>
+                <date>2023</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <p>
+                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            License
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>The Welte Mignon Studios offer you ...</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">The Welte Mignon Studios</title>
+                        <title level="m" type="sub">Offer you exceptional opportunities</title>
+                        <author>
+                            <orgName>The Welte Mignon Studios</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>The Sun and New York Herald</orgName>
+                        </publisher>
+                        <pubPlace>New York</pubPlace>
+                        <date type="publication">1920</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">The Sun and New York Herald</title>
+                        <biblScope unit="issue">Friday, April 30, 1920</biblScope>
+                        <biblScope unit="pages">5</biblScope>
+                    </seriesStmt>
+                </biblFull>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="ger">German</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="welte-ad-example.pdf_page_1.png" />
+            <zone points="449,139 449,569 2842,569 2842,139" id="eSc_textblock_c5442680" />
+            <zone points="505,1432 505,1573 1418,1573 1418,1432"
+                id="eSc_textblock_a6014ae2" />
+            <zone points="427,1561 427,1705 1500,1705 1500,1561"
+                id="eSc_textblock_b536deda" />
+            <zone points="1644,585 1644,1272 2350,1272 2905,1272 2905,585"
+                id="eSc_textblock_2389efb5" />
+            <zone points="508,1730 508,1856 1405,1856 1405,1730"
+                id="eSc_textblock_e56f4d74" />
+            <zone points="323,1865 323,2853 1600,2853 1600,1865 646,1865"
+                id="eSc_textblock_2cbb468e" />
+            <zone points="1641,1768 1641,2251 2892,2251 2892,1768 2293,1768"
+                id="eSc_textblock_80803b8a" />
+            <zone points="2381,1278 2381,1677 2381,1777 2902,1777 2902,1278"
+                id="eSc_textblock_b3e47c4c" />
+            <zone points="1637,2357 1637,2822 2873,2822 2873,2357"
+                id="eSc_textblock_e007686d" />
+            <zone points="1776,2257 1776,2392 2318,2392 2318,2257"
+                id="eSc_textblock_53814f97" />
+            <zone points="527,2881 527,3038 2695,3038 2695,2881"
+                id="eSc_textblock_cd6fbfd8" />
+            <zone points="536,3079 536,3186 932,3186 932,3079"
+                id="eSc_textblock_4ba7b7ec" />
+            <zone points="307,3173 307,3650 1151,3650 1151,3173"
+                id="eSc_textblock_3c860cc6" />
+            <zone points="1195,3173 1195,3628 2033,3628 2033,3173"
+                id="eSc_textblock_c69c9e23" />
+            <zone points="1468,3073 1468,3179 1751,3179 1751,3073"
+                id="eSc_textblock_3838333f" />
+            <zone points="2074,3164 2074,3615 2896,3615 2896,3164"
+                id="eSc_textblock_86963cd3" />
+            <zone points="518,3775 518,4086 1876,4086 1876,3775"
+                id="eSc_textblock_17b7db97" />
+            <zone points="2306,3070 2306,3176 2657,3176 2657,3070"
+                id="eSc_textblock_d659d9d8" />
+            <zone points="499,4102 499,4234 1889,4234 1889,4102"
+                id="eSc_textblock_0eb08447" />
+            <zone points="314,4255 314,4340 750,4340 750,4255"
+                id="eSc_textblock_90b895ae" />
+            <zone points="2252,3691 2252,4350 3100,4350 3100,3691"
+                id="eSc_textblock_d72e074e" />
+            <zone points="1703,4243 1703,4331 2023,4331 2071,4331 2071,4243"
+                id="eSc_textblock_332b9320" />
+            <zone points="731,3672 731,3769 1653,3769 1653,3672"
+                id="eSc_textblock_0f423e68" />
+            <zone points="1472,4282 1472,4289 1465,4289 1467,4282"
+                id="eSc_textblock_7021785f" />
+            <zone points="270,588 270,1416 1628,1416 1628,588"
+                id="eSc_textblock_7a8d435f" />
+            <zone points="1638,1291 1638,1755 2168,1755 2369,1755 2369,1291"
+                id="eSc_textblock_5618094e" />
+            <zone points="" id="eSc_dummyblock_" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_c5442680">
+            <hi rendition="#c">
+                <head>
+                    <lb />The<lb />Welte Mignon Studios </head>
+                <lb />Offer you exceptional
+                opportunities </hi>
+        </div>
+        <div facs="#eSc_textblock_a6014ae2">
+            <lb />
+            <hi rendition="#u">
+                The Master Himself
+            </hi>
+        </div>
+        <div facs="#eSc_textblock_b536deda">
+            <lb />Not just mechanical playing of his compositions,<lb />but his own fingers on your
+            keyboard.</div>
+        <div facs="#eSc_textblock_e56f4d74">
+            <lb />
+            <hi rendition="#u">
+                At Your Command
+            </hi>
+        </div>
+        <div facs="#eSc_textblock_2389efb5">
+            <lb />Accept as soon as you can our cordial invita-<lb />tion to spend a delightful hour
+            or two with<lb />the masters of classic or popular music at our<lb />beautiful studios.
+            We shall gladly play your fav-<lb />orite selections. We shall place at your disposal
+            the<lb />services of a staff of musicians whose advice is al-<lb />ways ready but is
+            never intruded. We offer a re-<lb />markable collection of instruments at reasonable<lb />prices
+            and on exceptional terms.</div>
+        <div facs="#eSc_textblock_2cbb468e">
+            <lb />If <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
+            played to you, on your own piano, ex-<lb />actly as he played at the very zenith of his
+            career when<lb />those marvelous fingers performed miracles, you could<lb />count it a
+            great event in your life. This is what the<lb />WELTE MIGNON Reproducing Piano will do
+            for you.<lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
+            played his soul into the Welte, knowing<lb />full well that thus could he better pass on
+            to coming gen-<lb />erations the perfect expression of his genius. It is the soul-<lb />expression
+            that you feel when you listen to the Welte; and<lb />you may hear it not only once, but
+            as often as you wish.<lb /><persName corresp="https://d-nb.info/gnd/118986724">
+            Paderewski</persName>, <persName>Lhevinne</persName>, <persName>Hofmann</persName>, <persName>de
+            Pachman</persName>, <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>
+            ,
+            <persName>Saint-<lb />Saens</persName>, <persName
+                corresp="https://d-nb.info/gnd/118697641">Grieg</persName>, <persname>d'Albert</persname>–156
+            masters in all have played into the Welte<lb />for you the very essence of their musical
+            personalities, for Welte re-<lb />production is not "stencil cutting," but absolute
+            tonal duplication.<lb />There are over 5,000 record-rolls in the Welte repertoire. Come<lb />in
+            to-day and hear your favorites. And bear in mind that the Welte<lb />is within your
+            means, for it is sold on terms–your own within reason.</div>
+        <div facs="#eSc_textblock_80803b8a">
+            <lb />Our stock includes many examples of fine standard<lb />makes–
+            <orgName>Welte</orgName>, <orgName>Estey</orgName>, <orgName>Conway</orgName>,
+            and others–shown in a<lb />variety of case-designs and woods, giving you ample op-<lb />portunity
+            to find the instrument that exactly suits your<lb />taste and means. We sell all grades
+            (except "cheap").<lb />You can buy from us a really good instrument as low as<lb />$450,
+            on a series of monthly payments–terms, your own<lb />within reason.</div>
+        <div facs="#eSc_textblock_b3e47c4c">
+            <lb />Pianos and<lb />Player-Pianos<lb />at the Prices<lb />You expect<lb />to Pay</div>
+            <div facs="#eSc_textblock_53814f97">
+                <lb />WELTE TERMS</div>
+            <div facs="#eSc_textblock_e007686d">
+            <lb />We maintain that if music is to be<lb />enjoyed by everyone, it must be with<lb />in
+            everyone's reach. So we placed<lb />every instrument in the Welte<lb />Mignon Studios
+            just there–within<lb />EVERYONE'S means. Pick out any<lb />instrument you like, from
+            lowest to highest price, and buy<lb />it on terms that are practically your own.</div>
+        <div facs="#eSc_textblock_cd6fbfd8">
+            <lb />A wonderful showing of Phonographs</div>
+        <div facs="#eSc_textblock_4ba7b7ec">
+            <lb />VICTROLAS</div>
+        <div facs="#eSc_textblock_3c860cc6">
+            <lb />In our Victor department are all the latest<lb />designs of this standard talking
+            machine<lb />as well as a complete stock of the new<lb />records. You will find no
+            pleasanter sur-<lb />roundings in which to listen to your favorite<lb />music<lb />Visitors
+            at Welte Mignon Studios are not<lb />importuned to buy, but when you do buy<lb />you
+            find prices no higher than elsewhere.<lb />Our terms are your own within reason.</div>
+        <div facs="#eSc_textblock_c69c9e23">
+            <lb />A unique department, stocket with the<lb />famous Pathe models in beautiful cases,<lb />some
+            in period designs–Sheraton, William<lb />and mary, Jacobean, Louis XV and others<lb />–at
+            a wide range of prices. Each instru-<lb />ment fitted with the famous Pathe sapphire<lb />ball
+            reproducer, giving unsurpassed velvety<lb />sweetness and clearness of tone, and requir-<lb />ing
+            no change of needle. Let us play Pathe<lb />for you. Terms your own within reason.</div>
+        <div facs="#eSc_textblock_3838333f">
+            <lb />PATHE</div>
+        <div facs="#eSc_textblock_86963cd3">
+            <lb />All the new Victor Records and Pathe<lb />Discs may be heard here as soon as they<lb />are
+            published. Late "jazz" tunes, popular<lb />hits from current shows, the melodies every-<lb />one
+            whistles and dances to, and those finer<lb />things constantly being recorded by great<lb />singers
+            and instrumentalists. Learn to re-<lb />gard the Welte Mignon Studios as your<lb />place
+            for hearing records. Drop in when-<lb />over you are "up the Avenue."</div>
+        <div facs="#eSc_textblock_17b7db97">
+            <lb />
+            <hi rendition="#c">
+                <hi rendition="#u">
+                    <hi rendition="#i">
+                        Can you drop in at once?
+                    </hi>
+                </hi>
+            </hi>
+
+            <lb />No matter how many times you've visited the Studios before this,<lb />come in
+            again; there's always something new to see and to hear. Re-<lb />member that you are
+            never pressed to buy–just come in as you would<lb />visit a famous picture gallery. But
+            if you cannot come today or to-<lb />morrow; at least, send this coupon by way of
+            getting information on<lb />the latest instrument designs.</div>
+        <div facs="#eSc_textblock_d659d9d8">
+            <lb />RECORDS</div>
+        <div facs="#eSc_textblock_0eb08447">
+            <lb />The<lb />Welte Mignon Studios</div>
+        <div facs="#eSc_textblock_90b895ae">
+            <lb />6667 Fifth Avenue</div>
+        <div facs="#eSc_textblock_d72e074e">
+            <lb />The Welte Mignon Studios,<lb />667 Fifth Ave., New York.<lb />Without any
+            obligation to me, send com-<lb />plete information on the items checked:<lb />Pianos<lb />Reproducing
+            Pianos<lb />Player Pianos<lb />Victor<lb />Pathe<lb />Name<lb />Address<lb />Sun-Harald,
+            4-30.</div>
+        <div facs="#eSc_textblock_332b9320">
+            <lb />At 53rd Street</div>
+        <div facs="#eSc_textblock_0f423e68" />
+        <div facs="#eSc_textblock_7021785f" />
+        <div facs="#eSc_textblock_7a8d435f" />
+        <div facs="#eSc_textblock_5618094e" />
+        <div facs="#eSc_dummyblock_">
+    </text>
+</TEI>

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Layout from "../components/layout"
 import { graphql, useStaticQuery } from 'gatsby'
-import { Container } from '@mui/material'
+import { Container, Typography } from '@mui/material'
 import * as d3 from 'd3'
 
 const stringToColour = (str: string) => {
@@ -135,6 +135,11 @@ const Statistics = () => {
         <Layout location="Statistics" editionPage={false}>
             <Container component="main" maxWidth="md">
                 <h2>Mentioned Artists</h2>
+                <Typography>
+                    The following plot shows, how often artists
+                    were mentioned in the advertisements per year.
+                </Typography>
+
                 <svg ref={artistsSvg} />
                 {selectedMention && (
                     <div>

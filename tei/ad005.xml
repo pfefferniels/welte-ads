@@ -97,7 +97,7 @@
     <text>
         <div facs="#eSc_textblock_c57eebad">
             <lb />
-            <persName>Teresa Carreno</persName>
+            <persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>
             <lb />
             <persName>Felix Mottl</persName>
             <lb />
@@ -116,7 +116,7 @@
             <persName>Felix Weingartner</persName>
         </div>
         <div facs="#eSc_textblock_bbaf7988">
-            <lb />Das Welte Mignon ist das Wunder der Wunder.<lb />Carreno.</div>
+            <lb />Das Welte Mignon ist das Wunder der Wunder.<lb /><persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>.</div>
         <div facs="#eSc_textblock_0ace7367">
             <lb />Eine unbedingt geniale Erfindung von hohem <lb />künstlerischen Wert.<lb />Mottl.</div>
         <div facs="#eSc_textblock_910008bc">
@@ -142,7 +142,7 @@
             Rest des mechanischen verloren. Dass es sich um eine Erfindung von ausserordentlicher
             künstlerischer<lb />Bedeutung handelt, beweist ihr Gebrauch im <orgName>K. K. Konservatorium in
             Wien</orgName> zu Studienzwecken. Der Besitzer<lb />eines Welte Mignon kann sich jederzeit von den
-            berühmtesten Musikern, wie <persName>d'Albert</persName>, <persName>Carreno</persName>,
+            berühmtesten Musikern, wie <persName>d'Albert</persName>, <persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>,
             <persName>Lamond</persName>, <persName>Mottl</persName>
             <lb /><persName>Reger</persName>, <persName>Strauss</persName>,
             <persName corresp="https://d-nb.info/gnd/118986724">Paderewsky</persName> etc. vorspielen lassen.<lb />
