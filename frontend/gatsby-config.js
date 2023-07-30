@@ -30,6 +30,10 @@ module.exports = {
         name: 'Overview',
         link: '/overview'
       },
+      {
+        name: 'Statistics',
+        link: '/statistics'
+      },
     ]
   },
   plugins: [

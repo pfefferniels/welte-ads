@@ -24,12 +24,15 @@ async function onCreateNode({
     .map(date => date.innerHTML)
   const newspapers = [...document.querySelectorAll('title[level="j"]')]
     .map(title => title.innerHTML)
+  const mentions = [...document.querySelectorAll('persName[corresp]')]
+    .map(name => name.getAttribute('corresp'))
 
   const metadataNode = {
     company,
     title,
     newspapers,
     dates,
+    mentions,
     id: createNodeId(`${node.id}-metadata`),
     children: [],
     parent: node.id,
