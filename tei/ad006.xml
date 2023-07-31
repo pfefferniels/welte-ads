@@ -140,12 +140,12 @@
             </hi>
         </div>
         <div facs="#eSc_textblock_b536deda">
-            <lb />Not just mechanical playing of his compositions,<lb />but his own fingers on your
-            keyboard.</div>
+            <lb />Not just mechanical playing of his compositions,<lb />but <seg ana="#physical_presence" type="topic" resp="#np">his own fingers on your
+            keyboard</seg>.</div>
         <div facs="#eSc_textblock_e56f4d74">
             <lb />
             <hi rendition="#u">
-                At Your Command
+                <seg type="topic" ana="#permanent_availability" resp="#np">At Your Command</seg>
             </hi>
         </div>
         <div facs="#eSc_textblock_2389efb5">
@@ -162,8 +162,8 @@
             great event in your life. This is what the<lb />WELTE MIGNON Reproducing Piano will do
             for you.<lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
             <seg ana="#soul_imprint" type="topic" resp="#np">played his soul into the Welte</seg>,
-            knowing<lb />full well that thus could he better pass on
-            to coming gen-<lb />erations the perfect expression of his genius. It is the
+            <seg ana="#immortality" type="topic" resp="#np">knowing<lb />full well that thus could he better pass on
+            to coming gen-<lb />erations the perfect expression of his genius</seg>. It is the
             <seg ana="#soul_imprint" type="topic" resp="#np">soul-<lb />expression</seg>
             that 
             <seg ana="#touched_listener" type="topic" resp="#np">you feel when you listen to the Welte</seg>;
@@ -180,8 +180,14 @@
             <persName corresp="https://d-nb.info/gnd/11875081X">Saint-<lb />Saens</persName>,
             <persName corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
             <persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>–156
-            masters in all have played into the Welte<lb />for you the very essence of their musical
-            personalities, for Welte re-<lb />production is not "stencil cutting," but
+            masters in all have
+            <seg ana="#soul_imprint" type="topic" resp="#np">
+                played into the Welte<lb />for you the very essence of their musical
+                personalities
+            </seg>,
+            <seg ana="#distinction_from_mechanical">
+                for Welte re-<lb />production is not "stencil cutting,"
+            </seg> but
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 absolute tonal duplication.
             </seg>

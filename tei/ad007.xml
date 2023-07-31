@@ -96,7 +96,7 @@
             <lb />The Welte Mignon</div>
         <div facs="#eSc_textblock_49bbbbff">
             <lb />
-            <hi rendition="#i">I</hi>s the greatest achievement in the world of music<lb />invention,
+            <hi rendition="#i">I</hi>s <seg ana="#technical_invention" type="topic" resp="#np">the greatest achievement in the world of music<lb />invention</seg>,
             as through it you may listen to accurate<lb />interpretations upon your own piano of
             over five thou-<lb />sand musical compositions,
             <seg ana="#exact_reproduction" resp="#np" type="topic">

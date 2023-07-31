@@ -91,7 +91,7 @@
         <div facs="#eSc_textblock_ae5cff62">
             <lb />Ein musikalisches Weltwunder.</div>
         <div facs="#eSc_textblock_fe5bb22e">
-            <lb />Deutschem Erfindungsgeist ist es geglückt, eine geradezu phantastisch er-
+            <lb /><seg ana="#technical_invention" type="#topic" resp="#np">Deutschem Erfindungsgeist</seg> ist es geglückt, eine geradezu phantastisch er-
             <lb />scheinende Idee - ein
             <seg ana="#analogy_to_photography" resp="#np" type="topic">
                 akustisches Seitenstück zur Platte des Photo-<lb />graphen
@@ -101,7 +101,7 @@
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 völlig getreu wiedergibt.
             </seg>
-            <seg ana="#distiction_from_mechanical" resp="#np" type="topic">
+            <seg ana="#distinction_from_mechanical" resp="#np" type="topic">
                 Das Reproduktionsklavier hat nichts gemein mit<lb />mechanischen
                 Spielapparaten wie Pianola, Phonola etc.,
             </seg> sondern es hört die<lb />Unterscheidung
@@ -112,8 +112,11 @@
             um ein Surrogat, sondern um eine vollwertige<lb />Vertretung. Wer mit der Spielweise
             <persName>d'Alberts</persName>, <persName>Lamonds</persName>, <persName>Rislers</persName>, <persName>Staven-<lb />hagens</persName> etc. vertraut ist, vermag sie bei der
             Wiedergabe sofort zu erkennen.<lb />Wenn das Reproduktionsklavier vor 50 Jahren
-            existiert hätte, könnten wir<lb />auch heute noch dem Spiel der grossenMeister wie
-            <persName>Liszt</persName>, <persName>Rubinstein</persName>, <persName>Bülow</persName><lb />lauschen und daran lernen. Von den Grossen der Gegenwart
+            existiert hätte, könnten wir<lb />auch heute noch
+            <seg ana="#pedagogical_use" type="topic" resp="#np">
+                dem Spiel der grossen Meister wie
+                <persName>Liszt</persName>, <persName>Rubinstein</persName>, <persName>Bülow</persName><lb />lauschen und daran lernen
+            </seg>. Von den Grossen der Gegenwart
             ist das Spiel<lb />aber nun für die Nachwelt festgehalten; schon jetzt sind zur
             Reproduktin<lb />aufgenommen: <persName>Eugen d'Albert</persName>, <persName>Konrad Ansorge</persName>, <persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>, <persName>Teresa<lb />Carreno</persName>,
             <persName>Ernst von Dohnányi</persName>, <persName>Artur Friedheim</persName>, <persName>Ossip Gabrilowitsch</persName>, <persName corresp="https://d-nb.info/gnd/116888652">Alfred<lb />Grünfeld</persName>, <persName>Heinrich
@@ -121,8 +124,11 @@
             Petri</persName>, <persName>Raoul Pugno</persName>, <persName>Max Reger</persName>, <persName>Carl Reinecke</persName>,<lb /><persName>Alfred Reisenauer</persName>, <persName>Alice Ripper</persName>,
             <persName>Xaver Scharwenka</persName>, <persName>Artur Schnabel</persName>, <persName>Joseph<lb />Slivinski</persName>, <persName>Bernhard Stavenhagen</persName>, <persName corresp="https://d-nb.info/gnd/11863027X">Felix
             Weingartner</persName>, <persName>Karl Wendling</persName>. Das<lb />Reproduktionsklavier bedeutet für die Hausmusik
-            eine unendliche Bereiche-<lb />rung. Nicht nur, dass man in seinem Heim sich jeden
-            Augenblick von den<lb />obengenannten Künstlern vorspielen lassen kann, wer singt oder
+            eine unendliche Bereiche-<lb />rung.
+            <seg ana="#permanent_availability" resp="#np" type="topic">
+                Nicht nur, dass man in seinem Heim sich jeden
+                Augenblick von den<lb />obengenannten Künstlern vorspielen lassen kann
+            </seg>, wer singt oder
             geigt etc.<lb />wird sich sogar künstlerisch vollendet begleiten lassen können. Die
             Bedeutung<lb />der Erfindung in denn auch von allen namhaften Pianisten anerkannt
             worden,<lb />wie nachfolgende Aeusserungen beweisen:</div>
@@ -131,32 +137,58 @@
             erregende Erfindung.<lb /><persName>Konrad Ansorge</persName>:<lb />Es ist ein ausgezeichnetes Bildungs-<lb />mittel
             für Konservatorien, wo den Stu-<lb />dierenden die Vortragsart eines Mei-<lb />sters zu
             jeder Zeit vorgeführt werden kann.<lb />kann.<lb /><persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>:<lb />Mignon ist
-            ebenso verblüffend für den<lb />Eineingeweihten, als sie für den Einge-<lb />weihten
+            ebenso verblüffend für den<lb />Eingeweihten, als sie für den Einge-<lb />weihten
             bewunderungswürdig sein muss.<lb /><persName>Teresa Carreno</persName>:<lb />Meine Bewunderung für die
             grossartige<lb />Erfindung kennt keine Grenzen.<lb /><persName>Ernst von Dohnányi</persName>:<lb />Man kann
             nur staunen und bewundern.<lb /><persName>Ossip Gabrilowitsch</persName>:<lb />Mignon ist sicher eine der
             wunder-<lb />barsten Erfindungen, die dem mensch-<lb />lichen Geiste gelungen sind.<lb /><persName corresp="https://d-nb.info/gnd/116888652">Alfred
-            Grünfeld</persName>:<lb />Ich gesthe egerne, dass ich geradezu<lb />verblüfft war, als ich mit
+            Grünfeld</persName>:<lb />Ich gestehe gerne, dass ich geradezu<lb />verblüfft war, als ich mit
             eigenen Ohren<lb />hörte, in welcher Weise Mignon die<lb />von Künstlerhand gespielten
             Musik-<lb />stücke wiedergibt.</div>
         <div facs="#eSc_textblock_a1117377">
             <lb />Verführung des Klaviers kann einstweilen nur nach vorhergegangener Anmeldung
             erfolgen.<lb />Alleinvertretung bei Alfred Schmid Nachf., 33-34 Theatinerstrasse 33-34.</div>
         <div facs="#eSc_textblock_daae2028">
-            <lb /><persName>Clotilde Kleeberg</persName>:<lb />Es scheint mir, als ob in Mignon der Spie-<lb />gel der
-            Musikseele gefunden wäre.<lb /><persName>Frederic Lamond</persName>:<lb />Ich sehe den Mignon-Apparat als das<lb />grösste
-            Wunder der Jetztzeit an.<lb /><persName>Artur Niksich</persName>:<lb />Die Wiedergabe ist nach jeder
+            <lb /><persName>Clotilde Kleeberg</persName>:<lb />
+            <seg ana="#soul_imprint" resp="#np" type="topic">
+                Es scheint mir, als ob in Mignon der Spie-<lb />gel der
+                Musikseele gefunden wäre
+            </seg>.
+            
+            <lb /><persName>Frederic Lamond</persName>:<lb />
+            <seg ana="#miracle">
+                Ich sehe den Mignon-Apparat als das<lb />grösste
+                Wunder der Jetztzeit an
+            </seg>.
+            
+            <lb /><persName corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>:<lb />Die Wiedergabe ist nach jeder
             Richtung,<lb />sowohl was das rein technisch virtuose, als<lb />auch was das
-            musikalisch-poetische Moment<lb />betrifft, eine so verblüffend natürliche, dass<lb />man
-            wirklich meint, den Künstler i<lb />Person vor sich zu sehen und ihn spielen zu<lb />
-            hören.<lb /><persName corresp="https://d-nb.info/gnd/116210419">Raoul Pugno</persName>:<lb />In dieser Wiedergabe findet man alle<lb />charakteristischen
-            Eigenschaften des Künst-<lb />lers, den Rhythmus, die Eleganz und Vir-<lb />tuosität im
-            Spiel, seine Auffassung in Be-<lb />zug auf die Phrasierung und sogar die<lb />Verwendung
-            der beiden Pedale.<lb /><persName>Alfred Reisenauer</persName>:<lb />Hier ist zugleich ein technisches und
-            philo-<lb />sophisches Problem in vollendetster Form<lb />gelöst.<lb /><persName corresp="https://d-nb.info/gnd/11863027X">Felix
+            musikalisch-poetische Moment<lb />betrifft, eine so verblüffend natürliche,
+            <seg ana="#physical_presence" resp="#np" type="topic">
+                dass<lb />man
+                wirklich meint, den Künstler i<lb />Person vor sich zu sehen und ihn spielen zu<lb />
+                hören.
+            </seg>
+            
+            <lb /><persName corresp="https://d-nb.info/gnd/116210419">Raoul Pugno</persName>:
+            <lb />In dieser Wiedergabe findet man alle
+            <lb />charakteristischen
+            Eigenschaften des Künst-
+            <lb />lers, den Rhythmus, die Eleganz und Vir-
+            <lb />tuosität im Spiel, seine Auffassung in Be-
+            <lb />zug auf die Phrasierung und sogar die
+            <lb />Verwendung der beiden Pedale.
+            
+            <lb /><persName>Alfred Reisenauer</persName>:<lb />Hier ist zugleich ein technisches und
+            philo-<lb />sophisches Problem in vollendetster Form<lb />gelöst.<lb />
+            
+            <persName corresp="https://d-nb.info/gnd/11863027X">Felix
             Weingartner</persName>:<lb />Der Mignon-Apparat ist das Unglaublichste<lb />an Vollendung, was man
-            sich denken kann.<lb />Was grosse Meister unserer Tage leisten,<lb />kann nun nicht mehr
-            untergehen und spä-<lb />tere Genarationen werden die Früchte die-<lb />ser genialen
+            sich denken kann.<lb />
+            <seg ana="#immortality" resp="#np" type="topic">
+                Was grosse Meister unserer Tage leisten,<lb />kann nun nicht mehr
+                untergehen
+            </seg> und spä-<lb />tere Genarationen werden die Früchte die-<lb />ser genialen
             Erfindung genissen.</div>
     </text>
 </TEI>

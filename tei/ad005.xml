@@ -129,10 +129,10 @@
             <lb />
             <persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>.</div>
         <div facs="#eSc_textblock_0ace7367">
-            <lb />Eine unbedingt geniale Erfindung von hohem <lb />künstlerischen Wert.<lb /><persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>.</div>
+            <lb />Eine unbedingt <seg ana="#technical_invention" type="topic" resp="#np">geniale Erfindung</seg> von hohem <lb />künstlerischen Wert.<lb /><persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>.</div>
         <div facs="#eSc_textblock_910008bc">
-            <lb />Man meint den betreffenden Künstler in Person<lb />vor sich zu haben und ihn
-            spielen zu hören.<lb /><persName corresp="https://d-nb.info/gnd/118786253">Nickisch</persName>.</div>
+            <lb /><seg ana="#physical_presence" type="topic" resp="#np">Man meint den betreffenden Künstler in Person<lb />vor sich zu haben und ihn
+            spielen zu hören.</seg><lb /><persName corresp="https://d-nb.info/gnd/118786253">Nickisch</persName>.</div>
         <div facs="#eSc_textblock_9c944536">
             <lb />Was ich Mignon vorzuwerfen hae, ist sein<lb />Name, weil es weder der gewaltigen
             Wirkung dieses<lb />Instruments noch seiner kolossalen Bedeutung ent-<lb />spricht. <lb /><persName
@@ -155,10 +155,12 @@
             Künstlers mit all' seinen persönlichen Eigenschaften –<lb />des Anschlags, der
             Phrasierung, des Pedalgebrauchs etc.
             <seg ana="#immortality" resp="#np" type="topic">zu verewigen</seg>.
-            Die Wiedergaben des Mignon haben
-            <lb />jeden
-            Rest des mechanischen verloren. Dass es sich um eine Erfindung von ausserordentlicher
-            künstlerischer<lb />Bedeutung handelt, <seg ana="#pedagogical_use" type="topic" resp="#np">beweist ihr Gebrauch im <orgName>K. K. Konservatorium in
+            <seg ana="#distinction_from_mechanical" type="topic" resp="#np">
+                Die Wiedergaben des Mignon haben
+                <lb />jeden Rest des mechanischen verloren.
+            </seg>
+            Dass es sich um eine Erfindung von ausserordentlicher künstlerischer
+            <lb />Bedeutung handelt, <seg ana="#pedagogical_use" type="topic" resp="#np">beweist ihr Gebrauch im <orgName>K. K. Konservatorium in
             Wien</orgName> zu Studienzwecken.</seg>
             <seg ana="#permanent_availability" type="topic" resp="#np">
                 Der Besitzer<lb />eines Welte Mignon kann sich jederzeit von den
