@@ -34,10 +34,13 @@ const Statistics = () => {
             nodes {
               dates
               mentions
+              topics
             }
           }
         }
     `)
+
+    const allTopics = Array.from(new Set(data.allMetadata.nodes.map((node: any) => node.topics).flat()))
 
     useEffect(() => {
         if (!artistsSvg.current || !data) return
@@ -125,7 +128,7 @@ const Statistics = () => {
             .attr("cx", (d: any) => x(d.year))
             .attr("cy", (d: any) => y(allArtists.indexOf(d.name)))
             .style("fill", (d: any) => stringToColour(d.name))
-            .attr("r", (d: any) => d.count * 2)
+            .attr("r", (d: any) => d.count * 4)
             .on('mouseover', (_, data: any) => {
                 setSelectedMention(data)
             })
@@ -155,6 +158,7 @@ const Statistics = () => {
                     half-transparent "ghost" sitting at the piano, evolve over 
                     time.
                 </Typography>
+                {allTopics.join(', ')}
             </Container>
         </Layout>
     )

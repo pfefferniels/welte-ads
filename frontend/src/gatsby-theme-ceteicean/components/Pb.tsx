@@ -8,7 +8,7 @@ import Paper from '@mui/material/Paper'
 import ExpandMore from '@mui/icons-material/ExpandMore'
 import { styled } from '@mui/material/styles'
 
-import {Fac} from "./Ceteicean"
+import { Fac } from "./Ceteicean"
 import { Box } from "@mui/system"
 
 interface TEIProps {

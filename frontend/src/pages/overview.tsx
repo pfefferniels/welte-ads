@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from "../components/layout"
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import { Container, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material'
+import { names } from './names'
 
 interface Metadata {
     company: string,
@@ -55,7 +56,7 @@ const Overview = () => {
                             {metadata.map((metadata, i) => (
                                 <TableRow key={`metadata_${i}`}>
                                     <TableCell>
-                                        {metadata.company}
+                                        {names[metadata.company] || metadata.company}
                                     </TableCell>
                                     <TableCell>
                                         <Link to={"/" + metadata.path}>
