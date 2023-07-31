@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Ad in "Münchner neueste Nachrichten"</title>
+                <title type="sub">15.11.1910</title>
+                <author>
+                    <orgName key="m.welte">
+                        M. Welte &amp; Söhne G.m.b.H.
+                    </orgName>
+                </author>
+                <respStmt>
+                    <persName xml:id="np">
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <notesStmt>
+                <note resp="#np">
+                    Diese Anzeige wurde zwei Tage vor einer Aufführung am 
+                    20. November 1910 veröffentlicht. Sie wurde für eine
+                    weitere Aufführung am 8. Dezember 1910 erweitert
+                    (siehe <ref target="#ad005.xml">hier</ref>).
+                </note>
+            </notesStmt>
+            <publicationStmt>
+                <publisher>
+                    <persName>
+                        <persName>
+                            <surname>Pfeffer</surname>
+                            <forename>Niels</forename>
+                        </persName>
+                    </persName>
+                </publisher>
+                <pubPlace>Tübingen</pubPlace>
+                <date>2023</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <p>
+                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            License
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>Mit dem Welte Mignon ist ...</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Mit dem Welte Mignon ...</title>
+                        <author>
+                            <orgName>M. Welte &amp; Söhne G.m.b.H.</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Münchner neueste Nachrichten</orgName>
+                        </publisher>
+                        <pubPlace>München</pubPlace>
+                        <date type="publication">1910</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Münchner neueste Nachrichten</title>
+                        <biblScope unit="issue">15.11.1910</biblScope>
+                        <biblScope unit="pages">3</biblScope>
+                    </seriesStmt>
+                </biblFull>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="ger">German</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="v2_bsb00130861_00335_full_full_0_default.jpg" />
+            <zone points="2829,4503 2829,5079 4369,5079 4369,4503"
+                id="eSc_textblock_fa9ab44f" />
+            <zone points="2842,5097 2842,5488 4364,5488 4364,5097"
+                id="eSc_textblock_16a9ec04" />
+            <zone points="2753,5494 2753,5737 4476,5726 4476,5494"
+                id="eSc_textblock_31285247" />
+            <zone points="2803,5844 2803,6031 4439,6031 4439,5844"
+                id="eSc_textblock_7c09e566" />
+            <zone points="4125,5883 4125,5715 3098,5715 3098,5883"
+                id="eSc_textblock_bdf7ee80" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_fa9ab44f">
+            <lb />Felix Mottl<lb />Max Reger<lb />Richard Strauss</div>
+        <div facs="#eSc_textblock_16a9ec04">
+            <lb />Das Welte Mignon ist eine unbedingt geniale Erfindung, undhat einen hohen
+            künstlerischen<lb />Wert. Ich habe selten eine so schöne und freudige Ueberraschung
+            erlebt, wie heute, wo ich dieses<lb />prächtige Instrument kenne gelernt habe.<lb />Felix
+            Mottl.<lb />Mignon ist für mich das unerreichte Ideal aller Musik-Instrumente, eine
+            Erfindung von unschätz-<lb />barer Bedeutung für Lehrer, Schüler, Publikum und alle
+            Künstler.<lb />Max Reger.<lb />Das Welte Mignon ist eine ganz ausserordentliche
+            Erfindung, von allen<lb />derartigen Mechanismen der Einzige, der auf künstlerische
+            Bedeutung Anspruch<lb />machen kann. Den Erfindern meine aufrichte Bewunderung.<lb />Richard
+            Strauss</div>
+        <div facs="#eSc_textblock_31285247">
+            <lb />Mit dem Welte mignon ist, wie die berühmtesten Künstler anerkennen, ein
+            phantastisch scheinender Gedanke<lb />verwirklicht, nämlich das Klavierspiel eines
+            Künstlers mit all seinen persönlichen Eigenschaften - des Anschlags,<lb />der
+            Phrasierung, des Pedalgebrauchs, etc. zu verewigen. Die Wiedergaben des Mignon haben
+            jeden Rest des mecha-<lb />nischen verlassen. Dass es sich um eine Erfindung von
+            ausserordentlicher künstlerischer Bedeutung handelt, beweist<lb />ihr Gebrauch im K. K.
+            Konservatorium in Wien zu Studienzwecken. Der Besitzer eines Welte Mignon kann sich<lb />jederzeit
+            von den berühmtesten Musikern, wie d'Albert Carreno, Lamond, mottl, Reger, Strauss,
+            Paderewsky etc.<lb />vorspielen lassen.</div>
+        <div facs="#eSc_textblock_7c09e566">
+            <lb />des Bayerischen Hofes<lb />Eintrittskaren zu 50Pfg. sind bei Alfred Schmid Nachf.,
+            Theatinerstrasse 34, zu haben.<lb />Sonntag Nachmittag am 31/2 Uhr auch am Saaleingang.</div>
+        <div facs="#eSc_textblock_bdf7ee80">
+            <lb />Vorführung Sonntag, d. 20. November<lb />Nachmittag 4 Uhr im Konzertsaal</div>
+    </text>
+</TEI>

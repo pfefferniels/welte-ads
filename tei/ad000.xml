@@ -85,16 +85,26 @@
    <text>
       <div facs="#eSc_textblock_6103b8eb">
          <hi rendition="#c">
-            <lb />The <lb />
-               <head>
-               <orgName>Welte- <lb />Mignon</orgName>
+            <lb />The
+            <head>
+               <orgName>
+                  <lb />Welte-
+                  <lb />Mignon
+               </orgName>
             </head>
          </hi>
       </div>
 
       <div facs="#eSc_textblock_f7822bda">
          <hi rendition="#c">
-            <lb />After many inventions <lb />and many failures <lb />the perfect instrument </hi>
+            <lb />
+               <seg ana="#analysis002">
+                  After many inventions
+                  <lb />and many failures
+                  <lb />the perfect instrument 
+               </seg>
+               <interp xml:id="analysis002" resp="#np" type="topic">technical invention</interp>
+            </hi>
       </div>
       <div facs="#eSc_textblock_7146ee55">
          <hi rendition="#c">
@@ -114,12 +124,16 @@
       </div>
       <div facs="#eSc_textblock_527025e7">
          <hi rendition="#c">
-            <lb />Call and hear it or <lb />write for catalogue </hi>
+            <lb />Call and hear it or
+            <lb />write for catalogue </hi>
       </div>
       <div facs="#eSc_textblock_0ca5f1e3">
          <hi rendition="#c">
-            <lb /><orgName>Steinway and Sons</orgName>, <lb /><placeName>Steinway Hall,<lb />Lower
-            Seymour Street, W.</placeName>
+            <lb /><orgName>Steinway and Sons</orgName>,
+            <lb />
+            <placeName>
+               Steinway Hall,<lb />Lower Seymour Street, W.
+            </placeName>
          </hi>
       </div>
    </text>
