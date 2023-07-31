@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Layout from "../components/layout"
 import { graphql, useStaticQuery } from 'gatsby'
-import { Container, Typography } from '@mui/material'
+import { Container, List, ListItem, Typography } from '@mui/material'
 import * as d3 from 'd3'
 import { names } from "./names"
 
@@ -18,22 +18,21 @@ const stringToColour = (str: string) => {
     return colour
 }
 
-interface Mention {
+interface Topic {
     name: string,
     count: number,
     year: number
 }
 
-const Statistics = () => {
-    const [selectedMention, setSelectedMention] = useState<Mention>()
+const Topics = () => {
+    const [selectedTopic, setSelectedTopic] = useState<Topic>()
 
-    const artistsSvg = useRef<SVGSVGElement>(null)
+    const topicsSvg = useRef<SVGSVGElement>(null)
     const data = useStaticQuery(graphql`
         query {
           allMetadata {
             nodes {
               dates
-              mentions
               topics
             }
           }
@@ -43,35 +42,37 @@ const Statistics = () => {
     const allTopics = Array.from(new Set(data.allMetadata.nodes.map((node: any) => node.topics).flat()))
 
     useEffect(() => {
-        if (!artistsSvg.current || !data) return
+        if (!topicsSvg.current || !data) return
 
-        const mentionsPerYear: Mention[] = data.allMetadata.nodes.reduce((acc: Mention[], curr: any) => {
+        topicsSvg.current.innerHTML = ''
+
+        const topicsPerYear: Topic[] = data.allMetadata.nodes.reduce((acc: Topic[], curr: any) => {
             curr.dates.forEach((date: string) => {
-                curr.mentions.forEach((mention_: string) => {
-                    const existingMention = acc.find(mention => mention.name === mention_ && mention.year === Number(date))
-                    if (existingMention) {
-                        existingMention.count += 1
+                curr.topics.forEach((mention_: string) => {
+                    const existingTopic = acc.find(mention => mention.name === mention_ && mention.year === Number(date))
+                    if (existingTopic) {
+                        existingTopic.count += 1
                     }
                     else {
                         acc.push({
                             name: mention_,
                             year: Number(date),
                             count: 1
-                        } as Mention)
+                        } as Topic)
                     }
                 })
             })
             return acc
-        }, [] as Mention[]);
+        }, [] as Topic[]);
 
-        const allArtists = Array.from(new Set(mentionsPerYear.map(m => m.name)));
+        const allArtists = Array.from(new Set(topicsPerYear.map(m => m.name)));
 
-        const svgElement = d3.select(artistsSvg.current)
+        const svgElement = d3.select(topicsSvg.current)
 
         // set the dimensions and margins of the graph
         const margin = { top: 10, right: 30, bottom: 30, left: 60 },
             width = 1000 - margin.left - margin.right,
-            height = 400 - margin.top - margin.bottom;
+            height = 600 - margin.top - margin.bottom;
 
         // append the svg object to the body of the page
         svgElement
@@ -83,7 +84,7 @@ const Statistics = () => {
 
         // Add X axis
         const x = d3.scaleLinear()
-            .domain([1906, 1935])
+            .domain([1905, 1935])
             .range([0, width]);
 
         svgElement
@@ -122,7 +123,7 @@ const Statistics = () => {
 
         svgElement.append('g')
             .selectAll("dot")
-            .data(mentionsPerYear)
+            .data(topicsPerYear)
             .join("circle")
             .attr('transform', `translate(230, 0)`)
             .attr("cx", (d: any) => x(d.year))
@@ -130,38 +131,30 @@ const Statistics = () => {
             .style("fill", (d: any) => stringToColour(d.name))
             .attr("r", (d: any) => d.count * 4)
             .on('mouseover', (_, data: any) => {
-                setSelectedMention(data)
+                setSelectedTopic(data)
             })
-            .on('mouseout', () => setSelectedMention(undefined))
+            .on('mouseout', () => setSelectedTopic(undefined))
     }, [])
 
     return (
-        <Layout location="Statistics" editionPage={false}>
+        <Layout location="Topics" editionPage={false}>
             <Container component="main" maxWidth="md">
-                <h2>Mentioned Artists</h2>
-                <Typography>
-                    The following plot shows, how often artists
-                    were mentioned in the advertisements per year.
-                </Typography>
-
-                <svg ref={artistsSvg} />
-                {selectedMention && (
-                    <div>
-                        In {selectedMention.year}, {names[selectedMention.name] || selectedMention.name} was
-                        mentioned {selectedMention.count} times.
-                    </div>
-                )}
-
                 <h2>Topics</h2>
                 <Typography>
-                    Shows which typical topics, such as the illustration of a 
-                    half-transparent "ghost" sitting at the piano, evolve over 
+                    Topics are understood as recurring motifs,
+                    such as the illustration of a half-transparent "ghost"
+                    sitting at the piano.
+                </Typography>
+
+                <h3>Statistics</h3>
+                <Typography>
+                    The following illustration shows how the topics evolve over
                     time.
                 </Typography>
-                {allTopics.join(', ')}
+                <svg ref={topicsSvg} />
             </Container>
         </Layout>
     )
 }
 
-export default Statistics
+export default Topics

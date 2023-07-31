@@ -8,9 +8,11 @@ interface TEIProps {
   availableRoutes?: string[]
 }
 
-const Name = ({ teiNode, availableRoutes }: TEIProps) => {
-  const persName = teiNode as Element
-  const target = persName.getAttribute("corresp")
+const Seg = ({ teiNode, availableRoutes }: TEIProps) => {
+  const seg = teiNode as Element
+  const topic = seg.getAttribute("ana")
+  const resp = seg.getAttribute("resp") || 'unknown'
+  const type = seg.getAttribute('type') || ''
 
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
 
@@ -27,7 +29,7 @@ const Name = ({ teiNode, availableRoutes }: TEIProps) => {
   return (
     <Behavior node={teiNode}>
       <span
-        className="name"
+        className="seg"
         aria-aria-haspopup={true}
         onClick={handlePopoverOpen}>
         <TEINodes
@@ -45,14 +47,11 @@ const Name = ({ teiNode, availableRoutes }: TEIProps) => {
         }}
       >
         <div style={{ padding: '1rem' }}>
-          {target
-            ? <a href={target} style={{ textDecoration: 'none' }}>→ GND</a>
-            : <i color='gray'>no link specified</i>
-          }
+          <span color='gray'>{type}</span>: <i>{topic}</i><sup>{resp}</sup>
         </div>
       </Popover>
     </Behavior>
   )
 }
 
-export default Name
+export default Seg

@@ -27,12 +27,16 @@ module.exports = {
         link: '/'
       },
       {
-        name: 'Overview',
+        name: 'Advertisements',
         link: '/overview'
       },
       {
-        name: 'Statistics',
-        link: '/statistics'
+        name: 'Artists',
+        link: '/artists'
+      },
+      {
+        name: 'Topics',
+        link: '/topics'
       },
     ]
   },

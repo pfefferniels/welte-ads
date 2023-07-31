@@ -26,8 +26,8 @@ async function onCreateNode({
     .map(title => title.innerHTML)
   const mentions = [...document.querySelectorAll('persName[corresp]')]
     .map(name => name.getAttribute('corresp'))
-  const topics = [...document.querySelectorAll('interp[type="topic"]')]
-    .map(name => name.textContent)
+  const topics = [...document.querySelectorAll('seg[ana]')]
+    .map(name => name.getAttribute('ana'))
 
   const metadataNode = {
     company,

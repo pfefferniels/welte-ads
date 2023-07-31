@@ -11,7 +11,7 @@ import Layout from "../../components/layout"
 import Container from "@mui/material/Container"
 import './style.css'
 import Name from "./Name"
-import Interp from "./Interp"
+import Seg from "./Seg"
 
 interface Props {
   pageContext: {
@@ -50,7 +50,7 @@ const facs: Fac[] = queryData.facs.nodes
     "tei-pb": (props) => <Pb facs={facs} {...props}/>,
     "tei-persname": Name,
     "tei-orgname": Name,
-    "tei-interp": Interp
+    "tei-seg": Seg
   }
 
   return(
