@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Ad in "The New York Tribune"</title>
+                <title type="sub">Feb 1, 1920</title>
+                <author>
+                    <orgName key="welte.studios">
+                        Welte Mignon Studios
+                    </orgName>
+                </author>
+                <respStmt>
+                    <persName>
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <persName>
+                        <persName>
+                            <surname>Pfeffer</surname>
+                            <forename>Niels</forename>
+                        </persName>
+                    </persName>
+                </publisher>
+                <pubPlace>Tübingen</pubPlace>
+                <date>2023</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <p>
+                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            License
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>The Welte Mignon is the greatest achievement</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">The Welte Mignon</title>
+                        <title level="m" type="sub">is the greatest achievement</title>
+                        <author>
+                            <orgName>The Welte Mignon Studios</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>New York Tribune</orgName>
+                        </publisher>
+                        <pubPlace>New York</pubPlace>
+                        <date type="publication">1920</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">The Sun and New York Herald</title>
+                        <biblScope unit="issue">Feb 1, 1920</biblScope>
+                        <biblScope unit="pages">6</biblScope>
+                    </seriesStmt>
+                </biblFull>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="eng">English</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="0078.pdf_page_1.png" />
+            <zone points="345,425 345,795 1772,797 1772,425" id="eSc_textblock_49bbbbff" />
+            <zone points="686,307 686,435 1435,435 1435,307" id="eSc_textblock_2d37ca29" />
+            <zone points="987,873 987,1055 1790,1055 1790,873"
+                id="eSc_textblock_73db1303" />
+            <zone points="320,1289 320,1560 895,1560 945,1560 945,1289"
+                id="eSc_textblock_60560364" />
+            <zone points="987,1061 987,1545 1314,1545 1408,1545 1408,1061"
+                id="eSc_textblock_a80b3fdb" />
+            <zone points="464,1590 464,2023 1651,2023 1651,1590"
+                id="eSc_textblock_8c1ac387" />
+            <zone points="1427,1061 1427,1555 1769,1555 1769,1061"
+                id="eSc_textblock_76cf9e4c" />
+            <zone points="401,2046 401,2124 1679,2124 1679,2046 1501,2046"
+                id="eSc_textblock_c2049f2c" />
+            <zone points="107,1578 103,1578 103,1574 107,1574"
+                id="eSc_textblock_415177db" />
+            <zone points="174,1635 174,1639 157,1639 160,1635"
+                id="eSc_textblock_48572ad5" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_2d37ca29">
+            <lb />The Welte Mignon</div>
+        <div facs="#eSc_textblock_49bbbbff">
+            <lb />
+            <hi rendition="#i">I</hi>s the greatest achievement in the world of music<lb />invention,
+            as through it you may listen to accurate<lb />interpretations upon your own piano of
+            over five thou-<lb />sand musical compositions, <seg ana="#analysis000"> precisely as
+            they were<lb />originally played </seg>
+            <interp resp="#np" xml:id="analysis000"
+                type="topic">faithful reproduction</interp> by one hundred and fifty-six of the<lb />world's
+            most distinguished pianists.</div>
+        <div facs="#eSc_textblock_73db1303">
+            <lb />Among those who have recorded their<lb />wonderful playing for the Welte<lb />Mignon
+            are</div>
+        <div facs="#eSc_textblock_60560364">
+            <lb />No living Pianist has done more to<lb />engender a love for music among<lb />American
+            people than <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>,<lb />whose art at the zenith of his
+            great<lb />career has been preserved by the<lb />Welte Mignon.</div>
+        <div facs="#eSc_textblock_a80b3fdb">
+            <lb />
+            <persName corresp="https://d-nb.info/gnd/118986724">Ignace J. Paderewski</persName>
+            <lb />
+            <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>
+            <lb />
+            <persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>
+            <lb />
+            <persName>Fannie Bloomfield-Zeisler</persName>
+            <lb />
+            <persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>
+            <lb />
+            <persName corresp="https://d-nb.info/gnd/116014490">Vladimir Pachmann</persName>
+            <lb />
+            <persName>Ossip Gabrilowitsch</persName>
+            <lb />
+            <persName corresp="https://d-nb.info/gnd/118697641">Edward Grieg</persName>
+            <lb />
+            <persName>Raoul Pugno</persName>
+            <lb />
+            <persName>Dr. Richard Strauss</persName>
+        </div>
+        <div facs="#eSc_textblock_76cf9e4c">
+            <lb />
+            <persName corresp="https://d-nb.info/gnd/11875081X">Camille Saint-Saens</persName>
+            <lb />
+            <persName>Theodor Leschetitzky</persName>
+            <lb />
+            <persName>Joseph Lhevinne</persName>
+            <lb />
+            <persName>Alfred Grunfeld</persName>
+            <lb />
+            <persName>Rudolf Ganz</persName>
+            <lb />
+            <persName>Ernest Schelling</persName>
+            <lb />
+            <persName>Mark Hambourg</persName>
+            <lb />
+            <persName>Emil Sauer</persName>
+            <lb />
+            <persName>E. Humperdinck</persName>
+            <lb />
+            <persName>Xaver Scharwenka</persName>
+        </div>
+        <div facs="#eSc_textblock_8c1ac387">
+            <lb /><orgName>The Welte Studios</orgName><lb />665-5th Ave. at 53rd St.<lb />New York</div>
+        <div facs="#eSc_textblock_c2049f2c">
+            <lb />Exhibited in space 31, Main Floor, National Music Show</div>
+        <div facs="#eSc_textblock_415177db" />
+        <div facs="#eSc_textblock_48572ad5" />
+    </text>
+</TEI>

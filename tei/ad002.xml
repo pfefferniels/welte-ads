@@ -130,14 +130,14 @@
                 Puish-<lb />noff
             </persName>,
             <persName>Fanny Davies</persName>,
-            <persName>
+            <persName corresp="https://d-nb.info/gnd/118501437">
                 d'Al-<lb />bert
             </persName>,
             <persName>
                 Bloomfield-Zeisler
             </persName>,
             <lb />
-            <persName>
+            <persName corresp="https://d-nb.info/gnd/118953915">
                 Carreño
             </persName>,
             <persName>
@@ -146,9 +146,7 @@
             <persName>
                 Doh-<lb />nányi
             </persName>,
-            <persName corresp="https://d-nb.info/gnd/118697641">
-                Grieg
-            </persName>,
+            <persName corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
             <persName>
                 Grünfeld
             </persName><lb />
@@ -159,7 +157,7 @@
             <lb />
             <perName>Lhevinne</perName>,
             <persName>Pugno</persName>,
-            <persName>Saint-<lb />Saens</persName>,
+            <persName corresp="https://d-nb.info/gnd/11875081X">Saint-<lb />Saens</persName>,
             <persName>Samaroff</persName>,
             <persName>Sapellni-<lb />koff</persName>,
             <persName>Scharwenka</persName>,
