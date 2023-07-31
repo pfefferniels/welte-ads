@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Ad in "Allgemeine Zeitung"</title>
+                <title type="sub">27.12.1905</title>
+                <author>
+                    <orgName key="a.schmid">
+                        Pianohaus Anfred Schmid Nachf.
+                    </orgName>
+                </author>
+                <respStmt>
+                    <persName xml:id="np">
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <notesStmt>
+                <note resp="#np">
+                    Die Anzeige weist gewisse Sprachähnlichkeiten mit den später von 
+                    Anfred Schmid Nachf. veröffentlichten Anzeigen auf.
+                </note>
+            </notesStmt>
+            <publicationStmt>
+                <publisher>
+                    <persName>
+                        <persName>
+                            <surname>Pfeffer</surname>
+                            <forename>Niels</forename>
+                        </persName>
+                    </persName>
+                </publisher>
+                <pubPlace>Tübingen</pubPlace>
+                <date>2023</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <p>
+                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            License
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>Ein musikalisches Weltwunder</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Ein musikalisches Weltwunder</title>
+                        <author>
+                            <orgName>Alfred Schmid Nachf.</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Allgemeine Zeitung</orgName>
+                        </publisher>
+                        <pubPlace>?</pubPlace>
+                        <date type="publication">1905</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Allgemeine Zeitung</title>
+                        <biblScope unit="issue">27.12.1905</biblScope>
+                        <biblScope unit="pages">4</biblScope>
+                    </seriesStmt>
+                </biblFull>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="ger">German</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="v2_bsb00085796_01060_full_full_0_default.jpg" />
+            <zone points="422,318 422,683 2974,683 2974,318" id="eSc_textblock_ae5cff62" />
+            <zone points="228,676 228,2347 1676,2347 1676,676"
+                id="eSc_textblock_fe5bb22e" />
+            <zone points="1694,691 1694,2358 2407,2358 2415,698"
+                id="eSc_textblock_05c0264b" />
+            <zone points="257,2588 257,2336 3164,2336 3164,2588"
+                id="eSc_textblock_a1117377" />
+            <zone points="3146,2395 3146,691 2411,691 2411,2395"
+                id="eSc_textblock_daae2028" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_ae5cff62">
+            <lb />Ein musikalisches Weltwunder.</div>
+        <div facs="#eSc_textblock_fe5bb22e">
+            <lb />Deutschem Erfindungsgeist ist es geglückt, eine geradezu phantastisch er-
+            <lb />scheinende Idee - ein
+            <seg ana="#analogy_to_photography" resp="#np" type="topic">
+                akustisches Seitenstück zur Platte des Photo-<lb />graphen
+            </seg>
+             - zu verwirklichen.<lb />Die neue Erfindung ist das Reproduktionsklavier "Mignon",<lb />welches
+            das Spiel der berühmten Meister des Klavierspiels selbsstätig und<lb />
+            <seg ana="#exact_reproduction" resp="#np" type="topic">
+                völlig getreu wiedergibt.
+            </seg>
+            <seg ana="#distiction_from_mechanical" resp="#np" type="topic">
+                Das Reproduktionsklavier hat nichts gemein mit<lb />mechanischen
+                Spielapparaten wie Pianola, Phonola etc.,
+            </seg> sondern es hört die<lb />Unterscheidung
+            zwischen dem Spiel des aufgenommenen Künstlers und der<lb />Wiedergabe des
+            Reproduktionsklaviers überhaupt auf. Ueber die blosse Finger-<lb />fertigkeit vermag
+            dieses Wunderklavier alles, was an der Leistung eines Künst-<lb />lers das Persönliche
+            und Charakteristische ausmacht, zur Geltung zu bringen;<lb />es handelt sich also nicht
+            um ein Surrogat, sondern um eine vollwertige<lb />Vertretung. Wer mit der Spielweise
+            <persName>d'Alberts</persName>, <persName>Lamonds</persName>, <persName>Rislers</persName>, <persName>Staven-<lb />hagens</persName> etc. vertraut ist, vermag sie bei der
+            Wiedergabe sofort zu erkennen.<lb />Wenn das Reproduktionsklavier vor 50 Jahren
+            existiert hätte, könnten wir<lb />auch heute noch dem Spiel der grossenMeister wie
+            <persName>Liszt</persName>, <persName>Rubinstein</persName>, <persName>Bülow</persName><lb />lauschen und daran lernen. Von den Grossen der Gegenwart
+            ist das Spiel<lb />aber nun für die Nachwelt festgehalten; schon jetzt sind zur
+            Reproduktin<lb />aufgenommen: <persName>Eugen d'Albert</persName>, <persName>Konrad Ansorge</persName>, <persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>, <persName>Teresa<lb />Carreno</persName>,
+            <persName>Ernst von Dohnányi</persName>, <persName>Artur Friedheim</persName>, <persName>Ossip Gabrilowitsch</persName>, <persName corresp="https://d-nb.info/gnd/116888652">Alfred<lb />Grünfeld</persName>, <persName>Heinrich
+            Grünfeld</persName>, <persName>Clotilde Kleeberg</persName>, <persName>Alexander Krah</persName>, <persName>Frederic<lb />Lamond</persName>, <persName corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>, <persName>Egon
+            Petri</persName>, <persName>Raoul Pugno</persName>, <persName>Max Reger</persName>, <persName>Carl Reinecke</persName>,<lb /><persName>Alfred Reisenauer</persName>, <persName>Alice Ripper</persName>,
+            <persName>Xaver Scharwenka</persName>, <persName>Artur Schnabel</persName>, <persName>Joseph<lb />Slivinski</persName>, <persName>Bernhard Stavenhagen</persName>, <persName corresp="https://d-nb.info/gnd/11863027X">Felix
+            Weingartner</persName>, <persName>Karl Wendling</persName>. Das<lb />Reproduktionsklavier bedeutet für die Hausmusik
+            eine unendliche Bereiche-<lb />rung. Nicht nur, dass man in seinem Heim sich jeden
+            Augenblick von den<lb />obengenannten Künstlern vorspielen lassen kann, wer singt oder
+            geigt etc.<lb />wird sich sogar künstlerisch vollendet begleiten lassen können. Die
+            Bedeutung<lb />der Erfindung in denn auch von allen namhaften Pianisten anerkannt
+            worden,<lb />wie nachfolgende Aeusserungen beweisen:</div>
+        <div facs="#eSc_textblock_05c0264b">
+            <lb /><persName>Eugen d'Albrt</persName>:<lb />Das Mignon-Reproduktionsklavier ist<lb />eine Aufsehen
+            erregende Erfindung.<lb /><persName>Konrad Ansorge</persName>:<lb />Es ist ein ausgezeichnetes Bildungs-<lb />mittel
+            für Konservatorien, wo den Stu-<lb />dierenden die Vortragsart eines Mei-<lb />sters zu
+            jeder Zeit vorgeführt werden kann.<lb />kann.<lb /><persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>:<lb />Mignon ist
+            ebenso verblüffend für den<lb />Eineingeweihten, als sie für den Einge-<lb />weihten
+            bewunderungswürdig sein muss.<lb /><persName>Teresa Carreno</persName>:<lb />Meine Bewunderung für die
+            grossartige<lb />Erfindung kennt keine Grenzen.<lb /><persName>Ernst von Dohnányi</persName>:<lb />Man kann
+            nur staunen und bewundern.<lb /><persName>Ossip Gabrilowitsch</persName>:<lb />Mignon ist sicher eine der
+            wunder-<lb />barsten Erfindungen, die dem mensch-<lb />lichen Geiste gelungen sind.<lb /><persName corresp="https://d-nb.info/gnd/116888652">Alfred
+            Grünfeld</persName>:<lb />Ich gesthe egerne, dass ich geradezu<lb />verblüfft war, als ich mit
+            eigenen Ohren<lb />hörte, in welcher Weise Mignon die<lb />von Künstlerhand gespielten
+            Musik-<lb />stücke wiedergibt.</div>
+        <div facs="#eSc_textblock_a1117377">
+            <lb />Verführung des Klaviers kann einstweilen nur nach vorhergegangener Anmeldung
+            erfolgen.<lb />Alleinvertretung bei Alfred Schmid Nachf., 33-34 Theatinerstrasse 33-34.</div>
+        <div facs="#eSc_textblock_daae2028">
+            <lb /><persName>Clotilde Kleeberg</persName>:<lb />Es scheint mir, als ob in Mignon der Spie-<lb />gel der
+            Musikseele gefunden wäre.<lb /><persName>Frederic Lamond</persName>:<lb />Ich sehe den Mignon-Apparat als das<lb />grösste
+            Wunder der Jetztzeit an.<lb /><persName>Artur Niksich</persName>:<lb />Die Wiedergabe ist nach jeder
+            Richtung,<lb />sowohl was das rein technisch virtuose, als<lb />auch was das
+            musikalisch-poetische Moment<lb />betrifft, eine so verblüffend natürliche, dass<lb />man
+            wirklich meint, den Künstler i<lb />Person vor sich zu sehen und ihn spielen zu<lb />
+            hören.<lb /><persName corresp="https://d-nb.info/gnd/116210419">Raoul Pugno</persName>:<lb />In dieser Wiedergabe findet man alle<lb />charakteristischen
+            Eigenschaften des Künst-<lb />lers, den Rhythmus, die Eleganz und Vir-<lb />tuosität im
+            Spiel, seine Auffassung in Be-<lb />zug auf die Phrasierung und sogar die<lb />Verwendung
+            der beiden Pedale.<lb /><persName>Alfred Reisenauer</persName>:<lb />Hier ist zugleich ein technisches und
+            philo-<lb />sophisches Problem in vollendetster Form<lb />gelöst.<lb /><persName corresp="https://d-nb.info/gnd/11863027X">Felix
+            Weingartner</persName>:<lb />Der Mignon-Apparat ist das Unglaublichste<lb />an Vollendung, was man
+            sich denken kann.<lb />Was grosse Meister unserer Tage leisten,<lb />kann nun nicht mehr
+            untergehen und spä-<lb />tere Genarationen werden die Früchte die-<lb />ser genialen
+            Erfindung genissen.</div>
+    </text>
+</TEI>

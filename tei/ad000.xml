@@ -98,27 +98,22 @@
       <div facs="#eSc_textblock_f7822bda">
          <hi rendition="#c">
             <lb />
-               <seg ana="#analysis002">
+               <seg type="topic" resp="#np" ana="#technical_invention">
                   After many inventions
                   <lb />and many failures
                   <lb />the perfect instrument 
                </seg>
-               <interp xml:id="analysis002" resp="#np" type="topic">technical invention</interp>
             </hi>
       </div>
       <div facs="#eSc_textblock_7146ee55">
          <hi rendition="#c">
             <hi rendition="#i">
                <lb />The <orgName>Welte-Mignon</orgName>
-               <seg ana="#analysis001">
+               <seg resp="#np" type="topic" ana="#exact_reproduciton">
                   faithfully reproduces the
                   <lb />individual interpretation of the
                   <lb />greatest Pianists
                </seg>
-               <interp
-                  xml:id="analysis001"
-                  resp="#np"
-                  type="topic">faithful reproduction</interp>
             </hi>
          </hi>
       </div>

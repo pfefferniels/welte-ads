@@ -93,11 +93,9 @@
             <lb />
             <persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>
             <lb />
-            <persName>Prof. Arthur Nickisch</persName>
+            <persName corresp="https://d-nb.info/gnd/118786253">Prof. Arthur Nickisch</persName>
             <lb />
             <persName>Alfred Reisenauer</persName>
-            <lb />
-            <persName>Prof. Arthur Nickisch</persName>
         </div>
         <div facs="#eSc_textblock_851a1f28">
             <lb />
@@ -108,10 +106,9 @@
             </head>
             <lb />REPRODUKTIONS-PIANO
             und -FLÜGEL <lb />
-            <seg ana="#analysis000">
+            <seg ana="#exact_reproduction" resp="#np" type="topic">
                 Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen.
             </seg>
-            <interp xml:id="analysis000" resp="#np" type="topic">faithful reproduction</interp>
         </div>
         <div facs="#eSc_textblock_5f4c4dd1">
             <lb />Welte-Philharmonie-Orgel<lb />für Privat-Salons,<lb />das individuelle Spiel

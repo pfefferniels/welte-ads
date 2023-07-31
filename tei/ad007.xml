@@ -98,10 +98,11 @@
             <lb />
             <hi rendition="#i">I</hi>s the greatest achievement in the world of music<lb />invention,
             as through it you may listen to accurate<lb />interpretations upon your own piano of
-            over five thou-<lb />sand musical compositions, <seg ana="#analysis000"> precisely as
-            they were<lb />originally played </seg>
-            <interp resp="#np" xml:id="analysis000"
-                type="topic">faithful reproduction</interp> by one hundred and fifty-six of the<lb />world's
+            over five thou-<lb />sand musical compositions,
+            <seg ana="#exact_reproduction" resp="#np" type="topic">
+                precisely as they were<lb />originally played
+            </seg>
+            by one hundred and fifty-six of the<lb />world's
             most distinguished pianists.</div>
         <div facs="#eSc_textblock_73db1303">
             <lb />Among those who have recorded their<lb />wonderful playing for the Welte<lb />Mignon

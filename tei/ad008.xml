@@ -6,8 +6,8 @@
                 <title type="main">Ad in "Münchner neueste Nachrichten"</title>
                 <title type="sub">15.11.1910</title>
                 <author>
-                    <orgName key="m.welte">
-                        M. Welte &amp; Söhne G.m.b.H.
+                    <orgName key="a.schmid">
+                        Alfred Schmid Nachf.
                     </orgName>
                 </author>
                 <respStmt>
@@ -18,12 +18,9 @@
                 </respStmt>
             </titleStmt>
             <notesStmt>
-                <note resp="#np">
-                    Diese Anzeige wurde zwei Tage vor einer Aufführung am 
-                    20. November 1910 veröffentlicht. Sie wurde für eine
-                    weitere Aufführung am 8. Dezember 1910 erweitert
-                    (siehe <ref target="#ad005.xml">hier</ref>).
-                </note>
+                <note resp="#np"> Diese Anzeige wurde zwei Tage vor einer Aufführung am 20. November
+                    1910 veröffentlicht. Sie wurde für eine weitere Aufführung am 8. Dezember 1910
+                    erweitert (siehe <ref target="#ad005.xml">hier</ref>). </note>
             </notesStmt>
             <publicationStmt>
                 <publisher>
@@ -51,7 +48,7 @@
                     <titleStmt>
                         <title level="m" type="main">Mit dem Welte Mignon ...</title>
                         <author>
-                            <orgName>M. Welte &amp; Söhne G.m.b.H.</orgName>
+                            <orgName>Alfred Schmid Nachf.</orgName>
                         </author>
                     </titleStmt>
                     <publicationStmt>
@@ -92,27 +89,35 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_fa9ab44f">
-            <lb />Felix Mottl<lb />Max Reger<lb />Richard Strauss</div>
+            <lb />
+            <persName corresp="https://d-nb.info/gnd/116942037">Felix Mottl</persName>
+            <lb />
+            <persName>Max Reger</persName>
+            <lb />
+            <persName>Richard Strauss</persName>
+        </div>
         <div facs="#eSc_textblock_16a9ec04">
             <lb />Das Welte Mignon ist eine unbedingt geniale Erfindung, undhat einen hohen
             künstlerischen<lb />Wert. Ich habe selten eine so schöne und freudige Ueberraschung
-            erlebt, wie heute, wo ich dieses<lb />prächtige Instrument kenne gelernt habe.<lb />Felix
-            Mottl.<lb />Mignon ist für mich das unerreichte Ideal aller Musik-Instrumente, eine
-            Erfindung von unschätz-<lb />barer Bedeutung für Lehrer, Schüler, Publikum und alle
-            Künstler.<lb />Max Reger.<lb />Das Welte Mignon ist eine ganz ausserordentliche
-            Erfindung, von allen<lb />derartigen Mechanismen der Einzige, der auf künstlerische
-            Bedeutung Anspruch<lb />machen kann. Den Erfindern meine aufrichte Bewunderung.<lb />Richard
-            Strauss</div>
+            erlebt, wie heute, wo ich dieses<lb />prächtige Instrument kenne gelernt habe.<lb /><persName corresp="https://d-nb.info/gnd/116942037">Felix
+            Mottl</persName>.<lb />Mignon ist für mich das unerreichte Ideal aller
+            Musik-Instrumente, eine Erfindung von unschätz-<lb />barer Bedeutung für Lehrer,
+            Schüler, Publikum und alle Künstler.<lb /><persName>Max Reger</persName>.<lb />Das Welte
+            Mignon ist eine ganz ausserordentliche Erfindung, von allen<lb />derartigen Mechanismen
+            der Einzige, der auf künstlerische Bedeutung Anspruch<lb />machen kann. Den Erfindern
+            meine aufrichte Bewunderung.<lb /><persName>Richard
+                Strauss</persName></div>
         <div facs="#eSc_textblock_31285247">
-            <lb />Mit dem Welte mignon ist, wie die berühmtesten Künstler anerkennen, ein
+            <lb />Mit dem Welte Mignon ist, wie die berühmtesten Künstler anerkennen, ein
             phantastisch scheinender Gedanke<lb />verwirklicht, nämlich das Klavierspiel eines
             Künstlers mit all seinen persönlichen Eigenschaften - des Anschlags,<lb />der
             Phrasierung, des Pedalgebrauchs, etc. zu verewigen. Die Wiedergaben des Mignon haben
             jeden Rest des mecha-<lb />nischen verlassen. Dass es sich um eine Erfindung von
-            ausserordentlicher künstlerischer Bedeutung handelt, beweist<lb />ihr Gebrauch im K. K.
-            Konservatorium in Wien zu Studienzwecken. Der Besitzer eines Welte Mignon kann sich<lb />jederzeit
-            von den berühmtesten Musikern, wie d'Albert Carreno, Lamond, mottl, Reger, Strauss,
-            Paderewsky etc.<lb />vorspielen lassen.</div>
+            ausserordentlicher künstlerischer Bedeutung handelt, <seg ana="#pedagogical_use" type="topic" resp="#np">beweist<lb />ihr Gebrauch im K. K.
+            Konservatorium in Wien zu Studienzwecken</seg>. Der Besitzer eines Welte Mignon kann sich<lb />jederzeit
+            von den berühmtesten Musikern, wie <persName>d'Albert</persName> <persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>, <persName>
+            Lamond</persName>, <persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>, <persName>Reger</persName>, <persName>
+            Strauss</persName>, <persName corresp="https://d-nb.info/gnd/118986724">Paderewsky</persName> etc.<lb />vorspielen lassen.</div>
         <div facs="#eSc_textblock_7c09e566">
             <lb />des Bayerischen Hofes<lb />Eintrittskaren zu 50Pfg. sind bei Alfred Schmid Nachf.,
             Theatinerstrasse 34, zu haben.<lb />Sonntag Nachmittag am 31/2 Uhr auch am Saaleingang.</div>

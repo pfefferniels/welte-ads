@@ -6,8 +6,8 @@
                 <title type="main">Ad in "Münchner neueste Nachrichten"</title>
                 <title type="sub">7.12.1910</title>
                 <author>
-                    <orgName key="m.welte">
-                        M. Welte &amp; Söhne G.m.b.H.
+                    <orgName key="a.schmid">
+                        Alfred Schmid Nachf.
                     </orgName>
                 </author>
                 <respStmt>
@@ -51,7 +51,7 @@
                     <titleStmt>
                         <title level="m" type="main">Mit dem Welte Mignon ...</title>
                         <author>
-                            <orgName>M. Welte &amp; Söhne G.m.b.H.</orgName>
+                            <orgName>Alfred Schmid Nachf.</orgName>
                         </author>
                     </titleStmt>
                     <publicationStmt>
@@ -107,9 +107,9 @@
             <lb />
             <persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>
             <lb />
-            <persName>Felix Mottl</persName>
+            <persName corresp="https://d-nb.info/gnd/116942037">Felix Mottl</persName>
             <lb />
-            <persName>Artur Nickisch</persName>
+            <persName corresp="https://d-nb.info/gnd/118786253">Artur Nickisch</persName>
             <lb />
             <persName>Max Pauer</persName>
         </div>
@@ -121,32 +121,30 @@
             <lb />
             <persName>Richard Strauss</persName>
             <lb />
-            <persName>Felix Weingartner</persName>
+            <persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>
         </div>
         <div facs="#eSc_textblock_bbaf7988">
             <lb />Das Welte Mignon ist das
-            <seg ana="#analysis000">Wunder der Wunder</seg>.
-            <interp xml:id="analysis000" resp="#np" type="topic">miracle</interp>
+            <seg ana="#miracle" resp="#np" type="topic">Wunder der Wunder</seg>.
             <lb />
             <persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>.</div>
         <div facs="#eSc_textblock_0ace7367">
-            <lb />Eine unbedingt geniale Erfindung von hohem <lb />künstlerischen Wert.<lb />Mottl.</div>
+            <lb />Eine unbedingt geniale Erfindung von hohem <lb />künstlerischen Wert.<lb /><persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>.</div>
         <div facs="#eSc_textblock_910008bc">
             <lb />Man meint den betreffenden Künstler in Person<lb />vor sich zu haben und ihn
-            spielen zu hören.<lb />Nickisch.</div>
+            spielen zu hören.<lb /><persName corresp="https://d-nb.info/gnd/118786253">Nickisch</persName>.</div>
         <div facs="#eSc_textblock_9c944536">
             <lb />Was ich Mignon vorzuwerfen hae, ist sein<lb />Name, weil es weder der gewaltigen
             Wirkung dieses<lb />Instruments noch seiner kolossalen Bedeutung ent-<lb />spricht. <lb /><persName
                 corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>.</div>
         <div facs="#eSc_textblock_d5bad035">
             <lb />
-            <seg ana="#analysis001">
+            <seg ana="#miracle" resp="#np" type="topic">
                 Man muss das Wunder gehört haben, um es<lb />zu glauben.
             </seg>
-            <interp xml:id="analysis001" resp="#np" type="topic">miracle</interp>
             <lb />Max Pauer.</div>
         <div facs="#eSc_textblock_c91feaa0">
-            <lb />Welte Mignon ist für mich das unerreichte Ideal<lb />aller Musikinstrumente.<lb />Max
+            <lb />Welte Mignon ist für mich das <seg ana="#unreached_ideal" resp="#np" type="topic">unerreichte Ideal<lb />aller Musikinstrumente</seg>.<lb />Max
             Reger.</div>
         <div facs="#eSc_textblock_031c0fe4">
             <lb />Der einzige Apparat der auf künstlerische<lb />Bedeutung Anspruch machen kann.<lb />Richard
@@ -156,20 +154,19 @@
             phantastisch scheinender<lb />Gedanke verwirklicht, nämlich das Klavierspiel eines
             Künstlers mit all' seinen persönlichen Eigenschaften –<lb />des Anschlags, der
             Phrasierung, des Pedalgebrauchs etc.
-            <seg ana="#analysis002">zu verewigen</seg>
-            <interp xml:id="analysis002" resp="#np" type="topic">immortality</interp>. Die Wiedergaben des Mignon haben
+            <seg ana="#immortality" resp="#np" type="topic">zu verewigen</seg>.
+            Die Wiedergaben des Mignon haben
             <lb />jeden
             Rest des mechanischen verloren. Dass es sich um eine Erfindung von ausserordentlicher
-            künstlerischer<lb />Bedeutung handelt, beweist ihr Gebrauch im <orgName>K. K. Konservatorium in
-            Wien</orgName> zu Studienzwecken.
-            <seg ana="#analysis003">
+            künstlerischer<lb />Bedeutung handelt, <seg ana="#pedagogical_use" type="topic" resp="#np">beweist ihr Gebrauch im <orgName>K. K. Konservatorium in
+            Wien</orgName> zu Studienzwecken.</seg>
+            <seg ana="#permanent_availability" type="topic" resp="#np">
                 Der Besitzer<lb />eines Welte Mignon kann sich jederzeit von den
                 berühmtesten Musikern, wie <persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>, <persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>,
-                <persName>Lamond</persName>, <persName>Mottl</persName>
+                <persName>Lamond</persName>, <persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>
                 <lb /><persName>Reger</persName>, <persName>Strauss</persName>,
                 <persName corresp="https://d-nb.info/gnd/118986724">Paderewsky</persName> etc. vorspielen lassen.
             </seg>
-            <interp xml:id="analysis003" resp="#np" type="topic">permanent availability</interp>
             <lb />
             
             <hi rendition="#c">
@@ -183,6 +180,6 @@
             Nachmittag am 3 1/2 Uhr auch am Saaleingang.</div>
         <div facs="#eSc_textblock_c8ece5c3">
             <lb />Diese Erfindung ist das unglaublichste an Vol-<lb />lendung, das man sich denken
-            kann.<lb />Felix Weingartner.</div>
+            kann.<lb /><persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>.</div>
     </text>
 </TEI>

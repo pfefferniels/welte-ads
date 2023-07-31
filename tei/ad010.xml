@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Ad in "Münchner neueste Nachrichten"</title>
+                <title type="sub">14.12.1907</title>
+                <author>
+                    <orgName key="a.schmid">
+                        Pianohaus Anfred Schmid Nachf.
+                    </orgName>
+                </author>
+                <respStmt>
+                    <persName xml:id="np">
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <notesStmt>
+                <note resp="#np">
+                    Die Anzeige weist gewisse Sprachähnlichkeiten mit den später von 
+                    Anfred Schmid Nachf. veröffentlichten Anzeigen auf.
+                </note>
+            </notesStmt>
+            <publicationStmt>
+                <publisher>
+                    <persName>
+                        <persName>
+                            <surname>Pfeffer</surname>
+                            <forename>Niels</forename>
+                        </persName>
+                    </persName>
+                </publisher>
+                <pubPlace>Tübingen</pubPlace>
+                <date>2023</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <p>
+                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            License
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>Ein musikalisches Weltwunder</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Das Reproduktionsklavier</title>
+                        <author>
+                            <orgName>Alfred Schmid Nachf.</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Münchner neueste Nachrichten</orgName>
+                        </publisher>
+                        <pubPlace>München</pubPlace>
+                        <date type="publication">1907</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Münchner neueste Nachrichten</title>
+                        <biblScope unit="issue">14.12.1907</biblScope>
+                        <biblScope unit="pages">5</biblScope>
+                    </seriesStmt>
+                </biblFull>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="ger">German</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="v2_bsb00130680_00258_full_full_0_default.jpg" />
+            <zone points="2534,4086 2534,3069 833,3069 833,4086"
+                id="eSc_textblock_fedea684" />
+            <zone points="824,3016 824,3336 1514,3336 1514,3016"
+                id="eSc_textblock_3824adc6" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_3824adc6">
+            <lb />Das Reproduktions-
+            <lb />Klavier
+        </div>
+
+        <div facs="#eSc_textblock_fedea684">
+            <lb />gibt das Spiel der berühmten Meister des Klaviers selbst-
+            <lb />tätig und <seg ana="#exact_reproduction">völlig getreu wieder</seg>, sodass die Unterscheidung
+            <lb />zwischen dem Spiel des Künstlers und der Wiedergabe auf
+            <lb />dem Reproduktionsklavier überhaupt aufhört. Ueber die
+            <lb />blosse Fingerfertigkeit vermag dieses Wunderklavier alles, was an der Leistung
+            <lb />eines Künstlers das Persönliche und Charakteristische ausmacht, zur Geltung zu
+            <lb />bringen; es handelt sich also nicht um ein Surrogat, sondern um eine vollwertige
+            <lb />Vertretung. Wer mit der Spielweise <persName>d'Alberts</persName>, <persName corresp="https://d-nb.info/gnd/118518011">Busonis</persName>, <persName>Lamonds</persName>, <persName>Stavenhagens</persName> etc.
+            <lb />vertraut ist, wird bei der Wiedergabe sofort erkennen, welcher dieser Künstler spielt. Es ist deshalb
+            <lb />nur eines zu bedauern, dass diese wundervolle Erfindung nicht schon vor 50 und mehr Jahren
+            <lb />gemacht worden ist. Dann wäre es möglich, auch heute noch sich an dem Spiel der grossen<lb />Meister
+            wie <persName>Chopin</persName>, <persName>Liszt</persName>, <persName>Rubinstein</persName>, <persName>Bülow</persName> etc. zu erfreuen und davon zu lernen. Von fast<lb />allen
+            Grossen der Gegenwart, seien es Pianisten, Komponisten oder Dirigenten, ist das Klavier-<lb />spiel
+            nun für die Nachwelt festgehalten.<lb />Aus den zahlreichen begeisterten Kundgebungen der
+            massgebendsten Künstler sei nur die<lb /><persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartners</persName> nachstehend angeführt:<lb /><quote>"Das
+            Reproduktionsklavier ist das unglaublichste an Vollendung, was man sich denken kann.<lb /><seg ana="#immortality">Was
+            grosse Meister unserer Tage leisten, kann nun nicht mehr untergehen</seg> und spätere
+            Generationen<lb />werden die Früchte dieser genialen Erfindung geniessen."</quote><lb />Die
+            nächste Vorführung des Reproduktionsklaviers findet Sonntag den 15. Dezember nach-<lb />mittags
+            5 Uhr statt, wozu Musikfreunde höflichst eingeladen sind.<lb />Pianohaus <orgName>Alfred Schmid
+            Nachf.</orgName><lb />Kgl. Bayer. Hofmusikalienhandlung, Hoflieferant Sr. Kgl. Hoheit des Prinzen
+            Rupprecht von Bayern.<lb />34 Theatinerstrasse 34
+        </div>
+        <div facs="#eSc_textblock_3824adc6" />
+    </text>
+</TEI>

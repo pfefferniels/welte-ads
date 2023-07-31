@@ -100,13 +100,12 @@
             eigenen<lb />Heim zu hören.</div>
         <div facs="#eSc_textblock_77dbd8b9">
             <lb />
-            <seg ana="#analysis000">
+            <seg ana="#permanent_availability" resp="#np" type="topic">
                 Ein Druck auf den Knopf genügt, um einen <persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>, <persName
                 corresp="https://d-nb.info/gnd/118518011">
                 Busoni</persName>, <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
             , <lb /><persName>Reisenauer</persName> etc. zu zitieren.
             </seg>
-            <interp xml:id="analysis000" resp="#np" type="topic">permanent availability</interp>
         </div>
         <div facs="#eSc_textblock_5dbfb787">
             <lb />M. Welte &amp; Söhne<lb />Hoflieferanten<lb />Freiburg i. Baden.</div>

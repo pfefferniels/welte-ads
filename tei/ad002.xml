@@ -90,14 +90,10 @@
             <hi rendition="#c">
                 <hi rendition="#i">
                     <hi rendition="#u">
-                        <seg ana="#analysis001">
+                        <seg ana="#immortality" resp="#np" type="topic">
                             The Instrument of the Immortals
                         </seg>
-                        <interp
-                            xml:id="analysis001"
-                            resp="#np"
-                            type="topic">immortality</interp>
-                        </hi>
+                    </hi>
                 </hi>
             </hi>
         </div>
@@ -107,11 +103,10 @@
                 <orgName>Steinway</orgName><lb />Welte<lb />Grand
             </head>
             <lb />The Welte-Mignon, which<lb />
-            <seg ana="#analysis002">
+            <seg ana="#exact_reproduction" resp="#np" type="topic">
                 reproduces absolutely the
                 <lb />Artists' original renderings
             </seg>,
-            <interp xml:id="analysis002" resp="#np" type="topic">faithful reproduction</interp>
             <lb />retains its position amongst<lb />the
             World's foremost and<lb />greatest reproducing instru-<lb />ments.<lb />The Steinway
             Welte is<lb />made also as a self-contained<lb />upright piano. Welte cabi-<lb />nets
@@ -147,7 +142,7 @@
                 Doh-<lb />nányi
             </persName>,
             <persName corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
-            <persName>
+            <persName corresp="https://d-nb.info/gnd/116888652">
                 Grünfeld
             </persName><lb />
             <persName>
@@ -167,11 +162,16 @@
         </div>
         <div facs="#eSc_textblock_9478645f">
             <lb />
-            <hi rendition="#i">U</hi>ntil the Welte-Mignon<lb />made its appearance all the<lb />piano-playing
-            <sic>'</sic>instruments<lb />aimed at making the interpretation<lb />of a piece of music
-            mechanically<lb />correct; the Welte-Mignon<lb />caught the great masters in the act of<lb />playing,
-            and <seg ana="#analysis003">fixed their style for ever</seg>. 
-            <interp xml:id="analysis003" resp="#np" type="topic">immortality</interp>
+            <seg type="topic" resp="#np" ana="#distinction_from_mechanical">
+                <hi rendition="#i">U</hi>ntil the Welte-Mignon
+                <lb />made its appearance all the
+                <lb />piano-playing <sic>'</sic>instruments
+                <lb />aimed at making the interpretation
+                <lb />of a piece of music mechanically
+                <lb />correct;
+            </seg>
+            the Welte-Mignon<lb />caught the great masters in the act of<lb />playing,
+            and <seg ana="#immortality" resp="#np" type="topic">fixed their style for ever</seg>. 
         </div>
         <div facs="#eSc_textblock_c6563afe">
             <lb />

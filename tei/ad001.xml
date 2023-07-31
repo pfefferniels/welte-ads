@@ -98,13 +98,9 @@
             <lb />
             <hi rendition="#u">
                 <hi rendition="#i">
-                    <seg ana="#analysis001">
+                    <seg ana="#immortality" resp="#np" type="topic">
                         The Instrument of the Immortals
                     </seg>
-                    <interp
-                        xml:id="analysis001"
-                        resp="#np"
-                        type="topic">immortality</interp>
                 </hi>
             </hi>
         </div>
