@@ -133,11 +133,11 @@
             <lb /><orgName>HARDMAN<lb />WELTE-MIGNON<lb />LICENSEE</orgName>
         
         </div>
-        <div facs="#eSc_textblock_eeb83339">
+        <div facs="#eSc_textblock_eeb83339" type="illustration">
             <seg ana="#ghost_illustration" resp="#np" type="topic">
-                <figure type="illustration">
+                <figure>
                     <desc>
-                        In the background: newspapers with headlines like
+                        In the background: newspapers with headlines such as
                         "Paderewski here, will play no more", "Paderewski says
                         his piano playing […] at an en[d]", "Paderewski puts
                         poland above piano". In the foreground: the half-transparent 

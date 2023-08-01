@@ -12,8 +12,14 @@ export const names = {
     "https://d-nb.info/gnd/11863027X": "Weingartner, Felix",
     "https://d-nb.info/gnd/118786253": "Nikisch, Arthur",
     "https://d-nb.info/gnd/116942037": "Mottl, Felix",
+    "https://d-nb.info/gnd/116327642": "Gabrilowitsch, Ossip",
+    "https://d-nb.info/gnd/124379923": "Lhévinne, Josef",
+    "https://d-nb.info/gnd/116204400": "Bloomfield-Zeisler, Fannie",
     "welte.studios": "Welte Mignon Studios",
     "m.welte": "M. Welte & Söhne",
     "steinway": "Steinway & Sons",
-    "a.schmid": "Alfred Schmid Nachf."
+    "a.schmid": "Alfred Schmid Nachf.",
+    "birkel": "Geo J. Birkel Company",
+    "hardman": "Hardman, Pack & Co.",
+    "auto.pneumatic.action": "Auto Pneumatic Action Co."
 } as { [index: string]: string }

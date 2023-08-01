@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "Singing"</title>
+              <title type="sub">1926</title>
+              <author>
+                 <orgName key="auto.pneumatic.action">
+                    Auto Pneumatic Action Co.
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="#np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <sourceDesc>
+              <bibl>Through you I live forever</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">Through you I live forever</title>
+                    <author>
+                       <orgName>Auto Pneumatic Action Co.</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>Singing</orgName>
+                    </publisher>
+                    <pubPlace>New York</pubPlace>
+                    <date type="publication">1926</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">Singing. The Voice Magazine</title>
+                    <biblScope unit="issue">February 1926</biblScope>
+                    <biblScope unit="pages">48</biblScope>
+                 </seriesStmt>
+              </biblFull>
+              <msDesc>
+                <msIdentifier>
+                  <repository>University of Illinois</repository>
+                  <idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=104</idno>
+                  </idno>
+                </msIdentifier>
+              </msDesc>
+           </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+     </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="uiug.30112102033757-seq_104.tif" />
+            <zone points="2604,512 2622,580 492,628 489,542 1424,515 2464,507"
+                id="eSc_textblock_1f92a58e" />
+            <zone points="1048,305 1048,495 2035,495 2035,305"
+                id="eSc_textblock_16b8738b" />
+            <zone points="2242,2164 2286,2217 2265,2320 1325,2320 910,2303 892,2138 934,2102"
+                id="eSc_textblock_be99ecd4" />
+            <zone points="1225,2624 1252,2747 1225,2842 689,2825 706,2615 1013,2606"
+                id="eSc_textblock_5b251767" />
+            <zone
+                points="2657,2367 2657,2842 2621,2861 2074,2861 2074,2860 1404,2842 1413,2350 2466,2350"
+                id="eSc_textblock_c488bbeb" />
+            <zone
+                points="2401,3092 2365,3249 2277,3284 1935,3284 1876,3306 1105,3306 848,3284 821,3231 821,3065 848,3048 1871,3057 2033,3049 2371,3049"
+                id="eSc_textblock_e4393655" />
+            <zone
+                points="2648,3348 2675,3375 2657,3558 2058,3567 1979,3558 1932,3514 1219,3505 1164,3452 530,3434 521,3366 556,3348 951,3324 951,3336 2288,3336"
+                id="eSc_textblock_9d2e8e27" />
+            <zone points="2056,2875 2056,3039 2637,3039 2637,2875"
+                id="eSc_textblock_6aa6819d" />
+            <zone points="2647,2032 2647,625 519,625 519,2032"
+                id="eSc_textblock_f12fe344" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_16b8738b">
+            <lb />Welte-Mignon
+         </div>
+         <div facs="#eSc_textblock_1f92a58e">
+            <lb />
+                <hi rendition="#c">
+                    <seg ana="#physical_presence" type="topic" resp="#np">
+                        THE MASTER'S FINGERS ON YOUR PIANO
+                    </seg>
+                </hi>
+         </div>
+
+         <div facs="#eSc_textblock_f12fe344" type="illustration">
+            <seg ana="#listening" resp="#np" type="topic">
+                <figure>
+                    <desc>
+                        Painting of Pachmann sitting at a piano. Three men in the background observing him.
+                    </desc>
+                </figure>
+            </seg>
+        </div>
+
+        <div facs="#eSc_textblock_be99ecd4">
+            <lb />
+            <seg ana="#immortality" resp="#np" type="topic">
+                <hi rendition="#i">Through You I Live Forever</hi>
+            </seg>
+         </div>
+         <div facs="#eSc_textblock_c488bbeb">
+            <quote>
+                <lb />"BRAVO! BRAVO! Welte Mignon*! You have
+                <lb />given me one of the greatest
+                experiences of my
+                <lb />life. You have made my fondest dream come true-
+                <lb />the dream of a perfect recording method and a re-
+                <lb />producing mechanism
+                <seg ana="#immortality">
+                    thru which my playing as
+                    an
+                    <lb />interpretative artist might live forever.
+                </seg>
+                You are my
+                <lb />undying 'alter ego'–thru you my own invisible hands
+                <lb />render the spell of my Chopin, my Liszt. You have
+                <lb />my unqualified endorsement.
+                <seg ana="#immortality">
+                    <hi rendition="#i">Thru you I live forever."</hi>
+                </seg>
+            </quote>
+         </div>
+         <div facs="#eSc_textblock_6aa6819d">
+            <lb />
+            <signed>
+                <persName corresp="https://d-nb.info/gnd/116014490">V. de Pachmann</persName>
+            </signed>
+         </div>
+         <div facs="#eSc_textblock_5b251767">
+            <hi rendition="#i">
+                <lb />A letter from the great
+                <lb />
+                <persName corresp="https://d-nb.info/gnd/116014490">Vladimir de Pachmann</persName>,
+                the idol of
+                <lb />his time, the most celebrated
+                <lb />pianist of a century; rejuve-
+                <lb />nated at 75, and now playing
+                <lb />as no one ever played before."
+            </hi>
+         </div>
+         <div facs="#eSc_textblock_e4393655">
+            <lb />Installed invisibly in any piano,
+            <seg ana="#exact_reproduction" resp="#np" type="topic">
+                Welte-Mignon* Reproducing Action makes that
+                <lb />piano reproduce with absolute perfection the playing of the master pianists.
+            </seg> The
+            <lb />Library contains thousands of beautiful recordings. You can choose from 112
+            <lb />standard makes of pianos that now install the Welte-Mignon* Reproducing Action.
+            <lb />Send for the beautiful art brochure
+         </div>
+         <div facs="#eSc_textblock_9d2e8e27">
+            <hi rendition="#c">
+                <lb /><orgName key="auto.pneumatic.action">The AUTO PNEUMATIC ACTION CO.</orgName>,
+                653 West 51st Street, New York
+                <lb /><persName>WILLIAM C. HEATON</persName>, President
+                <lb />*Licensed under original <orgName>Welte Mignon</orgName> patents
+            </hi>
+         </div>
+    </text>
+</TEI>
