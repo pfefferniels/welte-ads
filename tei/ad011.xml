@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "The New York Herald"</title>
+              <title type="sub">May 1 1921</title>
+              <author>
+                 <orgName key="hardman">
+                    Hardman Welte-Mignon Licensee
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="#np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <notesStmt>
+                <note resp="#np">
+                    [...]
+                </note>
+           </notesStmt>
+           <sourceDesc>
+              <bibl>Paderewski will play again</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">Paderewski will play again</title>
+                    <author>
+                       <orgName>Hardman Welte-Mignon Licensee</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>The New York Herald</orgName>
+                    </publisher>
+                    <pubPlace>New York</pubPlace>
+                    <date type="publication">1921</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">The New York Herald</title>
+                    <biblScope unit="issue">May 01 1921</biblScope>
+                    <biblScope unit="pages">[no page]</biblScope>
+                 </seriesStmt>
+              </biblFull>
+           </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+     </teiHeader>
+      <facsimile>
+        <surface>
+            <graphic url="new-york-herald-paderewski.png" />
+            <zone points="42,64 42,754 466,754 449,571 457,241 495,63"
+                id="eSc_textblock_fa5427b3" />
+            <zone points="37,954 36,761 799,756 938,833 936,949"
+                id="eSc_textblock_e9f6344e" />
+            <zone
+                points="486,47 495,264 461,292 473,342 467,428 479,510 445,567 445,733 602,735 614,794 653,755 696,786 732,755 956,805 956,40"
+                id="eSc_textblock_eeb83339" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_fa5427b3">
+            <lb />
+            <head>
+                <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> WILL
+                <lb />Play Again
+            </head>
+            <lb />
+            <seg ana="#miracle" resp="#np" type="topic">
+                Thanks to the wizardry of Hardman Welte-
+                <lb />Mignon(licensee) Reproducing Pianos
+            </seg>
+            <seg ana="#immortality" resp="#np" type="topic">
+                the
+                <lb />art of <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> is imperishable
+            </seg>.
+            <seg ana="#repeatability" resp="#np" type="topic">
+                He will
+                <lb />play again, again and yet again for you -
+                <lb />tonight, tomorrow night and other nights
+            </seg>
+            <lb />-
+            <seg ana="#home" resp="#np" type="topic">
+                in your own home.
+            </seg>
+            <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+            <persName corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
+            <persName corresp="https://d-nb.info/gnd/116327642">Gabrilowitsch</persName>,
+            <lb /><persName corresp="https://d-nb.info/gnd/11875081X">Saint-Saens</persName> and the most celebrated pianists
+            <lb />have expressed their conceptions of the
+            <lb />world's classics on the Welte-Mignon.
+            <lb />
+            <hi rendition="#c">
+                Write for catalog.
+                <lb />Convenient Terms
+                <lb /><orgName>HARDMAN,PECK&amp;CO.</orgName>
+                <lb />Founded 1842
+            </hi>
+            <lb />433 Fifth Avenue, New York
+            <lb />47-51 Flatbush Ave, Brooklyn
+            <hi rendition="#c">
+                <lb />Represented in all Cities
+            </hi>
+        
+        </div>
+        <div facs="#eSc_textblock_e9f6344e">
+            <lb /><orgName>HARDMAN<lb />WELTE-MIGNON<lb />LICENSEE</orgName>
+        
+        </div>
+        <div facs="#eSc_textblock_eeb83339">
+            <seg ana="#ghost_illustration" resp="#np" type="topic">
+                <figure type="illustration">
+                    <desc>
+                        In the background: newspapers with headlines like
+                        "Paderewski here, will play no more", "Paderewski says
+                        his piano playing […] at an en[d]", "Paderewski puts
+                        poland above piano". In the foreground: the half-transparent 
+                        figure of Paderewski playing the piano.
+                    </desc>
+                </figure>
+            </seg>
+        </div>
+    </text>
+</TEI>

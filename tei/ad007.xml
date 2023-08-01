@@ -96,9 +96,15 @@
             <lb />The Welte Mignon</div>
         <div facs="#eSc_textblock_49bbbbff">
             <lb />
-            <hi rendition="#i">I</hi>s <seg ana="#technical_invention" type="topic" resp="#np">the greatest achievement in the world of music<lb />invention</seg>,
-            as through it you may listen to accurate<lb />interpretations upon your own piano of
-            over five thou-<lb />sand musical compositions,
+            <hi rendition="#i">I</hi>s
+            <seg ana="#technical_invention" type="topic" resp="#np">
+                the greatest achievement in the world of music
+                <lb />invention
+            </seg>,
+            as through it you may listen to accurate
+            <lb />interpretations upon your own piano of
+            over five thou-
+            <lb />sand musical compositions,
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 precisely as they were<lb />originally played
             </seg>
@@ -108,7 +114,9 @@
             <lb />Among those who have recorded their<lb />wonderful playing for the Welte<lb />Mignon
             are</div>
         <div facs="#eSc_textblock_60560364">
-            <lb />No living Pianist has done more to<lb />engender a love for music among<lb />American
+            <lb />No living Pianist has done more to
+            <lb />engender a love for music among
+            <lb />American
             people than <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>,<lb />whose art at the zenith of his
             great<lb />career has been preserved by the<lb />Welte Mignon.</div>
         <div facs="#eSc_textblock_a80b3fdb">
@@ -119,13 +127,13 @@
             <lb />
             <persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>
             <lb />
-            <persName>Fannie Bloomfield-Zeisler</persName>
+            <persName corresp="https://d-nb.info/gnd/116204400">Fannie Bloomfield-Zeisler</persName>
             <lb />
             <persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>
             <lb />
             <persName corresp="https://d-nb.info/gnd/116014490">Vladimir Pachmann</persName>
             <lb />
-            <persName>Ossip Gabrilowitsch</persName>
+            <persName corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>
             <lb />
             <persName corresp="https://d-nb.info/gnd/118697641">Edward Grieg</persName>
             <lb />
@@ -139,7 +147,7 @@
             <lb />
             <persName>Theodor Leschetitzky</persName>
             <lb />
-            <persName>Joseph Lhevinne</persName>
+            <persName corresp="https://d-nb.info/gnd/124379923">Joseph Lhevinne</persName>
             <lb />
             <persName>Alfred Grunfeld</persName>
             <lb />

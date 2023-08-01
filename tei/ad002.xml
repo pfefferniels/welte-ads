@@ -128,9 +128,7 @@
             <persName corresp="https://d-nb.info/gnd/118501437">
                 d'Al-<lb />bert
             </persName>,
-            <persName>
-                Bloomfield-Zeisler
-            </persName>,
+            <persName corresp="https://d-nb.info/gnd/116204400">Bloomfield-Zeisler</persName>,
             <lb />
             <persName corresp="https://d-nb.info/gnd/118953915">
                 Carreño
@@ -150,7 +148,7 @@
             </persName>,
             <persName>Leschetitzky</persName>,
             <lb />
-            <perName>Lhevinne</perName>,
+            <perName corresp="https://d-nb.info/gnd/124379923">Lhevinne</perName>,
             <persName>Pugno</persName>,
             <persName corresp="https://d-nb.info/gnd/11875081X">Saint-<lb />Saens</persName>,
             <persName>Samaroff</persName>,

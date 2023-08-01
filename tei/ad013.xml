@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "Los Angeles Herald"</title>
+              <title type="sub">Feb 21 1909</title>
+              <author>
+                 <orgName key="birkel">
+                    Geo J. Birkel Company
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="#np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <sourceDesc>
+              <bibl>The Welte-Mignon</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">
+                        The Welte-Mignon
+                    </title>
+                    <title level="m" type="sub">
+                        Brings to your home ...
+                    </title>
+                    <author>
+                       <orgName>Geo J. Birkel Company</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>Los Angeles Herald</orgName>
+                    </publisher>
+                    <pubPlace>New York</pubPlace>
+                    <date type="publication">1909</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">Los Angeles Herald</title>
+                    <biblScope unit="issue">Feb 21 1909, Part II</biblScope>
+                    <biblScope unit="pages">5</biblScope>
+                 </seriesStmt>
+              </biblFull>
+              <msDesc>
+                <msIdentifier>
+                  <repository>Library of Congress</repository>
+                  <idno>
+                    <idno type="URLImages">https://chroniclingamerica.loc.gov/lccn/sn85042462/1909-02-21/ed-1/seq-17/</idno>
+                  </idno>
+                </msIdentifier>
+              </msDesc>
+           </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+     </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="los-angeles-1909.png" />
+            <zone points="20,18 19,513 657,522 656,18" id="eSc_textblock_b620cf2e" />
+            <zone
+                points="397,562 385,574 398,583 642,615 646,690 622,698 646,703 645,805 156,802 155,824 36,823 36,591 72,579 288,583 297,571 288,567 288,524 393,524"
+                id="eSc_textblock_f1d73028" />
+            <zone
+                points="602,844 598,1133 582,1142 598,1150 598,1378 582,1383 598,1391 598,1511 570,1523 590,1528 607,1560 646,1568 646,1704 614,1732 579,1732 570,1781 104,1776 83,1736 40,1728 20,1708 28,1568 76,1531 76,844 87,832"
+                id="eSc_textblock_b2073d40" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_b620cf2e">
+            <figure>
+                <desc resp="#np">
+                    Illustration of a Welte-Mignon.
+                </desc>
+            </figure>
+            <lb />DESIGN
+            OF OAK CASE
+        </div>
+
+            <div facs="#eSc_textblock_f1d73028">
+                <head>
+                    <hi rendition="#c">
+                        <lb />THE
+                        <lb />Welte-Mignon 
+                    </hi>
+                </head>
+                <lb />Brings to your home the actual living perform-
+                <lb />ances of
+                <persName corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
+                <persName corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>,
+                <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+                <lb />
+                <persName corresp="https://d-nb.info/gnd/116204400">Bloomfield-Zeisler</persName>
+                and a hundred other great
+                <lb />pianists.
+            </div>
+            
+            <div facs="#eSc_textblock_b2073d40">
+                <p>
+                    <seg ana="#technical_invention" resp="#np" type="topic">
+                        <lb />The science of musical reproduction has progressed
+                        <lb />through the various stages-experiment, medioc-
+                        <lb />rity, excellence-but until the introduction of the
+                        <lb />Welte-Mignon
+                        <lb />it has never reached supreme per-
+                        <lb />fection. But today the science has reached its
+                        <lb />apex, the goal has been attained and beyond the splendid
+                        <lb />achievement realized in the Welte-Mignon it is im-
+                        <lb />possible to go.
+                    </seg>
+                </p>
+                <p>
+                    <lb />The Welte-Mignon brings to the
+                    <lb />music-lover the actual performances of every great living pian-
+                    <lb />ist.
+                    
+                    <seg ana="#immortality">
+                        It perpetuates these performances so that fu-
+                        <lb />ture generations will enjoy the music of our
+                        <lb />present-day virtuosos when their personalities are
+                        <lb />but misty memories.
+                    </seg>
+                </p>
+                <p>
+                    <seg ana="#analogy_to_phonograph" resp="#np" type="topic">
+                        <lb />What the Victor is doing for the famous singers
+                        <lb />of the world the Welte-Mignon is
+                        <lb />accomplishing for the pianists.
+                    </seg>
+                    But with this difference: The
+                    <lb />Victor registers the voice vibrations on the disc,
+                    <lb />whereas the sensitive reproducing devices of the
+                    <lb />Welte-Mignon are of such nature that every dupli-
+                    <lb />cate performance IS MADE DIRECTLY ON THE
+                    <lb />PIANO,
+                    <seg ana="#exact_reproduction">
+                        thereby reproducing in every detail of
+                        <lb />touch, tone and technique the actual
+                        <lb />renditions of the pianists, in every sense their original per-
+                        <lb />formances.
+                    </seg>
+                </p>
+                <p>
+                    <lb />The series of instruments containing the repro-
+                    <lb />duction devices are the Welte-Mignon, as illustrated
+                    <lb />above, the Steinway-Welte, an upright Steinway
+                    <lb />piano combined with the Welte-Mignon, and the
+                    <lb />Cabinet-Welte, which may be attached to any grand
+                    <lb />or upright piano of any make.
+                </p>
+
+                <lb />Call or Write for Descriptive Literature
+                <lb />We will gladly mail to interested parties descriptive literature and
+                <lb />prices of the Welte-Mignon instruments. We are especially desirous
+                <lb />that you come to our store and give these instruments your personal
+                <lb />inspection.
+
+                <hi rendition="#c">
+                    <lb />FREE RECITALS DAILY FROM 9 A. M. TO 5 P.M-Fourth Floor.
+                </hi>
+
+                <hi rendition="#c">
+                    <lb /><orgName key="birkel">Geo J. Birkel Company</orgName>
+                    <lb />Steinway, Cecilian and Victor Dealers.
+                    <lb />345-347 South Spring Street
+                </hi>
+            </div>
+    </text>
+</TEI>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "The Sun and New York Herald"</title>
+              <title type="sub">May 7 1920</title>
+              <author>
+                 <orgName key="welte.studios">
+                    Welte Mignon Studios
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="#np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <sourceDesc>
+              <bibl>A really satisfactory way to buy musical instruments</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">
+                        A really satisfactory way to buy musical instruments
+                    </title>
+                    <author>
+                       <orgName>The Welte-Mignon Studios</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>The Sun and New York Herald</orgName>
+                    </publisher>
+                    <pubPlace>New York</pubPlace>
+                    <date type="publication">1920</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">The Sun and New York Herald</title>
+                    <biblScope unit="issue">May 07 1920</biblScope>
+                    <biblScope unit="pages">5</biblScope>
+                 </seriesStmt>
+              </biblFull>
+           </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+     </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="sun-new-york-1920.png" />
+            <zone points="10,14 10,136 935,136 935,14" id="eSc_textblock_4f5aecd5" />
+            <zone points="133,143 133,276 798,276 798,143" id="eSc_textblock_b669256d" />
+            <zone
+                points="762,294 758,374 694,388 616,388 616,423 521,423 521,572 467,572 467,574 177,574 177,604 178,604 178,605 58,605 49,321 68,283 70,282 764,282 764,292"
+                id="eSc_textblock_cd8eef02" />
+            <zone points="49,1001 49,742 61,718 58,612 459,612 459,1003 52,1003"
+                id="eSc_textblock_6dcfb305" />
+            <zone points="915,615 913,229 782,295 779,383 634,391 620,434 556,422 521,450 521,615"
+                id="eSc_textblock_8162a045" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_4f5aecd5">
+            <lb /><orgName corresp="welte.studios">The Welte-Mignon Studios</orgName>
+            <lb />667 Fifth Avenue-at 53rd Street
+        </div>
+        <div facs="#eSc_textblock_b669256d">
+            <lb />A really satisfactory way
+            <lb />to buy musical instruments</div>
+            <div facs="#eSc_textblock_cd8eef02">
+            <lb /><hi rend="#i">A</hi> FEELING of utter confidence is engendered at the
+            <lb /><orgName corresp="welte.studios">Welte Mignon Studios</orgName>. You
+            instinctively know
+            <lb />that your continued patronage is sought and, therefore,
+            <lb />that
+            everything will be made to bend toward
+            <lb />giving you thorough and complete
+            <lb />satisfaction.
+            There is a wide range of
+            <lb />instruments from which to choose, at
+            <lb />prices and on
+            terms thoroughly in
+            <lb />accord with your own idea of what is
+            <lb />equitable.</div>
+            <div facs="#eSc_textblock_6dcfb305">
+            <lb />The Welte-Mignon
+            <lb />Reproducing Piano
+            <lb />The instrument chosen by
+            <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+            <persName corresp="https://d-nb.info/gnd/124379923">Lhe-<lb/>vinne</persName>,
+            <persName corresp="https://d-nb.info/gnd/11918625X">
+                <sic>Hofman</sic>
+            </persName>,
+            <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>
+            <lb />and scores of others, to
+            <lb />
+            <seg ana="#immortality" resp="#np" type="topic">
+                preserve their genius for posterity.
+            </seg>
+            <lb />You should hear <persName corresp="https://d-nb.info/gnd/118986724">Paderewski's</persName> reproductions;
+            <seg ana="#soul_imprint" resp="#np" type="topic">
+                hear how
+                <lb />he has played
+                his soul into indestructible records for the
+                <lb /><orgName corresp="welte.studios">Welte-Mignon</orgName>
+            </seg>.
+            <seg ana="#repeatability" resp="#np" type="topic">
+                Records which you may
+                reproduce at any
+                <lb />time and as often as you like
+            </seg>, in your own home.
+            <lb />One hundred
+            and fifty-six musicians have recorded more
+            <lb />than five thousand selections for the <orgName corresp="welte.studios">Welte-Mignon</orgName>. Imagine
+            <lb />the delight to be derived from such a collection.
+            <seg ana="#affordability">
+                And consider
+                <lb />that the Welte-Mignon Reproducing Piano is within
+                <lb />everyone's means, for it may be
+                bought on your terms, with
+                <lb />in reason.
+            </seg>
+            <lb />Just drop in at the Studios to hear the
+            Welte play. Please
+            <lb />feel free to ask for your favorite selections. We consider the
+            <lb />pleasure
+            entirely ours.
+        </div>
+
+        <div facs="#eSc_textblock_8162a045">
+            <seg ana="#sitting_woman" resp="#np" type="topic">
+                <figure>
+                    <desc resp="#np">
+                        Woman sitting in a chair in front of an
+                        upright piano.
+                    </desc>
+                </figure>
+                </seg>
+        </div>
+
+        <gap>
+            <desc resp="#np">
+                The ad also includes textes for "Pathe",
+                "Pianos and Player-Pianos" and
+                "Victor Victrolas and Victor Records" which
+                have been omitted here.
+            </desc>
+        </gap>
+    </text>
+</TEI>
