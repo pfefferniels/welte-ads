@@ -161,10 +161,10 @@
             career when<lb />those marvelous fingers performed miracles, you could<lb />count it a
             great event in your life. This is what the<lb />WELTE MIGNON Reproducing Piano will do
             for you.<lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
-            <seg ana="#soul_imprint" type="topic" resp="#np">played his soul into the Welte</seg>,
+            <seg ana="#soul" type="topic" resp="#np">played his soul into the Welte</seg>,
             <seg ana="#immortality" type="topic" resp="#np">knowing<lb />full well that thus could he better pass on
             to coming gen-<lb />erations the perfect expression of his genius</seg>. It is the
-            <seg ana="#soul_imprint" type="topic" resp="#np">soul-<lb />expression</seg>
+            <seg ana="#soul" type="topic" resp="#np">soul-<lb />expression</seg>
             that 
             <seg ana="#touched_listener" type="topic" resp="#np">you feel when you listen to the Welte</seg>;
             and<lb />
@@ -183,7 +183,7 @@
             <persName corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
             <persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>–156
             masters in all have
-            <seg ana="#soul_imprint" type="topic" resp="#np">
+            <seg ana="#soul" type="topic" resp="#np">
                 played into the Welte<lb />for you the very essence of their musical
                 personalities
             </seg>,
