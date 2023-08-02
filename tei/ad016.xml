@@ -104,21 +104,24 @@
         </div>
         <div facs="#eSc_textblock_bab75d2b" rendition="#framed">
             <p>
-                <lb /><hi rendition="#i">Your</hi> whole concepion of what a
+                <lb /><hi rendition="#i">Your</hi> whole conception of what a
                 <lb />musical instrument can do will be
                 <lb />changed when you hear a reproducing
                 <lb />piano equipped with the famous WELTE-
                 <lb />MIGNON Licensee Reproducing Action.
                 <lb />For, only WELTE-MIGNON*
-                <seg ana="#secret">
-                    possesses
-                    <lb />the secret
-                </seg>
-                of
-                <seg ana="#exact_reproduction">
-                    perfect reproduction.
-                </seg>
+                <hi rendition="#i">
+                    <seg ana="#secret">
+                        possesses
+                        <lb />the secret
+                    </seg>
+                    of
+                    <seg ana="#exact_reproduction">
+                        perfect reproduction.
+                    </seg>
+                </hi>
             </p>
+
             <p>
                 <lb />Imagine
                 <persName corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName>,
@@ -148,9 +151,29 @@
             <lb />The <orgName>Auto Pneumatic Action Co.</orgName>
             <lb /><persName>W.C. Heaton, Pres.</persName>
             <lb /><address>653 West 51st Street, New York</address>
-            <lb />*Licensed
-            under original<lb />Welte-MIGNON patent</div>
-        <div facs="#eSc_textblock_d423425a" type="illustration" />
-        <div facs="#eSc_textblock_7ead3664" type="illustration" />
+            
+            <hi rendition="#i">
+                <lb />*Licensed under original
+                <lb />Welte-MIGNON patents
+            </hi>
+        </div>
+
+        <div facs="#eSc_textblock_d423425a" type="illustration">
+            <figure>
+                <desc resp="#np">
+                    A Welte Grand Piano
+                </desc>
+            </figure>
+        </div>
+
+        <div facs="#eSc_textblock_7ead3664" type="illustration">
+            <figure>
+                <desc resp="#np">
+                    <seg ana="#ghost_hands" resp="#np" type="topic">
+                        Illustration of semi-transparent hands on a piano.
+                    </seg>
+                </desc>
+            </figure>
+        </div>
     </text>
 </TEI>

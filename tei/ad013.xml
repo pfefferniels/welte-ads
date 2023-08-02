@@ -110,7 +110,10 @@
                         <lb />Welte-Mignon 
                     </hi>
                 </head>
-                <lb />Brings to your home the actual living perform-
+                <lb />
+                <seg ana="#home" resp="#np" type="topic">
+                    Brings to your home
+                </seg> the actual living perform-
                 <lb />ances of
                 <persName corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
                 <persName corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>,

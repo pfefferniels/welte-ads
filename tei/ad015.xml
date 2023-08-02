@@ -118,12 +118,13 @@
          </seg> Impressed with
          <seg ana="#exact_reproduction" resp="#np" type="topic">
             the accuracy and perfection
-            <lb/>of the first recordings of his playing by Welte Mignon Licensee
+            <lb/>of the first recordings of his playing by Welte Mignon
+            <hi rendition="#i">Licensee</hi>
          </seg>, for which
          <lb/>he records exclusively, he said:
          <quote>
             "The reproduction of my playing on the
-            <lb/>Welte Mignon Licensee is by far the most complete and the truest that I
+            <lb/>Welte Mignon <hi rendition="#i">Licensee</hi> is by far the most complete and the truest that I
             <lb/>have yet heard, and surpasses by far all my anxiously awaited expectations.
             <lb/>I am filled with truly unbiased admiration."
          </quote>
