@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import { graphql, useStaticQuery } from 'gatsby'
 import { Container, Typography } from '@mui/material'
 import * as d3 from 'd3'
-import { names } from "./names"
+import { names } from "../labels/names"
 
 const stringToColour = (str: string) => {
     let hash = 0;

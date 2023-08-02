@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from "../components/layout"
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import { Container, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material'
-import { names } from './names'
+import { names } from '../labels/names'
 
 interface Metadata {
     company: string,
