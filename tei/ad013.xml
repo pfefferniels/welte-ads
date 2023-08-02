@@ -82,7 +82,7 @@
      </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="los-angeles-1909.png" />
+            <graphic url="los-angeles-1909.png" width="676" height="1810"/>
             <zone points="20,18 19,513 657,522 656,18" id="eSc_textblock_b620cf2e" />
             <zone
                 points="397,562 385,574 398,583 642,615 646,690 622,698 646,703 645,805 156,802 155,824 36,823 36,591 72,579 288,583 297,571 288,567 288,524 393,524"

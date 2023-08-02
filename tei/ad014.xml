@@ -77,7 +77,7 @@
      </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="uiug.30112102033757-seq_104.tif" />
+            <graphic url="uiug.30112102033757-seq_104.tif" width="2896" height="3976"/>
             <zone points="2604,512 2622,580 492,628 489,542 1424,515 2464,507"
                 id="eSc_textblock_1f92a58e" />
             <zone points="1048,305 1048,495 2035,495 2035,305"
