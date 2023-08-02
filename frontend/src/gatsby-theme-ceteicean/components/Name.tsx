@@ -28,7 +28,7 @@ const Name = ({ teiNode, availableRoutes }: TEIProps) => {
     <Behavior node={teiNode}>
       <span
         className="name"
-        aria-aria-haspopup={true}
+        aria-haspopup={true}
         onClick={handlePopoverOpen}>
         <TEINodes
           teiNodes={teiNode.childNodes}

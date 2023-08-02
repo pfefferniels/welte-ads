@@ -1,17 +1,21 @@
-import React from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
-import { graphql, useStaticQuery } from "gatsby"
-import Ceteicean, {Routes} from "gatsby-theme-ceteicean/src/components/Ceteicean"
+import React, { useEffect, useRef, useState } from "react"
+import Ceteicean, { Routes } from "gatsby-theme-ceteicean/src/components/Ceteicean"
 import {
   Tei,
   TeiHeader
 } from "gatsby-theme-ceteicean/src/components/DefaultBehaviors"
-import Pb from "./Pb"
 import Layout from "../../components/layout"
 import Container from "@mui/material/Container"
-import './style.css'
+import Div from "./Div"
 import Name from "./Name"
 import Seg from "./Seg"
+import './style.css'
+import { Paper } from "@mui/material"
+import Graphic from "./Graphic"
+
+const withinBoundaries = (lower: number, suggested: number, upper: number) => {
+  return Math.max(lower, Math.min(upper, suggested))
+}
 
 interface Props {
   pageContext: {
@@ -22,41 +26,145 @@ interface Props {
   location: string
 }
 
-export interface Fac {
-  name: string
-  childImageSharp: {
-    gatsbyImageData: IGatsbyImageData
-  }
-}
+const EditionCeteicean = ({ pageContext }: Props) => {
+  const [surfaceWidth, setSurfaceWidth] = useState(100)
+  const [surfaceHeight, setSurfaceHeight] = useState(100)
+  const [zoom, setZoom] = useState(1)
+  const [pos, setPos] = useState({ x: 0, y: 0 })
+  const mouseStateRef = useRef({ down: false, lastPos: { x: 0, y: 0 } });
 
-const EditionCeteicean = ({pageContext}: Props) => {
-  const queryData = useStaticQuery(graphql`
-  query general {
-    facs: allFile(filter: {relativeDirectory: {in: "facs"}}) {
-      nodes {
-        name
-        childImageSharp {
-          gatsbyImageData
-        }
-      }
-    }
+  const dom = new DOMParser().parseFromString(pageContext.prefixed, 'text/html')
+
+  const getZoneById = (id: string) => {
+    const zone = dom.querySelector(id)
+    if (!zone) return null
+    return zone.getAttribute('points')
   }
-`)
-const facs: Fac[] = queryData.facs.nodes
 
   const routes: Routes = {
     "tei-tei": Tei,
     "tei-teiheader": TeiHeader,
-    "tei-pb": (props) => <Pb facs={facs} {...props}/>,
+    "tei-graphic": props => (
+      <Graphic
+        teiNode={props.teiNode}
+        setDimension={(width, height) => {
+          setSurfaceWidth(width)
+          setSurfaceHeight(height)
+        }} />
+    ),
+    "tei-div": props => <Div zoneGetter={getZoneById} {...props} />,
     "tei-persname": Name,
     "tei-orgname": Name,
     "tei-seg": Seg
   }
 
-  return(
+  const divRef = useRef<HTMLDivElement>(null)
+
+  const factor = 0.05
+
+  useEffect(() => {
+    const div = divRef.current;
+    if (!div) return
+
+    const container = div.getBoundingClientRect();
+
+    const handleMouseDown = (e: MouseEvent) => {
+      mouseStateRef.current = { down: true, lastPos: { x: e.clientX, y: e.clientY } };
+
+      // disable text selection
+      if (divRef.current) divRef.current.style.userSelect = 'none'
+    }
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!mouseStateRef.current.down) return;
+
+      const newPos = { x: e.clientX, y: e.clientY };
+      const diffPos = {
+        x: newPos.x - mouseStateRef.current.lastPos.x,
+        y: newPos.y - mouseStateRef.current.lastPos.y,
+      };
+      mouseStateRef.current.lastPos = newPos;
+
+      setPos({
+        x: pos.x + diffPos.x,
+        y: pos.y + diffPos.y,
+      });
+    }
+
+    const handleMouseUp = () => {
+      mouseStateRef.current.down = false;
+
+      if (divRef.current) divRef.current.style.userSelect = "";
+    }
+
+    const handleWheel = (e: WheelEvent) => {
+      e.preventDefault()
+
+      const zoomPoint = { x: e.clientX, y: e.clientY }
+
+      let delta = e.deltaY ? e.deltaY / 40 : e.deltaX
+      delta = -withinBoundaries(-1, delta, 1)
+
+      const newZoom = withinBoundaries(0.1, zoom + delta * factor * zoom, 5)
+
+      const zoomTarget = {
+        x: (zoomPoint.x - pos.x) / zoom,
+        y: (zoomPoint.y - pos.y) / zoom,
+      }
+
+      const newPos = {
+        x: -zoomTarget.x * newZoom + zoomPoint.x,
+        y: -zoomTarget.y * newZoom + zoomPoint.y,
+      };
+
+      setZoom(newZoom)
+      setPos(newPos)
+    }
+
+    div.addEventListener('wheel', handleWheel, { passive: false });
+    div.addEventListener('mousedown', handleMouseDown,);
+    div.addEventListener('mousemove', handleMouseMove);
+    div.addEventListener('mouseup', handleMouseUp);
+    div.addEventListener('mouseleave', handleMouseUp);
+
+    return () => {
+      div.removeEventListener('wheel', handleWheel);
+      div.removeEventListener('mousedown', handleMouseDown);
+      div.removeEventListener('mousemove', handleMouseMove);
+      div.removeEventListener('mouseup', handleMouseUp);
+      div.removeEventListener('mouseleave', handleMouseUp);
+    }
+  }, [divRef, zoom, pos, factor, surfaceWidth, surfaceHeight])
+
+  useEffect(() => {
+    setZoom((window.innerHeight - 100) / surfaceHeight)
+    setPos({ x: 10, y: 10 })
+  }, [surfaceHeight, surfaceWidth])
+
+  return (
     <Layout location="Edition" editionPage={true}>
       <Container component="main" maxWidth="md">
-        <Ceteicean pageContext={pageContext} routes={routes} />
+        <div
+          ref={divRef}
+          className='container'
+          style={{
+            width: '100%',
+            height: '90vh',
+            overflow: 'hidden'
+          }}>
+          <Paper
+            className='paper'
+            elevation={5}
+            style={{
+              position: 'relative',
+              width: surfaceWidth,
+              height: surfaceHeight,
+              transform: `translate(${pos.x}px, ${pos.y}px) scale(${zoom})`,
+              transformOrigin: '0 0'
+            }}>
+            <Ceteicean pageContext={pageContext} routes={routes} />
+          </Paper>
+        </div>
       </Container>
     </Layout>
   )

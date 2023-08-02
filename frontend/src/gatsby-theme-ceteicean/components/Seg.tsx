@@ -30,7 +30,7 @@ const Seg = ({ teiNode, availableRoutes }: TEIProps) => {
     <Behavior node={teiNode}>
       <span
         className="seg"
-        aria-aria-haspopup={true}
+        aria-haspopup={true}
         onClick={handlePopoverOpen}>
         <TEINodes
           teiNodes={teiNode.childNodes}

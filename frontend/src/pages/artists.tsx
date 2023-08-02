@@ -68,7 +68,7 @@ const Artists = () => {
         // set the dimensions and margins of the graph
         const margin = { top: 10, right: 30, bottom: 30, left: 60 },
             width = 1000 - margin.left - margin.right,
-            height = 500 - margin.top - margin.bottom;
+            height = 600 - margin.top - margin.bottom;
 
         // append the svg object to the body of the page
         svgElement
@@ -125,6 +125,7 @@ const Artists = () => {
             .attr("cx", (d: any) => x(d.year))
             .attr("cy", (d: any) => y(allArtists.indexOf(d.name)))
             .style("fill", (d: any) => stringToColour(d.name))
+            .style("fill-opacity", 0.8)
             .attr("r", (d: any) => d.count * 4)
             .on('mouseover', (_, data: any) => {
                 setSelectedMention(data)

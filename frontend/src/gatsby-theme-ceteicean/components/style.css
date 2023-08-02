@@ -5,8 +5,39 @@
 }
 
 .seg {
-    border: 1px dotted black;
     cursor: pointer;
+    background-color: rgba(255, 251, 0, 0.1);
+}
+
+.illustration {
+    border: 2px dashed gray;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+tei-gap::before {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding-left: 4px;
+    padding-right: 4px;
+    content: 'gap';
+}
+
+tei-figure::before {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding-left: 4px;
+    padding-right: 4px;
+    content: 'illustration';
+}
+
+tei-figure {
+    margin: 1rem;
+}
+
+tei-desc {
+    font-style: italic;
+    color: gray;
 }
 
 tei-head {
