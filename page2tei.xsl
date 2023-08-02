@@ -58,6 +58,8 @@
         <xsl:element name="surface" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:element name="graphic" namespace="http://www.tei-c.org/ns/1.0">
                 <xsl:attribute name="url" select="@imageFilename" />
+                <xsl:attribute name="width" select="@imageWidth" />
+                <xsl:attribute name="height" select="@imageHeight" />
             </xsl:element>
             
             <xsl:apply-templates mode="facsimile" />
@@ -67,6 +69,9 @@
     <xsl:template match="pc:TextRegion" mode="text">
         <xsl:element name="div" namespace="http://www.tei-c.org/ns/1.0">
             <xsl:attribute name="facs" select="concat('#', @id)" />
+            <xsl:if test="@custom='structure {type:Illustration;}'">
+                <xsl:attribute name="type">illustration</xsl:attribute>
+            </xsl:if>
             <xsl:apply-templates select="pc:TextLine" mode="text"/>
         </xsl:element>
     </xsl:template>
