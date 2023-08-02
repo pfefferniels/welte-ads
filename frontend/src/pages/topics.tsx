@@ -1,17 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import Layout from "../components/layout"
 import { graphql, useStaticQuery } from 'gatsby'
 import { Container, Typography } from '@mui/material'
-import * as d3 from 'd3'
 import { WeighedCircles } from '../components/weighedCircles'
-import { topicLabels } from '../labels/topicLabels'
-import { stringToColour } from '../helpers/stringToColour'
-
-interface Topic {
-    name: string,
-    count: number,
-    year: number
-}
 
 const Topics = () => {
     const data = useStaticQuery(graphql`

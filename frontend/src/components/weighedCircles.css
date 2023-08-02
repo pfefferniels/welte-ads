@@ -1,0 +1,18 @@
+.weighted-circle {
+    fill-opacity: 0.5
+}
+
+.circle-group:hover {
+    cursor: pointer;
+}
+
+.circle-label {
+    font-family: 'EB Garamond';
+    font-weight: 400;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+.circle-label:hover {
+    font-weight: bold;
+}
