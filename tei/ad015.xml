@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "Singing"</title>
+              <title type="sub">March 1926</title>
+              <author>
+                 <orgName key="auto.pneumatic.action">
+                    Auto Pneumatic Action Co.
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="#np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <sourceDesc>
+              <bibl>Walter Gieseking</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">Walter Gieseking</title>
+                    <author>
+                       <orgName>Auto Pneumatic Action Co.</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>Singing</orgName>
+                    </publisher>
+                    <pubPlace>New York</pubPlace>
+                    <date type="publication">1926</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">Singing. The Voice Magazine</title>
+                    <biblScope unit="issue">March 1926</biblScope>
+                    <biblScope unit="pages">44</biblScope>
+                 </seriesStmt>
+              </biblFull>
+              <msDesc>
+                <msIdentifier>
+                  <repository>University of Illinois</repository>
+                  <idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=148</idno>
+                  </idno>
+                </msIdentifier>
+              </msDesc>
+           </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="uiug.30112102033757-seq_148.tif" width="2896" height="3992"/>
+         <zone points="919,1871 919,2026 2159,2026 2159,1871"
+               id="eSc_textblock_778d31fa"/>
+         <zone points="755,2039 755,2485 2329,2485 2329,2039"
+               id="eSc_textblock_98250902"/>
+         <zone points="694,2516 694,2665 2399,2665 2399,2516"
+               id="eSc_textblock_aea977b8"/>
+         <zone points="2567,2741 2563,2820 2350,2820 2350,2948 682,2959 682,2856 518,2856 518,2750"
+               id="eSc_textblock_34901235"/>
+         <zone points="2097,3315 1249,3306 998,3322 998,3035 2110,3035 2110,3321 2097,3321"
+               id="eSc_textblock_cdb62251"/>
+         <zone points="1730,3500 1730,3227 1393,3227 1393,3500"
+               id="eSc_textblock_94049306"/>
+         <zone points="937,589 937,1817 2162,1817 2162,589"
+               id="eSc_textblock_eb938c75"/>
+      </surface>
+   </facsimile>
+   <text>
+      <div facs="#eSc_textblock_eb938c75" type="illustration">
+        <figure>
+            <desc>
+                Walter Giesiking sitting at the piano.
+            </desc>
+        </figure>
+      </div>
+      <div facs="#eSc_textblock_778d31fa">
+         <lb/>
+            <hi rendition="#larger">
+                <persName corresp="https://d-nb.info/gnd/118694820">WALTER GIESEKING</persName>
+            </hi>
+        </div>
+      <div facs="#eSc_textblock_98250902">
+         <lb/>The phenomenal success of this artist recently at his first concert here con-
+         <lb/>firmed the fame that preceded him from abroad.
+         <seg ana="#immediate_recognizability" resp="#np" type="topic">
+            His expectant New York
+            <lb/>audience at once recognized his native genius, genuine musicianship, and
+            <lb/>brilliant command of the piano.
+         </seg> Impressed with
+         <seg ana="#exact_reproduction" resp="#np" type="topic">
+            the accuracy and perfection
+            <lb/>of the first recordings of his playing by Welte Mignon Licensee
+         </seg>, for which
+         <lb/>he records exclusively, he said:
+         <quote>
+            "The reproduction of my playing on the
+            <lb/>Welte Mignon Licensee is by far the most complete and the truest that I
+            <lb/>have yet heard, and surpasses by far all my anxiously awaited expectations.
+            <lb/>I am filled with truly unbiased admiration."
+         </quote>
+        </div>
+      <div facs="#eSc_textblock_aea977b8">
+         <lb/>
+         <hi rendition="#c">
+            You may select the Welte-Mignon Licensee in 115 Makes of Pianos
+            <lb/>A Most Interesting Art Brochure Is Yours for the Asking
+         </hi>
+      </div>
+      <div facs="#eSc_textblock_34901235">
+        <hi rendition="#c">
+            <lb/><corpName>AUTO PNEUMATIC ACTION COMPANY</corpName>
+            <lb/><persName>William C. Heaton, President</persName>
+            <lb/>
+            <address>
+                653 West 51st. Street <space dim="horizontal" /> New York
+            </address>
+        </hi>
+    </div>
+        
+      <div facs="#eSc_textblock_cdb62251">
+         <lb/>Welte Mignon
+         <lb/>THE MASTER'S FINGERS ON YOUR PIANO
+        </div>
+
+      <div facs="#eSc_textblock_94049306" type="illustration">
+        <seg ana="#ghost_hands" resp="#np" type="topics">
+            <figure>
+                <desc>
+                    Semitransparent hands on a piano as parts of the 
+                    company logo.
+                </desc>
+            </figure>
+        </seg>
+      </div>
+   </text>
+</TEI>

@@ -120,25 +120,30 @@
             ist das Spiel<lb />aber nun für die Nachwelt festgehalten; schon jetzt sind zur
             Reproduktin<lb />aufgenommen: <persName>Eugen d'Albert</persName>, <persName>Konrad Ansorge</persName>, <persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>, <persName>Teresa<lb />Carreno</persName>,
             <persName>Ernst von Dohnányi</persName>, <persName>Artur Friedheim</persName>, <persName corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>, <persName corresp="https://d-nb.info/gnd/116888652">Alfred<lb />Grünfeld</persName>, <persName>Heinrich
-            Grünfeld</persName>, <persName>Clotilde Kleeberg</persName>, <persName>Alexander Krah</persName>, <persName>Frederic<lb />Lamond</persName>, <persName corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>, <persName>Egon
+            Grünfeld</persName>, <persName corresp="https://d-nb.info/gnd/116210419">Clotilde Kleeberg</persName>, <persName>Alexander Krah</persName>, <persName>Frederic<lb />Lamond</persName>, <persName corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>, <persName>Egon
             Petri</persName>, <persName>Raoul Pugno</persName>, <persName>Max Reger</persName>, <persName>Carl Reinecke</persName>,<lb /><persName>Alfred Reisenauer</persName>, <persName>Alice Ripper</persName>,
             <persName>Xaver Scharwenka</persName>, <persName>Artur Schnabel</persName>, <persName>Joseph<lb />Slivinski</persName>, <persName>Bernhard Stavenhagen</persName>, <persName corresp="https://d-nb.info/gnd/11863027X">Felix
             Weingartner</persName>, <persName>Karl Wendling</persName>. Das<lb />Reproduktionsklavier bedeutet für die Hausmusik
             eine unendliche Bereiche-<lb />rung.
+            
+            Nicht nur, dass man
+            <seg ana="#home">in seinem Heim</seg>
             <seg ana="#permanent_availability" resp="#np" type="topic">
-                Nicht nur, dass man in seinem Heim sich jeden
+                sich jeden
                 Augenblick von den<lb />obengenannten Künstlern vorspielen lassen kann
             </seg>, wer singt oder
             geigt etc.<lb />wird sich sogar künstlerisch vollendet begleiten lassen können. Die
             Bedeutung<lb />der Erfindung in denn auch von allen namhaften Pianisten anerkannt
             worden,<lb />wie nachfolgende Aeusserungen beweisen:</div>
         <div facs="#eSc_textblock_05c0264b">
-            <lb /><persName>Eugen d'Albrt</persName>:<lb />Das Mignon-Reproduktionsklavier ist<lb />eine Aufsehen
-            erregende Erfindung.<lb /><persName>Konrad Ansorge</persName>:<lb />Es ist ein ausgezeichnetes Bildungs-<lb />mittel
+            <lb /><persName corresp="https://d-nb.info/gnd/118501437">Eugen d'Albert</persName>:
+            <lb />Das Mignon-Reproduktionsklavier ist<lb />eine Aufsehen
+            erregende Erfindung.
+            <lb /><persName>Konrad Ansorge</persName>:<lb />Es ist ein ausgezeichnetes Bildungs-<lb />mittel
             für Konservatorien, wo den Stu-<lb />dierenden die Vortragsart eines Mei-<lb />sters zu
             jeder Zeit vorgeführt werden kann.<lb />kann.<lb /><persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>:<lb />Mignon ist
             ebenso verblüffend für den<lb />Eingeweihten, als sie für den Einge-<lb />weihten
-            bewunderungswürdig sein muss.<lb /><persName>Teresa Carreno</persName>:<lb />Meine Bewunderung für die
+            bewunderungswürdig sein muss.<lb /><persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>:<lb />Meine Bewunderung für die
             grossartige<lb />Erfindung kennt keine Grenzen.<lb /><persName>Ernst von Dohnányi</persName>:<lb />Man kann
             nur staunen und bewundern.<lb /><persName corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>:<lb />Mignon ist sicher eine der
             wunder-<lb />barsten Erfindungen, die dem mensch-<lb />lichen Geiste gelungen sind.<lb /><persName corresp="https://d-nb.info/gnd/116888652">Alfred
@@ -149,7 +154,7 @@
             <lb />Verführung des Klaviers kann einstweilen nur nach vorhergegangener Anmeldung
             erfolgen.<lb />Alleinvertretung bei Alfred Schmid Nachf., 33-34 Theatinerstrasse 33-34.</div>
         <div facs="#eSc_textblock_daae2028">
-            <lb /><persName>Clotilde Kleeberg</persName>:<lb />
+            <lb /><persName corresp="https://d-nb.info/gnd/116210419">Clotilde Kleeberg</persName>:<lb />
             <seg ana="#soul" resp="#np" type="topic">
                 Es scheint mir, als ob in Mignon der Spie-<lb />gel der
                 Musikseele gefunden wäre

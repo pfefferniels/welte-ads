@@ -96,8 +96,12 @@
             <head> Welte- <lb />Mignon </head>
         </div>
         <div facs="#eSc_textblock_8235fd10">
-            <lb />bietet die Möglichkeit, das Originalspiel der<lb />ersten Pianisten der Welt im
-            eigenen<lb />Heim zu hören.</div>
+            <lb />bietet die Möglichkeit, das Originalspiel der<lb />ersten Pianisten der Welt
+            <seg ana="#home" resp="#np" type="topic">
+                im eigenen
+                <lb />Heim zu hören.
+            </seg>
+        </div>
         <div facs="#eSc_textblock_77dbd8b9">
             <lb />
             <seg ana="#permanent_availability" resp="#np" type="topic">
