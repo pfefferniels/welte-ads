@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import { Behavior } from "gatsby-theme-ceteicean/src/components/Behavior"
 import { TEINodes } from "react-teirouter"
 import { Popover } from "@mui/material"
+import { topicLabels } from "../../labels/topicLabels"
+import { Link } from "gatsby"
 
 interface TEIProps {
   teiNode: Node
@@ -47,7 +49,10 @@ const Seg = ({ teiNode, availableRoutes }: TEIProps) => {
         }}
       >
         <div style={{ padding: '1rem' }}>
-          <span color='gray'>{type}</span>: <i>{topic}</i><sup>{resp}</sup>
+          <span color='gray'>{type}: </span>
+              <Link to={`/topic/${topic}`}>
+                {topicLabels[topic as string] || topic}
+              </Link><sup>{resp}</sup>
         </div>
       </Popover>
     </Behavior>

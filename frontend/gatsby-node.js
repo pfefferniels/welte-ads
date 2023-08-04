@@ -29,7 +29,7 @@ async function onCreateNode({
     .map(name => name.getAttribute('corresp'))
   const topicSegments = [...document.querySelectorAll('seg[ana]')]
     .map(seg => ({
-      id: seg.getAttribute('xml:id') || v4(),
+      id: seg.getAttribute('xml:id') || `#${v4()}`,
       topic: seg.getAttribute('ana'),
       text: seg.textContent
     }))

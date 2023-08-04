@@ -31,6 +31,10 @@ module.exports = {
         link: '/overview'
       },
       {
+        name: 'Companies',
+        link: '/companies'
+      },
+      {
         name: 'Artists',
         link: '/artists'
       },
