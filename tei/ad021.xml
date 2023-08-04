@@ -38,10 +38,10 @@
               </availability>
            </publicationStmt>
            <sourceDesc>
-              <bibl>Possessed only by Welte-Mignon</bibl>
+              <bibl>The superiority of any reproducing piano</bibl>
               <biblFull>
                  <titleStmt>
-                    <title level="m" type="main">Possessed only by Welte-Mignon</title>
+                    <title level="m" type="main">The superiority of any reproducing piano</title>
                     <author>
                        <orgName>Auto Pneumatic Action Co.</orgName>
                     </author>
@@ -171,7 +171,7 @@
       <div facs="#eSc_textblock_ae66d627" type="illustration">
         <figure>
             <desc resp="#np">
-                <seg ana="#ghost_body" resp="#np" type="topic">
+                <seg ana="#phantom_body" resp="#np" type="topic">
                     Ghost hands on a piano.
                 </seg>
             </desc>            

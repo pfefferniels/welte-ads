@@ -38,10 +38,10 @@
               </availability>
            </publicationStmt>
            <sourceDesc>
-              <bibl>Possessed only by Welte-Mignon</bibl>
+              <bibl>In the home, in the studio, or on the stage</bibl>
               <biblFull>
                  <titleStmt>
-                    <title level="m" type="main">Possessed only by Welte-Mignon</title>
+                    <title level="m" type="main">In the home, in the studio, or on the stage</title>
                     <author>
                        <orgName>Auto Pneumatic Action Co.</orgName>
                     </author>
@@ -195,7 +195,7 @@
                 <hi rendition="#c"></hi>
                 <lb />In the home, in the studio, or on the stage-
                 <lb />
-                <seg ana="#permanent_availability">
+                <seg ana="#touch_of_a_button">
                     the art of the greatest pianists
                     is available for all occasions
                 </seg>

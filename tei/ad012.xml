@@ -92,7 +92,7 @@
             <lb />A really satisfactory way
             <lb />to buy musical instruments</div>
             <div facs="#eSc_textblock_cd8eef02">
-            <lb /><hi rend="#in">A</hi> FEELING of utter confidence is engendered at the
+            <lb /><hi rendition="#in">A</hi> FEELING of utter confidence is engendered at the
             <lb /><orgName corresp="welte.studios">Welte Mignon Studios</orgName>. You
             instinctively know
             <lb />that your continued patronage is sought and, therefore,
@@ -122,7 +122,7 @@
                 preserve their genius for posterity.
             </seg>
             <lb />You should hear <persName corresp="https://d-nb.info/gnd/118986724">Paderewski's</persName> reproductions;
-            <seg ana="#soul" resp="#np" type="topic">
+            <seg ana="#soulfulness" resp="#np" type="topic">
                 hear how
                 <lb />he has played
                 his soul into indestructible records for the

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "Music Trade Review"</title>
+              <title type="sub">November 10, 1928</title>
+              <author>
+                 <orgName key="welte.mignon.corp">
+                    Welte Mignon Corporation
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="#np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <sourceDesc>
+              <bibl>The Amazing New Welte-Mignon Musicalle</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">The Amazing New Welte-Mignon Musicalle</title>
+                    <author>
+                       <orgName>Welte Mignon Corporation</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>The Music Trade Review</orgName>
+                    </publisher>
+                    <pubPlace>New York</pubPlace>
+                    <date type="publication">1928</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">The Music Trade Review</title>
+                    <biblScope unit="issue">November 1928</biblScope>
+                    <biblScope unit="pages">frontcover</biblScope>
+                 </seriesStmt>
+              </biblFull>
+              <msDesc>
+                <msIdentifier>
+                  <repository>International Arcade Museum Library</repository>
+                  <idno>
+                    <idno type="URLImages">https://elibrary.arcade-museum.com/Music-Trade-Review/1928-87-19-SECTION-1</idno>
+                  </idno>
+                </msIdentifier>
+              </msDesc>
+           </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+   </teiHeader>
+       <facsimile>
+        <surface>
+            <graphic url="MTR-1928-87-19-SECTION-1-01.pdf_page_1.png"
+                width="3133"
+                height="4375" />
+            <zone points="286,249 286,1107 2860,1107 2860,249"
+                id="eSc_textblock_7087fd61" />
+            <zone points="911,1400 882,1728 563,1718 554,1400 602,1370"
+                id="eSc_textblock_e9d44931" />
+            <zone
+                points="2578,1934 2607,1973 2607,2039 2569,2070 2607,2119 2607,2243 1990,2262 1959,2292 1986,2300 1986,2452 1978,2457 612,2437 622,2304 806,2272 816,2119 913,1973 1424,1954 1465,1905 2326,1888"
+                id="eSc_textblock_4411276c" />
+            <zone
+                points="2335,1623 2423,1662 2406,1701 2549,1767 2374,1815 1475,1796 1446,1737 1465,1613 1611,1604"
+                id="eSc_textblock_8b4f9efa" />
+            <zone points="573,3507 563,2683 612,2583 593,2547 1286,2531 1286,3531 1171,3531"
+                id="eSc_textblock_b142b74c" />
+            <zone points="2046,2537 2033,3531 1307,3531 1307,2530"
+                id="eSc_textblock_2aef91d9" />
+            <zone
+                points="2199,3558 2250,3645 2462,3665 2501,3798 2569,3830 2607,3905 2114,3925 2065,3857 1212,3847 1144,3857 1103,3925 593,3925 583,3869 700,3818 700,3655 748,3633 738,3577 1032,3555 1286,3555 1307,3555 2164,3555"
+                id="eSc_textblock_7d6330b8" />
+            <zone points="2578,3324 2637,3363 2627,3429 2087,3439 2063,3479 2063,3337"
+                id="eSc_textblock_5fe584b5" />
+            <zone points="917,1286 916,2020 1444,2020 1444,1286"
+                id="eSc_textblock_ffd3c78d" />
+            <zone points="2116,2276 2093,3332 2658,3356 2658,2276"
+                id="eSc_textblock_eb5ad774" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_7087fd61">
+            <lb />THE
+            <lb />MUSIC TRADE
+            <lb />REVIEW
+            <lb />MAGAZINE NUMBER<lb />In Two Sections<lb />November 10, 1928
+            <lb />Section I
+        </div>
+        <div facs="#eSc_textblock_e9d44931">
+            <lb />Remember that you can
+            <lb />select unlimited pro-
+            <lb />gram groups for the
+            <lb />Musicalle from the in-
+            <lb />comparable WELTE-
+            <lb />MIGNON Library of over
+            <lb />three thousand Master
+            <lb />Recordings . . .
+            <seg ana="#suit_every_mood" resp="#np" type="topic">
+                clas-
+                <lb />sical music, modern
+                <lb />music, orchestral music,
+                <lb />ballets and dance ...
+                <lb />a program to suit every
+                <lb />mood and occasion.
+            </seg>
+        </div>
+        <div facs="#eSc_textblock_4411276c">
+            <lb />The Amazing New
+            <lb />WELTE-MIGNONG Musicalle
+            <lb />makes possible for the first time an hour of uninter-
+            <lb />rupted music by the great pianists of the world ..
+        </div>
+        <div facs="#eSc_textblock_8b4f9efa">
+            <lb />
+            <seg ana="#touch_of_a_button" type="topic" resp="#np">
+                At the touch of a button . . .
+                <lb />without moving from your chair . .
+            </seg>
+        </div>
+        <div facs="#eSc_textblock_b142b74c">
+            <lb />TURN BACK the calendar twenty-four
+            <lb />years . . . From the House of Welte
+            <lb />came the announcement in 1904 of an
+            <lb />instrument which
+            <seg ana="#exact_reproduction">
+                exactly reproduced the play-
+                <lb />ing of the master pianists. . . .
+            </seg>
+            <lb />Today–twenty-four years later–the <orgName>WELTE-
+            <lb />MIGNON Corporation</orgName> announces
+            <seg ana="#technical_invention">
+                the second
+                <lb />truly great and signifact step in the progress
+                <lb />of musical reproduction . . . the WELTE-
+                <lb />MIGNON Musicalle.
+            </seg>
+            <seg ana="#sitting_woman">
+                <lb />. . . A women relaxes in the soft depths of
+                <lb />her favorite chair . . . 
+            </seg>
+            <seg ana="#touch_of_a_button">
+                On the table by her
+                <lb />side rests a small tablet with eight ivory but-
+                <lb />tons . . . She presses . . . From her
+                <lb />superb piano, a WELTE-MIGNON, flow the
+                <lb />magic strains of a Chopin Nocturne . . .
+                <lb /><persName>Paderewski</persName> is playing . . . Silence for a mo-
+                <lb />ment . . . the silence of appreciation . . .
+                <lb />She touches another button, chossing at ran-
+                <lb />dom . . . <persName>Josef Hofmann</persName>-playing Medels-
+                <lb />sohn's "Rondo Capriccioso."
+            </seg>
+            <seg ana="#suit_every_mood" resp="#np" type="topic">
+                In modern mood
+                <lb />she turns to <persName>Gershwin</persName> . . . "Thre Rhap-
+                <lb />sody in Blue" . . .
+            </seg>
+            <seg ana="#listening" resp="#np" type="topic">
+                For an hour or more, she
+                <lb />revels in the worlds great piano music . . .
+                <lb />never moving from her chair
+            </seg>
+            <lb />. . . . This is the new WELTE-MIGNON
+            <lb />Musicalle . . . . . . .
+        </div>
+        <div facs="#eSc_textblock_2aef91d9">
+            <lb />Such simplicity operation has never before
+            <lb />been achieved in musical reproduction.
+            <seg ana="#invisibility" resp="#np" type="topic">
+                Every
+                <lb />annoying interruption is banished . . . no
+                <lb />dials to turn . . . no rerolling . . .
+                <lb />no changing of records.
+                <lb />The Musicalle is a cabinet containing eight
+                <lb />records and the silent mechanism for control-
+                <lb />ling them.
+            </seg> It is connected with the piano by
+            <lb />a small, easily concealed cable. A tablet,
+            <lb />scarcely larger than a small book of verse,
+            <lb />operates the Musicalle-resting inconspicuously
+            <lb />on a table or stand in your library . . .
+            <lb />your music room . . . your dining room
+            <lb />. . . wherever you wish.
+            <lb />Of course, there will be times when you
+            <lb />yourself desire to play. Remember that the
+            <lb />Musicalle leaves your piano wholly at your
+            <lb />disposal-unaffected in appearance, action or
+            <lb />tone.
+            <lb />The Musicalle together with Welte-Mignon
+            <lb />Reproducing Mechanism installed in other
+            <lb />makes of Grand Pianos. Prices on request.
+        </div>
+        <div facs="#eSc_textblock_7d6330b8">
+            <lb />
+            <seg ana="#immortality" resp="#np" type="topic">
+                The New Instrument That Immortalizes the Playing of the Masters.
+            </seg>
+            <lb /><orgName>WELTE-MIGNON CORPORATION</orgName>
+            <lb /><persName>
+                <hi rendition="#k">William C. Heaton</hi>
+            </persName>, Wholesale Sales Manager, Piano Division
+            <lb />
+            <address>
+                665
+                Fifth Avenue
+                <lb />New York City
+            </address>
+        </div>
+        <div facs="#eSc_textblock_5fe584b5">
+            <lb />The Musicalle is patented and controlled ex-
+            <lb />clusively by the Welte-Mignon Corporation
+        </div>
+        <div facs="#eSc_textblock_ffd3c78d" type="illustration" />
+        <div facs="#eSc_textblock_eb5ad774" type="illustration" />
+    </text>
+</TEI>

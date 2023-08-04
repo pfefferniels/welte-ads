@@ -145,7 +145,7 @@
         <div facs="#eSc_textblock_e56f4d74">
             <lb />
             <hi rendition="#u">
-                <seg type="topic" ana="#permanent_availability" resp="#np">At Your Command</seg>
+                <seg type="topic" ana="#touch_of_a_button" resp="#np">At Your Command</seg>
             </hi>
         </div>
         <div facs="#eSc_textblock_2389efb5">
@@ -161,12 +161,12 @@
             career when<lb />those marvelous fingers performed miracles, you could<lb />count it a
             great event in your life. This is what the<lb />WELTE MIGNON Reproducing Piano will do
             for you.<lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
-            <seg ana="#soul" type="topic" resp="#np">played his soul into the Welte</seg>,
+            <seg ana="#soulfulness" type="topic" resp="#np">played his soul into the Welte</seg>,
             <seg ana="#immortality" type="topic" resp="#np">knowing<lb />full well that thus could he better pass on
             to coming gen-<lb />erations the perfect expression of his genius</seg>. It is the
-            <seg ana="#soul" type="topic" resp="#np">soul-<lb />expression</seg>
+            <seg ana="#soulfulness" type="topic" resp="#np">soul-<lb />expression</seg>
             that 
-            <seg ana="#touched_listener" type="topic" resp="#np">you feel when you listen to the Welte</seg>;
+            <seg ana="#listening" type="topic" resp="#np">you feel when you listen to the Welte</seg>;
             and<lb />
             <seg ana="#repeatability" resp="#np" type="topic">
                 you may hear it not only once, but
@@ -183,7 +183,7 @@
             <persName corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
             <persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>–156
             masters in all have
-            <seg ana="#soul" type="topic" resp="#np">
+            <seg ana="#soulfulness" type="topic" resp="#np">
                 played into the Welte<lb />for you the very essence of their musical
                 personalities
             </seg>,

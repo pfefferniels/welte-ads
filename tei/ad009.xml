@@ -128,7 +128,7 @@
             
             Nicht nur, dass man
             <seg ana="#home">in seinem Heim</seg>
-            <seg ana="#permanent_availability" resp="#np" type="topic">
+            <seg ana="#touch_of_a_button" resp="#np" type="topic">
                 sich jeden
                 Augenblick von den<lb />obengenannten Künstlern vorspielen lassen kann
             </seg>, wer singt oder
@@ -155,7 +155,7 @@
             erfolgen.<lb />Alleinvertretung bei Alfred Schmid Nachf., 33-34 Theatinerstrasse 33-34.</div>
         <div facs="#eSc_textblock_daae2028">
             <lb /><persName corresp="https://d-nb.info/gnd/116210419">Clotilde Kleeberg</persName>:<lb />
-            <seg ana="#soul" resp="#np" type="topic">
+            <seg ana="#soulfulness" resp="#np" type="topic">
                 Es scheint mir, als ob in Mignon der Spie-<lb />gel der
                 Musikseele gefunden wäre
             </seg>.
