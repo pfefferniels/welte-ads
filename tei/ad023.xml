@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "Singing"</title>
+              <title type="sub">September 1926</title>
+              <author>
+                 <orgName key="auto.pneumatic.action">
+                    Auto Pneumatic Action Co.
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="#np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <sourceDesc>
+              <bibl>Possessed only by Welte-Mignon</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">Possessed only by Welte-Mignon</title>
+                    <author>
+                       <orgName>Auto Pneumatic Action Co.</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>Singing</orgName>
+                    </publisher>
+                    <pubPlace>New York</pubPlace>
+                    <date type="publication">1926</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">Singing. The Voice Magazine</title>
+                    <biblScope unit="issue">September 1926</biblScope>
+                    <biblScope unit="pages">backcover</biblScope>
+                 </seriesStmt>
+              </biblFull>
+              <msDesc>
+                <msIdentifier>
+                  <repository>University of Illinois</repository>
+                  <idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=372</idno>
+                  </idno>
+                </msIdentifier>
+              </msDesc>
+           </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="uiug.30112102033757-seq_372.tif" width="2840" height="3944" />
+            <zone points="722,449 722,885 1032,885 1032,449" id="eSc_textblock_a0bc1157" />
+            <zone points="1059,598 1059,1028 1375,1028 1375,598"
+                id="eSc_textblock_13d38cee" />
+            <zone points="964,1022 964,1445 1282,1445 1282,1022"
+                id="eSc_textblock_169eab61" />
+            <zone points="701,1248 701,1668 1014,1668 1014,1248"
+                id="eSc_textblock_b4d63d5c" />
+            <zone points="1440,432 1440,873 1765,873 1765,432"
+                id="eSc_textblock_9f93a7b3" />
+            <zone points="853,2089 853,1659 1157,1659 1157,2089"
+                id="eSc_textblock_6d7ff571" />
+            <zone points="1872,473 1872,914 2197,914 2197,473"
+                id="eSc_textblock_91178103" />
+            <zone points="2415,1272 2415,840 2099,840 2099,1272"
+                id="eSc_textblock_8eb032be" />
+            <zone points="597,2273 597,2667 2451,2667 2451,2273"
+                id="eSc_textblock_c61c0a72" />
+            <zone points="615,2980 615,2658 1521,2658 1521,2980"
+                id="eSc_textblock_1ee7c53a" />
+            <zone points="2021,1905 2021,2008 2443,2008 2443,1905"
+                id="eSc_textblock_65dcf1c2" />
+            <zone points="2023,2017 2023,2283 2236,2283 2236,2017"
+                id="eSc_textblock_59f05978" />
+            <zone points="2433,2015 2436,2291 2243,2291 2238,2015"
+                id="eSc_textblock_49b5a03a" />
+            <zone points="2460,2956 2460,2664 1551,2664 1551,2956"
+                id="eSc_textblock_a311a566" />
+            <zone points="919,3054 919,2968 2156,2968 2156,3054"
+                id="eSc_textblock_a1d08d9a" />
+            <zone
+                points="1056,3105 1056,3379 1401,3383 1405,3519 1695,3510 1693,3383 2016,3379 2016,3105"
+                id="eSc_textblock_8e02e40f" />
+            <zone points="624,3367 624,3510 1306,3510 1306,3367"
+                id="eSc_textblock_423690b5" />
+            <zone points="1765,3498 1765,3385 2471,3385 2471,3498"
+                id="eSc_textblock_7d8e9f52" />
+            <zone points="1124,1230 1124,1231 1125,1231 1125,1230"
+                id="eSc_textblock_7e37709d" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_a0bc1157" type="illustration">
+            <figure>
+                <desc>Portrait of Pachmann</desc>
+            </figure>
+            <p>
+                <lb />Vladimir<lb />
+                <hi rendition="#k">De Pachmann</hi>
+            </p>
+        </div>
+        <div facs="#eSc_textblock_13d38cee" type="illustration">
+            <figure>
+                <desc>Portrait of Brard</desc>
+            </figure>
+            <p>
+                <lb />Magdeleine<lb />
+                <hi rendition="#k">Brard</hi>
+            </p>
+        </div>
+        <div facs="#eSc_textblock_169eab61" type="illustration">
+            <figure>
+                <desc>Portrait of Singer</desc>
+            </figure>
+            <p>
+                <lb />Richard<lb />
+                <hi rendition="#k">Singer</hi>
+            </p>
+        </div>
+        <div facs="#eSc_textblock_b4d63d5c" type="illustration">
+            <figure>
+                <desc>Portrait of Hofmann</desc>
+            </figure>
+            <p>
+                <lb />Josef<lb />
+                <hi rendition="#k">Hofmann</hi>
+            </p>
+        </div>
+        <div facs="#eSc_textblock_9f93a7b3" type="illustration">
+            <figure>
+                <desc>Portrait of Paderewski</desc>
+            </figure>
+            <p>
+                <lb />Ignace Jan<lb />
+                <hi rendition="#k">Paderewski</hi>
+            </p>
+        </div>
+        <div facs="#eSc_textblock_6d7ff571" type="illustration">
+            <figure>
+                <desc>Portrait of Liebling</desc>
+            </figure>
+            <p>
+                <lb />George<lb />
+                <hi rendition="#k">Liebling</hi>
+            </p>
+        </div>
+        <div facs="#eSc_textblock_91178103" type="illustration">
+            <figure>
+                <desc>Portrait of Bloomfield-Zeisler</desc>
+            </figure>
+            <p>
+                <lb />Fannie<lb />
+                <hi rendition="#k">Bloomfield-Zeisler</hi>
+            </p>
+        </div>
+        <div facs="#eSc_textblock_8eb032be" type="illustration">
+            <figure>
+                Portrait of Busoni
+            </figure>
+            <p>
+                <lb />Ferrucio<lb />
+                <hi rendition="#k">Busoni</hi>
+            </p>
+        </div>
+        <div facs="#eSc_textblock_c61c0a72">
+            <hi rendition="#larger">
+                <hi rendition="#i">
+                    <lb />Now Possible ~
+                    <hi rendition="#c">
+                        <lb />Through the Welte-Mignon (Licensee)
+                    </hi>
+                    <hi rendition="#right">
+                        <lb />Library of Music
+                    </hi>
+                </hi>
+            </hi>
+        </div>
+
+        <div>
+            <div facs="#eSc_textblock_1ee7c53a">
+                <lb />The masterpieces of the world's most
+                <lb />famous pianists are presented through the
+                <lb />extensive Welte-Mignon (Licensee) Library
+                <lb />of Music.
+                <lb />All the verve,
+                all the delicate tone shading, all
+                <lb />the personality that makes of the artist a true
+            </div>
+            <div facs="#eSc_textblock_a311a566">
+                <lb />artists have been retained and
+                <seg ana="#exact_reproduction" type="topic" resp="#np">
+                    reproduced ex-
+                    <lb />actly
+                    <seg ana="#physical_presence" type="topic" resp="#np">
+                        as though the master himself were seated
+                        <lb />at the keyboard.
+                    </seg>
+                </seg>
+                <lb />This is possible, and only is it
+                possible, through<lb />the Welte-Mignon (Licensee)
+                <seg ana="#analogy_to_photography" resp="#np" type="topic">
+                    photographic<lb />process of
+                    recording.
+                </seg>
+            </div>
+        </div>
+
+        <div>
+            <div facs="#eSc_textblock_65dcf1c2">
+                <lb />A few more of over 200
+                <lb />Artists who record for
+                <lb />Welte-Mignon (Licensee):
+            </div>
+            <div facs="#eSc_textblock_59f05978">
+                <lb /><persName>Gieseking</persName>
+                <lb /><persName>Casella</persName>
+                <lb /><persName>Gabrilowitsch</persName>
+                <lb /><persName>Sauer</persName>
+                <lb /><persName>d'Albert</persName>
+                <lb /><persName>Boguslawski</persName>
+                <lb /><persName>Carreno</persName>
+                <lb /><persName>Lhevinne</persName>
+                <lb /><persName>De Horvath</persName>
+                <lb /><persName>Debussy</persName>
+            </div>
+            <div facs="#eSc_textblock_49b5a03a">
+                <lb /><persName>La Forge</persName>
+                <lb /><persName>Poushnoff</persName>
+                <lb /><persName>Debussy</persName>
+                <lb /><persName>Ganz</persName>
+                <lb /><persName>Saint-Saens</persName>
+                <lb /><persName>Grieg</persName>
+                <lb /><persName>Humperdinck</persName>
+                <lb /><persName>Leschetitzky</persName>
+                <lb /><persName>Samaroff</persName>
+                <lb /><persName>Scharwenka</persName>
+            </div>
+        </div>
+
+        <div facs="#eSc_textblock_a1d08d9a">
+            <lb />The Welte-Mignon (Licensee) reproducing action may now be obtained in 115 leading
+            <lb />makes of pianos. You can have this famous action installed in your own piano without
+            <lb />messing the appearance or hindering manual playing.
+        </div>
+        <div facs="#eSc_textblock_8e02e40f">
+            <lb />Welte-Mignon
+            <lb />THE MASTER'S FINGERS ON YOUR PIANO
+        </div>
+        <div facs="#eSc_textblock_423690b5">
+            <lb /><corpName>THE AUTO PNEUMATIC ACTION CO.</corpName><lb />
+            <persName>Wm. C. Heaton, President</persName>
+        </div>
+        <div facs="#eSc_textblock_7d8e9f52">
+            <lb />
+            <address>
+                51st Street and 12th Avenue<lb />New York City
+            </address>
+        </div>
+        <div facs="#eSc_textblock_7e37709d" />
+    </text>
+</TEI>
