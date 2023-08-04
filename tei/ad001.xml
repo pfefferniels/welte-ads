@@ -98,14 +98,22 @@
             <lb />
             <hi rendition="#u">
                 <hi rendition="#i">
-                    <seg ana="#immortality" resp="#np" type="topic">
+                    <seg xml:id="immortals" ana="#immortality" resp="#np" type="topic">
                         The Instrument of the Immortals
                     </seg>
-                </hi>
+                    <note type="editorial" ref="#immortals" resp="#np">
+                        The slogan was originally invented by
+                        <persName>Raymond Rubicam</persName> in 1919, who
+                        referred to the long-lasting history of Steinway pianos.
+                        Nevertheless, the "immortality" theme is analysed 
+                        here, since the slogan gets reinterpreted by its 
+                        context.
+                    </note>
+            </hi>
             </hi>
         </div>
         <div facs="#eSc_textblock_083f7a78">
-            <lb /><hi rendition="#i">T</hi>he first recording
+            <lb /><hi rendition="#in">T</hi>he first recording
             <lb />piano ever invented
             <lb />the <orgName>Welte Mignon</orgName> re-
             <lb />mains unchallanged as
@@ -122,13 +130,19 @@
             <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
             <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>, <lb />
             <persName corresp="https://d-nb.info/gnd/116014490">Pachmann</persName>,
-            <persName corres="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>, <lb />
+            <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>, <lb />
             <persName>Hambourg</persName>
             , <persName> Leonard <lb />Borwick </persName>, <persName>Fanny Davies</persName>, etc. </div>
         <div facs="#eSc_textblock_6282f9b6">
             <lb /><orgName>Steinway &amp; Sons</orgName>
-            <lb />Steinway Hall <lb />15 &amp; 17 Lower
-            Seymour St., London W.I <lb />Branches and Agencies throughout the World <lb />Write for
-            particulars </div>
+            <lb />
+            <address>
+                Steinway Hall <lb />15 &amp; 17 Lower
+                Seymour St., London W.I
+            </address>
+            <lb />Branches and Agencies throughout the World
+            <lb />Write for
+            particulars
+        </div>
     </text>
 </TEI>

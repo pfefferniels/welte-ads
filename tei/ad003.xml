@@ -71,7 +71,7 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="v2_bsb00004256_01424_260_264_3011_2118_full_0_default_.pdf_page_1.png" />
+            <graphic url="v2_bsb00004256_01424_260_264_3011_2118_full_0_default_.pdf_page_1.png" width="3508" height="2479"/>
             <zone points="2549,1976 2545,1976 2545,1972 2549,1973"
                 id="eSc_textblock_8679924f" />
             <zone points="744,145 744,378 2850,378 2850,145" id="eSc_textblock_10eee52d" />

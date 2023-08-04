@@ -92,7 +92,7 @@
             <lb />A really satisfactory way
             <lb />to buy musical instruments</div>
             <div facs="#eSc_textblock_cd8eef02">
-            <lb /><hi rend="#i">A</hi> FEELING of utter confidence is engendered at the
+            <lb /><hi rend="#in">A</hi> FEELING of utter confidence is engendered at the
             <lb /><orgName corresp="welte.studios">Welte Mignon Studios</orgName>. You
             instinctively know
             <lb />that your continued patronage is sought and, therefore,
@@ -162,7 +162,7 @@
                 </seg>
         </div>
 
-        <gap>
+        <gap reason="irrelevant">
             <desc resp="#np">
                 The ad also includes textes for "Pathe",
                 "Pianos and Player-Pianos" and

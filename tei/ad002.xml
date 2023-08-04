@@ -90,9 +90,17 @@
             <hi rendition="#c">
                 <hi rendition="#i">
                     <hi rendition="#u">
-                        <seg ana="#immortality" resp="#np" type="topic">
+                        <seg xml:id="immortals" ana="#immortality" resp="#np" type="topic">
                             The Instrument of the Immortals
                         </seg>
+                        <note type="editorial" ref="#immortals" resp="#np">
+                            The slogan was originally invented by
+                            <persName>Raymond Rubicam</persName> in 1919, who
+                            referred to the long-lasting history of Steinway pianos.
+                            Nevertheless, the "immortality" theme is analysed 
+                            here, since the slogan gets reinterpreted by its 
+                            context.
+                        </note>
                     </hi>
                 </hi>
             </hi>
@@ -161,7 +169,7 @@
         <div facs="#eSc_textblock_9478645f">
             <lb />
             <seg type="topic" resp="#np" ana="#distinction_from_mechanical">
-                <hi rendition="#i">U</hi>ntil the Welte-Mignon
+                <hi rendition="#in">U</hi>ntil the Welte-Mignon
                 <lb />made its appearance all the
                 <lb />piano-playing <sic>'</sic>instruments
                 <lb />aimed at making the interpretation
