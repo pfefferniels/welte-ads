@@ -4,7 +4,7 @@
         <fileDesc>
            <titleStmt>
               <title type="main">Ad in "Singing"</title>
-              <title type="sub">April 1926</title>
+              <title type="sub">April and July 1926</title>
               <author>
                  <orgName key="auto.pneumatic.action">
                     Auto Pneumatic Action Co.
@@ -51,12 +51,14 @@
                        <orgName>Singing</orgName>
                     </publisher>
                     <pubPlace>New York</pubPlace>
-                    <date type="publication">1926</date>
+                    <date type="publication">1926</date> <!-- April -->
+                    <date type="publication">1926</date> <!-- July -->
                  </publicationStmt>
                  <seriesStmt>
                     <title level="j" type="main">Singing. The Voice Magazine</title>
                     <biblScope unit="issue">April 1926</biblScope>
-                    <biblScope unit="pages">44</biblScope>
+                    <biblScope unit="issue">July 1926</biblScope>
+                    <biblScope unit="pages">backcover</biblScope>
                  </seriesStmt>
               </biblFull>
               <msDesc>
@@ -64,6 +66,7 @@
                   <repository>University of Illinois</repository>
                   <idno>
                     <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=192</idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=308</idno>
                   </idno>
                 </msIdentifier>
               </msDesc>
@@ -104,7 +107,7 @@
         </div>
         <div facs="#eSc_textblock_bab75d2b" rendition="#framed">
             <p>
-                <lb /><hi rendition="#i">Your</hi> whole conception of what a
+                <lb /><hi rendition="#in">Your</hi> whole conception of what a
                 <lb />musical instrument can do will be
                 <lb />changed when you hear a reproducing
                 <lb />piano equipped with the famous WELTE-
@@ -169,7 +172,7 @@
         <div facs="#eSc_textblock_7ead3664" type="illustration">
             <figure>
                 <desc resp="#np">
-                    <seg ana="#ghost_hands" resp="#np" type="topic">
+                    <seg ana="#phantom_body" resp="#np" type="topic">
                         Illustration of semi-transparent hands on a piano.
                     </seg>
                 </desc>
