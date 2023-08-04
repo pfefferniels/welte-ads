@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "Singing"</title>
+              <title type="sub">August 1926</title>
+              <author>
+                 <orgName key="auto.pneumatic.action">
+                    Auto Pneumatic Action Co.
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="#np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <sourceDesc>
+              <bibl>Possessed only by Welte-Mignon</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">Possessed only by Welte-Mignon</title>
+                    <author>
+                       <orgName>Auto Pneumatic Action Co.</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>Singing</orgName>
+                    </publisher>
+                    <pubPlace>New York</pubPlace>
+                    <date type="publication">1926</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">Singing. The Voice Magazine</title>
+                    <biblScope unit="issue">August 1926</biblScope>
+                    <biblScope unit="pages">backcover</biblScope>
+                 </seriesStmt>
+              </biblFull>
+              <msDesc>
+                <msIdentifier>
+                  <repository>University of Illinois</repository>
+                  <idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=336</idno>
+                  </idno>
+                </msIdentifier>
+              </msDesc>
+           </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="uiug.30112102033757-seq_336.tif" width="2856" height="3952"/>
+         <zone points="1024,964 522,967 522,1418 1172,1445 1287,1729 1793,1729 1908,1452 2508,1398 2512,1084 1978,1045 2225,391 862,391"
+               id="eSc_textblock_c6e9cfe9"/>
+         <zone points="1298,1993 1359,2140 1403,2160 1412,2298 1500,2415 1502,2467 1524,2466 1524,2505 685,2509 676,2002 700,1984"
+               id="eSc_textblock_5f73df5d"/>
+         <zone points="1765,1977 1552,2511 2408,2516 2408,1977"
+               id="eSc_textblock_3e3a75c6"/>
+         <zone points="2089,2538 2124,2579 1836,2597 1816,2632 1274,2632 1245,2597 966,2588 957,2546 993,2529"
+               id="eSc_textblock_1657e4db"/>
+         <zone points="2546,3425 2607,3442 2625,3537 474,3537 465,3433 571,3407"
+               id="eSc_textblock_68da9219"/>
+         <zone points="1887,1121 1880,1121 1880,1115 1887,1117"
+               id="eSc_textblock_4697302e"/>
+         <zone points="475,2633 475,3424 2591,3424 2591,2633"
+               id="eSc_textblock_ae66d627"/>
+         <zone points="1335,1736 1335,2050 1730,2050 1730,1736"
+               id="eSc_textblock_31e3131e"/>
+      </surface>
+   </facsimile>
+   <text>
+      <div facs="#eSc_textblock_c6e9cfe9">
+        <hi rendition="#larger">
+            <hi rendition="#c">
+                <lb/>The <seg ana="#superiority">superiority</seg> of any
+                <lb/><hi rendition="#i">reproducing</hi> piano
+                <lb/>is assured if it
+                <lb/>contains the
+                <lb/>Welte-Mignon
+                <lb/>LICENSEE
+                <lb/>reproducing
+                <lb/>action
+                </hi>
+            </hi>
+      </div>
+      <div facs="#eSc_textblock_5f73df5d">
+         <lb/>Before buying any reproducing
+         <lb/>piano ascertain whether or not
+         <lb/>it contains the famous WELTE-
+         <lb/>MIGNON LICENSEE REPRODUCING
+         <lb/>ACTION.
+         <seg ana="#exact_reproduction" resp="#np" type="topic">
+            Only Welte-Mignon Licensee
+            <lb/>possesses the secret of perfect reproduc-
+            <lb/>tion.
+        </seg>
+        <seg ana="#home" resp="#np" type="topic">
+            Welte-Mignon Licensee brings to
+            <lb/>your home
+        </seg> flawless interpretations by
+        <lb/>the great geniuses of the pianoforte:
+        <persName>De<lb/>Pachmann</persName>,
+        <persName>Paderewski</persName>,
+        <persName>Giesking</persName>,
+        <persName>Casella</persName>
+      </div>
+      <div facs="#eSc_textblock_3e3a75c6">
+         <lb/>
+         <persName>Pouishnoff</persName>
+         and many others.
+         <lb/>You can now have Welte-Mignon
+         <lb/>Licensee in one hundred and fifteen
+         <lb/>different pianos. The famous
+         <lb/>Welte-Mignon Licensee Reproduc-
+         <lb/>ing Action can be installed in your
+         <lb/>own grand piano. There are Welte-
+         <lb/>Mignon Licensee dealers everywhere.
+         <lb/>Send for copy of our beautiful brochure
+         <lb/>containing portraits of the great artists.
+      </div>
+      <div facs="#eSc_textblock_1657e4db">
+         <lb/>
+         <hi rendition="#k"><orgName>Auto Pneumatic Action Company</orgName></hi>,
+         <persName>W. C. Heaton, Pres.</persName><lb/>
+         
+         <address>
+            653 W. 51st Street, New York
+         </address>
+      </div>
+      <div facs="#eSc_textblock_68da9219">
+         <lb/>
+         <hi rendition="#k">The Master's Fingers On Your Piano</hi>
+      </div>
+      <div facs="#eSc_textblock_4697302e"/>
+
+      <div facs="#eSc_textblock_31e3131e" type="illustration">
+        <figure>
+            <desc resp="#np">
+                Small figure showing a Welte grand.
+            </desc>
+        </figure>
+      </div>
+      <div facs="#eSc_textblock_ae66d627" type="illustration">
+        <figure>
+            <desc resp="#np">
+                <seg ana="#ghost_body" resp="#np" type="topic">
+                    Ghost hands on a piano.
+                </seg>
+            </desc>            
+        </figure>
+      </div>
+   </text>
+</TEI>
