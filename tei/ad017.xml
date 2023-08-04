@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "Music Trade Review"</title>
+              <title type="sub">April 14, 1928</title>
+              <author>
+                 <orgName key="welte.mignon.corp">
+                    Welte Mignon Corporation
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="#np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <sourceDesc>
+              <bibl>An Important Message</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">An Important Message</title>
+                    <author>
+                       <orgName>Welte Mignon Corporation</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>The Music Trade Review</orgName>
+                    </publisher>
+                    <pubPlace>New York</pubPlace>
+                    <date type="publication">1928</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">The Music Trade Review</title>
+                    <biblScope unit="issue">April 1928</biblScope>
+                    <biblScope unit="pages">frontcover</biblScope>
+                 </seriesStmt>
+              </biblFull>
+              <msDesc>
+                <msIdentifier>
+                  <repository>International Arcade Museum Library</repository>
+                  <idno>
+                    <idno type="URLImages">https://elibrary.arcade-museum.com/Music-Trade-Review/1928-86-15-SECTION-1</idno>
+                  </idno>
+                </msIdentifier>
+              </msDesc>
+           </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+   </teiHeader>
+   <facsimile>
+        <surface>
+            <graphic url="MTR-1928-86-15-SECTION-1-01.pdf_page_1.png"
+                width="2992"
+                height="4412" />
+            <zone points="246,291 252,1111 2839,1111 2839,288"
+                id="eSc_textblock_f260a47f" />
+            <zone points="252,1155 252,4109 2817,4109 2817,1155"
+                id="eSc_textblock_902d71e6" />
+            <zone points="2822,2941 2822,2968 2805,2958 2815,2941"
+                id="eSc_textblock_e59068aa" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_f260a47f">
+            <lb />THE
+            <lb />MUSIC TRADE
+            <lb />REVIEW
+            <lb />Magazine Number
+            <lb />In Two Sections
+            <lb />April 14, 1928
+            <lb />Secion I
+        </div>
+        <div facs="#eSc_textblock_902d71e6">
+            <lb />An Important Message
+            <lb />For Dealers Who Desire A Reproducing Piano for a Leader
+            <lb />The WELTE-MIGNON
+            <lb />Is the Original
+            <lb />REPRODUCING PIANO
+            <lb />And Was the First Ever Sold in the World
+
+            <cb />
+            <lb />The Original Welte-Mignon Reproduc-
+            <lb />ing Piano as manufactured by the new
+            <lb />Welte-Mignon Corp. is the finest product
+            <lb />of its kind in the world.
+            <lb />The new Welte-Mignon Corp. is not only
+            <lb />strongly entreched financially, but has a
+            <lb />very able staff of executives of proven ability,
+            <lb />who are pursuing a policy of producing only
+            <lb />the highest quality instruments - Grand
+            <lb />Pianos under the name of "Welte," Welte-
+            <lb />Mignon" Reproducing Pianos and Organs,
+            <lb />grands of various sizes in conventional and
+            <lb />period designs. The WELTE-MIGNON
+            <lb />franchise is a valuable one for the leader.
+
+            <cb/>
+            <lb />The Original Welte-Mignon as manufac-
+            <lb />tured by the new Welte-Mignon Corp.
+            <lb />not only retains all the marvelous features
+            <lb />invented by Edwin Welte, but also has many
+            <lb />refinements in manufacture which places it
+            <lb />in its rightful position as THE reproducing
+            <lb />piano. We invite comparison.
+            <lb />The Original Welte-Mignon is found ingrands
+            <lb />which in every way meet the requirements
+            <lb />of the most representative music merchants.
+
+            <lb />The Welte-Mignon Library
+            <lb />1st Most Comprehensive. It Comprises Several Thousand Recordings That Reproduce
+            <lb />
+            <seg
+                ana="#analogy_to_photography" resp="#np" type="topic">
+                With Photographic Accuracy
+            </seg> the Individual Playing of
+            the Master Pianists of the World<lb />
+            <seg ana="#immortality" resp="#np" type="topic">
+                "The Instrument That Immortalizes the Playing of the Masters"
+            </seg>
+            <lb />THE ORIGINAL WELTE-MIGNON
+            <lb />A Leader for Every Representative Music Merchant
+            <lb />Let Us Tell You More About Our Proposition
+            <lb />THE WELTE-MIGNON CORP.
+            <lb />
+            <address>
+                665 FIFTH AVENUE<lb />NEW
+                YORK, N. Y
+            </address>.
+        </div>
+        <div facs="#eSc_textblock_e59068aa" />
+    </text>
+</TEI>
