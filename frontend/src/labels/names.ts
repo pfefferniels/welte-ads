@@ -15,11 +15,14 @@ export const names = {
     "https://d-nb.info/gnd/116327642": "Gabrilowitsch, Ossip",
     "https://d-nb.info/gnd/124379923": "Lhévinne, Josef",
     "https://d-nb.info/gnd/116204400": "Bloomfield-Zeisler, Fannie",
+    "https://d-nb.info/gnd/118694820": "Gieseking, Walter",
+    "https://d-nb.info/gnd/134788370": "Pouishnov, Lev",
     "welte.studios": "Welte Mignon Studios",
     "m.welte": "M. Welte & Söhne",
     "steinway": "Steinway & Sons",
     "a.schmid": "Alfred Schmid Nachf.",
     "birkel": "Geo J. Birkel Company",
     "hardman": "Hardman, Pack & Co.",
-    "auto.pneumatic.action": "Auto Pneumatic Action Co."
+    "auto.pneumatic.action": "Auto Pneumatic Action Co.",
+    "welte.mignon.corp": "Welte Mignon Corporation"
 } as { [index: string]: string }

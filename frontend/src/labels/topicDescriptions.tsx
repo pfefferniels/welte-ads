@@ -20,20 +20,21 @@ export const topicDescriptions = {
             rolls from mere mechanical methods (such as the player piano).
         </Typography>
     ),
-    "#permanent_availability": "Permanent Availability",
+    "#touch_of_a_button": "Permanent Availability",
     "#physical_presence": "Physical Presence",
-    "#soul": "Soul",
-    "#touched_listener": "Touched Listener",
+    "#soulfulness": "Soulfulness",
+    "#listening": "Revelled Listening",
     "#repeatability": "Repeatability",
     "#miracle": "Miracle",
     "#technical_invention": "Technical Invention",
     "#unreached_ideal": "Unreached Ideal",
-    "#pedagogical_use": "Pedagogical Use",
+    "#educational_use": "Educational Use",
     "#analogy_to_photography": "Analogy to Photography",
     "#home": "Home",
-    "#ghost_illustration": "Ghost Illustration",
+    "#immediate_recognizability": "Immediate Recognizability",
+    "#secret": "Secret",
+    "#phantom_body": "Phantom Body",
     "#affordability": "Affordability",
     "#sitting_woman": "Sitting Woman",
     "#analogy_to_phonograph": "Analogy to Phonograph",
-    "#listening": "Listening"
 } as { [index: string]: React.ReactElement | string }

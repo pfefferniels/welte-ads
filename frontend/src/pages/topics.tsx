@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import { graphql, useStaticQuery } from 'gatsby'
 import { Container, Typography } from '@mui/material'
 import { WeighedCircles } from '../components/weighedCircles'
+import { Segment } from './topic'
 
 const Topics = () => {
     const data = useStaticQuery(graphql`
@@ -10,13 +11,15 @@ const Topics = () => {
           allMetadata {
             nodes {
               dates
-              topics
+              topicSegments {
+                topic
+              }
             }
           }
         }
     `)
 
-    const unorderedTopics = data.allMetadata.nodes.map((node: any) => node.topics).flat()
+    const unorderedTopics = data.allMetadata.nodes.map((node: any) => node.topicSegments as Segment).flat().map((segment: Segment) => segment.topic)
 
     const counts = unorderedTopics.reduce((acc: any, value: any) => {
         acc[value] = (acc[value] || 0) + 1;
