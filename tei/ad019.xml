@@ -237,7 +237,23 @@
             <lb />The Musicalle is patented and controlled ex-
             <lb />clusively by the Welte-Mignon Corporation
         </div>
-        <div facs="#eSc_textblock_ffd3c78d" type="illustration" />
-        <div facs="#eSc_textblock_eb5ad774" type="illustration" />
+        <div facs="#eSc_textblock_ffd3c78d" type="illustration">
+            <figure>
+                <desc resp="#np">
+                    <seg ana="#woman_sitting" resp="#np" type="topic">
+                        Woman sitting
+                    </seg>
+                    in front of a device with buttons. In the background
+                    a Welte grand.
+                </desc>
+            </figure>
+        </div>
+        <div facs="#eSc_textblock_eb5ad774" type="illustration">
+            <figure>
+                <desc resp="#np">
+                    A closed cabinet.
+                </desc>
+            </figure>
+        </div>
     </text>
 </TEI>
