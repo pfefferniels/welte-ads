@@ -30,8 +30,8 @@ const calcBox = (points_: string | null, includeHeight: boolean) => {
     const mostRight = Math.max(...points.map(point => point[0]))
     const mostBottom = Math.max(...points.map(points => points[1]))
 
-    const xScale = 0.45
-    const yScale = 0.5
+    const xScale = 1
+    const yScale = 1
 
     const result: Box = {
         top: bestPoint[1] * yScale,

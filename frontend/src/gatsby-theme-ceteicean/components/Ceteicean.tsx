@@ -10,8 +10,9 @@ import Div from "./Div"
 import Name from "./Name"
 import Seg from "./Seg"
 import './style.css'
-import { Paper } from "@mui/material"
+import { Paper, ToggleButton, ToggleButtonGroup } from "@mui/material"
 import Graphic from "./Graphic"
+import { LayersOutlined, TextFields, Title } from "@mui/icons-material"
 
 const withinBoundaries = (lower: number, suggested: number, upper: number) => {
   return Math.max(lower, Math.min(upper, suggested))
@@ -27,6 +28,7 @@ interface Props {
 }
 
 const EditionCeteicean = ({ pageContext }: Props) => {
+  const [mode, setMode] = useState<'layout' | 'text'>('text');
   const [surfaceWidth, setSurfaceWidth] = useState(100)
   const [surfaceHeight, setSurfaceHeight] = useState(100)
   const [zoom, setZoom] = useState(1)
@@ -36,12 +38,15 @@ const EditionCeteicean = ({ pageContext }: Props) => {
   const dom = new DOMParser().parseFromString(pageContext.prefixed, 'text/html')
 
   const getZoneById = (id: string) => {
+    if (id.length === 0) return null
+
     const zone = dom.querySelector(id)
     if (!zone) return null
+
     return zone.getAttribute('points')
   }
 
-  const routes: Routes = {
+  const layoutRoutes: Routes = {
     "tei-tei": Tei,
     "tei-teiheader": TeiHeader,
     "tei-graphic": props => (
@@ -58,6 +63,14 @@ const EditionCeteicean = ({ pageContext }: Props) => {
     "tei-seg": Seg
   }
 
+  const textRoutes: Routes = {
+    "tei-tei": Tei,
+    "tei-teiheader": TeiHeader,
+    "tei-persname": Name,
+    "tei-orgname": Name,
+    "tei-seg": Seg
+  }
+
   const divRef = useRef<HTMLDivElement>(null)
 
   const factor = 0.05
@@ -65,8 +78,6 @@ const EditionCeteicean = ({ pageContext }: Props) => {
   useEffect(() => {
     const div = divRef.current;
     if (!div) return
-
-    const container = div.getBoundingClientRect();
 
     const handleMouseDown = (e: MouseEvent) => {
       mouseStateRef.current = { down: true, lastPos: { x: e.clientX, y: e.clientY } };
@@ -143,28 +154,47 @@ const EditionCeteicean = ({ pageContext }: Props) => {
 
   return (
     <Layout location="Edition" editionPage={true}>
+      <ToggleButtonGroup
+        value={mode}
+        exclusive
+        onChange={(_, value) => setMode(value as 'layout' | 'text')}
+        aria-label="display mode"
+      >
+        <ToggleButton value="layout" aria-label="layout">
+          <LayersOutlined />
+        </ToggleButton>
+        <ToggleButton value="text" aria-label="text">
+          <Title />
+        </ToggleButton>
+      </ToggleButtonGroup>
+
       <Container component="main" maxWidth="md">
-        <div
-          ref={divRef}
-          className='container'
-          style={{
-            width: '100%',
-            height: '90vh',
-            overflow: 'hidden'
-          }}>
-          <Paper
-            className='paper'
-            elevation={5}
-            style={{
-              position: 'relative',
-              width: surfaceWidth,
-              height: surfaceHeight,
-              transform: `translate(${pos.x}px, ${pos.y}px) scale(${zoom})`,
-              transformOrigin: '0 0'
-            }}>
-            <Ceteicean pageContext={pageContext} routes={routes} />
-          </Paper>
-        </div>
+        {mode === 'layout'
+          ? (
+            <div
+              ref={divRef}
+              className='container'
+              style={{
+                width: '100%',
+                height: '90vh',
+                overflow: 'hidden'
+              }}>
+              <Paper
+                className='paper'
+                elevation={5}
+                style={{
+                  position: 'relative',
+                  width: surfaceWidth,
+                  height: surfaceHeight,
+                  transform: `translate(${pos.x}px, ${pos.y}px) scale(${zoom})`,
+                  transformOrigin: '0 0'
+                }}>
+                <Ceteicean pageContext={pageContext} routes={layoutRoutes} />
+              </Paper>
+            </div>)
+          : (
+            <Ceteicean pageContext={pageContext} routes={textRoutes} />
+          )}
       </Container>
     </Layout>
   )
