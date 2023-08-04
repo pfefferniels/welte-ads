@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "Singing"</title>
+              <title type="sub">December 1926</title>
+              <author>
+                 <orgName key="auto.pneumatic.action">
+                    Auto Pneumatic Action Co.
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="#np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <sourceDesc>
+              <bibl>Possessed only by Welte-Mignon</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">Possessed only by Welte-Mignon</title>
+                    <author>
+                       <orgName>Auto Pneumatic Action Co.</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>Singing</orgName>
+                    </publisher>
+                    <pubPlace>New York</pubPlace>
+                    <date type="publication">1926</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">Singing. The Voice Magazine</title>
+                    <biblScope unit="issue">December 1926</biblScope>
+                    <biblScope unit="pages">backcover</biblScope>
+                 </seriesStmt>
+              </biblFull>
+              <msDesc>
+                <msIdentifier>
+                  <repository>University of Illinois</repository>
+                  <idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=484</idno>
+                  </idno>
+                </msIdentifier>
+              </msDesc>
+           </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="uiug.30112102033757-seq_484.tif" width="2872" height="3960" />
+            <zone points="369,265 369,403 2704,403 2704,265" id="eSc_textblock_8c5449e6" />
+            <zone points="375,409 375,1389 1002,1389 1002,409"
+                id="eSc_textblock_d27998d8" />
+            <zone points="1044,409 1044,2338 2026,2338 2026,409"
+                id="eSc_textblock_d4f05f93" />
+            <zone points="381,1416 381,2350 1005,2350 1005,1416"
+                id="eSc_textblock_daee394a" />
+            <zone points="2068,415 2068,1350 2695,1350 2695,415"
+                id="eSc_textblock_f4aeb73c" />
+            <zone points="2083,1386 2083,2242 2695,2242 2695,1386"
+                id="eSc_textblock_7b9c80a0" />
+            <zone points="357,2881 357,3652 2689,3652 2689,2881"
+                id="eSc_textblock_66f64898" />
+            <zone points="354,2856 357,2500 2698,2254 2677,2856"
+                id="eSc_textblock_80aa6210" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_8c5449e6">
+            <lb />THE MASTER'S FINGERS ON YOUR PIANO</div>
+
+        <div facs="#eSc_textblock_d27998d8" type="illustration">
+            <figure>
+                <desc resp="#np">Portrait of Paderewski</desc>
+            </figure>
+            <p>
+                <lb />
+                <persName>IGNACE PADEREWSKI</persName>
+            </p>
+        </div>
+
+        <div facs="#eSc_textblock_daee394a" type="illustration">
+            <figure>
+                <desc resp="#np">Portrait of Casella</desc>
+            </figure>
+            <p>
+                <lb />
+                <persName>ALFREDO CASELLA</persName>
+            </p>
+        </div>
+
+        <div facs="#eSc_textblock_f4aeb73c" type="illustration">
+            <lb />
+            <figure>
+                <desc resp="#np">Portrait of Pachmann</desc>
+            </figure>
+            <p>
+                <lb />
+                <persName>VLADIMIR DE PACHMANN</persName>
+            </p>
+        </div>
+
+        <div facs="#eSc_textblock_7b9c80a0" type="illustration">
+            <figure>
+                <desc resp="#np">Portrait of Gieseking</desc>
+            </figure>
+            <p>
+                <lb />
+                <persName>WALTER GIESEKING</persName>
+            </p>
+        </div>
+
+        <div facs="#eSc_textblock_80aa6210" type="illustration">
+            <seg ana="#phantom_body" resp="#np" type="topic">
+                <desc>
+                    Phantom hands
+                </desc>
+            </seg>
+        </div>
+
+        <div facs="#eSc_textblock_d4f05f93">
+            <lb />THE genius of <persName>Paderewski</persName>,
+            <lb /><persName>de Pachmann</persName>, <persName>Casella</persName> and
+            <lb /><persName>Gieseking</persName> lives
+            forever through
+            <lb />the magic of the Welte-Mignon
+            <lb />Licensee Reproducing Actio
+            n<lb />Only Welte-Mignon Licensee
+            <lb />possesses the secret of perfect
+            <lb />reproduction.
+            <lb />Through
+            Welte-Mignon Li-
+            <lb />censee the playing of the world's
+            <lb />greatest pianists is
+            <seg ana="#home" type="topic" resp="#np">
+                brought to
+                <lb />your home
+            </seg>, flawless, magnificent,
+            <lb />its glory undimmed.
+            <lb />You can have Welte-Migno
+            <lb />Licensee in 115 different pianos.
+            <lb />The famous Welte-Mignon
+            Li-
+            <lb />censee Reproducing Action ca be
+            <lb />installed in your own grand piano.
+            <lb />There are Welte-Mignon Li-
+            <lb />censee dealers everywhere. Send
+            <lb />for a copy of our
+            beautiful book-
+            <lb />let containing portraits of the
+            <lb />great artists.
+            <lb />THE AUTO PNEUMATIC ACTION CO.
+            <lb />W. C. Heaton, President<lb />653 West 51st Street, New York,
+            N. Y.
+        </div>
+
+        <div facs="#eSc_textblock_66f64898">
+            <lb />The superiority of any reproducing piano
+            <lb />is assured if it contains the
+            <lb />Welte-Mignon<lb />reproducing action
+            <lb />LICENSEE
+        </div>
+    </text>
+</TEI>
