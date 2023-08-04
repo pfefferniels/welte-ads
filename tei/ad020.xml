@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "Singing"</title>
+              <title type="sub">May 1926</title>
+              <author>
+                 <orgName key="auto.pneumatic.action">
+                    Auto Pneumatic Action Co.
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="#np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <sourceDesc>
+              <bibl>Think what Welte brings to you</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">Think what Welte brings to you</title>
+                    <author>
+                       <orgName>Auto Pneumatic Action Co.</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>Singing</orgName>
+                    </publisher>
+                    <pubPlace>New York</pubPlace>
+                    <date type="publication">1926</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">Singing. The Voice Magazine</title>
+                    <biblScope unit="issue">May 1926</biblScope>
+                    <biblScope unit="pages">backcover</biblScope>
+                 </seriesStmt>
+              </biblFull>
+              <msDesc>
+                <msIdentifier>
+                  <repository>University of Illinois</repository>
+                  <idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=236</idno>
+                  </idno>
+                </msIdentifier>
+              </msDesc>
+           </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="uiug.30112102033757-seq_236.tif" width="2880" height="3976" />
+            <zone points="167,217 167,395 2866,395 2866,217" id="eSc_textblock_535af4ac" />
+            <zone
+                points="2499,1431 2570,1579 2641,1643 2632,1888 2579,1934 2605,1970 2579,3143 1945,3169 1916,3205 1635,3187 1644,2138 1573,1616 1591,1546 1710,1413"
+                id="eSc_textblock_ca7a7573" />
+            <zone
+                points="2588,3269 2605,3319 2475,3372 2446,3478 2314,3496 1803,3487 1768,3452 1768,3357 1635,3319 1662,3269 2437,3260"
+                id="eSc_textblock_44bd38e4" />
+            <zone
+                points="237,417 237,3490 389,3712 766,3777 1192,3687 1316,3490 1316,1647 1845,579 1316,417 1137,184 766,94 417,174"
+                id="eSc_textblock_9ababb2c" />
+            <zone points="1872,710 1872,1302 2413,1302 2413,710"
+                id="eSc_textblock_7badf9ac" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_535af4ac">
+            <lb />
+            <hi rendition="#k">
+                <seg type="topic" ana="#physical_presence" resp="#np">
+                    The Master's Fingers On your Piano
+                </seg>
+            </hi></div>
+        <div facs="#eSc_textblock_ca7a7573">
+            <lb />Think what
+            <lb />Welte-Mignon
+            <lb />means to you
+            <lb />Imagine a musical instrument that
+            <lb />
+            <seg ana="#home" type="topic" resp="#np">
+                brings to your home
+            </seg>
+            flawless reproduc-
+            <lb />tions of the playing of the greatest piano-
+            <lb />forte geniuses, and you have a reproducing
+            <lb />piano equipped with the famous WELTE-
+            <lb />MIGNON Licensee Reproducing Action.
+            <lb />Think what this means:
+            <persName>De Pachmann</persName>,
+            <lb /><persName>Paderewski</persName>,
+            <persName>Casella</persName>,
+            <persName>Gieseking</persName> and a
+            <lb />host of other world-famous pianists.
+            <seg ana="#distinction_from_mechanical">
+                Not<lb />approximations of their playing, but their<lb />very individuality.
+            </seg>
+            <seg ana="#exact_reproduction">
+                Only Welte-Mignon<lb />possesses this secret of perfect reproduction.
+            </seg>
+            <lb />Select any piano you prefer but be sure the
+            <lb />reproducing action is WELTE-MIGNON.*
+            <lb />You can have WELTE-MIGNON* in 112
+            <lb />different pianos. There are WELTE-
+            <lb />MIGNON* dealers everywhere.
+            <lb />The famous WELTE-MIGNON* Repro-
+            <lb />ducing Action can be installed in your
+            <lb />grand piano. Our beautiful brochure sent
+            <lb />on request.
+        </div>
+        <div facs="#eSc_textblock_44bd38e4">
+            <lb /><orgName>AUTO PNEUMATIC ACTION COMPANY</orgName>
+            <lb /><persName>W. C. Heaton, Pres.</persName><lb />
+            <address>
+                653 West 51st St., New
+                York City
+            </address><lb />*Licensed under original Welte-Mignon patents</div>
+        <div facs="#eSc_textblock_9ababb2c" type="illustration" />
+        <div facs="#eSc_textblock_7badf9ac" type="illustration" />
+    </text>
+</TEI>
