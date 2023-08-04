@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "Singing"</title>
+              <title type="sub">November 1926</title>
+              <author>
+                 <orgName key="auto.pneumatic.action">
+                    Auto Pneumatic Action Co.
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="#np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <sourceDesc>
+              <bibl>Possessed only by Welte-Mignon</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">Possessed only by Welte-Mignon</title>
+                    <author>
+                       <orgName>Auto Pneumatic Action Co.</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>Singing</orgName>
+                    </publisher>
+                    <pubPlace>New York</pubPlace>
+                    <date type="publication">1926</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">Singing. The Voice Magazine</title>
+                    <biblScope unit="issue">November 1926</biblScope>
+                    <biblScope unit="pages">backcover</biblScope>
+                 </seriesStmt>
+              </biblFull>
+              <msDesc>
+                <msIdentifier>
+                  <repository>University of Illinois</repository>
+                  <idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=444</idno>
+                  </idno>
+                </msIdentifier>
+              </msDesc>
+           </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="uiug.30112102033757-seq_444.tif" width="2856" height="3960" />
+            <zone points="516,77 516,596 2788,596 2788,77" id="eSc_textblock_8696e0e3" />
+            <zone points="319,1072 790,3302 1724,3245 1710,3140 1434,3096 1448,833"
+                id="eSc_textblock_930115f7" />
+            <zone points="2524,3194 2524,599 1442,599 1442,3194"
+                id="eSc_textblock_d4a2aae1" />
+            <zone points="305,587 299,587 299,580 305,583" id="eSc_textblock_e223e53a" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_8696e0e3">
+            <lb />
+                <head>
+                    A Veritable Army of Artists<lb />Record for Welte-Mignon
+                </head>
+        </div>
+        <div facs="#eSc_textblock_930115f7">
+            <lb />
+            <signed>
+                <persName corresp="https://d-nb.info/gnd/116014490">Vladimir Pachmann</persName>
+            </signed>
+
+            <signed>
+                <persName corresp="https://d-nb.info/gnd/116204400">Fannie Bloomfield Zeisler</persName>
+            </signed>
+
+            <lb />
+            <signed>Josef Hofmann</signed>
+            <signed><gap reason="illegible" /></signed>
+
+            <lb />
+            <signed>Pouishnoff</signed>
+            <signed>Cecile de Horvath</signed>
+
+            <lb />
+            <signed>Magdleine Brard</signed>
+            <signed>Ferruccio Busoni</signed>
+
+            <lb />
+            <signed><gap reason="illegible" /></signed>
+            <signed><gap reason="illegible" /></signed>
+
+            <lb />
+            <signed><gap reason="illegible" /></signed>
+            <signed>Rudolf Ganz</signed>
+
+            <lb />
+            <signed><gap reason="illegible" /></signed>
+
+            <lb />
+            <signed>Ossip Gabrilowitsch</signed>
+            <signed>Teresa Carreno</signed>
+
+            <lb />
+            <signed>Richard Singer</signed>
+            <signed><unclear reason="#illegible">Epstein</unclear></signed>
+
+            <lb />
+            <signed>Claude Debussy</signed>
+            <signed>Alfred Casella</signed>
+
+            <lb />
+            <signed>Edvard Grieg</signed>
+            <signed><gap reason="illegible" /></signed>
+            
+            <lb />
+            <signed>Xaver Scharwenka</signed>
+            <signed><gap reason="illegible" /></signed>
+
+            <lb />
+            <signed><gap reason="illegible" /></signed>
+            
+            <lb />
+            <signed>Novaes</signed>
+            
+            <lb /><signed><gap reason="illegible" /></signed>
+            <lb /><signed><gap reason="illegible" /></signed>
+            <lb /><signed><gap reason="illegible" /></signed>
+
+            <lb />
+            <signed>Harriette Cady</signed>
+            
+            <lb />
+            <signed>Alfred Oswald</signed>
+            <lb />
+            <signed><gap reason="illegible" /></signed>
+        </div>
+        <div facs="#eSc_textblock_d4a2aae1">
+            <lb />The magic reproduction
+            <lb />of Welte-Mignon Licensee
+            <lb />
+            <seg ana="#educational_use">
+                makes available for professional
+                <lb />or student the authentic interpre-
+                <lb />tation of the world's foremost
+                <lb />pianists.
+                <lb />
+                <seg ana="#analysis">
+                    To study in close detail
+                </seg>,
+                <seg ana="#repeatability">
+                    by fre-
+                    <lb />quent repetition
+                </seg>, the playing of
+                <lb />the host of artists who record for
+                <lb />Welte-Mignon Licensee is in itself
+                <lb />a liberal education.
+            </seg>
+            <lb />Many recordings by notable ac-
+            <lb />companists afford competent sup-
+            <lb />port for singing at any time. On
+            <lb />the stage, the ballets of the
+            <lb />Chicago Opera and the San Carlo
+            <lb />Opera have both given public in-
+            <lb />terpretations of its sole accom-
+            <lb />paniment.
+            
+            <lb />The Welte-Mignon Licensee
+            <lb />Action may be obtained in 115
+            <lb />makes of pianos. Write for the
+            <lb />beautiful brochure.
+
+            <lb />
+            <corpName>THE AUTO-PNEUMATIC ACTION COMPANY</corpName>
+            <lb />
+            <address>
+                653 West 51st Street, New York City
+            </address>
+            <lb />
+            
+            <persName>William C. Heaton, President</persName>
+            <lb />Welte-Mignon
+            <lb />
+            THE MASTER'S FINGERS ON YOUR PIANO
+            <lb />Licensee
+        </div>
+    </text>
+</TEI>
