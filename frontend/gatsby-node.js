@@ -1,4 +1,5 @@
 const jsdom = require("jsdom");
+const { v4 } = require("uuid");
 const { JSDOM } = jsdom;
 
 function shouldOnCreateNode({ node }) {
@@ -26,16 +27,20 @@ async function onCreateNode({
     .map(title => title.innerHTML)
   const mentions = [...document.querySelectorAll('persName[corresp]')]
     .map(name => name.getAttribute('corresp'))
-  const topics = [...document.querySelectorAll('seg[ana]')]
-    .map(name => name.getAttribute('ana'))
-
+  const topicSegments = [...document.querySelectorAll('seg[ana]')]
+    .map(seg => ({
+      id: seg.getAttribute('xml:id') || v4(),
+      topic: seg.getAttribute('ana'),
+      text: seg.textContent
+    }))
+  
   const metadataNode = {
     company,
     title,
     newspapers,
     dates,
     mentions,
-    topics,
+    topicSegments,
     id: createNodeId(`${node.id}-metadata`),
     children: [],
     parent: node.id,
