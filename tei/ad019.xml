@@ -113,6 +113,19 @@
             <lb />MAGAZINE NUMBER<lb />In Two Sections<lb />November 10, 1928
             <lb />Section I
         </div>
+
+        <div facs="#eSc_textblock_ffd3c78d" type="illustration">
+            <figure>
+                <desc resp="#np">
+                    <seg ana="#woman_sitting" resp="#np" type="topic">
+                        Woman sitting
+                    </seg>
+                    in front of a device with buttons. In the background
+                    a Welte grand.
+                </desc>
+            </figure>
+        </div>
+
         <div facs="#eSc_textblock_e9d44931">
             <lb />Remember that you can
             <lb />select unlimited pro-
@@ -217,6 +230,13 @@
             <lb />Reproducing Mechanism installed in other
             <lb />makes of Grand Pianos. Prices on request.
         </div>
+        <div facs="#eSc_textblock_eb5ad774" type="illustration">
+            <figure>
+                <desc resp="#np">
+                    A closed cabinet.
+                </desc>
+            </figure>
+        </div>
         <div facs="#eSc_textblock_7d6330b8">
             <lb />
             <seg ana="#immortality" resp="#np" type="topic">
@@ -236,24 +256,6 @@
         <div facs="#eSc_textblock_5fe584b5">
             <lb />The Musicalle is patented and controlled ex-
             <lb />clusively by the Welte-Mignon Corporation
-        </div>
-        <div facs="#eSc_textblock_ffd3c78d" type="illustration">
-            <figure>
-                <desc resp="#np">
-                    <seg ana="#woman_sitting" resp="#np" type="topic">
-                        Woman sitting
-                    </seg>
-                    in front of a device with buttons. In the background
-                    a Welte grand.
-                </desc>
-            </figure>
-        </div>
-        <div facs="#eSc_textblock_eb5ad774" type="illustration">
-            <figure>
-                <desc resp="#np">
-                    A closed cabinet.
-                </desc>
-            </figure>
         </div>
     </text>
 </TEI>
