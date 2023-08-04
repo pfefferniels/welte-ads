@@ -17,6 +17,7 @@ export const names = {
     "https://d-nb.info/gnd/116204400": "Bloomfield-Zeisler, Fannie",
     "https://d-nb.info/gnd/118694820": "Gieseking, Walter",
     "https://d-nb.info/gnd/134788370": "Pouishnov, Lev",
+    "https://d-nb.info/gnd/116713178": "Saar, Louis Victor",
     "welte.studios": "Welte Mignon Studios",
     "m.welte": "M. Welte & Söhne",
     "steinway": "Steinway & Sons",

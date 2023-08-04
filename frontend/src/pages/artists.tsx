@@ -68,7 +68,7 @@ const Artists = () => {
         // set the dimensions and margins of the graph
         const margin = { top: 10, right: 30, bottom: 30, left: 60 },
             width = 1000 - margin.left - margin.right,
-            height = 600 - margin.top - margin.bottom;
+            height = 700 - margin.top - margin.bottom;
 
         // append the svg object to the body of the page
         svgElement

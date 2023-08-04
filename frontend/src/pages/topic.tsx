@@ -1,13 +1,13 @@
 import React from 'react'
 import Layout from "../components/layout"
-import { PageProps, graphql, useStaticQuery } from 'gatsby'
+import { Link, PageProps, graphql, useStaticQuery } from 'gatsby'
 import { Container, List, ListItem } from '@mui/material'
 import { topicLabels } from '../labels/topicLabels'
 import { topicDescriptions } from '../labels/topicDescriptions'
 
 export interface Segment {
-    id: string 
-    topic: string 
+    link: string
+    topic: string
     text: string
 }
 
@@ -17,6 +17,11 @@ const Topics = ({ location }: PageProps) => {
         query {
           allMetadata {
             nodes {
+              parent {
+                ... on File {
+                  name
+                }
+              }
               dates
               topicSegments {
                 id
@@ -29,8 +34,12 @@ const Topics = ({ location }: PageProps) => {
     `)
 
     const segments =
-        data.allMetadata.nodes.map((node: any) => node.topicSegments as Segment[]).flat()
-        .filter((segment: Segment) => segment.topic === topic)
+        data.allMetadata.nodes.map((node: any) => node.topicSegments.map((segment: any) => ({
+            link: `/${node.parent.name + segment.id}`,
+            topic: segment.topic,
+            text: segment.text
+        } as Segment))).flat()
+            .filter((segment: Segment) => segment.topic === topic) as Segment[]
 
     return (
         <Layout location="Topics" editionPage={false}>
@@ -42,9 +51,13 @@ const Topics = ({ location }: PageProps) => {
                     {topicDescriptions[topic] || 'no description available'}
 
                     <List>
-                    {segments.map((segment) => (
-                        <ListItem key={segment.id}>{segment.text}</ListItem>
-                    ))}
+                        {segments.map((segment, i) => (
+                            <ListItem key={`segment${i}`}>
+                                <Link to={segment.link}>
+                                    {segment.text}
+                                </Link>
+                            </ListItem>
+                        ))}
                     </List>
 
                     {/* show violin plot? */}
