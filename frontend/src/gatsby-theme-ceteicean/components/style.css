@@ -55,6 +55,10 @@ tei-desc {
     color: gray;
 }
 
+tei-sourcedesc {
+    display: block;
+}
+
 tei-head {
     font-size: 1.5em;
 }

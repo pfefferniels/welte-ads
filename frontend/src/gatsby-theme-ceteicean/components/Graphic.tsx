@@ -9,7 +9,6 @@ interface WithDimensionSetter {
 }
 
 const Graphic = ({ teiNode, setDimension }: TEIProps & WithDimensionSetter) => {
-    console.log('graphic=', teiNode)
     useEffect(() => {
         const graphic = teiNode as Element
 

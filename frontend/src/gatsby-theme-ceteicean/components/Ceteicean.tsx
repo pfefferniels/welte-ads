@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import Ceteicean, { Routes } from "gatsby-theme-ceteicean/src/components/Ceteicean"
 import {
-  Tei,
-  TeiHeader
+  Tei
 } from "gatsby-theme-ceteicean/src/components/DefaultBehaviors"
 import Layout from "../../components/layout"
 import Container from "@mui/material/Container"
@@ -12,9 +11,10 @@ import Name from "./Name"
 import Note from './Note'
 import Seg from "./Seg"
 import './style.css'
-import { Box, IconButton, Paper, Stack, ToggleButton, ToggleButtonGroup } from "@mui/material"
+import { Box, Dialog, DialogContent, IconButton, Paper, Stack, ToggleButton, ToggleButtonGroup } from "@mui/material"
 import { Code, Download, LayersOutlined, Title } from "@mui/icons-material"
 import { graphql, useStaticQuery } from "gatsby"
+import Metadata from "./Metadata"
 
 const withinBoundaries = (lower: number, suggested: number, upper: number) => {
   return Math.max(lower, Math.min(upper, suggested))
@@ -31,6 +31,10 @@ interface Props {
 
 const EditionCeteicean = ({ pageContext }: Props) => {
   const [mode, setMode] = useState<'layout' | 'text'>('text');
+
+  const metadataRef = useRef<HTMLDivElement>(null)
+  const [metadataOpen, setMetadataOpen] = useState(false)
+
   const [surfaceWidth, setSurfaceWidth] = useState(100)
   const [surfaceHeight, setSurfaceHeight] = useState(100)
   const [zoom, setZoom] = useState(1)
@@ -67,7 +71,6 @@ const EditionCeteicean = ({ pageContext }: Props) => {
 
   const layoutRoutes: Routes = {
     "tei-tei": Tei,
-    "tei-teiheader": TeiHeader,
     "tei-graphic": props => (
       <Graphic
         teiNode={props.teiNode}
@@ -76,6 +79,7 @@ const EditionCeteicean = ({ pageContext }: Props) => {
           setSurfaceHeight(height)
         }} />
     ),
+    "tei-teiheader": props => <Metadata sink={metadataRef} {...props} />,
     "tei-div": props => <Div zoneGetter={getZoneById} {...props} />,
     "tei-persname": Name,
     "tei-orgname": Name,
@@ -85,7 +89,7 @@ const EditionCeteicean = ({ pageContext }: Props) => {
 
   const textRoutes: Routes = {
     "tei-tei": Tei,
-    "tei-teiheader": TeiHeader,
+    "tei-teiheader": props => <Metadata sink={metadataRef} {...props} />,
     "tei-persname": Name,
     "tei-orgname": Name,
     "tei-seg": Seg,
@@ -205,13 +209,19 @@ const EditionCeteicean = ({ pageContext }: Props) => {
         </Box>
 
         <Box mt={1}>
-          <IconButton>
+          <IconButton onClick={() => setMetadataOpen(true)}>
             <Code />
           </IconButton>
         </Box>
       </Stack>
 
       <Container component="main" maxWidth="md">
+        <Dialog keepMounted={true} open={metadataOpen} onClose={() => setMetadataOpen(false)}>
+          <DialogContent>
+            <div ref={metadataRef} />
+          </DialogContent>
+        </Dialog>
+
         {mode === 'layout'
           ? (
             <div
