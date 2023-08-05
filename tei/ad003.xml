@@ -51,7 +51,7 @@
                         <publisher>
                             <orgName>Zeitschrift für Instrumentenbau</orgName>
                         </publisher>
-                        <pubPlace>Leipzig</pubPlace>
+                        <pubPlace ref="https://www.geonames.org/2879139">Leipzig</pubPlace>
                         <date type="publication">1909</date> <!-- Nr. 6, 21. Nov. -->
                         <date type="publication">1910</date>
                     </publicationStmt>

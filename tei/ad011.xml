@@ -55,7 +55,7 @@
                     <publisher>
                        <orgName>The New York Herald</orgName>
                     </publisher>
-                    <pubPlace>New York</pubPlace>
+                    <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
                     <date type="publication">1921</date>
                  </publicationStmt>
                  <seriesStmt>

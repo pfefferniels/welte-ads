@@ -50,7 +50,7 @@
                   <publisher>
                      <orgName>The Daily News</orgName>
                   </publisher>
-                  <pubPlace>London</pubPlace>
+                  <pubPlace ref="https://www.geonames.org/2643743">London</pubPlace>
                   <date type="publication">1913</date>
                </publicationStmt>
                <seriesStmt>

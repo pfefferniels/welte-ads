@@ -58,7 +58,7 @@
                         <publisher>
                             <orgName>Münchner neueste Nachrichten</orgName>
                         </publisher>
-                        <pubPlace>München</pubPlace>
+                        <pubPlace ref="https://www.geonames.org/2867714">München</pubPlace>
                         <date type="publication">1910</date>
                     </publicationStmt>
                     <seriesStmt>
