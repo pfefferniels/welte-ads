@@ -20,6 +20,8 @@ tei-gap::before {
     border-right: 1px solid black;
     padding-left: 4px;
     padding-right: 4px;
+    margin-right: 1rem;
+    color: gray;
     content: 'gap';
 }
 
@@ -28,7 +30,20 @@ tei-figure::before {
     border-right: 1px solid black;
     padding-left: 4px;
     padding-right: 4px;
+    margin-right: 1rem;
+    color: gray;
     content: 'illustration';
+}
+
+tei-signed::before {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: gray;
+    content: 'signature';
 }
 
 tei-figure {

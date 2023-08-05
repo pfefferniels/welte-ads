@@ -5,7 +5,6 @@ import { ThemeProvider, Theme, StyledEngineProvider } from "@mui/material/styles
 import theme from "../theme"
 import Header from "./header"
 import Footer from "./footer"
-import EditionFooter from "./editionFooter"
 
 import styled from '@emotion/styled'
 import Head from "./head";
@@ -50,11 +49,6 @@ const Layout = ({ location, children, editionPage = false }: Props) => {
   
   const { repository, title, menuLinks } = data.site.siteMetadata
 
-  let footer = <Footer repository={repository}/>
-  if (editionPage) {
-    footer = <EditionFooter repository={repository}>{footer}</EditionFooter>
-  }
-
   return (
     <div>
       <Head title={location || ""} />
@@ -67,7 +61,7 @@ const Layout = ({ location, children, editionPage = false }: Props) => {
             menuLinks={menuLinks}
           />
           <Main>{children}</Main>
-          {footer}
+          <Footer repository={repository}/>
         </ThemeProvider>
       </StyledEngineProvider>
     </div>

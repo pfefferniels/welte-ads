@@ -10,9 +10,10 @@ import Div from "./Div"
 import Name from "./Name"
 import Seg from "./Seg"
 import './style.css'
-import { Paper, ToggleButton, ToggleButtonGroup } from "@mui/material"
+import { Box, IconButton, Paper, Stack, ToggleButton, ToggleButtonGroup } from "@mui/material"
 import Graphic from "./Graphic"
-import { LayersOutlined, TextFields, Title } from "@mui/icons-material"
+import { Download, LayersOutlined, Title } from "@mui/icons-material"
+import { graphql, useStaticQuery } from "gatsby"
 
 const withinBoundaries = (lower: number, suggested: number, upper: number) => {
   return Math.max(lower, Math.min(upper, suggested))
@@ -34,6 +35,23 @@ const EditionCeteicean = ({ pageContext }: Props) => {
   const [zoom, setZoom] = useState(1)
   const [pos, setPos] = useState({ x: 0, y: 0 })
   const mouseStateRef = useRef({ down: false, lastPos: { x: 0, y: 0 } });
+
+  const data = useStaticQuery(graphql`
+  query {
+    allCetei {
+      nodes {
+        parent {
+          ... on File {
+            name
+          }
+        }
+        original
+      }
+    }
+  }
+  `)
+
+  const original = data.allCetei.nodes.find((node: any) => node.parent.name === pageContext.name)?.original || ''
 
   const dom = new DOMParser().parseFromString(pageContext.prefixed, 'text/html')
 
@@ -154,19 +172,34 @@ const EditionCeteicean = ({ pageContext }: Props) => {
 
   return (
     <Layout location="Edition" editionPage={true}>
-      <ToggleButtonGroup
-        value={mode}
-        exclusive
-        onChange={(_, value) => setMode(value as 'layout' | 'text')}
-        aria-label="display mode"
-      >
-        <ToggleButton value="layout" aria-label="layout">
-          <LayersOutlined />
-        </ToggleButton>
-        <ToggleButton value="text" aria-label="text">
-          <Title />
-        </ToggleButton>
-      </ToggleButtonGroup>
+      <Stack direction='column' position='absolute'>
+        <ToggleButtonGroup
+          size='small'
+          value={mode}
+          exclusive
+          onChange={(_, value) => setMode(value as 'layout' | 'text')}
+          aria-label="display mode"
+        >
+          <ToggleButton value="layout" aria-label="layout">
+            <LayersOutlined />
+          </ToggleButton>
+          <ToggleButton value="text" aria-label="text">
+            <Title />
+          </ToggleButton>
+        </ToggleButtonGroup>
+        <Box mt={2}>
+          <IconButton onClick={() => {
+            const a = window.document.createElement('a');
+            a.href = window.URL.createObjectURL(new Blob([original], { type: 'application/xml' }));
+            a.download = `${pageContext.name}.xml`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+          }}>
+            <Download />
+          </IconButton>
+        </Box>
+      </Stack>
 
       <Container component="main" maxWidth="md">
         {mode === 'layout'
