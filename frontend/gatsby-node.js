@@ -19,7 +19,10 @@ async function onCreateNode({
   const rawXml = await loadNodeContent(node)
   const { document } = (new JSDOM(rawXml)).window
 
-  const company = document.querySelector('orgName[key]')?.getAttribute('key') || ''
+  const company = {
+    name: document.querySelector('orgName[key]')?.getAttribute('key') || '',
+    link: document.querySelector('pubPlace[ref]')?.getAttribute('ref') || ''
+  }
   const title = document.querySelector('bibl')?.innerHTML || ''
   const dates = [...document.querySelectorAll('date[type="publication"]')]
     .map(date => date.innerHTML)

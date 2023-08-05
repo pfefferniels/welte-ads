@@ -17,7 +17,10 @@ const Overview = () => {
         query {
           allMetadata {
             nodes {
-              company
+              company {
+                name 
+                link
+              }
               dates
               title
               newspapers
@@ -32,7 +35,7 @@ const Overview = () => {
     `)
 
     const metadata: Metadata[] = data.allMetadata.nodes.map((node: any) => ({
-        company: node.company,
+        company: node.company.name,
         title: node.title,
         dates: node.dates,
         newspapers: node.newspapers,
