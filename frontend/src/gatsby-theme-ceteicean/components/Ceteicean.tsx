@@ -7,12 +7,13 @@ import {
 import Layout from "../../components/layout"
 import Container from "@mui/material/Container"
 import Div from "./Div"
+import Graphic from "./Graphic"
 import Name from "./Name"
+import Note from './Note'
 import Seg from "./Seg"
 import './style.css'
 import { Box, IconButton, Paper, Stack, ToggleButton, ToggleButtonGroup } from "@mui/material"
-import Graphic from "./Graphic"
-import { Download, LayersOutlined, Title } from "@mui/icons-material"
+import { Code, Download, LayersOutlined, Title } from "@mui/icons-material"
 import { graphql, useStaticQuery } from "gatsby"
 
 const withinBoundaries = (lower: number, suggested: number, upper: number) => {
@@ -78,7 +79,8 @@ const EditionCeteicean = ({ pageContext }: Props) => {
     "tei-div": props => <Div zoneGetter={getZoneById} {...props} />,
     "tei-persname": Name,
     "tei-orgname": Name,
-    "tei-seg": Seg
+    "tei-seg": Seg,
+    "tei-note": Note
   }
 
   const textRoutes: Routes = {
@@ -86,7 +88,8 @@ const EditionCeteicean = ({ pageContext }: Props) => {
     "tei-teiheader": TeiHeader,
     "tei-persname": Name,
     "tei-orgname": Name,
-    "tei-seg": Seg
+    "tei-seg": Seg,
+    "tei-note": Note
   }
 
   const divRef = useRef<HTMLDivElement>(null)
@@ -187,6 +190,7 @@ const EditionCeteicean = ({ pageContext }: Props) => {
             <Title />
           </ToggleButton>
         </ToggleButtonGroup>
+
         <Box mt={2}>
           <IconButton onClick={() => {
             const a = window.document.createElement('a');
@@ -197,6 +201,12 @@ const EditionCeteicean = ({ pageContext }: Props) => {
             document.body.removeChild(a);
           }}>
             <Download />
+          </IconButton>
+        </Box>
+
+        <Box mt={1}>
+          <IconButton>
+            <Code />
           </IconButton>
         </Box>
       </Stack>
