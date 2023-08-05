@@ -1,9 +1,10 @@
 import React from 'react'
 import Layout from "../components/layout"
-import { Link, PageProps, graphql, useStaticQuery } from 'gatsby'
-import { Container, List, ListItem } from '@mui/material'
+import { PageProps, graphql, navigate, useStaticQuery } from 'gatsby'
+import { Container, IconButton, List, ListItem } from '@mui/material'
 import { topicLabels } from '../labels/topicLabels'
 import { topicDescriptions } from '../labels/topicDescriptions'
+import { LinkRounded } from '@mui/icons-material'
 
 export interface Segment {
     link: string
@@ -53,9 +54,12 @@ const Topics = ({ location }: PageProps) => {
                     <List>
                         {segments.map((segment, i) => (
                             <ListItem key={`segment${i}`}>
-                                <Link to={segment.link}>
-                                    {segment.text}
-                                </Link>
+                                    <IconButton size='small' onClick={() => navigate(segment.link)}>
+                                        <LinkRounded />
+                                    </IconButton>
+                                    <span color='gray'>...
+                                    <i> {segment.text} </i>
+                                    ...</span>
                             </ListItem>
                         ))}
                     </List>
