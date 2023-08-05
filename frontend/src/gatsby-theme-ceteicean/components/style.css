@@ -46,6 +46,52 @@ tei-signed::before {
     content: 'signature';
 }
 
+tei-titlestmt {
+    display: none;
+}
+
+tei-publicationstmt, tei-publicationstmt>*, tei-sourcedesc, tei-sourcedesc>* {
+    display: block;
+}
+
+tei-sourcedesc::before {
+    margin-top: 1rem;
+    display: block;
+    font-weight: bold;
+    content: 'Source Description'
+}
+
+tei-sourcedesc tei-biblfull>tei-publicationstmt {
+    display: none;
+}
+
+tei-title[type="main"] {
+    font-style: italic;
+}
+
+tei-title::before {
+    font-style: normal;
+    content: 'Journal/Newspaper Title: ';
+}
+
+tei-biblscope[unit] {
+    display: block;
+}
+
+tei-biblscope[unit="issue"]::before {
+    content: "Issue: ";
+}
+
+tei-biblscope[unit="pages"]::before {
+    content: "Page: ";
+}
+
+tei-publicationstmt::before {
+    display: block;
+    font-weight: bold;
+    content: 'Publication Statement'
+}
+
 tei-figure {
     margin: 1rem;
 }
@@ -53,10 +99,6 @@ tei-figure {
 tei-desc {
     font-style: italic;
     color: gray;
-}
-
-tei-sourcedesc {
-    display: block;
 }
 
 tei-head {

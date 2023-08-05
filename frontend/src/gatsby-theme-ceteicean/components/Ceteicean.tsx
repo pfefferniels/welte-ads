@@ -15,6 +15,7 @@ import { Box, Dialog, DialogContent, IconButton, Paper, Stack, ToggleButton, Tog
 import { Code, Download, LayersOutlined, Title } from "@mui/icons-material"
 import { graphql, useStaticQuery } from "gatsby"
 import Metadata from "./Metadata"
+import MsIdentifier from "./MsIdentifier"
 
 const withinBoundaries = (lower: number, suggested: number, upper: number) => {
   return Math.max(lower, Math.min(upper, suggested))
@@ -84,7 +85,8 @@ const EditionCeteicean = ({ pageContext }: Props) => {
     "tei-persname": Name,
     "tei-orgname": Name,
     "tei-seg": Seg,
-    "tei-note": Note
+    "tei-note": Note,
+    "tei-msidentifier": MsIdentifier
   }
 
   const textRoutes: Routes = {
@@ -93,7 +95,8 @@ const EditionCeteicean = ({ pageContext }: Props) => {
     "tei-persname": Name,
     "tei-orgname": Name,
     "tei-seg": Seg,
-    "tei-note": Note
+    "tei-note": Note,
+    "tei-msidentifier": MsIdentifier
   }
 
   const divRef = useRef<HTMLDivElement>(null)

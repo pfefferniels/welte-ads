@@ -49,7 +49,8 @@ const Companies = () => {
             <Container component="main" maxWidth="md">
                 <h2>Companies</h2>
                 <Typography>
-                    Different companies advertised for the Welte-Mignon.
+                    Different companies advertised for the Welte-Mignon all 
+                    over the world.
                 </Typography>
 
                 <WorldMap markers={markers} />
