@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+</teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="uc1.b000556132-seq_1232.tif" width="1720" height="2656"/>
+         <zone points="1253,1540 1578,1564 1595,1651 1583,1739 366,1739 366,1705 317,1662 41,1639 23,1546 56,1534"
+               id="eSc_textblock_2ad2cdc7"/>
+         <zone points="370,2222 366,1760 957,1760 957,2222"
+               id="eSc_textblock_9280ed63"/>
+         <zone points="323,1865 341,1888 323,2046 29,2046 44,1859"
+               id="eSc_textblock_81452811"/>
+         <zone points="1566,1859 1560,2176 1542,2200 1355,2205 1347,2223 1263,2226 1263,2222 975,2222 975,1760 1580,1760"
+               id="eSc_textblock_67364924"/>
+         <zone points="1200,2247 1536,2278 1595,2331 1601,2436 1432,2471 1389,2524 1293,2551 523,2551 523,2502 525,2495 470,2459 401,2459 372,2430 370,2240 1200,2240"
+               id="eSc_textblock_629a134c"/>
+         <zone points="1623,1516 1623,199 4,199 4,1516" id="eSc_textblock_6d39cd4a"/>
+         <zone points="29,2069 29,2396 322,2396 322,2069" id="eSc_textblock_6b35e21e"/>
+         <zone points="407,2537 411,2536 411,2539" id="eSc_textblock_7893cc1d"/>
+      </surface>
+   </facsimile>
+   <text>
+      <div facs="#eSc_textblock_2ad2cdc7">
+         <lb/>Valkyries thunder through the storm<lb/>-when Phantom Fingers play</div>
+      <div facs="#eSc_textblock_9280ed63">
+         <lb/>Who but a Samaroff can achieve<lb/>the crashing fortissimo with<lb/>which Wagner meant his glorious<lb/>composition to be played? Or, as<lb/>your mood changes, who but de<lb/>Pachmann can so entrance you<lb/>with Chopin's sensuous Nocturne?<lb/>True music-lovers are satisfied only<lb/>with the world's greatest masters.<lb/>The Welte-Mignon* satisfies in this<lb/>respect as well as in the uncanny<lb/>fidelity with which it reproduces</div>
+      <div facs="#eSc_textblock_81452811">
+         <lb/>These are the Phantom<lb/>Hands of a thousand<lb/>immortal pianists; their<lb/>glorious genius preserv-<lb/>ed forever, through the<lb/>miracle of Welte-<lb/>Mignon* reproduction.</div>
+      <div facs="#eSc_textblock_67364924">
+         <lb/>the renditions of the scores of<lb/>master musicians who have played<lb/>upon it.<lb/>The Welte-Mignon* is invisible<lb/>and does not interfere with manual<lb/>playing. It is obtainable in practi-<lb/>cally every good make of piano,<lb/>both grand and upright. Write<lb/>for interesting brochure. Auto-<lb/>Pneumatic Action Co., W. C.<lb/>Heaton, President, 12th Ave., at<lb/>51st St., New York.</div>
+      <div facs="#eSc_textblock_629a134c">
+         <lb/>Welte-Mignon<lb/>(Licensee)<lb/>Hear it-in comparison. There's a nearby dealer<lb/>*Licensed under the original Welte-Mignon patents.</div>
+      <div facs="#eSc_textblock_6d39cd4a" type="illustration"/>
+      <div facs="#eSc_textblock_6b35e21e" type="illustration"/>
+      <div facs="#eSc_textblock_7893cc1d"/>
+   </text>
+</TEI>

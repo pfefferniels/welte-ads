@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+</teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="5271616.pdf_page_1.png" width="2479" height="3508"/>
+         <zone points="392,2274 392,2380 2371,2380 2371,2274"
+               id="eSc_textblock_ce5dae70"/>
+         <zone points="55,2339 55,2713 1203,2713 1203,2339"
+               id="eSc_textblock_79199ad6"/>
+         <zone points="2373,2694 2373,2384 1236,2384 1236,2694"
+               id="eSc_textblock_611d3239"/>
+         <zone points="60,2738 60,3085 2416,3085 2416,2738"
+               id="eSc_textblock_7a7e6e27"/>
+         <zone points="59,118 59,2256 2388,2256 2388,118" id="eSc_textblock_34edb91d"/>
+         <zone points="1114,3230 1114,3074 1327,3074 1327,3230"
+               id="eSc_textblock_dbf156ed"/>
+      </surface>
+   </facsimile>
+   <text>
+      <div facs="#eSc_textblock_ce5dae70">
+         <lb/>It brings the world's greatest pianist into</div>
+      <div facs="#eSc_textblock_79199ad6">
+         <lb/>my home ... That's why I bought<lb/>it." The Welte-Mignon Licensee Reproducing Piano<lb/>permits not the slightest variation from the artistry<lb/>of the great musician. Its playing is the artist's play-<lb/>ing; you have but to close your eyes to feel the pres-<lb/>ence of the master at the keys. It is modern magic.</div>
+      <div facs="#eSc_textblock_611d3239">
+         <lb/>Welte-Mignon Licensee Reproducing Pianos are<lb/>offered by 115 leading piano manufacturers. Piano<lb/>merchants everywhere are anxious to demonstrate to<lb/>you. Send for our Book of Famous Artists. The<lb/>Auto Pneumatic Action Company, W. C. Heaton,<lb/>President, 653 West 51st Street, New York, N. Y.</div>
+      <div facs="#eSc_textblock_7a7e6e27">
+         <lb/>Welte-Mignon<lb/>Reproducing Piano<lb/>Licensee<lb/>The Master's Fingers on your Piano</div>
+      <div facs="#eSc_textblock_34edb91d" type="illustration"/>
+      <div facs="#eSc_textblock_dbf156ed" type="illustration"/>
+   </text>
+</TEI>
