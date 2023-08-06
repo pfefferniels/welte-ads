@@ -68,7 +68,38 @@
                 </msIdentifier>
               </msDesc>
            </sourceDesc>
-        </fileDesc>
+           <sourceDesc>
+            <bibl>"It brings the world's greatest pianists into my home"</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">"It brings the world's greatest pianists into my home"</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>Vanity Fair</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1927</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">Vanity Fair</title>
+                  <biblScope unit="issue">September 1927</biblScope>
+                  <biblScope unit="pages">no page</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>University of Minnesota</repository>
+                <idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=umn.319510028059420&seq=238</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
         <profileDesc>
            <langUsage>
               <language ident="eng">English</language>
