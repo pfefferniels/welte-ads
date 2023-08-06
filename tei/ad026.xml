@@ -124,8 +124,11 @@
         <div facs="#eSc_textblock_a481e398">
             <lb />Thunder of breaking waves;
             <lb />howl of the hurricane; crash of
-            <lb />thunder; or, with your changing
-            <lb />mood, mesmeric lure of the
+            <lb />thunder; or,
+            <seg ana="#suit_every_mood" resp="#np" type="topic">
+                with your changing
+                <lb />mood,
+            </seg> mesmeric lure of the
             <lb />Lorelie's song; swinging measure
             <lb />of the Blue Danube; love-wrapt
             <lb />night"when the moon swings low"

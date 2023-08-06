@@ -108,7 +108,7 @@
          <div facs="#eSc_textblock_1f92a58e">
             <lb />
                 <hi rendition="#c">
-                    <seg ana="#physical_presence" type="topic" resp="#np">
+                    <seg ana="#virtual_presence" type="topic" resp="#np">
                         THE MASTER'S FINGERS ON YOUR PIANO
                     </seg>
                 </hi>

@@ -169,7 +169,7 @@
             <lb /><persName corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>:<lb />Die Wiedergabe ist nach jeder
             Richtung,<lb />sowohl was das rein technisch virtuose, als<lb />auch was das
             musikalisch-poetische Moment<lb />betrifft, eine so verblüffend natürliche,
-            <seg ana="#physical_presence" resp="#np" type="topic">
+            <seg ana="#virtual_presence" resp="#np" type="topic">
                 dass<lb />man
                 wirklich meint, den Künstler i<lb />Person vor sich zu sehen und ihn spielen zu<lb />
                 hören.

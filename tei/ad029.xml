@@ -96,7 +96,7 @@
             <figure>
                 <desc resp="#np">
                     Four persons facing a grand piano.
-                    <seg ana="#woman_sitting" resp="#np" type="topic">
+                    <seg ana="#sitting_woman" resp="#np" type="topic">
                         Two women in dresses are sitting in chairs.
                     </seg>
                     On man leaning on the piano, another man

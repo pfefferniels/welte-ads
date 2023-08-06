@@ -160,8 +160,10 @@
                 <desc>Portrait of Paderewski</desc>
             </figure>
             <p>
-                <lb />Ignace Jan<lb />
-                <hi rendition="#k">Paderewski</hi>
+                <persName corresp="https://d-nb.info/gnd/118986724">
+                    <lb />Ignace Jan<lb />
+                    <hi rendition="#k">Paderewski</hi>
+                </persName>
             </p>
         </div>
         <div facs="#eSc_textblock_6d7ff571" type="illustration">
@@ -220,7 +222,7 @@
                 <seg ana="#exact_reproduction" type="topic" resp="#np">
                     reproduced ex-
                     <lb />actly
-                    <seg ana="#physical_presence" type="topic" resp="#np">
+                    <seg ana="#virtual_presence" type="topic" resp="#np">
                         as though the master himself were seated
                         <lb />at the keyboard.
                     </seg>

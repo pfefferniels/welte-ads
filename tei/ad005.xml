@@ -131,7 +131,7 @@
         <div facs="#eSc_textblock_0ace7367">
             <lb />Eine unbedingt <seg ana="#technical_invention" type="topic" resp="#np">geniale Erfindung</seg> von hohem <lb />künstlerischen Wert.<lb /><persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>.</div>
         <div facs="#eSc_textblock_910008bc">
-            <lb /><seg ana="#physical_presence" type="topic" resp="#np">Man meint den betreffenden Künstler in Person<lb />vor sich zu haben und ihn
+            <lb /><seg ana="#virtual_presence" type="topic" resp="#np">Man meint den betreffenden Künstler in Person<lb />vor sich zu haben und ihn
             spielen zu hören.</seg><lb /><persName corresp="https://d-nb.info/gnd/118786253">Nickisch</persName>.</div>
         <div facs="#eSc_textblock_9c944536">
             <lb />Was ich Mignon vorzuwerfen hae, ist sein<lb />Name, weil es weder der gewaltigen

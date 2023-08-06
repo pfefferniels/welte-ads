@@ -105,7 +105,7 @@
             </figure>
             <p>
                 <lb />
-                <persName>IGNACE PADEREWSKI</persName>
+                <persName corresp="https://d-nb.info/gnd/118986724">IGNACE PADEREWSKI</persName>
             </p>
         </div>
 
@@ -149,8 +149,8 @@
         </div>
 
         <div facs="#eSc_textblock_d4f05f93">
-            <lb />THE genius of <persName>Paderewski</persName>,
-            <lb /><persName>de Pachmann</persName>, <persName>Casella</persName> and
+            <lb />THE genius of <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+            <lb /><persName corresp="https://d-nb.info/gnd/116014490">de Pachmann</persName>, <persName>Casella</persName> and
             <lb /><persName>Gieseking</persName> lives
             forever through
             <lb />the magic of the Welte-Mignon
@@ -189,10 +189,13 @@
         </div>
 
         <div facs="#eSc_textblock_66f64898">
-            <lb />The superiority of any reproducing piano
-            <lb />is assured if it contains the
-            <lb />Welte-Mignon<lb />reproducing action
-            <lb />LICENSEE
+            <lb />
+            <seg ana="#superiority">
+                The superiority of any reproducing piano
+                <lb />is assured if it contains the
+                <lb />Welte-Mignon<lb />reproducing action
+                <lb />LICENSEE
+            </seg> 
         </div>
     </text>
 </TEI>

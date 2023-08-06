@@ -116,9 +116,12 @@
             <lb />the crashing fortissimo with
             <lb />which <persName>Wagner</persName>
             meant his glorious
-            <lb />composition to be played? Or, as
-            <lb />your mood changes, who but
-            <persName>de<lb />Pachmann</persName>
+            <lb />composition to be played? Or,
+            <seg ana="#suit_every_mood" resp="#np" type="topic">
+                as
+                <lb />your mood changes
+            </seg>, who but
+            <persName corresp="https://d-nb.info/gnd/116014490">de<lb />Pachmann</persName>
             can so entrance you
             <lb />with Chopin's sensuous Nocturne?
             <lb />True music-lovers are satisfied only

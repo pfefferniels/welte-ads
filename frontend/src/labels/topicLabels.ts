@@ -4,12 +4,12 @@ export const topicLabels = {
     "#exact_reproduction": "Exact Reproduction",
     "#distinction_from_mechanical": "Distinction from Mechanical",
     "#touch_of_a_button": "Touch of a Button",
-    "#physical_presence": "Virtual Presence",
+    "#virtual_presence": "Virtual Presence",
     "#soulfulness": "Soulfulness",
     "#repeatability": "Repeatability",
     "#miracle": "Miracle",
     "#technical_invention": "Technical Invention",
-    "#unreached_ideal": "Unreached Ideal",
+    "#unreached_ideal": "Ideal Instrument",
     "#educational_use": "Educational Use",
     "#analogy_to_photography": "Analogy to Photography",
     "#home": "Home",
@@ -19,5 +19,6 @@ export const topicLabels = {
     "#listening": "Revelled Listening",
     "#immediate_recognizability": "Immediate Recognizability",
     "#phantom_body": "Phantom Body",
-
+    "#suit_every_mood": "Suit every Mood",
+    "#invisibility": "Invisibility"
 } as { [index: string]: string }
