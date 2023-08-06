@@ -13,6 +13,9 @@ can be accessed [here](https://measuring-early-records.org).
 The present collection includes advertisements, which:
 
 - appear in print publications between 1905 and 1930
-- are related to Welte-Mignon
-- contain information about why to buy to a Welte-Mignon.
+- advertise the Welte-Mignon reproducing piano
+- are published by either the company M. Welte & Sons itself
+  or one of the licensee companies.
+
+
 
