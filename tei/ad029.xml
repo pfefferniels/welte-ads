@@ -92,6 +92,18 @@
         </surface>
     </facsimile>
     <text>
+        <div facs="#eSc_textblock_34edb91d" type="illustration">
+            <figure>
+                <desc resp="#np">
+                    Four persons facing a grand piano.
+                    <seg ana="#woman_sitting" resp="#np" type="topic">
+                        Two women in dresses are sitting in chairs.
+                    </seg>
+                    On man leaning on the piano, another man
+                    standing next to the left sitting woman.
+                </desc>
+            </figure>
+        </div>
         <div facs="#eSc_textblock_79199ad6">
             <lb />
             <quote>
@@ -131,18 +143,7 @@
             <lb />Welte-Mignon
             <lb />Reproducing Piano
             <lb />Licensee
-            <lb />The Master's Fingers on your Piano</div>
-        <div facs="#eSc_textblock_34edb91d" type="illustration">
-            <figure>
-                <desc resp="#np">
-                    Four persons facing a grand piano.
-                    <seg ana="#woman_sitting" resp="#np" type="topic">
-                        Two women in dresses are sitting in chairs.
-                    </seg>
-                    On man leaning on the piano, another man
-                    standing next to the left sitting woman.
-                </desc>
-            </figure>
+            <lb />The Master's Fingers on your Piano
         </div>
         <div facs="#eSc_textblock_dbf156ed" type="illustration">
             <figure>

@@ -1,37 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
-</teiHeader>
-   <facsimile>
-      <surface>
-         <graphic url="uc1.b000556132-seq_1531.tif" width="1712" height="2648"/>
-         <zone points="1193,1529 1488,1541 1576,1565 1594,1628 1664,1653 1682,1682 1683,1738 512,1738 547,1677 469,1652 153,1640 135,1588 164,1529"
-               id="eSc_textblock_6a9b7b41"/>
-         <zone points="523,2219 494,2164 494,1847 500,1759 1081,1759 1081,2219"
-               id="eSc_textblock_4cbe38c0"/>
-         <zone points="422,1841 440,1853 428,2016 135,2022 129,1853 147,1835"
-               id="eSc_textblock_d7c2159d"/>
-         <zone points="1688,2187 1676,2205 1377,2231 1377,2219 1098,2219 1098,1759 1683,1759"
-               id="eSc_textblock_bca02c58"/>
-         <zone points="1394,2253 1448,2283 1710,2300 1710,2458 1560,2481 1517,2534 1442,2534 1401,2564 1007,2564 1005,2558 794,2552 781,2522 677,2517 671,2483 634,2464 518,2446 488,2369 494,2247 498,2244 1304,2244"
-               id="eSc_textblock_80ba3e2b"/>
-         <zone points="93,174 93,1522 1709,1522 1712,174" id="eSc_textblock_5e73ca70"/>
-         <zone points="129,2059 129,2401 436,2401 436,2059"
-               id="eSc_textblock_76fba554"/>
-      </surface>
-   </facsimile>
-   <text>
-      <div facs="#eSc_textblock_6a9b7b41">
-         <lb/>Rhythmic beat of a Gaucho dance<lb/>-when Phanom Fingers play</div>
-      <div facs="#eSc_textblock_4cbe38c0">
-         <lb/>Wild abandon of a peasant<lb/>song; lure of a Venetian love-<lb/>lyric; simple charm of a plantation<lb/>melody - who but the world's<lb/>greatest masters can interpret these<lb/>as a true music-lover demands?<lb/>Why should you accept less when<lb/>you can have a Welte-Mignon?<lb/>Why should you be satisfied with<lb/>any but the greatest of reproducing<lb/>instruments with its hundrends of<lb/>world-famous pianists?<lb/>What a Christmas gift! The</div>
-      <div facs="#eSc_textblock_d7c2159d">
-         <lb/>These are the Phantom<lb/>Hands of a thousand<lb/>immortal pianists; their<lb/>glorious genius preserv-<lb/>ed forever, through the<lb/>miracle of Welte-<lb/>Mignon* reproduction.</div>
-      <div facs="#eSc_textblock_bca02c58">
-         <lb/>phantom fingers of Paderewski, De<lb/>Pachmann, Hofmann, Gabrilowitsch,<lb/>and scores of others - playing in<lb/>your own home whenver you wish.<lb/>See the Welte-Mignon* today. It<lb/>is invisible and does not interfere<lb/>with manual playing. It is obtain-<lb/>able in practically every good make<lb/>of piano, both grand and upright.<lb/>Write for interesting brochure,<lb/>Auto-Pneumatic Action Co. W. C.<lb/>Heaton, President, 12th Avenue at<lb/>51st Street, New York.</div>
-      <div facs="#eSc_textblock_80ba3e2b">
-         <lb/>Welte-Mignon<lb/>(Licensee)<lb/>Hear it-in comparison. There's a nearby dealaer<lb/>*Licensed under the original Welte-Mignon patents.</div>
-      <div facs="#eSc_textblock_5e73ca70" type="illustration"/>
-      <div facs="#eSc_textblock_76fba554" type="illustration"/>
-   </text>
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "Atlantic Monthly"</title>
+              <title type="sub">December 1924</title>
+              <author>
+                 <orgName key="auto.pneumatic.action">
+                    Auto Pneumatic Action Co.
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="#np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <sourceDesc>
+              <bibl>Rhythmic Beat of a Gaucho Dance</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">Rhythmic Beat of a Gaucho Dance</title>
+                    <author>
+                       <orgName>Auto Pneumatic Action Co.</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>Atlantic Monthly</orgName>
+                    </publisher>
+                    <pubPlace ref="https://www.geonames.org/4930956">Boston</pubPlace>
+                    <date type="publication">1924</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">Atlantic Monthly</title>
+                    <biblScope unit="issue">December 1924</biblScope>
+                    <biblScope unit="pages">108</biblScope>
+                 </seriesStmt>
+              </biblFull>
+              <msDesc>
+                <msIdentifier>
+                  <repository>University of California</repository>
+                  <idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.b000556132&seq=1531</idno>
+                  </idno>
+                </msIdentifier>
+              </msDesc>
+           </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="uc1.b000556132-seq_1531.tif" width="1712" height="2648" />
+            <zone
+                points="1193,1529 1488,1541 1576,1565 1594,1628 1664,1653 1682,1682 1683,1738 512,1738 547,1677 469,1652 153,1640 135,1588 164,1529"
+                id="eSc_textblock_6a9b7b41" />
+            <zone points="523,2219 494,2164 494,1847 500,1759 1081,1759 1081,2219"
+                id="eSc_textblock_4cbe38c0" />
+            <zone points="422,1841 440,1853 428,2016 135,2022 129,1853 147,1835"
+                id="eSc_textblock_d7c2159d" />
+            <zone points="1688,2187 1676,2205 1377,2231 1377,2219 1098,2219 1098,1759 1683,1759"
+                id="eSc_textblock_bca02c58" />
+            <zone
+                points="1394,2253 1448,2283 1710,2300 1710,2458 1560,2481 1517,2534 1442,2534 1401,2564 1007,2564 1005,2558 794,2552 781,2522 677,2517 671,2483 634,2464 518,2446 488,2369 494,2247 498,2244 1304,2244"
+                id="eSc_textblock_80ba3e2b" />
+            <zone points="93,174 93,1522 1709,1522 1712,174" id="eSc_textblock_5e73ca70" />
+            <zone points="129,2059 129,2401 436,2401 436,2059"
+                id="eSc_textblock_76fba554" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_6a9b7b41">
+            <lb />Rhythmic beat of a Gaucho dance<lb />-when Phanom Fingers play</div>
+        <div facs="#eSc_textblock_d7c2159d">
+            <lb />These are the
+            <seg ana="#phantom_body" resp="#np" type="topic">
+                Phantom<lb />Hands
+            </seg> of
+            <seg ana="#immortality" resp="#np" type="topic">
+                a thousand
+                <lb />immortal pianists; their
+                <lb />glorious genius preserv-
+                <lb />ed forever
+            </seg>,
+            <seg ana="#miracle" resp="#np" type="topic">
+                through the<lb />miracle of Welte-<lb />Mignon*
+                reproduction.
+            </seg>
+        </div>
+            <div facs="#eSc_textblock_4cbe38c0">
+            <lb />Wild abandon of a peasant
+            <lb />song; lure of a Venetian love-
+            <lb />lyric; simple charm of a plantation
+            <lb />melody - who but the world's
+            <lb />greatest masters can interpret these
+            <lb />as a true music-lover demands?
+            <lb />Why should you accept less when
+            <lb />you can have a Welte-Mignon?
+            <lb />Why should you be satisfied with
+            <lb />any but the greatest of reproducing
+            <lb />instruments with its hundrends of
+            <lb />world-famous pianists?
+            <lb />What a Christmas gift! The
+        </div>
+        <div facs="#eSc_textblock_bca02c58">
+            <lb />
+            <seg ana="#phantom_body" resp="#np" type="topic">
+                phantom fingers
+            </seg>
+            of
+            <persName>Paderewski</persName>,
+            <persName>De<lb />Pachmann</persName>,
+            <persName>Hofmann</persName>,
+            <persName>Gabrilowitsch</persName>,
+            <lb />and scores of others -
+            <lb />
+            <seg ana="#home" resp="#np" type="topic">
+                playing in your own home
+            </seg>
+            <seg ana="#touch_of_a_button" resp="#np" type="topic">
+                whenever you wish.
+            </seg>
+            <lb />See the
+            Welte-Mignon* today.
+            <seg ana="#invisibility" resp="#np" type="topic">
+                It
+                <lb />is invisible
+            </seg>
+            and does not interfere
+            <lb />with manual playing. It is obtain-
+            <lb />able in practically every good make
+            <lb />of piano, both grand and upright.
+            <lb />Write for interesting brochure,
+            <lb /><orgName>Auto-Pneumatic Action Co.</orgName>
+            <persName>W. C.
+            <lb />Heaton</persName>, President, <address>12th Avenue at
+            <lb />51st Street, New York.</address>
+        </div>
+
+        <div facs="#eSc_textblock_80ba3e2b">
+            <lb />Welte-Mignon
+            <lb />(Licensee)
+            <lb />Hear it–in comparison. There's a nearby dealer
+            <lb />*Licensed under the original Welte-Mignon patents.
+        </div>
+        <div facs="#eSc_textblock_5e73ca70" type="illustration" />
+        <div facs="#eSc_textblock_76fba554" type="illustration" />
+    </text>
 </TEI>

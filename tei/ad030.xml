@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "House &amp; Garden"</title>
+              <title type="sub">December 1927</title>
+              <author>
+                 <orgName key="auto.pneumatic.action">
+                    Auto Pneumatic Action Co.
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="#np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <sourceDesc>
+              <bibl>"The realism of its playing is almost beyond belief"</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">"The realism of its playing is almost beyond belief"</title>
+                    <author>
+                       <orgName>Auto Pneumatic Action Co.</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>House &amp; Garden</orgName>
+                    </publisher>
+                    <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                    <date type="publication">1927</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">House &amp; Garden</title>
+                    <biblScope unit="issue">December 1927</biblScope>
+                    <biblScope unit="pages">163</biblScope>
+                 </seriesStmt>
+              </biblFull>
+              <msDesc>
+                <msIdentifier>
+                  <repository>University of Michigan</repository>
+                  <idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015082311062&seq=915</idno>
+                  </idno>
+                </msIdentifier>
+              </msDesc>
+           </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="mdp.39015082311062-seq_915.tif" width="2484" height="3744" />
+            <zone
+                points="2126,2288 2142,2410 2117,2435 1962,2439 608,2439 615,2429 590,2371 680,2346 732,2263"
+                id="eSc_textblock_e92bcae9" />
+            <zone points="599,2893 590,2462 591,2461 1348,2461 1348,2889"
+                id="eSc_textblock_6a6a772a" />
+            <zone points="2134,2884 1365,2889 1365,2461 2126,2461"
+                id="eSc_textblock_f1136b4e" />
+            <zone points="761,2944 761,3562 1956,3562 1956,2944"
+                id="eSc_textblock_06a921c4" />
+            <zone points="606,239 606,2256 2121,2248 2126,239"
+                id="eSc_textblock_58ef96ea" />
+            <zone points="1230,3278 1230,3547 1494,3547 1494,3278"
+                id="eSc_textblock_cd3132d7" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_58ef96ea" type="illustration">
+            <figure>
+                <desc resp="#np">
+                    <seg ana="#woman_sitting">
+                        Woman in a dress sitting a chair,
+                    </seg>
+                    a man standing next to her. A grand piano.
+                </desc>
+            </figure>
+        </div>
+
+        <div facs="#eSc_textblock_e92bcae9">
+            <lb />
+            <hi rendition="#k">
+                <quote>
+                    <seg ana="#exact_reproduction" type="topic" resp="#np">
+                        "The realism of its playing is almost
+                        <lb />beyond belief
+                    </seg>
+                    . . . that's why I bought it."
+                </quote>
+            </hi>
+        </div>
+        <div facs="#eSc_textblock_6a6a772a">
+            <lb />
+            <seg ana="#hostess" resp="#np" type="topic">
+                It is with pardonable pride that the
+                <lb />hostess calls attention to her Welte-
+                <lb />Mignon Licensee Reproducing Piano.
+            </seg>
+            <seg ana="#exact_reproduction" resp="#np" type="topic">
+                <lb />Its playing is the faithfhul rendition
+                <lb />of the artist's work - there can be
+                <lb />no variation. All the personality,
+                <lb />the character, the technique of the
+                <lb />great master is amazingly preserved.
+            </seg>
+        </div>
+
+        <div facs="#eSc_textblock_f1136b4e">
+            <lb />Your piano merchant will be happy
+            <lb />to prove this to you. Welte-Mignon
+            <lb />Licensee Reproducing Pianos are
+            <lb />offered by 115 leading piano man-
+            <lb />ufacturers. Send for our Book of
+            <lb />Famous Artists.
+            <orgName>
+                The Auto Pneu-
+                <lb />matic Action Co.
+            </orgName>,
+            <persName>
+                W. C. Heaton
+            </persName>,
+            <lb />President,
+            <address>
+                653
+                W. 51st St., New York.
+            </address>
+        </div>
+        <div facs="#eSc_textblock_06a921c4">
+            <lb />Welte-Mignon
+            <lb />Licensee
+            <lb />Reproducing Piano
+            <lb />The Master's Fingers on
+            Your Piano.
+        </div>
+        <div facs="#eSc_textblock_cd3132d7" type="illustration">
+            <figure>
+                <desc resp="#np">
+                    <seg ana="#phantom_body" resp="#np" type="topic">
+                        Phantom Fingers.
+                    </seg>
+                </desc>
+            </figure>
+        </div>
+    </text>
+</TEI>
