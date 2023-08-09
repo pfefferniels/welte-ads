@@ -68,6 +68,68 @@
                 </msIdentifier>
               </msDesc>
            </sourceDesc>
+           <sourceDesc>
+            <bibl>The genius of Paderewski</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">The genius of Paderewski</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>Town &amp; Country</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">Town &amp; Country</title>
+                  <biblScope unit="issue">November 1, 1926</biblScope>
+                  <biblScope unit="pages">22</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>University of Virginia</repository>
+                <idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uva.x030387052&seq=274</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+         <sourceDesc>
+            <bibl>The genius of Paderewski</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">The genius of Paderewski</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>Scriber's Magazine</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">Scriber's Magazine</title>
+                  <biblScope unit="issue">December 1926</biblScope>
+                  <biblScope unit="pages">13</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>archive.org</repository>
+                <idno>
+                  <idno type="URLImages">https://archive.org/details/sim_scribners-magazine_1926-12_80_6/page/12</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
         </fileDesc>
         <profileDesc>
            <langUsage>
@@ -136,7 +198,7 @@
             </figure>
             <p>
                 <lb />
-                <persName>WALTER GIESEKING</persName>
+                <persName corresp="https://d-nb.info/gnd/118694820">WALTER GIESEKING</persName>
             </p>
         </div>
 
@@ -151,7 +213,7 @@
         <div facs="#eSc_textblock_d4f05f93">
             <lb />THE genius of <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
             <lb /><persName corresp="https://d-nb.info/gnd/116014490">de Pachmann</persName>, <persName>Casella</persName> and
-            <lb /><persName>Gieseking</persName> lives
+            <lb /><persName corresp="https://d-nb.info/gnd/118694820">Gieseking</persName> lives
             forever through
             <lb />the magic of the Welte-Mignon
             <lb />Licensee Reproducing Actio

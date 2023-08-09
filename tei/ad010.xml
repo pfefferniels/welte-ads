@@ -90,27 +90,53 @@
 
         <div facs="#eSc_textblock_fedea684">
             <lb />gibt das Spiel der berühmten Meister des Klaviers selbst-
-            <lb />tätig und <seg ana="#exact_reproduction">völlig getreu wieder</seg>, sodass die Unterscheidung
+            <lb />tätig und
+            <seg ana="#exact_reproduction" resp="#np" type="topic">
+                völlig getreu wieder
+            </seg>, sodass die Unterscheidung
             <lb />zwischen dem Spiel des Künstlers und der Wiedergabe auf
             <lb />dem Reproduktionsklavier überhaupt aufhört. Ueber die
             <lb />blosse Fingerfertigkeit vermag dieses Wunderklavier alles, was an der Leistung
             <lb />eines Künstlers das Persönliche und Charakteristische ausmacht, zur Geltung zu
             <lb />bringen; es handelt sich also nicht um ein Surrogat, sondern um eine vollwertige
-            <lb />Vertretung. Wer mit der Spielweise <persName>d'Alberts</persName>, <persName corresp="https://d-nb.info/gnd/118518011">Busonis</persName>, <persName>Lamonds</persName>, <persName>Stavenhagens</persName> etc.
-            <lb />vertraut ist, wird bei der Wiedergabe sofort erkennen, welcher dieser Künstler spielt. Es ist deshalb
+            <lb />Vertretung.
+            <seg ana="#immediate_recognizability" type="topic" resp="#np">
+                Wer mit der Spielweise <persName>d'Alberts</persName>, <persName corresp="https://d-nb.info/gnd/118518011">Busonis</persName>, <persName>Lamonds</persName>, <persName>Stavenhagens</persName> etc.
+                <lb />vertraut ist, wird bei der Wiedergabe sofort erkennen, welcher dieser Künstler spielt.
+            </seg> Es ist deshalb
             <lb />nur eines zu bedauern, dass diese wundervolle Erfindung nicht schon vor 50 und mehr Jahren
-            <lb />gemacht worden ist. Dann wäre es möglich, auch <seg ana="#educational_use" resp="#np" type="topic">heute noch sich an dem Spiel der grossen<lb />Meister
-            wie <persName>Chopin</persName>, <persName>Liszt</persName>, <persName>Rubinstein</persName>, <persName>Bülow</persName> etc. zu erfreuen und davon zu lernen</seg>. Von fast<lb />allen
-            Grossen der Gegenwart, seien es Pianisten, Komponisten oder Dirigenten, ist das Klavier-<lb />spiel
-            nun für die Nachwelt festgehalten.<lb />Aus den zahlreichen begeisterten Kundgebungen der
-            massgebendsten Künstler sei nur die<lb /><persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartners</persName> nachstehend angeführt:<lb /><quote>"Das
-            Reproduktionsklavier ist das unglaublichste an Vollendung, was man sich denken kann.<lb /><seg ana="#immortality">Was
-            grosse Meister unserer Tage leisten, kann nun nicht mehr untergehen</seg> und spätere
-            Generationen<lb />werden die Früchte dieser genialen Erfindung geniessen."</quote><lb />Die
-            nächste Vorführung des Reproduktionsklaviers findet Sonntag den 15. Dezember nach-<lb />mittags
-            5 Uhr statt, wozu Musikfreunde höflichst eingeladen sind.<lb />Pianohaus <orgName>Alfred Schmid
-            Nachf.</orgName><lb />Kgl. Bayer. Hofmusikalienhandlung, Hoflieferant Sr. Kgl. Hoheit des Prinzen
-            Rupprecht von Bayern.<lb />34 Theatinerstrasse 34
+            <lb />gemacht worden ist. Dann wäre es möglich, auch
+            <seg ana="#educational_use" resp="#np" type="topic">
+                heute noch sich an dem Spiel der grossen
+                <lb />Meister wie <persName>Chopin</persName>,
+                <persName>Liszt</persName>, <persName>Rubinstein</persName>,
+                <persName>Bülow</persName> etc. zu erfreuen und davon zu lernen
+            </seg>.
+            Von fast
+            <lb />allen Grossen der Gegenwart, seien es Pianisten, Komponisten oder Dirigenten,
+            <seg ana="#immortality" resp="#np" type="topic">
+                ist das Klavier-
+                <lb />spiel nun für die Nachwelt festgehalten.
+            </seg>
+            <lb />Aus den zahlreichen begeisterten Kundgebungen der massgebendsten Künstler sei nur die
+            <lb /><persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartners</persName> nachstehend angeführt:
+            <lb />
+            <quote>
+                "Das Reproduktionsklavier ist das unglaublichste an Vollendung, was man sich denken kann.
+                <lb />
+                <seg ana="#immortality" resp="#np" type="topic">
+                    Was grosse Meister unserer Tage leisten, kann nun nicht mehr untergehen
+                </seg>
+                und spätere Generationen
+                <lb />werden die Früchte dieser genialen Erfindung geniessen."
+            </quote>
+            <lb />Die nächste Vorführung des Reproduktionsklaviers findet Sonntag den 15. Dezember nach-
+            <lb />mittags 5 Uhr statt, wozu Musikfreunde höflichst eingeladen sind.
+            <lb />Pianohaus
+            <orgName>Alfred Schmid Nachf.</orgName>
+            <lb />Kgl. Bayer. Hofmusikalienhandlung,
+            Hoflieferant Sr. Kgl. Hoheit des Prinzen
+            Rupprecht von Bayern.<lb />34 <address>Theatinerstrasse 34</address>
         </div>
         <div facs="#eSc_textblock_3824adc6" />
     </text>

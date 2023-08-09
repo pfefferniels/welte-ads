@@ -42,7 +42,7 @@
                     [...]
                 </note>
            </notesStmt>
-           <sourceDesc>
+           <sourceDesc xml:id="A">
               <bibl>Paderewski will play again</bibl>
               <biblFull>
                  <titleStmt>
@@ -60,11 +60,42 @@
                  </publicationStmt>
                  <seriesStmt>
                     <title level="j" type="main">The New York Herald</title>
-                    <biblScope unit="issue">May 01 1921</biblScope>
+                    <biblScope unit="issue">May 1, 1921</biblScope>
                     <biblScope unit="pages">[no page]</biblScope>
                  </seriesStmt>
               </biblFull>
            </sourceDesc>
+           <sourceDesc xml:id="B">
+            <bibl>Paderewski will play again</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">Paderewski will play again</title>
+                  <author>
+                     <orgName>Hardman Welte-Mignon Licensee</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>Omaha Daily Bee</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5074472">Omaha</pubPlace>
+                  <date type="publication">1922</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">Omaha Daily Bee</title>
+                  <biblScope unit="issue">January 4, 1922</biblScope>
+                  <biblScope unit="pages">4</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+               <msIdentifier>
+                 <repository>Library of Congress</repository>
+                 <idno>
+                   <idno type="URLImages">https://chroniclingamerica.loc.gov/lccn/sn99021999/1922-01-04/ed-1/seq-4</idno>
+                 </idno>
+               </msIdentifier>
+           </msDesc>
+         </sourceDesc>
         </fileDesc>
         <profileDesc>
            <langUsage>
@@ -119,8 +150,24 @@
             <hi rendition="#c">
                 Write for catalog.
                 <lb />Convenient Terms
-                <lb /><orgName>HARDMAN,PECK&amp;CO.</orgName>
-                <lb />Founded 1842
+
+                <app>
+                  <rdg source="#A">
+                     <lb /><orgName>HARDMAN,PECK&amp;CO.</orgName>
+                     <lb />Founded 1842
+                  </rdg>
+                  <rdg source="#B">
+                     <hi rendition="#k">
+                        <lb />Exclusive Representatives
+                        <lb />Schmoller &amp; Mueller
+                        <lb />Piano Co.
+                        <lb />1514-16-18
+                        <lb />Dodge St.
+                        <lb />Phone
+                        <lb />Douglas 1623
+                     </hi>
+                  </rdg>
+                </app>
             </hi>
             <lb />433 Fifth Avenue, New York
             <lb />47-51 Flatbush Ave, Brooklyn

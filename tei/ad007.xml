@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Ad in "The New York Tribune"</title>
+                <title type="main">Ad in "The New York Tribune" and "The Sun and New York Herald"</title>
                 <title type="sub">Feb 1, 1920</title>
                 <author>
                     <orgName key="welte.studios">
@@ -55,11 +55,51 @@
                         <date type="publication">1920</date>
                     </publicationStmt>
                     <seriesStmt>
-                        <title level="j" type="main">The Sun and New York Herald</title>
+                        <title level="j" type="main">New York Tribune</title>
                         <biblScope unit="issue">Feb 1, 1920</biblScope>
                         <biblScope unit="pages">6</biblScope>
                     </seriesStmt>
                 </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                      <repository>Library of Congress</repository>
+                      <idno>
+                        <idno type="URLImages">https://chroniclingamerica.loc.gov/lccn/sn83030214/1920-02-01/ed-1/seq-72</idno>
+                      </idno>
+                    </msIdentifier>
+                  </msDesc>
+                </sourceDesc>
+            <sourceDesc>
+                <bibl>The Welte Mignon is the greatest achievement</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">The Welte Mignon</title>
+                        <title level="m" type="sub">is the greatest achievement</title>
+                        <author>
+                            <orgName>The Welte Mignon Studios</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>The Sun and New York Herald</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                        <date type="publication">1920</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">The Sun and New York Herald</title>
+                        <biblScope unit="issue">Feb 1, 1920</biblScope>
+                        <biblScope unit="pages">15</biblScope>
+                    </seriesStmt>
+                </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                      <repository>Library of Congress</repository>
+                      <idno>
+                        <idno type="URLImages">https://chroniclingamerica.loc.gov/lccn/sn83030273/1920-02-01/ed-1/seq-51</idno>
+                      </idno>
+                    </msIdentifier>
+                </msDesc>
             </sourceDesc>
         </fileDesc>
         <profileDesc>

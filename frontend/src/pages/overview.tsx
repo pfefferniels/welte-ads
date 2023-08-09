@@ -67,10 +67,18 @@ const Overview = () => {
                                         </Link>
                                     </TableCell>
                                     <TableCell>
-                                        {metadata.dates.join(',')}
+                                    {metadata.dates.map(date => (
+                                            <div key={`${metadata}_${i}_${date}`}>
+                                                {date}
+                                            </div>
+                                        ))}
                                     </TableCell>
                                     <TableCell>
-                                        {metadata.newspapers.join(',')}
+                                        {metadata.newspapers.map(newspaper => (
+                                            <div key={`${metadata}_${i}_${newspaper}`}>
+                                                {newspaper.replace('&amp;', '&')}
+                                            </div>
+                                        ))}
                                     </TableCell>
                                 </TableRow>
                             ))}

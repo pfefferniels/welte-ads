@@ -38,10 +38,10 @@
               </availability>
            </publicationStmt>
            <sourceDesc>
-              <bibl>Possessed only by Welte-Mignon</bibl>
+              <bibl>A veritable army</bibl>
               <biblFull>
                  <titleStmt>
-                    <title level="m" type="main">Possessed only by Welte-Mignon</title>
+                    <title level="m" type="main">A veritable army</title>
                     <author>
                        <orgName>Auto Pneumatic Action Co.</orgName>
                     </author>
@@ -104,11 +104,11 @@
             </signed>
 
             <lb />
-            <signed>Josef Hofmann</signed>
+            <signed><persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName></signed>
             <signed><gap reason="illegible" /></signed>
 
             <lb />
-            <signed>Pouishnoff</signed>
+            <signed><persName corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName></signed>
             <signed>Cecile de Horvath</signed>
 
             <lb />

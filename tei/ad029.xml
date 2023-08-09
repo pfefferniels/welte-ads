@@ -99,6 +99,68 @@
               </msIdentifier>
             </msDesc>
          </sourceDesc>
+         <sourceDesc>
+          <bibl>"It brings the world's greatest pianists into my home"</bibl>
+          <biblFull>
+             <titleStmt>
+                <title level="m" type="main">"It brings the world's greatest pianists into my home"</title>
+                <author>
+                   <orgName>Auto Pneumatic Action Co.</orgName>
+                </author>
+             </titleStmt>
+             <publicationStmt>
+                <publisher>
+                   <orgName>House Beautiful</orgName>
+                </publisher>
+                <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                <date type="publication">1927</date>
+             </publicationStmt>
+             <seriesStmt>
+                <title level="j" type="main">House Beautiful</title>
+                <biblScope unit="issue">October 1927</biblScope>
+                <biblScope unit="pages">299</biblScope>
+             </seriesStmt>
+          </biblFull>
+          <msDesc>
+            <msIdentifier>
+              <repository>archive.org</repository>
+              <idno>
+                <idno type="URLImages">https://archive.org/details/sim_house-beautiful_1927-10_62_4/page/n34</idno>
+              </idno>
+            </msIdentifier>
+          </msDesc>
+       </sourceDesc>
+       <sourceDesc>
+            <bibl>"It brings the world's greatest pianists into my home"</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">"It brings the world's greatest pianists into my home"</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>Vogue</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1927</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">Vogue</title>
+                  <biblScope unit="issue">October 1927</biblScope>
+                  <biblScope unit="pages">141</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>archive.org</repository>
+                <idno>
+                  <idno type="URLImages">https://archive.org/details/sim_vogue_1927-10-01_69_7/page/n153/</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
       </fileDesc>
         <profileDesc>
            <langUsage>

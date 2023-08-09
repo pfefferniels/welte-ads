@@ -3,8 +3,8 @@
     <teiHeader>
         <fileDesc>
            <titleStmt>
-              <title type="main">Ad in "Singing"</title>
-              <title type="sub">August 1926</title>
+              <title type="main">Ad in "Singing", "The American Hebrew", "Town and Country"</title>
+              <title type="sub">August/September/October 1926</title>
               <author>
                  <orgName key="auto.pneumatic.action">
                     Auto Pneumatic Action Co.
@@ -68,7 +68,100 @@
                 </msIdentifier>
               </msDesc>
            </sourceDesc>
-        </fileDesc>
+           <sourceDesc>
+            <bibl>The superiority of any reproducing piano</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">The superiority of any reproducing piano</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>The American Hebrew</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">The American Hebrew</title>
+                  <biblScope unit="issue">September 10, 1926</biblScope>
+                  <biblScope unit="pages">482</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>University of Virginia</repository>
+                <idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uva.x030512334&seq=21</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+         <sourceDesc>
+            <bibl>The superiority of any reproducing piano</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">The superiority of any reproducing piano</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>Town &amp; Country</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">Town &amp; Country</title>
+                  <biblScope unit="issue">October 1, 1926</biblScope>
+                  <biblScope unit="pages">4</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>University of Virginia</repository>
+                <idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uva.x030387052&seq=8</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+         <sourceDesc>
+            <bibl>The superiority of any reproducing piano</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">The superiority of any reproducing piano</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>Harper's Magazine</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">Harper's Magazine</title>
+                  <biblScope unit="issue">November, 1926</biblScope>
+                  <biblScope unit="pages">no page number</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>archive.org</repository>
+                <idno>
+                  <idno type="URLImages">https://archive.org/details/sim_harpers-magazine_1926-11_153_918/page/n234</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
         <profileDesc>
            <langUsage>
               <language ident="eng">English</language>
@@ -129,12 +222,12 @@
         <lb/>the great geniuses of the pianoforte:
         <persName>De<lb/>Pachmann</persName>,
         <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-        <persName>Giesking</persName>,
+        <persName>Gieseking</persName>,
         <persName>Casella</persName>
       </div>
       <div facs="#eSc_textblock_3e3a75c6">
          <lb/>
-         <persName>Pouishnoff</persName>
+         <persName corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>
          and many others.
          <lb/>You can now have Welte-Mignon
          <lb/>Licensee in one hundred and fifteen

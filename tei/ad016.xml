@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
            <titleStmt>
-              <title type="main">Ad in "Singing"</title>
+              <title type="main">Ad in "Singing" and "Review of Reviews"</title>
               <title type="sub">April and July 1926</title>
               <author>
                  <orgName key="auto.pneumatic.action">
@@ -71,6 +71,99 @@
                 </msIdentifier>
               </msDesc>
            </sourceDesc>
+           <sourceDesc>
+            <bibl>Possessed only by Welte-Mignon</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">Possessed only by Welte-Mignon</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>The American Review of Reviews</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">The American Review of Reviews</title>
+                  <biblScope unit="issue">April 1926</biblScope>
+                  <biblScope unit="pages">18</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>University of California</repository>
+                <idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.c038417028&seq=732</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+         <sourceDesc>
+            <bibl>Possessed only by Welte-Mignon</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">Possessed only by Welte-Mignon</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>House &amp; Garden</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">House &amp; Garden</title>
+                  <biblScope unit="issue">May 1926</biblScope>
+                  <biblScope unit="pages">10</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>University of Michigan</repository>
+                <idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015039496248&seq=938</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+         <sourceDesc>
+            <bibl>Possessed only by Welte-Mignon</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">Possessed only by Welte-Mignon</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>The Century</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">The Century</title>
+                  <biblScope unit="issue">May 1926</biblScope>
+                  <biblScope unit="pages">without page number</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>University of California</repository>
+                <idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.b2922282&seq=870</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
         </fileDesc>
         <profileDesc>
            <langUsage>

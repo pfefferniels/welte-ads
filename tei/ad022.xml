@@ -220,7 +220,7 @@
             </div>
             <div facs="#eSc_textblock_a5e73e7d">
                 <lb /><persName>La Forge</persName>
-                <lb /><persName>Pouishnoff</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>
                 <lb /><persName>Dohnanyi</persName>
                 <lb /><persName>Ganz</persName>
                 <lb /><persName>Saint-Saens</persName>
@@ -273,10 +273,10 @@
             </seg>
             as <persName>De Pachmann</persName>,</div>
         <div facs="#eSc_textblock_357a12a6">
-            <lb /><persName>Paderewski</persName>,
+            <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
             <persName>Hofmann</persName>,
-            <persName>Gieseking</persName>,
-            <persName>Pouishnoff</persName> and
+            <persNam corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>,
+            <persName corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName> and
             <persName>Ca-<lb />sella</persName>, possible through
             the authentic recordings of Welte-
             <lb />Mignon Licensee, is is an invaluable aid to master or stu-

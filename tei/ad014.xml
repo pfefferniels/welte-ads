@@ -3,8 +3,8 @@
     <teiHeader>
         <fileDesc>
            <titleStmt>
-              <title type="main">Ad in "Singing"</title>
-              <title type="sub">February 1926</title>
+              <title type="main">Ad in "The Century" and "Singing"</title>
+              <title type="sub">November 1925/February 1926</title>
               <author>
                  <orgName key="auto.pneumatic.action">
                     Auto Pneumatic Action Co.
@@ -68,6 +68,37 @@
                 </msIdentifier>
               </msDesc>
            </sourceDesc>
+           <sourceDesc>
+            <bibl>Through you I live forever</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">Through you I live forever</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>The Century</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1925</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">The Century</title>
+                  <biblScope unit="issue">November 1925</biblScope>
+                  <biblScope unit="pages">no page number</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>University of California</repository>
+                <idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.b2922282&seq=183</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
         </fileDesc>
         <profileDesc>
            <langUsage>

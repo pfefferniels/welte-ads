@@ -7,7 +7,7 @@
                 <title type="sub">27.12.1905</title>
                 <author>
                     <orgName key="a.schmid">
-                        Pianohaus Anfred Schmid Nachf.
+                        Pianohaus Alfred Schmid Nachf.
                     </orgName>
                 </author>
                 <respStmt>
@@ -137,18 +137,36 @@
             worden,<lb />wie nachfolgende Aeusserungen beweisen:</div>
         <div facs="#eSc_textblock_05c0264b">
             <lb /><persName corresp="https://d-nb.info/gnd/118501437">Eugen d'Albert</persName>:
-            <lb />Das Mignon-Reproduktionsklavier ist<lb />eine Aufsehen
-            erregende Erfindung.
-            <lb /><persName>Konrad Ansorge</persName>:<lb />Es ist ein ausgezeichnetes Bildungs-<lb />mittel
-            für Konservatorien, wo den Stu-<lb />dierenden die Vortragsart eines Mei-<lb />sters zu
-            jeder Zeit vorgeführt werden kann.<lb />kann.<lb /><persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>:<lb />Mignon ist
-            ebenso verblüffend für den<lb />Eingeweihten, als sie für den Einge-<lb />weihten
-            bewunderungswürdig sein muss.<lb /><persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>:<lb />Meine Bewunderung für die
-            grossartige<lb />Erfindung kennt keine Grenzen.<lb /><persName>Ernst von Dohnányi</persName>:<lb />Man kann
-            nur staunen und bewundern.<lb /><persName corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>:<lb />Mignon ist sicher eine der
-            wunder-<lb />barsten Erfindungen, die dem mensch-<lb />lichen Geiste gelungen sind.<lb /><persName corresp="https://d-nb.info/gnd/116888652">Alfred
-            Grünfeld</persName>:<lb />Ich gestehe gerne, dass ich geradezu<lb />verblüfft war, als ich mit
-            eigenen Ohren<lb />hörte, in welcher Weise Mignon die<lb />von Künstlerhand gespielten
+            <lb />Das Mignon-Reproduktionsklavier ist
+            <lb />eine Aufsehen erregende Erfindung.
+
+            <lb /><persName>Konrad Ansorge</persName>:
+            <seg ana="#educational_use" type="topic" resp="#np">
+                <lb />Es ist ein ausgezeichnetes Bildungs-
+                <lb />mittel für Konservatorien, wo den Stu-
+                <lb />dierenden die Vortragsart eines Mei-
+                <lb />sters zu jeder Zeit vorgeführt werden
+                <lb />kann.
+            </seg>
+
+            <lb /><persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>:
+            <lb />Mignon ist ebenso verblüffend für den
+            <lb />Eingeweihten, als sie für den Einge-
+            <lb />weihten bewunderungswürdig sein muss.
+            
+            <lb /><persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>:
+            <lb />Meine Bewunderung für die grossartige<lb />Erfindung kennt keine Grenzen.
+            <lb /><persName>Ernst von Dohnányi</persName>:
+            <lb />Man kann nur staunen und bewundern.
+            <lb /><persName corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>:
+            <lb />Mignon ist sicher eine der wunder-
+            <lb />barsten Erfindungen, die dem mensch-
+            <lb />lichen Geiste gelungen sind.
+            <lb /><persName corresp="https://d-nb.info/gnd/116888652">Alfred
+            Grünfeld</persName>:
+            <lb />Ich gestehe gerne, dass ich geradezu
+            <lb />verblüfft war, als ich mit eigenen Ohren
+            <lb />hörte, in welcher Weise Mignon die<lb />von Künstlerhand gespielten
             Musik-<lb />stücke wiedergibt.</div>
         <div facs="#eSc_textblock_a1117377">
             <lb />Verführung des Klaviers kann einstweilen nur nach vorhergegangener Anmeldung
@@ -161,39 +179,48 @@
             </seg>.
             
             <lb /><persName>Frederic Lamond</persName>:<lb />
-            <seg ana="#miracle">
+            <seg ana="#miracle" type="topic" resp="#np">
                 Ich sehe den Mignon-Apparat als das<lb />grösste
                 Wunder der Jetztzeit an
             </seg>.
             
-            <lb /><persName corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>:<lb />Die Wiedergabe ist nach jeder
-            Richtung,<lb />sowohl was das rein technisch virtuose, als<lb />auch was das
-            musikalisch-poetische Moment<lb />betrifft, eine so verblüffend natürliche,
+            <lb /><persName corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>:
+            <lb />Die Wiedergabe ist nach jeder Richtung,
+            <lb />sowohl was das rein technisch virtuose, als
+            <lb />auch was das musikalisch-poetische Moment
+            <lb />betrifft, eine so verblüffend natürliche,
             <seg ana="#virtual_presence" resp="#np" type="topic">
                 dass<lb />man
-                wirklich meint, den Künstler i<lb />Person vor sich zu sehen und ihn spielen zu<lb />
-                hören.
+                wirklich meint, den Künstler i
+                <lb />Person vor sich zu sehen und ihn spielen zu
+                <lb />hören.
             </seg>
             
             <lb /><persName corresp="https://d-nb.info/gnd/116210419">Raoul Pugno</persName>:
             <lb />In dieser Wiedergabe findet man alle
-            <lb />charakteristischen
-            Eigenschaften des Künst-
+            <lb />charakteristischen Eigenschaften des Künst-
             <lb />lers, den Rhythmus, die Eleganz und Vir-
             <lb />tuosität im Spiel, seine Auffassung in Be-
             <lb />zug auf die Phrasierung und sogar die
             <lb />Verwendung der beiden Pedale.
             
-            <lb /><persName>Alfred Reisenauer</persName>:<lb />Hier ist zugleich ein technisches und
-            philo-<lb />sophisches Problem in vollendetster Form<lb />gelöst.<lb />
+            <lb /><persName>Alfred Reisenauer</persName>:
+            <lb />Hier ist zugleich ein technisches und philo-
+            <lb />sophisches Problem in vollendetster Form
+            <lb />gelöst.
+            <lb />
             
             <persName corresp="https://d-nb.info/gnd/11863027X">Felix
-            Weingartner</persName>:<lb />Der Mignon-Apparat ist das Unglaublichste<lb />an Vollendung, was man
-            sich denken kann.<lb />
+            Weingartner</persName>:
+            <lb />Der Mignon-Apparat ist das Unglaublichste
+            <lb />an Vollendung, was man sich denken kann.<lb />
             <seg ana="#immortality" resp="#np" type="topic">
-                Was grosse Meister unserer Tage leisten,<lb />kann nun nicht mehr
+                Was grosse Meister unserer Tage leisten,
+                <lb />kann nun nicht mehr
                 untergehen
-            </seg> und spä-<lb />tere Genarationen werden die Früchte die-<lb />ser genialen
-            Erfindung genissen.</div>
+            </seg> und spä-
+            <lb />tere Genarationen werden die Früchte die-
+            <lb />ser genialen Erfindung genissen.
+        </div>
     </text>
 </TEI>

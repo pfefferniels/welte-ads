@@ -52,7 +52,7 @@ const useStyles = makeStyles({
   }
 })
 
-export default function Introduction({pageContext}: Props) {
+export default function Introduction({ pageContext }: Props) {
   const { site } = useStaticQuery(
     graphql`
       query {

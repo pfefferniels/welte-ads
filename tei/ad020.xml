@@ -3,8 +3,8 @@
     <teiHeader>
         <fileDesc>
            <titleStmt>
-              <title type="main">Ad in "Singing"</title>
-              <title type="sub">May 1926</title>
+              <title type="main">Ad in "Singing", "House Beautiful" and "Review of Reviews"</title>
+              <title type="sub">May and June 1926</title>
               <author>
                  <orgName key="auto.pneumatic.action">
                     Auto Pneumatic Action Co.
@@ -38,10 +38,10 @@
               </availability>
            </publicationStmt>
            <sourceDesc>
-              <bibl>Think what Welte brings to you</bibl>
+              <bibl>Think what Welte means to you</bibl>
               <biblFull>
                  <titleStmt>
-                    <title level="m" type="main">Think what Welte brings to you</title>
+                    <title level="m" type="main">Think what Welte means to you</title>
                     <author>
                        <orgName>Auto Pneumatic Action Co.</orgName>
                     </author>
@@ -68,7 +68,131 @@
                 </msIdentifier>
               </msDesc>
            </sourceDesc>
-        </fileDesc>
+           <sourceDesc>
+            <bibl>Think what Welte means to you</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">Think what Welte means to you</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>House Beautiful</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">House Beautiful</title>
+                  <biblScope unit="issue">June 1926</biblScope>
+                  <biblScope unit="pages">755</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>archive.org</repository>
+                <idno>
+                  <idno type="URLImages">https://archive.org/details/sim_house-beautiful_1926-06_59_6/page/754</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+         <sourceDesc>
+            <bibl>Think what Welte means to you</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">Think what Welte means to you</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>The American Review of Reviews</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">The American Review of Reviews</title>
+                  <biblScope unit="issue">June 1926</biblScope>
+                  <biblScope unit="pages">57</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>University of California</repository>
+                <idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.c038417028&seq=1383</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+         <sourceDesc>
+            <bibl>Think what Welte means to you</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">Think what Welte means to you</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>House &amp; Garden</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">House &amp; Garden</title>
+                  <biblScope unit="issue">June 1926</biblScope>
+                  <biblScope unit="pages">153</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>University of Michigan</repository>
+                <idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015039496248&seq=1375</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+         <sourceDesc>
+            <bibl>Think what Welte means to you</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">Think what Welte means to you</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>The Century</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">The Century</title>
+                  <biblScope unit="issue">June 1926</biblScope>
+                  <biblScope unit="pages">without page</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>University of California</repository>
+                <idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.b2922283&seq=317</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+    </fileDesc>
         <profileDesc>
            <langUsage>
               <language ident="eng">English</language>
@@ -116,9 +240,9 @@
             <lb />MIGNON Licensee Reproducing Action.
             <lb />Think what this means:
             <persName>De Pachmann</persName>,
-            <lb /><persName>Paderewski</persName>,
+            <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
             <persName>Casella</persName>,
-            <persName>Gieseking</persName> and a
+            <persName corresp="https://d-nb.info/gnd/118694820">Gieseking</persName> and a
             <lb />host of other world-famous pianists.
             <seg ana="#distinction_from_mechanical">
                 Not<lb />approximations of their playing, but their<lb />very individuality.
