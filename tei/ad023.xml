@@ -124,8 +124,10 @@
                 <desc>Portrait of Pachmann</desc>
             </figure>
             <p>
-                <lb />Vladimir<lb />
-                <hi rendition="#k">De Pachmann</hi>
+                <persName corresp="https://d-nb.info/gnd/116014490">
+                    <lb />Vladimir<lb />
+                    <hi rendition="#k">De Pachmann</hi>
+                </persName>
             </p>
         </div>
         <div facs="#eSc_textblock_13d38cee" type="illustration">
@@ -151,8 +153,10 @@
                 <desc>Portrait of Hofmann</desc>
             </figure>
             <p>
-                <lb />Josef<lb />
-                <hi rendition="#k">Hofmann</hi>
+                <persName corresp="https://d-nb.info/gnd/11918625X">
+                    <lb />Josef<lb />
+                    <hi rendition="#k">Hofmann</hi>
+                </persName>
             </p>
         </div>
         <div facs="#eSc_textblock_9f93a7b3" type="illustration">
@@ -180,8 +184,10 @@
                 <desc>Portrait of Bloomfield-Zeisler</desc>
             </figure>
             <p>
-                <lb />Fannie<lb />
-                <hi rendition="#k">Bloomfield-Zeisler</hi>
+                <persName corresp="https://d-nb.info/gnd/116204400">
+                    <lb />Fannie<lb />
+                    <hi rendition="#k">Bloomfield-Zeisler</hi>
+                </persName>
             </p>
         </div>
         <div facs="#eSc_textblock_8eb032be" type="illustration">
@@ -189,8 +195,10 @@
                 Portrait of Busoni
             </figure>
             <p>
-                <lb />Ferrucio<lb />
-                <hi rendition="#k">Busoni</hi>
+                <persName corresp="https://d-nb.info/gnd/118518011">
+                    <lb />Ferrucio<lb />
+                    <hi rendition="#k">Busoni</hi>
+                </persName>
             </p>
         </div>
         <div facs="#eSc_textblock_c61c0a72">
@@ -244,27 +252,27 @@
             </div>
             <div facs="#eSc_textblock_59f05978">
                 <lb /><persName corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>
-                <lb /><persName>Casella</persName>
-                <lb /><persName>Gabrilowitsch</persName>
-                <lb /><persName>Sauer</persName>
-                <lb /><persName>d'Albert</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/119362112">Casella</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/116327642">Gabrilowitsch</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/116977108">Sauer</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>
                 <lb /><persName>Boguslawski</persName>
-                <lb /><persName>Carreno</persName>
-                <lb /><persName>Lhevinne</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>
                 <lb /><persName>De Horvath</persName>
-                <lb /><persName>Debussy</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/118524186">Debussy</persName>
             </div>
             <div facs="#eSc_textblock_49b5a03a">
                 <lb /><persName>La Forge</persName>
-                <lb /><persName>Poushnoff</persName>
-                <lb /><persName>Debussy</persName>
-                <lb /><persName>Ganz</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/134788370">Poushnoff</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/118524186">Debussy</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/119281953">Ganz</persName>
                 <lb /><persName>Saint-Saens</persName>
-                <lb /><persName>Grieg</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/118697641">Grieg</persName>
                 <lb /><persName>Humperdinck</persName>
-                <lb /><persName>Leschetitzky</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/120890143">Leschetitzky</persName>
                 <lb /><persName>Samaroff</persName>
-                <lb /><persName>Scharwenka</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/117110450">Scharwenka</persName>
             </div>
         </div>
 

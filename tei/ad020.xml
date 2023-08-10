@@ -239,9 +239,9 @@
             <lb />piano equipped with the famous WELTE-
             <lb />MIGNON Licensee Reproducing Action.
             <lb />Think what this means:
-            <persName>De Pachmann</persName>,
+            <persName corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName>,
             <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-            <persName>Casella</persName>,
+            <persName corresp="https://d-nb.info/gnd/119362112">Casella</persName>,
             <persName corresp="https://d-nb.info/gnd/118694820">Gieseking</persName> and a
             <lb />host of other world-famous pianists.
             <seg ana="#distinction_from_mechanical">

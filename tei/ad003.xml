@@ -105,10 +105,12 @@
         <div facs="#eSc_textblock_77dbd8b9">
             <lb />
             <seg ana="#touch_of_a_button" resp="#np" type="topic">
-                Ein Druck auf den Knopf genügt, um einen <persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>, <persName
-                corresp="https://d-nb.info/gnd/118518011">
-                Busoni</persName>, <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
-            , <lb /><persName>Reisenauer</persName> etc. zu zitieren.
+                Ein Druck auf den Knopf genügt, um einen 
+                <persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>,
+                <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>,
+                <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
+                , <lb /><persName corresp="https://d-nb.info/gnd/116429623">Reisenauer</persName>
+                etc. zu zitieren.
             </seg>
         </div>
         <div facs="#eSc_textblock_5dbfb787">

@@ -13,8 +13,11 @@ pianos, but also to "acquaint the general public with exactly what
 the reproducing piano is and how it differs from the regular foot-pumped
 player piano".[^2] The "Frank Seaman Inc." was chosen as a advertising agency.
 These ads were published in color in a set of magazines known as
-"The Quality Group".[^4] The textes were written by Harriette Segall and
-the paintings were exclusively done by .... 
+"The Quality Group".[^4] The textes were written by Harriette Segall. The
+Frank Seaman Inc. displayed two of the paintings of De Feo (Welanetz Co.)
+for the Welte Mignon in an Exhibition of the *Art Director's Club*.[^11]
+Considerable efforts have been made to emphasize the artistic
+quality of the Welte Mignon reproduction piano.
 
 #### Examples
 
@@ -38,6 +41,10 @@ in *The Music Trades*:[^9]
 This series has appeared in "House and Garden",
 "Vanity Fair",  "House Beautiful" and "Vogue".
 Other than announced it did not appear in "Country Life".[^10]
+
+#### Examples
+- ["It brings the world's greatest pianist into my home"](/ad029)
+- ["The realism of its playing is almost beyond belief"](/ad030)
 
 1927 The *Auto-Pneumatic Action Company* tries to advertise reproducing pianos
 for popular music.[^6]
@@ -77,6 +84,8 @@ Welte Mignon Corporation, changed to the Austin Organ Company.[^7]
       without page [p. 88]). It is worth nothing that also The Aeolian
       Company praised its *Duo-Art Reproducing Piano* in the same
       journals with a remarkable, four pages spanning advert.
+[^11]: Exhibited in the Art Center in New York from April 5 to 30 1924,
+       Cf. *Third Annual of Advertising Art*, New York 1924, p. 24.
 [^5]: *Printer's Ink*, Nov. 6, 1930, p. 116; *Textile Work*, Nov. 1, 1930, p. 103.
 [^6]: *Musical Courier*, Oct. 1, 1927, p. 35.
 [^7]: *The Diapason* Nov. 1, 1929

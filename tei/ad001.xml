@@ -131,8 +131,9 @@
             <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>, <lb />
             <persName corresp="https://d-nb.info/gnd/116014490">Pachmann</persName>,
             <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>, <lb />
-            <persName>Hambourg</persName>
-            , <persName> Leonard <lb />Borwick </persName>, <persName>Fanny Davies</persName>, etc. </div>
+            <persName corresp="https://d-nb.info/gnd/116422319">Hambourg</persName>,
+            <persName>Leonard <lb />Borwick</persName>,
+            <persName corresp="https://d-nb.info/gnd/116040378">Fanny Davies</persName>, etc. </div>
         <div facs="#eSc_textblock_6282f9b6">
             <lb /><orgName>Steinway &amp; Sons</orgName>
             <lb />

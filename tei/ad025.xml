@@ -113,7 +113,7 @@
 
             <lb />
             <signed>Magdleine Brard</signed>
-            <signed>Ferruccio Busoni</signed>
+            <signed><persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName></signed>
 
             <lb />
             <signed><gap reason="illegible" /></signed>
@@ -121,29 +121,29 @@
 
             <lb />
             <signed><gap reason="illegible" /></signed>
-            <signed>Rudolf Ganz</signed>
+            <signed><persName corresp="https://d-nb.info/gnd/119281953">Rudolf Ganz</persName></signed>
 
             <lb />
             <signed><gap reason="illegible" /></signed>
 
             <lb />
-            <signed>Ossip Gabrilowitsch</signed>
-            <signed>Teresa Carreno</signed>
+            <signed><persName corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName></signed>
+            <signed><persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName></signed>
 
             <lb />
             <signed>Richard Singer</signed>
             <signed><unclear reason="#illegible">Epstein</unclear></signed>
 
             <lb />
-            <signed>Claude Debussy</signed>
-            <signed>Alfred Casella</signed>
+            <signed><persName corresp="https://d-nb.info/gnd/118524186">Claude Debussy</persName></signed>
+            <signed><persName corresp="https://d-nb.info/gnd/119362112">Alfred Casella</persName></signed>
 
             <lb />
-            <signed>Edvard Grieg</signed>
+            <signed><persName corresp="https://d-nb.info/gnd/118697641">Edvard Grieg</persName></signed>
             <signed><gap reason="illegible" /></signed>
             
             <lb />
-            <signed>Xaver Scharwenka</signed>
+            <signed><persName corresp="https://d-nb.info/gnd/117110450">Xaver Scharwenka</persName></signed>
             <signed><gap reason="illegible" /></signed>
 
             <lb />

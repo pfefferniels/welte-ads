@@ -96,7 +96,9 @@
                         <note type="editorial" ref="#immortals" resp="#np">
                             The slogan was originally invented by
                             <persName>Raymond Rubicam</persName> in 1919, who
-                            referred to the long-lasting history of Steinway pianos.
+                            referred to the long-lasting history of Steinway pianos
+                            (Julian Watkins, *The 100 Greatest Advertisements 1852–1958*,
+                            p. 45).
                             Nevertheless, the "immortality" theme is analysed 
                             here, since the slogan gets reinterpreted by its 
                             context.
@@ -128,19 +130,15 @@
             <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>,
             <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>,
             <lb />
-            <persName>Mark Hambourg</persName>,
-            <persName>
-                Puish-<lb />noff
-            </persName>,
-            <persName>Fanny Davies</persName>,
+            <persName corresp="https://d-nb.info/gnd/116422319">Mark Hambourg</persName>,
+            <persName corresp="https://d-nb.info/gnd/134788370">Puish-<lb />noff</persName>,
+            <persName corresp="https://d-nb.info/gnd/116040378">Fanny Davies</persName>,
             <persName corresp="https://d-nb.info/gnd/118501437">
                 d'Al-<lb />bert
             </persName>,
             <persName corresp="https://d-nb.info/gnd/116204400">Bloomfield-Zeisler</persName>,
             <lb />
-            <persName corresp="https://d-nb.info/gnd/118953915">
-                Carreño
-            </persName>,
+            <persName corresp="https://d-nb.info/gnd/118953915">Carreño</persName>,
             <persName>
                 Debussy
             </persName>,
@@ -148,22 +146,18 @@
                 Doh-<lb />nányi
             </persName>,
             <persName corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
-            <persName corresp="https://d-nb.info/gnd/116888652">
-                Grünfeld
-            </persName><lb />
-            <persName>
-                Lamond
-            </persName>,
-            <persName>Leschetitzky</persName>,
+            <persName corresp="https://d-nb.info/gnd/116888652">Grünfeld</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/116662166">Lamond</persName>,
+            <persName corresp="https://d-nb.info/gnd/120890143">Leschetitzky</persName>,
             <lb />
             <perName corresp="https://d-nb.info/gnd/124379923">Lhevinne</perName>,
-            <persName>Pugno</persName>,
+            <persName corresp="https://d-nb.info/gnd/116308621">Pugno</persName>,
             <persName corresp="https://d-nb.info/gnd/11875081X">Saint-<lb />Saens</persName>,
             <persName>Samaroff</persName>,
             <persName>Sapellni-<lb />koff</persName>,
-            <persName>Scharwenka</persName>,
+            <persName corresp="https://d-nb.info/gnd/117110450">Scharwenka</persName>,
             <persName>Schelling</persName>,
-            <persName>Strauss</persName>,
+            <persName corresp="https://d-nb.info/gnd/11861911X">Strauss</persName>,
             <persName>Schumann</persName>, etc.
         </div>
         <div facs="#eSc_textblock_9478645f">

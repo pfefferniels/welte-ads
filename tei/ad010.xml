@@ -101,7 +101,11 @@
             <lb />bringen; es handelt sich also nicht um ein Surrogat, sondern um eine vollwertige
             <lb />Vertretung.
             <seg ana="#immediate_recognizability" type="topic" resp="#np">
-                Wer mit der Spielweise <persName>d'Alberts</persName>, <persName corresp="https://d-nb.info/gnd/118518011">Busonis</persName>, <persName>Lamonds</persName>, <persName>Stavenhagens</persName> etc.
+                Wer mit der Spielweise
+                <persName corresp="https://d-nb.info/gnd/118501437">d'Alberts</persName>,
+                <persName corresp="https://d-nb.info/gnd/118518011">Busonis</persName>,
+                <persName corresp="https://d-nb.info/gnd/116662166">Lamonds</persName>,
+                <persName corresp="https://d-nb.info/gnd/117223794">Stavenhagens</persName> etc.
                 <lb />vertraut ist, wird bei der Wiedergabe sofort erkennen, welcher dieser Künstler spielt.
             </seg> Es ist deshalb
             <lb />nur eines zu bedauern, dass diese wundervolle Erfindung nicht schon vor 50 und mehr Jahren

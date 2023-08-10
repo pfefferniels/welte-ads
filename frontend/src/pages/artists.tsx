@@ -61,14 +61,27 @@ const Artists = () => {
             return acc
         }, [] as Mention[]);
 
-        const allArtists = Array.from(new Set(mentionsPerYear.map(m => m.name)));
+        let allArtists = Array.from(new Set(mentionsPerYear.map(m => m.name)));
+        const mentionsPerArtist = allArtists
+            .map(artist => {
+                const mentions = mentionsPerYear
+                    .filter(mention => mention.name === artist)
+
+                return {
+                    name: artist,
+                    count: mentions.reduce((acc, cur) => acc + cur.count, 0),
+                    avarageYear: mentions.reduce((acc, cur) => acc + cur.year, 0) / mentions.length
+                }
+            })
+            .sort((a, b) => (b.avarageYear - a.avarageYear) || (a.count - b.count))
+        allArtists = mentionsPerArtist.map(artist => artist.name)
 
         const svgElement = d3.select(artistsSvg.current)
 
         // set the dimensions and margins of the graph
-        const margin = { top: 10, right: 30, bottom: 30, left: 60 },
+        const margin = { top: 30, right: 30, bottom: 30, left: 60 },
             width = 1000 - margin.left - margin.right,
-            height = 700 - margin.top - margin.bottom;
+            height = 900 - margin.top - margin.bottom;
 
         // append the svg object to the body of the page
         svgElement
@@ -78,10 +91,18 @@ const Artists = () => {
             .attr("transform",
                 `translate(${margin.left}, ${margin.top})`);
 
-        // Add X axis
+        // Scales
         const x = d3.scaleLinear()
             .domain([1905, 1935])
             .range([0, width]);
+
+        const radiusScale = d3.scaleLinear()
+            .domain([0, Math.max(...mentionsPerYear.map(mention => mention.count))])
+            .range([0, 30])
+
+        const y = d3.scaleLinear()
+            .domain([0, allArtists.length])
+            .range([height - 20, margin.top]);
 
         svgElement
             .append("g")
@@ -92,10 +113,6 @@ const Artists = () => {
                     if (i % 2) return d;
                     else return null;
                 }))
-
-        const y = d3.scaleLinear()
-            .domain([0, allArtists.length])
-            .range([height - 20, 0]);
 
         svgElement.append('g')
             .selectAll('lines')
@@ -126,7 +143,7 @@ const Artists = () => {
             .attr("cy", (d: any) => y(allArtists.indexOf(d.name)))
             .style("fill", (d: any) => stringToColour(d.name))
             .style("fill-opacity", 0.8)
-            .attr("r", (d: any) => d.count * 4)
+            .attr("r", (d: any) => radiusScale(d.count))
             .on('mouseover', (_, data: any) => {
                 setSelectedMention(data)
             })

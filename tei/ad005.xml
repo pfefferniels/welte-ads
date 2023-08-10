@@ -111,15 +111,15 @@
             <lb />
             <persName corresp="https://d-nb.info/gnd/118786253">Artur Nickisch</persName>
             <lb />
-            <persName>Max Pauer</persName>
+            <persName corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName>
         </div>
         <div facs="#eSc_textblock_38858a02">
             <lb />
             <persName corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>
             <lb />
-            <persName>Max Reger</persName>
+            <persName corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>
             <lb />
-            <persName>Richard Strauss</persName>
+            <persName corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>
             <lb />
             <persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>
         </div>
@@ -142,13 +142,17 @@
             <seg ana="#miracle" resp="#np" type="topic">
                 Man muss das Wunder gehört haben, um es<lb />zu glauben.
             </seg>
-            <lb />Max Pauer.</div>
+            <lb />
+            <persName corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName>.
+        </div>
         <div facs="#eSc_textblock_c91feaa0">
             <lb />Welte Mignon ist für mich das <seg ana="#unreached_ideal" resp="#np" type="topic">unerreichte Ideal<lb />aller Musikinstrumente</seg>.<lb />Max
-            Reger.</div>
+            Reger.
+        </div>
         <div facs="#eSc_textblock_031c0fe4">
-            <lb />Der einzige Apparat der auf künstlerische<lb />Bedeutung Anspruch machen kann.<lb />Richard
-            Strauss.</div>
+            <lb />Der einzige Apparat der auf künstlerische<lb />Bedeutung Anspruch machen kann.<lb />
+            <persName corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>.
+        </div>
         <div facs="#eSc_textblock_fce1a771">
             <lb />Mit dem Welte Mignon ist, wie die berühmtesten Künstler anerkennen, ein
             phantastisch scheinender<lb />Gedanke verwirklicht, nämlich das Klavierspiel eines
@@ -164,9 +168,13 @@
             Wien</orgName> zu Studienzwecken.</seg>
             <seg ana="#touch_of_a_button" type="topic" resp="#np">
                 Der Besitzer<lb />eines Welte Mignon kann sich jederzeit von den
-                berühmtesten Musikern, wie <persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>, <persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>,
-                <persName>Lamond</persName>, <persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>
-                <lb /><persName>Reger</persName>, <persName>Strauss</persName>,
+                berühmtesten Musikern, wie
+                <persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>,
+                <persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>,
+                <persName corresp="https://d-nb.info/gnd/116662166">Lamond</persName>,
+                <persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/118598988">Reger</persName>,
+                <persName corresp="https://d-nb.info/gnd/11861911X">Strauss</persName>,
                 <persName corresp="https://d-nb.info/gnd/118986724">Paderewsky</persName> etc. vorspielen lassen.
             </seg>
             <lb />

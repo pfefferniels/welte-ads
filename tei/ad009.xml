@@ -109,21 +109,49 @@
             Reproduktionsklaviers überhaupt auf. Ueber die blosse Finger-<lb />fertigkeit vermag
             dieses Wunderklavier alles, was an der Leistung eines Künst-<lb />lers das Persönliche
             und Charakteristische ausmacht, zur Geltung zu bringen;<lb />es handelt sich also nicht
-            um ein Surrogat, sondern um eine vollwertige<lb />Vertretung. Wer mit der Spielweise
-            <persName>d'Alberts</persName>, <persName>Lamonds</persName>, <persName>Rislers</persName>, <persName>Staven-<lb />hagens</persName> etc. vertraut ist, vermag sie bei der
-            Wiedergabe sofort zu erkennen.<lb />Wenn das Reproduktionsklavier vor 50 Jahren
+            um ein Surrogat, sondern um eine vollwertige<lb />Vertretung.
+            <seg ana="#immediate_recognizability" type="topic" resp="#np">
+                Wer mit der Spielweise
+                <persName corresp="https://d-nb.info/gnd/118501437">d'Alberts</persName>,
+                <persName corresp="https://d-nb.info/gnd/116662166">Lamonds</persName>,
+                <persName>Rislers</persName>,
+                <persName corresp="https://d-nb.info/gnd/117223794">Staven-<lb />hagens</persName>
+                etc. vertraut ist, vermag sie bei der
+                Wiedergabe sofort zu erkennen.
+            </seg>
+            <lb />Wenn das Reproduktionsklavier vor 50 Jahren
             existiert hätte, könnten wir<lb />auch heute noch
             <seg ana="#educational_use" type="topic" resp="#np">
                 dem Spiel der grossen Meister wie
                 <persName>Liszt</persName>, <persName>Rubinstein</persName>, <persName>Bülow</persName><lb />lauschen und daran lernen
             </seg>. Von den Grossen der Gegenwart
             ist das Spiel<lb />aber nun für die Nachwelt festgehalten; schon jetzt sind zur
-            Reproduktin<lb />aufgenommen: <persName>Eugen d'Albert</persName>, <persName>Konrad Ansorge</persName>, <persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>, <persName>Teresa<lb />Carreno</persName>,
-            <persName>Ernst von Dohnányi</persName>, <persName>Artur Friedheim</persName>, <persName corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>, <persName corresp="https://d-nb.info/gnd/116888652">Alfred<lb />Grünfeld</persName>, <persName>Heinrich
-            Grünfeld</persName>, <persName corresp="https://d-nb.info/gnd/116210419">Clotilde Kleeberg</persName>, <persName>Alexander Krah</persName>, <persName>Frederic<lb />Lamond</persName>, <persName corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>, <persName>Egon
-            Petri</persName>, <persName>Raoul Pugno</persName>, <persName>Max Reger</persName>, <persName>Carl Reinecke</persName>,<lb /><persName>Alfred Reisenauer</persName>, <persName>Alice Ripper</persName>,
-            <persName>Xaver Scharwenka</persName>, <persName>Artur Schnabel</persName>, <persName>Joseph<lb />Slivinski</persName>, <persName>Bernhard Stavenhagen</persName>, <persName corresp="https://d-nb.info/gnd/11863027X">Felix
-            Weingartner</persName>, <persName>Karl Wendling</persName>. Das<lb />Reproduktionsklavier bedeutet für die Hausmusik
+            Reproduktin<lb />aufgenommen:
+            <persName corresp="https://d-nb.info/gnd/118501437">Eugen d'Albert</persName>,
+            <persName corresp="https://d-nb.info/gnd/116014326">Konrad Ansorge</persName>,
+            <persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>,
+            <persName corresp="https://d-nb.info/gnd/118953915">Teresa<lb />Carreno</persName>,
+            <persName>Ernst von Dohnányi</persName>,
+            <persName>Artur Friedheim</persName>,
+            <persName corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>,
+            <persName corresp="https://d-nb.info/gnd/116888652">Alfred<lb />Grünfeld</persName>,
+            <persName>Heinrich Grünfeld</persName>,
+            <persName corresp="https://d-nb.info/gnd/116210419">Clotilde Kleeberg</persName>,
+            <persName>Alexander Krah</persName>,
+            <persName corresp="https://d-nb.info/gnd/116662166">Frederic<lb />Lamond</persName>,
+            <persName corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>,
+            <persName>Egon Petri</persName>,
+            <persName corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>,
+            <persName corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>,
+            <persName corresp="https://d-nb.info/gnd/119388472">Carl Reinecke</persName>,
+            <lb /><persName corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>,
+            <persName>Alice Ripper</persName>,
+            <persName corresp="https://d-nb.info/gnd/117110450">Xaver Scharwenka</persName>,
+            <persName>Artur Schnabel</persName>,
+            <persName>Joseph<lb />Slivinski</persName>,
+            <persName corresp="https://d-nb.info/gnd/117223794">Bernhard Stavenhagen</persName>,
+            <persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>,
+            <persName>Karl Wendling</persName>. Das<lb />Reproduktionsklavier bedeutet für die Hausmusik
             eine unendliche Bereiche-<lb />rung.
             
             Nicht nur, dass man
@@ -140,7 +168,7 @@
             <lb />Das Mignon-Reproduktionsklavier ist
             <lb />eine Aufsehen erregende Erfindung.
 
-            <lb /><persName>Konrad Ansorge</persName>:
+            <lb /><persName corresp="https://d-nb.info/gnd/116014326">Konrad Ansorge</persName>:
             <seg ana="#educational_use" type="topic" resp="#np">
                 <lb />Es ist ein ausgezeichnetes Bildungs-
                 <lb />mittel für Konservatorien, wo den Stu-
@@ -178,7 +206,7 @@
                 Musikseele gefunden wäre
             </seg>.
             
-            <lb /><persName>Frederic Lamond</persName>:<lb />
+            <lb /><persName corresp="https://d-nb.info/gnd/116662166">Frederic Lamond</persName>:<lb />
             <seg ana="#miracle" type="topic" resp="#np">
                 Ich sehe den Mignon-Apparat als das<lb />grösste
                 Wunder der Jetztzeit an
@@ -196,7 +224,7 @@
                 <lb />hören.
             </seg>
             
-            <lb /><persName corresp="https://d-nb.info/gnd/116210419">Raoul Pugno</persName>:
+            <lb /><persName corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>:
             <lb />In dieser Wiedergabe findet man alle
             <lb />charakteristischen Eigenschaften des Künst-
             <lb />lers, den Rhythmus, die Eleganz und Vir-
@@ -204,7 +232,7 @@
             <lb />zug auf die Phrasierung und sogar die
             <lb />Verwendung der beiden Pedale.
             
-            <lb /><persName>Alfred Reisenauer</persName>:
+            <lb /><persName corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>:
             <lb />Hier ist zugleich ein technisches und philo-
             <lb />sophisches Problem in vollendetster Form
             <lb />gelöst.

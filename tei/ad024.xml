@@ -177,7 +177,7 @@
             </figure>
             <p>
                 <lb />
-                <persName>ALFREDO CASELLA</persName>
+                <persName corresp="https://d-nb.info/gnd/119362112">ALFREDO CASELLA</persName>
             </p>
         </div>
 
@@ -188,7 +188,7 @@
             </figure>
             <p>
                 <lb />
-                <persName>VLADIMIR DE PACHMANN</persName>
+                <persName corresp="https://d-nb.info/gnd/116014490">VLADIMIR DE PACHMANN</persName>
             </p>
         </div>
 
@@ -212,7 +212,8 @@
 
         <div facs="#eSc_textblock_d4f05f93">
             <lb />THE genius of <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-            <lb /><persName corresp="https://d-nb.info/gnd/116014490">de Pachmann</persName>, <persName>Casella</persName> and
+            <lb /><persName corresp="https://d-nb.info/gnd/116014490">de Pachmann</persName>,
+            <persName corresp="https://d-nb.info/gnd/119362112">Casella</persName> and
             <lb /><persName corresp="https://d-nb.info/gnd/118694820">Gieseking</persName> lives
             forever through
             <lb />the magic of the Welte-Mignon

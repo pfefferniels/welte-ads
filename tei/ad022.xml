@@ -122,8 +122,10 @@
                 <desc>Portrait of Pachmann</desc>
             </figure>
             <p>
-                <lb />Vladimir<lb />
-                <hi rendition="#k">De Pachmann</hi>
+                <persName corresp="https://d-nb.info/gnd/116014490">
+                    <lb />Vladimir<lb />
+                    <hi rendition="#k">De Pachmann</hi>
+                </persName>
             </p>
         </div>
         <div facs="#eSc_textblock_76c5f96e" type="illustration">
@@ -167,8 +169,10 @@
                 <desc>Portrait of Bloomfield-Zeisler</desc>
             </figure>
             <p>
-                <lb />Fannie<lb />
-                <hi rendition="#k">Bloomfield-Zeisler</hi>
+                <persName corresp="https://d-nb.info/gnd/116204400">
+                    <lb />Fannie<lb />
+                    <hi rendition="#k">Bloomfield-Zeisler</hi>
+                </persName>
             </p>
         </div>
         <div facs="#eSc_textblock_a103a1d6" type="illustration">
@@ -185,8 +189,10 @@
                 Portrait of Busoni
             </figure>
             <p>
-                <lb />Ferrucio<lb />
-                <hi rendition="#k">Busoni</hi>
+                <persName corresp="https://d-nb.info/gnd/118518011">
+                    <lb />Ferrucio<lb />
+                    <hi rendition="#k">Busoni</hi>
+                </persName>
             </p>
         </div>
 
@@ -207,28 +213,28 @@
                 <lb />A few more of over 200 artists
             </div>
             <div facs="#eSc_textblock_a2bbf779">
-                <lb /><persName>Giesking</persName>
-                <lb /><persName>Casella</persName>
-                <lb /><persName>Gabrilowitsch</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/119362112">Casella</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/116327642">Gabrilowitsch</persName>
                 <lb /><persName corresp="https://d-nb.info/gnd/116713178">Saar</persName>
-                <lb /><persName>d'Albert</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>
                 <lb /><persName>Boyle</persName>
-                <lb /><persName>Carreno</persName>
-                <lb /><persName>Lhevinne</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>
                 <lb /><persName>Conradi</persName>
-                <lb /><persName>Debussy</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/118524186">Debussy</persName>
             </div>
             <div facs="#eSc_textblock_a5e73e7d">
                 <lb /><persName>La Forge</persName>
                 <lb /><persName corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>
                 <lb /><persName>Dohnanyi</persName>
-                <lb /><persName>Ganz</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/119281953">Ganz</persName>
                 <lb /><persName>Saint-Saens</persName>
-                <lb /><persName>Grieg</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/118697641">Grieg</persName>
                 <lb /><persName>Humperdinck</persName>
-                <lb /><persName>Leschetizky</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/120890143">Leschetizky</persName>
                 <lb /><persName>Samaroff</persName>
-                <lb /><persName>Scharwenka</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/117110450">Scharwenka</persName>
             </div>
             <div facs="#eSc_textblock_b0a4f1b7">
                 <lb />Novaes
@@ -271,10 +277,11 @@
                 </seg>the playing of
                 <lb />such artists
             </seg>
-            as <persName>De Pachmann</persName>,</div>
+            as <persName corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName>,
+        </div>
         <div facs="#eSc_textblock_357a12a6">
             <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-            <persName>Hofmann</persName>,
+            <persName corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
             <persNam corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>,
             <persName corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName> and
             <persName>Ca-<lb />sella</persName>, possible through

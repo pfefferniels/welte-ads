@@ -161,6 +161,37 @@
               </msIdentifier>
             </msDesc>
          </sourceDesc>
+         <sourceDesc>
+            <bibl>The superiority of any reproducing piano</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">The superiority of any reproducing piano</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>Good Housekeeping</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">Good Housekeeping</title>
+                  <biblScope unit="issue">October 1926</biblScope>
+                  <biblScope unit="pages">195</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>University of Michigan</repository>
+                <idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015024045372&seq=753</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
       </fileDesc>
         <profileDesc>
            <langUsage>
@@ -220,10 +251,10 @@
             <lb/>your home
         </seg> flawless interpretations by
         <lb/>the great geniuses of the pianoforte:
-        <persName>De<lb/>Pachmann</persName>,
+        <persName corresp="https://d-nb.info/gnd/116014490">De<lb/>Pachmann</persName>,
         <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-        <persName>Gieseking</persName>,
-        <persName>Casella</persName>
+        <persName corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>,
+        <persName corresp="https://d-nb.info/gnd/119362112">Casella</persName>
       </div>
       <div facs="#eSc_textblock_3e3a75c6">
          <lb/>

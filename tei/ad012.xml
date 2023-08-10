@@ -57,11 +57,52 @@
                  </publicationStmt>
                  <seriesStmt>
                     <title level="j" type="main">The Sun and New York Herald</title>
-                    <biblScope unit="issue">May 07 1920</biblScope>
+                    <biblScope unit="issue">May 7, 1920</biblScope>
                     <biblScope unit="pages">5</biblScope>
                  </seriesStmt>
               </biblFull>
+              <msDesc>
+               <msIdentifier>
+                 <repository>Library of Congress</repository>
+                 <idno>
+                   <idno type="URLImages">https://chroniclingamerica.loc.gov/lccn/sn83030273/1920-05-07/ed-1/seq-5</idno>
+                 </idno>
+               </msIdentifier>
+             </msDesc>
            </sourceDesc>
+           <sourceDesc>
+            <bibl>A really satisfactory way to buy musical instruments</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">
+                      A really satisfactory way to buy musical instruments
+                  </title>
+                  <author>
+                     <orgName>The Welte-Mignon Studios</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>New York Tribune</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1920</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">New York Tribune</title>
+                  <biblScope unit="issue">May 7, 1920</biblScope>
+                  <biblScope unit="pages">12</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+               <msIdentifier>
+                 <repository>Library of Congress</repository>
+                 <idno>
+                   <idno type="URLImages">https://chroniclingamerica.loc.gov/lccn/sn83030214/1920-05-07/ed-1/seq-12</idno>
+                 </idno>
+               </msIdentifier>
+             </msDesc>
+         </sourceDesc>
         </fileDesc>
         <profileDesc>
            <langUsage>
