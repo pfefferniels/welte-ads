@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Ad in "Country Life"</title>
+                <title type="sub">December 1919/February 1920</title>
+                <author>
+                    <orgName key="m.welte.sons">
+                        M. Welte &amp; Sons, Inc.
+                    </orgName>
+                </author>
+                <respStmt>
+                    <persName xml:id="#np">
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <persName>
+                        <persName>
+                            <surname>Pfeffer</surname>
+                            <forename>Niels</forename>
+                        </persName>
+                    </persName>
+                </publisher>
+                <pubPlace>Tübingen</pubPlace>
+                <date>2023</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <p>
+                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            License
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>World Famous Welte-Mignon</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">
+                            World Famous Welte-Mignon
+                        </title>
+                        <author>
+                            <orgName>M. Welte &amp; Sons</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Country Life</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                        <date type="publication">1919</date>
+                        <date type="publication">1920</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Country Life</title>
+                        <biblScope unit="issue">December 1919</biblScope>
+                        <biblScope unit="issue">February 1920</biblScope>
+                        <biblScope unit="pages">110</biblScope>
+                    </seriesStmt>
+                </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>University of California</repository>
+                        <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.c0000102566&seq=190</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="eng">English</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="world-famous-welte.png" width="715" height="987" />
+            <zone points="541,162 545,247 506,269 322,269 318,188 320,164 328,160"
+                id="eSc_textblock_562dfbcc" />
+            <zone points="625,576 625,576 625,576" id="eSc_textblock_4271fc05" />
+            <zone points="227,4 225,23 208,12 209,0" id="eSc_textblock_8517a050" />
+            <zone
+                points="115,638 104,626 102,416 109,409 103,396 107,372 118,348 136,342 608,339 608,593 466,593 466,638"
+                id="eSc_textblock_d9bf3380" />
+            <zone
+                points="474,644 510,651 530,679 487,696 466,718 425,725 407,740 302,740 289,721 245,718 199,692 188,658 175,653 188,648 186,643 473,643"
+                id="eSc_textblock_be4de09e" />
+            <zone points="108,127 108,320 264,320 264,127" id="eSc_textblock_603bc38e" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_562dfbcc">
+            <p>
+                <hi rendition="#i">
+                    <lb />No living pianist has done more
+                    <lb />to engender a love for music among
+                    <lb />American people than
+                    <persName corresp="https://d-nb.info/gnd/11918625X">
+                        Josef Hof-
+                        <lb />mann
+                    </persName>, whose art at the zenith of
+                    <lb />his great career has been pre-
+                    <lb />served by the Welte-Mignon.
+                </hi>
+            </p>
+        </div>
+        <div facs="#eSc_textblock_4271fc05">
+            <lb />
+            <hi rendition="#larger">World Famous Welte-Mignon</hi>
+
+            <p>
+                <seg ana="#technical_invention" resp="#np" type="topic">
+                    <lb />
+                    <hi rendition="#in">T</hi>he highest achievement of the House
+                    <lb />of Welte in the world of music in-
+                    <lb />vention
+                </seg>
+                <seg ana="#immortality" resp="#np" type="topic">
+                    whereby generations yet unborn may
+                    <lb />listen to
+                </seg>
+                <seg ana="#exact_reproduction" resp="#np" type="topic">
+                    accurate and authentic interpreta-
+                    <lb />tions upon the piano,
+                </seg>
+                of over five thousand
+                <lb />musical compositions, as played by more than
+                <lb />one hundred and fifty of the most distinguished
+                <lb />pianists of the past two decades.
+            </p>
+
+            <lb />M. Welte &amp; Sons, Inc.
+            <lb />Six Sixty Seven Fifth Ave.
+            <lb />New York
+        </div>
+        <div facs="#eSc_textblock_8517a050" />
+        <div facs="#eSc_textblock_d9bf3380" />
+        <div facs="#eSc_textblock_be4de09e" />
+        <div facs="#eSc_textblock_603bc38e" type="illustration">
+            <figure>
+                <desc resp="#np">
+                    Portrait of Hofmann
+                </desc>
+            </figure>
+        </div>
+    </text>
+</TEI>

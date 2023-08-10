@@ -37,6 +37,8 @@ export const names = {
     "https://d-nb.info/gnd/117223794": "Stavenhagen, Bernhard",
     "welte.studios": "Welte Mignon Studios",
     "m.welte": "M. Welte & Söhne",
+    "m.welte.sons": "M. Welte & Sons, Inc.",
+    "welte.mignon.autograph": "Welte-Mignon Autograph Piano Co.",
     "steinway": "Steinway & Sons",
     "a.schmid": "Alfred Schmid Nachf.",
     "birkel": "Geo J. Birkel Company",

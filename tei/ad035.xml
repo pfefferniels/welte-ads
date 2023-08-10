@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Ad in "Arts &amp; Decoration"</title>
+                <title type="sub">April 1912</title>
+                <author>
+                    <orgName key="welte.mignon.autograph">
+                        Welte-Mignon Autograph Piano Co.
+                    </orgName>
+                </author>
+                <respStmt>
+                    <persName xml:id="#np">
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <persName>
+                        <persName>
+                            <surname>Pfeffer</surname>
+                            <forename>Niels</forename>
+                        </persName>
+                    </persName>
+                </publisher>
+                <pubPlace>Tübingen</pubPlace>
+                <date>2023</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <p>
+                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            License
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>The Welte-Mignon Autograph Piano Is the Living Soul of the Artist</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">
+                            The Welte-Mignon Autograph Piano Is the Living Soul of the Artist
+                        </title>
+                        <author>
+                            <orgName>Welte-Mignon Autograph Piano Co.</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Arts &amp; Decoration</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                        <date type="publication">1912</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Arts &amp; Decoration</title>
+                        <biblScope unit="issue">April 1912</biblScope>
+                        <biblScope unit="pages">237</biblScope>
+                    </seriesStmt>
+                </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>University of Michigan</repository>
+                        <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015006326154&seq=259</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="eng">English</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="mdp.39015006326154-seq_259.tif" width="2379" height="3329" />
+            <zone
+                points="1757,244 1811,281 1811,378 1739,378 1739,592 1811,592 1811,685 1809,686 591,693 569,236 634,207"
+                id="eSc_textblock_5574baf5" />
+            <zone
+                points="2171,1708 2157,2165 1951,2217 1912,2300 1936,2345 2171,2374 2164,2624 1663,2676 1513,2729 1764,2759 1801,2781 1827,2847 564,2847 577,2838 554,2781 599,2759 532,2750 553,2727 229,2713 229,2441 323,2426 384,2330 456,2322 473,2234 434,2165 229,2136 221,1790 353,1768 399,1679 1474,1671"
+                id="eSc_textblock_674c2b38" />
+            <zone
+                points="2142,2885 2164,2986 1936,3046 1890,3149 503,3149 473,3127 480,3040 442,3009 251,2994 229,2964 251,2877 396,2866 396,2885 2141,2885"
+                id="eSc_textblock_86c963f8" />
+            <zone points="250,217 250,735 595,735 595,217" id="eSc_textblock_82fe31e2" />
+            <zone points="1781,198 1781,716 2190,716 2190,198"
+                id="eSc_textblock_4384fb1b" />
+            <zone points="242,926 242,1429 633,1429 633,926" id="eSc_textblock_2d107f1c" />
+            <zone points="1766,919 1766,1414 2148,1414 2152,919"
+                id="eSc_textblock_734283b7" />
+            <zone points="1735,3210 1778,3215 615,3215 832,3210"
+                id="eSc_textblock_e5c888ad" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_5574baf5">
+            <lb />The Welte-Mignon
+            <lb />Auograph Piano
+            <lb />Is the
+            <seg ana="#soulfulness" resp="#np" type="topic">
+                Living Soul of the Artist
+            </seg>
+        </div>
+        <div facs="#eSc_textblock_674c2b38">
+            <lb />It has the living touch which differentiates the Welte-Mignon
+            <lb />from every other piano playing device in the world.
+            <lb />
+            <seg ana="#exact_reproduction" type="topic" resp="#np">
+                So accurately does the Welte reproduce each note-each delicate
+                <lb />shade of contrast-and the individuality of the player, that famous critics
+                <lb />declare it impossible to believe that the artist is not actually playing.
+            </seg>
+            <lb /><persName>Walter Damrosch</persName> says:
+            <quote>
+                "The Welte is without a doubt
+                <lb />the
+                <seg ana="#technical_invention" resp="#np" type="topic">
+                    most remarkable musical invention of our age.
+                </seg>"
+            </quote>
+            <lb />To know the Welte-Mignon Autograph Piano you must hear
+            <lb />its reproductions of the actual playing of such artists as
+            <persName corresp="https://d-nb.info/gnd/118986724">
+                Ignace J.
+                <lb />Paderewski,
+            </persName>
+            <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann,</persName>
+            <persName>Teresa Carreno</persName>
+            <persName corresp="https://d-nb.info/gnd/116014490">Vladimir de Pach-<lb />mann</persName>
+            <persName>Fannie Bloomfield-Zeisler</persName>
+            and others.
+            <lb />Demostrations daily at our studio
+            <lb />The <orgName>Welte-Mignon Autograph Piano Co.</orgName>
+            <lb /><address>273 Fifth Avenue</address>, Opposite the Holland House
+            <lb />Steinway Piano Incorporated in the Welte-Mignon
+        </div>
+        <div facs="#eSc_textblock_86c963f8" />
+        <div facs="#eSc_textblock_82fe31e2" type="illustration" />
+        <div facs="#eSc_textblock_4384fb1b" type="illustration" />
+        <div facs="#eSc_textblock_2d107f1c" type="illustration" />
+        <div facs="#eSc_textblock_734283b7" type="illustration" />
+        <div facs="#eSc_textblock_e5c888ad" />
+    </text>
+</TEI>

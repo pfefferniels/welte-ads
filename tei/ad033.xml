@@ -262,7 +262,15 @@
         <pb />
 
         <div facs="#eSc_textblock_fd6fe9ba" type="illustration">
-            <lb />Welte's Dream of Living Music -- A Reality</div>
+            <figure>
+                <desc resp="#np">
+                    A woman and a man sitting, listening to
+                    a Welte Grand.
+                </desc>
+            </figure>
+            <p>
+                <lb />Welte's Dream of Living Music -- A Reality</div>
+            </p>
         <div facs="#eSc_textblock_afba7f08">
             <lb />It was only natural that the artistic develop-
             <lb />ment of Welte Orchestrions and Philhar-
@@ -341,11 +349,11 @@
             <lb />musicians to inscribe their matchless art on
             <lb />the imperishable pages of Welte-Mignon's*
             <lb />ever-growing library of music.
-            <persName>
+            <persName corresp="https://d-nb.info/gnd/116014490">
                 De Pach-
                 <lb />mann
             </persName>,
-            <persName>Paderewski</persName>,
+            <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
             <persName>Bloomfield-Zeisler</persName>,
             <lb /><persName>Levy</persName>,
             <persName>Singer</persName>,
@@ -374,7 +382,17 @@
         <pb />
 
         <div facs="#eSc_textblock_36a1467b" type="illustration">
-            <lb />phantom hands of the Masters on your keyboard</div>
+            <seg ana="#phantom_body" resp="#np" type="topic">
+                <figure>
+                    <desc resp="#np">
+                        Semi-transparent pianist sitting at an opened
+                        Welte Grand.
+                    </desc>
+                <p>
+                    <lb />phantom hands of the Masters on your keyboard
+                </p>
+            </seg>
+        </div>
         <div facs="#eSc_textblock_10ec60b1">
             <seg ana="#phantom_body" resp="#np" type="topic">
                 <lb />Welte Mignon Puts the Phantom-
@@ -448,7 +466,13 @@
             <lb />Licensee
             <lb />The Master's Fingers on your piano.
         </div>
-        <div facs="#eSc_textblock_ea26bdd7" type="illustration" />
+        <div facs="#eSc_textblock_ea26bdd7" type="illustration">
+            <figure>
+                <desc resp="#np">
+                    Portraits of pianists.
+                </desc>
+            </figure>
+        </div>
         <div facs="#eSc_textblock_f3b7a1f1" />
         <div facs="#eSc_textblock_a3cd0458" />
     </text>
