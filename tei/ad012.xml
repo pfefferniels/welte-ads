@@ -178,7 +178,7 @@
             and fifty-six musicians have recorded more
             <lb />than five thousand selections for the <orgName corresp="welte.studios">Welte-Mignon</orgName>. Imagine
             <lb />the delight to be derived from such a collection.
-            <seg ana="#affordability">
+            <seg ana="#affordability" resp="#np" type="topic">
                 And consider
                 <lb />that the Welte-Mignon Reproducing Piano is within
                 <lb />everyone's means, for it may be

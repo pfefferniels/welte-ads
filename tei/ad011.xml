@@ -149,7 +149,8 @@
             <lb />
             <hi rendition="#c">
                 Write for catalog.
-                <lb />Convenient Terms
+                <lb />
+                <seg ana="#affordability" resp="#np" type="topic">Convenient Terms</seg>
 
                 <app>
                   <rdg source="#A">

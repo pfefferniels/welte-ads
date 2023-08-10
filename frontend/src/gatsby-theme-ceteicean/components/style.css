@@ -61,6 +61,25 @@ tei-sourcedesc::before {
     content: 'Source Description'
 }
 
+tei-pb::before {
+    display: block;
+    content: '[page break]';
+    color: gray;
+    font-size: 0.8rem;
+    background-color: white;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -15px;
+    padding: 0.2rem;
+}
+
+tei-pb {
+    text-align: center;
+    display: block;
+    border-bottom: 1px dashed black;
+}
+
 tei-sourcedesc tei-biblfull>tei-publicationstmt {
     display: none;
 }
@@ -113,89 +132,89 @@ tei-text {
     line-height: 1.5rem;
 }
 
-tei-hi[rendition="#b"] {
+.b {
     font-weight: bold;
 }
 
-tei-hi[rendition="#c"] {
+.c {
     display: block;
     text-align: center;
 }
 
-tei-hi[rendition="#et"] {
+.et {
     display: block;
     margin-left: 2em;
     text-indent: 0;
 }
 
-tei-hi[rendition="#f"] {
+.f {
     border: 1px dotted silver;
 }
 
-tei-hi[rendition="#fr"] {
+.fr {
     border: 1px dotted silver;
 }
 
-tei-hi[rendition="#g"] {
+.g {
     letter-spacing: 0.125em;
 }
 
-tei-hi[rendition="#i"] {
+.i {
     font-style: italic;
 }
 
-tei-hi[rendition="#in"] {
+.in {
     font-size: 150%;
 }
 
-tei-hi[rendition="#k"] {
+.k {
     font-variant: small-caps;
 }
 
-tei-hi[rendition="#right"] {
+.right {
     display: block;
     text-align: right;
 }
 
-tei-hi[rendition="#sub"] {
+.sub {
     vertical-align: sub;
     font-size: .7em;
 }
 
-tei-hi[rendition="#sup"] {
+.sup {
     vertical-align: super;
     font-size: .7em;
 }
 
-tei-hi[rendition="#u"] {
+.u {
     text-decoration: underline;
 }
 
-tei-hi[rendition="#uu"] {
+.uu {
     border-bottom: double 3px #000;
 }
 
-tei-hi[rendition="#s"] {
+.s {
     text-decoration: line-through;
 }
 
-tei-hi[rendition="#et2"] {
+.et2 {
     display: block;
     margin-left: 4em;
     text-indent: 0;
 }
 
-tei-hi[rendition="#et3"] {
+.et3 {
     display: block;
     margin-left: 6em;
     text-indent: 0;
 }
 
-tei-hi[rendition="#smaller"] {
+.smaller {
     font-size: smaller;
 }
 
-tei-hi[rendition="#larger"] {
+.larger {
     font-size: larger;
 }
 

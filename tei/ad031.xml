@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "New York Times"</title>
+              <title type="sub">November 14, 16, 23 and 28, 1913</title>
+              <author>
+                 <orgName key="m.welte">
+                    M. Welte &amp; Söhne
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="#np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <sourceDesc>
+              <bibl>M. Welte &amp; Söhne take pleasure in announcing</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">M. Welte &amp; Söhne take pleasure in announcing</title>
+                    <author>
+                       <orgName>M. Welte &amp; Söhne</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>The New York Times</orgName>
+                    </publisher>
+                    <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                    <date type="publication">1913</date>
+                    <date type="publication">1913</date>
+                    <date type="publication">1913</date>
+                    <date type="publication">1913</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">The New York Times</title>
+                    <biblScope unit="issue">November 1913</biblScope>
+                    <biblScope unit="pages">multiple</biblScope>
+                 </seriesStmt>
+              </biblFull>
+              <msDesc>
+                <msIdentifier>
+                  <repository>archive.org</repository>
+                  <idno>
+                    <idno type="URLImages">https://archive.org/details/sim_new-york-times_1913-11-14_62_20383/page/n2/mode/1up</idno>
+                    <idno type="URLImages">https://archive.org/details/sim_new-york-times_1913-11-16_62_20385</idno>
+                  </idno>
+                </msIdentifier>
+              </msDesc>
+           </sourceDesc>
+      </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="nyt-1913.png" width="750" height="1048" />
+            <zone points="34,103 34,968 721,968 721,103" id="eSc_textblock_32cfe758" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_32cfe758">
+            <hi rendition="#c #k">
+                <lb />M. Welte &amp; Söhne
+                <lb />Freiburg, Baden
+                <lb />Take pleasure in announcing that
+                <lb />the greatest living pianists
+                <lb /><persName corresp="https://d-nb.info/gnd/118986724">Ignace J. Paderewski</persName>
+                <space dim="horizontal" />
+                <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>
+                <lb /><persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreño</persName>
+                <lb />And the world renowned organists
+    
+                <lb />Enrico Bossi
+                <lb />of Milan, Italy
+                
+                <lb />Edwin Lemare
+                <lb />of London, England
+    
+                <lb />Josef Bonnet
+                <lb />of Paris, France
+                
+                <lb />Samuel A. Baldwin
+                <lb />of New York City
+                
+                <lb />Clarence E. Eddy
+                <lb />of Chicago
+                
+                <lb />and others
+                <lb />can be heard at their
+                <lb />American Studio <address>273 Fifth Avenue, New York</address>
+                <lb />through the medium of the
+                <lb />Welte-Mignon Autograph Pianos
+                <lb />and
+                <lb />Welte-Philharmonic
+                <lb />Autograph Organs
+                <lb />These reproduction instruments are shown in the most
+                <lb />artistic styles, and form a
+                <seg ana="#home" resp="#np" type="topic">
+                    desirable addition
+                    <lb />to every home of culture and refinement
+                </seg>
+            </hi>
+        </div>
+    </text>
+</TEI>

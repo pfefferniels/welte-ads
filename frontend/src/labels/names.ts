@@ -42,5 +42,6 @@ export const names = {
     "birkel": "Geo J. Birkel Company",
     "hardman": "Hardman, Pack & Co.",
     "auto.pneumatic.action": "Auto Pneumatic Action Co.",
-    "welte.mignon.corp": "Welte Mignon Corporation"
+    "welte.mignon.corp": "Welte Mignon Corporation",
+    "ef.droop": "E. F. Droop & Sons"
 } as { [index: string]: string }

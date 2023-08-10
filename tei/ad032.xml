@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Ad in "Sunday Star"</title>
+                <title type="sub">November 23, 1924</title>
+                <author>
+                    <orgName key="ef.droop">
+                        E. F. Droop &amp; Sons
+                    </orgName>
+                </author>
+                <respStmt>
+                    <persName xml:id="#np">
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <persName>
+                        <persName>
+                            <surname>Pfeffer</surname>
+                            <forename>Niels</forename>
+                        </persName>
+                    </persName>
+                </publisher>
+                <pubPlace>Tübingen</pubPlace>
+                <date>2023</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <p>
+                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            License
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>The Original Welte-Built Welte-Mignon Reperforming Grand Piano</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">
+                            The Original Welte-Built Welte-Mignon Reperforming Grand Piano
+                        </title>
+                        <author>
+                            <orgName>E. F. Droop &amp; Sons</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>The Sunday Star</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/4140963">Washington D.C.</pubPlace>
+                        <date type="publication">1924</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">The Sunday Star</title>
+                        <biblScope unit="issue">November 23, 1924</biblScope>
+                        <biblScope unit="pages">20</biblScope>
+                    </seriesStmt>
+                </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>Library of Congress</repository>
+                        <idno type="URLImages">https://chroniclingamerica.loc.gov/lccn/sn83045462/1924-11-23/ed-1/seq-20</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="eng">English</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="ef-droop.png" width="786" height="1279" />
+            <zone points="293,35 293,348 750,348 750,35" id="eSc_textblock_ecd65fb1" />
+            <zone points="296,373 296,352 57,352 57,373" id="eSc_textblock_6cbc3d51" />
+            <zone
+                points="729,406 700,493 680,510 635,511 680,517 697,542 695,715 629,744 689,756 692,854 590,880 587,882 264,882 260,880 164,869 150,857 147,792 76,769 73,446 39,428 36,395 40,386 707,386"
+                id="eSc_textblock_9aa8d87e" />
+            <zone
+                points="587,912 726,929 731,974 709,1003 709,1019 731,1107 561,1147 481,1153 224,1147 178,1116 42,1110 36,1094 59,1022 51,965 59,912 114,910 584,910"
+                id="eSc_textblock_634ec641" />
+            <zone
+                points="717,1182 731,1190 734,1232 723,1244 606,1249 56,1244 36,1235 36,1199 51,1185 472,1170"
+                id="eSc_textblock_7218a8b1" />
+            <zone points="35,36 35,358 300,358 300,36" id="eSc_textblock_3cda1b14" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_3cda1b14" type="illustration">
+            <figure>
+                <desc resp="#np">
+                    A Welte Grand.
+                </desc>
+            </figure>
+        </div>
+
+        <div facs="#eSc_textblock_ecd65fb1">
+            <hi rendition="#right">
+                <lb />The Original Welte-Built
+                <hi rendition="#larger">
+                    <lb />Welte-Mignon
+                </hi>
+                <lb />Reperforming Grand Piano
+            </hi>
+
+            <p>
+                <lb />The original instrument which astonished the
+                <lb />musical world, and for which scores and scores
+                <lb />of famous pianists and composers have played
+                <lb />their supreme efforts.
+            </p>
+        </div>
+
+        <div facs="#eSc_textblock_6cbc3d51">
+            <hi rendition="#k">
+                <lb />In Mahagony
+                <measure commodity="wm-grand" unit="dollar" quantity="2575">
+                    $2,575
+                </measure>
+            </hi>
+        </div>
+
+        <div facs="#eSc_textblock_9aa8d87e">
+            <hi rendition="#b #i">
+                <lb /><persName>Mrs. Mary Roberts Rinehart</persName>––
+            </hi>
+            
+            
+            <hi rendition="#k">
+                <lb />our distinguished novelist and a lover of the best in
+                <lb />music, has written the foreword to the newly pub-
+                <lb />lished Welte-Mignon Catalog, which is a little classic
+                <lb />and which we will gladly send you.
+                <lb />We quote the following:
+            </hi>
+
+            <lb />
+            <quote>
+                "Some ten years or so ago a friend took me into her house and showed
+                me
+                <lb />the first Welte-Mignon I had ever heard. * * * Since then the strangeness
+                <lb />has gone away from such an experience. The marvel of yesterday is the com-
+                <lb />monplace of today. But there will never be anything commonplace about hav-
+                <lb />ing <persName corresp="https://d-nb.info/gnd/118697641">Grieg</persName>
+                himself sit down at your piano,
+                <seg ana="#atmosphere" resp="#np" type="topic">
+                    in the twilight with the lamps low
+                    <lb />and the fire burning
+                </seg>, and see the keys go down under the pressure of those
+                <lb />artistic fingers, and
+                <seg ana="#listening" resp="#np" type="topic">
+                    listening. Just listening to him.
+                </seg>
+                <seg ana="#virtual_presence" resp="#np" type="topic">
+                    Here he had lifted his
+                    <lb />hands; there he had held that long-sustained note – could I not see him holding
+                    <lb />it? He was sitting there playing. Here he was gentle, a little sad. Here again
+                    <lb />he had roused himself into a passion; his heart swelled.
+                </seg> He was saying with<lb />music those things which one does
+                not say with words-
+            </quote>
+
+            <hi rendition="#k">
+                <lb />And to think
+                <lb />that
+                <seg ana="#home" type="topic" resp="#np">
+                    you can have the most distinguished pian-
+                    <lb />ists do this same thing in your home – with the
+                    <lb />Welte-Mignon!
+                </seg>
+                <lb />You are cordially invited to a demonstration
+                <lb />at any time.
+            </hi>
+
+            <hi rendition="#smaller">
+                <lb />Welte-Mignon Grands Priced
+            </hi>
+            from <measure commodity="wm-grand" unit="dollar" quantity="1695">$ 1,695</measure> Up
+        </div>
+
+        <div facs="#eSc_textblock_634ec641">
+            <lb />And other
+            <lb />Steinway
+            <lb />High-Grade
+            <lb />Pianos
+            <lb />Player
+            Pianos-Victrolas-Records
+            <lb />Player Piano Rolls, Music, Musical Instruments
+            <lb />Guaranteed New Upright Pianos, $ 325 Grands, $635 Player Pianos, $559
+            <lb />
+            <seg ana="#affordability" resp="#np" type="topic">
+                Accommodating Terms of Payment.
+            </seg>
+        </div>
+
+        <div facs="#eSc_textblock_7218a8b1">
+            <lb />E. F. Droop &amp; Sons Co., 1300 G
+        </div>
+    </text>
+</TEI>

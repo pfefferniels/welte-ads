@@ -157,10 +157,12 @@
             and on exceptional terms.</div>
         <div facs="#eSc_textblock_2cbb468e">
             <lb />If <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
-            played to you, on your own piano, ex-<lb />actly as he played at the very zenith of his
-            career when<lb />those marvelous fingers performed miracles, you could<lb />count it a
-            great event in your life. This is what the<lb />WELTE MIGNON Reproducing Piano will do
-            for you.<lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
+            played to you, on your own piano, ex-
+            <lb />actly as he played at the very zenith of his career when
+            <lb />those marvelous fingers performed miracles, you could
+            <lb />count it a great event in your life. This is what the
+            <lb />WELTE MIGNON Reproducing Piano will do for you.
+            <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
             <seg ana="#soulfulness" type="topic" resp="#np">played his soul into the Welte</seg>,
             <seg ana="#immortality" type="topic" resp="#np">knowing<lb />full well that thus could he better pass on
             to coming gen-<lb />erations the perfect expression of his genius</seg>. It is the
@@ -191,9 +193,14 @@
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 absolute tonal duplication.
             </seg>
-            <lb />There are over 5,000 record-rolls in the Welte repertoire. Come<lb />in
-            to-day and hear your favorites. And bear in mind that the Welte<lb />is within your
-            means, for it is sold on terms–your own within reason.</div>
+            <lb />There are over 5,000 record-rolls in the Welte repertoire. Come
+            <lb />in to-day and hear your favorites.
+            <seg ana="#affordability" resp="#np" type="topic">
+                And bear in mind that the Welte
+                <lb />is within your means, for it is sold on
+                terms–your own within reason.
+            </seg>
+        </div>
         <div facs="#eSc_textblock_80803b8a">
             <lb />Our stock includes many examples of fine standard<lb />makes–
             <orgName>Welte</orgName>, <orgName>Estey</orgName>, <orgName>Conway</orgName>,
