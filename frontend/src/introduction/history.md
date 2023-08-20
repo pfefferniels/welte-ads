@@ -12,8 +12,20 @@ same year,[^1] not only to increase the sales of Welte-Mignon equipped
 pianos, but also to "acquaint the general public with exactly what 
 the reproducing piano is and how it differs from the regular foot-pumped
 player piano".[^2] The "Frank Seaman Inc." was chosen as a advertising agency.
-These ads were published in color in a set of magazines known as
-"The Quality Group".[^4] The textes were written by Harriette Segall. The
+These ads were published in color in a different magazines: in the *Saturday 
+Evening Post*, the "Quality Group"[^4] of magazines as well as *House and Garden*
+and *Vogue*.[^12] The company proudly announces –
+
+> "Never before have reproducing
+> pianos been advertised in so impressive a manner. Never before has the public
+> been told as clearly what a reproducing piano is and what it does." 
+
+– and directed towards sellers:
+
+> "This attention-compelling advertising will help you sell your Welte-Mignon
+> equipped Reproducing Piano.[^13]
+
+The textes were written by Harriette Segall. The
 Frank Seaman Inc. displayed two of the paintings of De Feo (Welanetz Co.)
 for the Welte Mignon in an Exhibition of the *Art Director's Club*.[^11]
 Considerable efforts have been made to emphasize the artistic
@@ -73,7 +85,10 @@ Albert Whitham, superintendent of the factory of the
 Welte Mignon Corporation, changed to the Austin Organ Company.[^7] 
 
 [^1]: In: *The Music Trades*, January 20, 1923 and on the same day also
-      in *Presto*.
+      in *Presto*. On March 17th the launch of the advertising
+      campaign is reported in *The Music Trades*, March 17th, p. 32.
+[^12]: Cf. *The Music Trades*, March 17th, p. 30.
+[^13]: ibd.
 [^2]: ibd.
 [^3]: *Musical Courier*, Dec. 1, 1927, p. 43.
 [^4]: Including *The Atlantic Monthly*, *The Golden Book Magazine*,
