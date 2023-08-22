@@ -23,7 +23,7 @@ export const WeighedCircles = ({ data }: TopicsCircleProps) => {
         // reset
         svgRef.current.innerHTML = ''
 
-        const width = 800, height = 800;
+        const width = 1000, height = 800;
 
         const svg = d3.select(svgRef.current)
             .attr('width', width)
@@ -73,6 +73,6 @@ export const WeighedCircles = ({ data }: TopicsCircleProps) => {
     }, [])
 
     return (
-        <svg width={600} height={600} ref={svgRef} />
+        <svg width={900} height={700} ref={svgRef} />
     )
 }

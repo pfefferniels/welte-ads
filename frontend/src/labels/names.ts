@@ -21,6 +21,8 @@ export const names = {
     "https://d-nb.info/gnd/116422319": "Hambourg, Mark",
     "https://d-nb.info/gnd/116040378": "Davies, Fanny",
     "https://d-nb.info/gnd/119281953": "Ganz, Rudolph",
+    "https://d-nb.info/gnd/116796170": "Friedheim, Arthur",
+    "https://d-nb.info/gnd/119466821": "Samaroff, Olga",
     "https://d-nb.info/gnd/117110450": "Scharwenka, Xaver",
     "https://d-nb.info/gnd/118524186": "Debussy, Claude",
     "https://d-nb.info/gnd/116308621": "Pugno, Raoul",
