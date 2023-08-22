@@ -1,0 +1,166 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Ad in "Music Trade Review"</title>
+                <title type="sub">December 6, 1919</title>
+                <author>
+                    <orgName key="m.welte.sons">
+                        M. Welte &amp; Sons, Inc.
+                    </orgName>
+                </author>
+                <respStmt>
+                    <persName xml:id="#np">
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <persName>
+                        <persName>
+                            <surname>Pfeffer</surname>
+                            <forename>Niels</forename>
+                        </persName>
+                    </persName>
+                </publisher>
+                <pubPlace>Tübingen</pubPlace>
+                <date>2023</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <p>
+                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            License
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>The Welte-Mignon Has a Faculty</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">
+                            The Welte-Mignon Has a Faculty
+                        </title>
+                        <author>
+                            <orgName>M. Welte &amp; Sons Inc.</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Music Trade Review</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                        <date type="publication">1919</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Music Trade Review</title>
+                        <biblScope unit="issue">December 6, 1919</biblScope>
+                        <biblScope unit="pages">front page</biblScope>
+                    </seriesStmt>
+                </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>International Arcade Museum Library</repository>
+                        <idno type="URLImages">https://elibrary.arcade-museum.com/magazines/mtr/MTR-1919-69-23/MTR-1919-69-23-01.pdf</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="eng">English</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="MTR-1919-69-23-01.pdf_page_1.png" width="3108" height="4388" />
+            <zone
+                points="1868,1199 2268,1218 2356,1257 2356,1391 2200,1452 2210,1538 2132,1801 2085,1803 1049,1803 1014,1801 936,1462 790,1362 817,1199"
+                id="eSc_textblock_4699b149" />
+            <zone
+                points="2356,1862 2366,2181 2288,2240 2230,2246 1769,2246 1769,3101 1775,3101 1775,3112 1044,3117 973,3156 780,3108 790,1852 1005,1846 1005,1847 2067,1847"
+                id="eSc_textblock_4402ea80" />
+            <zone points="2349,3107 2349,2279 1801,2279 1801,3107" id="eSc_textblock_eb8a51dd" />
+            <zone
+                points="2171,3198 2239,3217 2259,3332 2239,3371 1995,3381 927,3381 897,3208 951,3178"
+                id="eSc_textblock_57d5d807" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_4699b149">
+            <lb />
+            <hi rendition="#c">
+                The Welte-Mignon
+                <lb />Has a Faculty
+                <lb />of One Hundred and Fifty-Six
+                <lb />Instructors in Piano Playing
+            </hi>
+        </div>
+        <div facs="#eSc_textblock_4402ea80">
+            <seg ana="#educational_use" resp="#np" type="topic">
+                <lb />The Welte-Mignon can be likened to a college for teaching
+                <lb />the art of playing the piano.
+                <lb />This college has a faculty of one hundred fifty-six instructors-the
+                <lb />leading pianists of this generation.
+                <lb />These master pianists have interpreted over five thousand different
+                <lb />pieces of the best musical literature of all ages of which each inter-
+                <lb />pretation is an authoritative instruction in
+                <lb />the playing off that particular composition
+                <lb />-a final lesson in the art of finished piano playing.
+                <lb /> playing.
+                <lb />The Welte-Mignon is the means
+                <lb />through which this great storehouse of cor-
+                <lb />rect and artistic piano playing is given to
+                <lb />the public-the student and layman, alike.
+                <lb />All of the great musical conservatories of
+                <lb />the world, if taken together, could not com-
+                <lb />mand a faculty of such combined power
+                <lb />and genius as the faculty of piano inter-
+                <lb />pretation employed by the Welte-
+                <lb />Mignon.
+                <lb />Nor can all the combined musical schools find it within
+                <lb />their means to render the great masterpieces of musical
+                <lb />literature with such authority as can the Welte
+                <lb />Mignon.
+            </seg>
+        </div>
+        <div facs="#eSc_textblock_eb8a51dd">
+            <lb />Among Those Who Have Re-
+            <lb />corded Their Playing For
+            <lb />The Welte-Mignon are
+            <lb /><persName corresp="https://d-nb.info/gnd/118986724">I. J. Paderewski</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/118518011">Ferrucio Busoni</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/116204400">Fannie Bloomfield-Zeisler</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/116014490">Vladimir de Pachmann</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/124379923">Josef Lhévinne</persName>
+            <lb /><persName>Yolando Merö</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/11875081X">Camille Saint-Saens</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/116977108">Emil Sauer</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/118524186">Claude Debussy</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/119281953">Rudolph Ganz</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/116796170">Arthur Friedheim</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/119466821">Olga Samaroff</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/117110450">Xaver Scharwenka</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/120890143">Theodor Leschetizky</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/116422319">Mark Hambourg</persName>
+            <lb /><persName>Ernest Schelling</persName>
+            <lb /><persName corresp="https://d-nb.info/gnd/118501437">A. Eugene d'Albert</persName>
+            <lb /><persName>Myrtle Elvyn</persName>
+            <lb /><persName>Carl <sic>Frieberg</sic></persName>
+            <lb />And 132 Other Artists<lb />Of Like Eminence
+        </div>
+        <div facs="#eSc_textblock_57d5d807">
+            <lb />M. Welte &amp; Sons, Inc.
+            <lb />Six Sixty-Seven Fifth Ave., New York
+        </div>
+    </text>
+</TEI>
+  
