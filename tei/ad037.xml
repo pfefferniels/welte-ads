@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Ad in "Sport im Bild"</title>
+                <title type="sub">1921</title>
+                <author>
+                    <orgName key="m.welte">
+                        M. Welte &amp; Söhne
+                    </orgName>
+                </author>
+                <respStmt>
+                    <persName xml:id="np">
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <persName>
+                        <persName>
+                            <surname>Pfeffer</surname>
+                            <forename>Niels</forename>
+                        </persName>
+                    </persName>
+                </publisher>
+                <pubPlace>Tübingen</pubPlace>
+                <date>2023</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <p>
+                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            License
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</title>
+                        <author>
+                            <orgName>M. Welte &amp; Söhne</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Sport im Bild</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/2950159">Berlin</pubPlace>
+                        <date type="publication">1921</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Sport im Bild</title>
+                        <biblScope unit="issue">4.11.1921</biblScope>
+                        <biblScope unit="pages">1762</biblScope>
+                    </seriesStmt>
+                </biblFull>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="ger">German</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="annoshow-plus.jpg" width="2613" height="3945" />
+            <zone points="2268,368 2338,429 2321,786 438,804 420,447 429,394 499,368"
+                id="eSc_textblock_40330f98" />
+            <zone points="664,1227 690,1262 672,1382 377,1391 401,1218"
+                id="eSc_textblock_01f2d6ec" />
+            <zone points="358,1836 358,2381 1359,2381 1359,1836"
+                id="eSc_textblock_87ee5dfc" />
+            <zone points="935,1764 935,1840 1828,1840 1828,1764"
+                id="eSc_textblock_f9c21c7d" />
+            <zone points="1386,1838 1386,2381 2376,2381 2376,1838"
+                id="eSc_textblock_d6a5ecdd" />
+            <zone points="2365,1209 2374,1391 2095,1391 2086,1227 2113,1209"
+                id="eSc_textblock_1167e50c" />
+            <zone points="423,2396 423,2711 2342,2711 2342,2396"
+                id="eSc_textblock_acb77e04" />
+            <zone points="830,2963 874,2980 892,3083 839,3109 552,3109 526,3092 526,2989 561,2963"
+                id="eSc_textblock_2e01c03a" />
+            <zone
+                points="2014,3348 2075,3366 2130,3445 2303,3480 2321,3548 1630,3574 1567,3618 1201,3618 1172,3565 438,3539 447,3471 646,3454 710,3340 1050,3331"
+                id="eSc_textblock_c3c4b41d" />
+            <zone points="2242,2963 2268,2989 2260,3136 1850,3145 1850,2963 1981,2928"
+                id="eSc_textblock_00775c4e" />
+            <zone points="693,817 693,1750 2074,1750 2074,817"
+                id="eSc_textblock_243b00c3" />
+            <zone points="975,2772 975,3330 1811,3330 1804,2772"
+                id="eSc_textblock_9a0baa4d" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_40330f98">
+            <lb />Welte-Mignon
+            <lb />Reproduktions-Piano * Reproduktions-Flügel
+            <lb />Getreue Wiedergabe des Spiels berühmter KLAVIER-Virtuosen
+        </div>
+        <div facs="#eSc_textblock_01f2d6ec">
+            <lb />Welte-Mignon
+            <lb />wird eingebaut in
+            <lb />Pianos und Flügel
+            <lb />der Marken:
+        </div>
+        <div facs="#eSc_textblock_87ee5dfc">
+            <lb /><persName corresp="https://d-nb.info/gnd/118501437">Professor Eugen d'Albert</persName> schreibt:
+            <quote>
+                <lb />"Wie erstaunlich und tief ergreifend ist es, sein vor
+                <lb />Jahren aufgenommenes Spiel in größter Vollendung durch
+                <lb />"Welte-Mignon" wiedergegeben zu hören! Der Ruf der
+                <lb />"Welte-Mignon-Pianos", das Vollendetstse zu sein auf
+                <lb />diesem Gebiete, ist fest begründet in dieser
+                <seg ana="#exact_reproduction" resp="#np" type="topic">
+                    getreuen
+                    <lb />Wiedergabe des individuellen Spiels
+                </seg>, und es ist mir eine
+                <lb />künstlerische Befriedigung und eine Freude, heute dem
+                <lb />"Welte-Mignon" ein reiches vielseitiges Programm
+                <lb />anvertraut zu haben, das
+                <seg ana="#immortality" resp="#np" type="topic">
+                    meine Kunst der Nachwelt
+                    <lb />überträgt.
+                </seg>"
+            </quote>
+        </div>
+        <div facs="#eSc_textblock_f9c21c7d">
+            <lb /><persName corresp="https://d-nb.info/gnd/118501437">Professor d'Albert</persName> für "Welte-Mignon" spielend.
+        </div>
+        <div facs="#eSc_textblock_d6a5ecdd">
+            <lb /><persName corresp="https://d-nb.info/gnd/118786253">Professur Artur Nikisch</persName> schreibt:
+            <quote>
+                <lb />"Den Reproduktionsapparat "Welte-Mignon halte ich
+                <lb />für
+                <seg ana="#technical_invention" resp="#np" type="topic">
+                    eine epochemachende Erfindung.
+                </seg>
+                Die Wiedergabe
+                <lb />der von einem Künstler in den Apparat gespielten Ton-
+                <lb />stücke ist nach jeder Richtung, sowohl was das rein tech-
+                <lb />nisch-virtuose, wie auch was das musikalisch-poetische
+                <lb />Element betrifft, eine so verblüffend natürlich,
+                <seg ana="#virtual_presence" resp="#np" type="topic">
+                    daß man
+                    <lb />wirklich meint, den betr. Künstler in Person vor sich zu
+                    <lb />haben und ihn spielen zu hören.
+                </seg>
+                Der Wert der Erfindung
+                <lb />besteht demnach nicht nur in dem
+                <seg ana="#educational_use" resp="#np" type="topic">
+                    eminent pädagogischen
+                    <lb />Einfluß auf den Lernenden
+                </seg>, sondern in ganz hervorragen-
+                <lb />der Weise auch
+                <seg ana="#touch_of_a_button" resp="#np" type="topic">
+                    für denjenigen, welcher, um eine Stunde
+                    <lb />künstlerischen Genusses bequem sich zu verschaffen,
+                    <lb />irgendeinen hervorragenden Künstler "zitieren" will.
+                </seg>
+            </quote>
+        </div>
+        <div facs="#eSc_textblock_1167e50c">
+            <lb />Steinway
+            <lb />Blüthner
+            <lb />Ibach
+            <lb />Feurich
+        </div>
+        <div facs="#eSc_textblock_acb77e04">
+            <lb />Welte-
+            <lb />Philharmonie-Orgel
+        </div>
+        <div facs="#eSc_textblock_2e01c03a">
+            <seg ana="#home" type="topic" resp="#np">
+                <lb />für das
+                <lb />vornehme
+                <lb />Privat-Haus
+            </seg>
+        </div>
+        <div facs="#eSc_textblock_c3c4b41d">
+            <lb />M. Welte &amp; Söhne
+            <lb />Fabrik pneumatischer Musikwerke
+            <lb />Freiburg i. Br.
+            <lb />Gegründet 1832
+        </div>
+        <div facs="#eSc_textblock_00775c4e">
+            <lb />Individuelle
+            <lb />Spiel erster
+            <lb />Orgel-Virtuosen
+            <lb />wiedergebend
+        </div>
+        <div facs="#eSc_textblock_243b00c3" type="illustration" />
+        <div facs="#eSc_textblock_9a0baa4d" type="illustration" />
+    </text>
+</TEI>
