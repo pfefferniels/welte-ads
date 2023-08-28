@@ -93,15 +93,18 @@
         <div facs="#eSc_textblock_4699b149">
             <lb />
             <hi rendition="#c">
-                The Welte-Mignon
+                The <name type="brand">Welte-Mignon</name>
                 <lb />Has a Faculty
-                <lb />of One Hundred and Fifty-Six
+                <lb />of
+                <num type="cardinal" subtype="artist-count" value="156">
+                    One Hundred and Fifty-Six
+                </num>
                 <lb />Instructors in Piano Playing
             </hi>
         </div>
         <div facs="#eSc_textblock_4402ea80">
             <seg ana="#educational_use" resp="#np" type="topic">
-                <lb />The Welte-Mignon can be likened to a college for teaching
+                <lb />The <name type="brand">Welte-Mignon</name> can be likened to a college for teaching
                 <lb />the art of playing the piano.
                 <lb />This college has a faculty of one hundred fifty-six instructors-the
                 <lb />leading pianists of this generation.
@@ -111,7 +114,7 @@
                 <lb />the playing off that particular composition
                 <lb />-a final lesson in the art of finished piano playing.
                 <lb /> playing.
-                <lb />The Welte-Mignon is the means
+                <lb />The <name type="brand">Welte-Mignon</name> is the means
                 <lb />through which this great storehouse of cor-
                 <lb />rect and artistic piano playing is given to
                 <lb />the public-the student and layman, alike.
@@ -119,47 +122,51 @@
                 <lb />the world, if taken together, could not com-
                 <lb />mand a faculty of such combined power
                 <lb />and genius as the faculty of piano inter-
-                <lb />pretation employed by the Welte-
-                <lb />Mignon.
+                <lb />pretation employed by the <name type="brand">Welte-
+                <lb />Mignon</name>.
                 <lb />Nor can all the combined musical schools find it within
                 <lb />their means to render the great masterpieces of musical
-                <lb />literature with such authority as can the Welte
-                <lb />Mignon.
+                <lb />literature with such authority as can the <name type="brand">Welte
+                <lb />Mignon</name>.
             </seg>
         </div>
         <div facs="#eSc_textblock_eb8a51dd">
             <lb />Among Those Who Have Re-
             <lb />corded Their Playing For
-            <lb />The Welte-Mignon are
-            <lb /><persName corresp="https://d-nb.info/gnd/118986724">I. J. Paderewski</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/118518011">Ferrucio Busoni</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/116204400">Fannie Bloomfield-Zeisler</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/116014490">Vladimir de Pachmann</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/124379923">Josef Lhévinne</persName>
-            <lb /><persName>Yolando Merö</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/11875081X">Camille Saint-Saens</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/116977108">Emil Sauer</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/118524186">Claude Debussy</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/119281953">Rudolph Ganz</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/116796170">Arthur Friedheim</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/119466821">Olga Samaroff</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/117110450">Xaver Scharwenka</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/120890143">Theodor Leschetizky</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/116422319">Mark Hambourg</persName>
-            <lb /><persName>Ernest Schelling</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/118501437">A. Eugene d'Albert</persName>
-            <lb /><persName>Myrtle Elvyn</persName>
-            <lb /><persName>Carl <sic>Frieberg</sic></persName>
+            <lb />The <name type="brand">Welte-Mignon</name> are
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118986724">I. J. Paderewski</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118518011">Ferrucio Busoni</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116204400">Fannie Bloomfield-Zeisler</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116014490">Vladimir de Pachmann</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/124379923">Josef Lhévinne</persName>
+            <lb /><persName type="artist">Yolando Merö</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Camille Saint-Saens</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116977108">Emil Sauer</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118524186">Claude Debussy</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119281953">Rudolph Ganz</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116796170">Arthur Friedheim</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119466821">Olga Samaroff</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/117110450">Xaver Scharwenka</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/120890143">Theodor Leschetizky</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116422319">Mark Hambourg</persName>
+            <lb /><persName type="artist">Ernest Schelling</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">A. Eugene d'Albert</persName>
+            <lb /><persName type="artist ">Myrtle Elvyn</persName>
+            <lb /><persName type="artist">Carl <sic>Frieberg</sic></persName>
             <lb />And 132 Other Artists<lb />Of Like Eminence
         </div>
         <div facs="#eSc_textblock_57d5d807">
-            <lb />M. Welte &amp; Sons, Inc.
-            <lb />Six Sixty-Seven Fifth Ave., New York
+            <lb />
+            <orgName>M. Welte &amp; Sons, Inc.</orgName>
+            <lb />
+            <address>
+                Six Sixty-Seven Fifth Ave., New York
+            </address>
         </div>
     </text>
 </TEI>

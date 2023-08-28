@@ -64,7 +64,7 @@
                 <msDesc>
                     <msIdentifier>
                         <repository>Library of Congress</repository>
-                        <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.c038417028&seq=294</idno>
+                        <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.c038417028&amp;seq=294</idno>
                     </msIdentifier>
                 </msDesc>
             </sourceDesc>
@@ -173,11 +173,11 @@
 
         <pb />
         <div facs="#eSc_textblock_1211376e">
-            <lb />Michael Welte
+            <lb /><persName>Michael Welte</persName>
             <lb />The Clockmaker of Freiburg
         </div>
         <div facs="#eSc_textblock_e5a2870f">
-            <lb />To Michael Welte,
+            <lb />To <persName>Michael Welte</persName>,
             <lb />the chiming clock-
             <lb />maker of a dreamy
             <lb />hamlet in Germany,
@@ -197,9 +197,9 @@
             <lb />chimes play a tune.
             <lb />On the
             accuracy and novelty of his chim-
-            <lb />ing clocks, Michael Welte, in 1832, found
-            <lb />the firm of M. Welte &amp; Sons, a venerable in-
-            <lb />stitution now located at Freiburg, Germany.
+            <lb />ing clocks, <persName>Michael Welte</persName>, in 1832, found
+            <lb />the firm of <orgName>M. Welte &amp; Sons</orgName>, a venerable in-
+            <lb />stitution now located at <placeName>Freiburg, Germany</placeName>.
             <lb />The years elapsed and Welte's clocks
             <lb />chimed the passage of the hours from man-
             <lb />tles in every nook of Europe, while the firm
@@ -207,19 +207,24 @@
             <lb />continental prestige.
         </div>
         <div facs="#eSc_textblock_07d9cc5e">
-            <lb />In1849, after three years of patient toil,
-            <lb />Michael Welte brought fourth his first Orches-
+            <lb />In 1849, after three years of patient toil,
+            <lb /><persName>Michael Welte</persName> brought fourth his first Orches-
             <lb />trion, the clumsy forerunner of the marvelous
-            <lb />Philharmonic Organs of the present day. "It
-            <lb />was a wonder of mechanical perfection, con-
-            <lb />taining eleven hundred pipes, that were
-            <lb />brought to playing by thousands of small<lb />pins,
-            representing the harmonies and melo-<lb />dies of musical compositions thus 'written'<lb />on
-            three large wooden cylinders, that moved<lb />with a startling precision as had been
-            thought<lb />impossible before."
+            <lb />Philharmonic Organs of the present day.
+            <quote>
+                "It
+                <lb />was a wonder of mechanical perfection, con-
+                <lb />taining eleven hundred pipes, that were
+                <lb />brought to playing by thousands of small
+                <lb />pins, representing the harmonies and melo-
+                <lb />dies of musical compositions thus 'written'
+                <lb />on three large wooden cylinders, that moved
+                <lb />with a startling precision as had been thought
+                <lb />impossible before."
+            </quote>
             <lb />
             <seg ana="#technical_invention" resp="#np" type="topic">
-                Many years before Edison dreamed his
+                Many years before <persName>Edison</persName> dreamed his
                 <lb />thrilling dream of the phonograph the fame
                 <lb />of Welte's new invention had traveled
                 <lb />through all Europe
@@ -228,24 +233,25 @@
             <lb />mechanically operated musical instruments.
             <lb />Dukes and statesmen, musicians of low rank
             <lb />and high rank, came from afar to listen and
-            <lb />marvel at Michael Welte's astounding crea-
+            <lb />marvel at <persName>Michael Welte's</persName> astounding crea-
             <lb />tion. The firm expanded and the business of
-            <lb />M. Welte &amp; Sons attained large proportions.
+            <lb /><orgName>M. Welte &amp; Sons</orgName> attained large proportions.
             <lb />In 1865, <persName>Emil Welte</persName>, a son of the founder,
         </div>
         <div facs="#eSc_textblock_d9110567">
-            <lb />Welte's Wonder Invention</div>
+            <lb />Welte's Wonder Invention
+        </div>
         <div facs="#eSc_textblock_9e212c90">
             <lb />came to America where success was instan-
             <lb />taneous. The demand for Welte's Orches-
             <lb />trions, coming now from two hemispheres, led,
             <lb />in 1872, to the removal to Freiburg, which
             <lb />thus became the musical shrine of Europe.
-            <lb />Eight years later Michael Welte, the clock-
+            <lb />Eight years later <persName>Michael Welte</persName>, the clock-
             <lb />maker closed his eyes forever, leaving his
             <lb />sons endowed with his own inventive genius
             <seg ana="#technical_invention" resp="#np" type="topic">
-                <lb />In 1887, Emil Welte
+                <lb />In 1887, <persName>Emil Welte</persName>
                 startled the world by the
                 <lb />invention of a paper music-roll in connection
                 <lb />with a pneumatic action,
@@ -269,8 +275,9 @@
                 </desc>
             </figure>
             <p>
-                <lb />Welte's Dream of Living Music -- A Reality</div>
+                <lb />Welte's Dream of Living Music -- A Reality
             </p>
+        </div>
         <div facs="#eSc_textblock_afba7f08">
             <lb />It was only natural that the artistic develop-
             <lb />ment of Welte Orchestrions and Philhar-
@@ -280,7 +287,7 @@
             <lb />and applying to the piano a new principle
             <lb />-that of reproducing the artist's playng
             <lb />by means of an automatic instrument.
-            <lb />Thus was conceived Welte-Mignon* (pro-
+            <lb />Thus was conceived <name type="brand">Welte-Mignon</name>* (pro-
             <lb />nounce Well-tee Mee-yon) or "Little
             <lb />Welte," as it was designated to distinguish
             <lb />it from the large instruments on which
@@ -288,12 +295,12 @@
         <div facs="#eSc_textblock_d1c98342">
             <lb />the Welte reputation and business had been
             <lb />established.
-            <lb />Thus M. Welte &amp; Sons were origina-
+            <lb />Thus <orgName>M. Welte &amp; Sons</orgName> were origina-
             <lb />tors of the idea of reproducing the playing of
             <lb />pianists, and were granted the original, basic
             <lb />patents on reproducing mechanisms now em-
-            <lb />ployed in the Welte-Mignon* Reproducing
-            <lb />Action manufactured by the <orgName>Auto Pneumatic
+            <lb />ployed in the <name type="brand">Welte-Mignon* Reproducing
+            <lb />Action</name> manufactured by the <orgName>Auto Pneumatic
             <lb />Action Company</orgName>, under a license granting
             <lb />the unrestricted use of these patents in manu-
             <lb />facturing reproducing actions for the piano
@@ -304,11 +311,11 @@
         </div>
         <div facs="#eSc_textblock_38047c95">
             <seg ana="#analogy_to_photography" resp="#np" type="topic">
-                <lb />The Welte-Mignon method of recording
+                <lb />The <name type="brand">Welte-Mignon</name> method of recording
                 <lb />a player's performance is photographic.
                 <lb />Through this secret photographic process-
-                <lb />possessed only by Welte-Mignon,* available
-                <lb />only to Welte-Mignon* - the artist's play-
+                <lb />possessed only by <name type="brand">Welte-Mignon,*</name> available
+                <lb />only to <name type="brand">Welte-Mignon*</name> - the artist's play-
                 <lb />ing is actually photographed – his tempo, his
                 <lb />speaking notes, his dynamics,
                 <seg ana="#soulfulness" resp="#np" type="topic">
@@ -332,43 +339,44 @@
             that he is never called upon to edit
             <lb />or arrange the recording. Thus, editing the
             <lb />recording of a great pianist is not necessary
-            <lb />with Welte-Mignon* and only with Welte-
-            <lb />Mignon is it not necessary.
+            <lb />with <name type="brand">Welte-Mignon*</name> and only with <name type="brand">Welte-
+            <lb />Mignon</name> is it not necessary.
             <lb />Herein lies the vast difference between
-            <lb />Welte-Mignon* recordings of great pianists
+            <lb /><name type="brand">Welte-Mignon*</name> recordings of great pianists
             <lb />and those of all other reproducing mechan-
             <lb />isms.
         </div>
         <div facs="#eSc_textblock_688779c3">
-            <lb />The World's Greatest Pianists record for Welte-Mignon*</div>
+            <lb />The World's Greatest Pianists record for <name type="brand">Welte-Mignon*</name>
+        </div>
         <div facs="#eSc_textblock_cec6b76a">
             <lb />Many musicians and masters whose names
             <lb />gleam like stars in the firmament of music
-            <lb />have paid glowing tribute to Welte-Mig-
-            <lb />non.* From every corner of the world come
+            <lb />have paid glowing tribute to <name type="brand">Welte-Mig-
+            <lb />non.*</name> From every corner of the world come
             <lb />musicians to inscribe their matchless art on
-            <lb />the imperishable pages of Welte-Mignon's*
+            <lb />the imperishable pages of <name type="brand">Welte-Mignon's*</name>
             <lb />ever-growing library of music.
-            <persName corresp="https://d-nb.info/gnd/116014490">
+            <persName type="artist" corresp="https://d-nb.info/gnd/116014490">
                 De Pach-
                 <lb />mann
             </persName>,
-            <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-            <persName>Bloomfield-Zeisler</persName>,
-            <lb /><persName>Levy</persName>,
-            <persName>Singer</persName>,
-            <persName>Pouishnoff</persName>,
-            <persName>Gieseking</persName>,<lb />
-            <persName>Liebling</persName>,
-            <persName>Saar</persName> and
-            <persName>Boguslawski</persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116204400">Bloomfield-Zeisler</persName>,
+            <lb /><persName type="artist">Levy</persName>,
+            <persName type="artist">Singer</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>,<lb />
+            <persName type="artist">Liebling</persName>,
+            <persName type="artist">Saar</persName> and
+            <persName type="artist">Boguslawski</persName>
             are but
-            <lb />*Licensed under original Welte-Mignon patents
+            <lb />*Licensed under original <name type="brand">Welte-Mignon</name> patents
         </div>
         <div facs="#eSc_textblock_f606c738">
             <lb />a few of the great artists whose playing you
-            <lb />may hear on Welte-Mignon.*
-            <lb />The famed Welte-Mignon* Library of in-
+            <lb />may hear on <name type="brand">Welte-Mignon.*</name>
+            <lb />The famed <name type="brand">Welte-Mignon* Library</name> of in-
             <lb />terpreted music is without a doubt the most
             <lb />comprehensive in the world of music, con-
             <lb />taining more than two thousand selections,
@@ -388,6 +396,7 @@
                         Semi-transparent pianist sitting at an opened
                         Welte Grand.
                     </desc>
+                </figure>
                 <p>
                     <lb />phantom hands of the Masters on your keyboard
                 </p>
@@ -395,11 +404,11 @@
         </div>
         <div facs="#eSc_textblock_10ec60b1">
             <seg ana="#phantom_body" resp="#np" type="topic">
-                <lb />Welte Mignon Puts the Phantom-
+                <lb /><name type="brand">Welte Mignon</name> Puts the Phantom-
                 <lb />Hands of the Masters on your keyboard
             </seg>
-            <lb />Welte-Mignon* brings you living
-            <lb />music. Welte-Mignon* makes hu-
+            <lb /><name type="brand">Welte-Mignon*</name> brings you living
+            <lb />music. <name type="brand">Welte-Mignon*</name> makes hu-
             <lb />man the mechanical reproduction of
             <lb />music.
             <seg ana="#soulfulness" resp="#np" type="topic">
@@ -418,19 +427,19 @@
                 <lb />ten!
             </seg>
             You will be amazed and con-
-            <lb />vinced because the spirit of Michael
-            <lb />Welte, thing chiming clock-maker of
-            <lb />Freiburg lives in every Welte-
-            <lb />Mignon Reproducing Action.
-            <lb />Welte Mignon*
+            <lb />vinced because the spirit of <persName>Michael
+            <lb />Welte</persName>, thing chiming clock-maker of
+            <lb /><placeName>Freiburg</placeName> lives in every <name type="brand">Welte-
+            <lb />Mignon Reproducing Action</name>.
+            <lb /><name type="brand">Welte Mignon*</name>
             <lb />The Reproducing Piano
-            <lb />With the Welte-Mignon* Re-
-            <lb />producing Piano-i.e., any piano
-            <lb />*Licensed under original Welte-Mignon patents
+            <lb />With the <name type="brand">Welte-Mignon* Re-
+            <lb />producing Piano</name>-i.e., any piano
+            <lb />*Licensed under original <name type="brand">Welte-Mignon</name> patents
         </div>
         <div facs="#eSc_textblock_e780b0b2">
-            <lb />equipped with the marvelous Welte-
-            <lb />Mignon Licensee Action - a selec-
+            <lb />equipped with the marvelous <name type="brand">Welte-
+            <lb />Mignon Licensee Action</name> - a selec-
             <lb />tion is played for you
             <seg ana="#virtual_presence" resp="#np" type="topic">
                 with all the
@@ -438,33 +447,38 @@
                 <lb />delicate shades of tone as though
                 <lb />the pianist were seated at your piano
                 <lb />in person.
-            </seg> In this respect the Welte-
-            <lb />Mignon Reproducing Piano stands
+            </seg> In this respect the <name type="brand">Welte-
+            <lb />Mignon Reproducing Piano</name> stands
             <lb />supreme. It has no peer. It is per-
             <lb />fection.
             <lb />112 reasons why you should select
             <lb />a piano equipped with the
-            <lb />Welte Mignon*
-            <lb />Reproducing Action,
-            <lb />Select a Welte-Mignon* Repro-
-            <lb />ducing Piano first of all because it
-            <lb />embodies the genius of Michael
-            <lb />Welte, and then, again, select it be-
+            <lb /><name type="brand">Welte Mignon*
+            <lb />Reproducing Action</name>,
+            <lb />Select a <name type="brand">Welte-Mignon* Repro-
+            <lb />ducing Piano</name> first of all because it
+            <lb />embodies the genius of <persName>Michael
+            <lb />Welte</persName>, and then, again, select it be-
             <lb />cause 112 of America's most promi-
             <lb />nent piano manufacturers have se-
-            <lb />lected Welte-Mignon* as the only
+            <lb />lected <name type="brand">Welte-Mignon*</name> as the only
             <lb />reproducing action for their piano.
             <lb />This fact in itself is ample testimony,
-            <lb />of the greatness of Welte-Mignon.*
+            <lb />of the greatness of <name type="brand">Welte-Mignon.*</name>
         </div>
         <div facs="#eSc_textblock_6f563b09">
-            <lb />Auto Pneumatic Action Co.
-            <lb />653 West 51s St., New York
-            <lb />W.C. Heaton, Pres.
+            <lb /><orgName>Auto Pneumatic Action Co.</orgName>
             <lb />
-            Welte-Mignon
-            <lb />Licensee
-            <lb />The Master's Fingers on your piano.
+            <address>
+                653 West 51s St., New York
+                <lb />W.C. Heaton, Pres.
+            </address>
+            <lb />
+            <name type="brand">
+                Welte-Mignon
+                <lb />Licensee
+            </name>
+            <lb /><seg type="slogan">The Master's Fingers on your piano.</seg>
         </div>
         <div facs="#eSc_textblock_ea26bdd7" type="illustration">
             <figure>

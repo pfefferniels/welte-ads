@@ -110,77 +110,100 @@
         <div facs="#eSc_dummyblock_">
             <lb />
             <head>
-                <orgName>Steinway</orgName><lb />Welte<lb />Grand
+                <name type="brand">
+                    Steinway
+                    <lb />Welte
+                    <lb />Grand
+                </name>
             </head>
-            <lb />The Welte-Mignon, which<lb />
+            <lb />The <name type="brand">Welte-Mignon</name>, which<lb />
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 reproduces absolutely the
                 <lb />Artists' original renderings
             </seg>,
-            <lb />retains its position amongst<lb />the
-            World's foremost and<lb />greatest reproducing instru-<lb />ments.<lb />The Steinway
-            Welte is<lb />made also as a self-contained<lb />upright piano. Welte cabi-<lb />nets
-            when desired can be<lb />supplied separately for at-<lb />tachment to any pianoforte.<lb />Renderings
-            by: </div>
+            <lb />retains its position amongst
+            <lb />the World's foremost and
+            <lb />greatest reproducing instru-
+            <lb />ments.
+            <lb />The <name type="brand">Steinway
+            Welte</name> is
+            <lb />made also as a self-contained
+            <lb />upright piano. Welte cabi-
+            <lb />nets when desired can be
+            <lb />supplied separately for at-
+            <lb />tachment to any pianoforte.
+            <lb />Renderings
+            by:
+        </div>
         <div facs="#eSc_textblock_6984ced5">
             <lb />
-            <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-            <persName corresp="https://d-nb.info/gnd/116014490">Pachmann</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116014490">Pachmann</persName>,
             <lb />
-            <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>,
-            <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>,
             <lb />
-            <persName corresp="https://d-nb.info/gnd/116422319">Mark Hambourg</persName>,
-            <persName corresp="https://d-nb.info/gnd/134788370">Puish-<lb />noff</persName>,
-            <persName corresp="https://d-nb.info/gnd/116040378">Fanny Davies</persName>,
-            <persName corresp="https://d-nb.info/gnd/118501437">
+            <persName type="artist" corresp="https://d-nb.info/gnd/116422319">Mark Hambourg</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/134788370">Puish-<lb />noff</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116040378">Fanny Davies</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118501437">
                 d'Al-<lb />bert
             </persName>,
-            <persName corresp="https://d-nb.info/gnd/116204400">Bloomfield-Zeisler</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116204400">Bloomfield-Zeisler</persName>,
             <lb />
-            <persName corresp="https://d-nb.info/gnd/118953915">Carreño</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreño</persName>,
             <persName>
                 Debussy
             </persName>,
             <persName>
                 Doh-<lb />nányi
             </persName>,
-            <persName corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
-            <persName corresp="https://d-nb.info/gnd/116888652">Grünfeld</persName>
-            <lb /><persName corresp="https://d-nb.info/gnd/116662166">Lamond</persName>,
-            <persName corresp="https://d-nb.info/gnd/120890143">Leschetitzky</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116888652">Grünfeld</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116662166">Lamond</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/120890143">Leschetitzky</persName>,
             <lb />
-            <perName corresp="https://d-nb.info/gnd/124379923">Lhevinne</perName>,
-            <persName corresp="https://d-nb.info/gnd/116308621">Pugno</persName>,
-            <persName corresp="https://d-nb.info/gnd/11875081X">Saint-<lb />Saens</persName>,
-            <persName corresp="https://d-nb.info/gnd/119466821">Samaroff</persName>,
-            <persName>Sapellni-<lb />koff</persName>,
-            <persName corresp="https://d-nb.info/gnd/117110450">Scharwenka</persName>,
-            <persName>Schelling</persName>,
-            <persName corresp="https://d-nb.info/gnd/11861911X">Strauss</persName>,
-            <persName>Schumann</persName>, etc.
+            <persName type="artist" corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116308621">Pugno</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-<lb />Saens</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/119466821">Samaroff</persName>,
+            <persName type="artist">Sapellni-<lb />koff</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/117110450">Scharwenka</persName>,
+            <persName type="artist">Schelling</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Strauss</persName>,
+            <persName type="artist">Schumann</persName>, etc.
         </div>
         <div facs="#eSc_textblock_9478645f">
             <lb />
             <seg type="topic" resp="#np" ana="#distinction_from_mechanical">
-                <hi rendition="#in">U</hi>ntil the Welte-Mignon
+                <hi rendition="#in">U</hi>ntil the <name type="brand">Welte-Mignon</name>
                 <lb />made its appearance all the
                 <lb />piano-playing <sic>'</sic>instruments
                 <lb />aimed at making the interpretation
                 <lb />of a piece of music mechanically
                 <lb />correct;
             </seg>
-            the Welte-Mignon<lb />caught the great masters in the act of<lb />playing,
-            and <seg ana="#immortality" resp="#np" type="topic">fixed their style for ever</seg>. 
+            the <name type="brand">Welte-Mignon</name>
+            <lb />caught the great masters in the act of
+            <lb />playing, and
+            <seg ana="#immortality" resp="#np" type="topic">fixed their style for ever</seg>. 
         </div>
         <div facs="#eSc_textblock_c6563afe">
             <lb />
             <head>
                 <orgName>Steinway &amp; Sons</orgName>
-            </head><lb />Steinway Hall<lb />15 &amp; 17, Lower Seymour Street,
-            London S.W.1<lb />Steinway &amp; Sons and their Agents make it conveniently possible for
-            music lovers to own a Steinway. Pianos<lb />of other makes takes taken in exchange.
-            Write for particulars. Branches and Agencies throughout the World </div>
+            </head>
+            <address>
+                <lb />Steinway Hall
+                <lb />15 &amp; 17, Lower Seymour Street,
+                London S.W.1
+            </address>
+            <lb /><orgName>Steinway &amp; Sons</orgName>
+            and their Agents make it conveniently possible for
+            music lovers to own a <name type="brand">Steinwa</name>. Pianos
+            <lb />of other makes takes taken in exchange. Write for particulars.
+            Branches and Agencies throughout the World
+        </div>
         <div facs="#eSc_textblock_732637de" />
     </text>
 </TEI>

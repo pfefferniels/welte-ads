@@ -63,8 +63,7 @@
                     <msIdentifier>
                         <repository>University of California</repository>
                         <idno>
-                            <idno type="URLImages">
-                                https://babel.hathitrust.org/cgi/pt?id=uc1.b000556132&seq=1232</idno>
+                            <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.b000556132&amp;seq=1232</idno>
                         </idno>
                     </msIdentifier>
                 </msDesc>
@@ -101,32 +100,41 @@
         <div facs="#eSc_textblock_2ad2cdc7">
             <lb />Valkyries thunder through the storm
             <lb />-
-            <seg ana="#phantom_body" resp="#np" type="topic">
+            <seg ana="#phantom_body" resp="#np" type="topic slogan">
                 when Phantom Fingers play
             </seg>
         </div>
         <div facs="#eSc_textblock_81452811">
-            <lb />These are the Phantom<lb />Hands of a thousand<lb />immortal pianists; their<lb />glorious
-            genius preserv-<lb />ed forever, through the<lb />miracle of Welte-<lb />Mignon*
+            <lb />These are the Phantom
+            <lb />Hands of a thousand
+            <lb />immortal pianists; their
+            <lb />glorious
+            genius preserv-
+            <lb />ed forever, through the
+            <lb />miracle of
+            <name type="brand">
+                Welte-
+                <lb />Mignon*
+            </name>
             reproduction.
         </div>
         <div facs="#eSc_textblock_9280ed63">
             <lb />Who but a
-            <persName corresp="https://d-nb.info/gnd/119466821">Samaroff</persName> can achieve
+            <persName type="artist" corresp="https://d-nb.info/gnd/119466821">Samaroff</persName> can achieve
             <lb />the crashing fortissimo with
-            <lb />which <persName>Wagner</persName>
+            <lb />which <persName type="composer">Wagner</persName>
             meant his glorious
             <lb />composition to be played? Or,
             <seg ana="#suit_every_mood" resp="#np" type="topic">
                 as
                 <lb />your mood changes
             </seg>, who but
-            <persName corresp="https://d-nb.info/gnd/116014490">de<lb />Pachmann</persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/116014490">de<lb />Pachmann</persName>
             can so entrance you
-            <lb />with Chopin's sensuous Nocturne?
+            <lb />with <persName type="composer">Chopin's</persName> sensuous Nocturne?
             <lb />True music-lovers are satisfied only
             <lb />with the world's greatest masters.
-            <lb />The Welte-Mignon* satisfies in this
+            <lb />The <name type="brand">Welte-Mignon*</name> satisfies in this
             <lb />respect as well as in the
             <seg ana="#exact_reproduction">
                 uncanny
@@ -139,7 +147,7 @@
             <lb />upon it.
             <lb />
             <seg ana="#invisibility" resp="#np" type="topic">
-                The Welte-Mignon* is invisible
+                The <name type="brand">Welte-Mignon*</name> is invisible
             </seg>
             <lb />and does not interfere with manual
             <lb />playing. It is obtainable in practi-
@@ -154,9 +162,9 @@
             <lb />51st St., New York.</address>
         </div>
         <div facs="#eSc_textblock_629a134c">
-            <lb />Welte-Mignon<lb />(Licensee)
+            <lb /><name type="brand">Welte-Mignon<lb />(Licensee)</name>
             <lb />Hear it-in comparison. There's a nearby dealer
-            <lb />*Licensed under the original Welte-Mignon patents.
+            <lb />*Licensed under the original <name type="brand">Welte-Mignon</name> patents.
         </div>
         <div facs="#eSc_textblock_6d39cd4a" type="illustration" />
         <div facs="#eSc_textblock_6b35e21e" type="illustration" />

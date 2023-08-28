@@ -66,7 +66,7 @@
                 <msDesc>
                     <msIdentifier>
                         <repository>University of California</repository>
-                        <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.c0000102566&seq=190</idno>
+                        <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.c0000102566&amp;seq=190</idno>
                     </msIdentifier>
                 </msDesc>
             </sourceDesc>
@@ -100,18 +100,18 @@
                     <lb />No living pianist has done more
                     <lb />to engender a love for music among
                     <lb />American people than
-                    <persName corresp="https://d-nb.info/gnd/11918625X">
+                    <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">
                         Josef Hof-
                         <lb />mann
                     </persName>, whose art at the zenith of
                     <lb />his great career has been pre-
-                    <lb />served by the Welte-Mignon.
+                    <lb />served by the <name type="brand">Welte-Mignon</name>.
                 </hi>
             </p>
         </div>
         <div facs="#eSc_textblock_4271fc05">
             <lb />
-            <hi rendition="#larger">World Famous Welte-Mignon</hi>
+            <hi rendition="#larger">World Famous <name type="brand">Welte-Mignon</name></hi>
 
             <p>
                 <seg ana="#technical_invention" resp="#np" type="topic">
@@ -134,9 +134,12 @@
                 <lb />pianists of the past two decades.
             </p>
 
-            <lb />M. Welte &amp; Sons, Inc.
-            <lb />Six Sixty Seven Fifth Ave.
-            <lb />New York
+            <lb /><orgName>M. Welte &amp; Sons, Inc.</orgName>
+            <lb />
+            <address>
+                Six Sixty Seven Fifth Ave.
+                <lb />New York
+            </address>
         </div>
         <div facs="#eSc_textblock_8517a050" />
         <div facs="#eSc_textblock_d9bf3380" />

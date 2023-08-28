@@ -64,7 +64,7 @@
                 <msDesc>
                     <msIdentifier>
                         <repository>University of Michigan</repository>
-                        <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015006326154&seq=259</idno>
+                        <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015006326154&amp;seq=259</idno>
                     </msIdentifier>
                 </msDesc>
             </sourceDesc>
@@ -99,15 +99,15 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_5574baf5">
-            <lb />The Welte-Mignon
-            <lb />Auograph Piano
+            <lb />The <name type="brand">Welte-Mignon
+            <lb />Auograph Piano</name>
             <lb />Is the
             <seg ana="#soulfulness" resp="#np" type="topic">
                 Living Soul of the Artist
             </seg>
         </div>
         <div facs="#eSc_textblock_674c2b38">
-            <lb />It has the living touch which differentiates the Welte-Mignon
+            <lb />It has the living touch which differentiates the <name type="brand">Welte-Mignon</name>
             <lb />from every other piano playing device in the world.
             <lb />
             <seg ana="#exact_reproduction" type="topic" resp="#np">
@@ -123,21 +123,21 @@
                     most remarkable musical invention of our age.
                 </seg>"
             </quote>
-            <lb />To know the Welte-Mignon Autograph Piano you must hear
+            <lb />To know the <name type="brand">Welte-Mignon Autograph Piano</name> you must hear
             <lb />its reproductions of the actual playing of such artists as
-            <persName corresp="https://d-nb.info/gnd/118986724">
+            <persName type="artist" corresp="https://d-nb.info/gnd/118986724">
                 Ignace J.
                 <lb />Paderewski,
             </persName>
-            <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann,</persName>
-            <persName>Teresa Carreno</persName>
-            <persName corresp="https://d-nb.info/gnd/116014490">Vladimir de Pach-<lb />mann</persName>
-            <persName>Fannie Bloomfield-Zeisler</persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann,</persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/116014490">Vladimir de Pach-<lb />mann</persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/116204400">Fannie Bloomfield-Zeisler</persName>
             and others.
             <lb />Demostrations daily at our studio
             <lb />The <orgName>Welte-Mignon Autograph Piano Co.</orgName>
-            <lb /><address>273 Fifth Avenue</address>, Opposite the Holland House
-            <lb />Steinway Piano Incorporated in the Welte-Mignon
+            <lb /><address>273 Fifth Avenue, Opposite the Holland House</address>
+            <lb /><name type="brand">Steinway Piano</name> Incorporated in the <name type="brand">Welte-Mignon</name>
         </div>
         <div facs="#eSc_textblock_86c963f8" />
         <div facs="#eSc_textblock_82fe31e2" type="illustration" />

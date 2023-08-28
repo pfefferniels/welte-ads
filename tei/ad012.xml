@@ -127,7 +127,10 @@
     <text>
         <div facs="#eSc_textblock_4f5aecd5">
             <lb /><orgName corresp="welte.studios">The Welte-Mignon Studios</orgName>
-            <lb />667 Fifth Avenue-at 53rd Street
+            <lb />
+            <address>
+               667 Fifth Avenue-at 53rd Street
+            </address>
         </div>
         <div facs="#eSc_textblock_b669256d">
             <lb />A really satisfactory way
@@ -151,42 +154,49 @@
             <lb />The Welte-Mignon
             <lb />Reproducing Piano
             <lb />The instrument chosen by
-            <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-            <persName corresp="https://d-nb.info/gnd/124379923">Lhe-<lb/>vinne</persName>,
-            <persName corresp="https://d-nb.info/gnd/11918625X">
+            <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/124379923">Lhe-<lb/>vinne</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">
                 <sic>Hofman</sic>
             </persName>,
-            <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>
             <lb />and scores of others, to
             <lb />
             <seg ana="#immortality" resp="#np" type="topic">
                 preserve their genius for posterity.
             </seg>
-            <lb />You should hear <persName corresp="https://d-nb.info/gnd/118986724">Paderewski's</persName> reproductions;
+            <lb />You should hear <persName corresp="https://d-nb.info/gnd/118986724" type="artist">Paderewski's</persName> reproductions;
             <seg ana="#soulfulness" resp="#np" type="topic">
                 hear how
                 <lb />he has played
                 his soul into indestructible records for the
-                <lb /><orgName corresp="welte.studios">Welte-Mignon</orgName>
+                <lb /><name type="brand">Welte-Mignon</name>
             </seg>.
             <seg ana="#repeatability" resp="#np" type="topic">
                 Records which you may
                 reproduce at any
                 <lb />time and as often as you like
             </seg>, in your own home.
-            <lb />One hundred
-            and fifty-six musicians have recorded more
-            <lb />than five thousand selections for the <orgName corresp="welte.studios">Welte-Mignon</orgName>. Imagine
+            <lb />
+            <num type="cardinal" subtype="artist-count" value="156">
+               One hundred and fifty-six
+            </num>
+            musicians have recorded more
+            <lb />than
+            <num type="cardinal" subtype="work-count" value="5000">
+               five thousand
+            </num>
+            selections for the <name type="brand">Welte-Mignon</name>. Imagine
             <lb />the delight to be derived from such a collection.
             <seg ana="#affordability" resp="#np" type="topic">
                 And consider
-                <lb />that the Welte-Mignon Reproducing Piano is within
+                <lb />that the <name type="brand">Welte-Mignon Reproducing Piano</name> is within
                 <lb />everyone's means, for it may be
                 bought on your terms, with
                 <lb />in reason.
             </seg>
-            <lb />Just drop in at the Studios to hear the
-            Welte play. Please
+            <lb />Just drop in at the <orgName>Studios</orgName> to hear the
+            <name type="brand">Welte</name> play. Please
             <lb />feel free to ask for your favorite selections. We consider the
             <lb />pleasure
             entirely ours.

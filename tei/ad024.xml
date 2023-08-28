@@ -63,7 +63,7 @@
                 <msIdentifier>
                   <repository>University of Illinois</repository>
                   <idno>
-                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=484</idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&amp;seq=484</idno>
                   </idno>
                 </msIdentifier>
               </msDesc>
@@ -94,7 +94,7 @@
               <msIdentifier>
                 <repository>University of Virginia</repository>
                 <idno>
-                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uva.x030387052&seq=274</idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uva.x030387052&amp;seq=274</idno>
                 </idno>
               </msIdentifier>
             </msDesc>
@@ -159,7 +159,8 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_8c5449e6">
-            <lb />THE MASTER'S FINGERS ON YOUR PIANO</div>
+            <lb /><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg>
+         </div>
 
         <div facs="#eSc_textblock_d27998d8" type="illustration">
             <figure>
@@ -167,7 +168,7 @@
             </figure>
             <p>
                 <lb />
-                <persName corresp="https://d-nb.info/gnd/118986724">IGNACE PADEREWSKI</persName>
+                <persName type="artist" corresp="https://d-nb.info/gnd/118986724">IGNACE PADEREWSKI</persName>
             </p>
         </div>
 
@@ -177,7 +178,7 @@
             </figure>
             <p>
                 <lb />
-                <persName corresp="https://d-nb.info/gnd/119362112">ALFREDO CASELLA</persName>
+                <persName type="artist" corresp="https://d-nb.info/gnd/119362112">ALFREDO CASELLA</persName>
             </p>
         </div>
 
@@ -188,7 +189,7 @@
             </figure>
             <p>
                 <lb />
-                <persName corresp="https://d-nb.info/gnd/116014490">VLADIMIR DE PACHMANN</persName>
+                <persName type="artist" corresp="https://d-nb.info/gnd/116014490">VLADIMIR DE PACHMANN</persName>
             </p>
         </div>
 
@@ -198,7 +199,7 @@
             </figure>
             <p>
                 <lb />
-                <persName corresp="https://d-nb.info/gnd/118694820">WALTER GIESEKING</persName>
+                <persName type="artist" corresp="https://d-nb.info/gnd/118694820">WALTER GIESEKING</persName>
             </p>
         </div>
 
@@ -211,33 +212,33 @@
         </div>
 
         <div facs="#eSc_textblock_d4f05f93">
-            <lb />THE genius of <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-            <lb /><persName corresp="https://d-nb.info/gnd/116014490">de Pachmann</persName>,
-            <persName corresp="https://d-nb.info/gnd/119362112">Casella</persName> and
-            <lb /><persName corresp="https://d-nb.info/gnd/118694820">Gieseking</persName> lives
+            <lb />THE genius of <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116014490">de Pachmann</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/119362112">Casella</persName> and
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118694820">Gieseking</persName> lives
             forever through
-            <lb />the magic of the Welte-Mignon
-            <lb />Licensee Reproducing Actio
-            n<lb />Only Welte-Mignon Licensee
+            <lb />the magic of the <name type="brand">Welte-Mignon
+            <lb />Licensee Reproducing Action</name>
+            n<lb />Only <name type="brand">Welte-Mignon Licensee</name>
             <lb />possesses the secret of perfect
             <lb />reproduction.
             <lb />Through
-            Welte-Mignon Li-
-            <lb />censee the playing of the world's
+            <name type="brand">Welte-Mignon Li-
+            <lb />censee</name> the playing of the world's
             <lb />greatest pianists is
             <seg ana="#home" type="topic" resp="#np">
                 brought to
                 <lb />your home
             </seg>, flawless, magnificent,
             <lb />its glory undimmed.
-            <lb />You can have Welte-Migno
-            <lb />Licensee in 115 different pianos.
-            <lb />The famous Welte-Mignon
+            <lb />You can have <name type="brand">Welte-Mignon
+            <lb />Licensee</name> in 115 different pianos.
+            <lb />The famous <name type="brand">Welte-Mignon
             Li-
-            <lb />censee Reproducing Action ca be
+            <lb />censee Reproducing Action</name> ca be
             <lb />installed in your own grand piano.
-            <lb />There are Welte-Mignon Li-
-            <lb />censee dealers everywhere. Send
+            <lb />There are <name type="brand">Welte-Mignon Li-
+            <lb />censee</name> dealers everywhere. Send
             <lb />for a copy of our
             beautiful book-
             <lb />let containing portraits of the
@@ -256,8 +257,12 @@
             <seg ana="#superiority">
                 The superiority of any reproducing piano
                 <lb />is assured if it contains the
-                <lb />Welte-Mignon<lb />reproducing action
-                <lb />LICENSEE
+                <lb />
+                <name type="brand">
+                  Welte-Mignon
+                  <lb />LICENSEE
+                  <lb />reproducing action
+                </name>
             </seg> 
         </div>
     </text>

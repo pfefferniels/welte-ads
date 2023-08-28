@@ -63,7 +63,7 @@
                 <msIdentifier>
                   <repository>University of Illinois</repository>
                   <idno>
-                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=336</idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&amp;seq=336</idno>
                   </idno>
                 </msIdentifier>
               </msDesc>
@@ -94,7 +94,7 @@
               <msIdentifier>
                 <repository>University of Virginia</repository>
                 <idno>
-                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uva.x030512334&seq=21</idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uva.x030512334&amp;seq=21</idno>
                 </idno>
               </msIdentifier>
             </msDesc>
@@ -125,7 +125,7 @@
               <msIdentifier>
                 <repository>University of Virginia</repository>
                 <idno>
-                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uva.x030387052&seq=8</idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uva.x030387052&amp;seq=8</idno>
                 </idno>
               </msIdentifier>
             </msDesc>
@@ -156,7 +156,7 @@
               <msIdentifier>
                 <repository>archive.org</repository>
                 <idno>
-                  <idno type="URLImages">https://archive.org/details/sim_harpers-magazine_1926-11_153_918/page/n234</idno>
+                  <!-- <idno type="URLImages">https://archive.org/details/sim_harpers-magazine_1926-11_153_918/page/n234</idno> -->
                 </idno>
               </msIdentifier>
             </msDesc>
@@ -187,7 +187,7 @@
               <msIdentifier>
                 <repository>University of Michigan</repository>
                 <idno>
-                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015024045372&seq=753</idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015024045372&amp;seq=753</idno>
                 </idno>
               </msIdentifier>
             </msDesc>
@@ -228,45 +228,45 @@
                 <lb/><hi rendition="#i">reproducing</hi> piano
                 <lb/>is assured if it
                 <lb/>contains the
-                <lb/>Welte-Mignon
+                <lb/><name type="brand">Welte-Mignon
                 <lb/>LICENSEE
                 <lb/>reproducing
-                <lb/>action
+                <lb/>action</name>
                 </hi>
             </hi>
       </div>
       <div facs="#eSc_textblock_5f73df5d">
          <lb/>Before buying any reproducing
          <lb/>piano ascertain whether or not
-         <lb/>it contains the famous WELTE-
+         <lb/>it contains the famous <name type="brand">WELTE-
          <lb/>MIGNON LICENSEE REPRODUCING
-         <lb/>ACTION.
+         <lb/>ACTION</name>.
          <seg ana="#exact_reproduction" resp="#np" type="topic">
-            Only Welte-Mignon Licensee
+            Only <name type="artist">Welte-Mignon Licensee</name>
             <lb/>possesses the secret of perfect reproduc-
             <lb/>tion.
         </seg>
         <seg ana="#home" resp="#np" type="topic">
-            Welte-Mignon Licensee brings to
+            <name type="brand">Welte-Mignon Licensee</name> brings to
             <lb/>your home
         </seg> flawless interpretations by
         <lb/>the great geniuses of the pianoforte:
-        <persName corresp="https://d-nb.info/gnd/116014490">De<lb/>Pachmann</persName>,
-        <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-        <persName corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>,
-        <persName corresp="https://d-nb.info/gnd/119362112">Casella</persName>
+        <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De<lb/>Pachmann</persName>,
+        <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+        <persName type="artist" corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>,
+        <persName type="artist" corresp="https://d-nb.info/gnd/119362112">Casella</persName>
       </div>
       <div facs="#eSc_textblock_3e3a75c6">
          <lb/>
          <persName corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>
          and many others.
-         <lb/>You can now have Welte-Mignon
-         <lb/>Licensee in one hundred and fifteen
+         <lb/>You can now have <name type="brand">Welte-Mignon
+         <lb/>Licensee</name> in one hundred and fifteen
          <lb/>different pianos. The famous
-         <lb/>Welte-Mignon Licensee Reproduc-
-         <lb/>ing Action can be installed in your
-         <lb/>own grand piano. There are Welte-
-         <lb/>Mignon Licensee dealers everywhere.
+         <lb/><name type="brand">Welte-Mignon Licensee Reproduc-
+         <lb/>ing Action</name> can be installed in your
+         <lb/>own grand piano. There are <name type="brand">Welte-
+         <lb/>Mignon Licensee</name> dealers everywhere.
          <lb/>Send for copy of our beautiful brochure
          <lb/>containing portraits of the great artists.
       </div>
@@ -281,7 +281,7 @@
       </div>
       <div facs="#eSc_textblock_68da9219">
          <lb/>
-         <hi rendition="#k">The Master's Fingers On Your Piano</hi>
+         <hi rendition="#k"><seg type="slogan">The Master's Fingers On Your Piano</seg></hi>
       </div>
       <div facs="#eSc_textblock_4697302e"/>
 

@@ -124,12 +124,12 @@
             </head>
             <lb />
             <seg ana="#miracle" resp="#np" type="topic">
-                Thanks to the wizardry of Hardman Welte-
-                <lb />Mignon(licensee) Reproducing Pianos
+                Thanks to the wizardry of <name type="brand">Hardman Welte-
+                <lb />Mignon(licensee) Reproducing Pianos</name>
             </seg>
             <seg ana="#immortality" resp="#np" type="topic">
                 the
-                <lb />art of <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> is imperishable
+                <lb />art of <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> is imperishable
             </seg>.
             <seg ana="#repeatability" resp="#np" type="topic">
                 He will
@@ -140,12 +140,12 @@
             <seg ana="#home" resp="#np" type="topic">
                 in your own home.
             </seg>
-            <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-            <persName corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
-            <persName corresp="https://d-nb.info/gnd/116327642">Gabrilowitsch</persName>,
-            <lb /><persName corresp="https://d-nb.info/gnd/11875081X">Saint-Saens</persName> and the most celebrated pianists
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116327642">Gabrilowitsch</persName>,
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-Saens</persName> and the most celebrated pianists
             <lb />have expressed their conceptions of the
-            <lb />world's classics on the Welte-Mignon.
+            <lb />world's classics on the <name type="brand">Welte-Mignon</name>.
             <lb />
             <hi rendition="#c">
                 Write for catalog.
@@ -160,18 +160,23 @@
                   <rdg source="#B">
                      <hi rendition="#k">
                         <lb />Exclusive Representatives
-                        <lb />Schmoller &amp; Mueller
+                        <lb /><orgName>Schmoller &amp; Mueller</orgName>
                         <lb />Piano Co.
-                        <lb />1514-16-18
-                        <lb />Dodge St.
-                        <lb />Phone
-                        <lb />Douglas 1623
+                        <address>
+                           <lb />1514-16-18
+                           <lb />Dodge St.
+                           <lb />Phone
+                           <lb />Douglas 1623
+                        </address>
                      </hi>
                   </rdg>
                 </app>
             </hi>
-            <lb />433 Fifth Avenue, New York
-            <lb />47-51 Flatbush Ave, Brooklyn
+            <lb />
+            <address>
+               433 Fifth Avenue, New York
+               <lb />47-51 Flatbush Ave, Brooklyn
+            </address>
             <hi rendition="#c">
                 <lb />Represented in all Cities
             </hi>

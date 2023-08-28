@@ -136,7 +136,7 @@
             <hi rendition="#k">
                 <lb />our distinguished novelist and a lover of the best in
                 <lb />music, has written the foreword to the newly pub-
-                <lb />lished Welte-Mignon Catalog, which is a little classic
+                <lb />lished <name type="brand">Welte-Mignon Catalog</name>, which is a little classic
                 <lb />and which we will gladly send you.
                 <lb />We quote the following:
             </hi>
@@ -145,10 +145,10 @@
             <quote>
                 "Some ten years or so ago a friend took me into her house and showed
                 me
-                <lb />the first Welte-Mignon I had ever heard. * * * Since then the strangeness
+                <lb />the first <name type="brand">Welte-Mignon</name> I had ever heard. * * * Since then the strangeness
                 <lb />has gone away from such an experience. The marvel of yesterday is the com-
                 <lb />monplace of today. But there will never be anything commonplace about hav-
-                <lb />ing <persName corresp="https://d-nb.info/gnd/118697641">Grieg</persName>
+                <lb />ing <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>
                 himself sit down at your piano,
                 <seg ana="#atmosphere" resp="#np" type="topic">
                     in the twilight with the lamps low
@@ -163,7 +163,8 @@
                     <lb />hands; there he had held that long-sustained note – could I not see him holding
                     <lb />it? He was sitting there playing. Here he was gentle, a little sad. Here again
                     <lb />he had roused himself into a passion; his heart swelled.
-                </seg> He was saying with<lb />music those things which one does
+                </seg> He was saying with
+                <lb />music those things which one does
                 not say with words-
             </quote>
 
@@ -173,27 +174,47 @@
                 <seg ana="#home" type="topic" resp="#np">
                     you can have the most distinguished pian-
                     <lb />ists do this same thing in your home – with the
-                    <lb />Welte-Mignon!
+                    <lb /><name type="brand">Welte-Mignon</name>!
                 </seg>
                 <lb />You are cordially invited to a demonstration
                 <lb />at any time.
             </hi>
 
             <hi rendition="#smaller">
-                <lb />Welte-Mignon Grands Priced
+                <lb /><name type="brand">Welte-Mignon</name> Grands Priced
             </hi>
             from <measure commodity="wm-grand" unit="dollar" quantity="1695">$ 1,695</measure> Up
         </div>
 
         <div facs="#eSc_textblock_634ec641">
             <lb />And other
-            <lb />Steinway
+            <lb /><name type="brand">Steinway</name>
             <lb />High-Grade
             <lb />Pianos
             <lb />Player
-            Pianos-Victrolas-Records
+            Pianos-<name type="brand">Victrolas</name>-Records
             <lb />Player Piano Rolls, Music, Musical Instruments
-            <lb />Guaranteed New Upright Pianos, $ 325 Grands, $635 Player Pianos, $559
+
+            <lb />Guaranteed New Upright Pianos,
+            <hi rendition="#b">
+                <measure commodity="upright" unit="dollar" quantity="325">
+                    $325
+                </measure>
+            </hi>
+            <space dim="horizontal" />
+            Grands,
+            <hi rendition="#b">
+                <measure commodity="grand" unit="dollar" quantity="635">
+                    $635
+                </measure>
+            </hi>
+            <space dim="horizontal" />
+            Player Pianos,
+            <hi rendition="#b">
+                <measure commodity="player-piano" unit="dollar" quantity="559">
+                    $559
+                </measure>
+            </hi>
             <lb />
             <seg ana="#affordability" resp="#np" type="topic">
                 Accommodating Terms of Payment.
@@ -201,7 +222,9 @@
         </div>
 
         <div facs="#eSc_textblock_7218a8b1">
-            <lb />E. F. Droop &amp; Sons Co., 1300 G
+            <lb />
+            <orgName>E. F. Droop &amp; Sons Co.</orgName>,
+            <address>1300 G</address>
         </div>
     </text>
 </TEI>

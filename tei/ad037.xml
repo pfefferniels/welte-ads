@@ -99,30 +99,30 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_40330f98">
-            <lb />Welte-Mignon
-            <lb />Reproduktions-Piano * Reproduktions-Flügel
-            <lb />Getreue Wiedergabe des Spiels berühmter KLAVIER-Virtuosen
+            <lb /><name type="brand">Welte-Mignon
+            <lb />Reproduktions-Piano</name> * Reproduktions-Flügel
+            <lb /><seg type="slogan">Getreue Wiedergabe des Spiels berühmter KLAVIER-Virtuosen</seg>
         </div>
         <div facs="#eSc_textblock_01f2d6ec">
-            <lb />Welte-Mignon
+            <lb /><name type="brand">Welte-Mignon</name>
             <lb />wird eingebaut in
             <lb />Pianos und Flügel
             <lb />der Marken:
         </div>
         <div facs="#eSc_textblock_87ee5dfc">
-            <lb /><persName corresp="https://d-nb.info/gnd/118501437">Professor Eugen d'Albert</persName> schreibt:
-            <quote>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Professor Eugen d'Albert</persName> schreibt:
+            <quote type="testimonial">
                 <lb />"Wie erstaunlich und tief ergreifend ist es, sein vor
                 <lb />Jahren aufgenommenes Spiel in größter Vollendung durch
-                <lb />"Welte-Mignon" wiedergegeben zu hören! Der Ruf der
-                <lb />"Welte-Mignon-Pianos", das Vollendetstse zu sein auf
+                <lb /><name type="brand">"Welte-Mignon"</name> wiedergegeben zu hören! Der Ruf der
+                <lb /><name type="brand">"Welte-Mignon-Pianos"</name>, das Vollendetstse zu sein auf
                 <lb />diesem Gebiete, ist fest begründet in dieser
                 <seg ana="#exact_reproduction" resp="#np" type="topic">
                     getreuen
                     <lb />Wiedergabe des individuellen Spiels
                 </seg>, und es ist mir eine
                 <lb />künstlerische Befriedigung und eine Freude, heute dem
-                <lb />"Welte-Mignon" ein reiches vielseitiges Programm
+                <lb /><name type="brand">"Welte-Mignon"</name> ein reiches vielseitiges Programm
                 <lb />anvertraut zu haben, das
                 <seg ana="#immortality" resp="#np" type="topic">
                     meine Kunst der Nachwelt
@@ -131,12 +131,12 @@
             </quote>
         </div>
         <div facs="#eSc_textblock_f9c21c7d">
-            <lb /><persName corresp="https://d-nb.info/gnd/118501437">Professor d'Albert</persName> für "Welte-Mignon" spielend.
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Professor d'Albert</persName> für "Welte-Mignon" spielend.
         </div>
         <div facs="#eSc_textblock_d6a5ecdd">
-            <lb /><persName corresp="https://d-nb.info/gnd/118786253">Professur Artur Nikisch</persName> schreibt:
-            <quote>
-                <lb />"Den Reproduktionsapparat "Welte-Mignon halte ich
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Professur Artur Nikisch</persName> schreibt:
+            <quote type="testimonial">
+                <lb />"Den Reproduktionsapparat <name type="brand">"Welte-Mignon"</name> halte ich
                 <lb />für
                 <seg ana="#technical_invention" resp="#np" type="topic">
                     eine epochemachende Erfindung.
@@ -166,10 +166,10 @@
             </quote>
         </div>
         <div facs="#eSc_textblock_1167e50c">
-            <lb />Steinway
-            <lb />Blüthner
-            <lb />Ibach
-            <lb />Feurich
+            <lb /><name type="brand">Steinway</name>
+            <lb /><name type="brand">Blüthner</name>
+            <lb /><name type="brand">Ibach</name>
+            <lb /><name type="brand">Feurich</name>
         </div>
         <div facs="#eSc_textblock_acb77e04">
             <lb />Welte-
@@ -183,7 +183,7 @@
             </seg>
         </div>
         <div facs="#eSc_textblock_c3c4b41d">
-            <lb />M. Welte &amp; Söhne
+            <lb /><orgName>M. Welte &amp; Söhne</orgName>
             <lb />Fabrik pneumatischer Musikwerke
             <lb />Freiburg i. Br.
             <lb />Gegründet 1832

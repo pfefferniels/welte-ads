@@ -107,11 +107,7 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_7087fd61">
-            <lb />THE
-            <lb />MUSIC TRADE
-            <lb />REVIEW
-            <lb />MAGAZINE NUMBER<lb />In Two Sections<lb />November 10, 1928
-            <lb />Section I
+            <gap reason="irrelevant" />>
         </div>
 
         <div facs="#eSc_textblock_ffd3c78d" type="illustration">
@@ -130,9 +126,9 @@
             <lb />Remember that you can
             <lb />select unlimited pro-
             <lb />gram groups for the
-            <lb />Musicalle from the in-
-            <lb />comparable WELTE-
-            <lb />MIGNON Library of over
+            <lb /><name type="brand">Musicalle</name> from the in-
+            <lb />comparable <name type="brand">WELTE-
+            <lb />MIGNON Library</name> of over
             <lb />three thousand Master
             <lb />Recordings . . .
             <seg ana="#suit_every_mood" resp="#np" type="topic">
@@ -146,7 +142,7 @@
         </div>
         <div facs="#eSc_textblock_4411276c">
             <lb />The Amazing New
-            <lb />WELTE-MIGNONG Musicalle
+            <lb /><name type="brand">WELTE-MIGNON Musicalle</name>
             <lb />makes possible for the first time an hour of uninter-
             <lb />rupted music by the great pianists of the world ..
         </div>
@@ -159,7 +155,7 @@
         </div>
         <div facs="#eSc_textblock_b142b74c">
             <lb />TURN BACK the calendar twenty-four
-            <lb />years . . . From the House of Welte
+            <lb />years . . . From the <orgName>House of Welte</orgName>
             <lb />came the announcement in 1904 of an
             <lb />instrument which
             <seg ana="#exact_reproduction">
@@ -171,8 +167,8 @@
             <seg ana="#technical_invention">
                 the second
                 <lb />truly great and signifact step in the progress
-                <lb />of musical reproduction . . . the WELTE-
-                <lb />MIGNON Musicalle.
+                <lb />of musical reproduction . . . the <name type="brand">WELTE-
+                <lb />MIGNON Musicalle</name>.
             </seg>
             <seg ana="#sitting_woman">
                 <lb />. . . A women relaxes in the soft depths of
@@ -182,17 +178,18 @@
                 On the table by her
                 <lb />side rests a small tablet with eight ivory but-
                 <lb />tons . . . She presses . . . From her
-                <lb />superb piano, a WELTE-MIGNON, flow the
-                <lb />magic strains of a Chopin Nocturne . . .
+                <lb />superb piano, a <name type="brand">WELTE-MIGNON</name>, flow the
+                <lb />magic strains of a <persName type="composer">Chopin</persName> Nocturne . . .
                 <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> is playing . . . Silence for a mo-
                 <lb />ment . . . the silence of appreciation . . .
                 <lb />She touches another button, chossing at ran-
-                <lb />dom . . . <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>-playing Medels-
-                <lb />sohn's "Rondo Capriccioso."
+                <lb />dom . . . <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>-playing
+                <persName type="composer">Medels-
+                <lb />sohn's</persName> "Rondo Capriccioso."
             </seg>
             <seg ana="#suit_every_mood" resp="#np" type="topic">
                 In modern mood
-                <lb />she turns to <persName>Gershwin</persName> . . . "Thre Rhap-
+                <lb />she turns to <persName type="composer">Gershwin</persName> . . . "The Rhap-
                 <lb />sody in Blue" . . .
             </seg>
             <seg ana="#listening" resp="#np" type="topic">
@@ -200,8 +197,8 @@
                 <lb />revels in the worlds great piano music . . .
                 <lb />never moving from her chair
             </seg>
-            <lb />. . . . This is the new WELTE-MIGNON
-            <lb />Musicalle . . . . . . .
+            <lb />. . . . This is the new <name type="brand">WELTE-MIGNON
+            <lb />Musicalle</name> . . . . . . .
         </div>
         <div facs="#eSc_textblock_2aef91d9">
             <lb />Such simplicity operation has never before
@@ -211,23 +208,23 @@
                 <lb />annoying interruption is banished . . . no
                 <lb />dials to turn . . . no rerolling . . .
                 <lb />no changing of records.
-                <lb />The Musicalle is a cabinet containing eight
+                <lb />The <name type="brand">Musicalle</name> is a cabinet containing eight
                 <lb />records and the silent mechanism for control-
                 <lb />ling them.
             </seg> It is connected with the piano by
             <lb />a small, easily concealed cable. A tablet,
             <lb />scarcely larger than a small book of verse,
-            <lb />operates the Musicalle-resting inconspicuously
+            <lb />operates the <name type="brand">Musicalle</name>-resting inconspicuously
             <lb />on a table or stand in your library . . .
             <lb />your music room . . . your dining room
             <lb />. . . wherever you wish.
             <lb />Of course, there will be times when you
             <lb />yourself desire to play. Remember that the
-            <lb />Musicalle leaves your piano wholly at your
+            <lb /><name type="brand">Musicalle</name> leaves your piano wholly at your
             <lb />disposal-unaffected in appearance, action or
             <lb />tone.
-            <lb />The Musicalle together with Welte-Mignon
-            <lb />Reproducing Mechanism installed in other
+            <lb />The <name type="brand">Musicalle</name> together with <name type="brand">Welte-Mignon
+            <lb />Reproducing Mechanism</name> installed in other
             <lb />makes of Grand Pianos. Prices on request.
         </div>
         <div facs="#eSc_textblock_eb5ad774" type="illustration">
@@ -254,8 +251,8 @@
             </address>
         </div>
         <div facs="#eSc_textblock_5fe584b5">
-            <lb />The Musicalle is patented and controlled ex-
-            <lb />clusively by the Welte-Mignon Corporation
+            <lb />The <name type="brand">Musicalle</name> is patented and controlled ex-
+            <lb />clusively by the <orgName>Welte-Mignon Corporation</orgName>
         </div>
     </text>
 </TEI>

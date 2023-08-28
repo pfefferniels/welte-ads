@@ -63,7 +63,7 @@
                 <msIdentifier>
                   <repository>University of Illinois</repository>
                   <idno>
-                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=372</idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&amp;seq=372</idno>
                   </idno>
                 </msIdentifier>
               </msDesc>
@@ -124,7 +124,7 @@
                 <desc>Portrait of Pachmann</desc>
             </figure>
             <p>
-                <persName corresp="https://d-nb.info/gnd/116014490">
+                <persName type="artist" corresp="https://d-nb.info/gnd/116014490">
                     <lb />Vladimir<lb />
                     <hi rendition="#k">De Pachmann</hi>
                 </persName>
@@ -135,8 +135,10 @@
                 <desc>Portrait of Brard</desc>
             </figure>
             <p>
-                <lb />Magdeleine<lb />
-                <hi rendition="#k">Brard</hi>
+                <persName type="artist">
+                    <lb />Magdeleine<lb />
+                    <hi rendition="#k">Brard</hi>
+                </persName>
             </p>
         </div>
         <div facs="#eSc_textblock_169eab61" type="illustration">
@@ -144,8 +146,10 @@
                 <desc>Portrait of Singer</desc>
             </figure>
             <p>
-                <lb />Richard<lb />
-                <hi rendition="#k">Singer</hi>
+                <persName type="artist">
+                    <lb />Richard<lb />
+                    <hi rendition="#k">Singer</hi>
+                </persName>
             </p>
         </div>
         <div facs="#eSc_textblock_b4d63d5c" type="illustration">
@@ -153,7 +157,7 @@
                 <desc>Portrait of Hofmann</desc>
             </figure>
             <p>
-                <persName corresp="https://d-nb.info/gnd/11918625X">
+                <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">
                     <lb />Josef<lb />
                     <hi rendition="#k">Hofmann</hi>
                 </persName>
@@ -164,7 +168,7 @@
                 <desc>Portrait of Paderewski</desc>
             </figure>
             <p>
-                <persName corresp="https://d-nb.info/gnd/118986724">
+                <persName type="artist" corresp="https://d-nb.info/gnd/118986724">
                     <lb />Ignace Jan<lb />
                     <hi rendition="#k">Paderewski</hi>
                 </persName>
@@ -175,8 +179,11 @@
                 <desc>Portrait of Liebling</desc>
             </figure>
             <p>
-                <lb />George<lb />
-                <hi rendition="#k">Liebling</hi>
+                <lb />
+                <persName type="artist">
+                    George<lb />
+                    <hi rendition="#k">Liebling</hi>
+                </persName>
             </p>
         </div>
         <div facs="#eSc_textblock_91178103" type="illustration">
@@ -184,7 +191,7 @@
                 <desc>Portrait of Bloomfield-Zeisler</desc>
             </figure>
             <p>
-                <persName corresp="https://d-nb.info/gnd/116204400">
+                <persName type="artist" corresp="https://d-nb.info/gnd/116204400">
                     <lb />Fannie<lb />
                     <hi rendition="#k">Bloomfield-Zeisler</hi>
                 </persName>
@@ -195,7 +202,7 @@
                 Portrait of Busoni
             </figure>
             <p>
-                <persName corresp="https://d-nb.info/gnd/118518011">
+                <persName type="artist" corresp="https://d-nb.info/gnd/118518011">
                     <lb />Ferrucio<lb />
                     <hi rendition="#k">Busoni</hi>
                 </persName>
@@ -206,7 +213,7 @@
                 <hi rendition="#i">
                     <lb />Now Possible ~
                     <hi rendition="#c">
-                        <lb />Through the Welte-Mignon (Licensee)
+                        <lb />Through the <name type="brand">Welte-Mignon (Licensee)</name>
                     </hi>
                     <hi rendition="#right">
                         <lb />Library of Music
@@ -219,7 +226,7 @@
             <div facs="#eSc_textblock_1ee7c53a">
                 <lb />The masterpieces of the world's most
                 <lb />famous pianists are presented through the
-                <lb />extensive Welte-Mignon (Licensee) Library
+                <lb />extensive <name type="brand">Welte-Mignon (Licensee) Library</name>
                 <lb />of Music.
                 <lb />All the verve,
                 all the delicate tone shading, all
@@ -236,7 +243,7 @@
                     </seg>
                 </seg>
                 <lb />This is possible, and only is it
-                possible, through<lb />the Welte-Mignon (Licensee)
+                possible, through<lb />the <name type="brand">Welte-Mignon (Licensee)</name>
                 <seg ana="#analogy_to_photography" resp="#np" type="topic">
                     photographic<lb />process of
                     recording.
@@ -248,42 +255,42 @@
             <div facs="#eSc_textblock_65dcf1c2">
                 <lb />A few more of over 200
                 <lb />Artists who record for
-                <lb />Welte-Mignon (Licensee):
+                <lb /><name type="brand">Welte-Mignon (Licensee)</name>:
             </div>
             <div facs="#eSc_textblock_59f05978">
-                <lb /><persName corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/119362112">Casella</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/116327642">Gabrilowitsch</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/116977108">Sauer</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>
-                <lb /><persName>Boguslawski</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>
-                <lb /><persName>De Horvath</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/118524186">Debussy</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119362112">Casella</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116327642">Gabrilowitsch</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116977108">Sauer</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>
+                <lb /><persName type="artist">Boguslawski</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreno</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>
+                <lb /><persName type="artist">De Horvath</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118524186">Debussy</persName>
             </div>
             <div facs="#eSc_textblock_49b5a03a">
-                <lb /><persName>La Forge</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/134788370">Poushnoff</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/118524186">Debussy</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/119281953">Ganz</persName>
-                <lb /><persName>Saint-Saens</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/118697641">Grieg</persName>
-                <lb /><persName>Humperdinck</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/120890143">Leschetitzky</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/119466821">Samaroff</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/117110450">Scharwenka</persName>
+                <lb /><persName type="artist">La Forge</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/134788370">Poushnoff</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118524186">Debussy</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119281953">Ganz</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-Saens</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>
+                <lb /><persName type="artist">Humperdinck</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/120890143">Leschetitzky</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119466821">Samaroff</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/117110450">Scharwenka</persName>
             </div>
         </div>
 
         <div facs="#eSc_textblock_a1d08d9a">
-            <lb />The Welte-Mignon (Licensee) reproducing action may now be obtained in 115 leading
+            <lb />The <name type="brand">Welte-Mignon (Licensee)</name> reproducing action may now be obtained in 115 leading
             <lb />makes of pianos. You can have this famous action installed in your own piano without
             <lb />messing the appearance or hindering manual playing.
         </div>
         <div facs="#eSc_textblock_8e02e40f">
-            <lb />Welte-Mignon
-            <lb />THE MASTER'S FINGERS ON YOUR PIANO
+            <lb /><name type="brand">Welte-Mignon</name>
+            <lb /><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg>
         </div>
         <div facs="#eSc_textblock_423690b5">
             <lb /><orgName>THE AUTO PNEUMATIC ACTION CO.</orgName><lb />
@@ -292,7 +299,8 @@
         <div facs="#eSc_textblock_7d8e9f52">
             <lb />
             <address>
-                51st Street and 12th Avenue<lb />New York City
+                51st Street and 12th Avenue
+                <lb />New York City
             </address>
         </div>
         <div facs="#eSc_textblock_7e37709d" />

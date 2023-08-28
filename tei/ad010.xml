@@ -102,19 +102,19 @@
             <lb />Vertretung.
             <seg ana="#immediate_recognizability" type="topic" resp="#np">
                 Wer mit der Spielweise
-                <persName corresp="https://d-nb.info/gnd/118501437">d'Alberts</persName>,
-                <persName corresp="https://d-nb.info/gnd/118518011">Busonis</persName>,
-                <persName corresp="https://d-nb.info/gnd/116662166">Lamonds</persName>,
-                <persName corresp="https://d-nb.info/gnd/117223794">Stavenhagens</persName> etc.
+                <persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Alberts</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busonis</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/116662166">Lamonds</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/117223794">Stavenhagens</persName> etc.
                 <lb />vertraut ist, wird bei der Wiedergabe sofort erkennen, welcher dieser Künstler spielt.
             </seg> Es ist deshalb
             <lb />nur eines zu bedauern, dass diese wundervolle Erfindung nicht schon vor 50 und mehr Jahren
             <lb />gemacht worden ist. Dann wäre es möglich, auch
             <seg ana="#educational_use" resp="#np" type="topic">
                 heute noch sich an dem Spiel der grossen
-                <lb />Meister wie <persName>Chopin</persName>,
-                <persName>Liszt</persName>, <persName>Rubinstein</persName>,
-                <persName>Bülow</persName> etc. zu erfreuen und davon zu lernen
+                <lb />Meister wie <persName type="composer">Chopin</persName>,
+                <persName type="composer">Liszt</persName>, <persName type="composer">Rubinstein</persName>,
+                <persName type="composer">Bülow</persName> etc. zu erfreuen und davon zu lernen
             </seg>.
             Von fast
             <lb />allen Grossen der Gegenwart, seien es Pianisten, Komponisten oder Dirigenten,
@@ -136,11 +136,11 @@
             </quote>
             <lb />Die nächste Vorführung des Reproduktionsklaviers findet Sonntag den 15. Dezember nach-
             <lb />mittags 5 Uhr statt, wozu Musikfreunde höflichst eingeladen sind.
-            <lb />Pianohaus
-            <orgName>Alfred Schmid Nachf.</orgName>
+            <lb />
+            <orgName>Pianohaus Alfred Schmid Nachf.</orgName>
             <lb />Kgl. Bayer. Hofmusikalienhandlung,
             Hoflieferant Sr. Kgl. Hoheit des Prinzen
-            Rupprecht von Bayern.<lb />34 <address>Theatinerstrasse 34</address>
+            Rupprecht von Bayern.<lb /><address>34 Theatinerstrasse 34</address>
         </div>
         <div facs="#eSc_textblock_3824adc6" />
     </text>

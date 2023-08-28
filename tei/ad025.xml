@@ -63,7 +63,7 @@
                 <msIdentifier>
                   <repository>University of Illinois</repository>
                   <idno>
-                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=444</idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&amp;seq=444</idno>
                   </idno>
                 </msIdentifier>
               </msDesc>
@@ -96,24 +96,24 @@
         <div facs="#eSc_textblock_930115f7">
             <lb />
             <signed>
-                <persName corresp="https://d-nb.info/gnd/116014490">Vladimir Pachmann</persName>
+                <persName type="artist" corresp="https://d-nb.info/gnd/116014490">Vladimir Pachmann</persName>
             </signed>
 
             <signed>
-                <persName corresp="https://d-nb.info/gnd/116204400">Fannie Bloomfield Zeisler</persName>
+                <persName type="artist" corresp="https://d-nb.info/gnd/116204400">Fannie Bloomfield Zeisler</persName>
             </signed>
 
             <lb />
-            <signed><persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName></signed>
+            <signed><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName></signed>
             <signed><gap reason="illegible" /></signed>
 
             <lb />
-            <signed><persName corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName></signed>
+            <signed><persName type="artist" corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName></signed>
             <signed>Cecile de Horvath</signed>
 
             <lb />
             <signed>Magdleine Brard</signed>
-            <signed><persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName></signed>
+            <signed><persName type="artist" corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName></signed>
 
             <lb />
             <signed><gap reason="illegible" /></signed>
@@ -121,29 +121,29 @@
 
             <lb />
             <signed><gap reason="illegible" /></signed>
-            <signed><persName corresp="https://d-nb.info/gnd/119281953">Rudolf Ganz</persName></signed>
+            <signed><persName type="artist" corresp="https://d-nb.info/gnd/119281953">Rudolf Ganz</persName></signed>
 
             <lb />
             <signed><gap reason="illegible" /></signed>
 
             <lb />
-            <signed><persName corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName></signed>
-            <signed><persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName></signed>
+            <signed><persName type="artist" corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName></signed>
+            <signed><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName></signed>
 
             <lb />
             <signed>Richard Singer</signed>
-            <signed><unclear reason="#illegible">Epstein</unclear></signed>
+            <signed><unclear type="artist" reason="#illegible">Epstein</unclear></signed>
 
             <lb />
-            <signed><persName corresp="https://d-nb.info/gnd/118524186">Claude Debussy</persName></signed>
-            <signed><persName corresp="https://d-nb.info/gnd/119362112">Alfred Casella</persName></signed>
+            <signed><persName type="artist" corresp="https://d-nb.info/gnd/118524186">Claude Debussy</persName></signed>
+            <signed><persName type="artist" corresp="https://d-nb.info/gnd/119362112">Alfred Casella</persName></signed>
 
             <lb />
-            <signed><persName corresp="https://d-nb.info/gnd/118697641">Edvard Grieg</persName></signed>
+            <signed><persName type="artist" corresp="https://d-nb.info/gnd/118697641">Edvard Grieg</persName></signed>
             <signed><gap reason="illegible" /></signed>
             
             <lb />
-            <signed><persName corresp="https://d-nb.info/gnd/117110450">Xaver Scharwenka</persName></signed>
+            <signed><persName type="artist" corresp="https://d-nb.info/gnd/117110450">Xaver Scharwenka</persName></signed>
             <signed><gap reason="illegible" /></signed>
 
             <lb />
@@ -166,7 +166,7 @@
         </div>
         <div facs="#eSc_textblock_d4a2aae1">
             <lb />The magic reproduction
-            <lb />of Welte-Mignon Licensee
+            <lb />of <name type="brand">Welte-Mignon Licensee</name>
             <lb />
             <seg ana="#educational_use">
                 makes available for professional
@@ -182,7 +182,7 @@
                     <lb />quent repetition
                 </seg>, the playing of
                 <lb />the host of artists who record for
-                <lb />Welte-Mignon Licensee is in itself
+                <lb /><name type="brand">Welte-Mignon Licensee</name> is in itself
                 <lb />a liberal education.
             </seg>
             <lb />Many recordings by notable ac-
@@ -194,8 +194,8 @@
             <lb />terpretations of its sole accom-
             <lb />paniment.
             
-            <lb />The Welte-Mignon Licensee
-            <lb />Action may be obtained in 115
+            <lb />The <name type="brand">Welte-Mignon Licensee
+            <lb />Action</name> may be obtained in 115
             <lb />makes of pianos. Write for the
             <lb />beautiful brochure.
 
@@ -208,10 +208,10 @@
             <lb />
             
             <persName>William C. Heaton, President</persName>
-            <lb />Welte-Mignon
+            <lb /><name type="brand">Welte-Mignon
+            <lb />Licensee</name>
             <lb />
-            THE MASTER'S FINGERS ON YOUR PIANO
-            <lb />Licensee
+            <seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg>
         </div>
     </text>
 </TEI>

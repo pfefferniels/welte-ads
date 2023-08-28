@@ -88,14 +88,14 @@
     <text>
         <div facs="#eSc_textblock_32cfe758">
             <hi rendition="#c #k">
-                <lb />M. Welte &amp; Söhne
-                <lb />Freiburg, Baden
+                <lb /><orgName>M. Welte &amp; Söhne</orgName>
+                <lb /><placeName>Freiburg, Baden</placeName>
                 <lb />Take pleasure in announcing that
                 <lb />the greatest living pianists
-                <lb /><persName corresp="https://d-nb.info/gnd/118986724">Ignace J. Paderewski</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Ignace J. Paderewski</persName>
                 <space dim="horizontal" />
-                <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreño</persName>
+                <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreño</persName>
                 <lb />And the world renowned organists
     
                 <lb />Enrico Bossi
@@ -117,10 +117,10 @@
                 <lb />can be heard at their
                 <lb />American Studio <address>273 Fifth Avenue, New York</address>
                 <lb />through the medium of the
-                <lb />Welte-Mignon Autograph Pianos
+                <lb /><name type="brand">Welte-Mignon Autograph Pianos</name>
                 <lb />and
-                <lb />Welte-Philharmonic
-                <lb />Autograph Organs
+                <lb /><name type="brand">Welte-Philharmonic
+                <lb />Autograph Organs</name>
                 <lb />These reproduction instruments are shown in the most
                 <lb />artistic styles, and form a
                 <seg ana="#home" resp="#np" type="topic">

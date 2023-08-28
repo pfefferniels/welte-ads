@@ -65,8 +65,8 @@
                 <msIdentifier>
                   <repository>University of Illinois</repository>
                   <idno>
-                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=192</idno>
-                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=308</idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&amp;seq=192</idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&amp;seq=308</idno>
                   </idno>
                 </msIdentifier>
               </msDesc>
@@ -97,7 +97,7 @@
               <msIdentifier>
                 <repository>University of California</repository>
                 <idno>
-                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.c038417028&seq=732</idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.c038417028&amp;seq=732</idno>
                 </idno>
               </msIdentifier>
             </msDesc>
@@ -128,7 +128,7 @@
               <msIdentifier>
                 <repository>University of Michigan</repository>
                 <idno>
-                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015039496248&seq=938</idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015039496248&amp;seq=938</idno>
                 </idno>
               </msIdentifier>
             </msDesc>
@@ -159,7 +159,7 @@
               <msIdentifier>
                 <repository>University of California</repository>
                 <idno>
-                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.b2922282&seq=870</idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.b2922282&amp;seq=870</idno>
                 </idno>
               </msIdentifier>
             </msDesc>
@@ -188,14 +188,16 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_41ccdcb2">
-            <lb />THE MASTER'S FINGERS ON YOUR PIANO</div>
+            <lb /><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg>
+        </div>
+
         <div facs="#eSc_textblock_89648e14">
             <lb />
             <hi rendition="#larger">
                 <hi rendition="#i">
                     Possessed only by
                 </hi>
-                <lb />Wele-Mignon
+                <lb /><name type="brand">Welte-Mignon</name>
             </hi>
         </div>
         <div facs="#eSc_textblock_bab75d2b" rendition="#framed">
@@ -203,9 +205,9 @@
                 <lb /><hi rendition="#in">Your</hi> whole conception of what a
                 <lb />musical instrument can do will be
                 <lb />changed when you hear a reproducing
-                <lb />piano equipped with the famous WELTE-
-                <lb />MIGNON Licensee Reproducing Action.
-                <lb />For, only WELTE-MIGNON*
+                <lb />piano equipped with the famous <name type="brand">WELTE-
+                <lb />MIGNON Licensee Reproducing Action</name>.
+                <lb />For, only <name type="brand">WELTE-MIGNON*</name>
                 <hi rendition="#i">
                     <seg ana="#secret">
                         possesses
@@ -220,9 +222,10 @@
 
             <p>
                 <lb />Imagine
-                <persName corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName>,
-                <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-                <lb /><persName corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>-the world's greatest pianists
+                <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>–the
+                world's greatest pianists
                 <lb />-performing
                 <seg ana="#home" resp="#np" type="topic">
                     in your own home
@@ -235,11 +238,11 @@
                 </seg>
             </p>
             <p>
-                <lb />You can have WELTE-MIGNON* in
-                <lb />112 different pianos. There are WELTE-
-                <lb />MIGNON* dealers everywhere.
-                <lb />The famous WELTE-MIGNON* Re-
-                <lb />producing Action can be installed in your
+                <lb />You can have <name type="brand">WELTE-MIGNON*</name> in
+                <lb />112 different pianos. There are <name type="brand">WELTE-
+                <lb />MIGNON*</name> dealers everywhere.
+                <lb />The famous <name type="brand">WELTE-MIGNON* Re-
+                <lb />producing Action</name> can be installed in your
                 <lb />grand piano. Our beautiful brochure
                 <lb />sent on request.
             </p>
@@ -250,7 +253,7 @@
             
             <hi rendition="#i">
                 <lb />*Licensed under original
-                <lb />Welte-MIGNON patents
+                <lb /><name type="brand">Welte-MIGNON</name> patents
             </hi>
         </div>
 

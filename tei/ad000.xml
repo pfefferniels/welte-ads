@@ -89,8 +89,8 @@
             <lb />The
             <head>
                <orgName>
-                  <lb />Welte-
-                  <lb />Mignon
+                  <lb /><name type="brand">Welte-
+                  <lb />Mignon</name>
                </orgName>
             </head>
          </hi>
@@ -109,7 +109,7 @@
       <div facs="#eSc_textblock_7146ee55">
          <hi rendition="#c">
             <hi rendition="#i">
-               <lb />The <orgName>Welte-Mignon</orgName>
+               <lb />The <name type="brand">Welte-Mignon</name>
                <seg resp="#np" type="topic" ana="#exact_reproduction">
                   faithfully reproduces the
                   <lb />individual interpretation of the
@@ -127,9 +127,9 @@
          <hi rendition="#c">
             <lb /><orgName>Steinway and Sons</orgName>,
             <lb />
-            <placeName>
+            <address>
                Steinway Hall,<lb />Lower Seymour Street, W.
-            </placeName>
+            </address>
          </hi>
       </div>
    </text>

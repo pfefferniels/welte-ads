@@ -63,7 +63,7 @@
                 <msIdentifier>
                   <repository>University of Michigan</repository>
                   <idno>
-                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015082311062&seq=672</idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015082311062&amp;seq=672</idno>
                   </idno>
                 </msIdentifier>
               </msDesc>
@@ -94,7 +94,7 @@
               <msIdentifier>
                 <repository>University of Minnesota</repository>
                 <idno>
-                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=umn.319510028059420&seq=238</idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=umn.319510028059420&amp;seq=238</idno>
                 </idno>
               </msIdentifier>
             </msDesc>
@@ -208,7 +208,7 @@
                 <lb />it."
             </quote>
             <seg ana="#exact_reproduction" resp="#np" type="topic">
-                The Welte-Mignon Licensee Reproducing Piano
+                The <name type="brand">Welte-Mignon Licensee Reproducing Piano</name>
                 <lb />permits not the slightest variation from the artistry
                 <lb />of the great musician. Its playing is the artist's play-<lb />ing;
             </seg>
@@ -220,7 +220,7 @@
         </div>
 
         <div facs="#eSc_textblock_611d3239">
-            <lb />Welte-Mignon Licensee Reproducing Pianos are
+            <lb /><name type="brand">Welte-Mignon Licensee Reproducing Pianos</name> are
             <lb />offered by 115 leading piano manufacturers. Piano
             <lb />merchants everywhere are anxious to demonstrate to
             <lb />you. Send for our Book of Famous Artists. The
@@ -233,10 +233,10 @@
         </div>
 
         <div facs="#eSc_textblock_7a7e6e27">
-            <lb />Welte-Mignon
-            <lb />Reproducing Piano
+            <lb /><name type="brand">Welte-Mignon
             <lb />Licensee
-            <lb />The Master's Fingers on your Piano
+            <lb />Reproducing Piano</name>
+            <lb /><seg type="slogan">The Master's Fingers on your Piano</seg>
         </div>
         <div facs="#eSc_textblock_dbf156ed" type="illustration">
             <figure>

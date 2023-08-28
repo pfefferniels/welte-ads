@@ -63,7 +63,7 @@
                 <msIdentifier>
                   <repository>University of California</repository>
                   <idno>
-                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.b000556132&seq=1531</idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.b000556132&amp;seq=1531</idno>
                   </idno>
                 </msIdentifier>
               </msDesc>
@@ -97,7 +97,7 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_6a9b7b41">
-            <lb />Rhythmic beat of a Gaucho dance<lb />-when Phanom Fingers play</div>
+            <lb />Rhythmic beat of a Gaucho dance<lb />-<seg type="slogan">when Phanom Fingers play</seg></div>
         <div facs="#eSc_textblock_d7c2159d">
             <lb />These are the
             <seg ana="#phantom_body" resp="#np" type="topic">
@@ -110,7 +110,7 @@
                 <lb />ed forever
             </seg>,
             <seg ana="#miracle" resp="#np" type="topic">
-                through the<lb />miracle of Welte-<lb />Mignon*
+                through the<lb />miracle of <name type="brand">Welte-<lb />Mignon*</name>
                 reproduction.
             </seg>
         </div>
@@ -122,10 +122,10 @@
             <lb />greatest masters can interpret these
             <lb />as a true music-lover demands?
             <lb />Why should you accept less when
-            <lb />you can have a Welte-Mignon?
+            <lb />you can have a <name type="brand">Welte-Mignon</name>?
             <lb />Why should you be satisfied with
             <lb />any but the greatest of reproducing
-            <lb />instruments with its hundrends of
+            <lb />instruments with its hundreds of
             <lb />world-famous pianists?
             <lb />What a Christmas gift! The
         </div>
@@ -135,10 +135,10 @@
                 phantom fingers
             </seg>
             of
-            <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-            <persName corresp="https://d-nb.info/gnd/116014490">De<lb />Pachmann</persName>,
-            <persName corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
-            <persName corresp="https://d-nb.info/gnd/116327642">Gabrilowitsch</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De<lb />Pachmann</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116327642">Gabrilowitsch</persName>,
             <lb />and scores of others -
             <lb />
             <seg ana="#home" resp="#np" type="topic">
@@ -148,7 +148,7 @@
                 whenever you wish.
             </seg>
             <lb />See the
-            Welte-Mignon* today.
+            <name type="brand">Welte-Mignon*</name> today.
             <seg ana="#invisibility" resp="#np" type="topic">
                 It
                 <lb />is invisible
@@ -165,10 +165,10 @@
         </div>
 
         <div facs="#eSc_textblock_80ba3e2b">
-            <lb />Welte-Mignon
-            <lb />(Licensee)
+            <lb /><name type="brand">Welte-Mignon
+            <lb />(Licensee)</name>
             <lb />Hear it–in comparison. There's a nearby dealer
-            <lb />*Licensed under the original Welte-Mignon patents.
+            <lb />*Licensed under the original <name type="brand">Welte-Mignon</name> patents.
         </div>
         <div facs="#eSc_textblock_5e73ca70" type="illustration" />
         <div facs="#eSc_textblock_76fba554" type="illustration" />

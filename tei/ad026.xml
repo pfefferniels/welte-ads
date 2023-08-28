@@ -63,8 +63,7 @@
                     <msIdentifier>
                         <repository>University of California</repository>
                         <idno>
-                            <idno type="URLImages">
-                                https://babel.hathitrust.org/cgi/pt?id=uc1.b000556132&seq=662</idno>
+                            <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.b000556132&amp;seq=662</idno>
                         </idno>
                     </msIdentifier>
                 </msDesc>
@@ -101,9 +100,9 @@
     <text>
         <div facs="#eSc_textblock_470ea0d3">
             <lb />The Rolling Sweep of a Storm Tossed Sea
-            <lb />
-            <seg ana="#phantom_body" resp="#np" type="topic">
-                –when Phantom Fingers play
+            <lb />–
+            <seg ana="#phantom_body" resp="#np" type="topic slogan">
+                when Phantom Fingers play
             </seg>
         </div>
         <div facs="#eSc_textblock_25ac3298">
@@ -113,10 +112,13 @@
             </seg>
             <seg ana="#immortality" resp="#np" type="topic">
                 of a thousand<lb />immortal pianists;
-            </seg> their<lb />glorious
-            genius preserv-<lb />ed forever, through
+            </seg> their
+            <lb />glorious genius preserv-
+            <lb />ed forever, through
             <seg ana="#miracle" resp="#np" type="topic">
-                the<lb />miracle of Welte-<lb />Mignon*
+                the
+                <lb />miracle of <name type="brand">Welte-
+                <lb />Mignon*</name>
                 reproduction
             </seg>.
         </div>
@@ -141,7 +143,7 @@
             <seg ana="#touch_of_a_button">
                 whenever you wish.
             </seg>
-            <lb />The Welte-Mignon* brings a won-
+            <lb />The <name type="brand">Welte-Mignon*</name> brings a won-
             <lb />drous gift to you.
             <seg ana="#exact_reproduction">
                 With uncanny
@@ -162,7 +164,7 @@
             </seg>
             <lb />again,
             <seg ana="#touch_of_a_button">at your command.</seg>
-            <lb />The Welte-Mignon*
+            <lb />The <name type="brand">Welte-Mignon*</name>
             <seg ana="#invisibility" resp="#np" type="topic">
                 is
                 invisible
@@ -172,14 +174,18 @@
             <lb />practically every good make of
             <lb />piano, either grand or upright.
             <lb />Write for interesting brochure.
-            <lb />Auto-Pneumatic Action Co., W.
-            <lb />C. Heaton, President, 12th Ave.
-            <lb />at 51st St., New York.</div>
+            <lb /><orgName>Auto-Pneumatic Action Co.</orgName>, <persName>W.
+            <lb />C. Heaton</persName>, President,
+            <address>
+                12th Ave.
+                <lb />at 51st St., New York
+            </address>.
+        </div>
         <div facs="#eSc_textblock_7a9b17c3">
-            <lb />Welte-Mignon
-            <lb />(Licensee)
+            <lb /><name type="brand">Welte-Mignon
+            <lb />(Licensee)</name>
             <lb />Hear it-in comparison. There's a nearby dealer
-            <lb />*Licensed under the original Welte-Mignon patents.
+            <lb />*Licensed under the original <name type="brand">Welte-Mignon</name> patents.
         </div>
         <div facs="#eSc_textblock_535b87e4" type="illustration">
             <figure>

@@ -107,7 +107,7 @@
                 <head>
                     <hi rendition="#c">
                         <lb />THE
-                        <lb />Welte-Mignon 
+                        <lb /><name type="brand">Welte-Mignon</name> 
                     </hi>
                 </head>
                 <lb />
@@ -115,12 +115,16 @@
                     Brings to your home
                 </seg> the actual living perform-
                 <lb />ances of
-                <persName corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
-                <persName corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>,
-                <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
                 <lb />
-                <persName corresp="https://d-nb.info/gnd/116204400">Bloomfield-Zeisler</persName>
-                and a hundred other great
+                <persName type="artist" corresp="https://d-nb.info/gnd/116204400">Bloomfield-Zeisler</persName>
+                and
+                <num type="cardinal" subtype="artist-count" value="100">
+                    a hundred
+                </num>
+                other great
                 <lb />pianists.
             </div>
             
@@ -130,16 +134,16 @@
                         <lb />The science of musical reproduction has progressed
                         <lb />through the various stages-experiment, medioc-
                         <lb />rity, excellence-but until the introduction of the
-                        <lb />Welte-Mignon
+                        <lb /><name type="brand">Welte-Mignon</name>
                         <lb />it has never reached supreme per-
                         <lb />fection. But today the science has reached its
                         <lb />apex, the goal has been attained and beyond the splendid
-                        <lb />achievement realized in the Welte-Mignon it is im-
+                        <lb />achievement realized in the <name type="brand">Welte-Mignon</name> it is im-
                         <lb />possible to go.
                     </seg>
                 </p>
                 <p>
-                    <lb />The Welte-Mignon brings to the
+                    <lb />The <name type="brand">Welte-Mignon</name> brings to the
                     <lb />music-lover the actual performances of every great living pian-
                     <lb />ist.
                     
@@ -152,14 +156,14 @@
                 </p>
                 <p>
                     <seg ana="#analogy_to_phonograph" resp="#np" type="topic">
-                        <lb />What the Victor is doing for the famous singers
-                        <lb />of the world the Welte-Mignon is
+                        <lb />What the <name type="brand">Victor</name> is doing for the famous singers
+                        <lb />of the world the <name type="brand">Welte-Mignon</name> is
                         <lb />accomplishing for the pianists.
                     </seg>
                     But with this difference: The
-                    <lb />Victor registers the voice vibrations on the disc,
+                    <lb /><name type="brand">Victor</name> registers the voice vibrations on the disc,
                     <lb />whereas the sensitive reproducing devices of the
-                    <lb />Welte-Mignon are of such nature that every dupli-
+                    <lb /><name type="brand">Welte-Mignon</name> are of such nature that every dupli-
                     <lb />cate performance IS MADE DIRECTLY ON THE
                     <lb />PIANO,
                     <seg ana="#exact_reproduction">
@@ -171,16 +175,17 @@
                 </p>
                 <p>
                     <lb />The series of instruments containing the repro-
-                    <lb />duction devices are the Welte-Mignon, as illustrated
-                    <lb />above, the Steinway-Welte, an upright Steinway
-                    <lb />piano combined with the Welte-Mignon, and the
-                    <lb />Cabinet-Welte, which may be attached to any grand
+                    <lb />duction devices are the <name type="brand">Welte-Mignon</name>, as illustrated
+                    <lb />above, the <name type="brand">Steinway-Welte</name>, an upright
+                    <name type="brand">Steinway</name>
+                    <lb />piano combined with the <name type="brand">Welte-Mignon</name>, and the
+                    <lb /><name type="brand">Cabinet-Welte</name>, which may be attached to any grand
                     <lb />or upright piano of any make.
                 </p>
 
                 <lb />Call or Write for Descriptive Literature
                 <lb />We will gladly mail to interested parties descriptive literature and
-                <lb />prices of the Welte-Mignon instruments. We are especially desirous
+                <lb />prices of the <name type="brand">Welte-Mignon</name> instruments. We are especially desirous
                 <lb />that you come to our store and give these instruments your personal
                 <lb />inspection.
 
@@ -190,8 +195,13 @@
 
                 <hi rendition="#c">
                     <lb /><orgName key="birkel">Geo J. Birkel Company</orgName>
-                    <lb />Steinway, Cecilian and Victor Dealers.
-                    <lb />345-347 South Spring Street
+                    <lb />
+                    <name type="brand">Steinway</name>,
+                    <name type="brand">Cecilian</name> and
+                    <name type="brand">Victor</name> Dealers.
+                    <address>
+                        <lb />345-347 South Spring Street
+                    </address>
                 </hi>
             </div>
     </text>

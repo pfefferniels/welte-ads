@@ -134,24 +134,35 @@
             <lb /><seg ana="#virtual_presence" type="topic" resp="#np">Man meint den betreffenden Künstler in Person<lb />vor sich zu haben und ihn
             spielen zu hören.</seg><lb /><persName corresp="https://d-nb.info/gnd/118786253">Nickisch</persName>.</div>
         <div facs="#eSc_textblock_9c944536">
-            <lb />Was ich Mignon vorzuwerfen hae, ist sein<lb />Name, weil es weder der gewaltigen
-            Wirkung dieses<lb />Instruments noch seiner kolossalen Bedeutung ent-<lb />spricht. <lb /><persName
-                corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>.</div>
+            <quote>
+                <lb />Was ich Mignon vorzuwerfen hae, ist sein
+                <lb />Name, weil es weder der gewaltigen Wirkung dieses
+                <lb />Instruments noch seiner kolossalen Bedeutung ent-
+                <lb />spricht.
+            </quote>
+            <lb /><persName corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>.
+        </div>
         <div facs="#eSc_textblock_d5bad035">
-            <lb />
-            <seg ana="#miracle" resp="#np" type="topic">
-                Man muss das Wunder gehört haben, um es<lb />zu glauben.
-            </seg>
+            <quote>
+                <lb />
+                <seg ana="#miracle" resp="#np" type="topic">
+                    Man muss das Wunder gehört haben, um es<lb />zu glauben.
+                </seg>
+            </quote>
             <lb />
             <persName corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName>.
         </div>
         <div facs="#eSc_textblock_c91feaa0">
-            <lb />Welte Mignon ist für mich das <seg ana="#unreached_ideal" resp="#np" type="topic">unerreichte Ideal<lb />aller Musikinstrumente</seg>.<lb />Max
-            Reger.
+            <quote>
+                <lb />Welte Mignon ist für mich das <seg ana="#unreached_ideal" resp="#np" type="topic">unerreichte Ideal<lb />aller Musikinstrumente</seg>.
+            </quote>
+            <lb /><persName corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>.
         </div>
         <div facs="#eSc_textblock_031c0fe4">
-            <lb />Der einzige Apparat der auf künstlerische<lb />Bedeutung Anspruch machen kann.<lb />
-            <persName corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>.
+            <quote>
+                <lb />Der einzige Apparat der auf künstlerische<lb />Bedeutung Anspruch machen kann.
+            </quote>
+            <lb /><persName corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>.
         </div>
         <div facs="#eSc_textblock_fce1a771">
             <lb />Mit dem Welte Mignon ist, wie die berühmtesten Künstler anerkennen, ein
@@ -186,10 +197,15 @@
                 </hi>
             </hi>
             <lb />Eintrittskarten zu 1.50, 1. – u.
-            50 Pf. sind bei Alfred Schmid Nachf. Theatinerstr. 34, zu haben.<lb />Donnerstag
-            Nachmittag am 3 1/2 Uhr auch am Saaleingang.</div>
+            50 Pf. sind bei <orgName>Alfred Schmid Nachf.</orgName>
+            <address>
+                Theatinerstr. 34
+            </address>, zu haben.
+            <lb />Donnerstag Nachmittag am 3 1/2 Uhr auch am Saaleingang.
+        </div>
         <div facs="#eSc_textblock_c8ece5c3">
-            <lb />Diese Erfindung ist das unglaublichste an Vol-<lb />lendung, das man sich denken
-            kann.<lb /><persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>.</div>
+            <lb />Diese Erfindung ist das unglaublichste an Vol-
+            <lb />lendung, das man sich denken kann.
+            <lb /><persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>.</div>
     </text>
 </TEI>

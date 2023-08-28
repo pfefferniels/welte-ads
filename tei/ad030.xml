@@ -63,7 +63,7 @@
                 <msIdentifier>
                   <repository>University of Michigan</repository>
                   <idno>
-                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015082311062&seq=915</idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015082311062&amp;seq=915</idno>
                   </idno>
                 </msIdentifier>
               </msDesc>
@@ -94,7 +94,7 @@
               <msIdentifier>
                 <repository>University of Minnesota</repository>
                 <idno>
-                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=umn.319510028059420&seq=701</idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=umn.319510028059420&amp;seq=701</idno>
                 </idno>
               </msIdentifier>
             </msDesc>
@@ -152,8 +152,8 @@
             <lb />
             <seg ana="#hostess" resp="#np" type="topic">
                 It is with pardonable pride that the
-                <lb />hostess calls attention to her Welte-
-                <lb />Mignon Licensee Reproducing Piano.
+                <lb />hostess calls attention to her <name type="brand">Welte-
+                <lb />Mignon Licensee Reproducing Piano</name>.
             </seg>
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 <lb />Its playing is the faithfhul rendition
@@ -166,8 +166,8 @@
 
         <div facs="#eSc_textblock_f1136b4e">
             <lb />Your piano merchant will be happy
-            <lb />to prove this to you. Welte-Mignon
-            <lb />Licensee Reproducing Pianos are
+            <lb />to prove this to you. <name type="brand">Welte-Mignon
+            <lb />Licensee Reproducing Pianos</name> are
             <lb />offered by 115 leading piano man-
             <lb />ufacturers. Send for our Book of
             <lb />Famous Artists.
@@ -185,11 +185,11 @@
             </address>
         </div>
         <div facs="#eSc_textblock_06a921c4">
-            <lb />Welte-Mignon
+            <lb /><name type="brand">Welte-Mignon
             <lb />Licensee
-            <lb />Reproducing Piano
-            <lb />The Master's Fingers on
-            Your Piano.
+            <lb />Reproducing Piano</name>
+            <lb /><seg type="slogan">The Master's Fingers on
+            Your Piano.</seg>
         </div>
         <div facs="#eSc_textblock_cd3132d7" type="illustration">
             <figure>

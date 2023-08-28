@@ -63,7 +63,7 @@
                 <msIdentifier>
                   <repository>University of Illinois</repository>
                   <idno>
-                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=236</idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&amp;seq=236</idno>
                   </idno>
                 </msIdentifier>
               </msDesc>
@@ -125,7 +125,7 @@
               <msIdentifier>
                 <repository>University of California</repository>
                 <idno>
-                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.c038417028&seq=1383</idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.c038417028&amp;seq=1383</idno>
                 </idno>
               </msIdentifier>
             </msDesc>
@@ -156,7 +156,7 @@
               <msIdentifier>
                 <repository>University of Michigan</repository>
                 <idno>
-                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015039496248&seq=1375</idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015039496248&amp;seq=1375</idno>
                 </idno>
               </msIdentifier>
             </msDesc>
@@ -187,7 +187,7 @@
               <msIdentifier>
                 <repository>University of California</repository>
                 <idno>
-                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.b2922283&seq=317</idno>
+                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.b2922283&amp;seq=317</idno>
                 </idno>
               </msIdentifier>
             </msDesc>
@@ -220,13 +220,13 @@
         <div facs="#eSc_textblock_535af4ac">
             <lb />
             <hi rendition="#k">
-                <seg type="topic" ana="#virtual_presence" resp="#np">
+                <seg type="topic slogan" ana="#virtual_presence" resp="#np">
                     The Master's Fingers On your Piano
                 </seg>
             </hi></div>
         <div facs="#eSc_textblock_ca7a7573">
             <lb />Think what
-            <lb />Welte-Mignon
+            <lb /><name type="brand">Welte-Mignon</name>
             <lb />means to you
             <lb />Imagine a musical instrument that
             <lb />
@@ -236,8 +236,8 @@
             flawless reproduc-
             <lb />tions of the playing of the greatest piano-
             <lb />forte geniuses, and you have a reproducing
-            <lb />piano equipped with the famous WELTE-
-            <lb />MIGNON Licensee Reproducing Action.
+            <lb />piano equipped with the famous <name type="brand">WELTE-
+            <lb />MIGNON Licensee Reproducing Action</name>.
             <lb />Think what this means:
             <persName corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName>,
             <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
@@ -248,15 +248,15 @@
                 Not<lb />approximations of their playing, but their<lb />very individuality.
             </seg>
             <seg ana="#exact_reproduction">
-                Only Welte-Mignon<lb />possesses this secret of perfect reproduction.
+                Only <name type="brand">Welte-Mignon</name><lb />possesses this secret of perfect reproduction.
             </seg>
             <lb />Select any piano you prefer but be sure the
-            <lb />reproducing action is WELTE-MIGNON.*
-            <lb />You can have WELTE-MIGNON* in 112
-            <lb />different pianos. There are WELTE-
-            <lb />MIGNON* dealers everywhere.
-            <lb />The famous WELTE-MIGNON* Repro-
-            <lb />ducing Action can be installed in your
+            <lb />reproducing action is <name type="brand">WELTE-MIGNON.*</name>
+            <lb />You can have <name type="brand">WELTE-MIGNON*</name> in 112
+            <lb />different pianos. There are <name type="brand">WELTE-
+            <lb />MIGNON*</name> dealers everywhere.
+            <lb />The famous <name type="brand">WELTE-MIGNON* Repro-
+            <lb />ducing Action</name> can be installed in your
             <lb />grand piano. Our beautiful brochure sent
             <lb />on request.
         </div>
@@ -266,7 +266,7 @@
             <address>
                 653 West 51st St., New
                 York City
-            </address><lb />*Licensed under original Welte-Mignon patents</div>
+            </address><lb />*Licensed under original <name type="brand">Welte-Mignon</name> patents</div>
         <div facs="#eSc_textblock_9ababb2c" type="illustration" />
         <div facs="#eSc_textblock_7badf9ac" type="illustration" />
     </text>

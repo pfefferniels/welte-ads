@@ -129,9 +129,11 @@
         <div facs="#eSc_textblock_c5442680">
             <hi rendition="#c">
                 <head>
-                    <lb />The<lb />Welte Mignon Studios </head>
-                <lb />Offer you exceptional
-                opportunities </hi>
+                    <lb />The
+                    <lb /><orgName>Welte Mignon Studios</orgName>
+                </head>
+                <lb />Offer you exceptional opportunities
+            </hi>
         </div>
         <div facs="#eSc_textblock_a6014ae2">
             <lb />
@@ -149,98 +151,144 @@
             </hi>
         </div>
         <div facs="#eSc_textblock_2389efb5">
-            <lb />Accept as soon as you can our cordial invita-<lb />tion to spend a delightful hour
-            or two with<lb />the masters of classic or popular music at our<lb />beautiful studios.
-            We shall gladly play your fav-<lb />orite selections. We shall place at your disposal
-            the<lb />services of a staff of musicians whose advice is al-<lb />ways ready but is
-            never intruded. We offer a re-<lb />markable collection of instruments at reasonable<lb />prices
-            and on exceptional terms.</div>
+            <lb />Accept as soon as you can our cordial invita-
+            <lb />tion to spend a delightful hour or two with
+            <lb />the masters of classic or popular music at our
+            <lb />beautiful studios. We shall gladly play your fav-
+            <lb />orite selections. We shall place at your disposal the
+            <lb />services of a staff of musicians whose advice is al-
+            <lb />ways ready but is never intruded. We offer a re-
+            <lb />markable collection of instruments at reasonable
+            <lb />prices and on exceptional terms.
+        </div>
         <div facs="#eSc_textblock_2cbb468e">
             <lb />If <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
             played to you, on your own piano, ex-
             <lb />actly as he played at the very zenith of his career when
             <lb />those marvelous fingers performed miracles, you could
             <lb />count it a great event in your life. This is what the
-            <lb />WELTE MIGNON Reproducing Piano will do for you.
+            <lb /><name type="brand">WELTE MIGNON Reproducing Piano</name> will do for you.
             <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
-            <seg ana="#soulfulness" type="topic" resp="#np">played his soul into the Welte</seg>,
+            <seg ana="#soulfulness" type="topic" resp="#np">
+                played his soul into the <name type="brand">Welte</name>
+            </seg>,
             <seg ana="#immortality" type="topic" resp="#np">knowing<lb />full well that thus could he better pass on
             to coming gen-<lb />erations the perfect expression of his genius</seg>. It is the
             <seg ana="#soulfulness" type="topic" resp="#np">soul-<lb />expression</seg>
             that 
-            <seg ana="#listening" type="topic" resp="#np">you feel when you listen to the Welte</seg>;
+            <seg ana="#listening" type="topic" resp="#np">
+                you feel when you listen to the <name type="brand">Welte</name>
+            </seg>;
             and<lb />
             <seg ana="#repeatability" resp="#np" type="topic">
                 you may hear it not only once, but
                 as often as you wish.
             </seg>
-            <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-            <persName corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>,
-            <persName corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
-            <persName corresp="https://d-nb.info/gnd/116014490">de Pachman</persName>,
-            <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>,
-            <persName corresp="https://d-nb.info/gnd/11875081X">Saint-<lb />Saens</persName>,
-            <persName corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
-            <persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>–156
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116014490">de Pachman</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-<lb />Saens</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>–156
             masters in all have
             <seg ana="#soulfulness" type="topic" resp="#np">
-                played into the Welte<lb />for you the very essence of their musical
+                played into the <name type="brand">Welte</name>
+                <lb />for you the very essence of their musical
                 personalities
             </seg>,
             <seg ana="#distinction_from_mechanical">
-                for Welte re-<lb />production is not "stencil cutting,"
+                for <name type="brand">Welte</name> re-
+                <lb />production is not "stencil cutting,"
             </seg> but
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 absolute tonal duplication.
             </seg>
-            <lb />There are over 5,000 record-rolls in the Welte repertoire. Come
+            <lb />There are over
+            <num type="cardinal" subtype="roll-count" value="5000">
+                5,000 record-rolls
+            </num> in the <name type="brand">Welte</name> repertoire. Come
             <lb />in to-day and hear your favorites.
             <seg ana="#affordability" resp="#np" type="topic">
-                And bear in mind that the Welte
+                And bear in mind that the <name type="brand">Welte</name>
                 <lb />is within your means, for it is sold on
                 terms–your own within reason.
             </seg>
         </div>
         <div facs="#eSc_textblock_80803b8a">
-            <lb />Our stock includes many examples of fine standard<lb />makes–
-            <orgName>Welte</orgName>, <orgName>Estey</orgName>, <orgName>Conway</orgName>,
-            and others–shown in a<lb />variety of case-designs and woods, giving you ample op-<lb />portunity
-            to find the instrument that exactly suits your<lb />taste and means. We sell all grades
-            (except "cheap").<lb />You can buy from us a really good instrument as low as<lb />$450,
-            on a series of monthly payments–terms, your own<lb />within reason.</div>
+            <lb />Our stock includes many examples of fine standard
+            <lb />makes–
+            <name type="brand">Welte</name>, <name type="brand">Estey</name>, <name type="brand">Conway</name>,
+            and others–shown in a
+            <lb />variety of case-designs and woods, giving you ample op-
+            <lb />portunity to find the instrument that exactly suits your
+            <lb />taste and means. We sell all grades (except "cheap").
+            <lb />You can buy from us a really good instrument as low as
+            <lb />
+            <measure commodity="unspecified" unit="dollar" quantity="450">
+                $450
+            </measure>,
+            on a series of monthly payments–terms, your own
+            <lb />within reason.
+        </div>
         <div facs="#eSc_textblock_b3e47c4c">
-            <lb />Pianos and<lb />Player-Pianos<lb />at the Prices<lb />You expect<lb />to Pay</div>
-            <div facs="#eSc_textblock_53814f97">
-                <lb />WELTE TERMS</div>
-            <div facs="#eSc_textblock_e007686d">
-            <lb />We maintain that if music is to be<lb />enjoyed by everyone, it must be with<lb />in
-            everyone's reach. So we placed<lb />every instrument in the Welte<lb />Mignon Studios
-            just there–within<lb />EVERYONE'S means. Pick out any<lb />instrument you like, from
-            lowest to highest price, and buy<lb />it on terms that are practically your own.</div>
+            <lb />Pianos and
+            <lb />Player-Pianos
+            <lb />at the Prices
+            <lb />You expect
+            <lb />to Pay
+        </div>
+
+        <div facs="#eSc_textblock_53814f97">
+            <lb />WELTE TERMS</div>
+        <div facs="#eSc_textblock_e007686d">
+            <lb />We maintain that if music is to be
+            <lb />enjoyed by everyone, it must be with
+            <lb />in everyone's reach. So we placed
+            <lb />every instrument in the <orgName>Welte
+            <lb />Mignon Studios</orgName> just there–within
+            <lb />EVERYONE'S means. Pick out any
+            <lb />instrument you like, from lowest to highest price, and buy
+            <lb />it on terms that are practically your own.
+        </div>
         <div facs="#eSc_textblock_cd6fbfd8">
-            <lb />A wonderful showing of Phonographs</div>
+            <lb />A wonderful showing of Phonographs
+        </div>
         <div facs="#eSc_textblock_4ba7b7ec">
-            <lb />VICTROLAS</div>
+            <lb /><name type="brand">VICTROLAS</name>
+        </div>
         <div facs="#eSc_textblock_3c860cc6">
-            <lb />In our Victor department are all the latest<lb />designs of this standard talking
-            machine<lb />as well as a complete stock of the new<lb />records. You will find no
-            pleasanter sur-<lb />roundings in which to listen to your favorite<lb />music<lb />Visitors
-            at Welte Mignon Studios are not<lb />importuned to buy, but when you do buy<lb />you
-            find prices no higher than elsewhere.<lb />Our terms are your own within reason.</div>
+            <gap reason="irrelevant">
+                <desc>
+                    Advertises Victor products and models.
+                </desc>
+            </gap>
+        </div>
         <div facs="#eSc_textblock_c69c9e23">
-            <lb />A unique department, stocket with the<lb />famous Pathe models in beautiful cases,<lb />some
-            in period designs–Sheraton, William<lb />and mary, Jacobean, Louis XV and others<lb />–at
-            a wide range of prices. Each instru-<lb />ment fitted with the famous Pathe sapphire<lb />ball
-            reproducer, giving unsurpassed velvety<lb />sweetness and clearness of tone, and requir-<lb />ing
-            no change of needle. Let us play Pathe<lb />for you. Terms your own within reason.</div>
+            <gap reason="irrelevant">
+                <desc>
+                    Advertises Pathe products and models
+                </desc>
+            </gap>
+        </div>
+
         <div facs="#eSc_textblock_3838333f">
-            <lb />PATHE</div>
+            <lb /><name type="brand">PATHE</name>
+        </div>
+
         <div facs="#eSc_textblock_86963cd3">
-            <lb />All the new Victor Records and Pathe<lb />Discs may be heard here as soon as they<lb />are
-            published. Late "jazz" tunes, popular<lb />hits from current shows, the melodies every-<lb />one
-            whistles and dances to, and those finer<lb />things constantly being recorded by great<lb />singers
-            and instrumentalists. Learn to re-<lb />gard the Welte Mignon Studios as your<lb />place
-            for hearing records. Drop in when-<lb />over you are "up the Avenue."</div>
+            <lb />All the new <name type="brand">Victor Records</name> and
+            <name type="brand">Pathe<lb />Discs</name> may be heard here as soon as they
+            <lb />are published. Late "jazz" tunes, popular
+            <lb />hits from current shows, the melodies every-
+            <lb />one whistles and dances to, and those finer
+            <lb />things constantly being recorded by great
+            <lb />singers and instrumentalists. Learn to re-
+            <lb />gard the <orgName>Welte Mignon Studios</orgName> as your
+            <lb />place for hearing records. Drop in when-
+            <lb />over you are "up the Avenue."
+        </div>
         <div facs="#eSc_textblock_17b7db97">
             <lb />
             <hi rendition="#c">
@@ -251,24 +299,38 @@
                 </hi>
             </hi>
 
-            <lb />No matter how many times you've visited the Studios before this,<lb />come in
-            again; there's always something new to see and to hear. Re-<lb />member that you are
-            never pressed to buy–just come in as you would<lb />visit a famous picture gallery. But
-            if you cannot come today or to-<lb />morrow; at least, send this coupon by way of
-            getting information on<lb />the latest instrument designs.</div>
+            <lb />No matter how many times you've visited the <orgName>Studios</orgName> before this,
+            <lb />come in again; there's always something new to see and to hear. Re-
+            <lb />member that you are never pressed to buy–just come in as you would
+            <lb />visit a famous picture gallery. But if you cannot come today or to-
+            <lb />morrow; at least, send this coupon by way of getting information on
+            <lb />the latest instrument designs.
+        </div>
         <div facs="#eSc_textblock_d659d9d8">
             <lb />RECORDS</div>
         <div facs="#eSc_textblock_0eb08447">
-            <lb />The<lb />Welte Mignon Studios</div>
+            <lb /><orgName>The<lb />Welte Mignon Studios</orgName>
+        </div>
         <div facs="#eSc_textblock_90b895ae">
-            <lb />6667 Fifth Avenue</div>
+            <lb /><address>667 Fifth Avenue</address>
+        </div>
         <div facs="#eSc_textblock_d72e074e">
-            <lb />The Welte Mignon Studios,<lb />667 Fifth Ave., New York.<lb />Without any
-            obligation to me, send com-<lb />plete information on the items checked:<lb />Pianos<lb />Reproducing
-            Pianos<lb />Player Pianos<lb />Victor<lb />Pathe<lb />Name<lb />Address<lb />Sun-Harald,
-            4-30.</div>
+            <lb /><orgName>The Welte Mignon Studios</orgName>,
+            <lb /><address>667 Fifth Ave., New York.</address>
+            <lb />Without any obligation to me, send com-
+            <lb />plete information on the items checked:
+            <lb />Pianos
+            <lb />Reproducing Pianos
+            <lb />Player Pianos
+            <lb /><name type="brand">Victor</name>
+            <lb /><name type="brand">Pathe</name>
+            <lb />Name
+            <lb />Address
+            <lb />Sun-Herald, 4-30.
+        </div>
         <div facs="#eSc_textblock_332b9320">
-            <lb />At 53rd Street</div>
+            <lb /><address>At 53rd Street</address>
+        </div>
         <div facs="#eSc_textblock_0f423e68" />
         <div facs="#eSc_textblock_7021785f" />
         <div facs="#eSc_textblock_7a8d435f" />

@@ -89,33 +89,46 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_ae5cff62">
-            <lb />Ein musikalisches Weltwunder.</div>
+            <lb />Ein
+            <seg ana="#miracle" type="topic" resp="#np">
+                musikalisches Weltwunder.
+            </seg>
+        </div>
+
         <div facs="#eSc_textblock_fe5bb22e">
             <lb /><seg ana="#technical_invention" type="#topic" resp="#np">Deutschem Erfindungsgeist</seg> ist es geglückt, eine geradezu phantastisch er-
             <lb />scheinende Idee - ein
             <seg ana="#analogy_to_photography" resp="#np" type="topic">
                 akustisches Seitenstück zur Platte des Photo-<lb />graphen
             </seg>
-             - zu verwirklichen.<lb />Die neue Erfindung ist das Reproduktionsklavier "Mignon",<lb />welches
-            das Spiel der berühmten Meister des Klavierspiels selbsstätig und<lb />
+            - zu verwirklichen.
+            <lb />Die neue Erfindung ist das Reproduktionsklavier <name type="brand">"Mignon"</name>,
+            <lb />welches das Spiel der berühmten Meister des Klavierspiels selbsstätig und
+            <lb />
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 völlig getreu wiedergibt.
             </seg>
             <seg ana="#distinction_from_mechanical" resp="#np" type="topic">
-                Das Reproduktionsklavier hat nichts gemein mit<lb />mechanischen
-                Spielapparaten wie Pianola, Phonola etc.,
-            </seg> sondern es hört die<lb />Unterscheidung
-            zwischen dem Spiel des aufgenommenen Künstlers und der<lb />Wiedergabe des
-            Reproduktionsklaviers überhaupt auf. Ueber die blosse Finger-<lb />fertigkeit vermag
-            dieses Wunderklavier alles, was an der Leistung eines Künst-<lb />lers das Persönliche
-            und Charakteristische ausmacht, zur Geltung zu bringen;<lb />es handelt sich also nicht
-            um ein Surrogat, sondern um eine vollwertige<lb />Vertretung.
+                Das <name type="brand">Reproduktionsklavier</name> hat nichts gemein mit
+                <lb />mechanischen Spielapparaten wie Pianola, <name type="brand">Phonola</name> etc.,
+            </seg> sondern es hört die
+            <lb />Unterscheidung zwischen dem Spiel des aufgenommenen Künstlers und der
+            <lb />Wiedergabe des Reproduktionsklaviers überhaupt auf. Ueber die blosse Finger-
+            <lb />fertigkeit vermag dieses
+            <seg ana="#miracle" type="topic" resp="#np">
+                Wunderklavier
+            </seg>
+            alles, was an der Leistung eines Künst-
+            <lb />lers das Persönliche und Charakteristische ausmacht, zur Geltung zu bringen;
+            <lb />es handelt sich also nicht um ein Surrogat, sondern um eine vollwertige
+            <lb />Vertretung.
+
             <seg ana="#immediate_recognizability" type="topic" resp="#np">
                 Wer mit der Spielweise
-                <persName corresp="https://d-nb.info/gnd/118501437">d'Alberts</persName>,
-                <persName corresp="https://d-nb.info/gnd/116662166">Lamonds</persName>,
-                <persName>Rislers</persName>,
-                <persName corresp="https://d-nb.info/gnd/117223794">Staven-<lb />hagens</persName>
+                <persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Alberts</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/116662166">Lamonds</persName>,
+                <persName type="artist">Rislers</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/117223794">Staven-<lb />hagens</persName>
                 etc. vertraut ist, vermag sie bei der
                 Wiedergabe sofort zu erkennen.
             </seg>
@@ -159,96 +172,152 @@
             <seg ana="#touch_of_a_button" resp="#np" type="topic">
                 sich jeden
                 Augenblick von den<lb />obengenannten Künstlern vorspielen lassen kann
-            </seg>, wer singt oder
-            geigt etc.<lb />wird sich sogar künstlerisch vollendet begleiten lassen können. Die
-            Bedeutung<lb />der Erfindung in denn auch von allen namhaften Pianisten anerkannt
-            worden,<lb />wie nachfolgende Aeusserungen beweisen:</div>
-        <div facs="#eSc_textblock_05c0264b">
-            <lb /><persName corresp="https://d-nb.info/gnd/118501437">Eugen d'Albert</persName>:
-            <lb />Das Mignon-Reproduktionsklavier ist
-            <lb />eine Aufsehen erregende Erfindung.
-
-            <lb /><persName corresp="https://d-nb.info/gnd/116014326">Konrad Ansorge</persName>:
-            <seg ana="#educational_use" type="topic" resp="#np">
-                <lb />Es ist ein ausgezeichnetes Bildungs-
-                <lb />mittel für Konservatorien, wo den Stu-
-                <lb />dierenden die Vortragsart eines Mei-
-                <lb />sters zu jeder Zeit vorgeführt werden
-                <lb />kann.
+            </seg>, wer singt oder geigt etc.
+            <lb />wird sich sogar
+            <seg ana="#artistic_accompaniment"  resp="#np" type="topic">
+                künstlerisch vollendet begleiten lassen können.
             </seg>
+            Die Bedeutung
+            <lb />der Erfindung in denn auch von allen namhaften Pianisten anerkannt worden,
+            <lb />wie nachfolgende Aeusserungen beweisen:
+        </div>
+        
+        <div facs="#eSc_textblock_05c0264b">
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Eugen d'Albert</persName>:
+            <quote type="testimonial">
+                <lb />Das <name type="brand">Mignon-Reproduktionsklavier</name> ist
+                <lb />eine
+                <seg ana="#technical_invention" type="topic" resp="#np">
+                    Aufsehen erregende Erfindung.
+                </seg>
+            </quote>
 
-            <lb /><persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>:
-            <lb />Mignon ist ebenso verblüffend für den
-            <lb />Eingeweihten, als sie für den Einge-
-            <lb />weihten bewunderungswürdig sein muss.
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116014326">Konrad Ansorge</persName>:
+            <quote type="testimonial">
+                <seg ana="#educational_use" type="topic" resp="#np">
+                    <lb />Es ist ein ausgezeichnetes Bildungs-
+                    <lb />mittel für Konservatorien, wo den Stu-
+                    <lb />dierenden die Vortragsart eines Mei-
+                    <lb />sters zu jeder Zeit vorgeführt werden
+                    <lb />kann.
+                </seg>
+            </quote>
+
+            <lb />
+            <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>:
+            <quote type="testimonial">
+                <lb /><name type="brand">Mignon</name> ist ebenso verblüffend für den
+                <lb />Eingeweihten, als sie
+                <seg ana="#miracle" resp="#np" type="topic">
+                    für den Einge-
+                    <lb />weihten bewunderungswürdig sein muss.
+                </seg>
+            </quote>
             
-            <lb /><persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>:
-            <lb />Meine Bewunderung für die grossartige<lb />Erfindung kennt keine Grenzen.
-            <lb /><persName>Ernst von Dohnányi</persName>:
-            <lb />Man kann nur staunen und bewundern.
-            <lb /><persName corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>:
-            <lb />Mignon ist sicher eine der wunder-
-            <lb />barsten Erfindungen, die dem mensch-
-            <lb />lichen Geiste gelungen sind.
-            <lb /><persName corresp="https://d-nb.info/gnd/116888652">Alfred
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>:
+            <quote type="testimonial">
+                <seg ana="#technical_invention" resp="#np" type="topic">
+                    <lb />Meine Bewunderung für die grossartige
+                    <lb />Erfindung kennt keine Grenzen.
+                </seg>
+            </quote>
+
+            <lb /><persName type="artist">Ernst von Dohnányi</persName>:
+            <quote type="testimonial">
+                <lb />Man kann nur staunen und bewundern.
+            </quote>
+
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>:
+            <quote type="testimonial">
+                <seg ana="#technical_invention #miracle" type="topic" resp="#np">
+                    <lb /><name type="brand">Mignon</name> ist sicher eine der wunder-
+                    <lb />barsten Erfindungen, die dem mensch-
+                    <lb />lichen Geiste gelungen sind.
+                </seg>
+            </quote>
+
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116888652">Alfred
             Grünfeld</persName>:
-            <lb />Ich gestehe gerne, dass ich geradezu
-            <lb />verblüfft war, als ich mit eigenen Ohren
-            <lb />hörte, in welcher Weise Mignon die<lb />von Künstlerhand gespielten
-            Musik-<lb />stücke wiedergibt.</div>
+            <quote type="testimonial">
+                <lb />Ich gestehe gerne, dass ich geradezu
+                <lb />verblüfft war, als ich mit eigenen Ohren
+                <lb />hörte, in welcher Weise <name type="brand">Mignon</name> die
+                <lb />von Künstlerhand gespielten Musik-
+                <lb />stücke wiedergibt.
+            </quote>
+        </div>
+
         <div facs="#eSc_textblock_a1117377">
             <lb />Verführung des Klaviers kann einstweilen nur nach vorhergegangener Anmeldung
-            erfolgen.<lb />Alleinvertretung bei Alfred Schmid Nachf., 33-34 Theatinerstrasse 33-34.</div>
+            erfolgen.
+            <lb />Alleinvertretung bei
+            <orgName>Alfred Schmid Nachf.</orgName>,
+            <address>33-34 Theatinerstrasse 33-34.</address>
+        </div>
+
         <div facs="#eSc_textblock_daae2028">
             <lb /><persName corresp="https://d-nb.info/gnd/116210419">Clotilde Kleeberg</persName>:<lb />
-            <seg ana="#soulfulness" resp="#np" type="topic">
-                Es scheint mir, als ob in Mignon der Spie-<lb />gel der
-                Musikseele gefunden wäre
-            </seg>.
+            <quote type="testimonial">
+                <seg ana="#soulfulness" resp="#np" type="topic">
+                    Es scheint mir, als ob in <name type="brand">Mignon</name> der Spie-<lb />gel der
+                    Musikseele gefunden wäre
+                </seg>.
+            </quote>
             
-            <lb /><persName corresp="https://d-nb.info/gnd/116662166">Frederic Lamond</persName>:<lb />
-            <seg ana="#miracle" type="topic" resp="#np">
-                Ich sehe den Mignon-Apparat als das<lb />grösste
-                Wunder der Jetztzeit an
-            </seg>.
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116662166">Frederic Lamond</persName>:
+            <lb />
+            <quote type="testimonial">
+                <seg ana="#miracle" type="topic" resp="#np">
+                    Ich sehe den <name type="brand">Mignon-Apparat</name> als das<lb />grösste
+                    Wunder der Jetztzeit an
+                </seg>.
+            </quote>
             
-            <lb /><persName corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>:
-            <lb />Die Wiedergabe ist nach jeder Richtung,
-            <lb />sowohl was das rein technisch virtuose, als
-            <lb />auch was das musikalisch-poetische Moment
-            <lb />betrifft, eine so verblüffend natürliche,
-            <seg ana="#virtual_presence" resp="#np" type="topic">
-                dass<lb />man
-                wirklich meint, den Künstler i
-                <lb />Person vor sich zu sehen und ihn spielen zu
-                <lb />hören.
-            </seg>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>:
+            <quote type="testimonial">
+                <lb />Die Wiedergabe ist nach jeder Richtung,
+                <lb />sowohl was das rein technisch virtuose, als
+                <lb />auch was das musikalisch-poetische Moment
+                <lb />betrifft, eine so verblüffend natürliche,
+                <seg ana="#virtual_presence" resp="#np" type="topic">
+                    dass<lb />man
+                    wirklich meint, den Künstler in
+                    <lb />Person vor sich zu sehen und ihn spielen zu
+                    <lb />hören.
+                </seg>
+            </quote>
             
-            <lb /><persName corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>:
-            <lb />In dieser Wiedergabe findet man alle
-            <lb />charakteristischen Eigenschaften des Künst-
-            <lb />lers, den Rhythmus, die Eleganz und Vir-
-            <lb />tuosität im Spiel, seine Auffassung in Be-
-            <lb />zug auf die Phrasierung und sogar die
-            <lb />Verwendung der beiden Pedale.
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>:
+            <quote type="testimonial">
+                <lb />In dieser Wiedergabe findet man alle
+                <lb />charakteristischen Eigenschaften des Künst-
+                <lb />lers, den Rhythmus, die Eleganz und Vir-
+                <lb />tuosität im Spiel, seine Auffassung in Be-
+                <lb />zug auf die Phrasierung und sogar die
+                <lb />Verwendung der beiden Pedale.
+            </quote>
             
-            <lb /><persName corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>:
-            <lb />Hier ist zugleich ein technisches und philo-
-            <lb />sophisches Problem in vollendetster Form
-            <lb />gelöst.
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>:
+            <quote type="testimonial">
+                <lb />Hier ist zugleich ein technisches und philo-
+                <lb />sophisches Problem in vollendetster Form
+                <lb />gelöst.
+            </quote>
             <lb />
             
-            <persName corresp="https://d-nb.info/gnd/11863027X">Felix
+            <persName type="artist" corresp="https://d-nb.info/gnd/11863027X">Felix
             Weingartner</persName>:
-            <lb />Der Mignon-Apparat ist das Unglaublichste
-            <lb />an Vollendung, was man sich denken kann.<lb />
-            <seg ana="#immortality" resp="#np" type="topic">
-                Was grosse Meister unserer Tage leisten,
-                <lb />kann nun nicht mehr
-                untergehen
-            </seg> und spä-
-            <lb />tere Genarationen werden die Früchte die-
-            <lb />ser genialen Erfindung genissen.
+            <quote type="testimonial">
+                <lb />Der <name type="brand">Mignon-Apparat</name> ist das Unglaublichste
+                <lb />an Vollendung, was man sich denken kann.<lb />
+                <seg ana="#immortality" resp="#np" type="topic">
+                    Was grosse Meister unserer Tage leisten,
+                    <lb />kann nun nicht mehr
+                    untergehen
+                </seg> und spä-
+                <lb />tere Genarationen werden die Früchte die-
+                <lb />ser genialen Erfindung genissen.
+            </quote>
         </div>
     </text>
 </TEI>

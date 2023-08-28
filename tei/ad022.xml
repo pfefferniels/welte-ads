@@ -63,7 +63,7 @@
                 <msIdentifier>
                   <repository>University of Illinois</repository>
                   <idno>
-                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=272</idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&amp;seq=272</idno>
                   </idno>
                 </msIdentifier>
               </msDesc>
@@ -189,7 +189,7 @@
                 Portrait of Busoni
             </figure>
             <p>
-                <persName corresp="https://d-nb.info/gnd/118518011">
+                <persName type="artist" corresp="https://d-nb.info/gnd/118518011">
                     <lb />Ferrucio<lb />
                     <hi rendition="#k">Busoni</hi>
                 </persName>
@@ -213,40 +213,40 @@
                 <lb />A few more of over 200 artists
             </div>
             <div facs="#eSc_textblock_a2bbf779">
-                <lb /><persName corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/119362112">Casella</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/116327642">Gabrilowitsch</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/116713178">Saar</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>
-                <lb /><persName>Boyle</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>
-                <lb /><persName>Conradi</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/118524186">Debussy</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119362112">Casella</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116327642">Gabrilowitsch</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116713178">Saar</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>
+                <lb /><persName type="artist">Boyle</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreno</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>
+                <lb /><persName type="artist">Conradi</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118524186">Debussy</persName>
             </div>
             <div facs="#eSc_textblock_a5e73e7d">
-                <lb /><persName>La Forge</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>
-                <lb /><persName>Dohnanyi</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/119281953">Ganz</persName>
-                <lb /><persName>Saint-Saens</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/118697641">Grieg</persName>
-                <lb /><persName>Humperdinck</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/120890143">Leschetizky</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/119466821">Samaroff</persName>
-                <lb /><persName corresp="https://d-nb.info/gnd/117110450">Scharwenka</persName>
+                <lb /><persName type="artist">La Forge</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>
+                <lb /><persName type="artist">Dohnanyi</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119281953">Ganz</persName>
+                <lb /><persName type="artist">Saint-Saens</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>
+                <lb /><persName type="artist">Humperdinck</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/120890143">Leschetizky</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119466821">Samaroff</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/117110450">Scharwenka</persName>
             </div>
             <div facs="#eSc_textblock_b0a4f1b7">
-                <lb />Novaes
-                <lb />De Horvath
-                <lb />Glazunoff
-                <lb />Boguslawski
-                <lb />Landowska
-                <lb />Leoncavallo
-                <lb />Elly Ney
-                <lb />Ravel
-                <lb />Scriabin
-                <lb />Cyril Scott
+                <lb /><persName type="artist">Novaes</persName>
+                <lb /><persName type="artist">De Horvath</persName>
+                <lb /><persName type="artist">Glazunoff</persName>
+                <lb /><persName type="artist">Boguslawski</persName>
+                <lb /><persName type="artist">Landowska</persName>
+                <lb /><persName type="artist">Leoncavallo</persName>
+                <lb /><persName type="artist">Elly Ney</persName>
+                <lb /><persName type="artist">Ravel</persName>
+                <lb /><persName type="artist">Scriabin</persName>
+                <lb /><persName type="artist">Cyril Scott</persName>
             </div>
         </div>
 
@@ -257,13 +257,13 @@
             </seg>
             <seg ana="#invisibility" resp="#np" type="topic">
                 contains unseen
-                <lb />the Welte-Mignon Licensee Reproducing Action,
+                <lb />the <name type="brand">Welte-Mignon Licensee Reproducing Action</name>,
             </seg>
             it will
             <lb />play, to the finest degree of perfection, with the personal
             <lb />touch of any of the great pianists of the last score or more
-            <lb />years. The value of the Welte-
-            <lb />Mignon Licensee in making im-
+            <lb />years. The value of the <name type="brand">Welte-
+            <lb />Mignon Licensee</name> in making im-
             <lb />mediately available in your own
             <lb />piano the interpretations of the
             <lb />world's foremost pianists is ap-
@@ -277,18 +277,18 @@
                 </seg>the playing of
                 <lb />such artists
             </seg>
-            as <persName corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName>,
+            as <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName>,
         </div>
         <div facs="#eSc_textblock_357a12a6">
-            <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-            <persName corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
-            <persNam corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>,
-            <persName corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName> and
-            <persName corrersp="https://d-nb.info/gnd/119362112">Ca-<lb />sella</persName>, possible through
-            the authentic recordings of Welte-
-            <lb />Mignon Licensee, is is an invaluable aid to master or stu-
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName> and
+            <persName type="artist" corrersp="https://d-nb.info/gnd/119362112">Ca-<lb />sella</persName>, possible through
+            the authentic recordings of <name type="brand">Welte-
+            <lb />Mignon Licensee</name>, is is an invaluable aid to master or stu-
             <lb />dent.
-            <Its recordings by notable accompanists afford
+            <lb />Its recordings by notable accompanists afford
             <lb />competent support for singing
             <lb />at any time. On the stage, the
             <lb />ballets of the Chicago Opera
@@ -302,8 +302,8 @@
         </div>
 
         <div facs="#eSc_textblock_c343b605">
-            <lb />Welte-Mignon
-            <lb />THE MASTER'S FINGERS ON YOUR PIANO
+            <lb /><name type="brand">Welte-Mignon</name>
+            <lb /><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg>
         </div>
         <div facs="#eSc_textblock_0e3a9da6">
             <lb /><orgName>The Auto Pneumatic Action Company</orgName>–

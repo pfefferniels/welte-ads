@@ -92,39 +92,41 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_e4aee19f">
-            <lb />THE<lb />MUSIC TRADE<lb />REVIEW</div>
+            <gap reason="irrelevant" />
+        </div>
         <div facs="#eSc_textblock_44530be9">
-            <lb />VOL. 86 No. 22 Published Weekly. Federated Business Publications, Inc., 420
-            Lexington Ave., New York N. Y., June 2 1928</div>
+            <gap reason="irrelevant" />>
+        </div>
+
         <div facs="#eSc_textblock_4903c438">
             <lb />Be Sure and See the First Showing
             <lb />of the new
             <lb />Welte Straight Grand
-            <lb />the Original Welte Mignon
-            <lb />Reproducing Grand
+            <lb />the <name type="brand">Original Welte Mignon
+            <lb />Reproducing Grand</name>
             <lb />with Reproducing Action Invisibly Installed
-            <lb />and the Welte-Mignon Musicale
+            <lb />and the <name type="brand">Welte-Mignon Musicale</name>
             <lb />an electrically operated attachment to
-            the original Welte-
-            <lb />Mignon piano which will enable one
+            the original <name type="brand">Welte-
+            <lb />Mignon</name> piano which will enable one
             <seg ana="#touch_of_a_button" resp="#np" type="topic">
                 merely by pressing a button
             </seg>
             <lb />to hear any of ten compositions from a repertoire
             <lb />of one's own selections.
             <lb />in the following period models
-            <lb />FLORENTINE GRAND
-            <lb />LOUIS XVI GRAND
-            <lb />GEORGIAN WELTE-MIGNON
-            <lb />COLONIAL (with the Welte-Mignon Musicale)
-            <lb />LOUIS XV WELTE-MIGNON
+            <lb /><name type="brand">FLORENTINE GRAND</name>
+            <lb /><name type="brand">LOUIS XVI GRAND</name>
+            <lb /><name type="brand">GEORGIAN WELTE-MIGNON</name>
+            <lb /><name type="brand">COLONIAL</name> (with the <name type="brand">Welte-Mignon Musicale</name>)
+            <lb /><name type="brand">LOUIS XV WELTE-MIGNON</name>
             <lb />and working models of the Welte Actions
             <lb />Now Displayed in
             <address>
                 Suite 1710-1712-1714
                 <lb />HOTEL COMMODORE
             </address>
-            <lb />WELTE-MIGNON CORPORATION
+            <lb /><orgName>WELTE-MIGNON CORPORATION</orgName>
             <lb /><persName>WILLIAM C. HEATON</persName>, Wholesale Manager, Piano
             Division<lb />
             <address>

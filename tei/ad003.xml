@@ -96,7 +96,8 @@
             <head> Welte- <lb />Mignon </head>
         </div>
         <div facs="#eSc_textblock_8235fd10">
-            <lb />bietet die Möglichkeit, das Originalspiel der<lb />ersten Pianisten der Welt
+            <lb />bietet die Möglichkeit, das Originalspiel der
+            <lb />ersten Pianisten der Welt
             <seg ana="#home" resp="#np" type="topic">
                 im eigenen
                 <lb />Heim zu hören.
@@ -114,7 +115,8 @@
             </seg>
         </div>
         <div facs="#eSc_textblock_5dbfb787">
-            <lb />M. Welte &amp; Söhne<lb />Hoflieferanten<lb />Freiburg i. Baden.</div>
+            <lb /><orgName>M. Welte &amp; Söhne</orgName><lb />Hoflieferanten<lb />Freiburg i. Baden.
+        </div>
         <div facs="#eSc_textblock_8679924f" />
         <div facs="#eSc_textblock_61edb6ff" />
     </text>

@@ -133,7 +133,8 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_2d37ca29">
-            <lb />The Welte Mignon</div>
+            <lb />The <name type="brand">Welte Mignon</name>
+        </div>
         <div facs="#eSc_textblock_49bbbbff">
             <lb />
             <hi rendition="#in">I</hi>s
@@ -142,71 +143,72 @@
                 <lb />invention
             </seg>,
             as through it you may listen to accurate
-            <lb />interpretations upon your own piano of
-            over five thou-
+            <lb />interpretations upon your own piano of over five thou-
             <lb />sand musical compositions,
             <seg ana="#exact_reproduction" resp="#np" type="topic">
-                precisely as they were<lb />originally played
+                precisely as they were
+                <lb />originally played
             </seg>
-            by one hundred and fifty-six of the<lb />world's
-            most distinguished pianists.</div>
+            by
+            <num type="cardinal" subtype="artist-count" value="156">
+                one hundred and fifty-six
+            </num>
+             of the
+            <lb />world's most distinguished pianists.
+        </div>
         <div facs="#eSc_textblock_73db1303">
-            <lb />Among those who have recorded their<lb />wonderful playing for the Welte<lb />Mignon
-            are</div>
+            <lb />Among those who have recorded their
+            <lb />wonderful playing for the <name type="brand">Welte
+            <lb />Mignon</name>
+            are
+        </div>
         <div facs="#eSc_textblock_60560364">
             <lb />No living Pianist has done more to
             <lb />engender a love for music among
-            <lb />American
-            people than <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>,<lb />whose art at the zenith of his
-            great<lb />career has been preserved by the<lb />Welte Mignon.</div>
+            <lb />American people than
+            <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>,
+            <lb />whose art at the zenith of his great
+            <lb />career has been preserved by the
+            <lb /><name type="brand">Welte Mignon</name>.
+        </div>
         <div facs="#eSc_textblock_a80b3fdb">
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/118986724">Ignace J. Paderewski</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/116204400">Fannie Bloomfield-Zeisler</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/116014490">Vladimir Pachmann</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/118697641">Edward Grieg</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/11861911X">Dr. Richard Strauss</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Ignace J. Paderewski</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116204400">Fannie Bloomfield-Zeisler</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116014490">Vladimir Pachmann</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118697641">Edward Grieg</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Dr. Richard Strauss</persName>
         </div>
         <div facs="#eSc_textblock_76cf9e4c">
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/11875081X">Camille Saint-Saens</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/120890143">Theodor Leschetitzky</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/124379923">Joseph Lhevinne</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/116888652">Alfred Grunfeld</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/119281953">Rudolf Ganz</persName>
-            <lb />
-            <persName>Ernest Schelling</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/116422319">Mark Hambourg</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/116977108">Emil Sauer</persName>
-            <lb />
-            <persName>E. Humperdinck</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/117110450">Xaver Scharwenka</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Camille Saint-Saens</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/120890143">Theodor Leschetitzky</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/124379923">Joseph Lhevinne</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116888652">Alfred Grunfeld</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119281953">Rudolf Ganz</persName>
+            <lb /><persName type="artist">Ernest Schelling</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116422319">Mark Hambourg</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116977108">Emil Sauer</persName>
+            <lb /><persName type="artist">E. Humperdinck</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/117110450">Xaver Scharwenka</persName>
         </div>
         <div facs="#eSc_textblock_8c1ac387">
-            <lb /><orgName>The Welte Studios</orgName><lb />665-5th Ave. at 53rd St.<lb />New York</div>
+            <lb /><orgName>The Welte Studios</orgName>
+            <lb />
+            <address>
+                665-5th Ave. at 53rd St.
+                <lb />New York
+            </address>
+        </div>
         <div facs="#eSc_textblock_c2049f2c">
-            <lb />Exhibited in space 31, Main Floor, National Music Show</div>
+            <lb />Exhibited in
+            <address>
+                space 31, Main Floor, National Music Show
+            </address>
+        </div>
         <div facs="#eSc_textblock_415177db" />
         <div facs="#eSc_textblock_48572ad5" />
     </text>

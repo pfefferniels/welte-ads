@@ -115,7 +115,7 @@
         <div facs="#eSc_textblock_083f7a78">
             <lb /><hi rendition="#in">T</hi>he first recording
             <lb />piano ever invented
-            <lb />the <orgName>Welte Mignon</orgName> re-
+            <lb />the <name type="brand">Welte Mignon</name> re-
             <lb />mains unchallanged as
             <lb />the world's greatest in-
             <lb />strument of reproduction
@@ -126,14 +126,14 @@
                 </hi>
             </hi>
             <lb />
-            <persName corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
-            <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-            <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>, <lb />
-            <persName corresp="https://d-nb.info/gnd/116014490">Pachmann</persName>,
-            <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>, <lb />
-            <persName corresp="https://d-nb.info/gnd/116422319">Hambourg</persName>,
-            <persName>Leonard <lb />Borwick</persName>,
-            <persName corresp="https://d-nb.info/gnd/116040378">Fanny Davies</persName>, etc. </div>
+            <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>, <lb />
+            <persName type="artist" corresp="https://d-nb.info/gnd/116014490">Pachmann</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>, <lb />
+            <persName type="artist" corresp="https://d-nb.info/gnd/116422319">Hambourg</persName>,
+            <persName type="artist">Leonard <lb />Borwick</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116040378">Fanny Davies</persName>, etc. </div>
         <div facs="#eSc_textblock_6282f9b6">
             <lb /><orgName>Steinway &amp; Sons</orgName>
             <lb />

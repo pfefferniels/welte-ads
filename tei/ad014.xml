@@ -63,7 +63,7 @@
                 <msIdentifier>
                   <repository>University of Illinois</repository>
                   <idno>
-                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=104</idno>
+                    <!-- <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=104</idno> -->
                   </idno>
                 </msIdentifier>
               </msDesc>
@@ -94,7 +94,7 @@
               <msIdentifier>
                 <repository>University of California</repository>
                 <idno>
-                  <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.b2922282&seq=183</idno>
+                  <!-- <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.b2922282&seq=183</idno> -->
                 </idno>
               </msIdentifier>
             </msDesc>
@@ -134,12 +134,12 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_16b8738b">
-            <lb />Welte-Mignon
+            <lb /><name type="brand">Welte-Mignon</name>
          </div>
          <div facs="#eSc_textblock_1f92a58e">
             <lb />
                 <hi rendition="#c">
-                    <seg ana="#virtual_presence" type="topic" resp="#np">
+                    <seg ana="#virtual_presence" type="topic slogan" resp="#np">
                         THE MASTER'S FINGERS ON YOUR PIANO
                     </seg>
                 </hi>
@@ -162,8 +162,8 @@
             </seg>
          </div>
          <div facs="#eSc_textblock_c488bbeb">
-            <quote>
-                <lb />"BRAVO! BRAVO! Welte Mignon*! You have
+            <quote type="testimonial">
+                <lb />"BRAVO! BRAVO! <name type="brand">Welte Mignon*</name>! You have
                 <lb />given me one of the greatest
                 experiences of my
                 <lb />life. You have made my fondest dream come true-
@@ -176,7 +176,8 @@
                 </seg>
                 You are my
                 <lb />undying 'alter ego'–thru you my own invisible hands
-                <lb />render the spell of my Chopin, my Liszt. You have
+                <lb />render the spell of my <persName type="composer">Chopin</persName>, my
+                <persName type="composer">Liszt</persName>. You have
                 <lb />my unqualified endorsement.
                 <seg ana="#immortality">
                     <hi rendition="#i">Thru you I live forever."</hi>
@@ -193,7 +194,7 @@
             <hi rendition="#i">
                 <lb />A letter from the great
                 <lb />
-                <persName corresp="https://d-nb.info/gnd/116014490">Vladimir de Pachmann</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/116014490">Vladimir de Pachmann</persName>,
                 the idol of
                 <lb />his time, the most celebrated
                 <lb />pianist of a century; rejuve-
@@ -204,19 +205,23 @@
          <div facs="#eSc_textblock_e4393655">
             <lb />Installed invisibly in any piano,
             <seg ana="#exact_reproduction" resp="#np" type="topic">
-                Welte-Mignon* Reproducing Action makes that
+                <name type="brand">Welte-Mignon* Reproducing Action</name> makes that
                 <lb />piano reproduce with absolute perfection the playing of the master pianists.
             </seg> The
             <lb />Library contains thousands of beautiful recordings. You can choose from 112
-            <lb />standard makes of pianos that now install the Welte-Mignon* Reproducing Action.
+            <lb />standard makes of pianos that now install the
+            <name type="brand">Welte-Mignon* Reproducing Action</name>.
             <lb />Send for the beautiful art brochure
          </div>
          <div facs="#eSc_textblock_9d2e8e27">
             <hi rendition="#c">
-                <lb /><orgName key="auto.pneumatic.action">The AUTO PNEUMATIC ACTION CO.</orgName>,
-                653 West 51st Street, New York
+                <lb />
+                <orgName key="auto.pneumatic.action">The AUTO PNEUMATIC ACTION CO.</orgName>,
+                <address>
+                  653 West 51st Street, New York
+                </address>
                 <lb /><persName>WILLIAM C. HEATON</persName>, President
-                <lb />*Licensed under original <orgName>Welte Mignon</orgName> patents
+                <lb />*Licensed under original <name type="brand">Welte Mignon</name> patents
             </hi>
          </div>
     </text>

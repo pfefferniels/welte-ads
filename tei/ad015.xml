@@ -63,7 +63,7 @@
                 <msIdentifier>
                   <repository>University of Illinois</repository>
                   <idno>
-                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=148</idno>
+                    <!-- <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uiug.30112102033757&seq=148</idno> -->
                   </idno>
                 </msIdentifier>
               </msDesc>
@@ -105,26 +105,27 @@
       <div facs="#eSc_textblock_778d31fa">
          <lb/>
             <hi rendition="#larger">
-                <persName corresp="https://d-nb.info/gnd/118694820">WALTER GIESEKING</persName>
+                <persName type="artist" corresp="https://d-nb.info/gnd/118694820">WALTER GIESEKING</persName>
             </hi>
         </div>
       <div facs="#eSc_textblock_98250902">
          <lb/>The phenomenal success of this artist recently at his first concert here con-
          <lb/>firmed the fame that preceded him from abroad.
          <seg ana="#immediate_recognizability" resp="#np" type="topic">
-            His expectant New York
+            His expectant <placeName>New York</placeName>
             <lb/>audience at once recognized his native genius, genuine musicianship, and
             <lb/>brilliant command of the piano.
          </seg> Impressed with
          <seg ana="#exact_reproduction" resp="#np" type="topic">
             the accuracy and perfection
-            <lb/>of the first recordings of his playing by Welte Mignon
-            <hi rendition="#i">Licensee</hi>
+            <lb/>of the first recordings of his playing by <name type="brand">Welte Mignon
+            <hi rendition="#i">Licensee</hi></name>
          </seg>, for which
          <lb/>he records exclusively, he said:
          <quote>
             "The reproduction of my playing on the
-            <lb/>Welte Mignon <hi rendition="#i">Licensee</hi> is by far the most complete and the truest that I
+            <lb/><name type="brand">Welte Mignon <hi rendition="#i">Licensee</hi></name>
+            is by far the most complete and the truest that I
             <lb/>have yet heard, and surpasses by far all my anxiously awaited expectations.
             <lb/>I am filled with truly unbiased admiration."
          </quote>
@@ -132,7 +133,7 @@
       <div facs="#eSc_textblock_aea977b8">
          <lb/>
          <hi rendition="#c">
-            You may select the Welte-Mignon Licensee in 115 Makes of Pianos
+            You may select the <name type="brand">Welte-Mignon Licensee</name> in 115 Makes of Pianos
             <lb/>A Most Interesting Art Brochure Is Yours for the Asking
          </hi>
       </div>
@@ -148,8 +149,8 @@
     </div>
         
       <div facs="#eSc_textblock_cdb62251">
-         <lb/>Welte Mignon
-         <lb/>THE MASTER'S FINGERS ON YOUR PIANO
+         <lb/><name type="brand">Welte Mignon</name>
+         <lb/><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg>
         </div>
 
       <div facs="#eSc_textblock_94049306" type="illustration">
