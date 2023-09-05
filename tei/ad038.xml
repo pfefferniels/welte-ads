@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Ad in "Masonic News"</title>
+                <title type="sub">1923</title>
+                <author>
+                    <orgName key="bush.lane">
+                        Bush &amp; Lane
+                    </orgName>
+                </author>
+                <respStmt>
+                    <persName xml:id="np">
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <persName>
+                        <persName>
+                            <surname>Pfeffer</surname>
+                            <forename>Niels</forename>
+                        </persName>
+                    </persName>
+                </publisher>
+                <pubPlace>Tübingen</pubPlace>
+                <date>2023</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <p>
+                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            License
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>Summertime,–at home!</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Summertime,–at home!</title>
+                        <author>
+                            <orgName>Bush &amp; Lane</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Masonic News</orgName>
+                        </publisher>
+                        <!-- Detroit edition -->
+                        <pubPlace ref="https://www.geonames.org/4990729">Detroit</pubPlace>
+                        <date type="publication">1923</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Masonic News</title>
+                        <biblScope unit="issue">August 1923</biblScope>
+                        <biblScope unit="pages">Backcover</biblScope>
+                    </seriesStmt>
+                </biblFull>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="ger">German</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="mdp.39015086654038-seq_44.tif" width="2692" height="3540" />
+            <zone
+                points="2170,1628 2170,1736 2044,1777 2044,2114 2020,2145 1855,2186 2005,2210 2036,2242 2028,2302 1849,2326 1824,2365 944,2365 708,2310 716,2257 840,2257 944,2194 700,2169 692,1832 716,1785 574,1760 582,1628 2123,1589"
+                id="eSc_textblock_d7c9744b" />
+            <zone
+                points="2068,2533 2091,2603 2076,2743 2202,2824 2186,2987 1792,3034 661,3018 598,2995 590,2761 669,2688 692,2462 1651,2430"
+                id="eSc_textblock_05f06f3c" />
+            <zone points="1367,3248 1367,3254 1314,3254 1320,3248"
+                id="eSc_textblock_cfbc1ad0" />
+            <zone points="1407,3241 1407,3246 1385,3246 1389,3241"
+                id="eSc_textblock_dcad29ca" />
+            <zone points="464,505 495,1556 2216,1522 2199,466"
+                id="eSc_textblock_7ddb1b75" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_d7c9744b">
+            <div facs="#eSc_textblock_7ddb1b75" type="illustration">
+                <figure>
+                    <desc resp="#np">
+                        A party, several couples dancing. Behind the window one can
+                        see a grand piano.
+                    </desc>
+                </figure>
+            </div>
+            <head>
+                <hi rendition="#i #c">
+                    <lb />Summertime,-at home!
+                </hi>
+            </head>
+
+            <p>
+                <lb />
+                <seg ana="#home #entertainment #hostess" resp="#np" type="topic">
+                    <hi rendition="#k">Entertaining</hi> at home in the summertime is a very easy and a very enjoyable mat-
+                    <lb />ter for the hostess who has a
+                    <name type="brand">
+                        Bush &amp; Lane Welte-Mignon (Licensce) Reproducing Piano.
+                    </name>
+                </seg>
+            </p>
+
+            <p>
+                <seg ana="#entertainment" resp="#np" type="topic">
+                    <lb /><hi rendition="#k">During</hi> dinner, guests are entertained by the most beautiful music of all time played
+                    <lb />by practically all of the great pianists of the past two decades.
+                </seg>
+            </p>
+
+            <p>
+                <seg ana="#dance #popular #jazz" resp="#np" type="topic">
+                    <lb /><hi rendition="#k">After</hi> dinner comes dancing, perhaps on the veranda, with the
+                    <name type="brand">Welte-Mignon</name> provid-
+                    <lb />ing the newest and most popular dance hits, played by a hundred masters of jazz.
+                </seg>
+            </p>
+
+            <p>
+                <lb /><hi rendition="#k">Really</hi>, with a
+                <name type="brand">Welte-Mignon</name> at home, one has no desire and certainly no need to
+                <lb />search elsewhere for a satisfactory place in which to entertain one's guests.
+            </p>
+
+            <p>
+                <lb />
+                <hi rend="#i">
+                    Conventional Models Consistently Priced at
+                    <measure commodity="wm" unit="dollar" quantity="1075">
+                        $1075
+                    </measure>
+                    to
+                    <measure commodity="wm" unit="dollar" quantity="4100">
+                        $4100
+                    </measure>
+                </hi>
+            </p>
+            <lb />
+            <orgName>
+                Bush &amp; Lane Piano Co.
+            </orgName>,
+            <address>
+                Detroit Sales Rooms, 1514 Woodward Ave.
+            </address>
+            <lb />
+            World's Largest Makers of High Grade Pianos Exclusively
+        </div>
+
+        <div facs="#eSc_textblock_05f06f3c">
+            <lb />Bush &amp; Lane
+            <lb />Welte-Mignon
+            <lb />(Licensee)
+        </div>
+    </text>
+</TEI>

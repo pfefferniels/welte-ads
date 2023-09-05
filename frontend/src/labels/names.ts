@@ -47,5 +47,6 @@ export const names = {
     "hardman": "Hardman, Pack & Co.",
     "auto.pneumatic.action": "Auto Pneumatic Action Co.",
     "welte.mignon.corp": "Welte Mignon Corporation",
-    "ef.droop": "E. F. Droop & Sons"
+    "ef.droop": "E. F. Droop & Sons",
+    "bush.lane": "Bush & Lane"
 } as { [index: string]: string }

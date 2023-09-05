@@ -97,7 +97,9 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_6a9b7b41">
-            <lb />Rhythmic beat of a Gaucho dance<lb />-<seg type="slogan">when Phanom Fingers play</seg></div>
+            <lb />Rhythmic beat of a Gaucho dance
+            <lb />-<seg type="slogan">when Phanom Fingers play</seg>
+        </div>
         <div facs="#eSc_textblock_d7c2159d">
             <lb />These are the
             <seg ana="#phantom_body" resp="#np" type="topic">

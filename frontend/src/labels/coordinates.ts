@@ -9,5 +9,6 @@ export const coordinates = {
     'https://www.geonames.org/4930956': { lat: 42.35843, long: -71.05977 },
     'https://www.geonames.org/5074472': { lat: 41.25626, long: -95.94043 },
     'https://www.geonames.org/4140963': { lat: 38.89511, long: -77.03637 },
-    'https://www.geonames.org/2950159': { lat: 52.52437, long: 13.41053 }
+    'https://www.geonames.org/2950159': { lat: 52.52437, long: 13.41053 },
+    'https://www.geonames.org/4990729': { lat: 42.33143, long: -83.04575 }
 } as { [index: string]: Coordinate }
