@@ -244,10 +244,10 @@
             <persName corresp="https://d-nb.info/gnd/119362112">Casella</persName>,
             <persName corresp="https://d-nb.info/gnd/118694820">Gieseking</persName> and a
             <lb />host of other world-famous pianists.
-            <seg ana="#distinction_from_mechanical">
+            <seg ana="#distinction_from_mechanical #personality">
                 Not<lb />approximations of their playing, but their<lb />very individuality.
             </seg>
-            <seg ana="#exact_reproduction">
+            <seg ana="#exact_reproduction #secret">
                 Only <name type="brand">Welte-Mignon</name><lb />possesses this secret of perfect reproduction.
             </seg>
             <lb />Select any piano you prefer but be sure the

@@ -307,13 +307,19 @@
             <lb />industry.
         </div>
         <div facs="#eSc_textblock_1a73062e">
-            <lb />Perfect Reproducing -- The Secret of Welte Mignon
+            <lb />
+            <seg ana="#exact_reproduction #secret" type="topic" resp="#np">
+                Perfect Reproducing – The Secret of Welte Mignon
+            </seg>
         </div>
         <div facs="#eSc_textblock_38047c95">
             <seg ana="#analogy_to_photography" resp="#np" type="topic">
                 <lb />The <name type="brand">Welte-Mignon</name> method of recording
                 <lb />a player's performance is photographic.
-                <lb />Through this secret photographic process-
+                <lb />Through this
+                <seg ana="#secret" resp="#np" type="topic">
+                    secret photographic process
+                </seg>-
                 <lb />possessed only by <name type="brand">Welte-Mignon,*</name> available
                 <lb />only to <name type="brand">Welte-Mignon*</name> - the artist's play-
                 <lb />ing is actually photographed – his tempo, his
@@ -411,11 +417,12 @@
             <lb />music. <name type="brand">Welte-Mignon*</name> makes hu-
             <lb />man the mechanical reproduction of
             <lb />music.
-            <seg ana="#soulfulness" resp="#np" type="topic">
-                It supplies the soul and the<lb />personality
+            <seg ana="#soulfulness #personality" resp="#np" type="topic">
+                It supplies the soul and the
+                <lb />personality which the individual art-
+                <lb />ist puts into his playing.
             </seg>
-            which the individual art-
-            <lb />ist puts into his playing. No one sits
+            No one sits
             <lb />at the piano.
             <seg ana="#phantom_body" resp="#np" type="topic">
                 Only the phantom<lb />hands of the masters touch the keys

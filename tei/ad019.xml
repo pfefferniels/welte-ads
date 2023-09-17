@@ -133,9 +133,15 @@
             <lb />Recordings . . .
             <seg ana="#suit_every_mood" resp="#np" type="topic">
                 clas-
-                <lb />sical music, modern
-                <lb />music, orchestral music,
-                <lb />ballets and dance ...
+                <lb />sical music,
+                <seg ana="#popular" resp="#np" type="topic">
+                    modern
+                    <lb />music
+                </seg>, orchestral music,
+                <lb />
+                <seg ana="#dance" resp="#np" type="topic">
+                    ballets and dance ...
+                </seg>
                 <lb />a program to suit every
                 <lb />mood and occasion.
             </seg>

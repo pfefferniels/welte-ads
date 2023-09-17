@@ -220,8 +220,15 @@
             <lb />the magic of the <name type="brand">Welte-Mignon
             <lb />Licensee Reproducing Action</name>
             n<lb />Only <name type="brand">Welte-Mignon Licensee</name>
-            <lb />possesses the secret of perfect
-            <lb />reproduction.
+            <lb />
+            <seg ana="#secret" resp="#np" type="topic">
+               possesses the secret
+            </seg>
+            of
+            <seg ana="#exact_reproduction" resp="#np" type="topic">
+               perfect
+               <lb />reproduction
+            </seg>.
             <lb />Through
             <name type="brand">Welte-Mignon Li-
             <lb />censee</name> the playing of the world's

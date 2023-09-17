@@ -228,9 +228,12 @@
                 <lb />famous pianists are presented through the
                 <lb />extensive <name type="brand">Welte-Mignon (Licensee) Library</name>
                 <lb />of Music.
-                <lb />All the verve,
-                all the delicate tone shading, all
-                <lb />the personality that makes of the artist a true
+                <lb />
+                <seg ana="#personality" type="topic" resp="#np">
+                    All the verve,
+                    all the delicate tone shading, all
+                    <lb />the personality that makes of the artist a true
+                </seg>
             </div>
             <div facs="#eSc_textblock_a311a566">
                 <lb />artists have been retained and

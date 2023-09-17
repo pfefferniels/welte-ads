@@ -241,7 +241,7 @@
          <lb/>it contains the famous <name type="brand">WELTE-
          <lb/>MIGNON LICENSEE REPRODUCING
          <lb/>ACTION</name>.
-         <seg ana="#exact_reproduction" resp="#np" type="topic">
+         <seg ana="#exact_reproduction #secret" resp="#np" type="topic">
             Only <name type="artist">Welte-Mignon Licensee</name>
             <lb/>possesses the secret of perfect reproduc-
             <lb/>tion.

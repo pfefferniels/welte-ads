@@ -3,6 +3,7 @@ export const topicLabels = {
     "#immortality": "Immortality",
     "#exact_reproduction": "Exact Reproduction",
     "#distinction_from_mechanical": "Distinction from Mechanical",
+    "#personality": "Personality",
     "#touch_of_a_button": "Touch of a Button",
     "#virtual_presence": "Virtual Presence",
     "#soulfulness": "Soulfulness",

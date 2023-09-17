@@ -122,8 +122,12 @@
                     Reproducing Piano
                 </name>.
                 It brings you the world's
-                <lb />finest music, played with all the tone-color, the fire, the
-                <lb />verve, the <hi rendition="#i">personality</hi> of the great pianists. You have but
+                <lb />finest music,
+                <seg ana="#personality" type="topic" resp="#np">
+                    played with all the tone-color, the fire, the
+                    <lb />verve, the <hi rendition="#i">personality</hi> of the great pianists.
+                </seg>
+                You have but
             </p>
         </div>
         <div facs="#eSc_textblock_5abd2d51">

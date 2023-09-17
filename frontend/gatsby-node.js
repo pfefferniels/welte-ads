@@ -31,11 +31,19 @@ async function onCreateNode({
   const mentions = [...document.querySelectorAll('persName[corresp]')]
     .map(name => name.getAttribute('corresp'))
   const topicSegments = [...document.querySelectorAll('seg[ana]')]
-    .map(seg => ({
-      id: seg.getAttribute('xml:id') || `#${v4()}`,
-      topic: seg.getAttribute('ana'),
-      text: seg.textContent
-    }))
+    .map(seg => {
+      const ana = seg.getAttribute('ana')
+      if (!ana) return []
+
+      return ana.split(' ').map(ana => {
+        return {
+          id: seg.getAttribute('xml:id') || `#${v4()}`,
+          topic: ana,
+          text: seg.textContent
+        }
+      })
+    })
+    .flat()
   
   const metadataNode = {
     company,

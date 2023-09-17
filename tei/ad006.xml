@@ -193,7 +193,7 @@
             <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>–156
             masters in all have
-            <seg ana="#soulfulness" type="topic" resp="#np">
+            <seg ana="#personality" type="topic" resp="#np">
                 played into the <name type="brand">Welte</name>
                 <lb />for you the very essence of their musical
                 personalities
@@ -278,16 +278,11 @@
         </div>
 
         <div facs="#eSc_textblock_86963cd3">
-            <lb />All the new <name type="brand">Victor Records</name> and
-            <name type="brand">Pathe<lb />Discs</name> may be heard here as soon as they
-            <lb />are published. Late "jazz" tunes, popular
-            <lb />hits from current shows, the melodies every-
-            <lb />one whistles and dances to, and those finer
-            <lb />things constantly being recorded by great
-            <lb />singers and instrumentalists. Learn to re-
-            <lb />gard the <orgName>Welte Mignon Studios</orgName> as your
-            <lb />place for hearing records. Drop in when-
-            <lb />over you are "up the Avenue."
+            <gap reason="irrelevant">
+                <desc>
+                    Advertises Victor Records and Pathe discs.
+                </desc>
+            </gap>
         </div>
         <div facs="#eSc_textblock_17b7db97">
             <lb />

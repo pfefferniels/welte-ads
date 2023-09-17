@@ -158,9 +158,12 @@
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 <lb />Its playing is the faithfhul rendition
                 <lb />of the artist's work - there can be
-                <lb />no variation. All the personality,
-                <lb />the character, the technique of the
-                <lb />great master is amazingly preserved.
+                <lb />no variation.
+                <seg ana="#personality" resp="#np" type="topic">
+                    All the personality,
+                    <lb />the character, the technique of the
+                    <lb />great master is amazingly preserved.
+                </seg>
             </seg>
         </div>
 

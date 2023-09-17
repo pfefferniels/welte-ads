@@ -260,8 +260,12 @@
                 <lb />the <name type="brand">Welte-Mignon Licensee Reproducing Action</name>,
             </seg>
             it will
-            <lb />play, to the finest degree of perfection, with the personal
-            <lb />touch of any of the great pianists of the last score or more
+            <lb />play, to the finest degree of perfection,
+            <seg ana="#personality" resp="#np" type="topic">
+                with the personal
+                <lb />touch of any of the great pianists
+            </seg>
+            of the last score or more
             <lb />years. The value of the <name type="brand">Welte-
             <lb />Mignon Licensee</name> in making im-
             <lb />mediately available in your own
