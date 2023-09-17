@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "New York Tribune"</title>
+              <title type="sub">Sunday, December 7, 1913</title>
+              <author>
+                 <orgName key="m.welte.sons">
+                    M. Welte &amp; Sons
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <notesStmt>
+              <note>
+                  Auf der gleichen Seite bewirbt die Aeolian
+                  Company über drei Spalten ein "Pianola Recital"
+                  mit Weihnachtsmusik. 
+              </note>
+           </notesStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <sourceDesc>
+              <bibl>When Paderewski listens to his own Playing</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">
+                        When Paderweski listens to his own playing
+                    </title>
+                    <author>
+                       <orgName>M. Welte &amp; Sons</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>New York Tribune</orgName>
+                    </publisher>
+                    <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                    <date type="publication">1913</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">New York Tribune</title>
+                    <biblScope unit="issue">December 7, 1913</biblScope>
+                    <biblScope unit="pages">3</biblScope>
+                 </seriesStmt>
+              </biblFull>
+              <msDesc>
+               <msIdentifier>
+                 <repository>Library of Congress</repository>
+                 <idno>
+                   <idno type="URLImages">https://chroniclingamerica.loc.gov/lccn/sn83030214/1913-12-07/ed-1/seq-3</idno>
+                 </idno>
+               </msIdentifier>
+             </msDesc>
+           </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+     </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="sn83030214-19131207.jp2" width="6063" height="8898" />
+            <zone points="4345,6343 4345,8754 5985,8754 5985,6343"
+                id="eSc_textblock_d7143252" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_d7143252">
+            <head>
+                <lb />
+                <hi rendition="#larger">
+                    When <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> listens
+                    <lb />to his own Playing
+                </hi>
+            </head>
+
+            <p>
+                <seg ana="#listening" resp="#np" type="topic">
+                    <lb />–not while he sits at the piano, but
+                    <lb />comfortably established in an easy
+                    <lb />chair like other hearers–he is listen-
+                    <lb />ing to the
+                    <name type="brand">
+                        Welte-Mignon Autograph
+                        <lb />Piano
+                    </name>.
+                </seg>
+            </p>
+
+            <p>
+                <lb />The wonderful
+                <name type="brand">Welte-Mignon</name>
+                <hi rendition="#i">auto-
+                <lb />graphic</hi> records of playing by
+                <persName corresp="https://d-nb.info/gnd/118986724">
+                    Pader-
+                    <lb />ewski
+                </persName>,
+                <persName corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
+                <persName corresp="https://d-nb.info/gnd/118953915">Carreño</persName> and other
+                <lb />great artists have all been heard by
+                <lb />the musicians themselves and
+                <seg ana="#exact_reproduction" resp="#np" type="topic">
+                    signed
+                    <lb />by them as true and actual <hi rendition="#i">autographs</hi>
+                    <lb />of their playing.
+                </seg>
+            </p>
+
+            <p>
+                <lb />You can hear these masters of the piano
+                <lb />whenever you may wish to enjoy a delight-
+                <lb />ful experience, at the Studio of 
+                <orgName>
+                    M. Welte
+                    <lb />&amp; Sons
+                </orgName>,
+                <address>
+                    273 Fifth Avenue, between Twenty-
+                    <lb />ninth and Thirtienth Streets (opposite
+                    <lb />Holland House) New York.
+                </address>
+            </p>
+        </div>
+    </text>
+</TEI>
