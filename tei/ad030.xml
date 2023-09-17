@@ -139,7 +139,7 @@
         <div facs="#eSc_textblock_e92bcae9">
             <lb />
             <hi rendition="#k">
-                <quote>
+                <quote type="testimonial">
                     <seg ana="#exact_reproduction" type="topic" resp="#np">
                         "The realism of its playing is almost
                         <lb />beyond belief
