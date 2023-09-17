@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+           <titleStmt>
+              <title type="main">Ad in "The House Beautiful"</title>
+              <title type="sub">February 1927</title>
+              <author>
+                 <orgName key="auto.pneumatic.action">
+                    Auto Pneumatic Action Co.
+                 </orgName>
+              </author>
+              <respStmt>
+                 <persName xml:id="np">
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
+                 </persName>
+              </respStmt>
+           </titleStmt>
+           <publicationStmt>
+              <publisher>
+                 <persName>
+                    <persName>
+                       <surname>Pfeffer</surname>
+                       <forename>Niels</forename>
+                    </persName>
+                 </persName>
+              </publisher>
+              <pubPlace>Tübingen</pubPlace>
+              <date>2023</date>
+              <availability>
+                 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <p>
+                       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                       License
+                    </p>
+                 </licence>
+              </availability>
+           </publicationStmt>
+           <sourceDesc>
+              <bibl>Unbelievably True to the Artist's Playing - That's why I bough it</bibl>
+              <biblFull>
+                 <titleStmt>
+                    <title level="m" type="main">Unbelievably True to the Artist's Playing - That's why I bough it</title>
+                    <author>
+                       <orgName>Auto Pneumatic Action Co.</orgName>
+                    </author>
+                 </titleStmt>
+                 <publicationStmt>
+                    <publisher>
+                       <orgName>Singing</orgName>
+                    </publisher>
+                    <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                    <date type="publication">1927</date>
+                 </publicationStmt>
+                 <seriesStmt>
+                    <title level="j" type="main">House beautiful</title>
+                    <biblScope unit="issue">February 1927</biblScope>
+                    <biblScope unit="pages">124</biblScope>
+                 </seriesStmt>
+              </biblFull>
+              <msDesc>
+                <msIdentifier>
+                  <repository>University of Michigan</repository>
+                  <idno>
+                    <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=miun.act2359.0061.001&amp;seq=152</idno>
+                  </idno>
+                </msIdentifier>
+              </msDesc>
+           </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <langUsage>
+              <language ident="eng">English</language>
+           </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="miun.act2359.0061.001-seq_152.tif" width="2809" height="3648" />
+            <zone
+                points="2346,2399 2387,2496 2387,2567 2365,2590 1371,2590 1371,2492 1056,2492 445,2486 397,2421 397,2383 431,2375"
+                id="eSc_textblock_f14f8ddd" />
+            <zone points="733,2869 470,2851 462,2602 492,2601 1379,2601 1379,2869"
+                id="eSc_textblock_03db0457" />
+            <zone points="2346,2610 2346,2867 2329,2869 1402,2869 1402,2601 2355,2601"
+                id="eSc_textblock_5abd2d51" />
+            <zone points="860,3210 860,2919 1920,2919 1924,2928 1924,3210"
+                id="eSc_textblock_5837879e" />
+            <zone points="1230,3239 1230,3497 1556,3497 1556,3239"
+                id="eSc_textblock_dbdcd861" />
+            <zone points="2541,3315 2541,3378 267,3370 262,3282 262,3285"
+                id="eSc_textblock_b603b3c0" />
+            <zone points="479,343 479,2360 2349,2360 2349,343"
+                id="eSc_textblock_d59aeee7" />
+        </surface>
+    </facsimile>
+    <text>
+        <div facs="#eSc_textblock_d59aeee7" type="illustration" />
+
+        <div facs="#eSc_textblock_f14f8ddd">
+            <head>
+                <lb />
+                <quote type="testimonial">
+                    "Unbelievably True to the Artist's Playing-
+                    <lb /><hi rendition="#i">That's why I bought it</hi>"
+                </quote>
+            </head>
+        </div>
+        <div facs="#eSc_textblock_03db0457">
+            <p>
+                <lb />
+                <hi rendition="#k">
+                    <hi rendition="#i">T</hi>he
+                </hi>
+                infinite joy and satisfaction that attend the
+                <lb />possession of a thing which is the best of its
+                <lb />kind go with the purchase of the
+                <name type="brand">
+                    Welte-Mignon
+                    <lb />Licensee
+                    Reproducing Piano
+                </name>.
+                It brings you the world's
+                <lb />finest music, played with all the tone-color, the fire, the
+                <lb />verve, the <hi rendition="#i">personality</hi> of the great pianists. You have but
+            </p>
+        </div>
+        <div facs="#eSc_textblock_5abd2d51">
+            <p>
+                <lb />to hear it to realize that
+                <seg ana="#exact_reproduction" resp="#np" type="topic">
+                    its playing is the artist's playing.
+                </seg>
+                <lb />Your piano marchant will be proud to give you a
+                <lb />demonstration any time.
+                <name type="brand">
+                    Welte-Mignon Licensee
+                    <lb />Reproducing
+                    Pianos
+                </name> are offered by 115 leading piano
+                <lb />manufacturers.
+                <orgName>
+                    The Auto Pneumatic Action
+                    Company
+                </orgName>,
+                <lb />
+                <persName>W. C. Heaton, President</persName>,
+                <address>653 West 51st Street, New York.</address>
+            </p>
+        </div>
+
+        <div facs="#eSc_textblock_5837879e" type="brand-elements">
+            <name type="brand">
+                <lb />Welte-Mignon
+                <lb />Licensee
+                <lb />Reproducing Piano
+            </name>
+
+            <seg type="slogan">
+                <hi rendition="#k">
+                    <lb />The Master's Fingers on Your Piano
+                </hi>
+            </seg>
+
+            <figure type="logo">
+                <desc>Phantom hands on a keyboard.</desc>
+            </figure>
+        </div>
+    </text>
+</TEI>
