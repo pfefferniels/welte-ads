@@ -4,7 +4,8 @@ import React from "react";
 export const topicDescriptions = {
     "#immortality": (
         <Typography>
-            This topic emphasizes the perdurance of the reproductions.
+            This topic emphasizes the perdurance of the reproductions and 
+            how thus the recording artists become immortal.
         </Typography>
     ),
     "#exact_reproduction": (
@@ -20,7 +21,12 @@ export const topicDescriptions = {
             rolls from mere mechanical methods (such as the player piano).
         </Typography>
     ),
-    "#touch_of_a_button": "Permanent Availability",
+    "#touch_of_a_button": (
+        <Typography>
+            The Welte-Mignon is permanently available for the entertainment 
+            of the owner – on the touch of a button.
+        </Typography>
+    ),
     "#virtual_presence": "Physical Presence",
     "#soulfulness": "Soulfulness",
     "#listening": "Revelled Listening",
@@ -32,7 +38,12 @@ export const topicDescriptions = {
     "#analogy_to_photography": "Analogy to Photography",
     "#home": "Home",
     "#immediate_recognizability": "Immediate Recognizability",
-    "#secret": "Secret",
+    "#secret": (
+        <Typography>
+            Perfect reproduction and its manufacturing is a secret
+            possessed only by the Welte-Mignon company.
+        </Typography>
+    ),
     "#phantom_body": "Phantom Body",
     "#affordability": "Affordability",
     "#sitting_woman": "Sitting Woman",

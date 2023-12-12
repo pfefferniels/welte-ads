@@ -1,5 +1,7 @@
 
 export const topicLabels = {
+    "#analysis": "Analysis",
+    "#entertainment": "Entertainment",
     "#immortality": "Immortality",
     "#exact_reproduction": "Exact Reproduction",
     "#distinction_from_mechanical": "Distinction from Mechanical",
@@ -21,5 +23,6 @@ export const topicLabels = {
     "#immediate_recognizability": "Immediate Recognizability",
     "#phantom_body": "Phantom Body",
     "#suit_every_mood": "Suit every Mood",
-    "#invisibility": "Invisibility"
+    "#invisibility": "Invisibility",
+    "#secret": "Secret"
 } as { [index: string]: string }
