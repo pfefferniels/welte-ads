@@ -65,6 +65,12 @@
                         <biblScope unit="pages">4</biblScope>
                     </seriesStmt>
                 </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>Bayerische Staatsbibliothek</repository>
+                        <idno type="URLImages">https://www.digitale-sammlungen.de/de/view/bsb00085796_01057_u001?page=4</idno>
+                    </msIdentifier>
+                </msDesc>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
