@@ -191,11 +191,14 @@
             <lb /><name type="brand">Welte-Mignon
             <lb />Licensee
             <lb />Reproducing Piano</name>
-            <lb /><seg type="slogan">The Master's Fingers on
-            Your Piano.</seg>
-        </div>
-        <div facs="#eSc_textblock_cd3132d7" type="illustration">
-            <figure>
+            <lb />
+            <hi rendition="#k">
+                <seg type="slogan">
+                    The Master's Fingers on Your Piano.
+                </seg>
+            </hi>
+
+            <figure type="logo">
                 <desc resp="#np">
                     <seg ana="#phantom_body" resp="#np" type="topic">
                         Phantom Fingers.

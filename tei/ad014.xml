@@ -133,16 +133,16 @@
         </surface>
     </facsimile>
     <text>
-        <div facs="#eSc_textblock_16b8738b">
-            <lb /><name type="brand">Welte-Mignon</name>
-         </div>
-         <div facs="#eSc_textblock_1f92a58e">
+        <div facs="#eSc_textblock_16b8738b" type="brand-elements">
             <lb />
-                <hi rendition="#c">
-                    <seg ana="#virtual_presence" type="topic slogan" resp="#np">
-                        THE MASTER'S FINGERS ON YOUR PIANO
-                    </seg>
-                </hi>
+            <name type="brand">
+               Welte-Mignon
+            </name>
+            <hi rendition="#k">
+               <seg ana="#virtual_presence" type="topic slogan" resp="#np">
+                  The Master's Fingers on Your Piano
+              </seg>
+            </hi>
          </div>
 
          <div facs="#eSc_textblock_f12fe344" type="illustration">
