@@ -61,7 +61,7 @@ export const WeighedCircles = ({ data }: TopicsCircleProps) => {
         // Draw the labels
         node.append("text")
             .attr('class', 'circle-label')
-            .style('font-size', d => 0.2 * radiusScale(d.weight) + 'px')
+            .style('font-size', d => 0.25 * radiusScale(d.weight) + 'px')
             .text(d => topicLabels[d.topic] || d.topic)
 
         // Update the positions in each tick
