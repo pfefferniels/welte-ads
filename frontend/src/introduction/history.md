@@ -25,7 +25,7 @@ and *Vogue*.[^12] The company proudly announces –
 > "This attention-compelling advertising will help you sell your Welte-Mignon
 > equipped Reproducing Piano.[^13]
 
-The textes were written by Harriette Segall. The
+The textes were written by Harriette Segall and Barbara Peverly.[^14] The
 Frank Seaman Inc. displayed two of the paintings of De Feo (Welanetz Co.)
 for the Welte Mignon in an Exhibition of the *Art Director's Club*.[^11]
 Considerable efforts have been made to emphasize the artistic
@@ -108,3 +108,4 @@ Welte Mignon Corporation, changed to the Austin Organ Company.[^7]
 [^9]: *The Music Trades*, Jan. 22, 1927, p. 41
 [^10]: Whereas "The Vogue" is not mentioned in the announcement.
        The publication of "Spur" was not available to the author.
+[^14]: https://digitalrepository.unm.edu/cgi/viewcontent.cgi?article=1016&context=daily_lobo_1928
