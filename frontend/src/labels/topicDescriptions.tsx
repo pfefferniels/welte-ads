@@ -23,8 +23,8 @@ export const topicDescriptions = {
     ),
     "#touch_of_a_button": (
         <Typography>
-            The Welte-Mignon is permanently available for the entertainment 
-            of the owner – on the touch of a button.
+            The Welte-Mignon is permanently available and "objectified" 
+            for the entertainment of the owner – on the touch of a button.
         </Typography>
     ),
     "#virtual_presence": "Physical Presence",
