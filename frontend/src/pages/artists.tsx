@@ -81,7 +81,7 @@ const Artists = () => {
         // set the dimensions and margins of the graph
         const margin = { top: 30, right: 30, bottom: 30, left: 60 },
             width = 1000 - margin.left - margin.right,
-            height = 1000 - margin.top - margin.bottom;
+            height = 500 - margin.top - margin.bottom;
 
         // append the svg object to the body of the page
         svgElement
@@ -100,9 +100,18 @@ const Artists = () => {
             .domain([0, Math.max(...mentionsPerYear.map(mention => mention.count))])
             .range([0, 30])
 
-        const y = d3.scaleLinear()
-            .domain([0, allArtists.length])
-            .range([height - 20, margin.top]);
+        const y = (artist: string) => {
+            let value = 0;
+            for (const mention of mentionsPerArtist) {
+                if (mention.name === artist) {
+                    value += radiusScale(mention.count) / 2
+                    break
+                }
+                value += radiusScale(mention.count)
+            }
+
+            return height - value
+        }
 
         svgElement
             .append("g")
@@ -119,10 +128,12 @@ const Artists = () => {
             .data(allArtists)
             .join('line')
             .attr('x1', 230)
-            .attr('y1', (_, i) => y(i))
+            .attr('y1', d => y(d))
             .attr('x2', width + 230)
-            .attr('y2', (_, i) => y(i))
-            .attr('stroke-width', 0.5)
+            .attr('y2', d => y(d))
+            .attr('stroke-width', d => radiusScale(
+                mentionsPerArtist.find(mention => mention.name === d)?.count!) / 150
+            )
             .attr('stroke', 'black')
 
         svgElement.append('g')
@@ -130,8 +141,12 @@ const Artists = () => {
             .data(allArtists)
             .join('text')
             .attr('x', 10)
-            .attr('y', (_, i) => y(i))
+            .attr('y', d => y(d))
             .style('dominant-baseline', 'central')
+            .attr('font-size', d =>
+                radiusScale(
+                    mentionsPerArtist.find(mention => mention.name === d)?.count!) / 2.7
+            )
             .text(d => names[d] || d)
 
         svgElement.append('g')
@@ -140,7 +155,7 @@ const Artists = () => {
             .join("circle")
             .attr('transform', `translate(230, 0)`)
             .attr("cx", (d: any) => x(d.year))
-            .attr("cy", (d: any) => y(allArtists.indexOf(d.name)))
+            .attr("cy", (d: any) => y(d.name))
             .style("fill", (d: any) => stringToColour(d.name))
             .style("fill-opacity", 0.8)
             .attr("r", (d: any) => radiusScale(d.count))
