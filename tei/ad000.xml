@@ -60,6 +60,68 @@
                </seriesStmt>
             </biblFull>
          </sourceDesc>
+         <sourceDesc>
+            <bibl>The Welte-Mignon</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">The Welte-Mignon</title>
+                  <author>
+                     <orgName>Steinway &amp; Sons</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>The Gentlewoman</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/2643743">London</pubPlace>
+                  <date type="publication">1913</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">The Gentlewoman</title>
+                  <biblScope unit="issue">December 13, 1913</biblScope>
+                  <biblScope unit="pages">XVI.</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+               <msIdentifier>
+                 <repository>British Newspaper Archive</repository>
+                 <idno>
+                   <idno type="URLImages">https://www.britishnewspaperarchive.co.uk/viewer/bl/0003340/19131213/094/0018</idno>
+                 </idno>
+               </msIdentifier>
+           </msDesc>
+         </sourceDesc>
+         <sourceDesc>
+            <bibl>The Welte-Mignon</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">The Welte-Mignon</title>
+                  <author>
+                     <orgName>Steinway &amp; Sons</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>Truth</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/2643743">London</pubPlace>
+                  <date type="publication">1913</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">Truth</title>
+                  <biblScope unit="issue">November 26, 1913</biblScope>
+                  <biblScope unit="pages">[68]</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+               <msIdentifier>
+                 <repository>British Newspaper Archive</repository>
+                 <idno>
+                   <idno type="URLImages">https://www.britishnewspaperarchive.co.uk/viewer/BL/0002961/19131126/277/0068</idno>
+                 </idno>
+               </msIdentifier>
+           </msDesc>
+         </sourceDesc>
       </fileDesc>
       <profileDesc>
          <langUsage>

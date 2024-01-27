@@ -62,6 +62,14 @@
                         <biblScope unit="pages">3</biblScope>
                     </seriesStmt>
                 </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                      <repository>British Newspaper Archive</repository>
+                      <idno>
+                        <idno type="URLImages">https://www.britishnewspaperarchive.co.uk/viewer/bl/0003212/19220601/201/0005</idno>
+                      </idno>
+                    </msIdentifier>
+                </msDesc>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
