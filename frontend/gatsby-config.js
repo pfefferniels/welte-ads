@@ -1,9 +1,7 @@
-const basePath = "/welte-ads"
 const title = "Welte Ads"
 const htmlTitle = "Welte-Mignon Advertisements Collection"
 
 module.exports = {
-  pathPrefix: basePath,
   trailingSlash: `always`,
   siteMetadata: {
     title,
