@@ -8,9 +8,17 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
+    # make the built-in token available as GH_TOKEN
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        # we’ll reconfigure origin ourselves, so disable the default creds
+        with:
+          persist-credentials: false
 
       - name: Use Node.js
         uses: actions/setup-node@v3
@@ -21,19 +29,13 @@ jobs:
         run: npm ci
         working-directory: frontend
 
-      - name: Configure Git identity
+      - name: Configure Git & remote URL
         run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-
-      - name: Set authenticated origin URL
-        # this rewrites "origin" so that pushes go via https://x-access-token:GH_TOKEN@github.com/…
-        run: |
+          git config user.name  "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
           git remote set-url origin \
-            https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
+            https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
 
       - name: Build & deploy
         run: npm run deploy
         working-directory: frontend
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
