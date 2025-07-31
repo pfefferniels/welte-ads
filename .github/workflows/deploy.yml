@@ -26,8 +26,14 @@ jobs:
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
 
++     - name: Set authenticated origin URL
++       # this rewrites "origin" so that pushes go via https://x-access-token:GH_TOKEN@github.com/…
++       run: |
++         git remote set-url origin \
++           https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
+
       - name: Build & deploy
         run: npm run deploy
         working-directory: frontend
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
