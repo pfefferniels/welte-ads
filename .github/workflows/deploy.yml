@@ -3,7 +3,7 @@ name: Build & deploy Gatsby to GitHub Pages
 on:
   push:
     branches:
-      - main         # or whatever branch you develop on
+      - main
 
 jobs:
   build-and-deploy:
@@ -18,14 +18,16 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
+        run: npm ci
+        working-directory: frontend
+
+      - name: Configure Git identity
         run: |
-          cd frontend
-          npm ci
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
 
       - name: Build & deploy
-        run: |
-          cd frontend
-          npm run deploy
+        run: npm run deploy
+        working-directory: frontend
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          

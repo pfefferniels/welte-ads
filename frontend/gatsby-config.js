@@ -1,4 +1,4 @@
-const basePath = "/ads"
+const basePath = "/welte-ads"
 const title = "Welte Ads"
 const htmlTitle = "Welte-Mignon Advertisements Collection"
 
