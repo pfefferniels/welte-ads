@@ -36,7 +36,6 @@ const Layout = ({ location, children, editionPage = false }: Props) => {
       site {
         siteMetadata {
           title
-          doi
           repository
           menuLinks {
             name

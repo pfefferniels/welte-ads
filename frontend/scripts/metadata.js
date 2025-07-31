@@ -18,7 +18,6 @@ const metadata = {
   subtitle: config.siteMetadata.subtitle  || '',
   authors: config.siteMetadata.authors,
   authors_struct: config.siteMetadata.authors_struct,
-  doi: config.siteMetadata.doi,
 }
 
 fs.writeFile('public/metadata.json', JSON.stringify(metadata, null, 2), (err) => {

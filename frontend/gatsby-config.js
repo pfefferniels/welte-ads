@@ -6,7 +6,6 @@ module.exports = {
   pathPrefix: basePath,
   trailingSlash: `always`,
   siteMetadata: {
-    doi: '10.55520/TBA',
     title,
     htmlTitle,
     description: `A collection of Welte Advertisements. Edited by Niels Pfeffer.`,
@@ -48,8 +47,6 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-theme-ceteicean`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
