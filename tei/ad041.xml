@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Advertisement for The Welte-Mignon Autograph Piano</title>
+        <title type="sub">1913</title>
+        <author>
+          <orgName key="welte.cleveland">
+            The Welte-Mignon Studio Cleveland &amp; Manning Piano Co.
+          </orgName>
+        </author>
+        <respStmt>
+          <persName xml:id="#np">
+            <surname>Pfeffer</surname>
+            <forename>Niels</forename>
+          </persName>
+        </respStmt>
+      </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <persName>
+                        <persName>
+                            <surname>Pfeffer</surname>
+                            <forename>Niels</forename>
+                        </persName>
+                    </persName>
+                </publisher>
+                <pubPlace>Tübingen</pubPlace>
+                <date>2025</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <p>
+                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            License
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>The playing of the world's most famous pianists</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">The playing of the world's most famous pianists</title>
+                        <title level="m" type="sub">...</title>
+                        <author>
+                            <orgName>
+                                The Welte-Mignon Studio Cleveland &amp; Manning Piano Co.
+                            </orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Atlanta Georgian</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/4180439">Atlanta</pubPlace>
+                        <date type="publication">1913</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">The Atlanta Georgian and News</title>
+                        <biblScope unit="issue">February 5, 1913</biblScope>
+                        <biblScope unit="pages">21</biblScope>
+                    </seriesStmt>
+                </biblFull>
+                <msDesc>
+                  <msIdentifier>
+                    <repository>Georgia Historic Newspapers</repository>
+                    <idno>
+                      <idno type="URLImages">https://gahistoricnewspapers.galileo.usg.edu/lccn/sn89053729/1913-02-06/ed-1/seq-21/</idno>
+                    </idno>
+                  </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="eng">English</language>
+            </langUsage>
+        </profileDesc>
+  </teiHeader>
+
+  <text>
+    <body>
+      <div>
+        <hi rendition="#c">
+            <head>
+                The playing of the world's most famous pianists
+                <hi rendition="#larger">
+                    <lb/>I. J.
+                    <persName type="artist" corresp="https://d-nb.info/gnd/118986724">
+                        Paderewski
+                    </persName>
+                    <lb/>
+                    <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">
+                        Josef Hofmann
+                    </persName>
+                </hi>
+            </head>
+            <lb/>
+            <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carréno</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116204400">Bloomfield-Zeisler</persName>,
+            and others––
+            is reproduced with
+            every subtle nuance of shade and expression by
+        </hi>
+        <lb/>
+        <name type="brand">
+            <hi rendition="#k">
+                The Welte-Mignon<lb/>
+                Autograph · Piano
+            </hi>
+        </name>
+        <lb/>
+        <hi rendition="#i">
+            Recitals at your convenience daily at our Showrooms
+        </hi>
+      </div>
+
+      <div type="panel">
+        <lb/>How <persName type="artist" corresp="https://d-nb.info/gnd/118697641">
+          EDVARD GRIEG
+        </persName> was Surprised by <persName corresp="https://d-nb.info/gnd/118632892">
+          Kaiser Wilhelm II
+        </persName>
+        <p>
+          <lb />When starting on a trip to Norway, the German Emperor ordered a <name type="brand">Welte-
+          <lb/>-Mignon Autograph Piano</name> for his steam
+          <lb/> yacht. Some recent records made by
+          <lb/>
+          <persName key="grieg" corresp="https://d-nb.info/gnd/118697641">
+            Edvard Grieg
+          </persName>
+          were included, which
+          <lb/>suggested to the Emperor a little
+          <lb />pleasantry at the artist’s expense.
+        </p>
+        <p>
+          On arriving at <placeName>Drontheim</placeName>, Grieg was
+          <lb />invited on board to meet the Kaiser.
+          <lb />In the midst of their conversation the
+          <lb />signal was given to render one of
+          the Grieg records on the <name type="brand">Welte-Mignon</name>.
+        </p>
+        <p>
+          To the delight of the Kaiser, the
+          <lb />maestro instantly recognized his own
+          <lb />touch, and after the jest was explained,
+          <lb />he had the exquisite
+          <lb />pleasure of hearing,
+          <lb />for the first time, the
+          <lb />outpouring of his
+          <lb />own artistic soul.
+        </p>
+      </div>
+
+      <!-- First testimonial -->
+      <div>
+        <quote type="testimonial">
+          <q>
+            I should not have thought it possible.
+            <lb />The Welte-Mignon is, without
+            <lb />doubt, the most remarkable
+            <lb />musical invention of our age.
+          </q>
+        </quote>
+        <lb/>
+        <persName type="artist" corresp="https://d-nb.info/gnd/116020776">
+          WALTER DAMROSCH
+        </persName>,
+        <role>Conductor, New York Symphony Orchestra</role>
+      </div>
+
+      <!-- Second testimonial -->
+      <div>
+        <quote type="testimonial">
+          <q>
+            The Welte-Mignon is indeed a rescuing
+            <lb />invention that renders the great piano
+            <lb />virtuoso immortal and his art imper-
+            <lb />ishable like the great compositions
+            <lb />which he interprets.
+          </q>
+        </quote>
+        <lb/>
+        <persName type="artist" corresp="https://d-nb.info/gnd/116753722">
+          ALFRED HERTZ
+        </persName>,
+        <role>Conductor, Metropolitan Opera House Orchestra</role>
+      </div>
+
+      <div type="illustration">
+        <figure>
+          <desc>
+            Illustration of a grand piano and a Welte-Mignon push-up.
+            Grieg and Wilhelm II. discussing about it.
+          </desc>
+        </figure>
+        <lb/>
+        <name type="brand">Welte-Mignon Autograph Piano</name>
+        <lb/>
+    </div>
+
+      <div>
+        <p>
+          <name type="brand">Welte-Mignon</name> built in following styles:
+          <name type="brand">Welte Piano</name>, with
+          <lb />keyboard
+          <name type="brand">Welte Piano</name>, with-
+          <lb />out keyboard; and
+          <name type="brand">Welte
+            <lb />Attachment</name> to grand pianos.
+        </p>
+      </div>
+
+      <div type="footer">
+        <p>
+          <name type="brand">The Welte-Mignon Studio</name>
+          <orgName>Cleveland &amp; Manning Piano Co.</orgName>
+        </p>
+        <address>
+          <lb/>J. B. CLEVELAND, President.
+          <lb/>80 N. Pryor St.
+          <lb/>H. S. HOLMES, Man. Director.
+        </address>
+      </div>
+    </body>
+  </text>
+</TEI>
