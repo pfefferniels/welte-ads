@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from "../components/layout"
 import { graphql, useStaticQuery } from 'gatsby'
 import { Container, Typography } from '@mui/material'
-import { Marker, WorldMap } from '../components/WorldMap'
+import { Marker, WorldMap } from '../components/worldMap'
 import { coordinates } from '../labels/coordinates'
 
 const Companies = () => {
