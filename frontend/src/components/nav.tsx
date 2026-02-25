@@ -1,5 +1,7 @@
+"use client"
+
 import React from "react"
-import { navigate } from "gatsby"
+import { useRouter, usePathname } from "next/navigation"
 import Grid from "@mui/material/Grid"
 import Container from "@mui/material/Container"
 import Button from "@mui/material/Button"
@@ -12,41 +14,49 @@ interface Links {
 }
 
 interface Props {
-  location: string
   menuLinks: Links[]
 }
 
 const styles = {
   nav: {
     "& div": {
-      padding: "0 2.1rem 0 0",
+      padding: "0 0.5rem 0 0",
     },
   },
   navBtn: {
-    borderBottom: "3px solid transparent",
-    borderBottomColor: "transparent",
-    borderRadius: 0,
+    borderRadius: "2rem",
     boxShadow: "none",
+    textTransform: "uppercase" as const,
+    letterSpacing: "0.08em",
+    fontSize: "0.8rem",
+    fontWeight: 500,
+    padding: "0.4rem 1.2rem",
+    transition: "all 0.3s ease",
+    backgroundColor: "transparent",
     "&:hover, &:focus": {
-      backgroundColor: "transparent",
-      borderBottomColor: theme.palette.primary.main,
+      backgroundColor: theme.palette.primary.main + "12",
+      color: theme.palette.primary.main,
     },
   },
 }
 
-const Layout = ({ location, menuLinks }: Props) => {
-  const isHome = location === "Introduction"
+const Nav = ({ menuLinks }: Props) => {
+  const router = useRouter()
+  const pathname = usePathname()
 
   return (
     <Container maxWidth="md" sx={styles.nav}>
       <Grid container={true} component="nav">
         {menuLinks.map(link => {
-          const active = {
-            borderBottomColor: (isHome && link.link === "/") || location === link.link.replace(/\/+/, "")
-              ? theme.palette.primary.main
-              : "transparent"
-          }
-          
+          const isActive = pathname === link.link || pathname === link.link + '/'
+            || (link.link === '/' && pathname === '/')
+
+          const active = isActive ? {
+            backgroundColor: theme.palette.primary.main + "18",
+            color: theme.palette.primary.main,
+            fontWeight: 600,
+          } : {}
+
           const buttonStyle = {...styles.navBtn, ...active}
 
           return (
@@ -55,7 +65,7 @@ const Layout = ({ location, menuLinks }: Props) => {
                 color="default"
                 size="large"
                 sx={buttonStyle}
-                onClick={() => navigate(link.link)}
+                onClick={() => router.push(link.link)}
               >
                 {link.name}
               </Button>
@@ -64,7 +74,7 @@ const Layout = ({ location, menuLinks }: Props) => {
         })}
       </Grid>
     </Container>
-  );
+  )
 }
 
-export default Layout
+export default Nav

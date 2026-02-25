@@ -52,8 +52,7 @@ export const WorldMap = ({ markers }: WorldMapProps) => {
                 .data(dataGeo.features)
                 .join("path")
                 .attr("fill", "#b8b8b8")
-                .attr("d", d3.geoPath()
-                    .projection(projection) as any)
+                .attr("d", d => d3.geoPath().projection(projection)(d as d3.GeoPermissibleObjects))
                 .style("stroke", "none")
                 .style("opacity", .3)
 

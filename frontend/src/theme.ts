@@ -1,3 +1,5 @@
+"use client"
+
 import { createTheme } from "@mui/material/styles"
 
 // Extend colors and allow extensions on Button
@@ -17,14 +19,14 @@ declare module '@mui/material/Button' {
   }
 }
 
-const mainColor = "#dc3522"
-const secondaryColor = "#fbebda"
+const mainColor = "#8b5e3c"
+const secondaryColor = "#faf8f6"
 
 // A custom theme for CETEIcean
 // It is not intended to be comprehensive; add further rules as needed.
 const theme = createTheme({
   typography: {
-    fontFamily: "EB Garamond, Serif",
+    fontFamily: "Crimson Pro, Serif",
     body1: {
       fontSize: "1.25rem",
       paddingBottom: "1.25rem",
@@ -41,7 +43,7 @@ const theme = createTheme({
       styleOverrides: {
         "@font-face": [
           {
-            fontFamily: "EB Garamond",
+            fontFamily: "Crimson Pro",
             fontStyle: "normal",
             fontDisplay: "swap",
             fontWeight: 400,
@@ -56,7 +58,7 @@ const theme = createTheme({
           color: mainColor,
         },
         "h1, h2, h3, h4, h5, h6": {
-          color: "#333",
+          color: "#2c2220",
         },
         "tei-choice tei-abbr + tei-expan:before, tei-choice tei-expan + tei-abbr:before, tei-choice tei-sic + tei-corr:before, tei-choice tei-corr + tei-sic:before, tei-choice tei-orig + tei-reg:before, tei-choice tei-reg + tei-orig:before": {
           content: `" ("`
@@ -99,10 +101,10 @@ const theme = createTheme({
   },
   palette: {
     default: {
-      main: "#444",
+      main: "#5c524a",
     },
     text: {
-      primary: "#444",
+      primary: "#3d3533",
     },
     primary: {
       main: mainColor,

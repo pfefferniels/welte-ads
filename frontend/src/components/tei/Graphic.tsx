@@ -1,0 +1,23 @@
+import { useEffect } from "react"
+
+interface TEIProps {
+    teiNode: Node
+}
+
+interface WithDimensionSetter {
+    setDimension: (width: number, height: number) => void
+}
+
+const Graphic = ({ teiNode, setDimension }: TEIProps & WithDimensionSetter) => {
+    useEffect(() => {
+        const graphic = teiNode as Element
+
+        setDimension(
+            Number(graphic.getAttribute('width') || 800),
+            Number(graphic.getAttribute('height') || 1000))
+    }, [teiNode, setDimension])
+
+    return null
+}
+
+export default Graphic

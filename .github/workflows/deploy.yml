@@ -1,4 +1,4 @@
-name: Build & deploy Gatsby to GitHub Pages
+name: Build & deploy Next.js to GitHub Pages
 
 on:
   push:
@@ -9,21 +9,19 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
-    # make the built-in token available as GH_TOKEN
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-        # we’ll reconfigure origin ourselves, so disable the default creds
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
 
       - name: Use Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '22'
 
       - name: Install dependencies
         run: npm ci

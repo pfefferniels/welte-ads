@@ -5,9 +5,9 @@ path: "/"
 This is a collection of mostly print advertisements for the
 Welte-Mignon reproducing piano, encoded in TEI. Work is still
 in progress. The project was created as part of my PhD project
-"Interpretationsnetzwerke" at the University Tübingen which
+"Grünfelds Geist" at the University Tübingen which
 considers piano rolls as objects of a digital edition. It
-can be accessed [here](https://measuring-early-records.org).
+can be accessed [here](https://welte225.org).
 
 ## Choice of Material
 The present collection includes advertisements, which:

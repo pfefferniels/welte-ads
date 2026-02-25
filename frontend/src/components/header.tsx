@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 import Nav from "./nav"
 import theme from "../theme"
@@ -15,18 +17,16 @@ interface Props {
   menuLinks: Links[]
 }
 
-// Styled components
-
 const Wrapper = styled.header(() => ({
   background: theme.palette.secondary.main,
   marginBottom: "1.45rem",
+  padding: "0.5rem 0",
+  borderBottom: "1px solid #e8e4e0",
 }))
 
-// Main Component
-
-const Header = ({ location, menuLinks }: Props) => (
+const Header = ({ menuLinks }: Props) => (
     <Wrapper>
-      <Nav location={location} menuLinks={menuLinks} />
+      <Nav menuLinks={menuLinks} />
     </Wrapper>
 )
 

@@ -1,0 +1,233 @@
+.name {
+    cursor: pointer;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
+
+.seg {
+    cursor: pointer;
+    background-color: rgba(255, 251, 0, 0.1);
+}
+
+.highlight-target {
+    animation: highlight-fade 3s ease-out;
+}
+
+@keyframes highlight-fade {
+    0% { background-color: rgba(255, 200, 0, 0.5); }
+    100% { background-color: transparent; }
+}
+
+.illustration {
+    border: 2px dashed gray;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+tei-gap::before {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-right: 1rem;
+    color: gray;
+    content: 'gap';
+}
+
+tei-figure::before {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-right: 1rem;
+    color: gray;
+    content: 'illustration';
+}
+
+tei-signed::before {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: gray;
+    content: 'signature';
+}
+
+tei-titlestmt {
+    display: none;
+}
+
+tei-publicationstmt, tei-publicationstmt>*, tei-sourcedesc, tei-sourcedesc>* {
+    display: block;
+}
+
+tei-sourcedesc::before {
+    margin-top: 1rem;
+    display: block;
+    font-weight: bold;
+    content: 'Source Description'
+}
+
+tei-pb::before {
+    display: block;
+    content: '[page break]';
+    color: gray;
+    font-size: 0.8rem;
+    background-color: white;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -15px;
+    padding: 0.2rem;
+}
+
+tei-pb {
+    text-align: center;
+    display: block;
+    border-bottom: 1px dashed black;
+}
+
+tei-sourcedesc tei-biblfull>tei-publicationstmt {
+    display: none;
+}
+
+tei-title[type="main"] {
+    font-style: italic;
+}
+
+tei-title::before {
+    font-style: normal;
+    content: 'Journal/Newspaper Title: ';
+}
+
+tei-biblscope[unit] {
+    display: block;
+}
+
+tei-biblscope[unit="issue"]::before {
+    content: "Issue: ";
+}
+
+tei-biblscope[unit="pages"]::before {
+    content: "Page: ";
+}
+
+tei-publicationstmt::before {
+    display: block;
+    font-weight: bold;
+    content: 'Publication Statement'
+}
+
+tei-figure {
+    margin: 1rem;
+}
+
+tei-desc {
+    font-style: italic;
+    color: gray;
+}
+
+tei-head {
+    font-size: 1.5em;
+}
+
+tei-div {
+    display: block;
+}
+
+tei-text {
+    line-height: 1.5rem;
+}
+
+.b {
+    font-weight: bold;
+}
+
+.c {
+    display: block;
+    text-align: center;
+}
+
+.et {
+    display: block;
+    margin-left: 2em;
+    text-indent: 0;
+}
+
+.f {
+    border: 1px dotted silver;
+}
+
+.fr {
+    border: 1px dotted silver;
+}
+
+.g {
+    letter-spacing: 0.125em;
+}
+
+.i {
+    font-style: italic;
+}
+
+.in {
+    font-size: 150%;
+}
+
+.k {
+    font-variant: small-caps;
+}
+
+.right {
+    display: block;
+    text-align: right;
+}
+
+.sub {
+    vertical-align: sub;
+    font-size: .7em;
+}
+
+.sup {
+    vertical-align: super;
+    font-size: .7em;
+}
+
+.u {
+    text-decoration: underline;
+}
+
+.uu {
+    border-bottom: double 3px #000;
+}
+
+.s {
+    text-decoration: line-through;
+}
+
+.et2 {
+    display: block;
+    margin-left: 4em;
+    text-indent: 0;
+}
+
+.et3 {
+    display: block;
+    margin-left: 6em;
+    text-indent: 0;
+}
+
+.smaller {
+    font-size: smaller;
+}
+
+.larger {
+    font-size: larger;
+}
+
+tei-lb:before {
+    content: '\A';
+    white-space: pre;
+}
