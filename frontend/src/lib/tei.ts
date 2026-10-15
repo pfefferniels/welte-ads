@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { JSDOM } from 'jsdom'
 import { v4 } from 'uuid'
+import { Facsimile, FacsSurface, FacsZone, Point, parsePoints } from './facsimile'
 
 const TEI_NS = 'http://www.tei-c.org/ns/1.0'
 const TEIEG_NS = 'http://www.tei-c.org/ns/Examples'
@@ -37,7 +38,7 @@ function prefixElement(el: Element, namespaces: Namespace[], elements: Set<strin
 
     for (let i = 0; i < el.attributes.length; i++) {
       const att = el.attributes[i]
-      if (att.name === 'data-origname') continue
+      if (att.name.startsWith('data-')) continue
 
       origAtts.push(att.name)
 
@@ -150,11 +151,94 @@ function extractRenditionCSS(doc: Document, namespaces: Namespace[]): string {
   return css
 }
 
-function prefixTei(xmlString: string): { prefixed: string; elements: string[]; css: string } {
+const BLOCK_ELEMENTS = ['div', 'p', 'head', 'ab', 'figure']
+const BLOCK_RENDITIONS = ['c', 'right', 'et', 'et2', 'et3']
+// elements that show up as a label without containing text
+const LABELLED_ELEMENTS = ['gap', 'space']
+
+const isBlock = (el: Element) =>
+  BLOCK_ELEMENTS.includes(el.localName) ||
+  (el.getAttribute('rendition') || '')
+    .split(/\s+/)
+    .some(r => BLOCK_RENDITIONS.includes(r.replace(/^#/, '')))
+
+/**
+ * Marks every <lb/> that would start an empty line when rendered: one at the
+ * very beginning of a block (a div, a centered line …) or directly after
+ * another line break. The layout view drops these so that a zone holds
+ * exactly the lines of the original.
+ */
+export function markRedundantLineBreaks(doc: Document): void {
+  const text = doc.getElementsByTagNameNS(TEI_NS, 'text')[0]
+  if (!text) return
+
+  let atLineStart = true
+  const walk = (node: Node) => {
+    node.childNodes.forEach(child => {
+      if (child.nodeType === 3) {
+        if (/\S/.test(child.textContent || '')) atLineStart = false
+        return
+      }
+      if (child.nodeType !== 1) return
+
+      const el = child as Element
+      if (el.localName === 'lb') {
+        if (atLineStart) el.setAttribute('data-redundant', '')
+        atLineStart = true
+      } else if (isBlock(el)) {
+        atLineStart = true
+        walk(el)
+        atLineStart = true
+      } else if (LABELLED_ELEMENTS.includes(el.localName)) {
+        atLineStart = false
+      } else {
+        walk(el)
+      }
+    })
+  }
+  walk(text)
+}
+
+function extractFacsimile(doc: Document): Facsimile {
+  const surfaces: FacsSurface[] = []
+  const zones: FacsZone[] = []
+  const num = (value: string | null) => {
+    const n = parseFloat(value || '')
+    return Number.isFinite(n) && n > 0 ? n : null
+  }
+
+  doc.querySelectorAll('facsimile surface').forEach((surface, index) => {
+    const graphic = surface.querySelector('graphic')
+    surfaces.push({
+      url: graphic?.getAttribute('url') || '',
+      width: num(graphic?.getAttribute('width') ?? null),
+      height: num(graphic?.getAttribute('height') ?? null),
+    })
+
+    surface.querySelectorAll('zone').forEach(zone => {
+      const id = zone.getAttribute('xml:id') || zone.getAttribute('id')
+      if (!id) return
+
+      let points: Point[] = parsePoints(zone.getAttribute('points') || '')
+      if (points.length < 3) {
+        const [ulx, uly, lrx, lry] = ['ulx', 'uly', 'lrx', 'lry'].map(a => Number(zone.getAttribute(a)))
+        if (![ulx, uly, lrx, lry].every(Number.isFinite)) return
+        points = [[ulx, uly], [lrx, uly], [lrx, lry], [ulx, lry]]
+      }
+      zones.push({ id, surface: index, points })
+    })
+  })
+
+  return { surfaces, zones }
+}
+
+function prefixTei(xmlString: string): { prefixed: string; elements: string[]; css: string; facsimile: Facsimile } {
   const dom = new JSDOM(xmlString, { contentType: 'text/xml' })
   const doc = dom.window.document
   const elements = new Set<string>()
 
+  const facsimile = extractFacsimile(doc)
+  markRedundantLineBreaks(doc)
   prefixElement(doc.documentElement, defaultNamespaces, elements)
 
   const css = extractRenditionCSS(doc, defaultNamespaces)
@@ -164,6 +248,7 @@ function prefixTei(xmlString: string): { prefixed: string; elements: string[]; c
     prefixed,
     elements: Array.from(elements),
     css,
+    facsimile,
   }
 }
 
@@ -186,6 +271,7 @@ interface AdMetadata {
 interface AdData extends AdMetadata {
   prefixed: string
   elements: string[]
+  facsimile: Facsimile
   original: string
 }
 
@@ -234,7 +320,7 @@ export function getAllAds(): AdData[] {
   return files.map(file => {
     const slug = file.replace('.xml', '')
     const xmlString = fs.readFileSync(path.join(teiDir, file), 'utf-8')
-    const { prefixed, elements } = prefixTei(xmlString)
+    const { prefixed, elements, facsimile } = prefixTei(xmlString)
     const metadata = extractMetadata(xmlString)
 
     return {
@@ -242,6 +328,7 @@ export function getAllAds(): AdData[] {
       ...metadata,
       prefixed,
       elements,
+      facsimile,
       original: xmlString,
     }
   })
@@ -250,7 +337,7 @@ export function getAllAds(): AdData[] {
 export function getAdBySlug(slug: string): AdData {
   const teiDir = getTeiDir()
   const xmlString = fs.readFileSync(path.join(teiDir, `${slug}.xml`), 'utf-8')
-  const { prefixed, elements } = prefixTei(xmlString)
+  const { prefixed, elements, facsimile } = prefixTei(xmlString)
   const metadata = extractMetadata(xmlString)
 
   return {
@@ -258,6 +345,7 @@ export function getAdBySlug(slug: string): AdData {
     ...metadata,
     prefixed,
     elements,
+    facsimile,
     original: xmlString,
   }
 }

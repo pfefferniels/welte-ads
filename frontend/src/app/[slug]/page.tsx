@@ -28,6 +28,7 @@ export default async function AdPage({ params }: { params: Promise<{ slug: strin
         name={ad.slug}
         prefixed={ad.prefixed}
         elements={ad.elements}
+        facsimile={ad.facsimile}
         original={ad.original}
       />
     </Container>

@@ -22,14 +22,14 @@ const Renderer = ({ prefixed, elements, routes = {} }: RendererProps) => {
     setMounted(true)
   }, [])
 
-  if (!mounted) return null
+  const doc = React.useMemo(
+    () => mounted ? new DOMParser().parseFromString(prefixed, 'text/html') : null,
+    [mounted, prefixed])
+
+  if (!mounted || !doc) return null
 
   // Register custom elements
   define(elements)
-
-  // Parse the prefixed HTML
-  const parser = new DOMParser()
-  const doc = parser.parseFromString(prefixed, 'text/html')
 
   // Default routes
   const defaultRoutes: Routes = {
@@ -50,4 +50,4 @@ const Renderer = ({ prefixed, elements, routes = {} }: RendererProps) => {
   )
 }
 
-export default Renderer
+export default React.memo(Renderer)

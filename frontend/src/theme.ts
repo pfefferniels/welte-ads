@@ -80,10 +80,6 @@ const theme = createTheme({
         "tei-body > tei-head": {
           fontSize: "180%",
         },
-        "tei-lb:after": {
-          content: "'\\a'",
-          whiteSpace: "pre"
-        },
         "tei-p": {
           display: "block",
           marginTop: "1.25em",

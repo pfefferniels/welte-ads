@@ -231,3 +231,70 @@ tei-lb:before {
     content: '\A';
     white-space: pre;
 }
+.framed {
+    border: 1px solid currentColor;
+    padding: 0 0.2em;
+}
+
+/* Layout view: every zone holds the lines of its region on the original,
+   at the size computed by Div.tsx */
+
+.layout .zone {
+    line-height: 1.15;
+    text-align: left;
+    color: #1a1a1a;
+}
+
+.layout .zone tei-lb[data-redundant]::before {
+    content: none;
+}
+
+.layout .zone tei-p {
+    margin: 0;
+    text-align: inherit;
+}
+
+.layout .zone tei-head {
+    margin: 0;
+}
+
+.layout .zone tei-figure {
+    display: block;
+    margin: 0;
+    color: gray;
+    font-style: italic;
+    text-align: center;
+}
+
+.layout .zone tei-figure::before,
+.layout .zone tei-signed::before {
+    content: none;
+}
+
+.layout .zone tei-gap::before {
+    content: '[…]';
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.layout .zone.illustration {
+    border: none;
+    outline: 2px dashed gray;
+    outline-offset: -2px;
+    padding-top: 0;
+    text-align: center;
+}
+
+.layout.debug .zone {
+    color: rgba(0, 0, 160, 0.85);
+}
+
+.layout.debug .seg {
+    background-color: transparent;
+}
+
+.layout .zone .name {
+    text-decoration-color: rgba(0, 0, 0, 0.3);
+    text-decoration-thickness: 0.04em;
+}

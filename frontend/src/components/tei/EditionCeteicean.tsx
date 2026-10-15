@@ -1,10 +1,9 @@
 "use client"
 
-import React, { useEffect, useRef, useState, useSyncExternalStore } from "react"
+import React, { useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore } from "react"
 import Renderer, { Routes } from "./Renderer"
 import { Tei } from "./DefaultBehaviors"
 import Div from "./Div"
-import Graphic from "./Graphic"
 import Name from "./Name"
 import Note from "./Note"
 import Seg from "./Seg"
@@ -13,19 +12,24 @@ import MsIdentifier from "./MsIdentifier"
 import './style.css'
 import { Box, Dialog, DialogContent, IconButton, Paper, Stack, ToggleButton, ToggleButtonGroup } from "@mui/material"
 import { Code, Download, LayersOutlined, Title } from "@mui/icons-material"
+import { Facsimile, computeLayout } from "../../lib/facsimile"
 
 const withinBoundaries = (lower: number, suggested: number, upper: number) => {
   return Math.max(lower, Math.min(upper, suggested))
 }
 
+// zoom step per wheel tick
+const factor = 0.05
+
 interface Props {
   name: string
   prefixed: string
   elements: string[]
+  facsimile: Facsimile
   original: string
 }
 
-const EditionCeteicean = ({ name, prefixed, elements, original }: Props) => {
+const EditionCeteicean = ({ name, prefixed, elements, facsimile, original }: Props) => {
   const [mode, setMode] = useState<'layout' | 'text'>('text')
   const mounted = useSyncExternalStore(
     () => () => {},
@@ -53,42 +57,32 @@ const EditionCeteicean = ({ name, prefixed, elements, original }: Props) => {
   const metadataRef = useRef<HTMLDivElement>(null)
   const [metadataOpen, setMetadataOpen] = useState(false)
 
-  const [surfaceWidth, setSurfaceWidth] = useState(100)
-  const [surfaceHeight, setSurfaceHeight] = useState(100)
+  const layout = useMemo(() => computeLayout(facsimile), [facsimile])
+  const hasLayout = Object.keys(layout.zones).length > 0
+  // ?debug outlines the zones and puts the facsimile (if it is found under
+  // /facs/<ad>-<surface>.png) beneath the text; ?debug=facs shows only the
+  // facsimile
+  const debugParam = mounted ? new URLSearchParams(window.location.search).get('debug') : null
+  const debug = debugParam !== null
+  const facsOnly = debugParam === 'facs'
+
   const [zoom, setZoom] = useState(1)
   const [pos, setPos] = useState({ x: 0, y: 0 })
   const mouseStateRef = useRef({ down: false, lastPos: { x: 0, y: 0 } })
-  const [prevSurface, setPrevSurface] = useState({ width: surfaceWidth, height: surfaceHeight })
 
-
-  const getZoneById = (id: string) => {
-    if (typeof window === 'undefined' || id.length === 0) return null
-    const dom = new DOMParser().parseFromString(prefixed, 'text/html')
-    const zone = dom.querySelector(id)
-    if (!zone) return null
-    return zone.getAttribute('points')
-  }
-
-  const layoutRoutes: Routes = {
+  // stable routes, so that panning and zooming do not re-render the text
+  const layoutRoutes: Routes = useMemo(() => ({
     "tei-tei": Tei,
-    "tei-graphic": (props) => (
-      <Graphic
-        teiNode={props.teiNode}
-        setDimension={(width, height) => {
-          setSurfaceWidth(width)
-          setSurfaceHeight(height)
-        }} />
-    ),
     "tei-teiheader": (props) => <Metadata sink={metadataRef} {...props} />,
-    "tei-div": (props) => <Div zoneGetter={getZoneById} {...props} />,
+    "tei-div": (props) => <Div zoneGetter={id => layout.zones[id] || null} {...props} />,
     "tei-persname": Name,
     "tei-orgname": Name,
     "tei-seg": Seg,
     "tei-note": Note,
     "tei-msidentifier": MsIdentifier
-  }
+  }), [layout])
 
-  const textRoutes: Routes = {
+  const textRoutes: Routes = useMemo(() => ({
     "tei-tei": Tei,
     "tei-teiheader": (props) => <Metadata sink={metadataRef} {...props} />,
     "tei-persname": Name,
@@ -96,11 +90,9 @@ const EditionCeteicean = ({ name, prefixed, elements, original }: Props) => {
     "tei-seg": Seg,
     "tei-note": Note,
     "tei-msidentifier": MsIdentifier
-  }
+  }), [])
 
   const divRef = useRef<HTMLDivElement>(null)
-
-  const factor = 0.05
 
   useEffect(() => {
     const div = divRef.current
@@ -137,13 +129,14 @@ const EditionCeteicean = ({ name, prefixed, elements, original }: Props) => {
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault()
 
-      const zoomPoint = { x: e.clientX, y: e.clientY }
+      const rect = div.getBoundingClientRect()
+      const zoomPoint = { x: e.clientX - rect.left, y: e.clientY - rect.top }
 
       let delta = e.deltaY ? e.deltaY / 40 : e.deltaX
       delta = -withinBoundaries(-1, delta, 1)
 
       setZoom(prevZoom => {
-        const newZoom = withinBoundaries(0.1, prevZoom + delta * factor * prevZoom, 5)
+        const newZoom = withinBoundaries(0.02, prevZoom + delta * factor * prevZoom, 5)
 
         setPos(prevPos => {
           const zoomTarget = {
@@ -174,16 +167,23 @@ const EditionCeteicean = ({ name, prefixed, elements, original }: Props) => {
       div.removeEventListener('mouseup', handleMouseUp)
       div.removeEventListener('mouseleave', handleMouseUp)
     }
-  }, [divRef, factor])
+  }, [mode, mounted])
 
-  if (
-    prevSurface.width !== surfaceWidth ||
-    prevSurface.height !== surfaceHeight
-  ) {
-    setPrevSurface({ width: surfaceWidth, height: surfaceHeight })
-    setZoom((typeof window !== 'undefined' ? window.innerHeight - 100 : 100) / surfaceHeight)
-    setPos({ x: 10, y: 10 })
-  }
+  // fit the whole advertisement into the view whenever the view opens
+  useLayoutEffect(() => {
+    const div = divRef.current
+    if (mode !== 'layout' || !div || layout.width === 0 || layout.height === 0) return
+
+    const padding = 10
+    const fitted = Math.min(
+      (div.clientWidth - 2 * padding) / layout.width,
+      (div.clientHeight - 2 * padding) / layout.height)
+    setZoom(fitted)
+    setPos({
+      x: (div.clientWidth - layout.width * fitted) / 2,
+      y: padding,
+    })
+  }, [mode, layout, mounted])
 
   if (!mounted) return null
 
@@ -197,7 +197,7 @@ const EditionCeteicean = ({ name, prefixed, elements, original }: Props) => {
           onChange={(_, value) => setMode(value as 'layout' | 'text')}
           aria-label="display mode"
         >
-          <ToggleButton value="layout" aria-label="layout">
+          <ToggleButton value="layout" aria-label="layout" disabled={!hasLayout}>
             <LayersOutlined />
           </ToggleButton>
           <ToggleButton value="text" aria-label="text">
@@ -233,27 +233,96 @@ const EditionCeteicean = ({ name, prefixed, elements, original }: Props) => {
 
       {mode === 'layout'
         ? (
-          <div
+          <Box
             ref={divRef}
             className='container'
+            sx={{ ml: 7 }}
             style={{
-              width: '100%',
               height: '90vh',
               overflow: 'hidden'
             }}>
-            <Paper
-              className='paper'
-              elevation={5}
+            <div
+              className={`layout${debug ? ' debug' : ''}`}
               style={{
                 position: 'relative',
-                width: surfaceWidth,
-                height: surfaceHeight,
+                width: layout.width,
+                height: layout.height,
                 transform: `translate(${pos.x}px, ${pos.y}px) scale(${zoom})`,
                 transformOrigin: '0 0'
               }}>
-              <Renderer prefixed={prefixed} elements={elements} routes={layoutRoutes} />
-            </Paper>
-          </div>)
+              {layout.surfaces.map(surface => (
+                <Paper
+                  key={surface.index}
+                  className='paper'
+                  elevation={5}
+                  square
+                  data-surface={surface.index}
+                  data-crop={[surface.crop.left, surface.crop.top, surface.crop.width, surface.crop.height].join(',')}
+                  style={{
+                    position: 'absolute',
+                    left: surface.left,
+                    top: surface.top,
+                    width: surface.width,
+                    height: surface.height,
+                    overflow: 'hidden'
+                  }}>
+                  {debug && surface.full && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      alt=""
+                      src={`/facs/${name}-${surface.index}.png`}
+                      onError={e => { e.currentTarget.style.display = 'none' }}
+                      style={{
+                        position: 'absolute',
+                        left: surface.full.left - surface.left,
+                        top: surface.full.top - surface.top,
+                        width: surface.full.width,
+                        height: surface.full.height,
+                        opacity: facsOnly ? 1 : 0.45,
+                        pointerEvents: 'none'
+                      }} />
+                  )}
+                </Paper>
+              ))}
+              <div style={{ visibility: facsOnly ? 'hidden' : 'visible' }}>
+                <Renderer prefixed={prefixed} elements={elements} routes={layoutRoutes} />
+              </div>
+              {debug && !facsOnly && (
+                <svg
+                  width={layout.width}
+                  height={layout.height}
+                  style={{ position: 'absolute', left: 0, top: 0, pointerEvents: 'none' }}>
+                  {Object.values(layout.zones).map(zone => (
+                    <g key={zone.id}>
+                      <rect
+                        x={zone.left}
+                        y={zone.top}
+                        width={zone.width}
+                        height={zone.height}
+                        fill="none"
+                        stroke="red"
+                        strokeWidth={Math.max(1, layout.width / 800)} />
+                      {zone.shape && (
+                        <polygon
+                          points={zone.shape.map(([x, y]) => `${x + zone.left},${y + zone.top}`).join(' ')}
+                          fill="none"
+                          stroke="blue"
+                          strokeDasharray="6 4"
+                          strokeWidth={Math.max(1, layout.width / 800)} />
+                      )}
+                      <text
+                        x={zone.left + 2}
+                        y={zone.top - 4}
+                        fill="red"
+                        fontSize={Math.max(10, layout.width / 90)}>
+                        {zone.id.replace(/^eSc_textblock_/, '')}
+                      </text>
+                    </g>
+                  ))}
+                </svg>
+              )}
+            </div>
+          </Box>)
         : (
           <Box sx={{ ml: 7 }}>
             <Renderer prefixed={prefixed} elements={elements} routes={textRoutes} />
