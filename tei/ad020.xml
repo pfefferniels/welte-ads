@@ -204,10 +204,10 @@
             <graphic url="uiug.30112102033757-seq_236.tif" width="2880" height="3976" />
             <zone points="167,217 167,395 2866,395 2866,217" id="eSc_textblock_535af4ac" />
             <zone
-                points="2499,1431 2570,1579 2641,1643 2632,1888 2579,1934 2605,1970 2579,3143 1945,3169 1916,3205 1635,3187 1644,2138 1573,1616 1591,1546 1710,1413"
+                points="1573,1413 2641,1413 2641,3205 1573,3205"
                 id="eSc_textblock_ca7a7573" />
             <zone
-                points="2588,3269 2605,3319 2475,3372 2446,3478 2314,3496 1803,3487 1768,3452 1768,3357 1635,3319 1662,3269 2437,3260"
+                points="1635,3260 2605,3260 2605,3496 1635,3496"
                 id="eSc_textblock_44bd38e4" />
             <zone
                 points="237,417 237,3490 389,3712 766,3777 1192,3687 1316,3490 1316,1647 1845,579 1316,417 1137,184 766,94 417,174"
@@ -219,16 +219,18 @@
     <text>
         <div facs="#eSc_textblock_535af4ac">
             <lb />
-            <hi rendition="#k">
+            <hi rendition="#uc #g">
                 <seg type="topic slogan" ana="#virtual_presence" resp="#np">
                     The Master's Fingers On your Piano
                 </seg>
             </hi></div>
         <div facs="#eSc_textblock_ca7a7573">
+            <hi rendition="#c #in #larger"><hi rendition="#in #larger">
             <lb />Think what
             <lb /><name type="brand">Welte-Mignon</name>
             <lb />means to you
-            <lb />Imagine a musical instrument that
+            </hi></hi>
+            <lb /><hi rendition="#dropcap">I</hi><hi rendition="#uc">magine</hi> a musical instrument that
             <lb />
             <seg ana="#home" type="topic" resp="#np">
                 brings to your home
@@ -248,7 +250,7 @@
                 Not<lb />approximations of their playing, but their<lb />very individuality.
             </seg>
             <seg ana="#exact_reproduction #secret">
-                Only <name type="brand">Welte-Mignon</name><lb />possesses this secret of perfect reproduction.
+                <hi rendition="#i">Only</hi> <hi rendition="#uc"><name type="brand">Welte-Mignon</name></hi>*<lb /><hi rendition="#i">possesses this secret of perfect reproduction.</hi>
             </seg>
             <lb />Select any piano you prefer but be sure the
             <lb />reproducing action is <name type="brand">WELTE-MIGNON.*</name>
@@ -261,13 +263,23 @@
             <lb />on request.
         </div>
         <div facs="#eSc_textblock_44bd38e4">
+            <hi rendition="#c">
             <lb /><orgName>AUTO PNEUMATIC ACTION COMPANY</orgName>
-            <lb /><persName>W. C. Heaton, Pres.</persName><lb />
+            <lb /><hi rendition="#i"><persName>W. C. Heaton, Pres.</persName></hi><lb />
             <address>
                 653 West 51st St., New
                 York City
-            </address><lb />*Licensed under original <name type="brand">Welte-Mignon</name> patents</div>
-        <div facs="#eSc_textblock_9ababb2c" type="illustration" />
-        <div facs="#eSc_textblock_7badf9ac" type="illustration" />
+            </address><lb /><hi rendition="#smaller #i">*Licensed under original <name type="brand">Welte-Mignon</name> patents</hi>
+            </hi></div>
+        <div facs="#eSc_textblock_9ababb2c" type="illustration">
+            <figure>
+                <desc>Black arched column; a pair of hands in white cuffs playing on a piano keyboard.</desc>
+            </figure>
+        </div>
+        <div facs="#eSc_textblock_7badf9ac" type="illustration">
+            <figure>
+                <desc>Small picture of a grand piano.</desc>
+            </figure>
+        </div>
     </text>
 </TEI>

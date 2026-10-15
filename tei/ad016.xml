@@ -182,22 +182,22 @@
                 id="eSc_textblock_bab75d2b" />
             <zone points="2366,3275 2366,2763 1928,2763 1928,3275"
                 id="eSc_textblock_d423425a" />
-            <zone points="513,722 513,1546 1410,1297 2548,1546 2548,722"
+            <zone points="513,722 513,1300 2548,1300 2548,722"
                 id="eSc_textblock_7ead3664" />
         </surface>
     </facsimile>
     <text>
         <div facs="#eSc_textblock_41ccdcb2">
-            <lb /><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg>
+            <lb /><hi rendition="#g2"><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg></hi>
         </div>
 
         <div facs="#eSc_textblock_89648e14">
             <lb />
-            <hi rendition="#larger">
+            <hi rendition="#c">
                 <hi rendition="#i">
                     Possessed only by
                 </hi>
-                <lb /><name type="brand">Welte-Mignon</name>
+                <lb /><hi rendition="#in #larger"><name type="brand">Welte-Mignon</name></hi>
             </hi>
         </div>
         <div facs="#eSc_textblock_bab75d2b" rendition="#framed">
@@ -207,7 +207,7 @@
                 <lb />changed when you hear a reproducing
                 <lb />piano equipped with the famous <name type="brand">WELTE-
                 <lb />MIGNON Licensee Reproducing Action</name>.
-                <lb />For, only <name type="brand">WELTE-MIGNON*</name>
+                <lb />For, <hi rendition="#i">only</hi> <name type="brand">WELTE-MIGNON*</name>
                 <hi rendition="#i">
                     <seg ana="#secret">
                         possesses
@@ -226,7 +226,7 @@
                 <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>–the
                 world's greatest pianists
-                <lb />-performing
+                <lb />—performing
                 <seg ana="#home" resp="#np" type="topic">
                     in your own home
                 </seg>
@@ -242,18 +242,20 @@
                 <lb />112 different pianos. There are <name type="brand">WELTE-
                 <lb />MIGNON*</name> dealers everywhere.
                 <lb />The famous <name type="brand">WELTE-MIGNON* Re-
-                <lb />producing Action</name> can be installed in your
+                <lb />producing Action</name> can be installed in <hi rendition="#i">your</hi>
                 <lb />grand piano. Our beautiful brochure
                 <lb />sent on request.
             </p>
 
+            <hi rendition="#c">
             <lb />The <orgName>Auto Pneumatic Action Co.</orgName>
-            <lb /><persName>W.C. Heaton, Pres.</persName>
+            <lb /><hi rendition="#i #smaller"><persName>W.C. Heaton, Pres.</persName></hi>
             <lb /><address>653 West 51st Street, New York</address>
             
-            <hi rendition="#i">
+            <hi rendition="#i #smaller">
                 <lb />*Licensed under original
-                <lb /><name type="brand">Welte-MIGNON</name> patents
+                <lb /><name type="brand">Welte-Mignon</name> patents
+            </hi>
             </hi>
         </div>
 

@@ -109,13 +109,13 @@
     <facsimile>
         <surface>
             <graphic url="uiug.30112102033757-seq_104.tif" width="2896" height="3976"/>
-            <zone points="2604,512 2622,580 492,628 489,542 1424,515 2464,507"
+            <zone points="489,507 2622,507 2622,628 489,628"
                 id="eSc_textblock_1f92a58e" />
             <zone points="1048,305 1048,495 2035,495 2035,305"
                 id="eSc_textblock_16b8738b" />
-            <zone points="2242,2164 2286,2217 2265,2320 1325,2320 910,2303 892,2138 934,2102"
+            <zone points="892,2102 2286,2102 2286,2320 892,2320"
                 id="eSc_textblock_be99ecd4" />
-            <zone points="1225,2624 1252,2747 1225,2842 689,2825 706,2615 1013,2606"
+            <zone points="689,2606 1252,2606 1252,2842 689,2842"
                 id="eSc_textblock_5b251767" />
             <zone
                 points="2657,2367 2657,2842 2621,2861 2074,2861 2074,2860 1404,2842 1413,2350 2466,2350"
@@ -124,7 +124,7 @@
                 points="2401,3092 2365,3249 2277,3284 1935,3284 1876,3306 1105,3306 848,3284 821,3231 821,3065 848,3048 1871,3057 2033,3049 2371,3049"
                 id="eSc_textblock_e4393655" />
             <zone
-                points="2648,3348 2675,3375 2657,3558 2058,3567 1979,3558 1932,3514 1219,3505 1164,3452 530,3434 521,3366 556,3348 951,3324 951,3336 2288,3336"
+                points="521,3324 2675,3324 2675,3567 521,3567"
                 id="eSc_textblock_9d2e8e27" />
             <zone points="2056,2875 2056,3039 2637,3039 2637,2875"
                 id="eSc_textblock_6aa6819d" />
@@ -138,7 +138,10 @@
             <name type="brand">
                Welte-Mignon
             </name>
-            <hi rendition="#k">
+         </div>
+         <div facs="#eSc_textblock_1f92a58e" type="brand-elements">
+            <lb />
+            <hi rendition="#uc #g2">
                <seg ana="#virtual_presence" type="topic slogan" resp="#np">
                   The Master's Fingers on Your Piano
               </seg>
@@ -186,9 +189,9 @@
          </div>
          <div facs="#eSc_textblock_6aa6819d">
             <lb />
-            <signed>
+            <hi rendition="#i"><signed>
                 <persName corresp="https://d-nb.info/gnd/116014490">V. de Pachmann</persName>
-            </signed>
+            </signed></hi>
          </div>
          <div facs="#eSc_textblock_5b251767">
             <hi rendition="#i">
@@ -199,7 +202,7 @@
                 <lb />his time, the most celebrated
                 <lb />pianist of a century; rejuve-
                 <lb />nated at 75, and now playing
-                <lb />as no one ever played before."
+                <lb />"as no one ever played before."
             </hi>
          </div>
          <div facs="#eSc_textblock_e4393655">
@@ -221,8 +224,10 @@
                   653 West 51st Street, New York
                 </address>
                 <lb /><persName>WILLIAM C. HEATON</persName>, President
-                <lb />*Licensed under original <name type="brand">Welte Mignon</name> patents
             </hi>
+            <hi rendition="#right #smaller"><hi rendition="#smaller">
+                <lb />*Licensed under original <name type="brand">Welte Mignon</name> patents
+            </hi></hi>
          </div>
     </text>
 </TEI>

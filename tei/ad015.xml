@@ -84,7 +84,7 @@
                id="eSc_textblock_98250902"/>
          <zone points="694,2516 694,2665 2399,2665 2399,2516"
                id="eSc_textblock_aea977b8"/>
-         <zone points="2567,2741 2563,2820 2350,2820 2350,2948 682,2959 682,2856 518,2856 518,2750"
+         <zone points="518,2741 2567,2741 2567,2959 518,2959"
                id="eSc_textblock_34901235"/>
          <zone points="2097,3315 1249,3306 998,3322 998,3035 2110,3035 2110,3321 2097,3321"
                id="eSc_textblock_cdb62251"/>
@@ -98,13 +98,13 @@
       <div facs="#eSc_textblock_eb938c75" type="illustration">
         <figure>
             <desc>
-                Walter Giesiking sitting at the piano.
+                Walter Gieseking sitting at the piano.
             </desc>
         </figure>
       </div>
       <div facs="#eSc_textblock_778d31fa">
          <lb/>
-            <hi rendition="#larger">
+            <hi rendition="#larger #c">
                 <persName type="artist" corresp="https://d-nb.info/gnd/118694820">WALTER GIESEKING</persName>
             </hi>
         </div>
@@ -139,7 +139,7 @@
       </div>
       <div facs="#eSc_textblock_34901235">
         <hi rendition="#c">
-            <lb/><orgName>AUTO PNEUMATIC ACTION COMPANY</orgName>
+            <lb/><hi rendition="#in #g"><orgName>AUTO PNEUMATIC ACTION COMPANY</orgName></hi>
             <lb/><persName>William C. Heaton, President</persName>
             <lb/>
             <address>
@@ -149,8 +149,10 @@
     </div>
         
       <div facs="#eSc_textblock_cdb62251">
-         <lb/><name type="brand">Welte Mignon</name>
+         <hi rendition="#c">
+         <lb/><hi rendition="#in"><name type="brand">Welte Mignon</name></hi>
          <lb/><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg>
+         </hi>
         </div>
 
       <div facs="#eSc_textblock_94049306" type="illustration">
