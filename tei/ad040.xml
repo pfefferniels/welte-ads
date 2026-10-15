@@ -79,7 +79,7 @@
         <surface>
             <graphic url="miun.act2359.0061.001-seq_152.tif" width="2809" height="3648" />
             <zone
-                points="2346,2399 2387,2496 2387,2567 2365,2590 1371,2590 1371,2492 1056,2492 445,2486 397,2421 397,2383 431,2375"
+                points="397,2375 2387,2375 2387,2590 397,2590"
                 id="eSc_textblock_f14f8ddd" />
             <zone points="733,2869 470,2851 462,2602 492,2601 1379,2601 1379,2869"
                 id="eSc_textblock_03db0457" />
@@ -89,21 +89,25 @@
                 id="eSc_textblock_5837879e" />
             <zone points="1230,3239 1230,3497 1556,3497 1556,3239"
                 id="eSc_textblock_dbdcd861" />
-            <zone points="2541,3315 2541,3378 267,3370 262,3282 262,3285"
+            <zone points="262,3282 2541,3282 2541,3378 262,3378"
                 id="eSc_textblock_b603b3c0" />
             <zone points="479,343 479,2360 2349,2360 2349,343"
                 id="eSc_textblock_d59aeee7" />
         </surface>
     </facsimile>
     <text>
-        <div facs="#eSc_textblock_d59aeee7" type="illustration" />
+        <div facs="#eSc_textblock_d59aeee7" type="illustration">
+            <figure>
+                <desc>A woman in an evening gown stands between dark curtains at a tall window, looking out at a terrace with a grand piano and guests</desc>
+            </figure>
+        </div>
 
         <div facs="#eSc_textblock_f14f8ddd">
             <head>
                 <lb />
                 <quote type="testimonial">
-                    "Unbelievably True to the Artist's Playing-
-                    <lb /><hi rendition="#i">That's why I bought it</hi>"
+                    "Unbelievably True to the Artist's Playing—
+                    <hi rendition="#right"><lb /><hi rendition="#i">That's why I bought it</hi>"</hi>
                 </quote>
             </head>
         </div>
@@ -111,7 +115,7 @@
             <p>
                 <lb />
                 <hi rendition="#k">
-                    <hi rendition="#i">T</hi>he
+                    <hi rendition="#larger">T</hi>he
                 </hi>
                 infinite joy and satisfaction that attend the
                 <lb />possession of a thing which is the best of its
@@ -134,9 +138,9 @@
             <p>
                 <lb />to hear it to realize that
                 <seg ana="#exact_reproduction" resp="#np" type="topic">
-                    its playing is the artist's playing.
+                    <hi rendition="#i">its playing is the artist's playing.</hi>
                 </seg>
-                <lb />Your piano marchant will be proud to give you a
+                <lb /><hi rendition="#et">Your piano merchant will be proud to give you a</hi>
                 <lb />demonstration any time.
                 <name type="brand">
                     Welte-Mignon Licensee
@@ -149,24 +153,30 @@
                     Company
                 </orgName>,
                 <lb />
-                <persName>W. C. Heaton, President</persName>,
+                <persName>W. C. Heaton, <hi rendition="#i">President</hi></persName>,
                 <address>653 West 51st Street, New York.</address>
             </p>
         </div>
 
         <div facs="#eSc_textblock_5837879e" type="brand-elements">
-            <name type="brand">
-                <lb />Welte-Mignon
-                <lb />Licensee
-                <lb />Reproducing Piano
-            </name>
+            <hi rendition="#c">
+                <name type="brand">
+                    <hi rendition="#in"><lb />Welte-Mignon</hi>
+                    <hi rendition="#i #k #g #smaller"><hi rendition="#smaller"><hi rendition="#smaller"><lb />Licensee</hi></hi></hi>
+                    <lb />Reproducing Piano
+                </name>
+            </hi>
+        </div>
 
+        <div facs="#eSc_textblock_b603b3c0">
             <seg type="slogan">
-                <hi rendition="#k">
+                <hi rendition="#k #g #c">
                     <lb />The Master's Fingers on Your Piano
                 </hi>
             </seg>
+        </div>
 
+        <div facs="#eSc_textblock_dbdcd861" type="illustration">
             <figure type="logo">
                 <desc>Phantom hands on a keyboard.</desc>
             </figure>

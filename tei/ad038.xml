@@ -72,10 +72,10 @@
         <surface>
             <graphic url="mdp.39015086654038-seq_44.tif" width="2692" height="3540" />
             <zone
-                points="2170,1628 2170,1736 2044,1777 2044,2114 2020,2145 1855,2186 2005,2210 2036,2242 2028,2302 1849,2326 1824,2365 944,2365 708,2310 716,2257 840,2257 944,2194 700,2169 692,1832 716,1785 574,1760 582,1628 2123,1589"
+                points="692,1589 2044,1589 2044,2365 692,2365"
                 id="eSc_textblock_d7c9744b" />
             <zone
-                points="2068,2533 2091,2603 2076,2743 2202,2824 2186,2987 1792,3034 661,3018 598,2995 590,2761 669,2688 692,2462 1651,2430"
+                points="590,2430 2202,2430 2202,3034 590,3034"
                 id="eSc_textblock_05f06f3c" />
             <zone points="1367,3248 1367,3254 1314,3254 1320,3248"
                 id="eSc_textblock_cfbc1ad0" />
@@ -86,15 +86,15 @@
         </surface>
     </facsimile>
     <text>
+        <div facs="#eSc_textblock_7ddb1b75" type="illustration">
+            <figure>
+                <desc resp="#np">
+                    A party, several couples dancing. Behind the window one can
+                    see a grand piano.
+                </desc>
+            </figure>
+        </div>
         <div facs="#eSc_textblock_d7c9744b">
-            <div facs="#eSc_textblock_7ddb1b75" type="illustration">
-                <figure>
-                    <desc resp="#np">
-                        A party, several couples dancing. Behind the window one can
-                        see a grand piano.
-                    </desc>
-                </figure>
-            </div>
             <head>
                 <hi rendition="#i #c">
                     <lb />Summertime,-at home!
@@ -107,7 +107,7 @@
                     <hi rendition="#k">Entertaining</hi> at home in the summertime is a very easy and a very enjoyable mat-
                     <lb />ter for the hostess who has a
                     <name type="brand">
-                        Bush &amp; Lane Welte-Mignon (Licensce) Reproducing Piano.
+                        Bush &amp; Lane Welte-Mignon (Licensee) Reproducing Piano.
                     </name>
                 </seg>
             </p>
@@ -135,7 +135,7 @@
 
             <p>
                 <lb />
-                <hi rend="#i">
+                <hi rendition="#i #c">
                     Conventional Models Consistently Priced at
                     <measure commodity="wm" unit="dollar" quantity="1075">
                         $1075
@@ -146,6 +146,7 @@
                     </measure>
                 </hi>
             </p>
+            <hi rendition="#c">
             <lb />
             <orgName>
                 Bush &amp; Lane Piano Co.
@@ -155,12 +156,15 @@
             </address>
             <lb />
             World's Largest Makers of High Grade Pianos Exclusively
+            </hi>
         </div>
 
         <div facs="#eSc_textblock_05f06f3c">
+            <hi rendition="#c">
             <lb />Bush &amp; Lane
             <lb />Welte-Mignon
             <lb />(Licensee)
+            </hi>
         </div>
     </text>
 </TEI>

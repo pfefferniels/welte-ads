@@ -82,18 +82,31 @@
             <graphic url="world-famous-welte.png" width="715" height="987" />
             <zone points="541,162 545,247 506,269 322,269 318,188 320,164 328,160"
                 id="eSc_textblock_562dfbcc" />
-            <zone points="625,576 625,576 625,576" id="eSc_textblock_4271fc05" />
+            <zone points="118,341 590,341 590,382 118,382" id="eSc_textblock_4271fc05" />
             <zone points="227,4 225,23 208,12 209,0" id="eSc_textblock_8517a050" />
             <zone
-                points="115,638 104,626 102,416 109,409 103,396 107,372 118,348 136,342 608,339 608,593 466,593 466,638"
+                points="115,638 104,626 102,416 109,409 103,396 104,388 608,388 608,593 466,593 466,638"
                 id="eSc_textblock_d9bf3380" />
             <zone
-                points="474,644 510,651 530,679 487,696 466,718 425,725 407,740 302,740 289,721 245,718 199,692 188,658 175,653 188,648 186,643 473,643"
+                points="175,643 530,643 530,742 175,742"
                 id="eSc_textblock_be4de09e" />
             <zone points="108,127 108,320 264,320 264,127" id="eSc_textblock_603bc38e" />
+            <zone points="20,790 695,790 695,975 20,975" id="zone_organ" />
         </surface>
     </facsimile>
     <text>
+        <div facs="#eSc_textblock_8517a050" type="illustration">
+            <figure>
+                <desc>Bird (ornament on top of the decorative frame)</desc>
+            </figure>
+        </div>
+        <div facs="#eSc_textblock_603bc38e" type="illustration">
+            <figure>
+                <desc resp="#np">
+                    Portrait of Hofmann
+                </desc>
+            </figure>
+        </div>
         <div facs="#eSc_textblock_562dfbcc">
             <p>
                 <hi rendition="#i">
@@ -111,13 +124,14 @@
         </div>
         <div facs="#eSc_textblock_4271fc05">
             <lb />
-            <hi rendition="#larger">World Famous <name type="brand">Welte-Mignon</name></hi>
-
+            <hi rendition="#larger #c">World Famous <name type="brand">Welte-Mignon</name></hi>
+        </div>
+        <div facs="#eSc_textblock_d9bf3380">
             <p>
                 <seg ana="#technical_invention" resp="#np" type="topic">
                     <lb />
                     <hi rendition="#in">T</hi>he highest achievement of the House
-                    <lb />of Welte in the world of music in-
+                    <lb /><hi rendition="#et">of Welte in the world of music in-</hi>
                     <lb />vention
                 </seg>
                 <seg ana="#immortality" resp="#np" type="topic">
@@ -133,22 +147,20 @@
                 <lb />one hundred and fifty of the most distinguished
                 <lb />pianists of the past two decades.
             </p>
-
-            <lb /><orgName>M. Welte &amp; Sons, Inc.</orgName>
-            <lb />
-            <address>
-                Six Sixty Seven Fifth Ave.
-                <lb />New York
-            </address>
         </div>
-        <div facs="#eSc_textblock_8517a050" />
-        <div facs="#eSc_textblock_d9bf3380" />
-        <div facs="#eSc_textblock_be4de09e" />
-        <div facs="#eSc_textblock_603bc38e" type="illustration">
+        <div facs="#eSc_textblock_be4de09e">
+            <hi rendition="#c">
+                <lb /><hi rendition="#in"><orgName>M. Welte &amp; Sons, Inc.</orgName></hi>
+                <lb />
+                <address>
+                    Six Sixty Seven Fifth Ave.
+                    <lb />New York
+                </address>
+            </hi>
+        </div>
+        <div facs="#zone_organ" type="illustration">
             <figure>
-                <desc resp="#np">
-                    Portrait of Hofmann
-                </desc>
+                <desc>Organ pipes with the Welte monogram (bottom of the decorative frame)</desc>
             </figure>
         </div>
     </text>
