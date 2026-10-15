@@ -79,10 +79,10 @@
         <surface>
             <graphic url="uc1.c038417028-seq_293.tif" width="1892" height="2719" />
             <zone
-                points="417,296 1449,320 1473,356 1473,518 1449,584 1370,640 1388,844 1346,874 1136,922 1032,1043 834,1037 820,910 586,886 519,856 489,640 404,548 380,463 374,314 417,296"
+                points="374,296 1473,296 1473,1043 374,1043"
                 id="eSc_textblock_3d042e1f" />
             <zone
-                points="1015,2217 1600,2229 1624,2235 1636,2342 1606,2397 864,2409 852,2326 876,2241 1015,2217"
+                points="1070,2262 1515,2262 1515,2345 1070,2345"
                 id="eSc_textblock_3b2e08a4" />
             <zone points="1553,2205 1564,2205 1564,2209 1547,2209 1553,2205"
                 id="eSc_textblock_08bba70b" />
@@ -92,13 +92,14 @@
                 id="eSc_textblock_2545edc4" />
             <zone points="1547,2163 1564,2163 1570,2179 1541,2167 1547,2163"
                 id="eSc_textblock_090e558e" />
+            <zone points="900,1495 1555,1495 1555,2215 900,2215" id="zone_orchestrion" />
         </surface>
         <surface>
             <graphic url="uc1.c038417028-seq_294.tif" width="1852" height="2719" />
             <zone
-                points="953,102 1392,84 1555,102 1599,138 1761,175 1763,390 592,390 592,382 490,382 490,268 261,268 265,163 481,120 512,72"
+                points="261,72 1763,72 1763,390 261,390"
                 id="eSc_textblock_1211376e" />
-            <zone points="918,404 918,925 220,925 220,931 84,910 93,676 490,676 496,406"
+            <zone points="918,404 918,925 84,925 84,620 494,620 494,404"
                 id="eSc_textblock_e5a2870f" />
             <zone
                 points="1767,868 1737,904 1666,927 1666,925 1582,925 1515,922 1501,925 928,925 928,404 1763,404"
@@ -133,7 +134,7 @@
             <zone points="1812,1974 1685,1998 1274,2012 1335,2020 991,2020 991,1465 1812,1465"
                 id="eSc_textblock_f403edec" />
             <zone
-                points="1751,2078 1763,2143 1777,2150 151,2150 175,2102 156,2044 973,2044 973,2078 991,2078 991,2060 1624,2060"
+                points="151,2044 1777,2044 1777,2150 151,2150"
                 id="eSc_textblock_688779c3" />
             <zone points="145,2638 139,2175 144,2164 971,2164 971,2675 192,2675"
                 id="eSc_textblock_cec6b76a" />
@@ -159,11 +160,17 @@
             <zone points="404,2675 404,2680 393,2680 396,2669"
                 id="eSc_textblock_f3b7a1f1" />
             <zone points="845,944 845,954 810,954 814,944" id="eSc_textblock_a3cd0458" />
+            <zone points="735,2500 1135,2500 1135,2715 735,2715" id="zone_vignette" />
         </surface>
     </facsimile>
     <text>
         <div facs="#eSc_textblock_3d042e1f">
-            <lb />Welte's<lb />Wonder<lb />Invention</div>
+            <hi rendition="#c"><lb /><hi rendition="#in #larger">Welte's</hi><lb />Wonder-<lb />Invention</hi></div>
+        <div type="illustration" facs="#zone_orchestrion">
+            <figure>
+                <desc>Welte's orchestrion, with three figures in Biedermeier dress</desc>
+            </figure>
+        </div>
         <div facs="#eSc_textblock_3b2e08a4">
             <lb />Welte's Orchestrion</div>
         <div facs="#eSc_textblock_08bba70b" />
@@ -173,11 +180,11 @@
 
         <pb />
         <div facs="#eSc_textblock_1211376e">
-            <lb /><persName>Michael Welte</persName>
-            <lb />The Clockmaker of Freiburg
+            <hi rendition="#right"><lb /><hi rendition="#in #larger"><hi rendition="#larger"><persName>Michael Welte</persName></hi></hi>
+            <lb />The Clockmaker of Freiburg</hi>
         </div>
         <div facs="#eSc_textblock_e5a2870f">
-            <lb />To <persName>Michael Welte</persName>,
+            <lb /><hi rendition="#k">To <persName>Michael Welte</persName>,</hi>
             <lb />the chiming clock-
             <lb />maker of a dreamy
             <lb />hamlet in Germany,
@@ -197,7 +204,7 @@
             <lb />chimes play a tune.
             <lb />On the
             accuracy and novelty of his chim-
-            <lb />ing clocks, <persName>Michael Welte</persName>, in 1832, found
+            <lb />ing clocks, <persName>Michael Welte</persName>, in 1832, founded
             <lb />the firm of <orgName>M. Welte &amp; Sons</orgName>, a venerable in-
             <lb />stitution now located at <placeName>Freiburg, Germany</placeName>.
             <lb />The years elapsed and Welte's clocks
@@ -207,8 +214,8 @@
             <lb />continental prestige.
         </div>
         <div facs="#eSc_textblock_07d9cc5e">
-            <lb />In 1849, after three years of patient toil,
-            <lb /><persName>Michael Welte</persName> brought fourth his first Orches-
+            <lb /><hi rendition="#k">In</hi> 1849, after three years of patient toil,
+            <lb /><persName>Michael Welte</persName> brought forth his first Orches-
             <lb />trion, the clumsy forerunner of the marvelous
             <lb />Philharmonic Organs of the present day.
             <quote>
@@ -248,8 +255,8 @@
             <lb />in 1872, to the removal to Freiburg, which
             <lb />thus became the musical shrine of Europe.
             <lb />Eight years later <persName>Michael Welte</persName>, the clock-
-            <lb />maker closed his eyes forever, leaving his
-            <lb />sons endowed with his own inventive genius
+            <lb />maker, closed his eyes forever, leaving his
+            <lb />sons endowed with his own inventive genius.
             <seg ana="#technical_invention" resp="#np" type="topic">
                 <lb />In 1887, <persName>Emil Welte</persName>
                 startled the world by the
@@ -260,9 +267,23 @@
             <lb />the bulky wooden cylinders and giving the
             <lb />instrument an unlimited repertoire.
         </div>
-        <div facs="#eSc_textblock_985e1b6b" type="illustration" />
+        <div facs="#eSc_textblock_985e1b6b" type="illustration">
+            <figure>
+                <desc>Portrait of Michael Welte</desc>
+            </figure>
+            <p>
+                <lb />Michael Welte
+            </p>
+        </div>
         <div facs="#eSc_textblock_6dbc318f" />
-        <div facs="#eSc_textblock_29cfa920" type="illustration" />
+        <div facs="#eSc_textblock_29cfa920" type="illustration">
+            <figure>
+                <desc>Welte's workshop: Michael Welte and visitors around an orchestrion</desc>
+            </figure>
+            <p>
+                <lb />Welte's Workshop - <hi rendition="#i">The Mecca of Great Musicians</hi>
+            </p>
+        </div>
         <div facs="#eSc_textblock_6286a23c" />
 
         <pb />
@@ -279,16 +300,16 @@
             </p>
         </div>
         <div facs="#eSc_textblock_afba7f08">
-            <lb />It was only natural that the artistic develop-
+            <lb /><hi rendition="#dropcap">I</hi><hi rendition="#k">t</hi> was only natural that the artistic develop-
             <lb />ment of Welte Orchestrions and Philhar-
             <lb />monic Organs should have led the thoughts
             <lb />of the Weltes onward and upward to the idea
             <lb />of recording the playing of the musician
             <lb />and applying to the piano a new principle
-            <lb />-that of reproducing the artist's playng
+            <lb />-that of reproducing the artist's playing
             <lb />by means of an automatic instrument.
-            <lb />Thus was conceived <name type="brand">Welte-Mignon</name>* (pro-
-            <lb />nounce Well-tee Mee-yon) or "Little
+            <lb />Thus was conceived <hi rendition="#k"><name type="brand">Welte-Mignon</name></hi>* (pro-
+            <lb />nounced <hi rendition="#i">Well-tee Meen-yon</hi>) or "Little
             <lb />Welte," as it was designated to distinguish
             <lb />it from the large instruments on which
         </div>
@@ -308,20 +329,20 @@
         </div>
         <div facs="#eSc_textblock_1a73062e">
             <lb />
-            <seg ana="#exact_reproduction #secret" type="topic" resp="#np">
-                Perfect Reproducing – The Secret of Welte Mignon
-            </seg>
+            <hi rendition="#c"><seg ana="#exact_reproduction #secret" type="topic" resp="#np">
+                Perfect Reproduction – <hi rendition="#i">The Secret of</hi> Welte Mignon*
+            </seg></hi>
         </div>
         <div facs="#eSc_textblock_38047c95">
             <seg ana="#analogy_to_photography" resp="#np" type="topic">
-                <lb />The <name type="brand">Welte-Mignon</name> method of recording
+                <lb /><hi rendition="#k">The <name type="brand">Welte-Mignon</name>*</hi> method of recording
                 <lb />a player's performance is photographic.
                 <lb />Through this
                 <seg ana="#secret" resp="#np" type="topic">
                     secret photographic process
                 </seg>-
-                <lb />possessed only by <name type="brand">Welte-Mignon,*</name> available
-                <lb />only to <name type="brand">Welte-Mignon*</name> - the artist's play-
+                <lb /><hi rendition="#i">possessed only by</hi> <hi rendition="#k"><name type="brand">Welte-Mignon,*</name></hi> <hi rendition="#i">available</hi>
+                <lb /><hi rendition="#i">only to</hi> <hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> - the artist's play-
                 <lb />ing is actually photographed – his tempo, his
                 <lb />speaking notes, his dynamics,
                 <seg ana="#soulfulness" resp="#np" type="topic">
@@ -329,7 +350,7 @@
                     <lb />things that infuse an artist's very soul into
                     <lb />his playing.
                 </seg>
-                <lb />These photographs show precisely the pres-
+                <lb />These photographs show <hi rendition="#i">precisely</hi> the pres-
                 <lb />sure with which the artist strikes the keys,
                 <lb />whether ever so lightly-pianissimo-or with
             </seg>
@@ -345,25 +366,25 @@
             that he is never called upon to edit
             <lb />or arrange the recording. Thus, editing the
             <lb />recording of a great pianist is not necessary
-            <lb />with <name type="brand">Welte-Mignon*</name> and only with <name type="brand">Welte-
-            <lb />Mignon</name> is it not necessary.
+            <lb />with <hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> and only with <hi rendition="#k"><name type="brand">Welte-
+            <lb />Mignon</name>*</hi> is it <hi rendition="#i">not</hi> necessary.
             <lb />Herein lies the vast difference between
-            <lb /><name type="brand">Welte-Mignon*</name> recordings of great pianists
+            <lb /><hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> recordings of great pianists
             <lb />and those of all other reproducing mechan-
             <lb />isms.
         </div>
         <div facs="#eSc_textblock_688779c3">
-            <lb />The World's Greatest Pianists record for <name type="brand">Welte-Mignon*</name>
+            <hi rendition="#c"><lb /><hi rendition="#i">The World's Greatest Pianists record for</hi> <name type="brand">Welte-Mignon*</name></hi>
         </div>
         <div facs="#eSc_textblock_cec6b76a">
-            <lb />Many musicians and masters whose names
+            <lb /><hi rendition="#k">Many</hi> musicians and masters whose names
             <lb />gleam like stars in the firmament of music
-            <lb />have paid glowing tribute to <name type="brand">Welte-Mig-
-            <lb />non.*</name> From every corner of the world come
+            <lb />have paid glowing tribute to <hi rendition="#k"><name type="brand">Welte-Mig-
+            <lb />non.*</name></hi> From every corner of the world come
             <lb />musicians to inscribe their matchless art on
-            <lb />the imperishable pages of <name type="brand">Welte-Mignon's*</name>
+            <lb />the imperishable pages of <hi rendition="#k"><name type="brand">Welte-Mignon's*</name></hi>
             <lb />ever-growing library of music.
-            <persName type="artist" corresp="https://d-nb.info/gnd/116014490">
+            <hi rendition="#k"><persName type="artist" corresp="https://d-nb.info/gnd/116014490">
                 De Pach-
                 <lb />mann
             </persName>,
@@ -374,14 +395,14 @@
             <persName type="artist" corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>,<lb />
             <persName type="artist">Liebling</persName>,
-            <persName type="artist">Saar</persName> and
-            <persName type="artist">Boguslawski</persName>
+            <persName type="artist">Saar</persName></hi> and
+            <hi rendition="#k"><persName type="artist">Boguslawski</persName></hi>
             are but
-            <lb />*Licensed under original <name type="brand">Welte-Mignon</name> patents
+            <lb /><hi rendition="#smaller">*Licensed under original <name type="brand">Welte-Mignon</name> patents</hi>
         </div>
         <div facs="#eSc_textblock_f606c738">
             <lb />a few of the great artists whose playing you
-            <lb />may hear on <name type="brand">Welte-Mignon.*</name>
+            <lb />may hear on <hi rendition="#k"><name type="brand">Welte-Mignon.*</name></hi>
             <lb />The famed <name type="brand">Welte-Mignon* Library</name> of in-
             <lb />terpreted music is without a doubt the most
             <lb />comprehensive in the world of music, con-
@@ -409,12 +430,12 @@
             </seg>
         </div>
         <div facs="#eSc_textblock_10ec60b1">
-            <seg ana="#phantom_body" resp="#np" type="topic">
-                <lb /><name type="brand">Welte Mignon</name> Puts the Phantom-
+            <hi rendition="#i"><seg ana="#phantom_body" resp="#np" type="topic">
+                <lb /><hi rendition="#b"><name type="brand">Welte Mignon</name></hi> Puts the Phantom-
                 <lb />Hands of the Masters on your keyboard
-            </seg>
-            <lb /><name type="brand">Welte-Mignon*</name> brings you living
-            <lb />music. <name type="brand">Welte-Mignon*</name> makes hu-
+            </seg></hi>
+            <lb /><hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> brings you living
+            <lb />music. <hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> makes hu-
             <lb />man the mechanical reproduction of
             <lb />music.
             <seg ana="#soulfulness #personality" resp="#np" type="topic">
@@ -435,14 +456,14 @@
             </seg>
             You will be amazed and con-
             <lb />vinced because the spirit of <persName>Michael
-            <lb />Welte</persName>, thing chiming clock-maker of
+            <lb />Welte</persName>, the chiming clock-maker of
             <lb /><placeName>Freiburg</placeName> lives in every <name type="brand">Welte-
             <lb />Mignon Reproducing Action</name>.
-            <lb /><name type="brand">Welte Mignon*</name>
-            <lb />The Reproducing Piano
-            <lb />With the <name type="brand">Welte-Mignon* Re-
+            <hi rendition="#c"><lb /><hi rendition="#larger #b"><name type="brand">Welte Mignon*</name></hi>
+            <lb /><hi rendition="#i"><hi rendition="#uc">The</hi> Reproducing Piano</hi></hi>
+            <lb /><hi rendition="#k">With</hi> the <name type="brand">Welte-Mignon* Re-
             <lb />producing Piano</name>-i.e., any piano
-            <lb />*Licensed under original <name type="brand">Welte-Mignon</name> patents
+            <lb /><hi rendition="#smaller">*Licensed under original <name type="brand">Welte-Mignon</name> patents</hi>
         </div>
         <div facs="#eSc_textblock_e780b0b2">
             <lb />equipped with the marvelous <name type="brand">Welte-
@@ -458,40 +479,45 @@
             <lb />Mignon Reproducing Piano</name> stands
             <lb />supreme. It has no peer. It is per-
             <lb />fection.
-            <lb />112 reasons why you should select
-            <lb />a piano equipped with the
-            <lb /><name type="brand">Welte Mignon*
-            <lb />Reproducing Action</name>,
-            <lb />Select a <name type="brand">Welte-Mignon* Repro-
+            <hi rendition="#c #i"><lb /><hi rendition="#b">112 reasons why you should select
+            <lb />a piano equipped with the</hi>
+            <lb /><name type="brand"><hi rendition="#b">Welte Mignon*</hi>
+            <lb />Reproducing Action</name>,</hi>
+            <lb /><hi rendition="#k">Select</hi> a <name type="brand">Welte-Mignon* Repro-
             <lb />ducing Piano</name> first of all because it
             <lb />embodies the genius of <persName>Michael
             <lb />Welte</persName>, and then, again, select it be-
             <lb />cause 112 of America's most promi-
             <lb />nent piano manufacturers have se-
-            <lb />lected <name type="brand">Welte-Mignon*</name> as the only
+            <lb />lected <hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> as the only
             <lb />reproducing action for their piano.
-            <lb />This fact in itself is ample testimony,
-            <lb />of the greatness of <name type="brand">Welte-Mignon.*</name>
+            <lb />This fact in itself is ample testimony
+            <lb />of the greatness of <hi rendition="#k"><name type="brand">Welte-Mignon.*</name></hi>
         </div>
         <div facs="#eSc_textblock_6f563b09">
-            <lb /><orgName>Auto Pneumatic Action Co.</orgName>
+            <hi rendition="#c"><lb /><hi rendition="#uc #g"><orgName>Auto Pneumatic Action Co.</orgName></hi>
             <lb />
             <address>
-                653 West 51s St., New York
-                <lb />W.C. Heaton, Pres.
+                <hi rendition="#uc #smaller">W.C. Heaton,</hi> <hi rendition="#i #smaller">Pres.</hi>
+                <lb /><hi rendition="#uc">653 West 51st St., New York</hi>
             </address>
             <lb />
             <name type="brand">
-                Welte-Mignon
-                <lb />Licensee
+                <hi rendition="#in #larger"><hi rendition="#in #larger"><hi rendition="#larger">Welte-Mignon</hi></hi></hi>
+                <lb /><hi rendition="#i #smaller">(Licensee)</hi>
             </name>
-            <lb /><seg type="slogan">The Master's Fingers on your piano.</seg>
+            <lb /><hi rendition="#uc #g #smaller"><seg type="slogan">The Master's Fingers on your piano.</seg></hi></hi>
         </div>
         <div facs="#eSc_textblock_ea26bdd7" type="illustration">
             <figure>
                 <desc resp="#np">
                     Portraits of pianists.
                 </desc>
+            </figure>
+        </div>
+        <div type="illustration" facs="#zone_vignette">
+            <figure>
+                <desc>Framed vignette: a hand at a piano keyboard</desc>
             </figure>
         </div>
         <div facs="#eSc_textblock_f3b7a1f1" />

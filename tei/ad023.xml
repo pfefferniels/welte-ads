@@ -292,19 +292,19 @@
             <lb />messing the appearance or hindering manual playing.
         </div>
         <div facs="#eSc_textblock_8e02e40f">
-            <lb /><name type="brand">Welte-Mignon</name>
-            <lb /><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg>
+            <hi rendition="#c"><lb /><name type="brand"><hi rendition="#in #larger"><hi rendition="#in #larger">Welte-Mignon</hi></hi></name>
+            <lb /><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg></hi>
         </div>
         <div facs="#eSc_textblock_423690b5">
-            <lb /><orgName>THE AUTO PNEUMATIC ACTION CO.</orgName><lb />
-            <persName>Wm. C. Heaton, President</persName>
+            <hi rendition="#c"><lb /><orgName>THE AUTO PNEUMATIC ACTION CO.</orgName><lb />
+            <persName>Wm. C. Heaton, President</persName></hi>
         </div>
         <div facs="#eSc_textblock_7d8e9f52">
-            <lb />
+            <hi rendition="#c"><lb />
             <address>
                 51st Street and 12th Avenue
                 <lb />New York City
-            </address>
+            </address></hi>
         </div>
         <div facs="#eSc_textblock_7e37709d" />
     </text>

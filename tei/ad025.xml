@@ -79,7 +79,7 @@
         <surface>
             <graphic url="uiug.30112102033757-seq_444.tif" width="2856" height="3960" />
             <zone points="516,77 516,596 2788,596 2788,77" id="eSc_textblock_8696e0e3" />
-            <zone points="319,1072 790,3302 1724,3245 1710,3140 1434,3096 1448,833"
+            <zone points="319,833 1440,833 1440,3302 319,3302"
                 id="eSc_textblock_930115f7" />
             <zone points="2524,3194 2524,599 1442,599 1442,3194"
                 id="eSc_textblock_d4a2aae1" />
@@ -199,19 +199,19 @@
             <lb />makes of pianos. Write for the
             <lb />beautiful brochure.
 
-            <lb />
-            <orgName>THE AUTO-PNEUMATIC ACTION COMPANY</orgName>
-            <lb />
+            <hi rendition="#c #smaller"><lb />
+            <orgName>THE AUTO-PNEUMATIC ACTION COMPANY</orgName></hi>
+            <hi rendition="#c #smaller"><lb />
             <address>
                 653 West 51st Street, New York City
             </address>
             <lb />
             
-            <persName>William C. Heaton, President</persName>
-            <lb /><name type="brand">Welte-Mignon
-            <lb />Licensee</name>
+            <persName>William C. Heaton, President</persName></hi>
+            <hi rendition="#c"><lb /><name type="brand"><hi rendition="#in #larger"><hi rendition="#in">Welte-Mignon</hi></hi>
+            <hi rendition="#smaller"><lb />Licensee</hi></name>
             <lb />
-            <seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg>
+            <hi rendition="#smaller"><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg></hi></hi>
         </div>
     </text>
 </TEI>

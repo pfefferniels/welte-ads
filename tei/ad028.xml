@@ -88,7 +88,7 @@
             <zone points="1688,2187 1676,2205 1377,2231 1377,2219 1098,2219 1098,1759 1683,1759"
                 id="eSc_textblock_bca02c58" />
             <zone
-                points="1394,2253 1448,2283 1710,2300 1710,2458 1560,2481 1517,2534 1442,2534 1401,2564 1007,2564 1005,2558 794,2552 781,2522 677,2517 671,2483 634,2464 518,2446 488,2369 494,2247 498,2244 1304,2244"
+                points="488,2244 1710,2244 1710,2564 488,2564"
                 id="eSc_textblock_80ba3e2b" />
             <zone points="93,174 93,1522 1709,1522 1712,174" id="eSc_textblock_5e73ca70" />
             <zone points="129,2059 129,2401 436,2401 436,2059"
@@ -97,11 +97,11 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_6a9b7b41">
-            <lb />Rhythmic beat of a Gaucho dance
-            <lb />-<seg type="slogan">when Phanom Fingers play</seg>
+            <hi rendition="#i"><lb />Rhythmic beat of a Gaucho dance
+            <hi rendition="#right"><lb />-<seg type="slogan">when Phantom Fingers play</seg></hi></hi>
         </div>
         <div facs="#eSc_textblock_d7c2159d">
-            <lb />These are the
+            <hi rendition="#i #b"><lb />These are the
             <seg ana="#phantom_body" resp="#np" type="topic">
                 Phantom<lb />Hands
             </seg> of
@@ -114,7 +114,7 @@
             <seg ana="#miracle" resp="#np" type="topic">
                 through the<lb />miracle of <name type="brand">Welte-<lb />Mignon*</name>
                 reproduction.
-            </seg>
+            </seg></hi>
         </div>
             <div facs="#eSc_textblock_4cbe38c0">
             <lb />Wild abandon of a peasant
@@ -167,10 +167,10 @@
         </div>
 
         <div facs="#eSc_textblock_80ba3e2b">
-            <lb /><name type="brand">Welte-Mignon
-            <lb />(Licensee)</name>
-            <lb />Hear it–in comparison. There's a nearby dealer
-            <lb />*Licensed under the original <name type="brand">Welte-Mignon</name> patents.
+            <hi rendition="#c"><lb /><name type="brand"><hi rendition="#in #larger"><hi rendition="#in #larger"><hi rendition="#in">Welte-Mignon</hi></hi></hi>
+            <lb /><hi rendition="#i #smaller"><hi rendition="#smaller">(Licensee)</hi></hi></name>
+            <lb /><hi rendition="#i">Hear it–in comparison. There's a nearby dealer</hi>
+            <lb /><hi rendition="#smaller"><hi rendition="#smaller">*Licensed under the original <name type="brand">Welte-Mignon</name> patents.</hi></hi></hi>
         </div>
         <div facs="#eSc_textblock_5e73ca70" type="illustration" />
         <div facs="#eSc_textblock_76fba554" type="illustration" />

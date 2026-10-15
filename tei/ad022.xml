@@ -112,7 +112,7 @@
             <zone points="2598,1933 2835,1933 2835,2382 2598,2382"
                 id="eSc_textblock_b0a4f1b7" />
             <zone
-                points="2669,3407 2695,3466 2581,3501 2012,3510 1948,3572 1098,3563 1043,3510 351,3493 377,3425 1320,3398"
+                points="351,3398 2695,3398 2695,3572 351,3572"
                 id="eSc_textblock_0e3a9da6" />
         </surface>
     </facsimile>
@@ -197,8 +197,7 @@
         </div>
 
         <div facs="#eSc_textblock_d1d1e37f">
-            <hi rendition="#larger">
-                <hi rendition="#c"></hi>
+            <hi rendition="#larger #c">
                 <lb />In the home, in the studio, or on the stage-
                 <lb />
                 <seg ana="#touch_of_a_button">
@@ -290,7 +289,7 @@
             <persName type="artist" corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName> and
             <persName type="artist" corrersp="https://d-nb.info/gnd/119362112">Ca-<lb />sella</persName>, possible through
             the authentic recordings of <name type="brand">Welte-
-            <lb />Mignon Licensee</name>, is is an invaluable aid to master or stu-
+            <lb />Mignon Licensee</name>, is an invaluable aid to master or stu-
             <lb />dent.
             <lb />Its recordings by notable accompanists afford
             <lb />competent support for singing
@@ -306,16 +305,16 @@
         </div>
 
         <div facs="#eSc_textblock_c343b605">
-            <lb /><name type="brand">Welte-Mignon</name>
-            <lb /><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg>
+            <hi rendition="#c"><lb /><name type="brand"><hi rendition="#in #larger"><hi rendition="#in #larger">Welte-Mignon</hi></hi></name>
+            <lb /><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg></hi>
         </div>
         <div facs="#eSc_textblock_0e3a9da6">
-            <lb /><orgName>The Auto Pneumatic Action Company</orgName>–
+            <hi rendition="#c"><lb /><orgName>The Auto Pneumatic Action Company</orgName>–
             <persName>W. C. Heaton, President</persName>
             <address>
                 <lb />653 West 51st
                 Street, New York City
-            </address>
+            </address></hi>
         </div>
     </text>
 </TEI>

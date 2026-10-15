@@ -159,7 +159,7 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_8c5449e6">
-            <lb /><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg>
+            <lb /><hi rendition="#g2"><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg></hi>
          </div>
 
         <div facs="#eSc_textblock_d27998d8" type="illustration">
@@ -212,14 +212,14 @@
         </div>
 
         <div facs="#eSc_textblock_d4f05f93">
-            <lb />THE genius of <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+            <lb /><hi rendition="#smaller"><hi rendition="#dropcap">T</hi></hi>HE genius of <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116014490">de Pachmann</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/119362112">Casella</persName> and
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118694820">Gieseking</persName> lives
             forever through
             <lb />the magic of the <name type="brand">Welte-Mignon
-            <lb />Licensee Reproducing Action</name>
-            n<lb />Only <name type="brand">Welte-Mignon Licensee</name>
+            <lb />Licensee Reproducing Action</name>.
+            <lb />Only <name type="brand">Welte-Mignon Licensee</name>
             <lb />
             <seg ana="#secret" resp="#np" type="topic">
                possesses the secret
@@ -242,7 +242,7 @@
             <lb />Licensee</name> in 115 different pianos.
             <lb />The famous <name type="brand">Welte-Mignon
             Li-
-            <lb />censee Reproducing Action</name> ca be
+            <lb />censee Reproducing Action</name> can be
             <lb />installed in your own grand piano.
             <lb />There are <name type="brand">Welte-Mignon Li-
             <lb />censee</name> dealers everywhere. Send
@@ -250,27 +250,27 @@
             beautiful book-
             <lb />let containing portraits of the
             <lb />great artists.
-            <lb />THE <orgName>AUTO PNEUMATIC ACTION CO.</orgName>
-            <lb /><persName>W. C. Heaton, President</persName>
+            <hi rendition="#c"><lb />THE <orgName>AUTO PNEUMATIC ACTION CO.</orgName></hi>
+            <hi rendition="#c #smaller"><lb /><persName>W. C. Heaton, <hi rendition="#i">President</hi></persName>
             <lb />
             <address>
                 653 West 51st Street, New York,
                 N. Y.
-            </address>
+            </address></hi>
         </div>
 
         <div facs="#eSc_textblock_66f64898">
-            <lb />
+            <hi rendition="#c"><lb />
             <seg ana="#superiority">
                 The superiority of any reproducing piano
                 <lb />is assured if it contains the
                 <lb />
                 <name type="brand">
-                  Welte-Mignon
-                  <lb />LICENSEE
+                  <hi rendition="#in #larger"><hi rendition="#in">Welte-Mignon</hi></hi>
+                  <lb /><hi rendition="#i #g2 #smaller"><hi rendition="#smaller">LICENSEE</hi></hi>
                   <lb />reproducing action
                 </name>
-            </seg> 
+            </seg></hi>
         </div>
     </text>
 </TEI>

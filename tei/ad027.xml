@@ -79,7 +79,7 @@
         <surface>
             <graphic url="uc1.b000556132-seq_1232.tif" width="1720" height="2656" />
             <zone
-                points="1253,1540 1578,1564 1595,1651 1583,1739 366,1739 366,1705 317,1662 41,1639 23,1546 56,1534"
+                points="23,1534 1595,1534 1595,1739 23,1739"
                 id="eSc_textblock_2ad2cdc7" />
             <zone points="370,2222 366,1760 957,1760 957,2222"
                 id="eSc_textblock_9280ed63" />
@@ -89,7 +89,7 @@
                 points="1566,1859 1560,2176 1542,2200 1355,2205 1347,2223 1263,2226 1263,2222 975,2222 975,1760 1580,1760"
                 id="eSc_textblock_67364924" />
             <zone
-                points="1200,2247 1536,2278 1595,2331 1601,2436 1432,2471 1389,2524 1293,2551 523,2551 523,2502 525,2495 470,2459 401,2459 372,2430 370,2240 1200,2240"
+                points="370,2240 1601,2240 1601,2551 370,2551"
                 id="eSc_textblock_629a134c" />
             <zone points="1623,1516 1623,199 4,199 4,1516" id="eSc_textblock_6d39cd4a" />
             <zone points="29,2069 29,2396 322,2396 322,2069" id="eSc_textblock_6b35e21e" />
@@ -98,14 +98,14 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_2ad2cdc7">
-            <lb />Valkyries thunder through the storm
-            <lb />-
+            <hi rendition="#i"><lb />Valkyries thunder through the storm
+            <hi rendition="#right"><lb />-
             <seg ana="#phantom_body" resp="#np" type="topic slogan">
                 when Phantom Fingers play
-            </seg>
+            </seg></hi></hi>
         </div>
         <div facs="#eSc_textblock_81452811">
-            <lb />These are the Phantom
+            <hi rendition="#i #b"><lb />These are the Phantom
             <lb />Hands of a thousand
             <lb />immortal pianists; their
             <lb />glorious
@@ -116,7 +116,7 @@
                 Welte-
                 <lb />Mignon*
             </name>
-            reproduction.
+            reproduction.</hi>
         </div>
         <div facs="#eSc_textblock_9280ed63">
             <lb />Who but a
@@ -162,9 +162,9 @@
             <lb />51st St., New York.</address>
         </div>
         <div facs="#eSc_textblock_629a134c">
-            <lb /><name type="brand">Welte-Mignon<lb />(Licensee)</name>
-            <lb />Hear it-in comparison. There's a nearby dealer
-            <lb />*Licensed under the original <name type="brand">Welte-Mignon</name> patents.
+            <hi rendition="#c"><lb /><name type="brand"><hi rendition="#in #larger"><hi rendition="#in #larger"><hi rendition="#in">Welte-Mignon</hi></hi></hi><lb /><hi rendition="#i #smaller"><hi rendition="#smaller">(Licensee)</hi></hi></name>
+            <lb /><hi rendition="#i">Hear it-in comparison. There's a nearby dealer</hi>
+            <lb /><hi rendition="#smaller"><hi rendition="#smaller">*Licensed under the original <name type="brand">Welte-Mignon</name> patents.</hi></hi></hi>
         </div>
         <div facs="#eSc_textblock_6d39cd4a" type="illustration" />
         <div facs="#eSc_textblock_6b35e21e" type="illustration" />

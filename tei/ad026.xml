@@ -89,7 +89,7 @@
                 points="2213,1816 2213,2225 2195,2260 2152,2280 1622,2280 1622,2273 1618,2273 1618,1805 2200,1805"
                 id="eSc_textblock_8599e7fe" />
             <zone
-                points="2094,2308 2207,2351 2219,2480 2172,2510 2066,2522 2035,2587 1959,2593 1928,2634 1336,2623 1175,2581 1169,2529 1138,2504 991,2486 995,2288 1597,2288 1597,2291 1607,2291 1607,2298 2115,2298"
+                points="991,2288 2219,2288 2219,2634 991,2634"
                 id="eSc_textblock_7a9b17c3" />
             <zone points="650,2083 650,2402 958,2402 958,2083"
                 id="eSc_textblock_535b87e4" />
@@ -99,14 +99,14 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_470ea0d3">
-            <lb />The Rolling Sweep of a Storm Tossed Sea
-            <lb />–
+            <hi rendition="#i"><lb />The Rolling Sweep of a Storm Tossed Sea</hi>
+            <hi rendition="#i #right"><lb />–
             <seg ana="#phantom_body" resp="#np" type="topic slogan">
                 when Phantom Fingers play
-            </seg>
+            </seg></hi>
         </div>
         <div facs="#eSc_textblock_25ac3298">
-            <lb />These are the
+            <hi rendition="#i #b"><lb />These are the
             <seg ana="#phantom_body" resp="#np" type="topic">
                 Phantom<lb />Hands
             </seg>
@@ -120,11 +120,11 @@
                 <lb />miracle of <name type="brand">Welte-
                 <lb />Mignon*</name>
                 reproduction
-            </seg>.
+            </seg>.</hi>
         </div>
 
         <div facs="#eSc_textblock_a481e398">
-            <lb />Thunder of breaking waves;
+            <lb /><hi rendition="#smaller"><hi rendition="#dropcap">T</hi></hi><hi rendition="#uc">hunder of breaking waves;</hi>
             <lb />howl of the hurricane; crash of
             <lb />thunder; or,
             <seg ana="#suit_every_mood" resp="#np" type="topic">
@@ -133,7 +133,7 @@
             </seg> mesmeric lure of the
             <lb />Lorelie's song; swinging measure
             <lb />of the Blue Danube; love-wrapt
-            <lb />night"when the moon swings low"
+            <lb />night "when the moon swings low"
             <lb />... played by the master musicians
             <lb />of the century
             <seg ana="#home" resp="#np" type="topic">
@@ -182,10 +182,10 @@
             </address>.
         </div>
         <div facs="#eSc_textblock_7a9b17c3">
-            <lb /><name type="brand">Welte-Mignon
-            <lb />(Licensee)</name>
-            <lb />Hear it-in comparison. There's a nearby dealer
-            <lb />*Licensed under the original <name type="brand">Welte-Mignon</name> patents.
+            <lb /><name type="brand"><hi rendition="#c"><hi rendition="#in #larger"><hi rendition="#in #larger">Welte-Mignon</hi></hi></hi>
+            <hi rendition="#c #i #smaller"><lb />(Licensee)</hi></name>
+            <hi rendition="#c #i"><lb />Hear it—in comparison. There's a nearby dealer</hi>
+            <hi rendition="#c #smaller"><lb /><hi rendition="#smaller">*Licensed under the original <name type="brand">Welte-Mignon</name> patents.</hi></hi>
         </div>
         <div facs="#eSc_textblock_535b87e4" type="illustration">
             <figure>
