@@ -3,8 +3,8 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Ad in "Arts &amp; Decoration"</title>
-                <title type="sub">April 1912</title>
+                <title type="main">Ad in "Arts &amp; Decoration" and "The International Studio"</title>
+                <title type="sub">March to June 1912</title>
                 <author>
                     <orgName key="welte.mignon.autograph">
                         Welte-Mignon Autograph Piano Co.
@@ -66,6 +66,138 @@
                         <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015006326154&amp;seq=259</idno>
                     </msIdentifier>
                 </msDesc>
+            </sourceDesc>
+            <sourceDesc>
+                <bibl>The Welte-Mignon Autograph Piano Is the Living Soul of the Artist</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">
+                            The Welte-Mignon Autograph Piano Is the Living Soul of the Artist
+                        </title>
+                        <author>
+                            <orgName>Welte-Mignon Autograph Piano Co.</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>The International Studio</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                        <date type="publication">1912</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">The International Studio</title>
+                        <biblScope unit="issue">March 1912</biblScope>
+                        <biblScope unit="pages">31</biblScope>
+                    </seriesStmt>
+                </biblFull>
+               <msDesc>
+                 <msIdentifier>
+                   <repository>archive.org</repository>
+                   <idno>
+                     <idno type="URLImages">https://archive.org/details/internationalstu4618unse/page/n148</idno>
+                   </idno>
+                 </msIdentifier>
+               </msDesc>
+            </sourceDesc>
+            <sourceDesc>
+                <bibl>The Welte-Mignon Autograph Piano Is the Living Soul of the Artist</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">
+                            The Welte-Mignon Autograph Piano Is the Living Soul of the Artist
+                        </title>
+                        <author>
+                            <orgName>Welte-Mignon Autograph Piano Co.</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>The International Studio</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                        <date type="publication">1912</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">The International Studio</title>
+                        <biblScope unit="issue">April 1912</biblScope>
+                        <biblScope unit="pages">23</biblScope>
+                    </seriesStmt>
+                </biblFull>
+               <msDesc>
+                 <msIdentifier>
+                   <repository>archive.org</repository>
+                   <idno>
+                     <idno type="URLImages">https://archive.org/details/internationalstu4618unse/page/n280</idno>
+                   </idno>
+                 </msIdentifier>
+               </msDesc>
+            </sourceDesc>
+            <sourceDesc>
+                <bibl>The Welte-Mignon Autograph Piano Is the Living Soul of the Artist</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">
+                            The Welte-Mignon Autograph Piano Is the Living Soul of the Artist
+                        </title>
+                        <author>
+                            <orgName>Welte-Mignon Autograph Piano Co.</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>The International Studio</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                        <date type="publication">1912</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">The International Studio</title>
+                        <biblScope unit="issue">May 1912</biblScope>
+                        <biblScope unit="pages">26</biblScope>
+                    </seriesStmt>
+                </biblFull>
+               <msDesc>
+                 <msIdentifier>
+                   <repository>archive.org</repository>
+                   <idno>
+                     <idno type="URLImages">https://archive.org/details/internationalstu4618unse/page/n433</idno>
+                   </idno>
+                 </msIdentifier>
+               </msDesc>
+            </sourceDesc>
+            <sourceDesc>
+                <bibl>The Welte-Mignon Autograph Piano Is the Living Soul of the Artist</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">
+                            The Welte-Mignon Autograph Piano Is the Living Soul of the Artist
+                        </title>
+                        <author>
+                            <orgName>Welte-Mignon Autograph Piano Co.</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>The International Studio</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                        <date type="publication">1912</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">The International Studio</title>
+                        <biblScope unit="issue">June 1912</biblScope>
+                        <biblScope unit="pages">24</biblScope>
+                    </seriesStmt>
+                </biblFull>
+               <msDesc>
+                 <msIdentifier>
+                   <repository>archive.org</repository>
+                   <idno>
+                     <idno type="URLImages">https://archive.org/details/internationalstu4618unse/page/n575</idno>
+                   </idno>
+                 </msIdentifier>
+               </msDesc>
             </sourceDesc>
         </fileDesc>
         <profileDesc>

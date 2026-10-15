@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
            <titleStmt>
-              <title type="main">Ad in "Singing", "Town &amp; Country" and "Scribner's Magazine"</title>
+              <title type="main">Ad in "Singing", "Town &amp; Country", "Scribner's Magazine" and "House Beautiful"</title>
               <title type="sub">November and December 1926</title>
               <author>
                  <orgName key="auto.pneumatic.action">
@@ -124,7 +124,38 @@
               <msIdentifier>
                 <repository>archive.org</repository>
                 <idno>
-                  <idno type="URLImages">https://archive.org/details/sim_scribners-magazine_1926-12_80_6/page/12</idno>
+                  <idno type="URLImages">https://archive.org/details/sim_scribners-magazine_1926-12_80_6/page/n12</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+         <sourceDesc>
+            <bibl>The genius of Paderewski</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">The genius of Paderewski</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>House Beautiful</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">House Beautiful</title>
+                  <biblScope unit="issue">November 1926</biblScope>
+                  <biblScope unit="pages">553</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>archive.org</repository>
+                <idno>
+                  <idno type="URLImages">https://archive.org/details/sim_house-beautiful_1926-11_60_5/page/n40</idno>
                 </idno>
               </msIdentifier>
             </msDesc>

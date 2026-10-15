@@ -3,8 +3,8 @@
     <teiHeader>
         <fileDesc>
            <titleStmt>
-              <title type="main">Ad in "Singing", "Review of Reviews", "House &amp; Garden" and "The Century"</title>
-              <title type="sub">April to July 1926</title>
+              <title type="main">Ad in "Singing", "Review of Reviews", "House &amp; Garden", "The Century", "Good Housekeeping", "House Beautiful" and "Atlantic Monthly"</title>
+              <title type="sub">March to July 1926</title>
               <author>
                  <orgName key="auto.pneumatic.action">
                     Auto Pneumatic Action Co.
@@ -159,6 +159,99 @@
                 <repository>University of California</repository>
                 <idno>
                   <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.b2922282&amp;seq=870</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+         <sourceDesc>
+            <bibl>Possessed only by Welte-Mignon</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">Possessed only by Welte-Mignon</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>Good Housekeeping</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">Good Housekeeping</title>
+                  <biblScope unit="issue">March 1926</biblScope>
+                  <biblScope unit="pages">247</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>archive.org</repository>
+                <idno>
+                  <idno type="URLImages">https://archive.org/details/sim_good-housekeeping_1926-03_82_3/page/n246</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+         <sourceDesc>
+            <bibl>Possessed only by Welte-Mignon</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">Possessed only by Welte-Mignon</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>House Beautiful</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">House Beautiful</title>
+                  <biblScope unit="issue">May 1926</biblScope>
+                  <biblScope unit="pages">711</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>archive.org</repository>
+                <idno>
+                  <idno type="URLImages">https://archive.org/details/sim_house-beautiful_1926-05_59_5/page/n154</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+         <sourceDesc>
+            <bibl>Possessed only by Welte-Mignon</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">Possessed only by Welte-Mignon</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>Atlantic Monthly</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/4930956">Boston</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">Atlantic Monthly</title>
+                  <biblScope unit="issue">April 1926</biblScope>
+                  <biblScope unit="pages">without page number</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>archive.org</repository>
+                <idno>
+                  <idno type="URLImages">https://archive.org/details/atlanticmonthly1371unse/page/n1045</idno>
                 </idno>
               </msIdentifier>
             </msDesc>

@@ -59,6 +59,12 @@
                         <biblScope unit="pages">XIX</biblScope>
                     </seriesStmt>
                 </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>archive.org</repository>
+                        <idno type="URLImages">https://archive.org/details/the-tatler-1901-1929/1920-1929/1922/The%20Tatler%20%231119v86%20%281922-12-06%29%20%28BNA%29/page/n66</idno>
+                    </msIdentifier>
+                </msDesc>
             </sourceDesc>
         </fileDesc>
         <profileDesc>

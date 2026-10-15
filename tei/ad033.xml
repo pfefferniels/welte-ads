@@ -3,8 +3,8 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">Ad in "Review of Reviews"</title>
-                <title type="sub">January 1926</title>
+                <title type="main">Ad in "Review of Reviews" and "Atlantic Monthly"</title>
+                <title type="sub">January and February 1926</title>
                 <author>
                     <orgName key="auto.pneumatic.action">
                         Auto Pneumatic Action Company
@@ -66,6 +66,42 @@
                         <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.c038417028&amp;seq=294</idno>
                     </msIdentifier>
                 </msDesc>
+            </sourceDesc>
+            <sourceDesc>
+                <bibl>Welte's Wonder-Invention</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">
+                            Welte's Wonder-Invention
+                        </title>
+                        <author>
+                            <orgName>Auto Pneumatic Action Company</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Atlantic Monthly</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/4930956">Boston</pubPlace>
+                        <date type="publication">1926</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Atlantic Monthly</title>
+                        <biblScope unit="issue">February 1926</biblScope>
+                        <biblScope unit="pages">without page number (four-page insert)</biblScope>
+                    </seriesStmt>
+                    <notesStmt>
+                       <note>Unnumbered four-page insert on tinted paper after the Contributors' Column (archive.org pages n434 to n437).</note>
+                    </notesStmt>
+                </biblFull>
+               <msDesc>
+                 <msIdentifier>
+                   <repository>archive.org</repository>
+                   <idno>
+                     <idno type="URLImages">https://archive.org/details/atlanticmonthly1371unse/page/n434</idno>
+                   </idno>
+                 </msIdentifier>
+               </msDesc>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -316,7 +352,7 @@
         <div facs="#eSc_textblock_d1c98342">
             <ab><lb />the Welte reputation and business had been
             <lb />established.
-            <lb />Thus <orgName>M. Welte &amp; Sons</orgName> were origina-
+            <lb />Thus <orgName>M. Welte &amp; Sons</orgName> were the origina-
             <lb />tors of the idea of reproducing the playing of
             <lb />pianists, and were granted the original, basic
             <lb />patents on reproducing mechanisms now em-

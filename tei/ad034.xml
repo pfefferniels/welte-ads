@@ -4,7 +4,7 @@
         <fileDesc>
             <titleStmt>
                 <title type="main">Ad in "Country Life"</title>
-                <title type="sub">December 1919/February 1920</title>
+                <title type="sub">October and December 1919</title>
                 <author>
                     <orgName key="m.welte.sons">
                         M. Welte &amp; Sons, Inc.
@@ -53,19 +53,57 @@
                         </publisher>
                         <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
                         <date type="publication">1919</date>
-                        <date type="publication">1920</date>
                     </publicationStmt>
                     <seriesStmt>
                         <title level="j" type="main">Country Life</title>
                         <biblScope unit="issue">December 1919</biblScope>
-                        <biblScope unit="issue">February 1920</biblScope>
-                        <biblScope unit="pages">110</biblScope>
+                        <biblScope unit="pages">82</biblScope>
                     </seriesStmt>
                 </biblFull>
                 <msDesc>
                     <msIdentifier>
                         <repository>University of California</repository>
                         <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.c0000102566&amp;seq=190</idno>
+                    </msIdentifier>
+                </msDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>archive.org</repository>
+                        <idno type="URLImages">https://archive.org/details/countrylife37gard/page/n169</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+            <sourceDesc>
+                <bibl>World Famous Welte-Mignon</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">
+                            World Famous Welte
+                        </title>
+                        <author>
+                            <orgName>M. Welte &amp; Sons</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Country Life</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                        <date type="publication">1919</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Country Life</title>
+                        <biblScope unit="issue">October 1919</biblScope>
+                        <biblScope unit="pages">112</biblScope>
+                    </seriesStmt>
+                    <notesStmt>
+                        <note>Smaller setting of the same ad: headline "World Famous Welte" (without "-Mignon"), an added line "Studio and Showrooms", different line breaks.</note>
+                    </notesStmt>
+                </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>archive.org</repository>
+                        <idno type="URLImages">https://archive.org/details/countrylife36gard/page/n547</idno>
                     </msIdentifier>
                 </msDesc>
             </sourceDesc>

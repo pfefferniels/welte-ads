@@ -3,8 +3,8 @@
     <teiHeader>
         <fileDesc>
            <titleStmt>
-              <title type="main">Ad in "Singing", "House Beautiful", "Review of Reviews", "House &amp; Garden" and "The Century"</title>
-              <title type="sub">May and June 1926</title>
+              <title type="main">Ad in "Singing", "House Beautiful", "Review of Reviews", "House &amp; Garden", "The Century", "The Etude", "Good Housekeeping" and "Atlantic Monthly"</title>
+              <title type="sub">April to June 1926</title>
               <author>
                  <orgName key="auto.pneumatic.action">
                     Auto Pneumatic Action Co.
@@ -93,7 +93,7 @@
               <msIdentifier>
                 <repository>archive.org</repository>
                 <idno>
-                  <idno type="URLImages">https://archive.org/details/sim_house-beautiful_1926-06_59_6/page/754</idno>
+                  <idno type="URLImages">https://archive.org/details/sim_house-beautiful_1926-06_59_6/page/n14</idno>
                 </idno>
               </msIdentifier>
             </msDesc>
@@ -187,6 +187,99 @@
                 <repository>University of California</repository>
                 <idno>
                   <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.b2922283&amp;seq=317</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+         <sourceDesc>
+            <bibl>Think what Welte means to you</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">Think what Welte means to you</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>The Etude</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/4560349">Philadelphia</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">The Etude</title>
+                  <biblScope unit="issue">April 1926</biblScope>
+                  <biblScope unit="pages">286</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>archive.org</repository>
+                <idno>
+                  <idno type="URLImages">https://archive.org/details/etudemusicmagazi4419unse/page/n303</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+         <sourceDesc>
+            <bibl>Think what Welte means to you</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">Think what Welte means to you</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>Good Housekeeping</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">Good Housekeeping</title>
+                  <biblScope unit="issue">May 1926</biblScope>
+                  <biblScope unit="pages">126</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>archive.org</repository>
+                <idno>
+                  <idno type="URLImages">https://archive.org/details/sim_good-housekeeping_1926-05_82_5/page/n127</idno>
+                </idno>
+              </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+         <sourceDesc>
+            <bibl>Think what Welte means to you</bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="m" type="main">Think what Welte means to you</title>
+                  <author>
+                     <orgName>Auto Pneumatic Action Co.</orgName>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>
+                     <orgName>Atlantic Monthly</orgName>
+                  </publisher>
+                  <pubPlace ref="https://www.geonames.org/4930956">Boston</pubPlace>
+                  <date type="publication">1926</date>
+               </publicationStmt>
+               <seriesStmt>
+                  <title level="j" type="main">Atlantic Monthly</title>
+                  <biblScope unit="issue">June 1926</biblScope>
+                  <biblScope unit="pages">46 (advertising section)</biblScope>
+               </seriesStmt>
+            </biblFull>
+            <msDesc>
+              <msIdentifier>
+                <repository>archive.org</repository>
+                <idno>
+                  <idno type="URLImages">https://archive.org/details/atlanticmonthly1371unse/page/n1517</idno>
                 </idno>
               </msIdentifier>
             </msDesc>
