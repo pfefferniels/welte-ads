@@ -1,5 +1,4 @@
-import React, { MutableRefObject } from "react"
-import { createPortal } from "react-dom"
+import React from "react"
 import { Behavior } from "./Behavior"
 import { TEINodes } from "react-teirouter"
 
@@ -8,18 +7,22 @@ interface TEIProps {
     availableRoutes?: string[]
 }
 
-interface WithSink {
-    sink: MutableRefObject<HTMLDivElement | null>
-}
-
-const Metadata = ({ teiNode, availableRoutes, sink }: TEIProps & WithSink) => {
-    return sink.current && createPortal((
-        <Behavior node={teiNode}>
-            <TEINodes
-                teiNodes={teiNode.childNodes}
-                availableRoutes={availableRoutes} />
-        </Behavior>),
-        sink.current!)
-}
+const Metadata = ({ teiNode, availableRoutes }: TEIProps) => (
+    <Behavior node={teiNode}>
+        <TEINodes
+            teiNodes={teiNode.childNodes}
+            availableRoutes={availableRoutes} />
+    </Behavior>
+)
 
 export default Metadata
+
+// a revision: its date, then what changed
+export const Change = ({ teiNode, availableRoutes }: TEIProps) => (
+    <Behavior node={teiNode}>
+        {(teiNode as Element).getAttribute('when')}:{' '}
+        <TEINodes
+            teiNodes={teiNode.childNodes}
+            availableRoutes={availableRoutes} />
+    </Behavior>
+)

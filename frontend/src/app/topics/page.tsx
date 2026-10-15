@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Typography } from '@mui/material'
-import { getAllMetadata } from "../../lib/tei"
+import { getAllMetadata, getTopics } from "../../lib/tei"
 import TopicsClient from "./TopicsClient"
 
 export const metadata = {
@@ -24,8 +24,10 @@ export default function TopicsPage() {
     return acc
   }, {})
 
+  const topics = getTopics()
   const weighedTopics = Object.keys(counts).map(key => ({
     topic: key,
+    label: topics[key]?.label || key,
     weight: counts[key]
   }))
 

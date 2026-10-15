@@ -1,8 +1,8 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import { Behavior } from "./Behavior"
 import { TEINodes } from "react-teirouter"
 import { Popover } from "@mui/material"
-import { topicLabels } from "../../labels/topicLabels"
+import { TopicsContext } from "./TopicsContext"
 import Link from "next/link"
 
 interface TEIProps {
@@ -16,6 +16,8 @@ const Seg = ({ teiNode, availableRoutes }: TEIProps) => {
   const topics = (seg.getAttribute("ana") || '').split(/\s+/).filter(Boolean)
   const resp = seg.getAttribute("resp") || 'unknown'
   const type = seg.getAttribute('type') || ''
+
+  const definitions = useContext(TopicsContext)
 
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
 
@@ -55,7 +57,7 @@ const Seg = ({ teiNode, availableRoutes }: TEIProps) => {
             <React.Fragment key={topic}>
               {i > 0 && ', '}
               <Link href={`/topic/${topic}`}>
-                {topicLabels[topic] || topic}
+                {definitions[topic]?.label || topic}
               </Link>
             </React.Fragment>
           ))}

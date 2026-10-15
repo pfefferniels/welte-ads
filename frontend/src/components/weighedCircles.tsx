@@ -2,13 +2,13 @@
 
 import React, { useEffect, useRef } from 'react'
 import * as d3 from 'd3'
-import { topicLabels } from '../labels/topicLabels'
 import { stringToColour } from '../helpers/stringToColour'
 import "./weighedCircles.css"
 import { useRouter } from 'next/navigation'
 
 interface WeighedTerm extends d3.SimulationNodeDatum {
     topic: string
+    label: string
     weight: number
 }
 
@@ -67,7 +67,7 @@ export const WeighedCircles = ({ data }: TopicsCircleProps) => {
         node.append("text")
             .attr('class', 'circle-label')
             .style('font-size', d => 0.25 * radiusScale(d.weight) + 'px')
-            .text(d => topicLabels[d.topic] || d.topic)
+            .text(d => d.label)
 
         // Update the positions in each tick
         simulation.nodes(data)

@@ -55,8 +55,23 @@ tei-signed::before {
     content: 'signature';
 }
 
-tei-titlestmt {
+tei-titlestmt, tei-encodingdesc {
     display: none;
+}
+
+tei-revisiondesc {
+    display: block;
+}
+
+tei-revisiondesc::before {
+    margin-top: 1rem;
+    display: block;
+    font-weight: bold;
+    content: 'Revisions'
+}
+
+tei-change {
+    display: block;
 }
 
 tei-publicationstmt, tei-publicationstmt>*, tei-sourcedesc, tei-sourcedesc>* {

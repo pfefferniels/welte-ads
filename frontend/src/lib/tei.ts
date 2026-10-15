@@ -333,8 +333,9 @@ function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
   const title = text('bibl')
   const titleMain = text('fileDesc > titleStmt > title[type="main"]')
   const titleSub = text('fileDesc > titleStmt > title[type="sub"]')
+  // as precise as known, in ISO 8601 (1913, 1913-11 or 1913-11-15)
   const dates = Array.from(doc.querySelectorAll('date[type="publication"]')).map(
-    date => date.innerHTML
+    date => date.getAttribute('when') || date.textContent || ''
   )
   const newspapers = Array.from(doc.querySelectorAll('title[level="j"]')).map(
     title => title.innerHTML
@@ -363,6 +364,27 @@ function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
 
 function getTeiDir(): string {
   return path.join(process.cwd(), '..', 'tei')
+}
+
+export interface Topic {
+  label: string
+  description?: string
+}
+
+/**
+ * The topics as the shared encoding description defines them, keyed by
+ * the pointer that @ana uses (e.g. "#exact_reproduction").
+ */
+export function getTopics(): Record<string, Topic> {
+  const xml = fs.readFileSync(path.join(getTeiDir(), 'shared', 'encoding.xml'), 'utf-8')
+  const doc = new JSDOM(xml, { contentType: 'text/xml' }).window.document
+  const text = (el: Element | null) => el?.textContent?.replace(/\s+/g, ' ').trim()
+
+  return Object.fromEntries(Array.from(doc.querySelectorAll('taxonomy > category')).map(category => {
+    const id = category.getAttribute('xml:id') || ''
+    const description = text(category.querySelector('desc'))
+    return [`#${id}`, { label: text(category.querySelector('gloss')) || id, ...(description && { description }) }]
+  }))
 }
 
 export function getAllAds(): AdData[] {

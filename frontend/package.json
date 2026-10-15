@@ -41,6 +41,7 @@
     "lint": "eslint src/",
     "test": "vitest run",
     "test:watch": "vitest",
-    "knip": "knip"
+    "knip": "knip",
+    "sync-tei": "node scripts/sync-tei.js"
   }
 }

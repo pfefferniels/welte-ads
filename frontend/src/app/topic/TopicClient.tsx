@@ -1,11 +1,10 @@
 "use client"
 
 import React, { useSyncExternalStore } from 'react'
-import { Container, IconButton, List, ListItem } from '@mui/material'
+import { Container, IconButton, List, ListItem, Typography } from '@mui/material'
 import { LinkRounded } from '@mui/icons-material'
 import { useRouter } from 'next/navigation'
-import { topicLabels } from '../../labels/topicLabels'
-import { topicDescriptions } from '../../labels/topicDescriptions'
+import type { Topic } from '../../lib/tei'
 
 function subscribe(callback: () => void) {
   window.addEventListener('hashchange', callback)
@@ -20,9 +19,10 @@ interface Segment {
 
 interface Props {
   segments: Segment[]
+  topics: Record<string, Topic>
 }
 
-export default function TopicClient({ segments }: Props) {
+export default function TopicClient({ segments, topics }: Props) {
   const router = useRouter()
   const topic = useSyncExternalStore(subscribe, () => window.location.hash, () => '')
 
@@ -31,10 +31,12 @@ export default function TopicClient({ segments }: Props) {
   return (
     <Container component="main" maxWidth="md">
       <h2>
-        Topic &quot;{topicLabels[topic] || topic}&quot;
+        Topic &quot;{topics[topic]?.label || topic}&quot;
       </h2>
       <div>
-        {topicDescriptions[topic] || 'no description available'}
+        <Typography>
+          {topics[topic]?.description || 'no description available'}
+        </Typography>
 
         <List>
           {filtered.map((segment, i) => (

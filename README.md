@@ -4,6 +4,17 @@ A TEI collection of Welte advertisements.
 
 Live at https://anz.welte225.org/.
 
+## Data
+
+Every advertisement is a TEI file in `tei/`, valid against `tei_all`
+(P5 4.12.0, linked from each file). Each file explains its own markup: its
+`<encodingDesc>` holds the project description, the editorial principles,
+and the renditions (`@rendition`) and topics (`@ana`) that it uses. These
+are copied from the shared encoding description in `tei/shared/encoding.xml`,
+which is also where the site reads the topics from. After changing that file,
+or after using a new rendition or topic in an advertisement, run
+`npm run sync-tei` in `frontend/`; `npm test` fails until the files agree.
+
 ## Layout view
 
 Each ad page has a layout view that places the text of every

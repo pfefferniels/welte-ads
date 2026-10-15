@@ -8,12 +8,29 @@ import Name from "./Name"
 import Note from "./Note"
 import Seg from "./Seg"
 import Figure from "./Figure"
-import Metadata from "./Metadata"
+import Metadata, { Change } from "./Metadata"
 import MsIdentifier from "./MsIdentifier"
 import './style.css'
 import { Box, Dialog, DialogContent, IconButton, Paper, Stack, ToggleButton, ToggleButtonGroup, Tooltip } from "@mui/material"
 import { Code, Download, LayersOutlined, Title } from "@mui/icons-material"
 import { Facsimile, computeLayout } from "../../lib/facsimile"
+import type { Topic } from "../../lib/tei"
+import { TopicsContext } from "./TopicsContext"
+
+const Hidden = () => null
+
+// the dialog renders the header and nothing else
+const headerRoutes: Routes = {
+  "tei-tei": Tei,
+  "tei-teiheader": Metadata,
+  "tei-change": Change,
+  "tei-facsimile": Hidden,
+  "tei-text": Hidden,
+  "tei-persname": Name,
+  "tei-orgname": Name,
+  "tei-note": Note,
+  "tei-msidentifier": MsIdentifier
+}
 
 const withinBoundaries = (lower: number, suggested: number, upper: number) => {
   return Math.max(lower, Math.min(upper, suggested))
@@ -28,9 +45,10 @@ interface Props {
   elements: string[]
   facsimile: Facsimile
   original: string
+  topics: Record<string, Topic>
 }
 
-const EditionCeteicean = ({ name, prefixed, elements, facsimile, original }: Props) => {
+const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topics }: Props) => {
   const [mode, setMode] = useState<'layout' | 'text'>('text')
   const mounted = useSyncExternalStore(
     () => () => {},
@@ -55,7 +73,6 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original }: Pro
     return () => clearTimeout(timer)
   }, [mounted])
 
-  const metadataRef = useRef<HTMLDivElement>(null)
   const [metadataOpen, setMetadataOpen] = useState(false)
 
   const layout = useMemo(() => computeLayout(facsimile), [facsimile])
@@ -71,10 +88,11 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original }: Pro
   const [pos, setPos] = useState({ x: 0, y: 0 })
   const mouseStateRef = useRef({ down: false, lastPos: { x: 0, y: 0 } })
 
-  // stable routes, so that panning and zooming do not re-render the text
+  // stable routes, so that panning and zooming do not re-render the text;
+  // the header is shown in the dialog only
   const layoutRoutes: Routes = useMemo(() => ({
     "tei-tei": Tei,
-    "tei-teiheader": (props) => <Metadata sink={metadataRef} {...props} />,
+    "tei-teiheader": Hidden,
     "tei-div": (props) => <Div zoneGetter={id => layout.zones[id] || null} {...props} />,
     "tei-persname": Name,
     "tei-orgname": Name,
@@ -86,7 +104,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original }: Pro
 
   const textRoutes: Routes = useMemo(() => ({
     "tei-tei": Tei,
-    "tei-teiheader": (props) => <Metadata sink={metadataRef} {...props} />,
+    "tei-teiheader": Hidden,
     "tei-persname": Name,
     "tei-orgname": Name,
     "tei-seg": Seg,
@@ -191,7 +209,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original }: Pro
   if (!mounted) return null
 
   return (
-    <>
+    <TopicsContext.Provider value={topics}>
       <Stack direction='column' position='absolute'>
         <ToggleButtonGroup
           size='small'
@@ -240,7 +258,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original }: Pro
 
       <Dialog keepMounted={true} open={metadataOpen} onClose={() => setMetadataOpen(false)}>
         <DialogContent>
-          <div ref={metadataRef} />
+          <Renderer prefixed={prefixed} elements={elements} routes={headerRoutes} />
         </DialogContent>
       </Dialog>
 
@@ -341,7 +359,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original }: Pro
             <Renderer prefixed={prefixed} elements={elements} routes={textRoutes} />
           </Box>
         )}
-    </>
+    </TopicsContext.Provider>
   )
 }
 

@@ -4,7 +4,7 @@ import React from "react"
 import { WeighedCircles } from "../../components/weighedCircles"
 
 interface Props {
-  data: { topic: string; weight: number }[]
+  data: { topic: string; label: string; weight: number }[]
 }
 
 export default function TopicsClient({ data }: Props) {

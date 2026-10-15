@@ -1,5 +1,5 @@
 import React from 'react'
-import { getAllMetadata } from "../../lib/tei"
+import { getAllMetadata, getTopics } from "../../lib/tei"
 import TopicClient from "./TopicClient"
 
 export const metadata = {
@@ -23,5 +23,5 @@ export default function TopicPage() {
     }))
   )
 
-  return <TopicClient segments={segments} />
+  return <TopicClient segments={segments} topics={getTopics()} />
 }

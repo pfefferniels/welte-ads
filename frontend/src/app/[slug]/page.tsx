@@ -2,7 +2,7 @@ import React from "react"
 import Box from "@mui/material/Box"
 import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
-import { getAllAds, getAdBySlug } from "../../lib/tei"
+import { getAllAds, getAdBySlug, getTopics } from "../../lib/tei"
 import { names } from "../../labels/names"
 import EditionCeteicean from "../../components/tei/EditionCeteicean"
 import Citation from "../../components/citation"
@@ -43,6 +43,7 @@ export default async function AdPage({ params }: { params: Promise<{ slug: strin
         elements={ad.elements}
         facsimile={ad.facsimile}
         original={ad.original}
+        topics={getTopics()}
       />
       <Citation
         title={ad.title}

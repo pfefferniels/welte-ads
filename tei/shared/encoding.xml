@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Encoding description of the Welte-Mignon Advertisements Collection</title>
+            <respStmt>
+               <resp>Encoding</resp>
+               <persName xml:id="np">
+                  <surname>Pfeffer</surname>
+                  <forename>Niels</forename>
+               </persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <persName>
+                  <surname>Pfeffer</surname>
+                  <forename>Niels</forename>
+               </persName>
+            </publisher>
+            <pubPlace>Tübingen</pubPlace>
+            <date when="2026">2026</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Born digital.</p>
+         </sourceDesc>
+      </fileDesc>
+      <!-- The encoding description shared by all advertisements. Each
+           advertisement carries the project description, the editorial
+           principles and those renditions and topics that it uses. After
+           changing this file, run `npm run sync-tei` in frontend/. -->
+      <encodingDesc>
+         <projectDesc>
+            <p>The Welte-Mignon Advertisements Collection brings together print
+               advertisements for the Welte-Mignon reproducing piano that appeared
+               between 1905 and 1930. It was created as part of the PhD project
+               "Grünfelds Geist" at the University of Tübingen, which considers
+               piano rolls as objects of a digital edition. The collection is
+               published at https://anz.welte225.org.</p>
+         </projectDesc>
+         <editorialDecl>
+            <correction>
+               <p>Errors of the original are not corrected; some are marked with
+                  <gi>sic</gi>.</p>
+            </correction>
+            <normalization>
+               <p>Spelling and punctuation follow the original and are not
+                  normalised. Text set in capitals is often transcribed in mixed
+                  case and marked with the rendition <val>#uc</val>.</p>
+            </normalization>
+            <hyphenation eol="all">
+               <p>Hyphens at the end of a line are kept as printed.</p>
+            </hyphenation>
+            <segmentation>
+               <p>Every region of the original page is a <gi>div</gi> that points to
+                  its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+                  lines of the original are marked with <gi>lb</gi>; the typography
+                  is recorded with <att>rendition</att>.</p>
+            </segmentation>
+            <interpretation>
+               <p>Parts of an advertisement that concern other products than the
+                  Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+                  which describes them in a <gi>desc</gi>. Illustrations are
+                  described in <gi>figure</gi>. Persons are linked to the GND with
+                  <att>corresp</att>. Recurring motifs are marked as topics with
+                  <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+                  the taxonomy of topics; these are the editor's interpretation
+                  (<att>resp</att>).</p>
+            </interpretation>
+            <stdVals>
+               <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+                  as precisely as they are known.</p>
+            </stdVals>
+         </editorialDecl>
+         <tagsDecl>
+            <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+            <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+            <rendition xml:id="dropcap" scheme="css">float: left; font-size: 3.2em; line-height: 0.8;</rendition>
+            <rendition xml:id="et" scheme="css">margin-left: 2em;</rendition>
+            <rendition xml:id="et2" scheme="css">margin-left: 4em;</rendition>
+            <rendition xml:id="framed" scheme="css">border: 1px solid;</rendition>
+            <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
+            <rendition xml:id="g2" scheme="css">letter-spacing: 0.3em;</rendition>
+            <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
+            <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+            <rendition xml:id="k" scheme="css">font-variant: small-caps;</rendition>
+            <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+            <rendition xml:id="right" scheme="css">text-align: right;</rendition>
+            <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
+            <rendition xml:id="sup" scheme="css">vertical-align: super; font-size: 70%;</rendition>
+            <rendition xml:id="u" scheme="css">text-decoration: underline;</rendition>
+            <rendition xml:id="uc" scheme="css">text-transform: uppercase;</rendition>
+            <rendition xml:id="uu" scheme="css">text-decoration: underline double;</rendition>
+         </tagsDecl>
+         <classDecl>
+            <taxonomy xml:id="topics">
+               <desc>Topics: recurring motifs of the advertisements, in their texts
+                  and in their pictures</desc>
+               <category xml:id="affordability">
+                  <gloss>Affordability</gloss>
+               </category>
+               <category xml:id="analogy_to_phonograph">
+                  <gloss>Analogy to Phonograph</gloss>
+               </category>
+               <category xml:id="analogy_to_photography">
+                  <gloss>Analogy to Photography</gloss>
+               </category>
+               <category xml:id="analysis">
+                  <gloss>Analysis</gloss>
+               </category>
+               <category xml:id="artistic_accompaniment">
+                  <gloss>Artistic Accompaniment</gloss>
+               </category>
+               <category xml:id="atmosphere">
+                  <gloss>Atmosphere</gloss>
+               </category>
+               <category xml:id="dance">
+                  <gloss>Dance</gloss>
+               </category>
+               <category xml:id="distinction_from_mechanical">
+                  <gloss>Distinction from Mechanical</gloss>
+                  <desc>Often, the adverts try to distinguish reproducing piano rolls
+                     from mere mechanical methods (such as the player piano).</desc>
+               </category>
+               <category xml:id="educational_use">
+                  <gloss>Educational Use</gloss>
+               </category>
+               <category xml:id="entertainment">
+                  <gloss>Entertainment</gloss>
+               </category>
+               <category xml:id="exact_reproduction">
+                  <gloss>Exact Reproduction</gloss>
+                  <desc>In virtually all promotional materials between 1905 and 1926,
+                     the claim of exact and faithful reproduction, of absolute
+                     accurateness is consistently emphasized.</desc>
+               </category>
+               <category xml:id="home">
+                  <gloss>Home</gloss>
+               </category>
+               <category xml:id="hostess">
+                  <gloss>Hostess</gloss>
+               </category>
+               <category xml:id="immediate_recognizability">
+                  <gloss>Immediate Recognizability</gloss>
+               </category>
+               <category xml:id="immortality">
+                  <gloss>Immortality</gloss>
+                  <desc>This topic emphasizes the perdurance of the reproductions and
+                     how thus the recording artists become immortal.</desc>
+               </category>
+               <category xml:id="invisibility">
+                  <gloss>Invisibility</gloss>
+               </category>
+               <category xml:id="jazz">
+                  <gloss>Jazz</gloss>
+               </category>
+               <category xml:id="listening">
+                  <gloss>Revelled Listening</gloss>
+               </category>
+               <category xml:id="miracle">
+                  <gloss>Miracle</gloss>
+               </category>
+               <category xml:id="personality">
+                  <gloss>Personality</gloss>
+               </category>
+               <category xml:id="phantom_body">
+                  <gloss>Phantom Body</gloss>
+               </category>
+               <category xml:id="popular">
+                  <gloss>Popular</gloss>
+               </category>
+               <category xml:id="repeatability">
+                  <gloss>Repeatability</gloss>
+               </category>
+               <category xml:id="secret">
+                  <gloss>Secret</gloss>
+                  <desc>Perfect reproduction and its manufacturing is a secret
+                     possessed only by the Welte-Mignon company.</desc>
+               </category>
+               <category xml:id="sitting_woman">
+                  <gloss>Sitting Woman</gloss>
+               </category>
+               <category xml:id="soulfulness">
+                  <gloss>Soulfulness</gloss>
+               </category>
+               <category xml:id="suit_every_mood">
+                  <gloss>Suit every Mood</gloss>
+               </category>
+               <category xml:id="superiority">
+                  <gloss>Superiority</gloss>
+               </category>
+               <category xml:id="technical_invention">
+                  <gloss>Technical Invention</gloss>
+               </category>
+               <category xml:id="touch_of_a_button">
+                  <gloss>Touch of a Button</gloss>
+                  <desc>The Welte-Mignon is permanently available and "objectified"
+                     for the entertainment of the owner – on the touch of a
+                     button.</desc>
+               </category>
+               <category xml:id="unreached_ideal">
+                  <gloss>Ideal Instrument</gloss>
+               </category>
+               <category xml:id="virtual_presence">
+                  <gloss>Virtual Presence</gloss>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p>This file holds no advertisement, only the encoding description that
+            the advertisements share.</p>
+      </body>
+   </text>
+</TEI>
