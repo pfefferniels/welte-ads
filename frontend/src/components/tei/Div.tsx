@@ -74,7 +74,7 @@ const fitText = (el: HTMLElement, zone: PlacedZone, max: number, keepLines: bool
     let mode = 'wrap'
     if (keepLines) {
         let lines: number
-        if (zone.bands) {
+        if (zone.floats) {
             // text flows around the shape, so lines may not be kept with
             // nowrap; instead allow no more lines than there are at a tiny
             // size. Whether a long line has to wrap depends on where it falls
@@ -99,7 +99,7 @@ const fitText = (el: HTMLElement, zone: PlacedZone, max: number, keepLines: bool
         if (lines >= 0.5 * wrapped) {
             size = lines
             mode = 'lines'
-            if (!zone.bands) el.style.whiteSpace = 'nowrap'
+            if (!zone.floats) el.style.whiteSpace = 'nowrap'
         }
     }
 
@@ -108,12 +108,25 @@ const fitText = (el: HTMLElement, zone: PlacedZone, max: number, keepLines: bool
     el.dataset.fit = `${mode} ${Math.round(size)}px`
 }
 
+// Whether the div holds any transcribed text, as opposed to editorial
+// descriptions of gaps and figures.
+const hasPrintedText = (node: Node): boolean => {
+    for (const child of Array.from(node.childNodes)) {
+        if (child.nodeType === 3 && /\S/.test(child.textContent || '')) return true
+        if (child.nodeType !== 1) continue
+        const name = (child as Element).tagName.toLowerCase()
+        if (name === 'tei-gap' || name === 'tei-figure') continue
+        if (hasPrintedText(child)) return true
+    }
+    return false
+}
+
 const Div = ({ teiNode, availableRoutes, zoneGetter }: TEIProps & WithZoneGetter) => {
     const div = teiNode as Element
     const zone = zoneGetter((div.getAttribute('facs') || '').trim().replace(/^#/, ''))
     const isIllustration = div.getAttribute('type') === 'illustration'
-    // a zone holding only a <gap/> or an empty figure
-    const isPlaceholder = !/\S/.test(div.textContent || '')
+    // a zone holding only a <gap/> or a figure, perhaps with a description
+    const isPlaceholder = !hasPrintedText(div)
     const ref = useRef<HTMLDivElement>(null)
 
     useLayoutEffect(() => {
@@ -124,8 +137,8 @@ const Div = ({ teiNode, availableRoutes, zoneGetter }: TEIProps & WithZoneGetter
         const max = isIllustration || isPlaceholder
             ? Math.max(8, Math.min(zone.width / 10, zone.height / 10, zone.pageWidth / 60))
             : Math.max(8, zone.height)
-        // the description of an illustration is ours, not a printed line
-        const fit = () => fitText(el, zone, max, !isIllustration)
+        // descriptions of illustrations and gaps are ours, not printed lines
+        const fit = () => fitText(el, zone, max, !isIllustration && !isPlaceholder)
         fit()
 
         let cancelled = false
@@ -164,24 +177,22 @@ const Div = ({ teiNode, availableRoutes, zoneGetter }: TEIProps & WithZoneGetter
                     height: zone.height,
                 }}
                 data-zone={zone.id}
-                className={`zone ${isIllustration ? 'illustration' : 'div'}`}>
-                {zone.bands?.map((band, i) => (
-                    <React.Fragment key={i}>
-                        {(['left', 'right'] as const).map(side => (
-                            <span
-                                key={side}
-                                aria-hidden="true"
-                                className="exclusion"
-                                style={{
-                                    float: side,
-                                    clear: side,
-                                    width: band[side]?.width ?? 0,
-                                    height: band.height,
-                                    shapeOutside: band[side] ? polygon(band[side].polygon) : undefined,
-                                }} />
-                        ))}
-                    </React.Fragment>
-                ))}
+                className={`zone ${isIllustration ? 'illustration' : 'div'} ${div.getAttribute('class') || ''}`}>
+                {(['left', 'right'] as const).map(side => {
+                    const float = zone.floats?.[side]
+                    return float && (
+                        <span
+                            key={side}
+                            aria-hidden="true"
+                            className="exclusion"
+                            style={{
+                                float: side,
+                                width: float.width,
+                                height: zone.height,
+                                shapeOutside: polygon(float.polygon),
+                            }} />
+                    )
+                })}
                 <TEINodes
                     teiNodes={teiNode.childNodes}
                     availableRoutes={availableRoutes} />

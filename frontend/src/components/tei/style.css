@@ -338,6 +338,27 @@ tei-lb:before {
     text-align: center;
 }
 
+/* the layout view shows only the quotation marks that are printed */
+.layout .zone tei-q::before,
+.layout .zone tei-q::after {
+    content: none;
+}
+
+/* of several readings, show the one the facsimile shows (the lemma, or
+   else the first reading) */
+.layout tei-app > tei-rdg ~ tei-rdg,
+.layout tei-app:has(> tei-lem) > tei-rdg {
+    display: none;
+}
+
+/* a frame around the whole zone, e.g. <div facs="#…" rendition="#framed"> */
+.layout .zone.framed {
+    padding: 0;
+    border: none;
+    outline: max(2px, 0.06em) solid currentColor;
+    outline-offset: 0.15em;
+}
+
 .layout.debug .zone {
     color: rgba(0, 0, 160, 0.85);
 }
