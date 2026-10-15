@@ -78,23 +78,23 @@
         <surface>
             <graphic url="MTR-1919-69-23-01.pdf_page_1.png" width="3108" height="4388" />
             <zone
-                points="1868,1199 2268,1218 2356,1257 2356,1391 2200,1452 2210,1538 2132,1801 2085,1803 1049,1803 1014,1801 936,1462 790,1362 817,1199"
+                points="790,1199 2356,1199 2356,1803 790,1803"
                 id="eSc_textblock_4699b149" />
             <zone
-                points="2356,1862 2366,2181 2288,2240 2230,2246 1769,2246 1769,3101 1775,3101 1775,3112 1044,3117 973,3156 780,3108 790,1852 1005,1846 1005,1847 2067,1847"
+                points="780,1846 2366,1846 2366,2250 1775,2250 1775,3156 780,3156"
                 id="eSc_textblock_4402ea80" />
             <zone points="2349,3107 2349,2279 1801,2279 1801,3107" id="eSc_textblock_eb8a51dd" />
             <zone
-                points="2171,3198 2239,3217 2259,3332 2239,3371 1995,3381 927,3381 897,3208 951,3178"
+                points="897,3178 2259,3178 2259,3381 897,3381"
                 id="eSc_textblock_57d5d807" />
         </surface>
     </facsimile>
     <text>
         <div facs="#eSc_textblock_4699b149">
             <lb />
-            <hi rendition="#c">
-                The <name type="brand">Welte-Mignon</name>
-                <lb />Has a Faculty
+            <hi rendition="#c #b">
+                <hi rendition="#in"><hi rendition="#in">The <name type="brand">Welte-Mignon</name>
+                <lb />Has a Faculty</hi></hi>
                 <lb />of
                 <num type="cardinal" subtype="artist-count" value="156">
                     One Hundred and Fifty-Six
@@ -104,46 +104,51 @@
         </div>
         <div facs="#eSc_textblock_4402ea80">
             <seg ana="#educational_use" resp="#np" type="topic">
-                <lb />The <name type="brand">Welte-Mignon</name> can be likened to a college for teaching
+                <lb />The <hi rendition="#uc"><name type="brand">Welte-Mignon</name></hi> can be likened to a college for teaching
                 <lb />the art of playing the piano.
-                <lb />This college has a faculty of one hundred fifty-six instructors-the
+                <lb />This college has a faculty of one hundred fifty-six instructors—the
                 <lb />leading pianists of this generation.
                 <lb />These master pianists have interpreted over five thousand different
                 <lb />pieces of the best musical literature of all ages of which each inter-
                 <lb />pretation is an authoritative instruction in
-                <lb />the playing off that particular composition
-                <lb />-a final lesson in the art of finished piano playing.
-                <lb /> playing.
-                <lb />The <name type="brand">Welte-Mignon</name> is the means
+                <lb />the playing of that particular composition
+                <lb />—a final lesson in the art of finished piano
+                <lb />playing.
+                <lb />The <hi rendition="#uc"><name type="brand">Welte-Mignon</name></hi> is the means
                 <lb />through which this great storehouse of cor-
                 <lb />rect and artistic piano playing is given to
-                <lb />the public-the student and layman, alike.
+                <lb />the public—the student and layman, alike.
                 <lb />All of the great musical conservatories of
                 <lb />the world, if taken together, could not com-
                 <lb />mand a faculty of such combined power
                 <lb />and genius as the faculty of piano inter-
-                <lb />pretation employed by the <name type="brand">Welte-
-                <lb />Mignon</name>.
+                <lb />pretation employed by the <hi rendition="#uc"><name type="brand">Welte-
+                <lb />Mignon</name></hi>.
+                <hi rendition="#smaller">
                 <lb />Nor can all the combined musical schools find it within
                 <lb />their means to render the great masterpieces of musical
-                <lb />literature with such authority as can the <name type="brand">Welte
-                <lb />Mignon</name>.
+                <lb />literature with such authority as can the <hi rendition="#uc"><name type="brand">Welte-
+                <lb />Mignon</name></hi>.
+                </hi>
             </seg>
         </div>
         <div facs="#eSc_textblock_eb8a51dd">
+            <hi rendition="#b">
+            <hi rendition="#c">
             <lb />Among Those Who Have Re-
             <lb />corded Their Playing For
             <lb />The <name type="brand">Welte-Mignon</name> are
+            </hi>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118986724">I. J. Paderewski</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118518011">Ferrucio Busoni</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreño</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116204400">Fannie Bloomfield-Zeisler</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116014490">Vladimir de Pachmann</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/124379923">Josef Lhévinne</persName>
             <lb /><persName type="artist">Yolando Merö</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Camille Saint-Saens</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Camille Saint-Saëns</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116977108">Emil Sauer</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118524186">Claude Debussy</persName>
@@ -158,15 +163,20 @@
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">A. Eugene d'Albert</persName>
             <lb /><persName type="artist ">Myrtle Elvyn</persName>
             <lb /><persName type="artist">Carl <sic>Frieberg</sic></persName>
+            <hi rendition="#c">
             <lb />And 132 Other Artists<lb />Of Like Eminence
+            </hi>
+            </hi>
         </div>
         <div facs="#eSc_textblock_57d5d807">
+            <hi rendition="#c">
             <lb />
-            <orgName>M. Welte &amp; Sons, Inc.</orgName>
+            <hi rendition="#in"><hi rendition="#larger"><orgName><hi rendition="#uc">M. Welte &amp; Sons,</hi> <hi rendition="#i">Inc.</hi></orgName></hi></hi>
             <lb />
             <address>
-                Six Sixty-Seven Fifth Ave., New York
+                <hi rendition="#uc #g">Six Sixty-Seven Fifth Ave., New York</hi>
             </address>
+            </hi>
         </div>
     </text>
 </TEI>

@@ -110,7 +110,7 @@
         <surface>
             <graphic url="mdp.39015082311062-seq_915.tif" width="2484" height="3744" />
             <zone
-                points="2126,2288 2142,2410 2117,2435 1962,2439 608,2439 615,2429 590,2371 680,2346 732,2263"
+                points="590,2263 2142,2263 2142,2439 590,2439"
                 id="eSc_textblock_e92bcae9" />
             <zone points="599,2893 590,2462 591,2461 1348,2461 1348,2889"
                 id="eSc_textblock_6a6a772a" />
@@ -129,7 +129,7 @@
             <figure>
                 <desc resp="#np">
                     <seg ana="#sitting_woman">
-                        Woman in a dress sitting a chair,
+                        Woman in a dress sitting in a chair,
                     </seg>
                     a man standing next to her. A grand piano.
                 </desc>
@@ -138,10 +138,10 @@
 
         <div facs="#eSc_textblock_e92bcae9">
             <lb />
-            <hi rendition="#k">
+            <hi rendition="#right #uc #b #g">
                 <quote type="testimonial">
                     <seg ana="#exact_reproduction" type="topic" resp="#np">
-                        "The realism of its playing is almost
+                        "<hi rendition="#in">T</hi>he realism of its playing is almost
                         <lb />beyond belief
                     </seg>
                     . . . that's why I bought it."
@@ -156,12 +156,12 @@
                 <lb />Mignon Licensee Reproducing Piano</name>.
             </seg>
             <seg ana="#exact_reproduction" resp="#np" type="topic">
-                <lb />Its playing is the faithfhul rendition
-                <lb />of the artist's work - there can be
+                <lb />Its playing is the faithful rendition
+                <lb />of the artist's work—there can be
                 <lb />no variation.
                 <seg ana="#personality" resp="#np" type="topic">
-                    All the personality,
-                    <lb />the character, the technique of the
+                    All the <hi rendition="#i">personality</hi>,
+                    <lb />the <hi rendition="#i">character</hi>, the <hi rendition="#i">technique</hi> of the
                     <lb />great master is amazingly preserved.
                 </seg>
             </seg>
@@ -188,16 +188,19 @@
             </address>
         </div>
         <div facs="#eSc_textblock_06a921c4">
-            <lb /><name type="brand">Welte-Mignon
-            <lb />Licensee
-            <lb />Reproducing Piano</name>
+            <hi rendition="#c">
+            <lb /><name type="brand"><hi rendition="#in"><hi rendition="#in"><hi rendition="#in #larger">Welte-Mignon</hi></hi></hi>
+            <lb /><hi rendition="#larger #uc #i #b #g">Licensee</hi>
+            <lb /><hi rendition="#in #larger #uc #i #b #g">Reproducing Piano</hi></name>
             <lb />
-            <hi rendition="#k">
+            <hi rendition="#uc #g2">
                 <seg type="slogan">
-                    The Master's Fingers on Your Piano.
+                    The Master's Fingers on Your Piano
                 </seg>
             </hi>
-
+            </hi>
+        </div>
+        <div facs="#eSc_textblock_cd3132d7" type="illustration">
             <figure type="logo">
                 <desc resp="#np">
                     <seg ana="#phantom_body" resp="#np" type="topic">

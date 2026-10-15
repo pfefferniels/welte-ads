@@ -173,7 +173,7 @@
             <graphic url="5271616.pdf_page_1.png" width="2479" height="3508" />
             <zone points="392,2274 392,2380 2371,2380 2371,2274"
                 id="eSc_textblock_ce5dae70" />
-            <zone points="55,2339 55,2713 1203,2713 1203,2339"
+            <zone points="392,2274 2371,2274 2371,2380 1203,2380 1203,2713 55,2713 55,2340 392,2340"
                 id="eSc_textblock_79199ad6" />
             <zone points="2373,2694 2373,2384 1236,2384 1236,2694"
                 id="eSc_textblock_611d3239" />
@@ -192,7 +192,7 @@
                     <seg ana="#sitting_woman" resp="#np" type="topic">
                         Two women in dresses are sitting in chairs.
                     </seg>
-                    On man leaning on the piano, another man
+                    One man leaning on the piano, another man
                     standing next to the left sitting woman.
                 </desc>
             </figure>
@@ -201,8 +201,8 @@
             <lb />
             <quote type="testimonial">
                 <seg ana="#home" resp="#np" type="topic">
-                    "It brings the world's greatest pianist into
-                    <lb />my home
+                    <hi rendition="#uc #g2">"<hi rendition="#in #larger">I</hi>t brings the world's greatest pianists into</hi>
+                    <lb /><hi rendition="#uc #g2">my home</hi>
                 </seg>
                 ... That's why I bought
                 <lb />it."
@@ -226,17 +226,19 @@
             <lb />you. Send for our Book of Famous Artists. The
             <lb /><orgName>Auto Pneumatic Action Company</orgName>,
             <persName>W. C. Heaton,</persName>
-            <lb />President,
+            <lb />President;
             <address>
                 653 West 51st Street, New York, N. Y.
             </address>
         </div>
 
         <div facs="#eSc_textblock_7a7e6e27">
-            <lb /><name type="brand">Welte-Mignon
-            <lb />Licensee
-            <lb />Reproducing Piano</name>
-            <lb /><seg type="slogan">The Master's Fingers on your Piano</seg>
+            <hi rendition="#c">
+            <lb /><name type="brand"><hi rendition="#in"><hi rendition="#in #larger">Welte-Mignon</hi></hi>
+            <lb /><hi rendition="#smaller #i #uc">Licensee</hi>
+            <lb /><hi rendition="#uc #g #b">Reproducing Piano</hi></name>
+            <lb /><hi rendition="#uc #g2"><seg type="slogan">The Master's Fingers on your Piano</seg></hi>
+            </hi>
         </div>
         <div facs="#eSc_textblock_dbf156ed" type="illustration">
             <figure>

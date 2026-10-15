@@ -82,22 +82,22 @@
                 height="4375" />
             <zone points="286,249 286,1107 2860,1107 2860,249"
                 id="eSc_textblock_7087fd61" />
-            <zone points="911,1400 882,1728 563,1718 554,1400 602,1370"
+            <zone points="554,1370 911,1370 911,1728 554,1728"
                 id="eSc_textblock_e9d44931" />
             <zone
-                points="2578,1934 2607,1973 2607,2039 2569,2070 2607,2119 2607,2243 1990,2262 1959,2292 1986,2300 1986,2452 1978,2457 612,2437 622,2304 806,2272 816,2119 913,1973 1424,1954 1465,1905 2326,1888"
+                points="612,1888 2607,1888 2607,2457 612,2457"
                 id="eSc_textblock_4411276c" />
             <zone
-                points="2335,1623 2423,1662 2406,1701 2549,1767 2374,1815 1475,1796 1446,1737 1465,1613 1611,1604"
+                points="1446,1604 2549,1604 2549,1815 1446,1815"
                 id="eSc_textblock_8b4f9efa" />
             <zone points="573,3507 563,2683 612,2583 593,2547 1286,2531 1286,3531 1171,3531"
                 id="eSc_textblock_b142b74c" />
             <zone points="2046,2537 2033,3531 1307,3531 1307,2530"
                 id="eSc_textblock_2aef91d9" />
             <zone
-                points="2199,3558 2250,3645 2462,3665 2501,3798 2569,3830 2607,3905 2114,3925 2065,3857 1212,3847 1144,3857 1103,3925 593,3925 583,3869 700,3818 700,3655 748,3633 738,3577 1032,3555 1286,3555 1307,3555 2164,3555"
+                points="583,3555 2607,3555 2607,3925 583,3925"
                 id="eSc_textblock_7d6330b8" />
-            <zone points="2578,3324 2637,3363 2627,3429 2087,3439 2063,3479 2063,3337"
+            <zone points="2063,3355 2637,3355 2637,3435 2063,3435"
                 id="eSc_textblock_5fe584b5" />
             <zone points="917,1286 916,2020 1444,2020 1444,1286"
                 id="eSc_textblock_ffd3c78d" />
@@ -107,7 +107,7 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_7087fd61">
-            <gap reason="irrelevant" />>
+            <gap reason="irrelevant" />
         </div>
 
         <div facs="#eSc_textblock_ffd3c78d" type="illustration">
@@ -123,7 +123,7 @@
         </div>
 
         <div facs="#eSc_textblock_e9d44931">
-            <lb />Remember that you can
+            <lb /><hi rendition="#k">Remember</hi> <hi rendition="#i">that you can
             <lb />select unlimited pro-
             <lb />gram groups for the
             <lb /><name type="brand">Musicalle</name> from the in-
@@ -144,23 +144,23 @@
                 </seg>
                 <lb />a program to suit every
                 <lb />mood and occasion.
-            </seg>
+            </seg></hi>
         </div>
         <div facs="#eSc_textblock_4411276c">
-            <lb />The Amazing New
-            <lb /><name type="brand">WELTE-MIGNON Musicalle</name>
-            <lb />makes possible for the first time an hour of uninter-
-            <lb />rupted music by the great pianists of the world ..
+            <lb /><hi rendition="#right #in"><hi rendition="#in">The Amazing New</hi></hi>
+            <lb /><hi rendition="#right #in"><hi rendition="#in"><name type="brand">WELTE-MIGNON Musicalle</name></hi></hi>
+            <lb />makes possible <hi rendition="#i">for the first time</hi> an hour of <hi rendition="#i">uninter-
+            <lb />rupted music</hi> by the great pianists of the world . .
         </div>
         <div facs="#eSc_textblock_8b4f9efa">
             <lb />
             <seg ana="#touch_of_a_button" type="topic" resp="#np">
-                At the touch of a button . . .
-                <lb />without moving from your chair . .
+                <hi rendition="#i">At the touch of a button . . .
+                <lb />without moving from your chair . .</hi>
             </seg>
         </div>
         <div facs="#eSc_textblock_b142b74c">
-            <lb />TURN BACK the calendar twenty-four
+            <lb /><hi rendition="#dropcap">T</hi>URN BACK the calendar twenty-four
             <lb />years . . . From the <orgName>House of Welte</orgName>
             <lb />came the announcement in 1904 of an
             <lb />instrument which
@@ -168,46 +168,46 @@
                 exactly reproduced the play-
                 <lb />ing of the master pianists. . . .
             </seg>
-            <lb />Today–twenty-four years later–the <orgName>WELTE-
+            <lb />Today—twenty-four years later—the <orgName>WELTE-
             <lb />MIGNON Corporation</orgName> announces
             <seg ana="#technical_invention">
                 the second
-                <lb />truly great and signifact step in the progress
+                <lb />truly great and significant step in the progress
                 <lb />of musical reproduction . . . the <name type="brand">WELTE-
                 <lb />MIGNON Musicalle</name>.
             </seg>
             <seg ana="#sitting_woman">
-                <lb />. . . A women relaxes in the soft depths of
-                <lb />her favorite chair . . . 
+                <lb /><hi rendition="#i">. . . A woman relaxes in the soft depths of
+                <lb />her favorite chair . . .</hi>
             </seg>
             <seg ana="#touch_of_a_button">
-                On the table by her
+                <hi rendition="#i">On the table by her
                 <lb />side rests a small tablet with eight ivory but-
-                <lb />tons . . . She presses . . . From her
-                <lb />superb piano, a <name type="brand">WELTE-MIGNON</name>, flow the
+                <lb />tons . . . She presses one . . . From her
+                <lb />superb piano, a</hi> <name type="brand">WELTE-MIGNON</name>, <hi rendition="#i">flow the
                 <lb />magic strains of a <persName type="composer">Chopin</persName> Nocturne . . .
                 <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> is playing . . . Silence for a mo-
                 <lb />ment . . . the silence of appreciation . . .
-                <lb />She touches another button, chossing at ran-
-                <lb />dom . . . <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>-playing
-                <persName type="composer">Medels-
-                <lb />sohn's</persName> "Rondo Capriccioso."
+                <lb />She touches another button, choosing at ran-
+                <lb />dom . . . <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>—playing
+                <persName type="composer">Mendels-
+                <lb />sohn's</persName> "Rondo Capriccioso."</hi>
             </seg>
             <seg ana="#suit_every_mood" resp="#np" type="topic">
-                In modern mood
+                <hi rendition="#i">In modern mood
                 <lb />she turns to <persName type="composer">Gershwin</persName> . . . "The Rhap-
-                <lb />sody in Blue" . . .
+                <lb />sody in Blue" . . .</hi>
             </seg>
             <seg ana="#listening" resp="#np" type="topic">
-                For an hour or more, she
-                <lb />revels in the worlds great piano music . . .
-                <lb />never moving from her chair
+                <hi rendition="#i">For an hour or more, she
+                <lb />revels in the world's great piano music . . .
+                <lb />never moving from her chair . . .</hi>
             </seg>
             <lb />. . . . This is the new <name type="brand">WELTE-MIGNON
             <lb />Musicalle</name> . . . . . . .
         </div>
         <div facs="#eSc_textblock_2aef91d9">
-            <lb />Such simplicity operation has never before
+            <lb />Such simplicity of operation has never before
             <lb />been achieved in musical reproduction.
             <seg ana="#invisibility" resp="#np" type="topic">
                 Every
@@ -220,18 +220,19 @@
             </seg> It is connected with the piano by
             <lb />a small, easily concealed cable. A tablet,
             <lb />scarcely larger than a small book of verse,
-            <lb />operates the <name type="brand">Musicalle</name>-resting inconspicuously
+            <lb />operates the <name type="brand">Musicalle</name>—resting inconspicuously
             <lb />on a table or stand in your library . . .
             <lb />your music room . . . your dining room
             <lb />. . . wherever you wish.
             <lb />Of course, there will be times when you
             <lb />yourself desire to play. Remember that the
             <lb /><name type="brand">Musicalle</name> leaves your piano wholly at your
-            <lb />disposal-unaffected in appearance, action or
+            <lb />disposal—unaffected in appearance, action or
             <lb />tone.
-            <lb />The <name type="brand">Musicalle</name> together with <name type="brand">Welte-Mignon
+            <lb />
+            <lb /><hi rendition="#i">The <name type="brand">Musicalle</name> together with <name type="brand">Welte-Mignon
             <lb />Reproducing Mechanism</name> installed in other
-            <lb />makes of Grand Pianos. Prices on request.
+            <lb />makes of Grand Pianos. Prices on request.</hi>
         </div>
         <div facs="#eSc_textblock_eb5ad774" type="illustration">
             <figure>
@@ -243,22 +244,21 @@
         <div facs="#eSc_textblock_7d6330b8">
             <lb />
             <seg ana="#immortality" resp="#np" type="topic">
-                The New Instrument That Immortalizes the Playing of the Masters.
+                <hi rendition="#c #i #b">The New Instrument That Immortalizes the Playing of the Masters</hi>
             </seg>
-            <lb /><orgName>WELTE-MIGNON CORPORATION</orgName>
-            <lb /><persName>
-                <hi rendition="#k">William C. Heaton</hi>
-            </persName>, Wholesale Sales Manager, Piano Division
+            <hi rendition="#c">
+            <lb /><hi rendition="#in"><hi rendition="#in"><orgName>WELTE-MIGNON CORPORATION</orgName></hi></hi>
+            <lb /><persName><hi rendition="#uc">William C. Heaton</hi></persName>, <hi rendition="#i">Wholesale Sales Manager, Piano Division</hi>
+            </hi>
             <lb />
             <address>
-                665
-                Fifth Avenue
-                <lb />New York City
+                <hi rendition="#in">665
+                Fifth Avenue<space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/>New York City</hi>
             </address>
         </div>
         <div facs="#eSc_textblock_5fe584b5">
-            <lb />The <name type="brand">Musicalle</name> is patented and controlled ex-
-            <lb />clusively by the <orgName>Welte-Mignon Corporation</orgName>
+            <lb /><hi rendition="#i">The <name type="brand">Musicalle</name> is patented and controlled ex-
+            <lb />clusively by the <orgName>Welte-Mignon Corporation</orgName></hi>
         </div>
     </text>
 </TEI>

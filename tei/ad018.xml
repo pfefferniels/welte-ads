@@ -95,46 +95,54 @@
             <gap reason="irrelevant" />
         </div>
         <div facs="#eSc_textblock_44530be9">
-            <gap reason="irrelevant" />>
+            <gap reason="irrelevant" />
         </div>
 
         <div facs="#eSc_textblock_4903c438">
-            <lb />Be Sure and See the First Showing
-            <lb />of the new
-            <lb />Welte Straight Grand
-            <lb />the <name type="brand">Original Welte Mignon
-            <lb />Reproducing Grand</name>
-            <lb />with Reproducing Action Invisibly Installed
-            <lb />and the <name type="brand">Welte-Mignon Musicale</name>
+            <hi rendition="#c">
+            <lb /><hi rendition="#in #i">Be Sure and See the First Showing</hi>
+            <lb /><hi rendition="#i">of the new</hi>
+            <lb />
+            <lb /><hi rendition="#in"><hi rendition="#in"><hi rendition="#in">Welte Straight Grand</hi></hi></hi>
+            <lb /><hi rendition="#in"><hi rendition="#larger"><hi rendition="#i">the</hi> <name type="brand">Original Welte Mignon
+            <lb /><hi rendition="#uc">Reproducing Grand</hi></name></hi></hi>
+            <lb /><hi rendition="#smaller #i">with Reproducing Action Invisibly Installed</hi>
+            <lb /><hi rendition="#i">and the</hi> <hi rendition="#larger"><name type="brand">Welte-Mignon Musicale</name></hi>
+            <lb />
             <lb />an electrically operated attachment to
             the original <name type="brand">Welte-
             <lb />Mignon</name> piano which will enable one
             <seg ana="#touch_of_a_button" resp="#np" type="topic">
-                merely by pressing a button
+                merely by pressing
+                <lb />a button
             </seg>
-            <lb />to hear any of ten compositions from a repertoire
+            to hear any of ten compositions from a repertoire
             <lb />of one's own selections.
-            <lb />in the following period models
-            <lb /><name type="brand">FLORENTINE GRAND</name>
-            <lb /><name type="brand">LOUIS XVI GRAND</name>
-            <lb /><name type="brand">GEORGIAN WELTE-MIGNON</name>
-            <lb /><name type="brand">COLONIAL</name> (with the <name type="brand">Welte-Mignon Musicale</name>)
-            <lb /><name type="brand">LOUIS XV WELTE-MIGNON</name>
-            <lb />and working models of the Welte Actions
+            <lb />
+            <lb /><hi rendition="#i">in the following period models</hi>
+            </hi>
+            <lb /><hi rendition="#c #smaller"><name type="brand">FLORENTINE GRAND</name><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><name type="brand">GEORGIAN WELTE-MIGNON</name></hi>
+            <lb /><hi rendition="#c #smaller"><name type="brand">LOUIS XVI GRAND</name><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><name type="brand">LOUIS XV WELTE-MIGNON</name></hi>
+            <lb /><hi rendition="#c #smaller"><name type="brand">COLONIAL</name> (with the <name type="brand">Welte-Mignon Musicale</name>)</hi>
+            <hi rendition="#c">
+            <lb /><hi rendition="#smaller">and working models of the Welte Actions</hi>
+            <lb />
             <lb />Now Displayed in
             <address>
                 Suite 1710-1712-1714
                 <lb />HOTEL COMMODORE
             </address>
-            <lb /><orgName>WELTE-MIGNON CORPORATION</orgName>
-            <lb /><persName>WILLIAM C. HEATON</persName>, Wholesale Manager, Piano
-            Division<lb />
-            <address>
+            <lb />
+            <lb /><hi rendition="#in"><hi rendition="#larger"><orgName>WELTE-MIGNON CORPORATION</orgName></hi></hi>
+            <lb /><hi rendition="#smaller"><persName>WILLIAM C. HEATON</persName>, <hi rendition="#i">Wholesale Manager, Piano
+            Division</hi></hi>
+            <lb /><address>
                 665 Fifth Ave., New York
             </address>
+            </hi>
         </div>
         <div facs="#eSc_textblock_ea553ed2">
-            <lb />News Number</div>
+            <lb /><hi rendition="#i">News Number</hi></div>
         <div facs="#eSc_textblock_d51049fe" />
         <div facs="#eSc_textblock_9b739ace" />
     </text>
