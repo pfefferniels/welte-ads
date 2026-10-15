@@ -172,9 +172,6 @@ tei-text {
     font-style: italic;
 }
 
-.in {
-    font-size: 150%;
-}
 
 .k {
     font-variant: small-caps;
@@ -219,12 +216,59 @@ tei-text {
     text-indent: 0;
 }
 
-.smaller {
-    font-size: smaller;
+/* size classes multiply when combined, e.g. rendition="#in #larger" */
+@property --in {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 1;
+}
+
+@property --larger {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 1;
+}
+
+@property --smaller {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 1;
+}
+
+.in {
+    --in: 1.5;
 }
 
 .larger {
-    font-size: larger;
+    --larger: 1.2;
+}
+
+.smaller {
+    --smaller: 0.83;
+}
+
+.in, .larger, .smaller {
+    font-size: calc(1em * var(--in) * var(--larger) * var(--smaller));
+}
+
+.uc {
+    text-transform: uppercase;
+}
+
+.g2 {
+    letter-spacing: 0.3em;
+}
+
+.dropcap {
+    float: left;
+    font-size: 3.2em;
+    line-height: 0.8;
+    margin: 0.04em 0.06em 0 0;
+}
+
+tei-space[dim="horizontal"] {
+    display: inline-block;
+    width: 2em;
 }
 
 tei-lb:before {

@@ -38,6 +38,8 @@ interface PlacedSurface extends Rect {
 
 export interface PlacedZone extends Rect {
   id: string
+  // width of the (cropped) page the zone is on
+  pageWidth: number
   // polygon relative to the zone's bounding box, present only when the
   // zone is noticeably not a rectangle
   shape: Point[] | null
@@ -149,6 +151,7 @@ export function computeLayout(facsimile: Facsimile, margin = 0.03): Layout {
       if (zone.surface !== index) continue
       zones[zone.id] = {
         id: zone.id,
+        pageWidth: crop.width,
         left: box.left - crop.left + offset,
         top: box.top - crop.top,
         width: box.width,
@@ -198,13 +201,23 @@ interface Exclusions {
  * between them follows the outline of the zone.
  */
 export function exclusions(shape: Point[], width: number, height: number, steps = 48): Exclusions {
-  const rows: { y: number; from: number; to: number }[] = []
-  for (let i = 0; i <= steps; i++) {
-    // sample just inside the box so that horizontal edges count
-    const y = Math.min(height - 0.5, Math.max(0.5, (i / steps) * height))
-    const s = span(shape, y)
-    rows.push({ y: (i / steps) * height, from: s ? s[0] : 0, to: s ? s[1] : width })
+  // regular samples for slanted edges, plus rows just above and below every
+  // corner so that steps in the outline stay steps
+  const ys = new Set<number>()
+  for (let i = 0; i <= steps; i++) ys.add((i / steps) * height)
+  for (const [, y] of shape) {
+    ys.add(y - 0.5)
+    ys.add(y + 0.5)
   }
+
+  const rows = Array.from(ys)
+    .filter(y => y >= 0 && y <= height)
+    .sort((a, b) => a - b)
+    .map(y => {
+      // sample just inside the box so that horizontal edges count
+      const s = span(shape, Math.min(height - 0.5, Math.max(0.5, y)))
+      return { y, from: s ? s[0] : 0, to: s ? s[1] : width }
+    })
 
   const leftWidth = Math.max(...rows.map(r => r.from))
   const rightWidth = Math.max(...rows.map(r => width - r.to))

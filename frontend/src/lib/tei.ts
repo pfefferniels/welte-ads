@@ -163,10 +163,10 @@ const isBlock = (el: Element) =>
     .some(r => BLOCK_RENDITIONS.includes(r.replace(/^#/, '')))
 
 /**
- * Marks every <lb/> that would start an empty line when rendered: one at the
- * very beginning of a block (a div, a centered line …) or directly after
- * another line break. The layout view drops these so that a zone holds
- * exactly the lines of the original.
+ * Marks every <lb/> that would open an empty line at the beginning of a
+ * block (a div, a centred line …) or right after one. The layout view drops
+ * these so that a zone holds exactly the lines of the original. A second
+ * <lb/> after a line break still makes an empty line.
  */
 export function markRedundantLineBreaks(doc: Document): void {
   const text = doc.getElementsByTagNameNS(TEI_NS, 'text')[0]
@@ -184,7 +184,7 @@ export function markRedundantLineBreaks(doc: Document): void {
       const el = child as Element
       if (el.localName === 'lb') {
         if (atLineStart) el.setAttribute('data-redundant', '')
-        atLineStart = true
+        atLineStart = false
       } else if (isBlock(el)) {
         atLineStart = true
         walk(el)
@@ -197,6 +197,45 @@ export function markRedundantLineBreaks(doc: Document): void {
     })
   }
   walk(text)
+}
+
+// a quotation mark only closes if no word follows it directly
+const CLOSING = /^\s*(?:[,.;:!?)\]»]|["'”“’](?![A-Za-z\u00C0-\u024F\d]))/
+
+const lastText = (node: Node): Text | null => {
+  for (let child = node.lastChild; child; child = child.previousSibling) {
+    if (child.nodeType === 3) return child as Text
+    if (child.nodeType === 1) {
+      const text = lastText(child)
+      if (text) return text
+    }
+  }
+  return null
+}
+
+/**
+ * Removes the space that the indentation of the XML leaves between the end
+ * of an element and the punctuation following it, e.g. in
+ * `<seg>… Erfindung\n</seg>, und`, which would otherwise read
+ * "Erfindung , und".
+ */
+export function tidySpaceBeforePunctuation(doc: Document): void {
+  const text = doc.getElementsByTagNameNS(TEI_NS, 'text')[0]
+  if (!text) return
+
+  const walker = doc.createTreeWalker(text, 4 /* NodeFilter.SHOW_TEXT */)
+  const nodes: Text[] = []
+  while (walker.nextNode()) nodes.push(walker.currentNode as Text)
+
+  for (const node of nodes) {
+    const previous = node.previousSibling
+    if (!previous || previous.nodeType !== 1) continue
+    if (!CLOSING.test(node.data)) continue
+
+    node.data = node.data.replace(/^\s+/, '')
+    const inner = lastText(previous)
+    if (inner) inner.data = inner.data.replace(/\s+$/, '')
+  }
 }
 
 function extractFacsimile(doc: Document): Facsimile {
@@ -221,7 +260,10 @@ function extractFacsimile(doc: Document): Facsimile {
 
       let points: Point[] = parsePoints(zone.getAttribute('points') || '')
       if (points.length < 3) {
-        const [ulx, uly, lrx, lry] = ['ulx', 'uly', 'lrx', 'lry'].map(a => Number(zone.getAttribute(a)))
+        // eScriptorium's empty dummy zones have neither points nor corners
+        const corners = ['ulx', 'uly', 'lrx', 'lry']
+        if (!corners.every(a => zone.hasAttribute(a))) return
+        const [ulx, uly, lrx, lry] = corners.map(a => Number(zone.getAttribute(a)))
         if (![ulx, uly, lrx, lry].every(Number.isFinite)) return
         points = [[ulx, uly], [lrx, uly], [lrx, lry], [ulx, lry]]
       }
@@ -239,6 +281,7 @@ function prefixTei(xmlString: string): { prefixed: string; elements: string[]; c
 
   const facsimile = extractFacsimile(doc)
   markRedundantLineBreaks(doc)
+  tidySpaceBeforePunctuation(doc)
   prefixElement(doc.documentElement, defaultNamespaces, elements)
 
   const css = extractRenditionCSS(doc, defaultNamespaces)
