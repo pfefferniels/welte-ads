@@ -76,25 +76,26 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="miun.act2359.0061.001-seq_152.tif" width="2809" height="3648" />
+            <graphic url="miun.act2359.0061.001-seq_152.tif" width="2809px" height="3648px" />
             <zone
                 points="397,2375 2387,2375 2387,2590 397,2590"
-                id="eSc_textblock_f14f8ddd" />
+                xml:id="eSc_textblock_f14f8ddd" />
             <zone points="733,2869 470,2851 462,2602 492,2601 1379,2601 1379,2869"
-                id="eSc_textblock_03db0457" />
+                xml:id="eSc_textblock_03db0457" />
             <zone points="2346,2610 2346,2867 2329,2869 1402,2869 1402,2601 2355,2601"
-                id="eSc_textblock_5abd2d51" />
+                xml:id="eSc_textblock_5abd2d51" />
             <zone points="860,3210 860,2919 1920,2919 1924,2928 1924,3210"
-                id="eSc_textblock_5837879e" />
+                xml:id="eSc_textblock_5837879e" />
             <zone points="1230,3239 1230,3497 1556,3497 1556,3239"
-                id="eSc_textblock_dbdcd861" />
+                xml:id="eSc_textblock_dbdcd861" />
             <zone points="262,3282 2541,3282 2541,3378 262,3378"
-                id="eSc_textblock_b603b3c0" />
+                xml:id="eSc_textblock_b603b3c0" />
             <zone points="479,343 479,2360 2349,2360 2349,343"
-                id="eSc_textblock_d59aeee7" />
+                xml:id="eSc_textblock_d59aeee7" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_d59aeee7" type="illustration">
             <figure>
                 <desc>A woman in an evening gown stands between dark curtains at a tall window, looking out at a terrace with a grand piano and guests</desc>
@@ -153,26 +154,26 @@
                 </orgName>,
                 <lb />
                 <persName>W. C. Heaton, <hi rendition="#i">President</hi></persName>,
-                <address>653 West 51st Street, New York.</address>
+                <address><addrLine>653 West 51st Street, New York.</addrLine></address>
             </p>
         </div>
 
         <div facs="#eSc_textblock_5837879e" type="brand-elements">
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
                 <name type="brand">
                     <hi rendition="#in"><lb />Welte-Mignon</hi>
                     <hi rendition="#i #k #g #smaller"><hi rendition="#smaller"><hi rendition="#smaller"><lb />Licensee</hi></hi></hi>
                     <lb />Reproducing Piano
                 </name>
-            </hi>
+            </hi></ab>
         </div>
 
         <div facs="#eSc_textblock_b603b3c0">
-            <seg type="slogan">
+            <ab><seg type="slogan">
                 <hi rendition="#k #g #c">
                     <lb />The Master's Fingers on Your Piano
                 </hi>
-            </seg>
+            </seg></ab>
         </div>
 
         <div facs="#eSc_textblock_dbdcd861" type="illustration">
@@ -180,5 +181,6 @@
                 <desc>Phantom hands on a keyboard.</desc>
             </figure>
         </div>
+        </body>
     </text>
 </TEI>

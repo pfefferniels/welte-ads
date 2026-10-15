@@ -76,20 +76,21 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="MTR-1928-86-22-01.pdf_page_1.png" width="2992" height="4404" />
+            <graphic url="MTR-1928-86-22-01.pdf_page_1.png" width="2992px" height="4404px" />
             <zone points="196,285 196,1095 2742,1095 2742,285"
-                id="eSc_textblock_e4aee19f" />
+                xml:id="eSc_textblock_e4aee19f" />
             <zone points="2267,1220 186,1201 186,1133 2762,1133 2770,1153 2770,1192"
-                id="eSc_textblock_44530be9" />
+                xml:id="eSc_textblock_44530be9" />
             <zone points="202,1265 202,4156 2770,4156 2770,1265"
-                id="eSc_textblock_4903c438" />
+                xml:id="eSc_textblock_4903c438" />
             <zone points="2766,232 1917,252 1887,232 1916,109 2741,109"
-                id="eSc_textblock_ea553ed2" />
-            <zone points="2,479 2,481 0,481 0,479" id="eSc_textblock_d51049fe" />
-            <zone points="2,567 2,570 0,570 0,567" id="eSc_textblock_9b739ace" />
+                xml:id="eSc_textblock_ea553ed2" />
+            <zone points="2,479 2,481 0,481 0,479" xml:id="eSc_textblock_d51049fe" />
+            <zone points="2,567 2,570 0,570 0,567" xml:id="eSc_textblock_9b739ace" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_e4aee19f">
             <gap reason="irrelevant" />
         </div>
@@ -98,7 +99,7 @@
         </div>
 
         <div facs="#eSc_textblock_4903c438">
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
             <lb /><hi rendition="#in #i">Be Sure and See the First Showing</hi>
             <lb /><hi rendition="#i">of the new</hi>
             <lb />
@@ -128,21 +129,22 @@
             <lb />
             <lb />Now Displayed in
             <address>
-                Suite 1710-1712-1714
-                <lb />HOTEL COMMODORE
+                <addrLine>Suite 1710-1712-1714</addrLine>
+                <lb /><addrLine>HOTEL COMMODORE</addrLine>
             </address>
             <lb />
             <lb /><hi rendition="#in"><hi rendition="#larger"><orgName>WELTE-MIGNON CORPORATION</orgName></hi></hi>
             <lb /><hi rendition="#smaller"><persName>WILLIAM C. HEATON</persName>, <hi rendition="#i">Wholesale Manager, Piano
             Division</hi></hi>
             <lb /><address>
-                665 Fifth Ave., New York
+                <addrLine>665 Fifth Ave., New York</addrLine>
             </address>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#eSc_textblock_ea553ed2">
-            <lb /><hi rendition="#i">News Number</hi></div>
+            <ab><lb /><hi rendition="#i">News Number</hi></ab></div>
         <div facs="#eSc_textblock_d51049fe" />
         <div facs="#eSc_textblock_9b739ace" />
+        </body>
     </text>
 </TEI>

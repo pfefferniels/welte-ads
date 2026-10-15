@@ -69,31 +69,32 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="BL_0001852_19221206_062_0067.pdf_page_1.png" width="2479" height="3508" />
+            <graphic url="BL_0001852_19221206_062_0067.pdf_page_1.png" width="2479px" height="3508px" />
             <zone points="148,389 2196,389 2196,582 148,582"
-                id="eSc_textblock_183da727" />
+                xml:id="eSc_textblock_183da727" />
             <zone points="380,2076 380,2538 856,2538 856,2076"
-                id="eSc_textblock_6984ced5" />
+                xml:id="eSc_textblock_6984ced5" />
             <zone points="1121,2032 1121,2643 2082,2643 2082,2032"
-                id="eSc_textblock_9478645f" />
+                xml:id="eSc_textblock_9478645f" />
             <zone points="165,2653 165,3155 2201,3155 2201,2653 835,2653"
-                id="eSc_textblock_c6563afe" />
+                xml:id="eSc_textblock_c6563afe" />
             <zone points="2142,612 1040,612 1040,1990 2142,1990"
-                id="eSc_textblock_732637de" />
-            <zone points="383,1465 383,2074 857,2074 857,1465" id="eSc_dummyblock_" />
-            <zone points="196,984 1040,984 1040,1415 196,1415" id="zone_head" />
+                xml:id="eSc_textblock_732637de" />
+            <zone points="383,1465 383,2074 857,2074 857,1465" xml:id="eSc_dummyblock_" />
+            <zone points="196,984 1040,984 1040,1415 196,1415" xml:id="zone_head" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_183da727">
-            <lb />
+            <ab><lb />
             <hi rendition="#c">
                 <hi rendition="#i">
                     <hi rendition="#u">
                         <seg xml:id="immortals" ana="#immortality" resp="#np" type="topic">
                             The Instrument of the Immortals
                         </seg>
-                        <note type="editorial" ref="#immortals" resp="#np">
+                        <note type="editorial" target="#immortals" resp="#np">
                             The slogan was originally invented by
                             <persName>Raymond Rubicam</persName> in 1919, who
                             referred to the long-lasting history of Steinway pianos
@@ -105,19 +106,17 @@
                         </note>
                     </hi>
                 </hi>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_head">
-            <lb />
+            <head><lb />
             <hi rendition="#c #uc">
-            <head>
                 <name type="brand">
                     <hi rendition="#larger">Steinway</hi>
                     <lb />Welte
                     <lb />Grand
                 </name>
-            </head>
-            </hi>
+            </hi></head>
         </div>
         <div type="illustration" facs="#eSc_textblock_732637de">
             <figure>
@@ -125,7 +124,7 @@
             </figure>
         </div>
         <div facs="#eSc_dummyblock_">
-            <lb />The <name type="brand">Welte-Mignon</name>, which<lb />
+            <ab><lb />The <name type="brand">Welte-Mignon</name>, which<lb />
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 reproduces absolutely the
                 <lb />Artists' original renderings
@@ -142,10 +141,10 @@
             <lb />supplied separately for at-
             <lb />tachment to any pianoforte.
             <lb /><lb /><hi rendition="#c #i #smaller">Renderings
-            by:</hi>
+            by:</hi></ab>
         </div>
         <div facs="#eSc_textblock_6984ced5">
-            <lb />
+            <ab><lb />
             <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/116014490">Pachmann</persName>,
             <lb />
@@ -180,10 +179,10 @@
             <persName type="artist" corresp="https://d-nb.info/gnd/117110450">Scharwenka</persName>,
             <persName type="artist">Schelling</persName>,
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Strauss</persName>,
-            <persName type="artist">Schumann</persName>, etc.
+            <persName type="artist">Schumann</persName>, etc.</ab>
         </div>
         <div facs="#eSc_textblock_9478645f">
-            <lb />
+            <ab><lb />
             <seg type="topic" resp="#np" ana="#distinction_from_mechanical">
                 <hi rendition="#dropcap">U</hi><hi rendition="#uc">ntil</hi> the <name type="brand">Welte-Mignon</name>
                 <lb />made its appearance all the
@@ -195,25 +194,24 @@
             the <name type="brand">Welte-Mignon</name>
             <lb />caught the great masters in the act of
             <lb />playing, and
-            <seg ana="#immortality" resp="#np" type="topic">fixed their style for ever</seg>. 
+            <seg ana="#immortality" resp="#np" type="topic">fixed their style for ever</seg>.</ab> 
         </div>
         <div facs="#eSc_textblock_c6563afe">
-            <lb />
+            <head><lb />
             <hi rendition="#c #uc #larger">
-            <head>
                 <hi rendition="#in #larger #g"><orgName>Steinway &amp; Sons</orgName></hi>
-            </head>
-            </hi>
-            <address>
-                <hi rendition="#c #uc #larger"><lb />Steinway Hall</hi>
+            </hi></head>
+            <ab><address>
+                <addrLine><hi rendition="#c #uc #larger"><lb />Steinway Hall</hi>
                 <hi rendition="#c #uc #in #larger"><lb />15 &amp; 17, Lower Seymour Street,
-                London, S.W.1</hi>
+                London, S.W.1</hi></addrLine>
             </address>
             <hi rendition="#c #i"><lb /><orgName>Steinway &amp; Sons</orgName>
             and their Agents make it conveniently possible for
             music lovers to own a <name type="brand">Steinway</name>. Pianos
             <lb />of other makes taken in exchange. Write for particulars.
-            Branches and Agencies throughout the World.</hi>
+            Branches and Agencies throughout the World.</hi></ab>
         </div>
+        </body>
     </text>
 </TEI>

@@ -138,54 +138,53 @@
    </teiHeader>
    <facsimile>
       <surface>
-         <graphic url="BL_0001578_19131115_121_0032.pdf_page_1.png" width="2479" height="3508"/>
+         <graphic url="BL_0001578_19131115_121_0032.pdf_page_1.png" width="2479px" height="3508px"/>
 
          <zone points="315,2071 315,2460 929,2460 929,2071"
-            id="eSc_textblock_6103b8eb" />
+            xml:id="eSc_textblock_6103b8eb" />
          <zone points="347,2483 347,2655 865,2655 865,2483"
-            id="eSc_textblock_f7822bda" />
+            xml:id="eSc_textblock_f7822bda" />
          <zone points="249,2677 249,2840 978,2840 978,2677"
-            id="eSc_textblock_7146ee55" />
+            xml:id="eSc_textblock_7146ee55" />
          <zone points="372,2877 372,2978 860,2978 860,2877"
-            id="eSc_textblock_527025e7" />
+            xml:id="eSc_textblock_527025e7" />
          <zone points="249,3032 249,3251 988,3251 988,3032"
-            id="eSc_textblock_0ca5f1e3" />
+            xml:id="eSc_textblock_0ca5f1e3" />
          <zone points="69,1850 1153,1850 1153,2027 69,2027"
-            id="zone_frame_top" />
+            xml:id="zone_frame_top" />
          <zone points="69,3268 1153,3268 1153,3451 69,3451"
-            id="zone_frame_bottom" />
+            xml:id="zone_frame_bottom" />
       </surface>
    </facsimile>
    <text>
+      <body>
       <div type="illustration" facs="#zone_frame_top">
          <figure><desc>Top of the hatched frame, with a Steinway lyre emblem in each corner</desc></figure>
       </div>
       <div facs="#eSc_textblock_6103b8eb">
-         <hi rendition="#c #uc">
-            <lb /><hi rendition="#smaller">The</hi>
-            <head>
-               <hi rendition="#in">
+         <head rendition="#smaller"><hi rendition="#c #uc">
+            <lb />The
+               <lb /><hi rendition="#in #larger"><hi rendition="#in">
                <orgName>
-                  <lb /><name type="brand">Welte-
+                  <name type="brand">Welte-
                   <lb />Mignon</name>
                </orgName>
-               </hi>
-            </head>
-         </hi>
+               </hi></hi>
+         </hi></head>
       </div>
 
       <div facs="#eSc_textblock_f7822bda">
-         <hi rendition="#c #uc">
+         <ab><hi rendition="#c #uc">
             <lb />
                <seg type="topic" resp="#np" ana="#technical_invention">
                   After many inventions
                   <lb /><hi rendition="#g">and many failures</hi>
                   <lb />the perfect instrument 
                </seg>
-            </hi>
+            </hi></ab>
       </div>
       <div facs="#eSc_textblock_7146ee55">
-         <hi rendition="#c">
+         <ab><hi rendition="#c">
             <hi rendition="#i">
                <lb />The <name type="brand">Welte-Mignon</name>
                <seg resp="#np" type="topic" ana="#exact_reproduction">
@@ -194,24 +193,25 @@
                   <lb />greatest Pianists
                </seg>
             </hi>
-         </hi>
+         </hi></ab>
       </div>
       <div facs="#eSc_textblock_527025e7">
-         <hi rendition="#c #uc">
+         <ab><hi rendition="#c #uc">
             <lb />Call and hear it or
-            <lb />write for catalogue </hi>
+            <lb />write for catalogue </hi></ab>
       </div>
       <div facs="#eSc_textblock_0ca5f1e3">
-         <hi rendition="#c #uc">
+         <ab><hi rendition="#c #uc">
             <lb /><hi rendition="#in"><orgName>Steinway and Sons</orgName>,</hi>
             <lb />
             <address>
-               Steinway Hall,<lb />Lower Seymour Street, W.
+               <addrLine>Steinway Hall,</addrLine><lb /><addrLine>Lower Seymour Street, W.</addrLine>
             </address>
-         </hi>
+         </hi></ab>
       </div>
       <div type="illustration" facs="#zone_frame_bottom">
          <figure><desc>Bottom of the hatched frame, with a Steinway lyre emblem in each corner</desc></figure>
       </div>
+      </body>
    </text>
 </TEI>

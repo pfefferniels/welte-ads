@@ -69,26 +69,26 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="v2_bsb00004256_01424_260_264_3011_2118_full_0_default_.pdf_page_1.png" width="3508" height="2479"/>
+            <graphic url="v2_bsb00004256_01424_260_264_3011_2118_full_0_default_.pdf_page_1.png" width="3508px" height="2479px"/>
             <zone points="3088,2258 2965,2258 2965,2198 3088,2198"
-                id="eSc_textblock_8679924f" />
-            <zone points="744,145 744,378 2850,378 2850,145" id="eSc_textblock_10eee52d" />
+                xml:id="eSc_textblock_8679924f" />
+            <zone points="744,145 744,378 2850,378 2850,145" xml:id="eSc_textblock_10eee52d" />
             <zone points="1437,410 1437,1124 3326,1124 3326,410"
-                id="eSc_textblock_a959e5a4" />
+                xml:id="eSc_textblock_a959e5a4" />
             <zone points="1464,1156 1464,1537 3284,1537 3284,1156"
-                id="eSc_textblock_8235fd10" />
+                xml:id="eSc_textblock_8235fd10" />
             <zone points="220,1558 220,1801 3295,1801 3295,1558"
-                id="eSc_textblock_77dbd8b9" />
+                xml:id="eSc_textblock_77dbd8b9" />
             <zone points="508,1839 508,2317 2966,2317 2966,1839"
-                id="eSc_textblock_5dbfb787" />
+                xml:id="eSc_textblock_5dbfb787" />
             <zone points="147,443 130,1479 1438,1479 1438,443"
-                id="eSc_textblock_61edb6ff" />
-            <zone points="" id="eSc_dummyblock_" />
+                xml:id="eSc_textblock_61edb6ff" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_10eee52d">
-            <lb /><hi rendition="#c #b">Das Reproduktions-Piano</hi></div>
+            <ab><lb /><hi rendition="#c #b">Das Reproduktions-Piano</hi></ab></div>
         <div type="illustration" facs="#eSc_textblock_61edb6ff">
             <figure>
                 <desc>Welte-Mignon Reproduktions-Piano (Schrankmodell)</desc>
@@ -98,15 +98,15 @@
             <lb />
             <head><hi rendition="#c #b"> Welte- <lb />Mignon </hi></head>
         </div>
-        <div facs="#eSc_textblock_8235fd10"><hi rendition="#c">
+        <div facs="#eSc_textblock_8235fd10"><ab><hi rendition="#c">
             <lb />bietet die Möglichkeit, das <hi rendition="#b">Originalspiel der</hi>
             <lb /><hi rendition="#b">ersten Pianisten der Welt</hi>
             <seg ana="#home" resp="#np" type="topic">
                 <hi rendition="#b">im eigenen</hi>
                 <lb /><hi rendition="#b">Heim</hi> zu hören.
-            </seg></hi>
+            </seg></hi></ab>
         </div>
-        <div facs="#eSc_textblock_77dbd8b9"><hi rendition="#c">
+        <div facs="#eSc_textblock_77dbd8b9"><ab><hi rendition="#c">
             <lb />
             <seg ana="#touch_of_a_button" resp="#np" type="topic">
                 Ein Druck auf den Knopf genügt, um einen 
@@ -115,15 +115,16 @@
                 <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,</hi>
                 <lb /><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/116429623">Reisenauer</persName></hi>
                 etc. zu zitieren.
-            </seg></hi>
+            </seg></hi></ab>
         </div>
         <div facs="#eSc_textblock_5dbfb787">
-            <lb /><hi rendition="#c #b"><hi rendition="#in"><hi rendition="#in"><hi rendition="#in"><orgName>M. Welte &amp; Söhne</orgName></hi></hi></hi></hi>
+            <ab><lb /><hi rendition="#c #b"><hi rendition="#in"><hi rendition="#in"><hi rendition="#in"><orgName>M. Welte &amp; Söhne</orgName></hi></hi></hi></hi>
             <lb /><hi rendition="#c">Hoflieferanten</hi>
-            <lb /><hi rendition="#c #b"><hi rendition="#in"><hi rendition="#larger">Freiburg i. Baden.</hi></hi></hi>
+            <lb /><hi rendition="#c #b"><hi rendition="#in"><hi rendition="#larger">Freiburg i. Baden.</hi></hi></hi></ab>
         </div>
         <div facs="#eSc_textblock_8679924f">
-            <lb /><hi rendition="#right">549]</hi></div>
+            <ab><lb /><hi rendition="#right">549]</hi></ab></div>
+        </body>
     </text>
 </TEI>
   

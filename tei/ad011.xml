@@ -112,24 +112,25 @@
      </teiHeader>
       <facsimile>
         <surface>
-            <graphic url="new-york-herald-paderewski.png" width="965" height="1030" />
+            <graphic url="new-york-herald-paderewski.png" width="965px" height="1030px" />
             <zone points="42,63 466,63 466,754 42,754"
-                id="eSc_textblock_fa5427b3" />
+                xml:id="eSc_textblock_fa5427b3" />
             <zone points="36,756 938,756 938,954 36,954"
-                id="eSc_textblock_e9f6344e" />
+                xml:id="eSc_textblock_e9f6344e" />
             <zone
                 points="486,47 495,264 461,292 473,342 467,428 479,510 445,567 445,733 602,735 614,794 653,755 696,786 732,755 956,805 956,40"
-                id="eSc_textblock_eeb83339" />
+                xml:id="eSc_textblock_eeb83339" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_fa5427b3">
             <lb />
             <head><hi rendition="#b #i #in #larger">
                 <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> WILL
                 <lb /><hi rendition="#right">Play Again</hi>
             </hi></head>
-            <lb />
+            <ab><lb />
             <seg ana="#miracle" resp="#np" type="topic">
                 Thanks to the wizardry of <name type="brand">Hardman Welte-
                 <lb />Mignon(licensee) Reproducing Pianos</name>
@@ -170,10 +171,10 @@
                         <lb /><orgName>Schmoller &amp; Mueller</orgName>
                         <lb />Piano Co.
                         <address>
-                           <lb />1514-16-18
-                           <lb />Dodge St.
-                           <lb />Phone
-                           <lb />Douglas 1623
+                           <lb /><addrLine>1514-16-18</addrLine>
+                           <lb /><addrLine>Dodge St.</addrLine>
+                           <lb /><addrLine>Phone</addrLine>
+                           <lb /><addrLine>Douglas 1623</addrLine>
                         </address>
                      </hi>
                   </rdg>
@@ -182,21 +183,21 @@
             <hi rendition="#c #b #larger">
             <lb />
             <address>
-               433 Fifth Avenue, New York
-               <lb />47-51 Flatbush Ave, Brooklyn
+               <addrLine>433 Fifth Avenue, New York</addrLine>
+               <lb /><addrLine>47-51 Flatbush Ave, Brooklyn</addrLine>
             </address>
             </hi>
             <hi rendition="#c #b #i">
                 <lb />Represented in all Cities
-            </hi>
+            </hi></ab>
         
         </div>
         <div facs="#eSc_textblock_e9f6344e">
-            <lb /><orgName><hi rendition="#c #b"><hi rendition="#in #g2"><hi rendition="#in #larger"><hi rendition="#larger">HARDMAN</hi><lb />WELTE-MIGNON</hi></hi><lb /><hi rendition="#g2 #smaller">LICENSEE</hi></hi></orgName>
+            <ab><lb /><orgName><hi rendition="#c #b"><hi rendition="#in #g2"><hi rendition="#in #larger"><hi rendition="#larger">HARDMAN</hi><lb />WELTE-MIGNON</hi></hi><lb /><hi rendition="#g2 #smaller">LICENSEE</hi></hi></orgName></ab>
         
         </div>
         <div facs="#eSc_textblock_eeb83339" type="illustration">
-            <seg ana="#phantom_body" resp="#np" type="topic">
+            <ab><seg ana="#phantom_body" resp="#np" type="topic">
                 <figure>
                     <desc>
                         In the background: newspapers with headlines such as
@@ -206,7 +207,8 @@
                         figure of Paderewski playing the piano.
                     </desc>
                 </figure>
-            </seg>
+            </seg></ab>
         </div>
+        </body>
     </text>
 </TEI>

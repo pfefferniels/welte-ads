@@ -7,6 +7,7 @@ import Div from "./Div"
 import Name from "./Name"
 import Note from "./Note"
 import Seg from "./Seg"
+import Figure from "./Figure"
 import Metadata from "./Metadata"
 import MsIdentifier from "./MsIdentifier"
 import './style.css'
@@ -78,6 +79,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original }: Pro
     "tei-persname": Name,
     "tei-orgname": Name,
     "tei-seg": Seg,
+    "tei-figure": Figure,
     "tei-note": Note,
     "tei-msidentifier": MsIdentifier
   }), [layout])
@@ -88,6 +90,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original }: Pro
     "tei-persname": Name,
     "tei-orgname": Name,
     "tei-seg": Seg,
+    "tei-figure": Figure,
     "tei-note": Note,
     "tei-msidentifier": MsIdentifier
   }), [])

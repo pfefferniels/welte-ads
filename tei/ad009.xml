@@ -80,28 +80,29 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="v2_bsb00085796_01060_full_full_0_default.jpg" width="3485" height="5319"/>
-            <zone points="422,318 422,683 2974,683 2974,318" id="eSc_textblock_ae5cff62" />
+            <graphic url="v2_bsb00085796_01060_full_full_0_default.jpg" width="3485px" height="5319px"/>
+            <zone points="422,318 422,683 2974,683 2974,318" xml:id="eSc_textblock_ae5cff62" />
             <zone points="228,676 228,2347 1676,2347 1676,676"
-                id="eSc_textblock_fe5bb22e" />
+                xml:id="eSc_textblock_fe5bb22e" />
             <zone points="1694,691 1694,2358 2407,2358 2415,698"
-                id="eSc_textblock_05c0264b" />
+                xml:id="eSc_textblock_05c0264b" />
             <zone points="257,2588 257,2336 3164,2336 3164,2588"
-                id="eSc_textblock_a1117377" />
+                xml:id="eSc_textblock_a1117377" />
             <zone points="3146,2395 3146,691 2411,691 2411,2395"
-                id="eSc_textblock_daae2028" />
+                xml:id="eSc_textblock_daae2028" />
         </surface>
     </facsimile>
     <text>
-        <div facs="#eSc_textblock_ae5cff62"><hi rendition="#c #b">
+        <body>
+        <div facs="#eSc_textblock_ae5cff62"><ab><hi rendition="#c #b">
             <lb />Ein
             <seg ana="#miracle" type="topic" resp="#np">
                 musikalisches Weltwunder.
-            </seg></hi>
+            </seg></hi></ab>
         </div>
 
         <div facs="#eSc_textblock_fe5bb22e">
-            <lb /><seg ana="#technical_invention" type="topic" resp="#np">Deutschem Erfindungsgeist</seg> ist es geglückt, eine geradezu phantastisch er-
+            <ab><lb /><seg ana="#technical_invention" type="topic" resp="#np">Deutschem Erfindungsgeist</seg> ist es geglückt, eine geradezu phantastisch er-
             <lb />scheinende Idee - ein
             <seg ana="#analogy_to_photography" resp="#np" type="topic">
                 akustisches Seitenstück zur Platte des Photo-<lb />graphen
@@ -184,11 +185,11 @@
             </seg>
             Die Bedeutung
             <lb />der Erfindung ist denn auch von allen namhaften Pianisten anerkannt worden,
-            <lb />wie nachfolgende Aeusserungen beweisen:
+            <lb />wie nachfolgende Aeusserungen beweisen:</ab>
         </div>
         
         <div facs="#eSc_textblock_05c0264b">
-            <lb /><hi rendition="#larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Eugen d'Albert</persName>:</hi>
+            <ab><lb /><hi rendition="#larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Eugen d'Albert</persName>:</hi>
             <quote type="testimonial">
                 <lb />Das <name type="brand">Mignon-Reproduktionsklavier</name> ist
                 <lb />eine
@@ -249,19 +250,19 @@
                 <lb />hörte, in welcher Weise <name type="brand">Mignon</name> die
                 <lb />von Künstlerhand gespielten Musik-
                 <lb />stücke wiedergibt.
-            </quote>
+            </quote></ab>
         </div>
 
         <div facs="#eSc_textblock_a1117377">
-            <lb /><hi rendition="#c">Vorführung des Klaviers kann einstweilen nur nach vorhergegangener Anmeldung
+            <ab><lb /><hi rendition="#c">Vorführung des Klaviers kann einstweilen nur nach vorhergegangener Anmeldung
             erfolgen.</hi>
             <lb /><hi rendition="#c #b"><hi rendition="#in">Alleinvertretung bei
             <hi rendition="#larger"><orgName>Alfred Schmid Nachf.</orgName>,</hi>
-            <address>33-34 Theatinerstrasse 33-34.</address></hi></hi>
+            <address><addrLine>33-34 Theatinerstrasse 33-34.</addrLine></address></hi></hi></ab>
         </div>
 
         <div facs="#eSc_textblock_daae2028">
-            <lb /><hi rendition="#larger #u"><persName corresp="https://d-nb.info/gnd/116210419">Clotilde Kleeberg</persName>:</hi><lb />
+            <ab><lb /><hi rendition="#larger #u"><persName corresp="https://d-nb.info/gnd/116210419">Clotilde Kleeberg</persName>:</hi><lb />
             <quote type="testimonial">
                 <seg ana="#soulfulness" resp="#np" type="topic">
                     Es scheint mir, als ob in <name type="brand">Mignon</name> der Spie-<lb />gel der
@@ -322,7 +323,8 @@
                 </seg> und spä-
                 <lb />tere Generationen werden die Früchte die-
                 <lb />ser genialen Erfindung geniessen.
-            </quote>
+            </quote></ab>
         </div>
+        </body>
     </text>
 </TEI>

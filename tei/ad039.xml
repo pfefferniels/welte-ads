@@ -85,18 +85,19 @@
      </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="sn83030214-19131207.jp2" width="6063" height="8898" />
+            <graphic url="sn83030214-19131207.jp2" width="6063px" height="8898px" />
             <zone points="4420,6460 4420,6765 5780,6765 5780,6460"
-                id="eSc_textblock_d7143252" />
+                xml:id="eSc_textblock_d7143252" />
             <zone points="4645,6815 4645,7295 5835,7295 5835,6815"
-                id="zone_paragraph1" />
+                xml:id="zone_paragraph1" />
             <zone points="4637,7325 4637,7990 5835,7990 5835,7325"
-                id="zone_paragraph2" />
+                xml:id="zone_paragraph2" />
             <zone points="4645,8018 4645,8498 5842,8498 5842,8018"
-                id="zone_paragraph3" />
+                xml:id="zone_paragraph3" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_d7143252">
             <head>
                 <lb />
@@ -154,11 +155,12 @@
                     <lb />&amp; Sons
                 </orgName>,
                 <address>
-                    273 Fifth Avenue, between Twenty-
-                    <lb />ninth and Thirtieth Streets (opposite
-                    <lb />Holland House) New York.
+                    <addrLine>273 Fifth Avenue, between Twenty-</addrLine>
+                    <lb /><addrLine>ninth and Thirtieth Streets (opposite</addrLine>
+                    <lb /><addrLine>Holland House) New York.</addrLine>
                 </address>
             </p>
         </div>
+        </body>
     </text>
 </TEI>

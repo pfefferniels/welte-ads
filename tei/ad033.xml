@@ -76,102 +76,103 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="uc1.c038417028-seq_293.tif" width="1892" height="2719" />
+            <graphic url="uc1.c038417028-seq_293.tif" width="1892px" height="2719px" />
             <zone
                 points="374,296 1473,296 1473,1043 374,1043"
-                id="eSc_textblock_3d042e1f" />
+                xml:id="eSc_textblock_3d042e1f" />
             <zone
                 points="1070,2262 1515,2262 1515,2345 1070,2345"
-                id="eSc_textblock_3b2e08a4" />
+                xml:id="eSc_textblock_3b2e08a4" />
             <zone points="1553,2205 1564,2205 1564,2209 1547,2209 1553,2205"
-                id="eSc_textblock_08bba70b" />
+                xml:id="eSc_textblock_08bba70b" />
             <zone points="1505,1963 1509,1968 1499,1974 1499,1963 1505,1963"
-                id="eSc_textblock_e806de79" />
+                xml:id="eSc_textblock_e806de79" />
             <zone points="16,1965 16,2028 12,2028 6,1969 16,1965"
-                id="eSc_textblock_2545edc4" />
+                xml:id="eSc_textblock_2545edc4" />
             <zone points="1547,2163 1564,2163 1570,2179 1541,2167 1547,2163"
-                id="eSc_textblock_090e558e" />
-            <zone points="900,1495 1555,1495 1555,2215 900,2215" id="zone_orchestrion" />
+                xml:id="eSc_textblock_090e558e" />
+            <zone points="900,1495 1555,1495 1555,2215 900,2215" xml:id="zone_orchestrion" />
         </surface>
         <surface>
-            <graphic url="uc1.c038417028-seq_294.tif" width="1852" height="2719" />
+            <graphic url="uc1.c038417028-seq_294.tif" width="1852px" height="2719px" />
             <zone
                 points="261,72 1763,72 1763,390 261,390"
-                id="eSc_textblock_1211376e" />
+                xml:id="eSc_textblock_1211376e" />
             <zone points="918,404 918,925 84,925 84,620 494,620 494,404"
-                id="eSc_textblock_e5a2870f" />
+                xml:id="eSc_textblock_e5a2870f" />
             <zone
                 points="1767,868 1737,904 1666,927 1666,925 1582,925 1515,922 1501,925 928,925 928,404 1763,404"
-                id="eSc_textblock_f0769516" />
+                xml:id="eSc_textblock_f0769516" />
             <zone
                 points="914,1655 916,1655 892,2113 132,2119 78,2058 84,1033 99,1014 506,1014 506,1014 914,1014"
-                id="eSc_textblock_07d9cc5e" />
+                xml:id="eSc_textblock_07d9cc5e" />
             <zone points="560,940 560,1000 1295,1000 1295,940"
-                id="eSc_textblock_d9110567" />
+                xml:id="eSc_textblock_d9110567" />
             <zone points="1767,1021 1773,1551 1761,1593 1706,1617 926,1623 926,1014 1733,1014"
-                id="eSc_textblock_9e212c90" />
-            <zone points="76,272 76,663 494,663 494,272" id="eSc_textblock_985e1b6b" />
-            <zone points="326,489 330,489 330,506 326,501" id="eSc_textblock_6dbc318f" />
+                xml:id="eSc_textblock_9e212c90" />
+            <zone points="76,272 76,663 494,663 494,272" xml:id="eSc_textblock_985e1b6b" />
+            <zone points="326,489 330,489 330,506 326,501" xml:id="eSc_textblock_6dbc318f" />
             <zone points="134,2156 62,2701 1743,2715 1760,1620 958,1632 966,2156 395,2121"
-                id="eSc_textblock_29cfa920" />
+                xml:id="eSc_textblock_29cfa920" />
             <zone points="1706,1672 1702,1672 1702,1667 1706,1667"
-                id="eSc_textblock_6286a23c" />
+                xml:id="eSc_textblock_6286a23c" />
         </surface>
         <surface>
-            <graphic url="uc1.c038417028-seq_295.tif" width="1903" height="2719" />
-            <zone points="122,24 122,754 1826,754 1826,24" id="eSc_textblock_fd6fe9ba" />
+            <graphic url="uc1.c038417028-seq_295.tif" width="1903px" height="2719px" />
+            <zone points="122,24 122,754 1826,754 1826,24" xml:id="eSc_textblock_fd6fe9ba" />
             <zone points="145,1324 139,1303 139,888 145,785 196,761 969,761 969,1324"
-                id="eSc_textblock_afba7f08" />
+                xml:id="eSc_textblock_afba7f08" />
             <zone
                 points="1776,761 1818,779 1818,1273 1685,1309 1479,1323 1482,1324 993,1324 993,761"
-                id="eSc_textblock_d1c98342" />
+                xml:id="eSc_textblock_d1c98342" />
             <zone
                 points="1697,1383 1710,1441 177,1441 187,1436 157,1424 169,1407 217,1395 163,1388 158,1370 1680,1370"
-                id="eSc_textblock_1a73062e" />
+                xml:id="eSc_textblock_1a73062e" />
             <zone points="139,1992 139,1462 144,1459 144,1465 973,1465 973,2018 148,2018"
-                id="eSc_textblock_38047c95" />
+                xml:id="eSc_textblock_38047c95" />
             <zone points="1812,1974 1685,1998 1274,2012 1335,2020 991,2020 991,1465 1812,1465"
-                id="eSc_textblock_f403edec" />
+                xml:id="eSc_textblock_f403edec" />
             <zone
                 points="151,2044 1777,2044 1777,2150 151,2150"
-                id="eSc_textblock_688779c3" />
+                xml:id="eSc_textblock_688779c3" />
             <zone points="145,2638 139,2175 144,2164 971,2164 971,2675 192,2675"
-                id="eSc_textblock_cec6b76a" />
+                xml:id="eSc_textblock_cec6b76a" />
             <zone
                 points="1812,2169 1818,2205 1812,2584 1517,2596 1426,2628 977,2628 977,2164 1803,2164"
-                id="eSc_textblock_f606c738" />
-            <zone points="10,1419 10,1424 6,1424 7,1419" id="eSc_textblock_6e2c7c1b" />
+                xml:id="eSc_textblock_f606c738" />
+            <zone points="10,1419 10,1424 6,1424 7,1419" xml:id="eSc_textblock_6e2c7c1b" />
         </surface>
         <surface>
-            <graphic url="uc1.c038417028-seq_296.tif" width="1831" height="2724" />
-            <zone points="58,7 58,824 1768,824 1768,7" id="eSc_textblock_36a1467b" />
+            <graphic url="uc1.c038417028-seq_296.tif" width="1831px" height="2724px" />
+            <zone points="58,7 58,824 1768,824 1768,7" xml:id="eSc_textblock_36a1467b" />
             <zone
                 points="96,1971 90,1864 127,1826 133,1760 109,1737 133,1731 96,1711 84,1566 90,847 760,847 766,942 779,948 779,1001 766,1124 778,1554 779,1554 779,1990 785,1990 785,2004 312,2004 312,2006 159,2006"
-                id="eSc_textblock_10ec60b1" />
+                xml:id="eSc_textblock_10ec60b1" />
             <zone
                 points="1758,841 1770,1330 1691,1451 1764,1495 1764,1929 1715,1953 1426,1965 1424,1967 1077,1967 1077,822"
-                id="eSc_textblock_e780b0b2" />
+                xml:id="eSc_textblock_e780b0b2" />
             <zone
                 points="1425,2086 1358,2135 1261,2161 1341,2197 1497,2221 1540,2257 1540,2474 369,2486 351,2456 345,2179 422,2161 454,2123 442,2033 390,2019 1431,2019"
-                id="eSc_textblock_6f563b09" />
+                xml:id="eSc_textblock_6f563b09" />
             <zone points="804,1931 804,791 1063,791 1063,1931"
-                id="eSc_textblock_ea26bdd7" />
+                xml:id="eSc_textblock_ea26bdd7" />
             <zone points="404,2675 404,2680 393,2680 396,2669"
-                id="eSc_textblock_f3b7a1f1" />
-            <zone points="845,944 845,954 810,954 814,944" id="eSc_textblock_a3cd0458" />
-            <zone points="735,2500 1135,2500 1135,2715 735,2715" id="zone_vignette" />
+                xml:id="eSc_textblock_f3b7a1f1" />
+            <zone points="845,944 845,954 810,954 814,944" xml:id="eSc_textblock_a3cd0458" />
+            <zone points="735,2500 1135,2500 1135,2715 735,2715" xml:id="zone_vignette" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_3d042e1f">
-            <hi rendition="#c"><lb /><hi rendition="#in #larger">Welte's</hi><lb />Wonder-<lb />Invention</hi></div>
+            <ab><hi rendition="#c"><lb /><hi rendition="#in #larger">Welte's</hi><lb />Wonder-<lb />Invention</hi></ab></div>
         <div type="illustration" facs="#zone_orchestrion">
             <figure>
                 <desc>Welte's orchestrion, with three figures in Biedermeier dress</desc>
             </figure>
         </div>
         <div facs="#eSc_textblock_3b2e08a4">
-            <lb />Welte's Orchestrion</div>
+            <ab><lb />Welte's Orchestrion</ab></div>
         <div facs="#eSc_textblock_08bba70b" />
         <div facs="#eSc_textblock_e806de79" />
         <div facs="#eSc_textblock_2545edc4" />
@@ -179,11 +180,11 @@
 
         <pb />
         <div facs="#eSc_textblock_1211376e">
-            <hi rendition="#right"><lb /><hi rendition="#in #larger"><hi rendition="#larger"><persName>Michael Welte</persName></hi></hi>
-            <lb />The Clockmaker of Freiburg</hi>
+            <ab><hi rendition="#right"><lb /><hi rendition="#in #larger"><hi rendition="#larger"><persName>Michael Welte</persName></hi></hi>
+            <lb />The Clockmaker of Freiburg</hi></ab>
         </div>
         <div facs="#eSc_textblock_e5a2870f">
-            <lb /><hi rendition="#k">To <persName>Michael Welte</persName>,</hi>
+            <ab><lb /><hi rendition="#k">To <persName>Michael Welte</persName>,</hi>
             <lb />the chiming clock-
             <lb />maker of a dreamy
             <lb />hamlet in Germany,
@@ -196,10 +197,10 @@
                 <lb />was given to study and invention
             </seg>
             and being
-            <lb />called on to design a musical chime for a
+            <lb />called on to design a musical chime for a</ab>
         </div>
         <div facs="#eSc_textblock_f0769516">
-            <lb />clock, he conceived the idea of having the
+            <ab><lb />clock, he conceived the idea of having the
             <lb />chimes play a tune.
             <lb />On the
             accuracy and novelty of his chim-
@@ -210,10 +211,10 @@
             <lb />chimed the passage of the hours from man-
             <lb />tles in every nook of Europe, while the firm
             <lb />that had begun so humbly had acquired a
-            <lb />continental prestige.
+            <lb />continental prestige.</ab>
         </div>
         <div facs="#eSc_textblock_07d9cc5e">
-            <lb /><hi rendition="#k">In</hi> 1849, after three years of patient toil,
+            <ab><lb /><hi rendition="#k">In</hi> 1849, after three years of patient toil,
             <lb /><persName>Michael Welte</persName> brought forth his first Orches-
             <lb />trion, the clumsy forerunner of the marvelous
             <lb />Philharmonic Organs of the present day.
@@ -242,13 +243,13 @@
             <lb />marvel at <persName>Michael Welte's</persName> astounding crea-
             <lb />tion. The firm expanded and the business of
             <lb /><orgName>M. Welte &amp; Sons</orgName> attained large proportions.
-            <lb />In 1865, <persName>Emil Welte</persName>, a son of the founder,
+            <lb />In 1865, <persName>Emil Welte</persName>, a son of the founder,</ab>
         </div>
         <div facs="#eSc_textblock_d9110567">
-            <lb />Welte's Wonder Invention
+            <ab><lb />Welte's Wonder Invention</ab>
         </div>
         <div facs="#eSc_textblock_9e212c90">
-            <lb />came to America where success was instan-
+            <ab><lb />came to America where success was instan-
             <lb />taneous. The demand for Welte's Orches-
             <lb />trions, coming now from two hemispheres, led,
             <lb />in 1872, to the removal to Freiburg, which
@@ -264,7 +265,7 @@
             </seg>
             thus eliminating
             <lb />the bulky wooden cylinders and giving the
-            <lb />instrument an unlimited repertoire.
+            <lb />instrument an unlimited repertoire.</ab>
         </div>
         <div facs="#eSc_textblock_985e1b6b" type="illustration">
             <figure>
@@ -299,7 +300,7 @@
             </p>
         </div>
         <div facs="#eSc_textblock_afba7f08">
-            <lb /><hi rendition="#dropcap">I</hi><hi rendition="#k">t</hi> was only natural that the artistic develop-
+            <ab><lb /><hi rendition="#dropcap">I</hi><hi rendition="#k">t</hi> was only natural that the artistic develop-
             <lb />ment of Welte Orchestrions and Philhar-
             <lb />monic Organs should have led the thoughts
             <lb />of the Weltes onward and upward to the idea
@@ -310,10 +311,10 @@
             <lb />Thus was conceived <hi rendition="#k"><name type="brand">Welte-Mignon</name></hi>* (pro-
             <lb />nounced <hi rendition="#i">Well-tee Meen-yon</hi>) or "Little
             <lb />Welte," as it was designated to distinguish
-            <lb />it from the large instruments on which
+            <lb />it from the large instruments on which</ab>
         </div>
         <div facs="#eSc_textblock_d1c98342">
-            <lb />the Welte reputation and business had been
+            <ab><lb />the Welte reputation and business had been
             <lb />established.
             <lb />Thus <orgName>M. Welte &amp; Sons</orgName> were origina-
             <lb />tors of the idea of reproducing the playing of
@@ -324,16 +325,16 @@
             <lb />Action Company</orgName>, under a license granting
             <lb />the unrestricted use of these patents in manu-
             <lb />facturing reproducing actions for the piano
-            <lb />industry.
+            <lb />industry.</ab>
         </div>
         <div facs="#eSc_textblock_1a73062e">
-            <lb />
+            <ab><lb />
             <hi rendition="#c"><seg ana="#exact_reproduction #secret" type="topic" resp="#np">
                 Perfect Reproduction – <hi rendition="#i">The Secret of</hi> Welte Mignon*
-            </seg></hi>
+            </seg></hi></ab>
         </div>
         <div facs="#eSc_textblock_38047c95">
-            <seg ana="#analogy_to_photography" resp="#np" type="topic">
+            <ab><seg ana="#analogy_to_photography" resp="#np" type="topic">
                 <lb /><hi rendition="#k">The <name type="brand">Welte-Mignon</name>*</hi> method of recording
                 <lb />a player's performance is photographic.
                 <lb />Through this
@@ -352,10 +353,10 @@
                 <lb />These photographs show <hi rendition="#i">precisely</hi> the pres-
                 <lb />sure with which the artist strikes the keys,
                 <lb />whether ever so lightly-pianissimo-or with
-            </seg>
+            </seg></ab>
         </div>
         <div facs="#eSc_textblock_f403edec">
-            <lb />the vigor of fortissimo.
+            <ab><lb />the vigor of fortissimo.
             <seg ana="#analogy_to_photography" resp="#np" type="topic">
                 And this photo-
                 <lb />graphic record is so perfect–so identically
@@ -370,13 +371,13 @@
             <lb />Herein lies the vast difference between
             <lb /><hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> recordings of great pianists
             <lb />and those of all other reproducing mechan-
-            <lb />isms.
+            <lb />isms.</ab>
         </div>
         <div facs="#eSc_textblock_688779c3">
-            <hi rendition="#c"><lb /><hi rendition="#i">The World's Greatest Pianists record for</hi> <name type="brand">Welte-Mignon*</name></hi>
+            <ab><hi rendition="#c"><lb /><hi rendition="#i">The World's Greatest Pianists record for</hi> <name type="brand">Welte-Mignon*</name></hi></ab>
         </div>
         <div facs="#eSc_textblock_cec6b76a">
-            <lb /><hi rendition="#k">Many</hi> musicians and masters whose names
+            <ab><lb /><hi rendition="#k">Many</hi> musicians and masters whose names
             <lb />gleam like stars in the firmament of music
             <lb />have paid glowing tribute to <hi rendition="#k"><name type="brand">Welte-Mig-
             <lb />non.*</name></hi> From every corner of the world come
@@ -397,10 +398,10 @@
             <persName type="artist">Saar</persName></hi> and
             <hi rendition="#k"><persName type="artist">Boguslawski</persName></hi>
             are but
-            <lb /><hi rendition="#smaller">*Licensed under original <name type="brand">Welte-Mignon</name> patents</hi>
+            <lb /><hi rendition="#smaller">*Licensed under original <name type="brand">Welte-Mignon</name> patents</hi></ab>
         </div>
         <div facs="#eSc_textblock_f606c738">
-            <lb />a few of the great artists whose playing you
+            <ab><lb />a few of the great artists whose playing you
             <lb />may hear on <hi rendition="#k"><name type="brand">Welte-Mignon.*</name></hi>
             <lb />The famed <name type="brand">Welte-Mignon* Library</name> of in-
             <lb />terpreted music is without a doubt the most
@@ -409,27 +410,25 @@
             <lb />embracing practically every musical compo-
             <lb />sition through which the master composers
             <lb />of the past two centuries have immortalized
-            <lb />themselves.
+            <lb />themselves.</ab>
         </div>
         <div facs="#eSc_textblock_6e2c7c1b" />
 
         <pb />
 
         <div facs="#eSc_textblock_36a1467b" type="illustration">
-            <seg ana="#phantom_body" resp="#np" type="topic">
+            <ab><seg ana="#phantom_body" resp="#np" type="topic">
                 <figure>
                     <desc resp="#np">
                         Semi-transparent pianist sitting at an opened
                         Welte Grand.
                     </desc>
                 </figure>
-                <p>
                     <lb />phantom hands of the Masters on your keyboard
-                </p>
-            </seg>
+            </seg></ab>
         </div>
         <div facs="#eSc_textblock_10ec60b1">
-            <hi rendition="#i"><seg ana="#phantom_body" resp="#np" type="topic">
+            <ab><hi rendition="#i"><seg ana="#phantom_body" resp="#np" type="topic">
                 <lb /><hi rendition="#b"><name type="brand">Welte Mignon</name></hi> Puts the Phantom-
                 <lb />Hands of the Masters on your keyboard
             </seg></hi>
@@ -462,10 +461,10 @@
             <lb /><hi rendition="#i"><hi rendition="#uc">The</hi> Reproducing Piano</hi></hi>
             <lb /><hi rendition="#k">With</hi> the <name type="brand">Welte-Mignon* Re-
             <lb />producing Piano</name>-i.e., any piano
-            <lb /><hi rendition="#smaller">*Licensed under original <name type="brand">Welte-Mignon</name> patents</hi>
+            <lb /><hi rendition="#smaller">*Licensed under original <name type="brand">Welte-Mignon</name> patents</hi></ab>
         </div>
         <div facs="#eSc_textblock_e780b0b2">
-            <lb />equipped with the marvelous <name type="brand">Welte-
+            <ab><lb />equipped with the marvelous <name type="brand">Welte-
             <lb />Mignon Licensee Action</name> - a selec-
             <lb />tion is played for you
             <seg ana="#virtual_presence" resp="#np" type="topic">
@@ -491,21 +490,21 @@
             <lb />lected <hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> as the only
             <lb />reproducing action for their piano.
             <lb />This fact in itself is ample testimony
-            <lb />of the greatness of <hi rendition="#k"><name type="brand">Welte-Mignon.*</name></hi>
+            <lb />of the greatness of <hi rendition="#k"><name type="brand">Welte-Mignon.*</name></hi></ab>
         </div>
         <div facs="#eSc_textblock_6f563b09">
-            <hi rendition="#c"><lb /><hi rendition="#uc #g"><orgName>Auto Pneumatic Action Co.</orgName></hi>
+            <ab><hi rendition="#c"><lb /><hi rendition="#uc #g"><orgName>Auto Pneumatic Action Co.</orgName></hi>
             <lb />
             <address>
-                <hi rendition="#uc #smaller">W.C. Heaton,</hi> <hi rendition="#i #smaller">Pres.</hi>
-                <lb /><hi rendition="#uc">653 West 51st St., New York</hi>
+                <addrLine><hi rendition="#uc #smaller">W.C. Heaton,</hi> <hi rendition="#i #smaller">Pres.</hi></addrLine>
+                <lb /><addrLine><hi rendition="#uc">653 West 51st St., New York</hi></addrLine>
             </address>
             <lb />
             <name type="brand">
                 <hi rendition="#in #larger"><hi rendition="#in #larger"><hi rendition="#larger">Welte-Mignon</hi></hi></hi>
                 <lb /><hi rendition="#i #smaller">(Licensee)</hi>
             </name>
-            <lb /><hi rendition="#uc #g #smaller"><seg type="slogan">The Master's Fingers on your piano.</seg></hi></hi>
+            <lb /><hi rendition="#uc #g #smaller"><seg type="slogan">The Master's Fingers on your piano.</seg></hi></hi></ab>
         </div>
         <div facs="#eSc_textblock_ea26bdd7" type="illustration">
             <figure>
@@ -521,5 +520,6 @@
         </div>
         <div facs="#eSc_textblock_f3b7a1f1" />
         <div facs="#eSc_textblock_a3cd0458" />
+        </body>
     </text>
 </TEI>

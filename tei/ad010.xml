@@ -74,21 +74,22 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="v2_bsb00130680_00258_full_full_0_default.jpg" width="4588" height="6144"/>
+            <graphic url="v2_bsb00130680_00258_full_full_0_default.jpg" width="4588px" height="6144px"/>
             <zone points="1520,3060 2534,3060 2534,4086 833,4086 833,3360 1110,3360 1110,3205 1520,3205"
-                id="eSc_textblock_fedea684" />
+                xml:id="eSc_textblock_fedea684" />
             <zone points="824,3016 824,3336 1514,3336 1514,3016"
-                id="eSc_textblock_3824adc6" />
+                xml:id="eSc_textblock_3824adc6" />
         </surface>
     </facsimile>
     <text>
-        <div facs="#eSc_textblock_3824adc6"><hi rendition="#b">
+        <body>
+        <div facs="#eSc_textblock_3824adc6"><ab><hi rendition="#b">
             <lb />Das Reproduktions-
-            <lb />Klavier</hi>
+            <lb />Klavier</hi></ab>
         </div>
 
         <div facs="#eSc_textblock_fedea684">
-            <lb />gibt das Spiel der berühmten Meister des Klaviers selbst-
+            <ab><lb />gibt das Spiel der berühmten Meister des Klaviers selbst-
             <lb />tätig und
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 völlig getreu wieder
@@ -139,7 +140,8 @@
             <hi rendition="#c"><hi rendition="#in"><hi rendition="#larger"><orgName>Pianohaus Alfred Schmid Nachf.</orgName></hi></hi></hi>
             <lb /><hi rendition="#c">Kgl. Bayer. Hofmusikalienhandlung,
             Hoflieferant Sr. Kgl. Hoheit des Prinzen
-            Rupprecht von Bayern.</hi><lb /><hi rendition="#c"><hi rendition="#larger"><address>34 Theatinerstrasse 34</address></hi></hi>
+            Rupprecht von Bayern.</hi><lb /><hi rendition="#c"><hi rendition="#larger"><address><addrLine>34 Theatinerstrasse 34</addrLine></address></hi></hi></ab>
         </div>
+        </body>
     </text>
 </TEI>

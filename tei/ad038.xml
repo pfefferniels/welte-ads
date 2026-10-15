@@ -69,22 +69,23 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="mdp.39015086654038-seq_44.tif" width="2692" height="3540" />
+            <graphic url="mdp.39015086654038-seq_44.tif" width="2692px" height="3540px" />
             <zone
                 points="692,1589 2044,1589 2044,2365 692,2365"
-                id="eSc_textblock_d7c9744b" />
+                xml:id="eSc_textblock_d7c9744b" />
             <zone
                 points="590,2430 2202,2430 2202,3034 590,3034"
-                id="eSc_textblock_05f06f3c" />
+                xml:id="eSc_textblock_05f06f3c" />
             <zone points="1367,3248 1367,3254 1314,3254 1320,3248"
-                id="eSc_textblock_cfbc1ad0" />
+                xml:id="eSc_textblock_cfbc1ad0" />
             <zone points="1407,3241 1407,3246 1385,3246 1389,3241"
-                id="eSc_textblock_dcad29ca" />
+                xml:id="eSc_textblock_dcad29ca" />
             <zone points="464,505 495,1556 2216,1522 2199,466"
-                id="eSc_textblock_7ddb1b75" />
+                xml:id="eSc_textblock_7ddb1b75" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_7ddb1b75" type="illustration">
             <figure>
                 <desc resp="#np">
@@ -145,25 +146,26 @@
                     </measure>
                 </hi>
             </p>
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
             <lb />
             <orgName>
                 Bush &amp; Lane Piano Co.
             </orgName>,
             <address>
-                Detroit Sales Rooms, 1514 Woodward Ave.
+                <addrLine>Detroit Sales Rooms, 1514 Woodward Ave.</addrLine>
             </address>
             <lb />
             World's Largest Makers of High Grade Pianos Exclusively
-            </hi>
+            </hi></ab>
         </div>
 
         <div facs="#eSc_textblock_05f06f3c">
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
             <lb />Bush &amp; Lane
             <lb />Welte-Mignon
             <lb />(Licensee)
-            </hi>
+            </hi></ab>
         </div>
+        </body>
     </text>
 </TEI>

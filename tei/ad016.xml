@@ -172,32 +172,33 @@
    </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="uiug.30112102033757-seq_192.tif" width="2856" height="3992" />
-            <zone points="2554,638 2554,707 532,704 532,635" id="eSc_textblock_41ccdcb2" />
+            <graphic url="uiug.30112102033757-seq_192.tif" width="2856px" height="3992px" />
+            <zone points="2554,638 2554,707 532,704 532,635" xml:id="eSc_textblock_41ccdcb2" />
             <zone points="836,1808 836,1354 2249,1354 2249,1808"
-                id="eSc_textblock_89648e14" />
+                xml:id="eSc_textblock_89648e14" />
             <zone
                 points="1218,1798 1202,2760 1285,2905 1365,3002 1506,3091 1664,3122 1811,3112 1928,3065 1928,2769 2180,2763 2180,1798"
-                id="eSc_textblock_bab75d2b" />
+                xml:id="eSc_textblock_bab75d2b" />
             <zone points="2366,3275 2366,2763 1928,2763 1928,3275"
-                id="eSc_textblock_d423425a" />
+                xml:id="eSc_textblock_d423425a" />
             <zone points="513,722 513,1300 2548,1300 2548,722"
-                id="eSc_textblock_7ead3664" />
+                xml:id="eSc_textblock_7ead3664" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_41ccdcb2">
-            <lb /><hi rendition="#g2"><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg></hi>
+            <ab><lb /><hi rendition="#g2"><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg></hi></ab>
         </div>
 
         <div facs="#eSc_textblock_89648e14">
-            <lb />
+            <ab><lb />
             <hi rendition="#c">
                 <hi rendition="#i">
                     Possessed only by
                 </hi>
                 <lb /><hi rendition="#in #larger"><name type="brand">Welte-Mignon</name></hi>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#eSc_textblock_bab75d2b" rendition="#framed">
             <p>
@@ -246,16 +247,16 @@
                 <lb />sent on request.
             </p>
 
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
             <lb />The <orgName>Auto Pneumatic Action Co.</orgName>
             <lb /><hi rendition="#i #smaller"><persName>W.C. Heaton, Pres.</persName></hi>
-            <lb /><address>653 West 51st Street, New York</address>
+            <lb /><address><addrLine>653 West 51st Street, New York</addrLine></address>
             
             <hi rendition="#i #smaller">
                 <lb />*Licensed under original
                 <lb /><name type="brand">Welte-Mignon</name> patents
             </hi>
-            </hi>
+            </hi></ab>
         </div>
 
         <div facs="#eSc_textblock_d423425a" type="illustration">
@@ -267,13 +268,14 @@
         </div>
 
         <div facs="#eSc_textblock_7ead3664" type="illustration">
-            <figure>
+            <figure ana="#phantom_body" resp="#np">
                 <desc resp="#np">
-                    <seg ana="#phantom_body" resp="#np" type="topic">
+                    
                         Illustration of semi-transparent hands on a piano.
-                    </seg>
+                    
                 </desc>
             </figure>
         </div>
+        </body>
     </text>
 </TEI>

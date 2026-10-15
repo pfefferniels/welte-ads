@@ -200,28 +200,29 @@
    </teiHeader>
    <facsimile>
       <surface>
-         <graphic url="uiug.30112102033757-seq_336.tif" width="2856" height="3952"/>
+         <graphic url="uiug.30112102033757-seq_336.tif" width="2856px" height="3952px"/>
          <zone points="522,391 2512,391 2512,1729 522,1729"
-               id="eSc_textblock_c6e9cfe9"/>
+               xml:id="eSc_textblock_c6e9cfe9"/>
          <zone points="676,1984 1298,1984 1359,2140 1403,2160 1412,2298 1500,2415 1502,2467 1524,2466 1524,2509 676,2509"
-               id="eSc_textblock_5f73df5d"/>
+               xml:id="eSc_textblock_5f73df5d"/>
          <zone points="1765,1977 1552,2511 2408,2516 2408,1977"
-               id="eSc_textblock_3e3a75c6"/>
+               xml:id="eSc_textblock_3e3a75c6"/>
          <zone points="957,2529 2124,2529 2124,2632 957,2632"
-               id="eSc_textblock_1657e4db"/>
+               xml:id="eSc_textblock_1657e4db"/>
          <zone points="465,3407 2625,3407 2625,3537 465,3537"
-               id="eSc_textblock_68da9219"/>
+               xml:id="eSc_textblock_68da9219"/>
          <zone points="1887,1121 1880,1121 1880,1115 1887,1117"
-               id="eSc_textblock_4697302e"/>
+               xml:id="eSc_textblock_4697302e"/>
          <zone points="475,2633 475,3424 2591,3424 2591,2633"
-               id="eSc_textblock_ae66d627"/>
+               xml:id="eSc_textblock_ae66d627"/>
          <zone points="1335,1736 1335,2050 1730,2050 1730,1736"
-               id="eSc_textblock_31e3131e"/>
+               xml:id="eSc_textblock_31e3131e"/>
       </surface>
    </facsimile>
    <text>
+      <body>
       <div facs="#eSc_textblock_c6e9cfe9">
-        <hi rendition="#c">
+        <ab><hi rendition="#c">
                 <lb/>The <seg ana="#superiority">superiority</seg> of any
                 <lb/><hi rendition="#i">reproducing</hi> piano
                 <lb/>is assured if it
@@ -230,10 +231,10 @@
                 <lb/><hi rendition="#b #smaller">LICENSEE</hi>
                 <lb/>reproducing
                 <lb/>action</name>
-            </hi>
+            </hi></ab>
       </div>
       <div facs="#eSc_textblock_5f73df5d">
-         <lb/>Before buying any reproducing
+         <ab><lb/>Before buying any reproducing
          <lb/>piano ascertain whether or not
          <lb/>it contains the famous <name type="brand">WELTE-
          <lb/>MIGNON LICENSEE REPRODUCING
@@ -251,10 +252,10 @@
         <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De<lb/>Pachmann</persName>,
         <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
         <persName type="artist" corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>,
-        <persName type="artist" corresp="https://d-nb.info/gnd/119362112">Casella</persName>,
+        <persName type="artist" corresp="https://d-nb.info/gnd/119362112">Casella</persName>,</ab>
       </div>
       <div facs="#eSc_textblock_3e3a75c6">
-         <hi rendition="#right">
+         <ab><hi rendition="#right">
          <lb/>
          <persName corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>
          and many others.
@@ -267,22 +268,22 @@
          <lb/>Mignon Licensee</name> dealers everywhere.
          <lb/>Send for copy of our beautiful brochure
          <lb/>containing portraits of the great artists.
-         </hi>
+         </hi></ab>
       </div>
       <div facs="#eSc_textblock_1657e4db">
-         <hi rendition="#c">
+         <ab><hi rendition="#c">
          <lb/>
          <hi rendition="#k"><orgName>Auto Pneumatic Action Company</orgName></hi>,
          <persName>W. C. Heaton, Pres.</persName><lb/>
          
          <hi rendition="#smaller"><address>
-            653 W. 51st Street, New York
+            <addrLine>653 W. 51st Street, New York</addrLine>
          </address></hi>
-         </hi>
+         </hi></ab>
       </div>
       <div facs="#eSc_textblock_68da9219">
-         <lb/>
-         <hi rendition="#uc #g"><seg type="slogan">The Master's Fingers On Your Piano</seg></hi>
+         <ab><lb/>
+         <hi rendition="#uc #g"><seg type="slogan">The Master's Fingers On Your Piano</seg></hi></ab>
       </div>
       <div facs="#eSc_textblock_4697302e"/>
 
@@ -294,13 +295,14 @@
         </figure>
       </div>
       <div facs="#eSc_textblock_ae66d627" type="illustration">
-        <figure>
+        <figure ana="#phantom_body" resp="#np">
             <desc resp="#np">
-                <seg ana="#phantom_body" resp="#np" type="topic">
+                
                     Ghost hands on a piano.
-                </seg>
+                
             </desc>            
         </figure>
       </div>
+      </body>
    </text>
 </TEI>

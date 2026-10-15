@@ -177,35 +177,36 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="5271616.pdf_page_1.png" width="2479" height="3508" />
+            <graphic url="5271616.pdf_page_1.png" width="2479px" height="3508px" />
             <zone points="392,2274 392,2380 2371,2380 2371,2274"
-                id="eSc_textblock_ce5dae70" />
+                xml:id="eSc_textblock_ce5dae70" />
             <zone points="392,2274 2371,2274 2371,2380 1203,2380 1203,2713 55,2713 55,2340 392,2340"
-                id="eSc_textblock_79199ad6" />
+                xml:id="eSc_textblock_79199ad6" />
             <zone points="2373,2694 2373,2384 1236,2384 1236,2694"
-                id="eSc_textblock_611d3239" />
+                xml:id="eSc_textblock_611d3239" />
             <zone points="60,2738 60,3085 2416,3085 2416,2738"
-                id="eSc_textblock_7a7e6e27" />
-            <zone points="59,118 59,2256 2388,2256 2388,118" id="eSc_textblock_34edb91d" />
+                xml:id="eSc_textblock_7a7e6e27" />
+            <zone points="59,118 59,2256 2388,2256 2388,118" xml:id="eSc_textblock_34edb91d" />
             <zone points="1114,3230 1114,3074 1327,3074 1327,3230"
-                id="eSc_textblock_dbf156ed" />
+                xml:id="eSc_textblock_dbf156ed" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_34edb91d" type="illustration">
-            <figure>
+            <figure ana="#sitting_woman" resp="#np">
                 <desc resp="#np">
                     Four persons facing a grand piano.
-                    <seg ana="#sitting_woman" resp="#np" type="topic">
+                    
                         Two women in dresses are sitting in chairs.
-                    </seg>
+                    
                     One man leaning on the piano, another man
                     standing next to the left sitting woman.
                 </desc>
             </figure>
         </div>
         <div facs="#eSc_textblock_79199ad6">
-            <lb />
+            <ab><lb />
             <quote type="testimonial">
                 <seg ana="#home" resp="#np" type="topic">
                     <hi rendition="#uc #g2">"<hi rendition="#in #larger">I</hi>t brings the world's greatest pianists into</hi>
@@ -223,11 +224,11 @@
                 you have but to close your eyes to
                 feel the pres-<lb />ence of the master at the keys.
             </seg>
-            It is modern magic.
+            It is modern magic.</ab>
         </div>
 
         <div facs="#eSc_textblock_611d3239">
-            <lb /><name type="brand">Welte-Mignon Licensee Reproducing Pianos</name> are
+            <ab><lb /><name type="brand">Welte-Mignon Licensee Reproducing Pianos</name> are
             <lb />offered by 115 leading piano manufacturers. Piano
             <lb />merchants everywhere are anxious to demonstrate to
             <lb />you. Send for our Book of Famous Artists. The
@@ -235,26 +236,27 @@
             <persName>W. C. Heaton,</persName>
             <lb />President;
             <address>
-                653 West 51st Street, New York, N. Y.
-            </address>
+                <addrLine>653 West 51st Street, New York, N. Y.</addrLine>
+            </address></ab>
         </div>
 
         <div facs="#eSc_textblock_7a7e6e27">
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
             <lb /><name type="brand"><hi rendition="#in"><hi rendition="#in #larger">Welte-Mignon</hi></hi>
             <lb /><hi rendition="#smaller #i #uc">Licensee</hi>
             <lb /><hi rendition="#uc #g #b">Reproducing Piano</hi></name>
             <lb /><hi rendition="#uc #g2"><seg type="slogan">The Master's Fingers on your Piano</seg></hi>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#eSc_textblock_dbf156ed" type="illustration">
-            <figure>
+            <figure ana="#phantom_body" resp="#np">
                 <desc resp="#np">
-                    <seg ana="#phantom_body" resp="#np" type="topic">
+                    
                         Phantom Fingers.
-                    </seg>
+                    
                 </desc>
             </figure>
         </div>
+        </body>
     </text>
 </TEI>

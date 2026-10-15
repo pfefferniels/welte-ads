@@ -76,36 +76,37 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="uc1.b000556132-seq_662.tif" width="2368" height="2672" />
+            <graphic url="uc1.b000556132-seq_662.tif" width="2368px" height="2672px" />
             <zone
                 points="1964,1526 2106,1543 2130,1567 2124,1625 2189,1650 2213,1692 2201,1767 2185,1780 1315,1780 1253,1750 1247,1692 1209,1667 789,1649 772,1537 801,1526"
-                id="eSc_textblock_470ea0d3" />
+                xml:id="eSc_textblock_470ea0d3" />
             <zone points="960,1876 960,2047 659,2052 671,1870"
-                id="eSc_textblock_25ac3298" />
+                xml:id="eSc_textblock_25ac3298" />
             <zone points="1003,1822 1262,1805 1597,1805 1597,2273 995,2273"
-                id="eSc_textblock_a481e398" />
+                xml:id="eSc_textblock_a481e398" />
             <zone
                 points="2213,1816 2213,2225 2195,2260 2152,2280 1622,2280 1622,2273 1618,2273 1618,1805 2200,1805"
-                id="eSc_textblock_8599e7fe" />
+                xml:id="eSc_textblock_8599e7fe" />
             <zone
                 points="991,2288 2219,2288 2219,2634 991,2634"
-                id="eSc_textblock_7a9b17c3" />
+                xml:id="eSc_textblock_7a9b17c3" />
             <zone points="650,2083 650,2402 958,2402 958,2083"
-                id="eSc_textblock_535b87e4" />
+                xml:id="eSc_textblock_535b87e4" />
             <zone points="589,209 589,1523 2272,1523 2272,209"
-                id="eSc_textblock_cb1dfd0b" />
+                xml:id="eSc_textblock_cb1dfd0b" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_470ea0d3">
-            <hi rendition="#i"><lb />The Rolling Sweep of a Storm Tossed Sea</hi>
+            <ab><hi rendition="#i"><lb />The Rolling Sweep of a Storm Tossed Sea</hi>
             <hi rendition="#i #right"><lb />–
-            <seg ana="#phantom_body" resp="#np" type="topic slogan">
+            <seg ana="#phantom_body" resp="#np" type="slogan">
                 when Phantom Fingers play
-            </seg></hi>
+            </seg></hi></ab>
         </div>
         <div facs="#eSc_textblock_25ac3298">
-            <hi rendition="#i #b"><lb />These are the
+            <ab><hi rendition="#i #b"><lb />These are the
             <seg ana="#phantom_body" resp="#np" type="topic">
                 Phantom<lb />Hands
             </seg>
@@ -119,11 +120,11 @@
                 <lb />miracle of <name type="brand">Welte-
                 <lb />Mignon*</name>
                 reproduction
-            </seg>.</hi>
+            </seg>.</hi></ab>
         </div>
 
         <div facs="#eSc_textblock_a481e398">
-            <lb /><hi rendition="#smaller"><hi rendition="#dropcap">T</hi></hi><hi rendition="#uc">hunder of breaking waves;</hi>
+            <ab><lb /><hi rendition="#smaller"><hi rendition="#dropcap">T</hi></hi><hi rendition="#uc">hunder of breaking waves;</hi>
             <lb />howl of the hurricane; crash of
             <lb />thunder; or,
             <seg ana="#suit_every_mood" resp="#np" type="topic">
@@ -148,10 +149,10 @@
                 With uncanny
                 <lb />fidelity,
             </seg> this
-            supreme reproducing
+            supreme reproducing</ab>
         </div>
         <div facs="#eSc_textblock_8599e7fe">
-            <lb />instrument preserves the actual
+            <ab><lb />instrument preserves the actual
             <lb />
             <seg ana="#immortality" resp="#np" type="topic">
                 playing of immortal musicians.
@@ -176,15 +177,15 @@
             <lb /><orgName>Auto-Pneumatic Action Co.</orgName>, <persName>W.
             <lb />C. Heaton</persName>, President,
             <address>
-                12th Ave.
-                <lb />at 51st St., New York
-            </address>.
+                <addrLine>12th Ave.</addrLine>
+                <lb /><addrLine>at 51st St., New York</addrLine>
+            </address>.</ab>
         </div>
         <div facs="#eSc_textblock_7a9b17c3">
-            <lb /><name type="brand"><hi rendition="#c"><hi rendition="#in #larger"><hi rendition="#in #larger">Welte-Mignon</hi></hi></hi>
+            <ab><lb /><name type="brand"><hi rendition="#c"><hi rendition="#in #larger"><hi rendition="#in #larger">Welte-Mignon</hi></hi></hi>
             <hi rendition="#c #i #smaller"><lb />(Licensee)</hi></name>
             <hi rendition="#c #i"><lb />Hear it—in comparison. There's a nearby dealer</hi>
-            <hi rendition="#c #smaller"><lb /><hi rendition="#smaller">*Licensed under the original <name type="brand">Welte-Mignon</name> patents.</hi></hi>
+            <hi rendition="#c #smaller"><lb /><hi rendition="#smaller">*Licensed under the original <name type="brand">Welte-Mignon</name> patents.</hi></hi></ab>
         </div>
         <div facs="#eSc_textblock_535b87e4" type="illustration">
             <figure>
@@ -192,13 +193,14 @@
             </figure>
         </div>
         <div facs="#eSc_textblock_cb1dfd0b" type="illustration">
-            <figure>
+            <figure ana="#phantom_body" resp="#np">
                 <desc>
-                    <seg ana="#phantom_body" resp="#np" type="topic">
+                    
                         Phantom hands at a piano.
-                    </seg>
+                    
                 </desc>
             </figure>
         </div>
+        </body>
     </text>
 </TEI>

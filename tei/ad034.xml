@@ -78,22 +78,23 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="world-famous-welte.png" width="715" height="987" />
+            <graphic url="world-famous-welte.png" width="715px" height="987px" />
             <zone points="541,162 545,247 506,269 322,269 318,188 320,164 328,160"
-                id="eSc_textblock_562dfbcc" />
-            <zone points="118,341 590,341 590,382 118,382" id="eSc_textblock_4271fc05" />
-            <zone points="227,4 225,23 208,12 209,0" id="eSc_textblock_8517a050" />
+                xml:id="eSc_textblock_562dfbcc" />
+            <zone points="118,341 590,341 590,382 118,382" xml:id="eSc_textblock_4271fc05" />
+            <zone points="227,4 225,23 208,12 209,0" xml:id="eSc_textblock_8517a050" />
             <zone
                 points="115,638 104,626 102,416 109,409 103,396 104,388 608,388 608,593 466,593 466,638"
-                id="eSc_textblock_d9bf3380" />
+                xml:id="eSc_textblock_d9bf3380" />
             <zone
                 points="175,643 530,643 530,742 175,742"
-                id="eSc_textblock_be4de09e" />
-            <zone points="108,127 108,320 264,320 264,127" id="eSc_textblock_603bc38e" />
-            <zone points="20,790 695,790 695,975 20,975" id="zone_organ" />
+                xml:id="eSc_textblock_be4de09e" />
+            <zone points="108,127 108,320 264,320 264,127" xml:id="eSc_textblock_603bc38e" />
+            <zone points="20,790 695,790 695,975 20,975" xml:id="zone_organ" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_8517a050" type="illustration">
             <figure>
                 <desc>Bird (ornament on top of the decorative frame)</desc>
@@ -122,8 +123,8 @@
             </p>
         </div>
         <div facs="#eSc_textblock_4271fc05">
-            <lb />
-            <hi rendition="#larger #c">World Famous <name type="brand">Welte-Mignon</name></hi>
+            <ab><lb />
+            <hi rendition="#larger #c">World Famous <name type="brand">Welte-Mignon</name></hi></ab>
         </div>
         <div facs="#eSc_textblock_d9bf3380">
             <p>
@@ -148,19 +149,20 @@
             </p>
         </div>
         <div facs="#eSc_textblock_be4de09e">
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
                 <lb /><hi rendition="#in"><orgName>M. Welte &amp; Sons, Inc.</orgName></hi>
                 <lb />
                 <address>
-                    Six Sixty Seven Fifth Ave.
-                    <lb />New York
+                    <addrLine>Six Sixty Seven Fifth Ave.</addrLine>
+                    <lb /><addrLine>New York</addrLine>
                 </address>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_organ" type="illustration">
             <figure>
                 <desc>Organ pipes with the Welte monogram (bottom of the decorative frame)</desc>
             </figure>
         </div>
+        </body>
     </text>
 </TEI>

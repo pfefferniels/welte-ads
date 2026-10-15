@@ -336,7 +336,8 @@ function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
   const mentions = Array.from(doc.querySelectorAll('persName[corresp]')).map(
     name => name.getAttribute('corresp') || ''
   )
-  const topicSegments = Array.from(doc.querySelectorAll('seg[ana]'))
+  // topics are marked on text segments and on figures (what a picture shows)
+  const topicSegments = Array.from(doc.querySelectorAll('seg[ana], figure[ana]'))
     .map(seg => {
       const ana = seg.getAttribute('ana')
       if (!ana) return []

@@ -78,29 +78,28 @@
   </teiHeader>
   <facsimile>
     <surface>
-      <graphic url="sn89053729-19130206-seq21.png" width="1520" height="3450"/>
-      <zone points="182,202 1328,202 1328,584 182,584" id="zone_headline"/>
-      <zone points="296,632 1225,632 1225,886 296,886" id="zone_text"/>
-      <zone points="180,949 1330,949 1330,1206 180,1206" id="zone_brand"/>
-      <zone points="189,1277 1332,1277 1332,1339 189,1339" id="zone_recitals"/>
-      <zone points="200,1459 731,1459 731,2152 447,2152 447,1961 200,1961" id="zone_story"/>
-      <zone points="810,1416 1333,1416 1333,1584 810,1584" id="zone_damrosch"/>
-      <zone points="811,1612 1334,1612 1334,1810 811,1810" id="zone_hertz"/>
-      <zone points="173,2160 848,2160 848,2733 173,2733" id="zone_piano"/>
-      <zone points="852,1831 1351,1831 1351,3052 852,3052" id="zone_picture"/>
-      <zone points="234,2817 727,2817 727,3042 234,3042" id="zone_styles"/>
-      <zone points="127,3134 1396,3134 1396,3268 127,3268" id="zone_studio"/>
-      <zone points="113,3275 489,3275 489,3356 113,3356" id="zone_president"/>
-      <zone points="518,3281 996,3281 996,3353 518,3353" id="zone_street"/>
-      <zone points="1098,3275 1389,3275 1389,3356 1098,3356" id="zone_manager"/>
+      <graphic url="sn89053729-19130206-seq21.png" width="1520px" height="3450px"/>
+      <zone points="182,202 1328,202 1328,584 182,584" xml:id="zone_headline"/>
+      <zone points="296,632 1225,632 1225,886 296,886" xml:id="zone_text"/>
+      <zone points="180,949 1330,949 1330,1206 180,1206" xml:id="zone_brand"/>
+      <zone points="189,1277 1332,1277 1332,1339 189,1339" xml:id="zone_recitals"/>
+      <zone points="200,1459 731,1459 731,2152 447,2152 447,1961 200,1961" xml:id="zone_story"/>
+      <zone points="810,1416 1333,1416 1333,1584 810,1584" xml:id="zone_damrosch"/>
+      <zone points="811,1612 1334,1612 1334,1810 811,1810" xml:id="zone_hertz"/>
+      <zone points="173,2160 848,2160 848,2733 173,2733" xml:id="zone_piano"/>
+      <zone points="852,1831 1351,1831 1351,3052 852,3052" xml:id="zone_picture"/>
+      <zone points="234,2817 727,2817 727,3042 234,3042" xml:id="zone_styles"/>
+      <zone points="127,3134 1396,3134 1396,3268 127,3268" xml:id="zone_studio"/>
+      <zone points="113,3275 489,3275 489,3356 113,3356" xml:id="zone_president"/>
+      <zone points="518,3281 996,3281 996,3353 518,3353" xml:id="zone_street"/>
+      <zone points="1098,3275 1389,3275 1389,3356 1098,3356" xml:id="zone_manager"/>
     </surface>
   </facsimile>
 
   <text>
     <body>
       <div facs="#zone_headline">
-        <hi rendition="#c">
-            <head>
+        <head><hi rendition="#c">
                 <hi rendition="#smaller"><lb/>The playing of the world's most famous pianists</hi>
                 <hi rendition="#larger">
                   <hi rendition="#in #b">
@@ -114,21 +113,20 @@
                     </persName>
                   </hi>
                 </hi>
-            </head>
-        </hi>
+            </hi></head>
       </div>
       <div facs="#zone_text">
-            <lb/>
+            <ab><lb/>
             <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreño</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/116204400">Bloomfield-<lb/>Zeisler</persName>,
             and others––
             is reproduced with
-            <lb/>every subtle nuance of shade and expres-<lb/>sion by
+            <lb/>every subtle nuance of shade and expres-<lb/>sion by</ab>
       </div>
       <div facs="#zone_brand">
-        <hi rendition="#c">
+        <ab><hi rendition="#c">
         <lb/>
         <name type="brand">
             <hi rendition="#i">The</hi>
@@ -137,22 +135,22 @@
                 Autograph · Piano
             </hi>
         </name>
-        </hi>
+        </hi></ab>
       </div>
       <div facs="#zone_recitals">
-        <lb/>
+        <ab><lb/>
         <hi rendition="#i #c">
             Recitals at your convenience daily at our Showrooms
-        </hi>
+        </hi></ab>
       </div>
 
       <div type="panel" facs="#zone_story">
-        <hi rendition="#b"><lb/>How <persName type="artist" corresp="https://d-nb.info/gnd/118697641">
+        <ab><hi rendition="#b"><lb/>How <persName type="artist" corresp="https://d-nb.info/gnd/118697641">
           EDVARD GRIEG
         </persName> was</hi>
         <hi rendition="#b #right"><lb/>Surprised by <persName corresp="https://d-nb.info/gnd/118632892">
           Kaiser Wilhelm II
-        </persName></hi>
+        </persName></hi></ab>
         <p>
           <lb />When starting on a trip to Norway, the
           <lb />German Emperor ordered a <name type="brand">Welte-
@@ -188,7 +186,7 @@
 
       <!-- First testimonial -->
       <div facs="#zone_damrosch">
-        <quote type="testimonial">
+        <ab><quote type="testimonial">
           <q>
             <lb />I should not have thought it possible.
             <lb />The Welte-Mignon is, without
@@ -202,12 +200,12 @@
           WALTER DAMROSCH
         </persName>,
         </hi>
-        <hi rendition="#right #smaller"><lb/><role>Conductor, New York Symphony Orchestra</role></hi>
+        <hi rendition="#right #smaller"><lb/><roleName>Conductor, New York Symphony Orchestra</roleName></hi></ab>
       </div>
 
       <!-- Second testimonial -->
       <div facs="#zone_hertz">
-        <quote type="testimonial">
+        <ab><quote type="testimonial">
           <q>
             <lb />The Welte-Mignon is indeed a rescuing
             <lb />invention that renders the great piano
@@ -222,7 +220,7 @@
           ALFRED HERTZ
         </persName>,
         </hi>
-        <hi rendition="#right #smaller"><lb/><role>Conductor, Metropolitan Opera House Orchestra</role></hi>
+        <hi rendition="#right #smaller"><lb/><roleName>Conductor, Metropolitan Opera House Orchestra</roleName></hi></ab>
       </div>
 
       <div type="illustration" facs="#zone_piano">
@@ -231,9 +229,9 @@
             Illustration of a grand piano and a Welte-Mignon push-up.
           </desc>
         </figure>
-        <lb/>
+        <ab><lb/>
         <name type="brand">Welte-Mignon Autograph Piano</name>
-        <lb/>
+        <lb/></ab>
     </div>
       <div type="illustration" facs="#zone_picture">
         <figure>
@@ -264,17 +262,17 @@
       </div>
       <div type="footer" facs="#zone_president">
         <address>
-          <hi rendition="#c"><lb/>J. B. CLEVELAND, <lb/>President.</hi>
+          <addrLine><hi rendition="#c"><lb/>J. B. CLEVELAND, <lb/>President.</hi></addrLine>
         </address>
       </div>
       <div type="footer" facs="#zone_street">
         <address>
-          <hi rendition="#c #b"><lb/>80 N. Pryor St.</hi>
+          <addrLine><hi rendition="#c #b"><lb/>80 N. Pryor St.</hi></addrLine>
         </address>
       </div>
       <div type="footer" facs="#zone_manager">
         <address>
-          <hi rendition="#c"><lb/>H. S. HOLMES, <lb/>Man. Director.</hi>
+          <addrLine><hi rendition="#c"><lb/>H. S. HOLMES, <lb/>Man. Director.</hi></addrLine>
         </address>
       </div>
     </body>

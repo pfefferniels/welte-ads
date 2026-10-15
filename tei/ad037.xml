@@ -68,48 +68,49 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="annoshow-plus.jpg" width="2613" height="3945" />
+            <graphic url="annoshow-plus.jpg" width="2613px" height="3945px" />
             <zone points="2268,368 2338,429 2321,786 438,804 420,447 429,394 499,368"
-                id="eSc_textblock_40330f98" />
+                xml:id="eSc_textblock_40330f98" />
             <zone points="377,1218 690,1218 690,1391 377,1391"
-                id="eSc_textblock_01f2d6ec" />
+                xml:id="eSc_textblock_01f2d6ec" />
             <zone points="358,1836 358,2381 1359,2381 1359,1836"
-                id="eSc_textblock_87ee5dfc" />
+                xml:id="eSc_textblock_87ee5dfc" />
             <zone points="935,1764 935,1840 1828,1840 1828,1764"
-                id="eSc_textblock_f9c21c7d" />
+                xml:id="eSc_textblock_f9c21c7d" />
             <zone points="1386,1838 1386,2381 2376,2381 2376,1838"
-                id="eSc_textblock_d6a5ecdd" />
+                xml:id="eSc_textblock_d6a5ecdd" />
             <zone points="2365,1209 2374,1391 2095,1391 2086,1227 2113,1209"
-                id="eSc_textblock_1167e50c" />
+                xml:id="eSc_textblock_1167e50c" />
             <zone points="423,2396 423,2711 2342,2711 2342,2396"
-                id="eSc_textblock_acb77e04" />
+                xml:id="eSc_textblock_acb77e04" />
             <zone points="830,2963 874,2980 892,3083 839,3109 552,3109 526,3092 526,2989 561,2963"
-                id="eSc_textblock_2e01c03a" />
+                xml:id="eSc_textblock_2e01c03a" />
             <zone
                 points="2014,3348 2075,3366 2130,3445 2303,3480 2321,3548 1630,3574 1567,3618 1201,3618 1172,3565 438,3539 447,3471 646,3454 710,3340 1050,3331"
-                id="eSc_textblock_c3c4b41d" />
+                xml:id="eSc_textblock_c3c4b41d" />
             <zone points="1850,2928 2268,2928 2268,3145 1850,3145"
-                id="eSc_textblock_00775c4e" />
+                xml:id="eSc_textblock_00775c4e" />
             <zone points="693,817 693,1750 2074,1750 2074,817"
-                id="eSc_textblock_243b00c3" />
+                xml:id="eSc_textblock_243b00c3" />
             <zone points="975,2772 975,3330 1811,3330 1804,2772"
-                id="eSc_textblock_9a0baa4d" />
+                xml:id="eSc_textblock_9a0baa4d" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_40330f98">
-            <lb /><name type="brand">Welte-Mignon
+            <ab><lb /><name type="brand">Welte-Mignon
             <lb />Reproduktions-Piano</name> * Reproduktions-Flügel
-            <lb /><seg type="slogan">Getreue Wiedergabe des Spiels berühmter KLAVIER-Virtuosen</seg>
+            <lb /><seg type="slogan">Getreue Wiedergabe des Spiels berühmter KLAVIER-Virtuosen</seg></ab>
         </div>
         <div facs="#eSc_textblock_01f2d6ec">
-            <lb /><name type="brand">Welte-Mignon</name>
+            <ab><lb /><name type="brand">Welte-Mignon</name>
             <lb />wird eingebaut in
             <lb />Pianos und Flügel
-            <lb />der Marken:
+            <lb />der Marken:</ab>
         </div>
         <div facs="#eSc_textblock_87ee5dfc">
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Professor Eugen d'Albert</persName> schreibt:
+            <ab><lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Professor Eugen d'Albert</persName> schreibt:
             <quote type="testimonial">
                 <lb />"Wie erstaunlich und tief ergreifend ist es, sein vor
                 <lb />Jahren aufgenommenes Spiel in größter Vollendung durch
@@ -127,13 +128,13 @@
                     meine Kunst der Nachwelt
                     <lb />überträgt.
                 </seg>"
-            </quote>
+            </quote></ab>
         </div>
         <div facs="#eSc_textblock_f9c21c7d">
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Professor d'Albert</persName> für "Welte-Mignon" spielend.
+            <ab><lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Professor d'Albert</persName> für "Welte-Mignon" spielend.</ab>
         </div>
         <div facs="#eSc_textblock_d6a5ecdd">
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Professor Artur Nikisch</persName> schreibt:
+            <ab><lb /><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Professor Artur Nikisch</persName> schreibt:
             <quote type="testimonial">
                 <lb />"Den Reproduktionsapparat <name type="brand">"Welte-Mignon"</name> halte ich
                 <lb />für
@@ -162,42 +163,43 @@
                     <lb />künstlerischen Genusses bequem sich zu verschaffen,
                     <lb />irgendeinen hervorragenden Künstler "zitieren" will.
                 </seg>
-            </quote>
+            </quote></ab>
         </div>
         <div facs="#eSc_textblock_1167e50c">
-            <lb /><name type="brand">Steinway</name>
+            <ab><lb /><name type="brand">Steinway</name>
             <lb /><name type="brand">Blüthner</name>
             <lb /><name type="brand">Ibach</name>
-            <lb /><name type="brand">Feurich</name>
+            <lb /><name type="brand">Feurich</name></ab>
         </div>
         <div facs="#eSc_textblock_acb77e04">
-            <lb />Welte-
-            <lb />Philharmonie-Orgel
+            <ab><lb />Welte-
+            <lb />Philharmonie-Orgel</ab>
         </div>
         <div facs="#eSc_textblock_2e01c03a">
-            <seg ana="#home" type="topic" resp="#np">
+            <ab><seg ana="#home" type="topic" resp="#np">
                 <lb />für das
                 <lb />vornehme
                 <lb />Privat-Haus
-            </seg>
+            </seg></ab>
         </div>
         <div facs="#eSc_textblock_c3c4b41d">
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
             <lb /><orgName>M. Welte &amp; Söhne</orgName>
             <lb />Fabrik pneumatischer Musikwerke
             <lb />Freiburg i. Br.
             <lb />Gegründet 1832
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#eSc_textblock_00775c4e">
-            <lb />Individuelle
+            <ab><lb />Individuelle
             <lb />Spiel erster
             <lb />Orgel-Virtuosen
-            <lb />wiedergebend
+            <lb />wiedergebend</ab>
         </div>
         <div facs="#eSc_textblock_243b00c3" type="illustration">
             <figure><desc>Photograph of Professor d'Albert playing for the Welte-Mignon</desc></figure>
         </div>
         <div facs="#eSc_textblock_9a0baa4d" type="illustration" />
+        </body>
     </text>
 </TEI>

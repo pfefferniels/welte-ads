@@ -200,31 +200,32 @@
    </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="uiug.30112102033757-seq_236.tif" width="2880" height="3976" />
-            <zone points="167,217 167,395 2866,395 2866,217" id="eSc_textblock_535af4ac" />
+            <graphic url="uiug.30112102033757-seq_236.tif" width="2880px" height="3976px" />
+            <zone points="167,217 167,395 2866,395 2866,217" xml:id="eSc_textblock_535af4ac" />
             <zone
                 points="1573,1413 2641,1413 2641,3205 1573,3205"
-                id="eSc_textblock_ca7a7573" />
+                xml:id="eSc_textblock_ca7a7573" />
             <zone
                 points="1635,3260 2605,3260 2605,3496 1635,3496"
-                id="eSc_textblock_44bd38e4" />
+                xml:id="eSc_textblock_44bd38e4" />
             <zone
                 points="237,417 237,3490 389,3712 766,3777 1192,3687 1316,3490 1316,1647 1845,579 1316,417 1137,184 766,94 417,174"
-                id="eSc_textblock_9ababb2c" />
+                xml:id="eSc_textblock_9ababb2c" />
             <zone points="1872,710 1872,1302 2413,1302 2413,710"
-                id="eSc_textblock_7badf9ac" />
+                xml:id="eSc_textblock_7badf9ac" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_535af4ac">
-            <lb />
+            <ab><lb />
             <hi rendition="#uc #g">
-                <seg type="topic slogan" ana="#virtual_presence" resp="#np">
+                <seg type="slogan" ana="#virtual_presence" resp="#np">
                     The Master's Fingers On your Piano
                 </seg>
-            </hi></div>
+            </hi></ab></div>
         <div facs="#eSc_textblock_ca7a7573">
-            <hi rendition="#c #in #larger"><hi rendition="#in #larger">
+            <ab><hi rendition="#c #in #larger"><hi rendition="#in #larger">
             <lb />Think what
             <lb /><name type="brand">Welte-Mignon</name>
             <lb />means to you
@@ -259,17 +260,17 @@
             <lb />The famous <name type="brand">WELTE-MIGNON* Repro-
             <lb />ducing Action</name> can be installed in your
             <lb />grand piano. Our beautiful brochure sent
-            <lb />on request.
+            <lb />on request.</ab>
         </div>
         <div facs="#eSc_textblock_44bd38e4">
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
             <lb /><orgName>AUTO PNEUMATIC ACTION COMPANY</orgName>
             <lb /><hi rendition="#i"><persName>W. C. Heaton, Pres.</persName></hi><lb />
             <address>
-                653 West 51st St., New
-                York City
+                <addrLine>653 West 51st St., New
+                York City</addrLine>
             </address><lb /><hi rendition="#smaller #i">*Licensed under original <name type="brand">Welte-Mignon</name> patents</hi>
-            </hi></div>
+            </hi></ab></div>
         <div facs="#eSc_textblock_9ababb2c" type="illustration">
             <figure>
                 <desc>Black arched column; a pair of hands in white cuffs playing on a piano keyboard.</desc>
@@ -280,5 +281,6 @@
                 <desc>Small picture of a grand piano.</desc>
             </figure>
         </div>
+        </body>
     </text>
 </TEI>

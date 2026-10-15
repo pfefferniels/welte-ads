@@ -76,16 +76,17 @@
    </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="uiug.30112102033757-seq_444.tif" width="2856" height="3960" />
-            <zone points="516,77 516,596 2788,596 2788,77" id="eSc_textblock_8696e0e3" />
+            <graphic url="uiug.30112102033757-seq_444.tif" width="2856px" height="3960px" />
+            <zone points="516,77 516,596 2788,596 2788,77" xml:id="eSc_textblock_8696e0e3" />
             <zone points="319,833 1440,833 1440,3302 319,3302"
-                id="eSc_textblock_930115f7" />
+                xml:id="eSc_textblock_930115f7" />
             <zone points="2524,3194 2524,599 1442,599 1442,3194"
-                id="eSc_textblock_d4a2aae1" />
-            <zone points="305,587 299,587 299,580 305,583" id="eSc_textblock_e223e53a" />
+                xml:id="eSc_textblock_d4a2aae1" />
+            <zone points="305,587 299,587 299,580 305,583" xml:id="eSc_textblock_e223e53a" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_8696e0e3">
             <lb />
                 <head>
@@ -131,7 +132,7 @@
 
             <lb />
             <signed>Richard Singer</signed>
-            <signed><unclear type="artist" reason="#illegible">Epstein</unclear></signed>
+            <signed><persName type="artist"><unclear reason="illegible">Epstein</unclear></persName></signed>
 
             <lb />
             <signed><persName type="artist" corresp="https://d-nb.info/gnd/118524186">Claude Debussy</persName></signed>
@@ -164,7 +165,7 @@
             <signed><gap reason="illegible" /></signed>
         </div>
         <div facs="#eSc_textblock_d4a2aae1">
-            <lb />The magic reproduction
+            <ab><lb />The magic reproduction
             <lb />of <name type="brand">Welte-Mignon Licensee</name>
             <lb />
             <seg ana="#educational_use">
@@ -202,7 +203,7 @@
             <orgName>THE AUTO-PNEUMATIC ACTION COMPANY</orgName></hi>
             <hi rendition="#c #smaller"><lb />
             <address>
-                653 West 51st Street, New York City
+                <addrLine>653 West 51st Street, New York City</addrLine>
             </address>
             <lb />
             
@@ -210,7 +211,8 @@
             <hi rendition="#c"><lb /><name type="brand"><hi rendition="#in #larger"><hi rendition="#in">Welte-Mignon</hi></hi>
             <hi rendition="#smaller"><lb />Licensee</hi></name>
             <lb />
-            <hi rendition="#smaller"><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg></hi></hi>
+            <hi rendition="#smaller"><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg></hi></hi></ab>
         </div>
+        </body>
     </text>
 </TEI>

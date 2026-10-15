@@ -69,72 +69,72 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="welte-ad-example.pdf_page_1.png" width="3250" height="4500" />
-            <zone points="449,139 449,569 2842,569 2842,139" id="eSc_textblock_c5442680" />
+            <graphic url="welte-ad-example.pdf_page_1.png" width="3250px" height="4500px" />
+            <zone points="449,139 449,569 2842,569 2842,139" xml:id="eSc_textblock_c5442680" />
             <zone points="505,1432 505,1573 1418,1573 1418,1432"
-                id="eSc_textblock_a6014ae2" />
+                xml:id="eSc_textblock_a6014ae2" />
             <zone points="427,1561 427,1705 1500,1705 1500,1561"
-                id="eSc_textblock_b536deda" />
+                xml:id="eSc_textblock_b536deda" />
             <zone points="1644,585 1644,1272 2350,1272 2905,1272 2905,585"
-                id="eSc_textblock_2389efb5" />
+                xml:id="eSc_textblock_2389efb5" />
             <zone points="508,1730 508,1856 1405,1856 1405,1730"
-                id="eSc_textblock_e56f4d74" />
+                xml:id="eSc_textblock_e56f4d74" />
             <zone points="323,1865 323,2853 1600,2853 1600,1865 646,1865"
-                id="eSc_textblock_2cbb468e" />
+                xml:id="eSc_textblock_2cbb468e" />
             <zone points="1641,1768 1641,2251 2892,2251 2892,1768 2293,1768"
-                id="eSc_textblock_80803b8a" />
+                xml:id="eSc_textblock_80803b8a" />
             <zone points="2381,1278 2381,1677 2381,1777 2902,1777 2902,1278"
-                id="eSc_textblock_b3e47c4c" />
+                xml:id="eSc_textblock_b3e47c4c" />
             <zone points="1637,2357 1637,2822 2873,2822 2873,2668 2480,2668 2480,2357"
-                id="eSc_textblock_e007686d" />
+                xml:id="eSc_textblock_e007686d" />
             <zone points="2515,2252 2856,2252 2856,2668 2515,2668"
-                id="zone_terms_illustration" />
+                xml:id="zone_terms_illustration" />
             <zone points="1776,2257 1776,2392 2318,2392 2318,2257"
-                id="eSc_textblock_53814f97" />
+                xml:id="eSc_textblock_53814f97" />
             <zone points="527,2881 527,3038 2695,3038 2695,2881"
-                id="eSc_textblock_cd6fbfd8" />
+                xml:id="eSc_textblock_cd6fbfd8" />
             <zone points="536,3079 536,3186 932,3186 932,3079"
-                id="eSc_textblock_4ba7b7ec" />
+                xml:id="eSc_textblock_4ba7b7ec" />
             <zone points="307,3173 307,3650 1151,3650 1151,3173"
-                id="eSc_textblock_3c860cc6" />
+                xml:id="eSc_textblock_3c860cc6" />
             <zone points="1195,3173 1195,3628 2033,3628 2033,3173"
-                id="eSc_textblock_c69c9e23" />
+                xml:id="eSc_textblock_c69c9e23" />
             <zone points="1468,3073 1468,3179 1751,3179 1751,3073"
-                id="eSc_textblock_3838333f" />
+                xml:id="eSc_textblock_3838333f" />
             <zone points="2074,3164 2074,3615 2896,3615 2896,3164"
-                id="eSc_textblock_86963cd3" />
+                xml:id="eSc_textblock_86963cd3" />
             <zone points="518,3775 518,4086 1876,4086 1876,3775"
-                id="eSc_textblock_17b7db97" />
+                xml:id="eSc_textblock_17b7db97" />
             <zone points="2306,3070 2306,3176 2657,3176 2657,3070"
-                id="eSc_textblock_d659d9d8" />
+                xml:id="eSc_textblock_d659d9d8" />
             <zone points="499,4102 499,4234 1889,4234 1889,4102"
-                id="eSc_textblock_0eb08447" />
+                xml:id="eSc_textblock_0eb08447" />
             <zone points="314,4255 314,4340 750,4340 750,4255"
-                id="eSc_textblock_90b895ae" />
+                xml:id="eSc_textblock_90b895ae" />
             <zone points="2252,3691 2252,4350 3100,4350 3100,3691"
-                id="eSc_textblock_d72e074e" />
+                xml:id="eSc_textblock_d72e074e" />
             <zone points="1703,4243 1703,4331 2023,4331 2071,4331 2071,4243"
-                id="eSc_textblock_332b9320" />
+                xml:id="eSc_textblock_332b9320" />
             <zone points="731,3672 731,3769 1653,3769 1653,3672"
-                id="eSc_textblock_0f423e68" />
+                xml:id="eSc_textblock_0f423e68" />
             <zone points="1472,4282 1472,4289 1465,4289 1467,4282"
-                id="eSc_textblock_7021785f" />
+                xml:id="eSc_textblock_7021785f" />
             <zone points="270,588 270,1416 1628,1416 1628,588"
-                id="eSc_textblock_7a8d435f" />
+                xml:id="eSc_textblock_7a8d435f" />
             <zone points="1638,1291 1638,1755 2168,1755 2369,1755 2369,1291"
-                id="eSc_textblock_5618094e" />
-            <zone points="" id="eSc_dummyblock_" />
+                xml:id="eSc_textblock_5618094e" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_c5442680">
-            <hi rendition="#c #b">
-                <head>
+            <head><hi rendition="#c #b">
                     <lb /><hi rendition="#smaller"><hi rendition="#smaller #i #uu">The</hi></hi>
                     <orgName>Welte Mignon Studios</orgName>
-                </head>
+            </hi></head>
+            <ab><hi rendition="#c #b">
                 <lb /><hi rendition="#i #b">Offer you exceptional opportunities</hi>
-            </hi>
+            </hi></ab>
         </div>
         <div type="illustration" facs="#eSc_textblock_7a8d435f">
             <figure>
@@ -142,22 +142,22 @@
             </figure>
         </div>
         <div facs="#eSc_textblock_a6014ae2">
-            <lb />
+            <ab><lb />
             <hi rendition="#u #b">
                 The Master Himself
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#eSc_textblock_b536deda">
-            <hi rendition="#c #b"><lb />Not just mechanical playing of his compositions,<lb />but <seg ana="#virtual_presence" type="topic" resp="#np"><hi rendition="#i">his own fingers on your
-            keyboard</hi></seg>.</hi></div>
+            <ab><hi rendition="#c #b"><lb />Not just mechanical playing of his compositions,<lb />but <seg ana="#virtual_presence" type="topic" resp="#np"><hi rendition="#i">his own fingers on your
+            keyboard</hi></seg>.</hi></ab></div>
         <div facs="#eSc_textblock_e56f4d74">
-            <lb />
+            <ab><lb />
             <hi rendition="#u #b">
                 <seg type="topic" ana="#touch_of_a_button" resp="#np">At Your Command</seg>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#eSc_textblock_2389efb5">
-            <lb /><hi rendition="#dropcap">A</hi><hi rendition="#uc">ccept</hi> as soon as you can our cordial invita-
+            <ab><lb /><hi rendition="#dropcap">A</hi><hi rendition="#uc">ccept</hi> as soon as you can our cordial invita-
             <lb />tion to spend a delightful hour or two with
             <lb />the masters of classic or popular music at our
             <lb />beautiful studios. We shall gladly play your fav-
@@ -165,10 +165,10 @@
             <lb />services of a staff of musicians whose advice is al-
             <lb />ways ready but is never intruded. We offer a re-
             <lb />markable collection of instruments at reasonable
-            <lb />prices and on exceptional terms.
+            <lb />prices and on exceptional terms.</ab>
         </div>
         <div facs="#eSc_textblock_2cbb468e">
-            <lb />If <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
+            <ab><lb />If <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
             played to you, on your own piano, ex-
             <lb />actly as he played at the very zenith of his career when
             <lb />those marvelous fingers performed miracles, you could
@@ -222,10 +222,10 @@
                 <lb /><hi rendition="#i">is within your means</hi>, for it is sold on
                 terms–your own within reason.
             </seg>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#eSc_textblock_80803b8a">
-            <lb />Our stock includes many examples of fine standard
+            <ab><lb />Our stock includes many examples of fine standard
             <lb />makes–
             <name type="brand">Welte</name>, <name type="brand">Estey</name>, <name type="brand">Conway</name>,
             and others–shown in a
@@ -238,7 +238,7 @@
                 $450
             </measure>,
             on a series of monthly payments–terms, <hi rendition="#i">your own</hi>
-            <lb />within reason.
+            <lb />within reason.</ab>
         </div>
         <div type="illustration" facs="#eSc_textblock_5618094e">
             <figure>
@@ -246,19 +246,19 @@
             </figure>
         </div>
         <div facs="#eSc_textblock_b3e47c4c">
-            <hi rendition="#c #b #u">
+            <ab><hi rendition="#c #b #u">
             <lb />Pianos and
             <lb />Player-Pianos
             <lb />at the Prices
             <lb />You Expect
             <lb />to Pay
-            </hi>
+            </hi></ab>
         </div>
 
         <div facs="#eSc_textblock_53814f97">
-            <lb /><hi rendition="#b #i #u">WELTE TERMS</hi></div>
+            <ab><lb /><hi rendition="#b #i #u">WELTE TERMS</hi></ab></div>
         <div facs="#eSc_textblock_e007686d">
-            <hi rendition="#i">
+            <ab><hi rendition="#i">
             <lb />We maintain that if music is to be
             <lb />enjoyed by everyone, it must be with-
             <lb />in everyone's reach. So we placed
@@ -267,7 +267,7 @@
             <lb />EVERYONE'S means. Pick out any
             <lb />instrument you like, from lowest to highest price, and buy
             <lb />it on terms that are practically your own.
-            </hi>
+            </hi></ab>
         </div>
         <div type="illustration" facs="#zone_terms_illustration">
             <figure>
@@ -275,10 +275,10 @@
             </figure>
         </div>
         <div facs="#eSc_textblock_cd6fbfd8">
-            <lb /><hi rendition="#c #b #i">A wonderful showing of Phonographs</hi>
+            <ab><lb /><hi rendition="#c #b #i">A wonderful showing of Phonographs</hi></ab>
         </div>
         <div facs="#eSc_textblock_4ba7b7ec">
-            <lb /><hi rendition="#b #u"><name type="brand">VICTROLAS</name></hi>
+            <ab><lb /><hi rendition="#b #u"><name type="brand">VICTROLAS</name></hi></ab>
         </div>
         <div facs="#eSc_textblock_3c860cc6">
             <gap reason="irrelevant">
@@ -296,11 +296,11 @@
         </div>
 
         <div facs="#eSc_textblock_3838333f">
-            <lb /><hi rendition="#b #u"><name type="brand">PATHE</name></hi>
+            <ab><lb /><hi rendition="#b #u"><name type="brand">PATHE</name></hi></ab>
         </div>
 
         <div facs="#eSc_textblock_d659d9d8">
-            <lb /><hi rendition="#b #u">RECORDS</hi></div>
+            <ab><lb /><hi rendition="#b #u">RECORDS</hi></ab></div>
         <div facs="#eSc_textblock_86963cd3">
             <gap reason="irrelevant">
                 <desc>
@@ -309,36 +309,36 @@
             </gap>
         </div>
         <div facs="#eSc_textblock_0f423e68">
-            <lb />
+            <ab><lb />
             <hi rendition="#c">
                 <hi rendition="#u">
                     <hi rendition="#i #b">
                         Can you drop in at once?
                     </hi>
                 </hi>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#eSc_textblock_17b7db97">
-            <lb />No matter how many times you've visited the <orgName>Studios</orgName> before this,
+            <ab><lb />No matter how many times you've visited the <orgName>Studios</orgName> before this,
             <lb />come in again; there's always something new to see and to hear. Re-
             <lb />member that you are never pressed to buy–just come in as you would
             <lb />visit a famous picture gallery. But if you cannot come today or to-
             <lb />morrow; at least, send this coupon by way of getting information on
-            <lb />the latest instrument designs.
+            <lb />the latest instrument designs.</ab>
         </div>
         <div facs="#eSc_textblock_0eb08447">
-            <lb /><hi rendition="#b"><orgName><hi rendition="#smaller"><hi rendition="#smaller #i #uu">The</hi></hi> Welte Mignon Studios</orgName></hi>
+            <ab><lb /><hi rendition="#b"><orgName><hi rendition="#smaller"><hi rendition="#smaller #i #uu">The</hi></hi> Welte Mignon Studios</orgName></hi></ab>
         </div>
         <div facs="#eSc_textblock_90b895ae">
-            <lb /><hi rendition="#i #b"><address>667 Fifth Avenue</address></hi>
+            <ab><lb /><hi rendition="#i #b"><address><addrLine>667 Fifth Avenue</addrLine></address></hi></ab>
         </div>
         <div facs="#eSc_textblock_332b9320">
-            <lb /><hi rendition="#i #b"><address>At 53rd Street</address></hi>
+            <ab><lb /><hi rendition="#i #b"><address><addrLine>At 53rd Street</addrLine></address></hi></ab>
         </div>
         <div facs="#eSc_textblock_d72e074e">
-            <hi rendition="#b">
+            <ab><hi rendition="#b">
             <lb /><orgName>The Welte Mignon Studios</orgName>,
-            <lb /><address>667 Fifth Ave., New York.</address>
+            <lb /><address><addrLine>667 Fifth Ave., New York.</addrLine></address>
             <lb />Without any obligation to me, send com-
             <lb />plete information on the items checked:
             <lb />Pianos
@@ -353,8 +353,9 @@
             </hi>
             <hi rendition="#right #smaller #b">
             <lb />Sun-Herald, 4-30.
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#eSc_textblock_7021785f" />
+        </body>
     </text>
 </TEI>

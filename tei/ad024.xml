@@ -138,27 +138,28 @@
    </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="uiug.30112102033757-seq_484.tif" width="2872" height="3960" />
-            <zone points="369,265 369,403 2704,403 2704,265" id="eSc_textblock_8c5449e6" />
+            <graphic url="uiug.30112102033757-seq_484.tif" width="2872px" height="3960px" />
+            <zone points="369,265 369,403 2704,403 2704,265" xml:id="eSc_textblock_8c5449e6" />
             <zone points="375,409 375,1389 1002,1389 1002,409"
-                id="eSc_textblock_d27998d8" />
+                xml:id="eSc_textblock_d27998d8" />
             <zone points="1044,409 1044,2338 2026,2338 2026,409"
-                id="eSc_textblock_d4f05f93" />
+                xml:id="eSc_textblock_d4f05f93" />
             <zone points="381,1416 381,2350 1005,2350 1005,1416"
-                id="eSc_textblock_daee394a" />
+                xml:id="eSc_textblock_daee394a" />
             <zone points="2068,415 2068,1350 2695,1350 2695,415"
-                id="eSc_textblock_f4aeb73c" />
+                xml:id="eSc_textblock_f4aeb73c" />
             <zone points="2083,1386 2083,2242 2695,2242 2695,1386"
-                id="eSc_textblock_7b9c80a0" />
+                xml:id="eSc_textblock_7b9c80a0" />
             <zone points="357,2881 357,3652 2689,3652 2689,2881"
-                id="eSc_textblock_66f64898" />
+                xml:id="eSc_textblock_66f64898" />
             <zone points="354,2856 357,2500 2698,2254 2677,2856"
-                id="eSc_textblock_80aa6210" />
+                xml:id="eSc_textblock_80aa6210" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_8c5449e6">
-            <lb /><hi rendition="#g2"><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg></hi>
+            <ab><lb /><hi rendition="#g2"><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg></hi></ab>
          </div>
 
         <div facs="#eSc_textblock_d27998d8" type="illustration">
@@ -203,15 +204,15 @@
         </div>
 
         <div facs="#eSc_textblock_80aa6210" type="illustration">
-            <seg ana="#phantom_body" resp="#np" type="topic">
+            <ab><seg ana="#phantom_body" resp="#np" type="topic">
                 <desc>
                     Phantom hands
                 </desc>
-            </seg>
+            </seg></ab>
         </div>
 
         <div facs="#eSc_textblock_d4f05f93">
-            <lb /><hi rendition="#smaller"><hi rendition="#dropcap">T</hi></hi>HE genius of <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+            <ab><lb /><hi rendition="#smaller"><hi rendition="#dropcap">T</hi></hi>HE genius of <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116014490">de Pachmann</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/119362112">Casella</persName> and
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118694820">Gieseking</persName> lives
@@ -253,13 +254,13 @@
             <hi rendition="#c #smaller"><lb /><persName>W. C. Heaton, <hi rendition="#i">President</hi></persName>
             <lb />
             <address>
-                653 West 51st Street, New York,
-                N. Y.
-            </address></hi>
+                <addrLine>653 West 51st Street, New York,
+                N. Y.</addrLine>
+            </address></hi></ab>
         </div>
 
         <div facs="#eSc_textblock_66f64898">
-            <hi rendition="#c"><lb />
+            <ab><hi rendition="#c"><lb />
             <seg ana="#superiority">
                 The superiority of any reproducing piano
                 <lb />is assured if it contains the
@@ -269,7 +270,8 @@
                   <lb /><hi rendition="#i #g2 #smaller"><hi rendition="#smaller">LICENSEE</hi></hi>
                   <lb />reproducing action
                 </name>
-            </seg></hi>
+            </seg></hi></ab>
         </div>
+        </body>
     </text>
 </TEI>

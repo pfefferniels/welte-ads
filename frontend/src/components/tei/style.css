@@ -137,6 +137,12 @@ tei-div {
     display: block;
 }
 
+/* the anonymous blocks holding a zone's text: no paragraph spacing */
+tei-ab {
+    display: block;
+    margin: 0;
+}
+
 tei-text {
     line-height: 1.5rem;
 }
@@ -323,7 +329,8 @@ tei-lb:before {
 }
 
 /* a caption printed under the picture */
-.layout .zone.illustration > tei-figure ~ tei-p:last-of-type {
+.layout .zone.illustration > tei-figure ~ tei-p:last-of-type,
+.layout .zone.illustration > tei-figure ~ tei-ab:last-of-type {
     position: absolute;
     left: 0;
     right: 0;

@@ -77,76 +77,77 @@
    <facsimile>
         <surface>
             <graphic url="MTR-1928-86-15-SECTION-1-01.pdf_page_1.png"
-                width="2992"
-                height="4412" />
+                width="2992px"
+                height="4412px" />
             <zone points="246,291 252,1111 2839,1111 2839,288"
-                id="eSc_textblock_f260a47f" />
+                xml:id="eSc_textblock_f260a47f" />
             <zone points="395,1322 395,1570 2245,1570 2245,1322"
-                id="eSc_textblock_902d71e6" />
+                xml:id="eSc_textblock_902d71e6" />
             <zone points="740,1602 2595,1602 2595,1692 740,1692"
-                id="zone_dealers" />
+                xml:id="zone_dealers" />
             <zone points="680,1785 2385,1785 2385,1958 680,1958"
-                id="zone_brand" />
+                xml:id="zone_brand" />
             <zone points="890,1962 2178,1962 2178,2152 890,2152"
-                id="zone_original" />
+                xml:id="zone_original" />
             <zone points="885,2205 2180,2205 2180,2272 885,2272"
-                id="zone_first" />
+                xml:id="zone_first" />
             <zone points="485,2408 1490,2408 1490,3082 485,3082"
-                id="zone_col1" />
+                xml:id="zone_col1" />
             <zone points="1578,2408 2583,2408 2583,3072 1578,3072"
-                id="zone_col2" />
+                xml:id="zone_col2" />
             <zone points="572,3166 2472,3166 2472,3356 572,3356"
-                id="zone_library" />
+                xml:id="zone_library" />
             <zone points="824,3394 2222,3394 2222,3580 824,3580"
-                id="zone_leader" />
+                xml:id="zone_leader" />
             <zone points="1046,3634 1990,3634 1990,3694 1046,3694"
-                id="zone_proposition" />
+                xml:id="zone_proposition" />
             <zone points="764,3722 2260,3722 2260,3844 764,3844"
-                id="zone_corp" />
+                xml:id="zone_corp" />
             <zone points="768,3856 2262,3856 2262,3918 768,3918"
-                id="zone_address" />
+                xml:id="zone_address" />
             <zone points="2822,2941 2822,2968 2805,2958 2815,2941"
-                id="eSc_textblock_e59068aa" />
+                xml:id="eSc_textblock_e59068aa" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_f260a47f">
             <gap reason="irrelevant" />
         </div>
 
         <div facs="#eSc_textblock_902d71e6">
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
                 <lb />An Important Message
-            </hi>
+            </hi></ab>
         </div>
 
         <div facs="#zone_dealers">
-            <hi rendition="#c #i #b">
+            <ab><hi rendition="#c #i #b">
                 <lb />For Dealers Who Desire a Reproducing Piano for a Leader
-            </hi>
+            </hi></ab>
         </div>
 
         <div facs="#zone_brand">
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
                 <lb /><hi rendition="#i">The</hi> <hi rendition="#g"><name type="brand">WELTE-MIGNON</name></hi>
-            </hi>
+            </hi></ab>
         </div>
 
         <div facs="#zone_original">
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
                 <lb /><hi rendition="#i">Is the</hi> <name type="brand"><hi rendition="#i">Original</hi>
                 <lb /><hi rendition="#in"><hi rendition="#in #g">REPRODUCING PIANO</hi></hi></name>
-            </hi>
+            </hi></ab>
         </div>
 
         <div facs="#zone_first">
-            <hi rendition="#c #g">
+            <ab><hi rendition="#c #g">
                 <lb />And Was the First Ever Sold in the World
-            </hi>
+            </hi></ab>
         </div>
 
         <div facs="#zone_col1">
-            <cb />
+            <ab><cb />
             <lb /><name type="brand"><hi rendition="#k">The</hi> <hi rendition="#i">Original Welte-Mignon</hi> Reproduc-
             <lb />ing Piano</name> as manufactured by the new
             <lb /><orgName>Welte-Mignon Corp.</orgName> is the finest product
@@ -160,11 +161,11 @@
             <name type="brand">"Welte-
             <lb />Mignon"</name> Reproducing Pianos and Organs,
             <lb />which in every way meet the requirements
-            <lb />of the most representative music merchants.
+            <lb />of the most representative music merchants.</ab>
         </div>
 
         <div facs="#zone_col2">
-            <cb/>
+            <ab><cb/>
             <lb /><name type="brand"><hi rendition="#k">The</hi> <hi rendition="#i">Original Welte-Mignon</hi></name> as manufac-
             <lb />tured by the new <orgName>Welte-Mignon Corp.</orgName>
             <lb />not only retains all the marvelous features
@@ -175,11 +176,11 @@
             <lb /><name type="brand">The <hi rendition="#i">Original Welte-Mignon</hi></name> is found in
             <lb />grands of various sizes in conventional and
             <lb />period designs. The <name type="brand">WELTE-MIGNON</name>
-            <lb />franchise is a valuable one for the dealer.
+            <lb />franchise is a valuable one for the dealer.</ab>
         </div>
 
         <div facs="#zone_library">
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
                 <hi rendition="#b #i #larger">
                     <lb />The <name type="brand">Welte-Mignon Library</name>
                 </hi>
@@ -190,11 +191,11 @@
                     With Photographic Accuracy
                 </seg> the Individual Playing of
                 the Master Pianists of the World
-            </hi>
+            </hi></ab>
         </div>
 
         <div facs="#zone_leader">
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
                 <hi rendition="#larger">
                     <lb /><name type="brand">THE ORIGINAL WELTE-MIGNON</name>
                 </hi>
@@ -203,30 +204,31 @@
                     "The Instrument That Immortalizes the Playing of the Masters"
                 </seg>
                 <lb />A Leader for Every Representative Music Merchant
-            </hi>
+            </hi></ab>
         </div>
 
         <div facs="#zone_proposition">
-            <hi rendition="#c #i #b">
+            <ab><hi rendition="#c #i #b">
                 <lb />Let Us Tell You More About Our Proposition
-            </hi>
+            </hi></ab>
         </div>
 
         <div facs="#zone_corp">
-            <hi rendition="#c #g">
+            <ab><hi rendition="#c #g">
                 <lb /><orgName>THE WELTE-MIGNON CORP.</orgName>
-            </hi>
+            </hi></ab>
         </div>
 
         <div facs="#zone_address">
-            <hi rendition="#c #g">
+            <ab><hi rendition="#c #g">
                 <lb />
                 <address>
-                    665 FIFTH AVENUE
-                    NEW YORK, N. Y</address>.
-            </hi>
+                    <addrLine>665 FIFTH AVENUE
+                    NEW YORK, N. Y</addrLine></address>.
+            </hi></ab>
         </div>
 
         <div facs="#eSc_textblock_e59068aa" />
+        </body>
     </text>
 </TEI>

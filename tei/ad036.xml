@@ -75,22 +75,23 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="MTR-1919-69-23-01.pdf_page_1.png" width="3108" height="4388" />
+            <graphic url="MTR-1919-69-23-01.pdf_page_1.png" width="3108px" height="4388px" />
             <zone
                 points="790,1199 2356,1199 2356,1803 790,1803"
-                id="eSc_textblock_4699b149" />
+                xml:id="eSc_textblock_4699b149" />
             <zone
                 points="780,1846 2366,1846 2366,2250 1775,2250 1775,3156 780,3156"
-                id="eSc_textblock_4402ea80" />
-            <zone points="2349,3107 2349,2279 1801,2279 1801,3107" id="eSc_textblock_eb8a51dd" />
+                xml:id="eSc_textblock_4402ea80" />
+            <zone points="2349,3107 2349,2279 1801,2279 1801,3107" xml:id="eSc_textblock_eb8a51dd" />
             <zone
                 points="897,3178 2259,3178 2259,3381 897,3381"
-                id="eSc_textblock_57d5d807" />
+                xml:id="eSc_textblock_57d5d807" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_4699b149">
-            <lb />
+            <ab><lb />
             <hi rendition="#c #b">
                 <hi rendition="#in"><hi rendition="#in">The <name type="brand">Welte-Mignon</name>
                 <lb />Has a Faculty</hi></hi>
@@ -99,10 +100,10 @@
                     One Hundred and Fifty-Six
                 </num>
                 <lb />Instructors in Piano Playing
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#eSc_textblock_4402ea80">
-            <seg ana="#educational_use" resp="#np" type="topic">
+            <ab><seg ana="#educational_use" resp="#np" type="topic">
                 <lb />The <hi rendition="#uc"><name type="brand">Welte-Mignon</name></hi> can be likened to a college for teaching
                 <lb />the art of playing the piano.
                 <lb />This college has a faculty of one hundred fifty-six instructors—the
@@ -129,10 +130,10 @@
                 <lb />literature with such authority as can the <hi rendition="#uc"><name type="brand">Welte-
                 <lb />Mignon</name></hi>.
                 </hi>
-            </seg>
+            </seg></ab>
         </div>
         <div facs="#eSc_textblock_eb8a51dd">
-            <hi rendition="#b">
+            <ab><hi rendition="#b">
             <hi rendition="#c">
             <lb />Among Those Who Have Re-
             <lb />corded Their Playing For
@@ -165,18 +166,19 @@
             <hi rendition="#c">
             <lb />And 132 Other Artists<lb />Of Like Eminence
             </hi>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#eSc_textblock_57d5d807">
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
             <lb />
             <hi rendition="#in"><hi rendition="#larger"><orgName><hi rendition="#uc">M. Welte &amp; Sons,</hi> <hi rendition="#i">Inc.</hi></orgName></hi></hi>
             <lb />
             <address>
-                <hi rendition="#uc #g">Six Sixty-Seven Fifth Ave., New York</hi>
+                <addrLine><hi rendition="#uc #g">Six Sixty-Seven Fifth Ave., New York</hi></addrLine>
             </address>
-            </hi>
+            </hi></ab>
         </div>
+        </body>
     </text>
 </TEI>
   

@@ -80,153 +80,155 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="nyt-1913.png" width="750" height="1048" />
-            <zone points="175,92 175,140 585,140 585,92" id="eSc_textblock_32cfe758" />
-            <zone points="282,140 282,174 472,174 472,140" id="zone_freiburg" />
-            <zone points="134,180 134,224 625,224 625,180" id="zone_announce" />
-            <zone points="94,228 94,268 659,268 659,228" id="zone_pianists" />
-            <zone points="117,268 117,300 407,300 407,268" id="zone_paderewski" />
-            <zone points="423,268 423,300 637,300 637,268" id="zone_hofmann" />
-            <zone points="267,300 267,338 493,338 493,300" id="zone_carreno" />
-            <zone points="54,345 54,394 702,394 702,345" id="zone_organists" />
-            <zone points="157,395 157,439 335,439 335,395" id="zone_bossi" />
-            <zone points="402,395 402,439 599,439 599,395" id="zone_lemare" />
-            <zone points="280,438 280,479 472,479 472,438" id="zone_bonnet" />
-            <zone points="108,479 108,524 364,524 364,479" id="zone_baldwin" />
-            <zone points="406,479 406,524 648,524 648,479" id="zone_eddy" />
-            <zone points="310,524 310,554 446,554 446,524" id="zone_others" />
-            <zone points="224,562 224,604 533,604 533,562" id="zone_heard" />
-            <zone points="30,608 30,652 313,652 313,608" id="zone_studio" />
-            <zone points="340,608 340,652 724,652 724,608" id="zone_fifth" />
-            <zone points="184,664 184,712 570,712 570,664" id="zone_medium" />
-            <zone points="92,715 92,750 661,750 661,715" id="zone_pianos" />
-            <zone points="345,751 345,778 407,778 407,751" id="zone_and" />
-            <zone points="204,779 204,864 554,864 554,779" id="zone_philharmonic" />
-            <zone points="44,890 44,976 709,976 709,890" id="zone_reproduction" />
+            <graphic url="nyt-1913.png" width="750px" height="1048px" />
+            <zone points="175,92 175,140 585,140 585,92" xml:id="eSc_textblock_32cfe758" />
+            <zone points="282,140 282,174 472,174 472,140" xml:id="zone_freiburg" />
+            <zone points="134,180 134,224 625,224 625,180" xml:id="zone_announce" />
+            <zone points="94,228 94,268 659,268 659,228" xml:id="zone_pianists" />
+            <zone points="117,268 117,300 407,300 407,268" xml:id="zone_paderewski" />
+            <zone points="423,268 423,300 637,300 637,268" xml:id="zone_hofmann" />
+            <zone points="267,300 267,338 493,338 493,300" xml:id="zone_carreno" />
+            <zone points="54,345 54,394 702,394 702,345" xml:id="zone_organists" />
+            <zone points="157,395 157,439 335,439 335,395" xml:id="zone_bossi" />
+            <zone points="402,395 402,439 599,439 599,395" xml:id="zone_lemare" />
+            <zone points="280,438 280,479 472,479 472,438" xml:id="zone_bonnet" />
+            <zone points="108,479 108,524 364,524 364,479" xml:id="zone_baldwin" />
+            <zone points="406,479 406,524 648,524 648,479" xml:id="zone_eddy" />
+            <zone points="310,524 310,554 446,554 446,524" xml:id="zone_others" />
+            <zone points="224,562 224,604 533,604 533,562" xml:id="zone_heard" />
+            <zone points="30,608 30,652 313,652 313,608" xml:id="zone_studio" />
+            <zone points="340,608 340,652 724,652 724,608" xml:id="zone_fifth" />
+            <zone points="184,664 184,712 570,712 570,664" xml:id="zone_medium" />
+            <zone points="92,715 92,750 661,750 661,715" xml:id="zone_pianos" />
+            <zone points="345,751 345,778 407,778 407,751" xml:id="zone_and" />
+            <zone points="204,779 204,864 554,864 554,779" xml:id="zone_philharmonic" />
+            <zone points="44,890 44,976 709,976 709,890" xml:id="zone_reproduction" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_32cfe758">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <lb /><orgName>M. Welte &amp; Söhne</orgName>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_freiburg">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <lb /><placeName>Freiburg, Baden</placeName>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_announce">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <lb />Take pleasure in announcing that
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_pianists">
-            <hi rendition="#c #k #g">
+            <ab><hi rendition="#c #k #g">
                 <lb />the greatest living pianists
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_paderewski">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Ignace J. Paderewski</persName>
                 <space dim="horizontal" />
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_hofmann">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_carreno">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreño</persName>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_organists">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <lb />And the world renowned organists
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_bossi">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <hi rendition="#in"><lb />Enrico Bossi</hi>
                 <lb />of Milan, Italy
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_lemare">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <hi rendition="#in"><lb />Edwin Lemare</hi>
                 <lb />of London, England
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_bonnet">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <hi rendition="#in"><lb />Josef Bonnet</hi>
                 <lb />of Paris, France
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_baldwin">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <hi rendition="#in"><lb />Samuel A. Baldwin</hi>
                 <lb />of New York City
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_eddy">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <hi rendition="#in"><lb />Clarence E. Eddy</hi>
                 <lb />of Chicago
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_others">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <lb />and others
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_heard">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <lb />can be heard at their
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_studio">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <lb />American Studio
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_fifth">
-            <hi rendition="#c #k">
-                <address>273 Fifth Avenue, New York</address>
-            </hi>
+            <ab><hi rendition="#c #k">
+                <address><addrLine>273 Fifth Avenue, New York</addrLine></address>
+            </hi></ab>
         </div>
         <div facs="#zone_medium">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <lb />through the medium of the
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_pianos">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <lb /><name type="brand">Welte-Mignon Autograph Pianos</name>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_and">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <lb />and
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_philharmonic">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <lb /><name type="brand"><hi rendition="#b #larger">Welte-Philharmonic</hi>
                 <lb />Autograph Organs</name>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#zone_reproduction">
-            <hi rendition="#c #k">
+            <ab><hi rendition="#c #k">
                 <lb />These reproduction instruments are shown in the most
                 <lb />artistic styles, and form a
                 <seg ana="#home" resp="#np" type="topic">
                     desirable addition
                     <lb />to every home of culture and refinement
                 </seg>
-            </hi>
+            </hi></ab>
         </div>
+        </body>
     </text>
 </TEI>

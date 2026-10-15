@@ -107,61 +107,62 @@
      </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="uiug.30112102033757-seq_104.tif" width="2896" height="3976"/>
+            <graphic url="uiug.30112102033757-seq_104.tif" width="2896px" height="3976px"/>
             <zone points="489,507 2622,507 2622,628 489,628"
-                id="eSc_textblock_1f92a58e" />
+                xml:id="eSc_textblock_1f92a58e" />
             <zone points="1048,305 1048,495 2035,495 2035,305"
-                id="eSc_textblock_16b8738b" />
+                xml:id="eSc_textblock_16b8738b" />
             <zone points="892,2102 2286,2102 2286,2320 892,2320"
-                id="eSc_textblock_be99ecd4" />
+                xml:id="eSc_textblock_be99ecd4" />
             <zone points="689,2606 1252,2606 1252,2842 689,2842"
-                id="eSc_textblock_5b251767" />
+                xml:id="eSc_textblock_5b251767" />
             <zone
                 points="2657,2367 2657,2842 2621,2861 2074,2861 2074,2860 1404,2842 1413,2350 2466,2350"
-                id="eSc_textblock_c488bbeb" />
+                xml:id="eSc_textblock_c488bbeb" />
             <zone
                 points="2401,3092 2365,3249 2277,3284 1935,3284 1876,3306 1105,3306 848,3284 821,3231 821,3065 848,3048 1871,3057 2033,3049 2371,3049"
-                id="eSc_textblock_e4393655" />
+                xml:id="eSc_textblock_e4393655" />
             <zone
                 points="521,3324 2675,3324 2675,3567 521,3567"
-                id="eSc_textblock_9d2e8e27" />
+                xml:id="eSc_textblock_9d2e8e27" />
             <zone points="2056,2875 2056,3039 2637,3039 2637,2875"
-                id="eSc_textblock_6aa6819d" />
+                xml:id="eSc_textblock_6aa6819d" />
             <zone points="2647,2032 2647,625 519,625 519,2032"
-                id="eSc_textblock_f12fe344" />
+                xml:id="eSc_textblock_f12fe344" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_16b8738b" type="brand-elements">
-            <lb />
+            <ab><lb />
             <name type="brand">
                Welte-Mignon
-            </name>
+            </name></ab>
          </div>
          <div facs="#eSc_textblock_1f92a58e" type="brand-elements">
-            <lb />
+            <ab><lb />
             <hi rendition="#uc #g2">
-               <seg ana="#virtual_presence" type="topic slogan" resp="#np">
+               <seg ana="#virtual_presence" type="slogan" resp="#np">
                   The Master's Fingers on Your Piano
               </seg>
-            </hi>
+            </hi></ab>
          </div>
 
          <div facs="#eSc_textblock_f12fe344" type="illustration">
-            <seg ana="#listening" resp="#np" type="topic">
+            <ab><seg ana="#listening" resp="#np" type="topic">
                 <figure>
                     <desc>
                         Painting of Pachmann sitting at a piano. Three men in the background observing him.
                     </desc>
                 </figure>
-            </seg>
+            </seg></ab>
         </div>
 
         <div facs="#eSc_textblock_be99ecd4">
-            <lb />
+            <ab><lb />
             <seg ana="#immortality" resp="#np" type="topic">
                 <hi rendition="#i">Through You I Live Forever</hi>
-            </seg>
+            </seg></ab>
          </div>
          <div facs="#eSc_textblock_c488bbeb">
             <quote type="testimonial">
@@ -187,13 +188,13 @@
             </quote>
          </div>
          <div facs="#eSc_textblock_6aa6819d">
-            <lb />
-            <hi rendition="#i"><signed>
+            <signed><lb />
+            <hi rendition="#i">
                 <persName corresp="https://d-nb.info/gnd/116014490">V. de Pachmann</persName>
-            </signed></hi>
+            </hi></signed>
          </div>
          <div facs="#eSc_textblock_5b251767">
-            <hi rendition="#i">
+            <ab><hi rendition="#i">
                 <lb />A letter from the great
                 <lb />
                 <persName type="artist" corresp="https://d-nb.info/gnd/116014490">Vladimir de Pachmann</persName>,
@@ -202,10 +203,10 @@
                 <lb />pianist of a century; rejuve-
                 <lb />nated at 75, and now playing
                 <lb />"as no one ever played before."
-            </hi>
+            </hi></ab>
          </div>
          <div facs="#eSc_textblock_e4393655">
-            <lb />Installed invisibly in any piano,
+            <ab><lb />Installed invisibly in any piano,
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 <name type="brand">Welte-Mignon* Reproducing Action</name> makes that
                 <lb />piano reproduce with absolute perfection the playing of the master pianists.
@@ -213,20 +214,21 @@
             <lb />Library contains thousands of beautiful recordings. You can choose from 112
             <lb />standard makes of pianos that now install the
             <name type="brand">Welte-Mignon* Reproducing Action</name>.
-            <lb />Send for the beautiful art brochure
+            <lb />Send for the beautiful art brochure</ab>
          </div>
          <div facs="#eSc_textblock_9d2e8e27">
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
                 <lb />
                 <orgName key="auto.pneumatic.action">The AUTO PNEUMATIC ACTION CO.</orgName>,
                 <address>
-                  653 West 51st Street, New York
+                  <addrLine>653 West 51st Street, New York</addrLine>
                 </address>
                 <lb /><persName>WILLIAM C. HEATON</persName>, President
             </hi>
             <hi rendition="#right #smaller"><hi rendition="#smaller">
                 <lb />*Licensed under original <name type="brand">Welte Mignon</name> patents
-            </hi></hi>
+            </hi></hi></ab>
          </div>
+        </body>
     </text>
 </TEI>

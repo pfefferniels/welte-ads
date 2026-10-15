@@ -76,33 +76,33 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="v2_bsb00130833_00141_2656_3632_1751_2424_full_0_default.pdf_page_1.png" width="2479" height="3508"/>
-            <zone points="60,170 60,1500 1166,1500 1166,170" id="eSc_textblock_c57eebad" />
+            <graphic url="v2_bsb00130833_00141_2656_3632_1751_2424_full_0_default.pdf_page_1.png" width="2479px" height="3508px"/>
+            <zone points="60,170 60,1500 1166,1500 1166,170" xml:id="eSc_textblock_c57eebad" />
             <zone points="1226,183 1226,1480 2365,1480 2365,183"
-                id="eSc_textblock_38858a02" />
+                xml:id="eSc_textblock_38858a02" />
             <zone points="134,1580 134,1755 1169,1755 1169,1580"
-                id="eSc_textblock_bbaf7988" />
+                xml:id="eSc_textblock_bbaf7988" />
             <zone points="54,1826 54,1967 1176,1967 1176,1826"
-                id="eSc_textblock_0ace7367" />
+                xml:id="eSc_textblock_0ace7367" />
             <zone points="64,2004 64,2155 1149,2155 1149,2004"
-                id="eSc_textblock_910008bc" />
+                xml:id="eSc_textblock_910008bc" />
             <zone points="1273,1587 1273,1826 2351,1826 2351,1587"
-                id="eSc_textblock_9c944536" />
+                xml:id="eSc_textblock_9c944536" />
             <zone points="74,2195 74,2353 1159,2353 1159,2195"
-                id="eSc_textblock_d5bad035" />
+                xml:id="eSc_textblock_d5bad035" />
             <zone points="1273,1849 1273,1980 2345,1980 2345,1849"
-                id="eSc_textblock_c91feaa0" />
+                xml:id="eSc_textblock_c91feaa0" />
             <zone points="1266,2004 1266,2178 2355,2178 2355,2004"
-                id="eSc_textblock_031c0fe4" />
+                xml:id="eSc_textblock_031c0fe4" />
             <zone points="54,2444 54,3293 2351,3293 2351,2444"
-                id="eSc_textblock_fce1a771" />
+                xml:id="eSc_textblock_fce1a771" />
             <zone points="1263,2198 1263,2397 2355,2397 2355,2198"
-                id="eSc_textblock_c8ece5c3" />
-            <zone points="" id="eSc_dummyblock_" />
+                xml:id="eSc_textblock_c8ece5c3" />
         </surface>
     </facsimile>
     <text>
-        <div facs="#eSc_textblock_c57eebad"><hi rendition="#b">
+        <body>
+        <div facs="#eSc_textblock_c57eebad"><ab><hi rendition="#b">
             <lb />
             <persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>
             <lb />
@@ -110,9 +110,9 @@
             <lb />
             <persName corresp="https://d-nb.info/gnd/118786253">Artur Nickisch</persName>
             <lb />
-            <persName corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName></hi>
+            <persName corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName></hi></ab>
         </div>
-        <div facs="#eSc_textblock_38858a02"><hi rendition="#b">
+        <div facs="#eSc_textblock_38858a02"><ab><hi rendition="#b">
             <lb />
             <persName corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>
             <lb />
@@ -120,50 +120,50 @@
             <lb />
             <persName corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>
             <lb />
-            <persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName></hi>
+            <persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName></hi></ab>
         </div>
         <div facs="#eSc_textblock_bbaf7988">
-            <lb />Das Welte Mignon ist das
+            <ab><lb />Das Welte Mignon ist das
             <seg ana="#miracle" resp="#np" type="topic">Wunder der Wunder</seg>.
-            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>.</hi></div>
+            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>.</hi></ab></div>
         <div facs="#eSc_textblock_0ace7367">
-            <lb />Eine unbedingt <seg ana="#technical_invention" type="topic" resp="#np">geniale Erfindung</seg> von hohem <lb />künstlerischen Wert.<lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>.</hi></div>
+            <ab><lb />Eine unbedingt <seg ana="#technical_invention" type="topic" resp="#np">geniale Erfindung</seg> von hohem <lb />künstlerischen Wert.<lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>.</hi></ab></div>
         <div facs="#eSc_textblock_910008bc">
-            <lb /><seg ana="#virtual_presence" type="topic" resp="#np">Man meint den betreffenden Künstler in Person<lb />vor sich zu haben und ihn
-            spielen zu hören.</seg><lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118786253">Nickisch</persName>.</hi></div>
+            <ab><lb /><seg ana="#virtual_presence" type="topic" resp="#np">Man meint den betreffenden Künstler in Person<lb />vor sich zu haben und ihn
+            spielen zu hören.</seg><lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118786253">Nickisch</persName>.</hi></ab></div>
         <div facs="#eSc_textblock_9c944536">
-            <quote>
+            <ab><quote>
                 <lb />Was ich Mignon vorzuwerfen habe; ist sein
                 <lb />Name, weil es weder der gewaltigen Wirkung dieses
                 <lb />Instruments noch seiner kolossalen Bedeutung ent-
                 <lb />spricht.
             </quote>
-            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>.</hi>
+            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>.</hi></ab>
         </div>
         <div facs="#eSc_textblock_d5bad035">
-            <quote>
+            <ab><quote>
                 <lb />
                 <seg ana="#miracle" resp="#np" type="topic">
                     Man muss das Wunder gehört haben, um es<lb />zu glauben.
                 </seg>
             </quote>
             <lb />
-            <hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName>.</hi>
+            <hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName>.</hi></ab>
         </div>
         <div facs="#eSc_textblock_c91feaa0">
-            <quote>
+            <ab><quote>
                 <lb />Welte Mignon ist für mich das <seg ana="#unreached_ideal" resp="#np" type="topic">unerreichte Ideal<lb />aller Musikinstrumente</seg>.
             </quote>
-            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>.</hi>
+            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>.</hi></ab>
         </div>
         <div facs="#eSc_textblock_031c0fe4">
-            <quote>
+            <ab><quote>
                 <lb />Der <hi rendition="#g">einzige</hi> Apparat der auf künstlerische<lb />Bedeutung Anspruch machen kann.
             </quote>
-            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>.</hi>
+            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>.</hi></ab>
         </div>
         <div facs="#eSc_textblock_fce1a771">
-            <lb />Mit dem Welte Mignon ist, wie die berühmtesten Künstler anerkennen, ein
+            <ab><lb />Mit dem Welte Mignon ist, wie die berühmtesten Künstler anerkennen, ein
             phantastisch scheinender<lb />Gedanke verwirklicht, nämlich das Klavierspiel eines
             Künstlers mit all' seinen persönlichen Eigenschaften –<lb />des Anschlags, der
             Phrasierung, des Pedalgebrauchs etc.
@@ -196,12 +196,13 @@
             </hi>
             <lb />Eintrittskarten zu 1.50, 1. – u.
             50 Pf. sind bei <hi rendition="#b"><hi rendition="#in"><hi rendition="#larger"><orgName>Alfred Schmid Nachf.</orgName></hi></hi></hi>
-            <address>Theatinerstr. 34</address>, zu haben.
-            <lb /><hi rendition="#c">Donnerstag Nachmittag ab 3 1/2 Uhr auch am Saaleingang.</hi>
+            <address><addrLine>Theatinerstr. 34</addrLine></address>, zu haben.
+            <lb /><hi rendition="#c">Donnerstag Nachmittag ab 3 1/2 Uhr auch am Saaleingang.</hi></ab>
         </div>
         <div facs="#eSc_textblock_c8ece5c3">
-            <lb />Diese Erfindung ist das unglaublichste an Vol-
+            <ab><lb />Diese Erfindung ist das unglaublichste an Vol-
             <lb />lendung, das man sich denken kann.
-            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>.</hi></div>
+            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>.</hi></ab></div>
+        </body>
     </text>
 </TEI>

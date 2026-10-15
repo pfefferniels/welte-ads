@@ -70,35 +70,35 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="v2_bsb00004266_01138_full_full_0_default.pdf_page_1.png" width="2479" height="3508"/>
+            <graphic url="v2_bsb00004266_01138_full_full_0_default.pdf_page_1.png" width="2479px" height="3508px"/>
             <zone
                 points="280,1917 2227,1917 2227,2282 280,2282"
-                id="eSc_textblock_5f4c4dd1" />
+                xml:id="eSc_textblock_5f4c4dd1" />
             <zone
                 points="272,2385 2227,2385 2227,3116 272,3116"
-                id="eSc_textblock_1a33dd7c" />
-            <zone points="476,492 476,956 852,956 852,492" id="eSc_textblock_0cb55a56" />
+                xml:id="eSc_textblock_1a33dd7c" />
+            <zone points="476,492 476,956 852,956 852,492" xml:id="eSc_textblock_0cb55a56" />
             <zone points="1097,494 1097,752 1097,980 1463,980 1463,494"
-                id="eSc_textblock_648b9252" />
+                xml:id="eSc_textblock_648b9252" />
             <zone points="1654,492 1654,953 1792,953 2047,953 2047,630 2047,492"
-                id="eSc_textblock_931f14ec" />
+                xml:id="eSc_textblock_931f14ec" />
             <zone points="277,1183 277,1845 2217,1845 2217,1183"
-                id="eSc_textblock_851a1f28" />
-            <zone points="640,885 860,885 860,990 640,990" id="zone_caption_busoni" />
-            <zone points="1135,1000 1425,1000 1425,1040 1135,1040" id="zone_caption_nickisch" />
-            <zone points="1645,878 1885,878 1885,998 1645,998" id="zone_caption_reisenauer" />
-            <zone points="" id="eSc_dummyblock_" />
+                xml:id="eSc_textblock_851a1f28" />
+            <zone points="640,885 860,885 860,990 640,990" xml:id="zone_caption_busoni" />
+            <zone points="1135,1000 1425,1000 1425,1040 1135,1040" xml:id="zone_caption_nickisch" />
+            <zone points="1645,878 1885,878 1885,998 1645,998" xml:id="zone_caption_reisenauer" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div type="illustration" facs="#eSc_textblock_0cb55a56">
             <figure>
                 <desc>Porträt Ferruccio Busoni (oval)</desc>
             </figure>
         </div>
         <div facs="#zone_caption_busoni">
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>
+            <ab><lb />
+            <persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName></ab>
         </div>
         <div type="illustration" facs="#eSc_textblock_648b9252">
             <figure>
@@ -106,8 +106,8 @@
             </figure>
         </div>
         <div facs="#zone_caption_nickisch">
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/118786253">Prof. Arthur Nickisch</persName>
+            <ab><lb />
+            <persName corresp="https://d-nb.info/gnd/118786253">Prof. Arthur Nickisch</persName></ab>
         </div>
         <div type="illustration" facs="#eSc_textblock_931f14ec">
             <figure>
@@ -115,33 +115,33 @@
             </figure>
         </div>
         <div facs="#zone_caption_reisenauer">
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName> †
+            <ab><lb />
+            <persName corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName> †</ab>
         </div>
-        <div facs="#eSc_textblock_851a1f28"><hi rendition="#c">
+        <div facs="#eSc_textblock_851a1f28"><head><hi rendition="#c">
             <lb />
-            <head>
                 <hi rendition="#b"><hi rendition="#in"><hi rendition="#in">
                     <orgName>WELTE-MIGNON</orgName>
                 </hi></hi></hi>
-            </head>
-            <lb /><hi rendition="#b"><hi rendition="#larger">REPRODUKTIONS-PIANO
+            </hi></head>
+            <ab><hi rendition="#c"><lb /><hi rendition="#b"><hi rendition="#larger">REPRODUKTIONS-PIANO
             und -FLÜGEL</hi></hi> <lb />
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen.
-            </seg></hi>
+            </seg></hi></ab>
         </div>
-        <div facs="#eSc_textblock_5f4c4dd1"><hi rendition="#c">
+        <div facs="#eSc_textblock_5f4c4dd1"><ab><hi rendition="#c">
             <lb /><hi rendition="#in"><hi rendition="#in"><hi rendition="#larger">Welte-Philharmonie-Orgel</hi></hi></hi><lb /><hi rendition="#b">für Privat-Salons,<lb />das individuelle Spiel
-            erster Orgel-Virtuosen wiedergebend.</hi></hi>
+            erster Orgel-Virtuosen wiedergebend.</hi></hi></ab>
         </div>
-        <div facs="#eSc_textblock_1a33dd7c"><hi rendition="#c">
+        <div facs="#eSc_textblock_1a33dd7c"><ab><hi rendition="#c">
             <lb /><hi rendition="#b"><hi rendition="#in"><hi rendition="#in"><hi rendition="#in"><orgName>M. Welte &amp; Söhne G.m.b.H.</orgName></hi></hi></hi></hi>
             <lb />Gegründet 1832.<lb /><hi rendition="#in"><hi rendition="#in">Freiburg in Baden.</hi></hi>
             <lb />Vertreten an allen grösseren Plätzen der Welt. Erprobt in jedem Klima.
             <lb />Höchste Auszeichnungen auf allen Weltausstellungen.
             <lb /><hi rendition="#in"><hi rendition="#larger">Ausstellung zur Messe</hi></hi> bei <hi rendition="#b"><hi rendition="#in"><hi rendition="#larger"><orgName>Hug &amp; Co.</orgName>,</hi></hi></hi>
-            <hi rendition="#larger">Markgrafenstr.10.</hi></hi>
+            <hi rendition="#larger">Markgrafenstr.10.</hi></hi></ab>
         </div>
+        </body>
     </text>
 </TEI>

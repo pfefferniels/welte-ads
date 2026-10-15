@@ -77,44 +77,45 @@
        <facsimile>
         <surface>
             <graphic url="MTR-1928-87-19-SECTION-1-01.pdf_page_1.png"
-                width="3133"
-                height="4375" />
+                width="3133px"
+                height="4375px" />
             <zone points="286,249 286,1107 2860,1107 2860,249"
-                id="eSc_textblock_7087fd61" />
+                xml:id="eSc_textblock_7087fd61" />
             <zone points="554,1370 911,1370 911,1728 554,1728"
-                id="eSc_textblock_e9d44931" />
+                xml:id="eSc_textblock_e9d44931" />
             <zone
                 points="612,1888 2607,1888 2607,2457 612,2457"
-                id="eSc_textblock_4411276c" />
+                xml:id="eSc_textblock_4411276c" />
             <zone
                 points="1446,1604 2549,1604 2549,1815 1446,1815"
-                id="eSc_textblock_8b4f9efa" />
+                xml:id="eSc_textblock_8b4f9efa" />
             <zone points="573,3507 563,2683 612,2583 593,2547 1286,2531 1286,3531 1171,3531"
-                id="eSc_textblock_b142b74c" />
+                xml:id="eSc_textblock_b142b74c" />
             <zone points="2046,2537 2033,3531 1307,3531 1307,2530"
-                id="eSc_textblock_2aef91d9" />
+                xml:id="eSc_textblock_2aef91d9" />
             <zone
                 points="583,3555 2607,3555 2607,3925 583,3925"
-                id="eSc_textblock_7d6330b8" />
+                xml:id="eSc_textblock_7d6330b8" />
             <zone points="2063,3355 2637,3355 2637,3435 2063,3435"
-                id="eSc_textblock_5fe584b5" />
+                xml:id="eSc_textblock_5fe584b5" />
             <zone points="917,1286 916,2020 1444,2020 1444,1286"
-                id="eSc_textblock_ffd3c78d" />
+                xml:id="eSc_textblock_ffd3c78d" />
             <zone points="2116,2276 2093,3332 2658,3356 2658,2276"
-                id="eSc_textblock_eb5ad774" />
+                xml:id="eSc_textblock_eb5ad774" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_7087fd61">
             <gap reason="irrelevant" />
         </div>
 
         <div facs="#eSc_textblock_ffd3c78d" type="illustration">
-            <figure>
+            <figure ana="#sitting_woman" resp="#np">
                 <desc resp="#np">
-                    <seg ana="#sitting_woman" resp="#np" type="topic">
+                    
                         Woman sitting
-                    </seg>
+                    
                     in front of a device with buttons. In the background
                     a Welte grand.
                 </desc>
@@ -122,7 +123,7 @@
         </div>
 
         <div facs="#eSc_textblock_e9d44931">
-            <lb /><hi rendition="#k">Remember</hi> <hi rendition="#i">that you can
+            <ab><lb /><hi rendition="#k">Remember</hi> <hi rendition="#i">that you can
             <lb />select unlimited pro-
             <lb />gram groups for the
             <lb /><name type="brand">Musicalle</name> from the in-
@@ -143,23 +144,23 @@
                 </seg>
                 <lb />a program to suit every
                 <lb />mood and occasion.
-            </seg></hi>
+            </seg></hi></ab>
         </div>
         <div facs="#eSc_textblock_4411276c">
-            <lb /><hi rendition="#right #in"><hi rendition="#in">The Amazing New</hi></hi>
+            <ab><lb /><hi rendition="#right #in"><hi rendition="#in">The Amazing New</hi></hi>
             <lb /><hi rendition="#right #in"><hi rendition="#in"><name type="brand">WELTE-MIGNON Musicalle</name></hi></hi>
             <lb />makes possible <hi rendition="#i">for the first time</hi> an hour of <hi rendition="#i">uninter-
-            <lb />rupted music</hi> by the great pianists of the world . .
+            <lb />rupted music</hi> by the great pianists of the world . .</ab>
         </div>
         <div facs="#eSc_textblock_8b4f9efa">
-            <lb />
+            <ab><lb />
             <seg ana="#touch_of_a_button" type="topic" resp="#np">
                 <hi rendition="#i">At the touch of a button . . .
                 <lb />without moving from your chair . .</hi>
-            </seg>
+            </seg></ab>
         </div>
         <div facs="#eSc_textblock_b142b74c">
-            <lb /><hi rendition="#dropcap">T</hi>URN BACK the calendar twenty-four
+            <ab><lb /><hi rendition="#dropcap">T</hi>URN BACK the calendar twenty-four
             <lb />years . . . From the <orgName>House of Welte</orgName>
             <lb />came the announcement in 1904 of an
             <lb />instrument which
@@ -203,10 +204,10 @@
                 <lb />never moving from her chair . . .</hi>
             </seg>
             <lb />. . . . This is the new <name type="brand">WELTE-MIGNON
-            <lb />Musicalle</name> . . . . . . .
+            <lb />Musicalle</name> . . . . . . .</ab>
         </div>
         <div facs="#eSc_textblock_2aef91d9">
-            <lb />Such simplicity of operation has never before
+            <ab><lb />Such simplicity of operation has never before
             <lb />been achieved in musical reproduction.
             <seg ana="#invisibility" resp="#np" type="topic">
                 Every
@@ -231,7 +232,7 @@
             <lb />
             <lb /><hi rendition="#i">The <name type="brand">Musicalle</name> together with <name type="brand">Welte-Mignon
             <lb />Reproducing Mechanism</name> installed in other
-            <lb />makes of Grand Pianos. Prices on request.</hi>
+            <lb />makes of Grand Pianos. Prices on request.</hi></ab>
         </div>
         <div facs="#eSc_textblock_eb5ad774" type="illustration">
             <figure>
@@ -241,7 +242,7 @@
             </figure>
         </div>
         <div facs="#eSc_textblock_7d6330b8">
-            <lb />
+            <ab><lb />
             <seg ana="#immortality" resp="#np" type="topic">
                 <hi rendition="#c #i #b">The New Instrument That Immortalizes the Playing of the Masters</hi>
             </seg>
@@ -251,13 +252,14 @@
             </hi>
             <lb />
             <address>
-                <hi rendition="#in">665
-                Fifth Avenue<space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/>New York City</hi>
-            </address>
+                <addrLine><hi rendition="#in">665
+                Fifth Avenue<space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/>New York City</hi></addrLine>
+            </address></ab>
         </div>
         <div facs="#eSc_textblock_5fe584b5">
-            <lb /><hi rendition="#i">The <name type="brand">Musicalle</name> is patented and controlled ex-
-            <lb />clusively by the <orgName>Welte-Mignon Corporation</orgName></hi>
+            <ab><lb /><hi rendition="#i">The <name type="brand">Musicalle</name> is patented and controlled ex-
+            <lb />clusively by the <orgName>Welte-Mignon Corporation</orgName></hi></ab>
         </div>
+        </body>
     </text>
 </TEI>

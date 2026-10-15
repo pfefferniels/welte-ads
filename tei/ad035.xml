@@ -76,35 +76,36 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="mdp.39015006326154-seq_259.tif" width="2379" height="3329" />
+            <graphic url="mdp.39015006326154-seq_259.tif" width="2379px" height="3329px" />
             <zone
                 points="569,207 1811,207 1811,693 569,693"
-                id="eSc_textblock_5574baf5" />
+                xml:id="eSc_textblock_5574baf5" />
             <zone
                 points="221,1671 2171,1671 2171,2847 221,2847"
-                id="eSc_textblock_674c2b38" />
+                xml:id="eSc_textblock_674c2b38" />
             <zone
                 points="229,2866 2164,2866 2164,3149 229,3149"
-                id="eSc_textblock_86c963f8" />
-            <zone points="250,217 250,735 595,735 595,217" id="eSc_textblock_82fe31e2" />
+                xml:id="eSc_textblock_86c963f8" />
+            <zone points="250,217 250,735 595,735 595,217" xml:id="eSc_textblock_82fe31e2" />
             <zone points="1781,198 1781,716 2190,716 2190,198"
-                id="eSc_textblock_4384fb1b" />
-            <zone points="242,926 242,1429 633,1429 633,926" id="eSc_textblock_2d107f1c" />
-            <zone points="733,780 1660,780 1660,1577 733,1577" id="zone_piano" />
+                xml:id="eSc_textblock_4384fb1b" />
+            <zone points="242,926 242,1429 633,1429 633,926" xml:id="eSc_textblock_2d107f1c" />
+            <zone points="733,780 1660,780 1660,1577 733,1577" xml:id="zone_piano" />
             <zone points="1766,919 1766,1414 2148,1414 2152,919"
-                id="eSc_textblock_734283b7" />
+                xml:id="eSc_textblock_734283b7" />
             <zone points="1735,3210 1778,3215 615,3215 832,3210"
-                id="eSc_textblock_e5c888ad" />
+                xml:id="eSc_textblock_e5c888ad" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_82fe31e2" type="illustration">
             <figure>
                 <desc>Oval portrait of Ignace J. Paderewski</desc>
             </figure>
         </div>
         <div facs="#eSc_textblock_5574baf5">
-            <hi rendition="#c #b">
+            <ab><hi rendition="#c #b">
                 <hi rendition="#in"><hi rendition="#in">
                     <lb />The <name type="brand">Welte-Mignon
                     <lb />Autograph Piano</name>
@@ -113,7 +114,7 @@
                 <seg ana="#soulfulness" resp="#np" type="topic">
                     Living Soul of the Artist
                 </seg></hi>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#eSc_textblock_4384fb1b" type="illustration">
             <figure>
@@ -136,7 +137,7 @@
             </figure>
         </div>
         <div facs="#eSc_textblock_674c2b38">
-            <lb /><hi rendition="#et">It has the <hi rendition="#i">living touch</hi> which differentiates the <name type="brand">Welte-Mignon</name></hi>
+            <ab><lb /><hi rendition="#et">It has the <hi rendition="#i">living touch</hi> which differentiates the <name type="brand">Welte-Mignon</name></hi>
             <lb />from every other piano playing device in the world.
             <lb />
             <seg ana="#exact_reproduction" type="topic" resp="#np">
@@ -167,15 +168,16 @@
             and others.
             <hi rendition="#c #i #k #larger">
                 <lb />Demonstrations daily at our studio
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#eSc_textblock_86c963f8">
-            <hi rendition="#c">
+            <ab><hi rendition="#c">
                 <hi rendition="#b #k #in"><hi rendition="#larger"><lb />The <orgName>Welte-Mignon Autograph Piano Co.</orgName></hi></hi>
-                <hi rendition="#smaller"><lb /><address><hi rendition="#b #k">273 Fifth Avenue,</hi> Opposite the Holland House</address></hi>
+                <hi rendition="#smaller"><lb /><address><addrLine><hi rendition="#b #k">273 Fifth Avenue,</hi> Opposite the Holland House</addrLine></address></hi>
                 <hi rendition="#smaller #b #k #g"><lb /><name type="brand">Steinway Piano</name> Incorporated in the <name type="brand">Welte-Mignon</name></hi>
-            </hi>
+            </hi></ab>
         </div>
         <div facs="#eSc_textblock_e5c888ad" />
+        </body>
     </text>
 </TEI>

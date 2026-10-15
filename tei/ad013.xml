@@ -81,21 +81,22 @@
      </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="los-angeles-1909.png" width="676" height="1810"/>
-            <zone points="20,18 19,513 657,522 656,18" id="eSc_textblock_b620cf2e" />
-            <zone points="245,486 390,486 390,507 245,507" id="zone_caption" />
+            <graphic url="los-angeles-1909.png" width="676px" height="1810px"/>
+            <zone points="20,18 19,513 657,522 656,18" xml:id="eSc_textblock_b620cf2e" />
+            <zone points="245,486 390,486 390,507 245,507" xml:id="zone_caption" />
             <zone
                 points="36,524 646,524 646,824 36,824"
-                id="eSc_textblock_f1d73028" />
+                xml:id="eSc_textblock_f1d73028" />
             <zone
                 points="76,832 602,832 602,1537 76,1537"
-                id="eSc_textblock_b2073d40" />
-            <zone points="82,1539 594,1539 594,1575 82,1575" id="zone_call" />
-            <zone points="24,1576 648,1576 648,1664 24,1664" id="zone_literature" />
-            <zone points="24,1668 648,1668 648,1795 24,1795" id="zone_birkel" />
+                xml:id="eSc_textblock_b2073d40" />
+            <zone points="82,1539 594,1539 594,1575 82,1575" xml:id="zone_call" />
+            <zone points="24,1576 648,1576 648,1664 24,1664" xml:id="zone_literature" />
+            <zone points="24,1668 648,1668 648,1795 24,1795" xml:id="zone_birkel" />
         </surface>
     </facsimile>
     <text>
+        <body>
         <div facs="#eSc_textblock_b620cf2e" type="illustration">
             <figure>
                 <desc resp="#np">
@@ -104,8 +105,8 @@
             </figure>
         </div>
         <div facs="#zone_caption">
-            <lb /><hi rendition="#c">DESIGN
-            OF OAK CASE</hi>
+            <ab><lb /><hi rendition="#c">DESIGN
+            OF OAK CASE</hi></ab>
         </div>
 
             <div facs="#eSc_textblock_f1d73028">
@@ -115,7 +116,7 @@
                         <lb /><hi rendition="#in #larger"><name type="brand">Welte-Mignon</name></hi> 
                     </hi>
                 </head>
-                <hi rendition="#b">
+                <ab><hi rendition="#b">
                 <lb />
                 <seg ana="#home" resp="#np" type="topic">
                     Brings to your home
@@ -132,7 +133,7 @@
                 </num>
                 other great
                 <lb />pianists.
-                </hi>
+                </hi></ab>
             </div>
             
             <div facs="#eSc_textblock_b2073d40">
@@ -191,29 +192,30 @@
                 </p>
             </div>
             <div facs="#zone_call">
-                <lb /><hi rendition="#c #b">Call or Write for Descriptive Literature</hi>
+                <ab><lb /><hi rendition="#c #b">Call or Write for Descriptive Literature</hi></ab>
             </div>
             <div facs="#zone_literature">
-                <lb />We will gladly mail to interested parties descriptive literature and
+                <ab><lb />We will gladly mail to interested parties descriptive literature and
                 <lb />prices of the <name type="brand">Welte-Mignon</name> instruments. We are especially desirous
                 <lb />that you come to our store and give these instruments your personal
                 <lb />inspection.
 
                 <hi rendition="#c #b #smaller">
                     <lb />FREE RECITALS DAILY FROM 9 A. M. TO 5 P.M-Fourth Floor.
-                </hi>
+                </hi></ab>
             </div>
             <div facs="#zone_birkel">
-                <hi rendition="#c">
+                <ab><hi rendition="#c">
                     <lb /><hi rendition="#in"><hi rendition="#in #larger #b"><orgName key="birkel">Geo. J. Birkel Company</orgName></hi></hi>
                     <lb />
                     <name type="brand">Steinway</name>,
                     <name type="brand">Cecilian</name> and
                     <name type="brand">Victor</name> Dealers.
                     <address>
-                        <lb /><hi rendition="#in #b">345-347 South Spring Street</hi>
+                        <lb /><addrLine><hi rendition="#in #b">345-347 South Spring Street</hi></addrLine>
                     </address>
-                </hi>
+                </hi></ab>
             </div>
+        </body>
     </text>
 </TEI>
