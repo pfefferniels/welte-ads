@@ -2,27 +2,12 @@ import React from "react"
 import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
 import { getMarkdownContent } from "../lib/markdown"
+import { EDITION, EDITOR } from "../lib/site"
+import OrcidLink from "../components/orcid"
 
 export const metadata = {
   title: 'Introduction',
 }
-
-const htmlTitle = "Welte-Mignon Advertisements Collection"
-
-interface Author {
-  first: string
-  last: string
-  affiliations: string[]
-  orcid?: string
-}
-
-const authors: Author[] = [
-  {
-    first: "Niels",
-    last: "Pfeffer",
-    affiliations: ["University Tübingen"],
-  },
-]
 
 const contentStyles = {
   "& p": {
@@ -44,22 +29,12 @@ export default function HomePage() {
 
   return (
     <Container component="main" maxWidth="md">
-      <Typography variant="h3" component="h2" gutterBottom={false}
-        dangerouslySetInnerHTML={{ __html: htmlTitle }}
-      />
+      <Typography variant="h3" component="h2" gutterBottom={false}>
+        {EDITION}
+      </Typography>
       <Typography variant="h5" component="h4" gutterBottom={false}>
-        Edited by{' '}
-        {authors.map((a) => (
-          <React.Fragment key={a.last}>
-            {a.first} {a.last}, {a.affiliations.join(', ')}
-            {a.orcid &&
-              <a href={`https://orcid.org/${a.orcid}`} style={{ marginLeft: '.5rem' }}>
-                <img src="/images/orcid.png" width={20} alt="ORCID logo" />
-              </a>
-            }
-            <br />
-          </React.Fragment>
-        ))}
+        Edited by {EDITOR.name}, {EDITOR.affiliation}
+        <OrcidLink id={EDITOR.orcid} />
       </Typography>
       <Typography
         sx={contentStyles}

@@ -3,10 +3,7 @@
 import React, { useSyncExternalStore } from "react"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
-
-const EDITOR = "Niels Pfeffer"
-const EDITION = "Welte-Mignon Advertisements Collection"
-const SITE_URL = "https://anz.welte225.org"
+import { EDITION, EDITOR, SITE_URL } from "../lib/site"
 
 const subscribe = () => () => {}
 const today = () => new Date().toLocaleDateString('en-GB', {
@@ -35,7 +32,7 @@ const Citation = ({ title, company, date, path }: Props) => {
         How to cite
       </Typography>
       <Typography variant="body2" component="p">
-        {EDITOR} (ed.): “{bare}” ({company}, {date}). In: <i>{EDITION}</i>,{' '}
+        {EDITOR.name} (ed.): “{bare}” ({company}, {date}). In: <i>{EDITION}</i>,{' '}
         <a href={url}>{url}</a>
         {accessed && ` (accessed ${accessed})`}.
       </Typography>
