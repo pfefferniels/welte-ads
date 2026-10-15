@@ -186,7 +186,7 @@
                 </hi>
                 <lb />Is Most Comprehensive. It Comprises Several Thousand Recordings That Reproduce
                 <lb />
-                <seg
+                <seg xml:id="topic_1"
                     ana="#analogy_to_photography" resp="#np" type="topic">
                     With Photographic Accuracy
                 </seg> the Individual Playing of
@@ -200,7 +200,7 @@
                     <lb /><name type="brand">THE ORIGINAL WELTE-MIGNON</name>
                 </hi>
                 <lb />
-                <seg ana="#immortality" resp="#np" type="topic">
+                <seg xml:id="topic_2" ana="#immortality" resp="#np" type="topic">
                     "The Instrument That Immortalizes the Playing of the Masters"
                 </seg>
                 <lb />A Leader for Every Representative Music Merchant

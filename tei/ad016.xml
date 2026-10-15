@@ -302,12 +302,12 @@
                 <lb />MIGNON Licensee Reproducing Action</name>.
                 <lb />For, <hi rendition="#i">only</hi> <name type="brand">WELTE-MIGNON*</name>
                 <hi rendition="#i">
-                    <seg ana="#secret">
+                    <seg xml:id="topic_1" ana="#secret">
                         possesses
                         <lb />the secret
                     </seg>
                     of
-                    <seg ana="#exact_reproduction">
+                    <seg xml:id="topic_2" ana="#exact_reproduction">
                         perfect reproduction.
                     </seg>
                 </hi>
@@ -320,13 +320,13 @@
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>–the
                 world's greatest pianists
                 <lb />—performing
-                <seg ana="#home" resp="#np" type="topic">
+                <seg xml:id="topic_3" ana="#home" resp="#np" type="topic">
                     in your own home
                 </seg>
                 with all
                 <lb />the skill, the fire, the individuality as if
                 <lb />they were
-                <seg ana="#virtual_presence">
+                <seg xml:id="topic_4" ana="#virtual_presence">
                     actually seated at your piano.
                 </seg>
             </p>
@@ -361,7 +361,7 @@
         </div>
 
         <div facs="#eSc_textblock_7ead3664" type="illustration">
-            <figure ana="#phantom_body" resp="#np">
+            <figure xml:id="topic_5" ana="#phantom_body" resp="#np">
                 <desc resp="#np">
                     
                         Illustration of semi-transparent hands on a piano.

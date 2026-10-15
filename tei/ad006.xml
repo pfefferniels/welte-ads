@@ -148,12 +148,12 @@
             </hi></ab>
         </div>
         <div facs="#eSc_textblock_b536deda">
-            <ab><hi rendition="#c #b"><lb />Not just mechanical playing of his compositions,<lb />but <seg ana="#virtual_presence" type="topic" resp="#np"><hi rendition="#i">his own fingers on your
+            <ab><hi rendition="#c #b"><lb />Not just mechanical playing of his compositions,<lb />but <seg xml:id="topic_1" ana="#virtual_presence" type="topic" resp="#np"><hi rendition="#i">his own fingers on your
             keyboard</hi></seg>.</hi></ab></div>
         <div facs="#eSc_textblock_e56f4d74">
             <ab><lb />
             <hi rendition="#u #b">
-                <seg type="topic" ana="#touch_of_a_button" resp="#np">At Your Command</seg>
+                <seg xml:id="topic_2" type="topic" ana="#touch_of_a_button" resp="#np">At Your Command</seg>
             </hi></ab>
         </div>
         <div facs="#eSc_textblock_2389efb5">
@@ -175,18 +175,18 @@
             <lb />count it a great event in your life. This is what the
             <lb /><name type="brand">WELTE MIGNON Reproducing Piano</name> will do for you.
             <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
-            <seg ana="#soulfulness" type="topic" resp="#np">
+            <seg xml:id="topic_3" ana="#soulfulness" type="topic" resp="#np">
                 played his soul into the <name type="brand">Welte</name>
             </seg>,
-            <seg ana="#immortality" type="topic" resp="#np">knowing<lb />full well that thus could he better pass on
+            <seg xml:id="topic_4" ana="#immortality" type="topic" resp="#np">knowing<lb />full well that thus could he better pass on
             to coming gen-<lb />erations the perfect expression of his genius</seg>. It is the
-            <seg ana="#soulfulness" type="topic" resp="#np">soul-<lb />expression</seg>
+            <seg xml:id="topic_5" ana="#soulfulness" type="topic" resp="#np">soul-<lb />expression</seg>
             that 
-            <seg ana="#listening" type="topic" resp="#np">
+            <seg xml:id="topic_6" ana="#listening" type="topic" resp="#np">
                 you feel when you listen to the <name type="brand">Welte</name>
             </seg>;
             and<lb />
-            <seg ana="#repeatability" resp="#np" type="topic">
+            <seg xml:id="topic_7" ana="#repeatability" resp="#np" type="topic">
                 you may hear it not only once, but
                 as often as you wish.
             </seg>
@@ -200,16 +200,16 @@
             <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>–156
             masters in all have
-            <seg ana="#personality" type="topic" resp="#np">
+            <seg xml:id="topic_8" ana="#personality" type="topic" resp="#np">
                 played into the <name type="brand">Welte</name>
                 <lb /><hi rendition="#i">for you</hi> the very essence of their musical
                 personalities
             </seg>,
-            <seg ana="#distinction_from_mechanical">
+            <seg xml:id="topic_9" ana="#distinction_from_mechanical">
                 for <name type="brand">Welte</name> re-
                 <lb />production is not "stencil cutting,"
             </seg> but
-            <seg ana="#exact_reproduction" resp="#np" type="topic">
+            <seg xml:id="topic_10" ana="#exact_reproduction" resp="#np" type="topic">
                 absolute tonal duplication.
             </seg>
             <lb />There are over
@@ -217,7 +217,7 @@
                 5,000 record-rolls
             </num> in the <name type="brand">Welte</name> repertoire. Come
             <lb />in to-day and hear your favorites.
-            <seg ana="#affordability" resp="#np" type="topic">
+            <seg xml:id="topic_11" ana="#affordability" resp="#np" type="topic">
                 And bear in mind that the <name type="brand">Welte</name>
                 <lb /><hi rendition="#i">is within your means</hi>, for it is sold on
                 terms–your own within reason.

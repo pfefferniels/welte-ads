@@ -126,7 +126,7 @@
             </hi></head>
             <ab><hi rendition="#c"><lb /><hi rendition="#b"><hi rendition="#larger">REPRODUKTIONS-PIANO
             und -FLÜGEL</hi></hi> <lb />
-            <seg ana="#exact_reproduction" resp="#np" type="topic">
+            <seg xml:id="topic_1" ana="#exact_reproduction" resp="#np" type="topic">
                 Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen.
             </seg></hi></ab>
         </div>

@@ -235,7 +235,7 @@
         </div>
 
         <div facs="#eSc_textblock_80aa6210" type="illustration">
-            <ab><seg ana="#phantom_body" resp="#np" type="topic">
+            <ab><seg xml:id="topic_1" ana="#phantom_body" resp="#np" type="topic">
                 <desc>
                     Phantom hands
                 </desc>
@@ -252,11 +252,11 @@
             <lb />Licensee Reproducing Action</name>.
             <lb />Only <name type="brand">Welte-Mignon Licensee</name>
             <lb />
-            <seg ana="#secret" resp="#np" type="topic">
+            <seg xml:id="topic_2" ana="#secret" resp="#np" type="topic">
                possesses the secret
             </seg>
             of
-            <seg ana="#exact_reproduction" resp="#np" type="topic">
+            <seg xml:id="topic_3" ana="#exact_reproduction" resp="#np" type="topic">
                perfect
                <lb />reproduction
             </seg>.
@@ -264,7 +264,7 @@
             <name type="brand">Welte-Mignon Li-
             <lb />censee</name> the playing of the world's
             <lb />greatest pianists is
-            <seg ana="#home" type="topic" resp="#np">
+            <seg xml:id="topic_4" ana="#home" type="topic" resp="#np">
                 brought to
                 <lb />your home
             </seg>, flawless, magnificent,
@@ -292,7 +292,7 @@
 
         <div facs="#eSc_textblock_66f64898">
             <ab><hi rendition="#c"><lb />
-            <seg ana="#superiority">
+            <seg xml:id="topic_5" ana="#superiority">
                 The superiority of any reproducing piano
                 <lb />is assured if it contains the
                 <lb />

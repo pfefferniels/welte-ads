@@ -101,21 +101,21 @@
         <div facs="#eSc_textblock_470ea0d3">
             <ab><hi rendition="#i"><lb />The Rolling Sweep of a Storm Tossed Sea</hi>
             <hi rendition="#i #right"><lb />–
-            <seg ana="#phantom_body" resp="#np" type="slogan">
+            <seg xml:id="topic_1" ana="#phantom_body" resp="#np" type="slogan">
                 when Phantom Fingers play
             </seg></hi></ab>
         </div>
         <div facs="#eSc_textblock_25ac3298">
             <ab><hi rendition="#i #b"><lb />These are the
-            <seg ana="#phantom_body" resp="#np" type="topic">
+            <seg xml:id="topic_2" ana="#phantom_body" resp="#np" type="topic">
                 Phantom<lb />Hands
             </seg>
-            <seg ana="#immortality" resp="#np" type="topic">
+            <seg xml:id="topic_3" ana="#immortality" resp="#np" type="topic">
                 of a thousand<lb />immortal pianists;
             </seg> their
             <lb />glorious genius preserv-
             <lb />ed forever, through
-            <seg ana="#miracle" resp="#np" type="topic">
+            <seg xml:id="topic_4" ana="#miracle" resp="#np" type="topic">
                 the
                 <lb />miracle of <name type="brand">Welte-
                 <lb />Mignon*</name>
@@ -127,7 +127,7 @@
             <ab><lb /><hi rendition="#smaller"><hi rendition="#dropcap">T</hi></hi><hi rendition="#uc">hunder of breaking waves;</hi>
             <lb />howl of the hurricane; crash of
             <lb />thunder; or,
-            <seg ana="#suit_every_mood" resp="#np" type="topic">
+            <seg xml:id="topic_5" ana="#suit_every_mood" resp="#np" type="topic">
                 with your changing
                 <lb />mood,
             </seg> mesmeric lure of the
@@ -136,16 +136,16 @@
             <lb />night "when the moon swings low"
             <lb />... played by the master musicians
             <lb />of the century
-            <seg ana="#home" resp="#np" type="topic">
+            <seg xml:id="topic_6" ana="#home" resp="#np" type="topic">
                 in your own home,
             </seg>
             <lb />
-            <seg ana="#touch_of_a_button">
+            <seg xml:id="topic_7" ana="#touch_of_a_button">
                 whenever you wish.
             </seg>
             <lb />The <name type="brand">Welte-Mignon*</name> brings a won-
             <lb />drous gift to you.
-            <seg ana="#exact_reproduction">
+            <seg xml:id="topic_8" ana="#exact_reproduction">
                 With uncanny
                 <lb />fidelity,
             </seg> this
@@ -154,18 +154,18 @@
         <div facs="#eSc_textblock_8599e7fe">
             <ab><lb />instrument preserves the actual
             <lb />
-            <seg ana="#immortality" resp="#np" type="topic">
+            <seg xml:id="topic_9" ana="#immortality" resp="#np" type="topic">
                 playing of immortal musicians.
             </seg>
             <lb />
-            <seg ana="#phantom_body" resp="#np" type="topic">
+            <seg xml:id="topic_10" ana="#phantom_body" resp="#np" type="topic">
                 Their
                 phantom fingers perform,
             </seg>
             <lb />again,
-            <seg ana="#touch_of_a_button">at your command.</seg>
+            <seg xml:id="topic_11" ana="#touch_of_a_button">at your command.</seg>
             <lb />The <name type="brand">Welte-Mignon*</name>
-            <seg ana="#invisibility" resp="#np" type="topic">
+            <seg xml:id="topic_12" ana="#invisibility" resp="#np" type="topic">
                 is
                 invisible
             </seg>
@@ -193,7 +193,7 @@
             </figure>
         </div>
         <div facs="#eSc_textblock_cb1dfd0b" type="illustration">
-            <figure ana="#phantom_body" resp="#np">
+            <figure xml:id="topic_13" ana="#phantom_body" resp="#np">
                 <desc>
                     
                         Phantom hands at a piano.

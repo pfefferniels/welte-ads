@@ -124,12 +124,12 @@
         </div>
         <div facs="#eSc_textblock_bbaf7988">
             <ab><lb />Das Welte Mignon ist das
-            <seg ana="#miracle" resp="#np" type="topic">Wunder der Wunder</seg>.
+            <seg xml:id="topic_1" ana="#miracle" resp="#np" type="topic">Wunder der Wunder</seg>.
             <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>.</hi></ab></div>
         <div facs="#eSc_textblock_0ace7367">
-            <ab><lb />Eine unbedingt <seg ana="#technical_invention" type="topic" resp="#np">geniale Erfindung</seg> von hohem <lb />künstlerischen Wert.<lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>.</hi></ab></div>
+            <ab><lb />Eine unbedingt <seg xml:id="topic_2" ana="#technical_invention" type="topic" resp="#np">geniale Erfindung</seg> von hohem <lb />künstlerischen Wert.<lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>.</hi></ab></div>
         <div facs="#eSc_textblock_910008bc">
-            <ab><lb /><seg ana="#virtual_presence" type="topic" resp="#np">Man meint den betreffenden Künstler in Person<lb />vor sich zu haben und ihn
+            <ab><lb /><seg xml:id="topic_3" ana="#virtual_presence" type="topic" resp="#np">Man meint den betreffenden Künstler in Person<lb />vor sich zu haben und ihn
             spielen zu hören.</seg><lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118786253">Nickisch</persName>.</hi></ab></div>
         <div facs="#eSc_textblock_9c944536">
             <ab><quote>
@@ -143,7 +143,7 @@
         <div facs="#eSc_textblock_d5bad035">
             <ab><quote>
                 <lb />
-                <seg ana="#miracle" resp="#np" type="topic">
+                <seg xml:id="topic_4" ana="#miracle" resp="#np" type="topic">
                     Man muss das Wunder gehört haben, um es<lb />zu glauben.
                 </seg>
             </quote>
@@ -152,7 +152,7 @@
         </div>
         <div facs="#eSc_textblock_c91feaa0">
             <ab><quote>
-                <lb />Welte Mignon ist für mich das <seg ana="#unreached_ideal" resp="#np" type="topic">unerreichte Ideal<lb />aller Musikinstrumente</seg>.
+                <lb />Welte Mignon ist für mich das <seg xml:id="topic_5" ana="#unreached_ideal" resp="#np" type="topic">unerreichte Ideal<lb />aller Musikinstrumente</seg>.
             </quote>
             <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>.</hi></ab>
         </div>
@@ -167,15 +167,15 @@
             phantastisch scheinender<lb />Gedanke verwirklicht, nämlich das Klavierspiel eines
             Künstlers mit all' seinen persönlichen Eigenschaften –<lb />des Anschlags, der
             Phrasierung, des Pedalgebrauchs etc.
-            <seg ana="#immortality" resp="#np" type="topic">zu verewigen</seg>.
-            <seg ana="#distinction_from_mechanical" type="topic" resp="#np">
+            <seg xml:id="topic_6" ana="#immortality" resp="#np" type="topic">zu verewigen</seg>.
+            <seg xml:id="topic_7" ana="#distinction_from_mechanical" type="topic" resp="#np">
                 Die Wiedergaben des Mignon haben
                 <lb />jeden Rest des mechanischen verloren.
             </seg>
             Dass es sich um eine Erfindung von ausserordentlicher künstlerischer
-            <lb />Bedeutung handelt, <seg ana="#educational_use" type="topic" resp="#np">beweist ihr Gebrauch im <orgName>K. K. Konservatorium in
+            <lb />Bedeutung handelt, <seg xml:id="topic_8" ana="#educational_use" type="topic" resp="#np">beweist ihr Gebrauch im <orgName>K. K. Konservatorium in
             Wien</orgName> zu Studienzwecken.</seg>
-            <seg ana="#touch_of_a_button" type="topic" resp="#np">
+            <seg xml:id="topic_9" ana="#touch_of_a_button" type="topic" resp="#np">
                 Der Besitzer<lb />eines Welte Mignon kann sich jederzeit von den
                 berühmtesten Musikern, wie
                 <persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>,

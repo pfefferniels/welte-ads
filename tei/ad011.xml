@@ -131,21 +131,21 @@
                 <lb /><hi rendition="#right">Play Again</hi>
             </hi></head>
             <ab><lb />
-            <seg ana="#miracle" resp="#np" type="topic">
+            <seg xml:id="topic_1" ana="#miracle" resp="#np" type="topic">
                 Thanks to the wizardry of <name type="brand">Hardman Welte-
                 <lb />Mignon(licensee) Reproducing Pianos</name>
             </seg>
-            <seg ana="#immortality" resp="#np" type="topic">
+            <seg xml:id="topic_2" ana="#immortality" resp="#np" type="topic">
                 the
                 <lb />art of <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> is imperishable
             </seg>.
-            <seg ana="#repeatability" resp="#np" type="topic">
+            <seg xml:id="topic_3" ana="#repeatability" resp="#np" type="topic">
                 He will
                 <lb />play again, again and yet again for you -
                 <lb />tonight, tomorrow night and other nights
             </seg>
             <lb />-
-            <seg ana="#home" resp="#np" type="topic">
+            <seg xml:id="topic_4" ana="#home" resp="#np" type="topic">
                 in your own home.
             </seg>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
@@ -158,7 +158,7 @@
             <hi rendition="#c">
                 Write for catalog.
                 <lb />
-                <seg ana="#affordability" resp="#np" type="topic"><hi rendition="#uc #b #smaller">Convenient Terms</hi></seg>
+                <seg xml:id="topic_5" ana="#affordability" resp="#np" type="topic"><hi rendition="#uc #b #smaller">Convenient Terms</hi></seg>
 
                 <app>
                   <rdg source="#A">
@@ -197,7 +197,7 @@
         
         </div>
         <div facs="#eSc_textblock_eeb83339" type="illustration">
-            <ab><seg ana="#phantom_body" resp="#np" type="topic">
+            <ab><seg xml:id="topic_6" ana="#phantom_body" resp="#np" type="topic">
                 <figure>
                     <desc>
                         In the background: newspapers with headlines such as

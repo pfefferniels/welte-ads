@@ -176,7 +176,7 @@
       <div facs="#eSc_textblock_f7822bda">
          <ab><hi rendition="#c #uc">
             <lb />
-               <seg type="topic" resp="#np" ana="#technical_invention">
+               <seg xml:id="topic_1" type="topic" resp="#np" ana="#technical_invention">
                   After many inventions
                   <lb /><hi rendition="#g">and many failures</hi>
                   <lb />the perfect instrument 
@@ -187,7 +187,7 @@
          <ab><hi rendition="#c">
             <hi rendition="#i">
                <lb />The <name type="brand">Welte-Mignon</name>
-               <seg resp="#np" type="topic" ana="#exact_reproduction">
+               <seg xml:id="topic_2" resp="#np" type="topic" ana="#exact_reproduction">
                   faithfully reproduces the
                   <lb />individual interpretation of the
                   <lb />greatest Pianists

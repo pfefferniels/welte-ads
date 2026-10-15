@@ -111,12 +111,12 @@
       <div facs="#eSc_textblock_98250902">
          <ab><lb/>The phenomenal success of this artist recently at his first concert here con-
          <lb/>firmed the fame that preceded him from abroad.
-         <seg ana="#immediate_recognizability" resp="#np" type="topic">
+         <seg xml:id="topic_1" ana="#immediate_recognizability" resp="#np" type="topic">
             His expectant <placeName>New York</placeName>
             <lb/>audience at once recognized his native genius, genuine musicianship, and
             <lb/>brilliant command of the piano.
          </seg> Impressed with
-         <seg ana="#exact_reproduction" resp="#np" type="topic">
+         <seg xml:id="topic_2" ana="#exact_reproduction" resp="#np" type="topic">
             the accuracy and perfection
             <lb/>of the first recordings of his playing by <name type="brand">Welte Mignon
             <hi rendition="#i">Licensee</hi></name>
@@ -156,7 +156,7 @@
         </div>
 
       <div facs="#eSc_textblock_94049306" type="illustration">
-        <ab><seg ana="#phantom_body" resp="#np" type="topic">
+        <ab><seg xml:id="topic_3" ana="#phantom_body" resp="#np" type="topic">
             <figure>
                 <desc>
                     Semitransparent hands on a piano as parts of the 

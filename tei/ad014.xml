@@ -142,14 +142,14 @@
          <div facs="#eSc_textblock_1f92a58e" type="brand-elements">
             <ab><lb />
             <hi rendition="#uc #g2">
-               <seg ana="#virtual_presence" type="slogan" resp="#np">
+               <seg xml:id="topic_1" ana="#virtual_presence" type="slogan" resp="#np">
                   The Master's Fingers on Your Piano
               </seg>
             </hi></ab>
          </div>
 
          <div facs="#eSc_textblock_f12fe344" type="illustration">
-            <ab><seg ana="#listening" resp="#np" type="topic">
+            <ab><seg xml:id="topic_2" ana="#listening" resp="#np" type="topic">
                 <figure>
                     <desc>
                         Painting of Pachmann sitting at a piano. Three men in the background observing him.
@@ -160,7 +160,7 @@
 
         <div facs="#eSc_textblock_be99ecd4">
             <ab><lb />
-            <seg ana="#immortality" resp="#np" type="topic">
+            <seg xml:id="topic_3" ana="#immortality" resp="#np" type="topic">
                 <hi rendition="#i">Through You I Live Forever</hi>
             </seg></ab>
          </div>
@@ -172,7 +172,7 @@
                 <lb />life. You have made my fondest dream come true-
                 <lb />the dream of a perfect recording method and a re-
                 <lb />producing mechanism
-                <seg ana="#immortality">
+                <seg xml:id="topic_4" ana="#immortality">
                     thru which my playing as
                     an
                     <lb />interpretative artist might live forever.
@@ -182,7 +182,7 @@
                 <lb />render the spell of my <persName type="composer">Chopin</persName>, my
                 <persName type="composer">Liszt</persName>. You have
                 <lb />my unqualified endorsement.
-                <seg ana="#immortality">
+                <seg xml:id="topic_5" ana="#immortality">
                     <hi rendition="#i">Thru you I live forever."</hi>
                 </seg>
             </quote>
@@ -207,7 +207,7 @@
          </div>
          <div facs="#eSc_textblock_e4393655">
             <ab><lb />Installed invisibly in any piano,
-            <seg ana="#exact_reproduction" resp="#np" type="topic">
+            <seg xml:id="topic_6" ana="#exact_reproduction" resp="#np" type="topic">
                 <name type="brand">Welte-Mignon* Reproducing Action</name> makes that
                 <lb />piano reproduce with absolute perfection the playing of the master pianists.
             </seg> The

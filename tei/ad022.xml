@@ -200,7 +200,7 @@
             <ab><hi rendition="#larger #c">
                 <lb />In the home, in the studio, or on the stage-
                 <lb />
-                <seg ana="#touch_of_a_button">
+                <seg xml:id="topic_1" ana="#touch_of_a_button">
                     the art of the greatest pianists
                     is available for all occasions
                 </seg>
@@ -254,13 +254,13 @@
             <seg corresp="#home" resp="#np" type="topic">
                 in your home or studio
             </seg>
-            <seg ana="#invisibility" resp="#np" type="topic">
+            <seg xml:id="topic_2" ana="#invisibility" resp="#np" type="topic">
                 contains unseen
                 <lb />the <name type="brand">Welte-Mignon Licensee Reproducing Action</name>,
             </seg>
             it will
             <lb />play, to the finest degree of perfection,
-            <seg ana="#personality" resp="#np" type="topic">
+            <seg xml:id="topic_3" ana="#personality" resp="#np" type="topic">
                 with the personal
                 <lb />touch of any of the great pianists
             </seg>
@@ -271,10 +271,10 @@
             <lb />piano the interpretations of the
             <lb />world's foremost pianists is ap-
             <lb />parent to any musician.
-            <seg ana="#educational_use">
+            <seg xml:id="topic_4" ana="#educational_use">
                 To
                 <lb />study in close detail,
-                <seg ana="#repeatability">
+                <seg xml:id="topic_5" ana="#repeatability">
                     by fre-
                     <lb />quent repetition,
                 </seg>the playing of

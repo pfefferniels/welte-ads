@@ -118,7 +118,7 @@
                 </head>
                 <ab><hi rendition="#b">
                 <lb />
-                <seg ana="#home" resp="#np" type="topic">
+                <seg xml:id="topic_1" ana="#home" resp="#np" type="topic">
                     Brings to your home
                 </seg> the actual living perform-
                 <lb />ances of
@@ -138,7 +138,7 @@
             
             <div facs="#eSc_textblock_b2073d40">
                 <p>
-                    <seg ana="#technical_invention" resp="#np" type="topic">
+                    <seg xml:id="topic_2" ana="#technical_invention" resp="#np" type="topic">
                         <lb />The science of musical reproduction has progressed
                         <lb />through the various stages-experiment, medioc-
                         <lb />rity, excellence-but until the introduction of the
@@ -155,7 +155,7 @@
                     music-lover <lb />the actual performances of every great living pian-
                     <lb />ist.
                     
-                    <seg ana="#immortality">
+                    <seg xml:id="topic_3" ana="#immortality">
                         It perpetuates these performances so that fu-
                         <lb />ture generations will enjoy the music of our
                         <lb />present-day virtuosos when their personalities are
@@ -163,7 +163,7 @@
                     </seg>
                 </p>
                 <p>
-                    <seg ana="#analogy_to_phonograph" resp="#np" type="topic">
+                    <seg xml:id="topic_4" ana="#analogy_to_phonograph" resp="#np" type="topic">
                         <lb />What the <name type="brand">Victor</name> is doing for the famous singers
                         <lb />of the world the <name type="brand">Welte-Mignon</name> is
                         accomplishing <lb />for the pianists.
@@ -174,7 +174,7 @@
                     <lb /><name type="brand">Welte-Mignon</name> are of such nature that every dupli-
                     <lb />cate performance IS MADE DIRECTLY ON THE
                     <lb />PIANO,
-                    <seg ana="#exact_reproduction">
+                    <seg xml:id="topic_5" ana="#exact_reproduction">
                         thereby reproducing in every detail of
                         <lb />touch, tone and technique the actual
                         renditions of <lb />the pianists, in every sense their original per-

@@ -14,7 +14,10 @@ export default function CompaniesPage() {
 
   const companies = allMetadata.map(m => m.company) as { name: string; link: string }[]
   const markers = companies.reduce((acc, curr) => {
-    const coord = coordinates[curr.link] || { lat: 0, long: 0 }
+    // a place without known coordinates would end up at 0°/0°
+    const coord = coordinates[curr.link]
+    if (!coord) return acc
+
     const existingMarker = acc.find(marker =>
       marker.companyName === curr.name
       && marker.coordinate.lat === coord.lat

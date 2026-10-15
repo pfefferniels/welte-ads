@@ -102,16 +102,16 @@
         </div>
         <div facs="#eSc_textblock_d7c2159d">
             <ab><hi rendition="#i #b"><lb />These are the
-            <seg ana="#phantom_body" resp="#np" type="topic">
+            <seg xml:id="topic_1" ana="#phantom_body" resp="#np" type="topic">
                 Phantom<lb />Hands
             </seg> of
-            <seg ana="#immortality" resp="#np" type="topic">
+            <seg xml:id="topic_2" ana="#immortality" resp="#np" type="topic">
                 a thousand
                 <lb />immortal pianists; their
                 <lb />glorious genius preserv-
                 <lb />ed forever
             </seg>,
-            <seg ana="#miracle" resp="#np" type="topic">
+            <seg xml:id="topic_3" ana="#miracle" resp="#np" type="topic">
                 through the<lb />miracle of <name type="brand">Welte-<lb />Mignon*</name>
                 reproduction.
             </seg></hi></ab>
@@ -133,7 +133,7 @@
         </div>
         <div facs="#eSc_textblock_bca02c58">
             <ab><lb />
-            <seg ana="#phantom_body" resp="#np" type="topic">
+            <seg xml:id="topic_4" ana="#phantom_body" resp="#np" type="topic">
                 phantom fingers
             </seg>
             of
@@ -143,15 +143,15 @@
             <persName type="artist" corresp="https://d-nb.info/gnd/116327642">Gabrilowitsch</persName>,
             <lb />and scores of others -
             <lb />
-            <seg ana="#home" resp="#np" type="topic">
+            <seg xml:id="topic_5" ana="#home" resp="#np" type="topic">
                 playing in your own home
             </seg>
-            <seg ana="#touch_of_a_button" resp="#np" type="topic">
+            <seg xml:id="topic_6" ana="#touch_of_a_button" resp="#np" type="topic">
                 whenever you wish.
             </seg>
             <lb />See the
             <name type="brand">Welte-Mignon*</name> today.
-            <seg ana="#invisibility" resp="#np" type="topic">
+            <seg xml:id="topic_7" ana="#invisibility" resp="#np" type="topic">
                 It
                 <lb />is invisible
             </seg>

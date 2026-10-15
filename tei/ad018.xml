@@ -112,7 +112,7 @@
             <lb />an electrically operated attachment to
             the original <name type="brand">Welte-
             <lb />Mignon</name> piano which will enable one
-            <seg ana="#touch_of_a_button" resp="#np" type="topic">
+            <seg xml:id="topic_1" ana="#touch_of_a_button" resp="#np" type="topic">
                 merely by pressing
                 <lb />a button
             </seg>

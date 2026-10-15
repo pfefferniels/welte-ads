@@ -100,7 +100,7 @@
         <div facs="#eSc_textblock_2ad2cdc7">
             <ab><hi rendition="#i"><lb />Valkyries thunder through the storm
             <hi rendition="#right"><lb />-
-            <seg ana="#phantom_body" resp="#np" type="slogan">
+            <seg xml:id="topic_1" ana="#phantom_body" resp="#np" type="slogan">
                 when Phantom Fingers play
             </seg></hi></hi></ab>
         </div>
@@ -125,7 +125,7 @@
             <lb />which <persName type="composer">Wagner</persName>
             meant his glorious
             <lb />composition to be played? Or,
-            <seg ana="#suit_every_mood" resp="#np" type="topic">
+            <seg xml:id="topic_2" ana="#suit_every_mood" resp="#np" type="topic">
                 as
                 <lb />your mood changes
             </seg>, who but
@@ -136,7 +136,7 @@
             <lb />with the world's greatest masters.
             <lb />The <name type="brand">Welte-Mignon*</name> satisfies in this
             <lb />respect as well as in the
-            <seg ana="#exact_reproduction">
+            <seg xml:id="topic_3" ana="#exact_reproduction">
                 uncanny
                 <lb />fidelity
             </seg> with which it reproduces</ab>
@@ -146,7 +146,7 @@
             <lb />master musicians who have played
             <lb />upon it.
             <lb />
-            <seg ana="#invisibility" resp="#np" type="topic">
+            <seg xml:id="topic_4" ana="#invisibility" resp="#np" type="topic">
                 The <name type="brand">Welte-Mignon*</name> is invisible
             </seg>
             <lb />and does not interfere with manual

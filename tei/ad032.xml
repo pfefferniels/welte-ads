@@ -174,15 +174,15 @@
                 <lb />monplace of today. But there will never be anything commonplace about hav-
                 <lb />ing <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>
                 himself sit down at your piano,
-                <seg ana="#atmosphere" resp="#np" type="topic">
+                <seg xml:id="topic_1" ana="#atmosphere" resp="#np" type="topic">
                     in the twilight with the lamps low
                     <lb />and the fire burning
                 </seg>, and see the keys go down under the pressure of those
                 <lb />artistic fingers, and
-                <seg ana="#listening" resp="#np" type="topic">
+                <seg xml:id="topic_2" ana="#listening" resp="#np" type="topic">
                     listening. Just listening to him.
                 </seg>
-                <seg ana="#virtual_presence" resp="#np" type="topic">
+                <seg xml:id="topic_3" ana="#virtual_presence" resp="#np" type="topic">
                     Here he had lifted his
                     <lb />hands; there he had held that long-sustained note – could I not see him holding
                     <lb />it? He was sitting there playing. Here he was gentle, a little sad. Here again
@@ -203,7 +203,7 @@
         <div facs="#zone_cordially">
             <ab><hi rendition="#k">
                 <lb />that
-                <seg ana="#home" type="topic" resp="#np">
+                <seg xml:id="topic_4" ana="#home" type="topic" resp="#np">
                     you can have the most distinguished pian-
                     <lb />ists do this same thing in your home – with the
                     <lb /><name type="brand">Welte-Mignon</name>!
@@ -284,7 +284,7 @@
         <div facs="#zone_terms">
             <ab><hi rendition="#c">
             <lb />
-            <seg ana="#affordability" resp="#np" type="topic">
+            <seg xml:id="topic_5" ana="#affordability" resp="#np" type="topic">
                 Accommodating Terms of Payment.
             </seg>
             </hi></ab>

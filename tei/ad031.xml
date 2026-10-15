@@ -223,7 +223,7 @@
             <ab><hi rendition="#c #k">
                 <lb />These reproduction instruments are shown in the most
                 <lb />artistic styles, and form a
-                <seg ana="#home" resp="#np" type="topic">
+                <seg xml:id="topic_1" ana="#home" resp="#np" type="topic">
                     desirable addition
                     <lb />to every home of culture and refinement
                 </seg>

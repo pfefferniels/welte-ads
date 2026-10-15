@@ -194,7 +194,7 @@
     <text>
         <body>
         <div facs="#eSc_textblock_34edb91d" type="illustration">
-            <figure ana="#sitting_woman" resp="#np">
+            <figure xml:id="topic_1" ana="#sitting_woman" resp="#np">
                 <desc resp="#np">
                     Four persons facing a grand piano.
                     
@@ -208,19 +208,19 @@
         <div facs="#eSc_textblock_79199ad6">
             <ab><lb />
             <quote type="testimonial">
-                <seg ana="#home" resp="#np" type="topic">
+                <seg xml:id="topic_2" ana="#home" resp="#np" type="topic">
                     <hi rendition="#uc #g2">"<hi rendition="#in #larger">I</hi>t brings the world's greatest pianists into</hi>
                     <lb /><hi rendition="#uc #g2">my home</hi>
                 </seg>
                 ... That's why I bought
                 <lb />it."
             </quote>
-            <seg ana="#exact_reproduction" resp="#np" type="topic">
+            <seg xml:id="topic_3" ana="#exact_reproduction" resp="#np" type="topic">
                 The <name type="brand">Welte-Mignon Licensee Reproducing Piano</name>
                 <lb />permits not the slightest variation from the artistry
                 <lb />of the great musician. Its playing is the artist's play-<lb />ing;
             </seg>
-            <seg ana="#virtual_presence" resp="#np" type="topic">
+            <seg xml:id="topic_4" ana="#virtual_presence" resp="#np" type="topic">
                 you have but to close your eyes to
                 feel the pres-<lb />ence of the master at the keys.
             </seg>
@@ -249,7 +249,7 @@
             </hi></ab>
         </div>
         <div facs="#eSc_textblock_dbf156ed" type="illustration">
-            <figure ana="#phantom_body" resp="#np">
+            <figure xml:id="topic_5" ana="#phantom_body" resp="#np">
                 <desc resp="#np">
                     
                         Phantom Fingers.

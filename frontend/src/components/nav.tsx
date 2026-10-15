@@ -1,7 +1,8 @@
 "use client"
 
 import React from "react"
-import { useRouter, usePathname } from "next/navigation"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import Grid from "@mui/material/Grid"
 import Container from "@mui/material/Container"
 import Button from "@mui/material/Button"
@@ -41,7 +42,6 @@ const styles = {
 }
 
 const Nav = ({ menuLinks }: Props) => {
-  const router = useRouter()
   const pathname = usePathname()
 
   return (
@@ -57,7 +57,9 @@ const Nav = ({ menuLinks }: Props) => {
             fontWeight: 600,
           } : {}
 
-          const buttonStyle = {...styles.navBtn, ...active}
+          // the links must not take the colour of the site's visited links
+          const color = isActive ? theme.palette.primary.main : theme.palette.default.main
+          const buttonStyle = {"&, &:visited": { color }, ...styles.navBtn, ...active}
 
           return (
             <Grid item={true} key={link.name} xs={6} sm="auto" md="auto">
@@ -65,7 +67,8 @@ const Nav = ({ menuLinks }: Props) => {
                 color="default"
                 size="large"
                 sx={buttonStyle}
-                onClick={() => router.push(link.link)}
+                component={Link}
+                href={link.link}
               >
                 {link.name}
               </Button>

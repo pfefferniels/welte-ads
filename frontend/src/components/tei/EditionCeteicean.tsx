@@ -11,7 +11,7 @@ import Figure from "./Figure"
 import Metadata from "./Metadata"
 import MsIdentifier from "./MsIdentifier"
 import './style.css'
-import { Box, Dialog, DialogContent, IconButton, Paper, Stack, ToggleButton, ToggleButtonGroup } from "@mui/material"
+import { Box, Dialog, DialogContent, IconButton, Paper, Stack, ToggleButton, ToggleButtonGroup, Tooltip } from "@mui/material"
 import { Code, Download, LayersOutlined, Title } from "@mui/icons-material"
 import { Facsimile, computeLayout } from "../../lib/facsimile"
 
@@ -200,31 +200,41 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original }: Pro
           onChange={(_, value) => setMode(value as 'layout' | 'text')}
           aria-label="display mode"
         >
-          <ToggleButton value="layout" aria-label="layout" disabled={!hasLayout}>
-            <LayersOutlined />
+          {/* the tooltips sit inside the buttons: the group passes its
+              state to its direct children */}
+          <ToggleButton value="layout" aria-label="Layout view" disabled={!hasLayout}>
+            <Tooltip title="Layout view" placement="right">
+              <LayersOutlined />
+            </Tooltip>
           </ToggleButton>
-          <ToggleButton value="text" aria-label="text">
-            <Title />
+          <ToggleButton value="text" aria-label="Text view">
+            <Tooltip title="Text view" placement="right">
+              <Title />
+            </Tooltip>
           </ToggleButton>
         </ToggleButtonGroup>
 
         <Box mt={2}>
-          <IconButton onClick={() => {
-            const a = window.document.createElement('a')
-            a.href = window.URL.createObjectURL(new Blob([original], { type: 'application/xml' }))
-            a.download = `${name}.xml`
-            document.body.appendChild(a)
-            a.click()
-            document.body.removeChild(a)
-          }}>
-            <Download />
-          </IconButton>
+          <Tooltip title="Download TEI/XML" placement="right">
+            <IconButton aria-label="Download TEI/XML" onClick={() => {
+              const a = window.document.createElement('a')
+              a.href = window.URL.createObjectURL(new Blob([original], { type: 'application/xml' }))
+              a.download = `${name}.xml`
+              document.body.appendChild(a)
+              a.click()
+              document.body.removeChild(a)
+            }}>
+              <Download />
+            </IconButton>
+          </Tooltip>
         </Box>
 
         <Box mt={1}>
-          <IconButton onClick={() => setMetadataOpen(true)}>
-            <Code />
-          </IconButton>
+          <Tooltip title="Sources and metadata" placement="right">
+            <IconButton aria-label="Sources and metadata" onClick={() => setMetadataOpen(true)}>
+              <Code />
+            </IconButton>
+          </Tooltip>
         </Box>
       </Stack>
 

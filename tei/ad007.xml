@@ -140,14 +140,14 @@
         <div facs="#eSc_textblock_49bbbbff">
             <ab><lb />
             <hi rendition="#dropcap #framed">I</hi><hi rendition="#uc">s</hi>
-            <seg ana="#technical_invention" type="topic" resp="#np">
+            <seg xml:id="topic_1" ana="#technical_invention" type="topic" resp="#np">
                 the greatest achievement in the world of music
                 <lb />invention
             </seg>,
             as through it you may listen to accurate
             <lb />interpretations upon <hi rendition="#i">your own</hi> piano of over five thou-
             <lb />sand musical compositions,
-            <seg ana="#exact_reproduction" resp="#np" type="topic">
+            <seg xml:id="topic_2" ana="#exact_reproduction" resp="#np" type="topic">
                 precisely as they were
                 <lb />originally played
             </seg>

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
 import { JSDOM } from "jsdom"
-import { markRedundantLineBreaks, tidySpaceBeforePunctuation } from "./tei"
+import { getAllMetadata, markRedundantLineBreaks, tidySpaceBeforePunctuation } from "./tei"
 
 const marked = (body: string) => {
   const xml = `<TEI xmlns="http://www.tei-c.org/ns/1.0"><text>${body}</text></TEI>`
@@ -46,5 +46,18 @@ describe("tidySpaceBeforePunctuation", () => {
     expect(tidied("<p>Preis : 50 Pfg.</p>")).toBe("Preis : 50 Pfg.")
     expect(tidied('<p>das <name>Welte</name> "Mignon"</p>')).toBe('das Welte "Mignon"')
     expect(tidied('<p>„<name>Mignon</name> “ ist</p>')).toBe("„Mignon“ ist")
+  })
+})
+
+describe("getAllMetadata", () => {
+  const segments = getAllMetadata().flatMap(ad =>
+    ad.topicSegments.map(segment => ({ slug: ad.slug, ...segment })))
+
+  it("gives every topic segment an xml:id to link to", () => {
+    expect(segments.filter(segment => !segment.id).map(segment => segment.slug)).toEqual([])
+  })
+
+  it("lists a segment with several topics once per topic", () => {
+    expect(segments.filter(segment => /\s/.test(segment.topic))).toEqual([])
   })
 })

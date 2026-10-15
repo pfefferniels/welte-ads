@@ -117,14 +117,14 @@
                 <lb /><name type="brand">"Welte-Mignon"</name> wiedergegeben zu hören! Der Ruf der
                 <lb /><name type="brand">"Welte-Mignon-Pianos"</name>, das Vollendetste zu sein auf
                 <lb />diesem Gebiete, ist fest begründet in dieser
-                <seg ana="#exact_reproduction" resp="#np" type="topic">
+                <seg xml:id="topic_1" ana="#exact_reproduction" resp="#np" type="topic">
                     getreuen
                     <lb />Wiedergabe des individuellen Spiels
                 </seg>, und es ist mir eine
                 <lb />künstlerische Befriedigung und eine Freude, heute dem
                 <lb /><name type="brand">"Welte-Mignon"</name> ein reiches vielseitiges Programm
                 <lb />anvertraut zu haben, das
-                <seg ana="#immortality" resp="#np" type="topic">
+                <seg xml:id="topic_2" ana="#immortality" resp="#np" type="topic">
                     meine Kunst der Nachwelt
                     <lb />überträgt.
                 </seg>"
@@ -138,7 +138,7 @@
             <quote type="testimonial">
                 <lb />"Den Reproduktionsapparat <name type="brand">"Welte-Mignon"</name> halte ich
                 <lb />für
-                <seg ana="#technical_invention" resp="#np" type="topic">
+                <seg xml:id="topic_3" ana="#technical_invention" resp="#np" type="topic">
                     eine epochemachende Erfindung.
                 </seg>
                 Die Wiedergabe
@@ -146,19 +146,19 @@
                 <lb />stücke ist nach jeder Richtung, sowohl was das rein tech-
                 <lb />nisch-virtuose, wie auch was das musikalisch-poetische
                 <lb />Element betrifft, eine so verblüffend natürlich,
-                <seg ana="#virtual_presence" resp="#np" type="topic">
+                <seg xml:id="topic_4" ana="#virtual_presence" resp="#np" type="topic">
                     daß man
                     <lb />wirklich meint, den betr. Künstler in Person vor sich zu
                     <lb />haben und ihn spielen zu hören.
                 </seg>
                 Der Wert der Erfindung
                 <lb />besteht demnach nicht nur in dem
-                <seg ana="#educational_use" resp="#np" type="topic">
+                <seg xml:id="topic_5" ana="#educational_use" resp="#np" type="topic">
                     eminent pädagogischen
                     <lb />Einfluß auf den Lernenden
                 </seg>, sondern in ganz hervorragen-
                 <lb />der Weise auch
-                <seg ana="#touch_of_a_button" resp="#np" type="topic">
+                <seg xml:id="topic_6" ana="#touch_of_a_button" resp="#np" type="topic">
                     für denjenigen, welcher, um eine Stunde
                     <lb />künstlerischen Genusses bequem sich zu verschaffen,
                     <lb />irgendeinen hervorragenden Künstler "zitieren" will.
@@ -176,7 +176,7 @@
             <lb />Philharmonie-Orgel</ab>
         </div>
         <div facs="#eSc_textblock_2e01c03a">
-            <ab><seg ana="#home" type="topic" resp="#np">
+            <ab><seg xml:id="topic_7" ana="#home" type="topic" resp="#np">
                 <lb />für das
                 <lb />vornehme
                 <lb />Privat-Haus

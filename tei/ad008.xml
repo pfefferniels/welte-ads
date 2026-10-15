@@ -99,7 +99,7 @@
         <div facs="#eSc_textblock_16a9ec04">
             <ab><quote type="testimonial">
                 <lb />Das <name type="brand">Welte Mignon</name> ist eine
-                <seg ana="#technical_invention" resp="#np" type="topic">
+                <seg xml:id="topic_1" ana="#technical_invention" resp="#np" type="topic">
                     unbedingt geniale Erfindung
                 </seg>, und hat einen hohen
                 künstlerischen
@@ -111,10 +111,10 @@
 
             <quote type="testimonial">
                 <lb />Mignon ist für mich
-                <seg ana="#unreached_ideal" type="topic" resp="#np">das unerreichte Ideal aller
+                <seg xml:id="topic_2" ana="#unreached_ideal" type="topic" resp="#np">das unerreichte Ideal aller
                     Musik-Instrumente
                 </seg>,
-                <seg ana="#educational_use" type="topic" resp="#np">
+                <seg xml:id="topic_3" ana="#educational_use" type="topic" resp="#np">
                     eine Erfindung von unschätz-
                     <lb />barer Bedeutung für Lehrer,
                     Schüler
@@ -133,20 +133,20 @@
             ist, wie die berühmtesten Künstler anerkennen, ein phantastisch scheinender Gedanke
             <lb />verwirklicht, nämlich das Klavierspiel eines Künstlers mit all' seinen persönlichen Eigenschaften - des Anschlags,
             <lb />der Phrasierung, des Pedalgebrauchs etc.
-            <seg ana="#immortality" type="topic" resp="#np">
+            <seg xml:id="topic_4" ana="#immortality" type="topic" resp="#np">
                 zu verewigen
             </seg>.
-            <seg ana="#distinction_from_mechanical" type="topic" resp="#np">
+            <seg xml:id="topic_5" ana="#distinction_from_mechanical" type="topic" resp="#np">
                 Die Wiedergaben des <name type="brand">Mignon</name> haben
                 jeden Rest des mecha-
                 <lb />nischen verlassen.
             </seg> Dass es sich um eine Erfindung von
             ausserordentlicher künstlerischer Bedeutung handelt,
-            <seg ana="#educational_use" type="topic" resp="#np">
+            <seg xml:id="topic_6" ana="#educational_use" type="topic" resp="#np">
                 beweist
                 <lb />ihr Gebrauch im <orgName>K. K. Konservatorium in Wien</orgName> zu Studienzwecken
             </seg>.
-            <seg ana="#touch_of_a_button" resp="#np" type="topic">
+            <seg xml:id="topic_7" ana="#touch_of_a_button" resp="#np" type="topic">
                 Der Besitzer eines <name type="brand">Welte Mignon</name> kann sich
                 <lb />jederzeit von den berühmtesten Musikern, wie
                 <persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>

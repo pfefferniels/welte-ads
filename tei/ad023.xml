@@ -229,7 +229,7 @@
                 <lb />extensive <name type="brand">Welte-Mignon (Licensee) Library</name>
                 <lb />of Music.
                 <lb />
-                <seg ana="#personality" type="topic" resp="#np">
+                <seg xml:id="topic_1" ana="#personality" type="topic" resp="#np">
                     All the verve,
                     all the delicate tone shading, all
                     <lb />the personality that makes of the artist a true
@@ -237,17 +237,17 @@
             </div>
             <div facs="#eSc_textblock_a311a566">
                 <ab><lb />artists have been retained and
-                <seg ana="#exact_reproduction" type="topic" resp="#np">
+                <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#np">
                     reproduced ex-
                     <lb />actly
-                    <seg ana="#virtual_presence" type="topic" resp="#np">
+                    <seg xml:id="topic_3" ana="#virtual_presence" type="topic" resp="#np">
                         as though the master himself were seated
                         <lb />at the keyboard.
                     </seg>
                 </seg>
                 <lb />This is possible, and only is it
                 possible, through<lb />the <name type="brand">Welte-Mignon (Licensee)</name>
-                <seg ana="#analogy_to_photography" resp="#np" type="topic">
+                <seg xml:id="topic_4" ana="#analogy_to_photography" resp="#np" type="topic">
                     photographic<lb />process of
                     recording.
                 </seg></ab>

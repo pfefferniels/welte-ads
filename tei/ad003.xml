@@ -101,14 +101,14 @@
         <div facs="#eSc_textblock_8235fd10"><ab><hi rendition="#c">
             <lb />bietet die Möglichkeit, das <hi rendition="#b">Originalspiel der</hi>
             <lb /><hi rendition="#b">ersten Pianisten der Welt</hi>
-            <seg ana="#home" resp="#np" type="topic">
+            <seg xml:id="topic_1" ana="#home" resp="#np" type="topic">
                 <hi rendition="#b">im eigenen</hi>
                 <lb /><hi rendition="#b">Heim</hi> zu hören.
             </seg></hi></ab>
         </div>
         <div facs="#eSc_textblock_77dbd8b9"><ab><hi rendition="#c">
             <lb />
-            <seg ana="#touch_of_a_button" resp="#np" type="topic">
+            <seg xml:id="topic_2" ana="#touch_of_a_button" resp="#np" type="topic">
                 Ein Druck auf den Knopf genügt, um einen 
                 <hi rendition="#b"><persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>,
                 <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>,

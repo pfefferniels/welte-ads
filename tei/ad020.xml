@@ -313,7 +313,7 @@
         <div facs="#eSc_textblock_535af4ac">
             <ab><lb />
             <hi rendition="#uc #g">
-                <seg type="slogan" ana="#virtual_presence" resp="#np">
+                <seg xml:id="topic_1" type="slogan" ana="#virtual_presence" resp="#np">
                     The Master's Fingers On your Piano
                 </seg>
             </hi></ab></div>
@@ -325,7 +325,7 @@
             </hi></hi>
             <lb /><hi rendition="#dropcap">I</hi><hi rendition="#uc">magine</hi> a musical instrument that
             <lb />
-            <seg ana="#home" type="topic" resp="#np">
+            <seg xml:id="topic_2" ana="#home" type="topic" resp="#np">
                 brings to your home
             </seg>
             flawless reproduc-
@@ -339,10 +339,10 @@
             <persName corresp="https://d-nb.info/gnd/119362112">Casella</persName>,
             <persName corresp="https://d-nb.info/gnd/118694820">Gieseking</persName> and a
             <lb />host of other world-famous pianists.
-            <seg ana="#distinction_from_mechanical #personality">
+            <seg xml:id="topic_3" ana="#distinction_from_mechanical #personality">
                 Not<lb />approximations of their playing, but their<lb />very individuality.
             </seg>
-            <seg ana="#exact_reproduction #secret">
+            <seg xml:id="topic_4" ana="#exact_reproduction #secret">
                 <hi rendition="#i">Only</hi> <hi rendition="#uc"><name type="brand">Welte-Mignon</name></hi>*<lb /><hi rendition="#i">possesses this secret of perfect reproduction.</hi>
             </seg>
             <lb />Select any piano you prefer but be sure the

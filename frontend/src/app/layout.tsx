@@ -23,10 +23,12 @@ export const metadata: Metadata = {
 
 const menuLinks = [
   { name: 'Introduction', link: '/' },
+  { name: 'History', link: '/history' },
   { name: 'Advertisements', link: '/overview' },
   { name: 'Companies', link: '/companies' },
   { name: 'Artists', link: '/artists' },
   { name: 'Topics', link: '/topics' },
+  { name: 'Guidelines', link: '/guidelines' },
 ]
 
 export default function RootLayout({

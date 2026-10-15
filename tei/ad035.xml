@@ -243,7 +243,7 @@
                     <lb />Autograph Piano</name>
                 </hi></hi>
                 <hi rendition="#g"><lb />Is the
-                <seg ana="#soulfulness" resp="#np" type="topic">
+                <seg xml:id="topic_1" ana="#soulfulness" resp="#np" type="topic">
                     Living Soul of the Artist
                 </seg></hi>
             </hi></ab>
@@ -272,7 +272,7 @@
             <ab><lb /><hi rendition="#et">It has the <hi rendition="#i">living touch</hi> which differentiates the <name type="brand">Welte-Mignon</name></hi>
             <lb />from every other piano playing device in the world.
             <lb />
-            <seg ana="#exact_reproduction" type="topic" resp="#np">
+            <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#np">
                 <hi rendition="#et">So accurately does the Welte reproduce each note—each delicate</hi>
                 <lb />shade of contrast—and the individuality of the player, that famous critics
                 <lb />declare it impossible to believe that the artist is not actually playing.
@@ -282,7 +282,7 @@
                 <quote>
                     "The Welte is without a doubt
                     <lb />the
-                    <seg ana="#technical_invention" resp="#np" type="topic">
+                    <seg xml:id="topic_3" ana="#technical_invention" resp="#np" type="topic">
                         most remarkable musical invention of our age.
                     </seg>"
                 </quote></hi>

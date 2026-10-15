@@ -103,7 +103,7 @@
 
             <p>
                 <lb />
-                <seg ana="#home #entertainment #hostess" resp="#np" type="topic">
+                <seg xml:id="topic_1" ana="#home #entertainment #hostess" resp="#np" type="topic">
                     <hi rendition="#k">Entertaining</hi> at home in the summertime is a very easy and a very enjoyable mat-
                     <lb />ter for the hostess who has a
                     <name type="brand">
@@ -113,14 +113,14 @@
             </p>
 
             <p>
-                <seg ana="#entertainment" resp="#np" type="topic">
+                <seg xml:id="topic_2" ana="#entertainment" resp="#np" type="topic">
                     <lb /><hi rendition="#k">During</hi> dinner, guests are entertained by the most beautiful music of all time played
                     <lb />by practically all of the great pianists of the past two decades.
                 </seg>
             </p>
 
             <p>
-                <seg ana="#dance #popular #jazz" resp="#np" type="topic">
+                <seg xml:id="topic_3" ana="#dance #popular #jazz" resp="#np" type="topic">
                     <lb /><hi rendition="#k">After</hi> dinner comes dancing, perhaps on the veranda, with the
                     <name type="brand">Welte-Mignon</name> provid-
                     <lb />ing the newest and most popular dance hits, played by a hundred masters of jazz.

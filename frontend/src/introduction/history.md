@@ -6,7 +6,7 @@ path: "/history"
 
 ### "When Phantom Finger's Play" (1923/24)
 In 1923, William C. Heaton, president of the
-[Auto Pneumatic Action Co.](/companies/auto.pneumatic.action), 
+*Auto Pneumatic Action Co.*, 
 announced a nation-wide advertising campaign starting from March of the 
 same year,[^1] not only to increase the sales of Welte-Mignon equipped
 pianos, but also to "acquaint the general public with exactly what 

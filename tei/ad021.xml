@@ -223,7 +223,7 @@
       <body>
       <div facs="#eSc_textblock_c6e9cfe9">
         <ab><hi rendition="#c">
-                <lb/>The <seg ana="#superiority">superiority</seg> of any
+                <lb/>The <seg xml:id="topic_1" ana="#superiority">superiority</seg> of any
                 <lb/><hi rendition="#i">reproducing</hi> piano
                 <lb/>is assured if it
                 <lb/>contains the
@@ -239,12 +239,12 @@
          <lb/>it contains the famous <name type="brand">WELTE-
          <lb/>MIGNON LICENSEE REPRODUCING
          <lb/>ACTION</name>.
-         <seg ana="#exact_reproduction #secret" resp="#np" type="topic">
+         <seg xml:id="topic_2" ana="#exact_reproduction #secret" resp="#np" type="topic">
             <hi rendition="#i">Only <name type="brand">Welte-Mignon Licensee</name>
             <lb/>possesses the secret of perfect reproduc-
             <lb/>tion.</hi>
         </seg>
-        <seg ana="#home" resp="#np" type="topic">
+        <seg xml:id="topic_3" ana="#home" resp="#np" type="topic">
             <name type="brand">Welte-Mignon Licensee</name> brings to
             <lb/>your home
         </seg> flawless interpretations by
@@ -295,7 +295,7 @@
         </figure>
       </div>
       <div facs="#eSc_textblock_ae66d627" type="illustration">
-        <figure ana="#phantom_body" resp="#np">
+        <figure xml:id="topic_4" ana="#phantom_body" resp="#np">
             <desc resp="#np">
                 
                     Ghost hands on a piano.

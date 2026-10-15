@@ -110,7 +110,7 @@
 
         <div facs="#zone_paragraph1">
             <p>
-                <seg ana="#listening" resp="#np" type="topic">
+                <seg xml:id="topic_1" ana="#listening" resp="#np" type="topic">
                     <lb />–not while he sits at the piano, but
                     <lb />comfortably established in an easy
                     <lb />chair like other hearers–he is listen-
@@ -137,7 +137,7 @@
                 <persName corresp="https://d-nb.info/gnd/118953915">Carreño</persName> and other
                 <lb />great artists have all been heard by
                 <lb />the musicians themselves and
-                <seg ana="#exact_reproduction" resp="#np" type="topic">
+                <seg xml:id="topic_2" ana="#exact_reproduction" resp="#np" type="topic">
                     signed
                     <lb />by them as true and actual <hi rendition="#i">autographs</hi>
                     <lb />of their playing.

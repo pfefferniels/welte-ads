@@ -228,7 +228,7 @@
             <lb />of conceiving and build-
             <lb />ing an instrument that would reproduce the
             <lb />actual playing of a great pianist.
-            <seg ana="#technical_invention" resp="#np" type="topic">
+            <seg xml:id="topic_1" ana="#technical_invention" resp="#np" type="topic">
                 <lb />Though a clock-maker by trade, Welte
                 <lb />was given to study and invention
             </seg>
@@ -266,7 +266,7 @@
                 <lb />impossible before."
             </quote>
             <lb />
-            <seg ana="#technical_invention" resp="#np" type="topic">
+            <seg xml:id="topic_2" ana="#technical_invention" resp="#np" type="topic">
                 Many years before <persName>Edison</persName> dreamed his
                 <lb />thrilling dream of the phonograph the fame
                 <lb />of Welte's new invention had traveled
@@ -293,7 +293,7 @@
             <lb />Eight years later <persName>Michael Welte</persName>, the clock-
             <lb />maker, closed his eyes forever, leaving his
             <lb />sons endowed with his own inventive genius.
-            <seg ana="#technical_invention" resp="#np" type="topic">
+            <seg xml:id="topic_3" ana="#technical_invention" resp="#np" type="topic">
                 <lb />In 1887, <persName>Emil Welte</persName>
                 startled the world by the
                 <lb />invention of a paper music-roll in connection
@@ -365,23 +365,23 @@
         </div>
         <div facs="#eSc_textblock_1a73062e">
             <ab><lb />
-            <hi rendition="#c"><seg ana="#exact_reproduction #secret" type="topic" resp="#np">
+            <hi rendition="#c"><seg xml:id="topic_4" ana="#exact_reproduction #secret" type="topic" resp="#np">
                 Perfect Reproduction – <hi rendition="#i">The Secret of</hi> Welte Mignon*
             </seg></hi></ab>
         </div>
         <div facs="#eSc_textblock_38047c95">
-            <ab><seg ana="#analogy_to_photography" resp="#np" type="topic">
+            <ab><seg xml:id="topic_5" ana="#analogy_to_photography" resp="#np" type="topic">
                 <lb /><hi rendition="#k">The <name type="brand">Welte-Mignon</name>*</hi> method of recording
                 <lb />a player's performance is photographic.
                 <lb />Through this
-                <seg ana="#secret" resp="#np" type="topic">
+                <seg xml:id="topic_6" ana="#secret" resp="#np" type="topic">
                     secret photographic process
                 </seg>-
                 <lb /><hi rendition="#i">possessed only by</hi> <hi rendition="#k"><name type="brand">Welte-Mignon,*</name></hi> <hi rendition="#i">available</hi>
                 <lb /><hi rendition="#i">only to</hi> <hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> - the artist's play-
                 <lb />ing is actually photographed – his tempo, his
                 <lb />speaking notes, his dynamics,
-                <seg ana="#soulfulness" resp="#np" type="topic">
+                <seg xml:id="topic_7" ana="#soulfulness" resp="#np" type="topic">
                     those subtle
                     <lb />things that infuse an artist's very soul into
                     <lb />his playing.
@@ -393,7 +393,7 @@
         </div>
         <div facs="#eSc_textblock_f403edec">
             <ab><lb />the vigor of fortissimo.
-            <seg ana="#analogy_to_photography" resp="#np" type="topic">
+            <seg xml:id="topic_8" ana="#analogy_to_photography" resp="#np" type="topic">
                 And this photo-
                 <lb />graphic record is so perfect–so identically
                 <lb />the physical impression of the master's per-
@@ -453,7 +453,7 @@
         <pb />
 
         <div facs="#eSc_textblock_36a1467b" type="illustration">
-            <ab><seg ana="#phantom_body" resp="#np" type="topic">
+            <ab><seg xml:id="topic_9" ana="#phantom_body" resp="#np" type="topic">
                 <figure>
                     <desc resp="#np">
                         Semi-transparent pianist sitting at an opened
@@ -464,7 +464,7 @@
             </seg></ab>
         </div>
         <div facs="#eSc_textblock_10ec60b1">
-            <ab><hi rendition="#i"><seg ana="#phantom_body" resp="#np" type="topic">
+            <ab><hi rendition="#i"><seg xml:id="topic_10" ana="#phantom_body" resp="#np" type="topic">
                 <lb /><hi rendition="#b"><name type="brand">Welte Mignon</name></hi> Puts the Phantom-
                 <lb />Hands of the Masters on your keyboard
             </seg></hi>
@@ -472,17 +472,17 @@
             <lb />music. <hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> makes hu-
             <lb />man the mechanical reproduction of
             <lb />music.
-            <seg ana="#soulfulness #personality" resp="#np" type="topic">
+            <seg xml:id="topic_11" ana="#soulfulness #personality" resp="#np" type="topic">
                 It supplies the soul and the
                 <lb />personality which the individual art-
                 <lb />ist puts into his playing.
             </seg>
             No one sits
             <lb />at the piano.
-            <seg ana="#phantom_body" resp="#np" type="topic">
+            <seg xml:id="topic_12" ana="#phantom_body" resp="#np" type="topic">
                 Only the phantom<lb />hands of the masters touch the keys
             </seg>
-            <seg ana="#listening" resp="#np" type="topic">
+            <seg xml:id="topic_13" ana="#listening" resp="#np" type="topic">
                 <lb />-and you listen to the music as
                 <lb />masters play it-rhythm, tone, col-
                 <lb />or, quality, individuality. Just lis-
@@ -503,7 +503,7 @@
             <ab><lb />equipped with the marvelous <name type="brand">Welte-
             <lb />Mignon Licensee Action</name> - a selec-
             <lb />tion is played for you
-            <seg ana="#virtual_presence" resp="#np" type="topic">
+            <seg xml:id="topic_14" ana="#virtual_presence" resp="#np" type="topic">
                 with all the
                 <lb />skill, warmth and color, and all the
                 <lb />delicate shades of tone as though

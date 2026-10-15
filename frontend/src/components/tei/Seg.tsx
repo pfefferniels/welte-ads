@@ -12,7 +12,8 @@ interface TEIProps {
 
 const Seg = ({ teiNode, availableRoutes }: TEIProps) => {
   const seg = teiNode as Element
-  const topic = seg.getAttribute("ana")
+  // a segment can stand for several topics
+  const topics = (seg.getAttribute("ana") || '').split(/\s+/).filter(Boolean)
   const resp = seg.getAttribute("resp") || 'unknown'
   const type = seg.getAttribute('type') || ''
 
@@ -50,9 +51,15 @@ const Seg = ({ teiNode, availableRoutes }: TEIProps) => {
       >
         <div style={{ padding: '1rem' }}>
           <span color='gray'>{type}: </span>
+          {topics.map((topic, i) => (
+            <React.Fragment key={topic}>
+              {i > 0 && ', '}
               <Link href={`/topic/${topic}`}>
-                {topicLabels[topic as string] || topic}
-              </Link><sup>{resp}</sup>
+                {topicLabels[topic] || topic}
+              </Link>
+            </React.Fragment>
+          ))}
+          <sup>{resp}</sup>
         </div>
       </Popover>
     </Behavior>

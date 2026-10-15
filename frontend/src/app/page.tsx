@@ -9,12 +9,18 @@ export const metadata = {
 
 const htmlTitle = "Welte-Mignon Advertisements Collection"
 
-const authors = [
+interface Author {
+  first: string
+  last: string
+  affiliations: string[]
+  orcid?: string
+}
+
+const authors: Author[] = [
   {
     first: "Niels",
     last: "Pfeffer",
     affiliations: ["University Tübingen"],
-    orcid: "0000-0000-0000-0000",
   },
 ]
 
@@ -28,7 +34,7 @@ const contentStyles = {
   "& blockquote": {
     marginLeft: "5rem",
   },
-  "& .footnote-backref": {
+  "& .data-footnote-backref": {
     marginLeft: ".75rem",
   },
 }

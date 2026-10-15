@@ -1,7 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import { JSDOM } from 'jsdom'
-import { v4 } from 'uuid'
 import { Facsimile, FacsSurface, FacsZone, Point, parsePoints } from './facsimile'
 
 const TEI_NS = 'http://www.tei-c.org/ns/1.0'
@@ -305,6 +304,9 @@ interface AdMetadata {
   slug: string
   company: { name: string; link: string }
   title: string
+  // the title and subtitle of the TEI file: where and when the ad appeared
+  titleMain: string
+  titleSub: string
   dates: string[]
   newspapers: string[]
   mentions: string[]
@@ -326,7 +328,11 @@ function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
     name: doc.querySelector('orgName[key]')?.getAttribute('key') || '',
     link: doc.querySelector('pubPlace[ref]')?.getAttribute('ref') || '',
   }
-  const title = doc.querySelector('bibl')?.innerHTML || ''
+  const text = (selector: string) =>
+    (doc.querySelector(selector)?.textContent || '').replace(/\s+/g, ' ').trim()
+  const title = text('bibl')
+  const titleMain = text('fileDesc > titleStmt > title[type="main"]')
+  const titleSub = text('fileDesc > titleStmt > title[type="sub"]')
   const dates = Array.from(doc.querySelectorAll('date[type="publication"]')).map(
     date => date.innerHTML
   )
@@ -342,15 +348,17 @@ function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
       const ana = seg.getAttribute('ana')
       if (!ana) return []
 
-      return ana.split(' ').map(a => ({
-        id: `#${seg.getAttribute('xml:id') || v4()}`,
+      // without an xml:id, a segment can only be linked as part of its ad
+      const id = seg.getAttribute('xml:id')
+      return ana.split(/\s+/).filter(Boolean).map(a => ({
+        id: id ? `#${id}` : '',
         topic: a,
         text: seg.textContent || '',
       }))
     })
     .flat()
 
-  return { company, title, dates, newspapers, mentions, topicSegments }
+  return { company, title, titleMain, titleSub, dates, newspapers, mentions, topicSegments }
 }
 
 function getTeiDir(): string {

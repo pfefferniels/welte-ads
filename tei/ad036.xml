@@ -103,7 +103,7 @@
             </hi></ab>
         </div>
         <div facs="#eSc_textblock_4402ea80">
-            <ab><seg ana="#educational_use" resp="#np" type="topic">
+            <ab><seg xml:id="topic_1" ana="#educational_use" resp="#np" type="topic">
                 <lb />The <hi rendition="#uc"><name type="brand">Welte-Mignon</name></hi> can be likened to a college for teaching
                 <lb />the art of playing the piano.
                 <lb />This college has a faculty of one hundred fifty-six instructors—the

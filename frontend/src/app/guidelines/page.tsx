@@ -17,7 +17,7 @@ const contentStyles = {
   "& blockquote": {
     marginLeft: "5rem",
   },
-  "& .footnote-backref": {
+  "& .data-footnote-backref": {
     marginLeft: ".75rem",
   },
 }

@@ -168,16 +168,16 @@
             <ab><lb />The magic reproduction
             <lb />of <name type="brand">Welte-Mignon Licensee</name>
             <lb />
-            <seg ana="#educational_use">
+            <seg xml:id="topic_1" ana="#educational_use">
                 makes available for professional
                 <lb />or student the authentic interpre-
                 <lb />tation of the world's foremost
                 <lb />pianists.
                 <lb />
-                <seg ana="#analysis">
+                <seg xml:id="topic_2" ana="#analysis">
                     To study in close detail
                 </seg>,
-                <seg ana="#repeatability">
+                <seg xml:id="topic_3" ana="#repeatability">
                     by fre-
                     <lb />quent repetition
                 </seg>, the playing of

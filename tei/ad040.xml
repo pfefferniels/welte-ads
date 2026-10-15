@@ -127,7 +127,7 @@
                 </name>.
                 It brings you the world's
                 <lb />finest music,
-                <seg ana="#personality" type="topic" resp="#np">
+                <seg xml:id="topic_1" ana="#personality" type="topic" resp="#np">
                     played with all the tone-color, the fire, the
                     <lb />verve, the <hi rendition="#i">personality</hi> of the great pianists.
                 </seg>
@@ -137,7 +137,7 @@
         <div facs="#eSc_textblock_5abd2d51">
             <p>
                 <lb />to hear it to realize that
-                <seg ana="#exact_reproduction" resp="#np" type="topic">
+                <seg xml:id="topic_2" ana="#exact_reproduction" resp="#np" type="topic">
                     <hi rendition="#i">its playing is the artist's playing.</hi>
                 </seg>
                 <lb /><hi rendition="#et">Your piano merchant will be proud to give you a</hi>

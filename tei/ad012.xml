@@ -168,18 +168,18 @@
             <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>
             and scores of others, to
             <lb />
-            <seg ana="#immortality" resp="#np" type="topic">
+            <seg xml:id="topic_1" ana="#immortality" resp="#np" type="topic">
                 preserve their genius for posterity.
             </seg>
             <hi rendition="#smaller">
             <lb />You should hear <persName corresp="https://d-nb.info/gnd/118986724" type="artist">Paderewski's</persName> reproductions;
-            <seg ana="#soulfulness" resp="#np" type="topic">
+            <seg xml:id="topic_2" ana="#soulfulness" resp="#np" type="topic">
                 hear how
                 <lb />he has played
                 his soul into indestructible records for the
                 <lb /><name type="brand">Welte-Mignon</name>
             </seg>.
-            <seg ana="#repeatability" resp="#np" type="topic">
+            <seg xml:id="topic_3" ana="#repeatability" resp="#np" type="topic">
                 Records which you may
                 reproduce at any
                 <lb />time and as often as you like
@@ -195,7 +195,7 @@
             </num>
             selections for the <name type="brand">Welte-Mignon</name>. Imagine
             <lb />the delight to be derived from such a collection.
-            <seg ana="#affordability" resp="#np" type="topic">
+            <seg xml:id="topic_4" ana="#affordability" resp="#np" type="topic">
                 And con-
                 <lb />sider that the <name type="brand">Welte-Mignon Reproducing Piano</name> is within
                 <lb />everyone's means, for it may be
@@ -211,7 +211,7 @@
         </div>
 
         <div facs="#eSc_textblock_8162a045" type="illustration">
-            <ab><seg ana="#sitting_woman" resp="#np" type="topic">
+            <ab><seg xml:id="topic_5" ana="#sitting_woman" resp="#np" type="topic">
                 <figure>
                     <desc resp="#np">
                         Woman sitting in a chair in front of an

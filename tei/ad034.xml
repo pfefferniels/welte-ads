@@ -166,17 +166,17 @@
         </div>
         <div facs="#eSc_textblock_d9bf3380">
             <p>
-                <seg ana="#technical_invention" resp="#np" type="topic">
+                <seg xml:id="topic_1" ana="#technical_invention" resp="#np" type="topic">
                     <lb />
                     <hi rendition="#in">T</hi>he highest achievement of the House
                     <lb /><hi rendition="#et">of Welte in the world of music in-</hi>
                     <lb />vention
                 </seg>
-                <seg ana="#immortality" resp="#np" type="topic">
+                <seg xml:id="topic_2" ana="#immortality" resp="#np" type="topic">
                     whereby generations yet unborn may
                     <lb />listen to
                 </seg>
-                <seg ana="#exact_reproduction" resp="#np" type="topic">
+                <seg xml:id="topic_3" ana="#exact_reproduction" resp="#np" type="topic">
                     accurate and authentic interpreta-
                     <lb />tions upon the piano,
                 </seg>

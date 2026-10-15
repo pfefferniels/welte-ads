@@ -111,7 +111,7 @@
         </div>
 
         <div facs="#eSc_textblock_ffd3c78d" type="illustration">
-            <figure ana="#sitting_woman" resp="#np">
+            <figure xml:id="topic_1" ana="#sitting_woman" resp="#np">
                 <desc resp="#np">
                     
                         Woman sitting
@@ -131,15 +131,15 @@
             <lb />MIGNON Library</name> of over
             <lb />three thousand Master
             <lb />Recordings . . .
-            <seg ana="#suit_every_mood" resp="#np" type="topic">
+            <seg xml:id="topic_2" ana="#suit_every_mood" resp="#np" type="topic">
                 clas-
                 <lb />sical music,
-                <seg ana="#popular" resp="#np" type="topic">
+                <seg xml:id="topic_3" ana="#popular" resp="#np" type="topic">
                     modern
                     <lb />music
                 </seg>, orchestral music,
                 <lb />
-                <seg ana="#dance" resp="#np" type="topic">
+                <seg xml:id="topic_4" ana="#dance" resp="#np" type="topic">
                     ballets and dance ...
                 </seg>
                 <lb />a program to suit every
@@ -154,7 +154,7 @@
         </div>
         <div facs="#eSc_textblock_8b4f9efa">
             <ab><lb />
-            <seg ana="#touch_of_a_button" type="topic" resp="#np">
+            <seg xml:id="topic_5" ana="#touch_of_a_button" type="topic" resp="#np">
                 <hi rendition="#i">At the touch of a button . . .
                 <lb />without moving from your chair . .</hi>
             </seg></ab>
@@ -164,23 +164,23 @@
             <lb />years . . . From the <orgName>House of Welte</orgName>
             <lb />came the announcement in 1904 of an
             <lb />instrument which
-            <seg ana="#exact_reproduction">
+            <seg xml:id="topic_6" ana="#exact_reproduction">
                 exactly reproduced the play-
                 <lb />ing of the master pianists. . . .
             </seg>
             <lb />Today—twenty-four years later—the <orgName>WELTE-
             <lb />MIGNON Corporation</orgName> announces
-            <seg ana="#technical_invention">
+            <seg xml:id="topic_7" ana="#technical_invention">
                 the second
                 <lb />truly great and significant step in the progress
                 <lb />of musical reproduction . . . the <name type="brand">WELTE-
                 <lb />MIGNON Musicalle</name>.
             </seg>
-            <seg ana="#sitting_woman">
+            <seg xml:id="topic_8" ana="#sitting_woman">
                 <lb /><hi rendition="#i">. . . A woman relaxes in the soft depths of
                 <lb />her favorite chair . . .</hi>
             </seg>
-            <seg ana="#touch_of_a_button">
+            <seg xml:id="topic_9" ana="#touch_of_a_button">
                 <hi rendition="#i">On the table by her
                 <lb />side rests a small tablet with eight ivory but-
                 <lb />tons . . . She presses one . . . From her
@@ -193,12 +193,12 @@
                 <persName type="composer">Mendels-
                 <lb />sohn's</persName> "Rondo Capriccioso."</hi>
             </seg>
-            <seg ana="#suit_every_mood" resp="#np" type="topic">
+            <seg xml:id="topic_10" ana="#suit_every_mood" resp="#np" type="topic">
                 <hi rendition="#i">In modern mood
                 <lb />she turns to <persName type="composer">Gershwin</persName> . . . "The Rhap-
                 <lb />sody in Blue" . . .</hi>
             </seg>
-            <seg ana="#listening" resp="#np" type="topic">
+            <seg xml:id="topic_11" ana="#listening" resp="#np" type="topic">
                 <hi rendition="#i">For an hour or more, she
                 <lb />revels in the world's great piano music . . .
                 <lb />never moving from her chair . . .</hi>
@@ -209,7 +209,7 @@
         <div facs="#eSc_textblock_2aef91d9">
             <ab><lb />Such simplicity of operation has never before
             <lb />been achieved in musical reproduction.
-            <seg ana="#invisibility" resp="#np" type="topic">
+            <seg xml:id="topic_12" ana="#invisibility" resp="#np" type="topic">
                 Every
                 <lb />annoying interruption is banished . . . no
                 <lb />dials to turn . . . no rerolling . . .
@@ -243,7 +243,7 @@
         </div>
         <div facs="#eSc_textblock_7d6330b8">
             <ab><lb />
-            <seg ana="#immortality" resp="#np" type="topic">
+            <seg xml:id="topic_13" ana="#immortality" resp="#np" type="topic">
                 <hi rendition="#c #i #b">The New Instrument That Immortalizes the Playing of the Masters</hi>
             </seg>
             <hi rendition="#c">

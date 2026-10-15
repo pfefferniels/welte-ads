@@ -131,7 +131,7 @@
         </div>
         <div facs="#eSc_dummyblock_">
             <ab><lb />The <name type="brand">Welte-Mignon</name>, which<lb />
-            <seg ana="#exact_reproduction" resp="#np" type="topic">
+            <seg xml:id="topic_1" ana="#exact_reproduction" resp="#np" type="topic">
                 reproduces absolutely the
                 <lb />Artists' original renderings
             </seg>,
@@ -189,7 +189,7 @@
         </div>
         <div facs="#eSc_textblock_9478645f">
             <ab><lb />
-            <seg type="topic" resp="#np" ana="#distinction_from_mechanical">
+            <seg xml:id="topic_2" type="topic" resp="#np" ana="#distinction_from_mechanical">
                 <hi rendition="#dropcap">U</hi><hi rendition="#uc">ntil</hi> the <name type="brand">Welte-Mignon</name>
                 <lb />made its appearance all the
                 <lb />piano-playing <sic>'</sic>instruments
@@ -200,7 +200,7 @@
             the <name type="brand">Welte-Mignon</name>
             <lb />caught the great masters in the act of
             <lb />playing, and
-            <seg ana="#immortality" resp="#np" type="topic">fixed their style for ever</seg>.</ab> 
+            <seg xml:id="topic_3" ana="#immortality" resp="#np" type="topic">fixed their style for ever</seg>.</ab> 
         </div>
         <div facs="#eSc_textblock_c6563afe">
             <head><lb />
