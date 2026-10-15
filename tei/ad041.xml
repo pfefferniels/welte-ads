@@ -3,15 +3,16 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Advertisement for The Welte-Mignon Autograph Piano</title>
-        <title type="sub">1913</title>
+        <title type="main">Ad in "The Atlanta Georgian and News"</title>
+        <title type="sub">February 5, 1913</title>
         <author>
           <orgName key="welte.cleveland">
             The Welte-Mignon Studio Cleveland &amp; Manning Piano Co.
           </orgName>
         </author>
         <respStmt>
-          <persName xml:id="#np">
+          <resp>Transcription and encoding</resp>
+          <persName xml:id="np">
             <surname>Pfeffer</surname>
             <forename>Niels</forename>
           </persName>
@@ -20,10 +21,8 @@
             <publicationStmt>
                 <publisher>
                     <persName>
-                        <persName>
-                            <surname>Pfeffer</surname>
-                            <forename>Niels</forename>
-                        </persName>
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
                     </persName>
                 </publisher>
                 <pubPlace>Tübingen</pubPlace>
@@ -42,7 +41,6 @@
                 <biblFull>
                     <titleStmt>
                         <title level="m" type="main">The playing of the world's most famous pianists</title>
-                        <title level="m" type="sub">...</title>
                         <author>
                             <orgName>
                                 The Welte-Mignon Studio Cleveland &amp; Manning Piano Co.

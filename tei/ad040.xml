@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
            <titleStmt>
-              <title type="main">Ad in "The House Beautiful"</title>
+              <title type="main">Ad in "House Beautiful"</title>
               <title type="sub">February 1927</title>
               <author>
                  <orgName key="auto.pneumatic.action">
@@ -11,6 +11,7 @@
                  </orgName>
               </author>
               <respStmt>
+                 <resp>Transcription and encoding</resp>
                  <persName xml:id="np">
                     <surname>Pfeffer</surname>
                     <forename>Niels</forename>
@@ -20,10 +21,8 @@
            <publicationStmt>
               <publisher>
                  <persName>
-                    <persName>
-                       <surname>Pfeffer</surname>
-                       <forename>Niels</forename>
-                    </persName>
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
                  </persName>
               </publisher>
               <pubPlace>Tübingen</pubPlace>
@@ -38,23 +37,23 @@
               </availability>
            </publicationStmt>
            <sourceDesc>
-              <bibl>Unbelievably True to the Artist's Playing - That's why I bough it</bibl>
+              <bibl>Unbelievably True to the Artist's Playing - That's why I bought it</bibl>
               <biblFull>
                  <titleStmt>
-                    <title level="m" type="main">Unbelievably True to the Artist's Playing - That's why I bough it</title>
+                    <title level="m" type="main">Unbelievably True to the Artist's Playing - That's why I bought it</title>
                     <author>
                        <orgName>Auto Pneumatic Action Co.</orgName>
                     </author>
                  </titleStmt>
                  <publicationStmt>
                     <publisher>
-                       <orgName>Singing</orgName>
+                       <orgName>House Beautiful</orgName>
                     </publisher>
                     <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
                     <date type="publication">1927</date>
                  </publicationStmt>
                  <seriesStmt>
-                    <title level="j" type="main">House beautiful</title>
+                    <title level="j" type="main">House Beautiful</title>
                     <biblScope unit="issue">February 1927</biblScope>
                     <biblScope unit="pages">124</biblScope>
                  </seriesStmt>

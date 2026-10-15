@@ -4,13 +4,14 @@
         <fileDesc>
             <titleStmt>
                 <title type="main">Ad in "Masonic News"</title>
-                <title type="sub">1923</title>
+                <title type="sub">August 1923</title>
                 <author>
                     <orgName key="bush.lane">
                         Bush &amp; Lane
                     </orgName>
                 </author>
                 <respStmt>
+                    <resp>Transcription and encoding</resp>
                     <persName xml:id="np">
                         <surname>Pfeffer</surname>
                         <forename>Niels</forename>
@@ -20,10 +21,8 @@
             <publicationStmt>
                 <publisher>
                     <persName>
-                        <persName>
-                            <surname>Pfeffer</surname>
-                            <forename>Niels</forename>
-                        </persName>
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
                     </persName>
                 </publisher>
                 <pubPlace>Tübingen</pubPlace>
@@ -64,7 +63,7 @@
         </fileDesc>
         <profileDesc>
             <langUsage>
-                <language ident="ger">German</language>
+                <language ident="eng">English</language>
             </langUsage>
         </profileDesc>
     </teiHeader>

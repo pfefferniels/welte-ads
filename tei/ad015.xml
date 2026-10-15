@@ -11,7 +11,8 @@
                  </orgName>
               </author>
               <respStmt>
-                 <persName xml:id="#np">
+                 <resp>Transcription and encoding</resp>
+                 <persName xml:id="np">
                     <surname>Pfeffer</surname>
                     <forename>Niels</forename>
                  </persName>
@@ -20,10 +21,8 @@
            <publicationStmt>
               <publisher>
                  <persName>
-                    <persName>
-                       <surname>Pfeffer</surname>
-                       <forename>Niels</forename>
-                    </persName>
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
                  </persName>
               </publisher>
               <pubPlace>Tübingen</pubPlace>
@@ -156,7 +155,7 @@
         </div>
 
       <div facs="#eSc_textblock_94049306" type="illustration">
-        <seg ana="#phantom_body" resp="#np" type="topics">
+        <seg ana="#phantom_body" resp="#np" type="topic">
             <figure>
                 <desc>
                     Semitransparent hands on a piano as parts of the 

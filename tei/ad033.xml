@@ -11,7 +11,8 @@
                     </orgName>
                 </author>
                 <respStmt>
-                    <persName xml:id="#np">
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="np">
                         <surname>Pfeffer</surname>
                         <forename>Niels</forename>
                     </persName>
@@ -20,10 +21,8 @@
             <publicationStmt>
                 <publisher>
                     <persName>
-                        <persName>
-                            <surname>Pfeffer</surname>
-                            <forename>Niels</forename>
-                        </persName>
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
                     </persName>
                 </publisher>
                 <pubPlace>Tübingen</pubPlace>
@@ -50,20 +49,20 @@
                     </titleStmt>
                     <publicationStmt>
                         <publisher>
-                            <orgName>Review of Reviews</orgName>
+                            <orgName>The American Review of Reviews</orgName>
                         </publisher>
                         <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
                         <date type="publication">1926</date>
                     </publicationStmt>
                     <seriesStmt>
-                        <title level="j" type="main">Review of Reviews</title>
+                        <title level="j" type="main">The American Review of Reviews</title>
                         <biblScope unit="issue">January 1926</biblScope>
                         <biblScope unit="pages">67-70</biblScope>
                     </seriesStmt>
                 </biblFull>
                 <msDesc>
                     <msIdentifier>
-                        <repository>Library of Congress</repository>
+                        <repository>University of California</repository>
                         <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=uc1.c038417028&amp;seq=294</idno>
                     </msIdentifier>
                 </msDesc>

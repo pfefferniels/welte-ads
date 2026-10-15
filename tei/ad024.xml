@@ -3,15 +3,16 @@
     <teiHeader>
         <fileDesc>
            <titleStmt>
-              <title type="main">Ad in "Singing"</title>
-              <title type="sub">December 1926</title>
+              <title type="main">Ad in "Singing", "Town &amp; Country" and "Scribner's Magazine"</title>
+              <title type="sub">November and December 1926</title>
               <author>
                  <orgName key="auto.pneumatic.action">
                     Auto Pneumatic Action Co.
                  </orgName>
               </author>
               <respStmt>
-                 <persName xml:id="#np">
+                 <resp>Transcription and encoding</resp>
+                 <persName xml:id="np">
                     <surname>Pfeffer</surname>
                     <forename>Niels</forename>
                  </persName>
@@ -20,10 +21,8 @@
            <publicationStmt>
               <publisher>
                  <persName>
-                    <persName>
-                       <surname>Pfeffer</surname>
-                       <forename>Niels</forename>
-                    </persName>
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
                  </persName>
               </publisher>
               <pubPlace>Tübingen</pubPlace>
@@ -110,13 +109,13 @@
                </titleStmt>
                <publicationStmt>
                   <publisher>
-                     <orgName>Scriber's Magazine</orgName>
+                     <orgName>Scribner's Magazine</orgName>
                   </publisher>
                   <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
                   <date type="publication">1926</date>
                </publicationStmt>
                <seriesStmt>
-                  <title level="j" type="main">Scriber's Magazine</title>
+                  <title level="j" type="main">Scribner's Magazine</title>
                   <biblScope unit="issue">December 1926</biblScope>
                   <biblScope unit="pages">13</biblScope>
                </seriesStmt>

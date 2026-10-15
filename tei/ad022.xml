@@ -11,7 +11,8 @@
                  </orgName>
               </author>
               <respStmt>
-                 <persName xml:id="#np">
+                 <resp>Transcription and encoding</resp>
+                 <persName xml:id="np">
                     <surname>Pfeffer</surname>
                     <forename>Niels</forename>
                  </persName>
@@ -20,10 +21,8 @@
            <publicationStmt>
               <publisher>
                  <persName>
-                    <persName>
-                       <surname>Pfeffer</surname>
-                       <forename>Niels</forename>
-                    </persName>
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
                  </persName>
               </publisher>
               <pubPlace>Tübingen</pubPlace>
@@ -287,7 +286,7 @@
             <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName> and
-            <persName type="artist" corrersp="https://d-nb.info/gnd/119362112">Ca-<lb />sella</persName>, possible through
+            <persName type="artist" corresp="https://d-nb.info/gnd/119362112">Ca-<lb />sella</persName>, possible through
             the authentic recordings of <name type="brand">Welte-
             <lb />Mignon Licensee</name>, is an invaluable aid to master or stu-
             <lb />dent.

@@ -10,7 +10,8 @@
                     </orgName>
                 </author>
                 <respStmt>
-                    <persName xml:id="#np">
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="np">
                         <surname>Pfeffer</surname>
                         <forename>Niels</forename>
                     </persName>
@@ -19,10 +20,8 @@
             <publicationStmt>
                 <publisher>
                     <persName>
-                        <persName>
-                            <surname>Pfeffer</surname>
-                            <forename>Niels</forename>
-                        </persName>
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
                     </persName>
                 </publisher>
                 <pubPlace>Tübingen</pubPlace>
@@ -49,13 +48,13 @@
                     </titleStmt>
                     <publicationStmt>
                         <publisher>
-                            <orgName>Music Trade Review</orgName>
+                            <orgName>The Music Trade Review</orgName>
                         </publisher>
                         <pubPlace ref="https://www.geonames.org/5128581">New York</pubPlace>
                         <date type="publication">1919</date>
                     </publicationStmt>
                     <seriesStmt>
-                        <title level="j" type="main">Music Trade Review</title>
+                        <title level="j" type="main">The Music Trade Review</title>
                         <biblScope unit="issue">December 6, 1919</biblScope>
                         <biblScope unit="pages">front page</biblScope>
                     </seriesStmt>
@@ -161,7 +160,7 @@
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116422319">Mark Hambourg</persName>
             <lb /><persName type="artist">Ernest Schelling</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">A. Eugene d'Albert</persName>
-            <lb /><persName type="artist ">Myrtle Elvyn</persName>
+            <lb /><persName type="artist">Myrtle Elvyn</persName>
             <lb /><persName type="artist">Carl <sic>Frieberg</sic></persName>
             <hi rendition="#c">
             <lb />And 132 Other Artists<lb />Of Like Eminence

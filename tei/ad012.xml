@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
            <titleStmt>
-              <title type="main">Ad in "The Sun and New York Herald"</title>
+              <title type="main">Ad in "The Sun and New York Herald" and "New York Tribune"</title>
               <title type="sub">May 7 1920</title>
               <author>
                  <orgName key="welte.studios">
@@ -11,7 +11,8 @@
                  </orgName>
               </author>
               <respStmt>
-                 <persName xml:id="#np">
+                 <resp>Transcription and encoding</resp>
+                 <persName xml:id="np">
                     <surname>Pfeffer</surname>
                     <forename>Niels</forename>
                  </persName>
@@ -20,10 +21,8 @@
            <publicationStmt>
               <publisher>
                  <persName>
-                    <persName>
-                       <surname>Pfeffer</surname>
-                       <forename>Niels</forename>
-                    </persName>
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
                  </persName>
               </publisher>
               <pubPlace>Tübingen</pubPlace>
@@ -141,7 +140,7 @@
             <lb />to buy musical instruments</hi></div>
             <div facs="#eSc_textblock_cd8eef02">
             <lb /><hi rendition="#dropcap #i">A</hi> FEELING of utter confidence is engendered at the
-            <lb /><orgName corresp="welte.studios">Welte Mignon Studios</orgName>. You
+            <lb /><orgName corresp="welte.studios">Welte-Mignon Studios</orgName>. You
             instinctively know
             <lb />that your <hi rendition="#u">continued</hi> patronage is sought and, therefore,
             <lb />that

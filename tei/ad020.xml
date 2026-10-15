@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
            <titleStmt>
-              <title type="main">Ad in "Singing", "House Beautiful" and "Review of Reviews"</title>
+              <title type="main">Ad in "Singing", "House Beautiful", "Review of Reviews", "House &amp; Garden" and "The Century"</title>
               <title type="sub">May and June 1926</title>
               <author>
                  <orgName key="auto.pneumatic.action">
@@ -11,7 +11,8 @@
                  </orgName>
               </author>
               <respStmt>
-                 <persName xml:id="#np">
+                 <resp>Transcription and encoding</resp>
+                 <persName xml:id="np">
                     <surname>Pfeffer</surname>
                     <forename>Niels</forename>
                  </persName>
@@ -20,10 +21,8 @@
            <publicationStmt>
               <publisher>
                  <persName>
-                    <persName>
-                       <surname>Pfeffer</surname>
-                       <forename>Niels</forename>
-                    </persName>
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
                  </persName>
               </publisher>
               <pubPlace>Tübingen</pubPlace>

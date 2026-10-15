@@ -11,25 +11,18 @@
                     </orgName>
                 </author>
                 <respStmt>
+                    <resp>Transcription and encoding</resp>
                     <persName xml:id="np">
                         <surname>Pfeffer</surname>
                         <forename>Niels</forename>
                     </persName>
                 </respStmt>
             </titleStmt>
-            <notesStmt>
-                <note resp="#np">
-                    Die Anzeige weist gewisse Sprachähnlichkeiten mit den später von 
-                    Anfred Schmid Nachf. veröffentlichten Anzeigen auf.
-                </note>
-            </notesStmt>
             <publicationStmt>
                 <publisher>
                     <persName>
-                        <persName>
-                            <surname>Pfeffer</surname>
-                            <forename>Niels</forename>
-                        </persName>
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
                     </persName>
                 </publisher>
                 <pubPlace>Tübingen</pubPlace>
@@ -43,6 +36,12 @@
                     </licence>
                 </availability>
             </publicationStmt>
+            <notesStmt>
+                <note resp="#np">
+                    Die Anzeige weist gewisse Sprachähnlichkeiten mit den später von 
+                    Alfred Schmid Nachf. veröffentlichten Anzeigen auf.
+                </note>
+            </notesStmt>
             <sourceDesc>
                 <bibl>Ein musikalisches Weltwunder</bibl>
                 <biblFull>
@@ -102,7 +101,7 @@
         </div>
 
         <div facs="#eSc_textblock_fe5bb22e">
-            <lb /><seg ana="#technical_invention" type="#topic" resp="#np">Deutschem Erfindungsgeist</seg> ist es geglückt, eine geradezu phantastisch er-
+            <lb /><seg ana="#technical_invention" type="topic" resp="#np">Deutschem Erfindungsgeist</seg> ist es geglückt, eine geradezu phantastisch er-
             <lb />scheinende Idee - ein
             <seg ana="#analogy_to_photography" resp="#np" type="topic">
                 akustisches Seitenstück zur Platte des Photo-<lb />graphen

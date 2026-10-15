@@ -7,11 +7,12 @@
               <title type="sub">Feb 21 1909</title>
               <author>
                  <orgName key="birkel">
-                    Geo J. Birkel Company
+                    Geo. J. Birkel Company
                  </orgName>
               </author>
               <respStmt>
-                 <persName xml:id="#np">
+                 <resp>Transcription and encoding</resp>
+                 <persName xml:id="np">
                     <surname>Pfeffer</surname>
                     <forename>Niels</forename>
                  </persName>
@@ -20,10 +21,8 @@
            <publicationStmt>
               <publisher>
                  <persName>
-                    <persName>
-                       <surname>Pfeffer</surname>
-                       <forename>Niels</forename>
-                    </persName>
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
                  </persName>
               </publisher>
               <pubPlace>Tübingen</pubPlace>
@@ -48,7 +47,7 @@
                         Brings to your home ...
                     </title>
                     <author>
-                       <orgName>Geo J. Birkel Company</orgName>
+                       <orgName>Geo. J. Birkel Company</orgName>
                     </author>
                  </titleStmt>
                  <publicationStmt>
@@ -206,7 +205,7 @@
             </div>
             <div facs="#zone_birkel">
                 <hi rendition="#c">
-                    <lb /><hi rendition="#in"><hi rendition="#in #larger #b"><orgName key="birkel">Geo J. Birkel Company</orgName></hi></hi>
+                    <lb /><hi rendition="#in"><hi rendition="#in #larger #b"><orgName key="birkel">Geo. J. Birkel Company</orgName></hi></hi>
                     <lb />
                     <name type="brand">Steinway</name>,
                     <name type="brand">Cecilian</name> and

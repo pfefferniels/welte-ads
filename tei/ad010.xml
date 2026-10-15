@@ -7,29 +7,22 @@
                 <title type="sub">14.12.1907</title>
                 <author>
                     <orgName key="a.schmid">
-                        Pianohaus Anfred Schmid Nachf.
+                        Pianohaus Alfred Schmid Nachf.
                     </orgName>
                 </author>
                 <respStmt>
+                    <resp>Transcription and encoding</resp>
                     <persName xml:id="np">
                         <surname>Pfeffer</surname>
                         <forename>Niels</forename>
                     </persName>
                 </respStmt>
             </titleStmt>
-            <notesStmt>
-                <note resp="#np">
-                    Die Anzeige weist gewisse Sprachähnlichkeiten mit den später von 
-                    Anfred Schmid Nachf. veröffentlichten Anzeigen auf.
-                </note>
-            </notesStmt>
             <publicationStmt>
                 <publisher>
                     <persName>
-                        <persName>
-                            <surname>Pfeffer</surname>
-                            <forename>Niels</forename>
-                        </persName>
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
                     </persName>
                 </publisher>
                 <pubPlace>Tübingen</pubPlace>
@@ -43,11 +36,17 @@
                     </licence>
                 </availability>
             </publicationStmt>
+            <notesStmt>
+                <note resp="#np">
+                    Die Anzeige weist gewisse Sprachähnlichkeiten mit den später von 
+                    Alfred Schmid Nachf. veröffentlichten Anzeigen auf.
+                </note>
+            </notesStmt>
             <sourceDesc>
-                <bibl>Ein musikalisches Weltwunder</bibl>
+                <bibl>Das Reproduktions-Klavier</bibl>
                 <biblFull>
                     <titleStmt>
-                        <title level="m" type="main">Das Reproduktionsklavier</title>
+                        <title level="m" type="main">Das Reproduktions-Klavier</title>
                         <author>
                             <orgName>Alfred Schmid Nachf.</orgName>
                         </author>

@@ -3,15 +3,16 @@
     <teiHeader>
         <fileDesc>
            <titleStmt>
-              <title type="main">Ad in "Singing" and "Review of Reviews"</title>
-              <title type="sub">April and July 1926</title>
+              <title type="main">Ad in "Singing", "Review of Reviews", "House &amp; Garden" and "The Century"</title>
+              <title type="sub">April to July 1926</title>
               <author>
                  <orgName key="auto.pneumatic.action">
                     Auto Pneumatic Action Co.
                  </orgName>
               </author>
               <respStmt>
-                 <persName xml:id="#np">
+                 <resp>Transcription and encoding</resp>
+                 <persName xml:id="np">
                     <surname>Pfeffer</surname>
                     <forename>Niels</forename>
                  </persName>
@@ -20,10 +21,8 @@
            <publicationStmt>
               <publisher>
                  <persName>
-                    <persName>
-                       <surname>Pfeffer</surname>
-                       <forename>Niels</forename>
-                    </persName>
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
                  </persName>
               </publisher>
               <pubPlace>Tübingen</pubPlace>

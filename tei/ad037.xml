@@ -4,13 +4,14 @@
         <fileDesc>
             <titleStmt>
                 <title type="main">Ad in "Sport im Bild"</title>
-                <title type="sub">1921</title>
+                <title type="sub">4.11.1921</title>
                 <author>
                     <orgName key="m.welte">
                         M. Welte &amp; Söhne
                     </orgName>
                 </author>
                 <respStmt>
+                    <resp>Transcription and encoding</resp>
                     <persName xml:id="np">
                         <surname>Pfeffer</surname>
                         <forename>Niels</forename>
@@ -20,10 +21,8 @@
             <publicationStmt>
                 <publisher>
                     <persName>
-                        <persName>
-                            <surname>Pfeffer</surname>
-                            <forename>Niels</forename>
-                        </persName>
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
                     </persName>
                 </publisher>
                 <pubPlace>Tübingen</pubPlace>

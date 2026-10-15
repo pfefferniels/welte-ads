@@ -11,24 +11,18 @@
                     </orgName>
                 </author>
                 <respStmt>
+                    <resp>Transcription and encoding</resp>
                     <persName xml:id="np">
                         <surname>Pfeffer</surname>
                         <forename>Niels</forename>
                     </persName>
                 </respStmt>
             </titleStmt>
-            <notesStmt>
-                <note resp="#np"> Diese Anzeige wurde zwei Tage vor einer Aufführung am 20. November
-                    1910 veröffentlicht. Sie wurde für eine weitere Aufführung am 8. Dezember 1910
-                    erweitert (siehe <ref target="#ad005.xml">hier</ref>). </note>
-            </notesStmt>
             <publicationStmt>
                 <publisher>
                     <persName>
-                        <persName>
-                            <surname>Pfeffer</surname>
-                            <forename>Niels</forename>
-                        </persName>
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
                     </persName>
                 </publisher>
                 <pubPlace>Tübingen</pubPlace>
@@ -42,6 +36,11 @@
                     </licence>
                 </availability>
             </publicationStmt>
+            <notesStmt>
+                <note resp="#np"> Diese Anzeige wurde zwei Tage vor einer Aufführung am 20. November
+                    1910 veröffentlicht. Sie wurde für eine weitere Aufführung am 8. Dezember 1910
+                    erweitert (siehe <ref target="#ad005.xml">hier</ref>). </note>
+            </notesStmt>
             <sourceDesc>
                 <bibl>Mit dem Welte Mignon ist ...</bibl>
                 <biblFull>

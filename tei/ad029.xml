@@ -3,15 +3,16 @@
     <teiHeader>
         <fileDesc>
            <titleStmt>
-              <title type="main">Ad in "House &amp; Garden"</title>
-              <title type="sub">November 1927</title>
+              <title type="main">Ad in "House &amp; Garden", "Vanity Fair", "House Beautiful" and "Vogue"</title>
+              <title type="sub">September to November 1927</title>
               <author>
                  <orgName key="auto.pneumatic.action">
                     Auto Pneumatic Action Co.
                  </orgName>
               </author>
               <respStmt>
-                 <persName xml:id="#np">
+                 <resp>Transcription and encoding</resp>
+                 <persName xml:id="np">
                     <surname>Pfeffer</surname>
                     <forename>Niels</forename>
                  </persName>
@@ -20,10 +21,8 @@
            <publicationStmt>
               <publisher>
                  <persName>
-                    <persName>
-                       <surname>Pfeffer</surname>
-                       <forename>Niels</forename>
-                    </persName>
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
                  </persName>
               </publisher>
               <pubPlace>Tübingen</pubPlace>
@@ -66,6 +65,14 @@
                     <idno type="URLImages">https://babel.hathitrust.org/cgi/pt?id=mdp.39015082311062&amp;seq=672</idno>
                   </idno>
                 </msIdentifier>
+              </msDesc>
+              <msDesc>
+                 <msIdentifier>
+                   <repository>archive.org</repository>
+                   <idno>
+                     <idno type="URLImages">https://archive.org/details/usmodernist-HG-1927-11</idno>
+                   </idno>
+                 </msIdentifier>
               </msDesc>
            </sourceDesc>
            <sourceDesc>

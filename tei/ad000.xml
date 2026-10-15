@@ -3,15 +3,16 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">Ad in "The Illustrated London News"</title>
-            <title type="sub">Nov 15 1913</title>
+            <title type="main">Ad in "The Illustrated London News", "Truth" and "The Gentlewoman"</title>
+            <title type="sub">November and December 1913</title>
             <author>
                <orgName key="steinway">
                   Steinway &amp; Sons
                </orgName>
             </author>
             <respStmt>
-               <persName xml:id="#np">
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="np">
                   <surname>Pfeffer</surname>
                   <forename>Niels</forename>
                </persName>
@@ -20,10 +21,8 @@
          <publicationStmt>
             <publisher>
                <persName>
-                  <persName>
-                     <surname>Pfeffer</surname>
-                     <forename>Niels</forename>
-                  </persName>
+                  <surname>Pfeffer</surname>
+                  <forename>Niels</forename>
                </persName>
             </publisher>
             <pubPlace>Tübingen</pubPlace>
@@ -48,7 +47,7 @@
                </titleStmt>
                <publicationStmt>
                   <publisher>
-                     <orgName>The Daily News</orgName>
+                     <orgName>The Illustrated London News</orgName>
                   </publisher>
                   <pubPlace ref="https://www.geonames.org/2643743">London</pubPlace>
                   <date type="publication">1913</date>
@@ -59,6 +58,14 @@
                   <biblScope unit="pages">806</biblScope>
                </seriesStmt>
             </biblFull>
+            <msDesc>
+               <msIdentifier>
+                 <repository>archive.org</repository>
+                 <idno>
+                   <idno type="URLImages">https://archive.org/details/sim_illustrated-london-news_1913-11-15_143_3891</idno>
+                 </idno>
+               </msIdentifier>
+            </msDesc>
          </sourceDesc>
          <sourceDesc>
             <bibl>The Welte-Mignon</bibl>

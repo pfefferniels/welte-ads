@@ -3,15 +3,16 @@
     <teiHeader>
         <fileDesc>
            <titleStmt>
-              <title type="main">Ad in "The New York Herald"</title>
-              <title type="sub">May 1 1921</title>
+              <title type="main">Ad in "The New York Herald" and "Omaha Daily Bee"</title>
+              <title type="sub">May 1, 1921 and January 4, 1922</title>
               <author>
                  <orgName key="hardman">
                     Hardman Welte-Mignon Licensee
                  </orgName>
               </author>
               <respStmt>
-                 <persName xml:id="#np">
+                 <resp>Transcription and encoding</resp>
+                 <persName xml:id="np">
                     <surname>Pfeffer</surname>
                     <forename>Niels</forename>
                  </persName>
@@ -20,10 +21,8 @@
            <publicationStmt>
               <publisher>
                  <persName>
-                    <persName>
-                       <surname>Pfeffer</surname>
-                       <forename>Niels</forename>
-                    </persName>
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
                  </persName>
               </publisher>
               <pubPlace>Tübingen</pubPlace>
@@ -64,6 +63,14 @@
                     <biblScope unit="pages">[no page]</biblScope>
                  </seriesStmt>
               </biblFull>
+              <msDesc>
+                 <msIdentifier>
+                   <repository>Library of Congress</repository>
+                   <idno>
+                     <idno type="URLImages">https://chroniclingamerica.loc.gov/lccn/sn83045774/1921-05-01/ed-1/seq-60/</idno>
+                   </idno>
+                 </msIdentifier>
+              </msDesc>
            </sourceDesc>
            <sourceDesc xml:id="B">
             <bibl>Paderewski will play again</bibl>

@@ -3,15 +3,16 @@
     <teiHeader>
         <fileDesc>
            <titleStmt>
-              <title type="main">Ad in "Singing", "The American Hebrew", "Town and Country"</title>
-              <title type="sub">August/September/October 1926</title>
+              <title type="main">Ad in "Singing", "The American Hebrew", "Town &amp; Country", "Harper's Magazine" and "Good Housekeeping"</title>
+              <title type="sub">August to November 1926</title>
               <author>
                  <orgName key="auto.pneumatic.action">
                     Auto Pneumatic Action Co.
                  </orgName>
               </author>
               <respStmt>
-                 <persName xml:id="#np">
+                 <resp>Transcription and encoding</resp>
+                 <persName xml:id="np">
                     <surname>Pfeffer</surname>
                     <forename>Niels</forename>
                  </persName>
@@ -20,10 +21,8 @@
            <publicationStmt>
               <publisher>
                  <persName>
-                    <persName>
-                       <surname>Pfeffer</surname>
-                       <forename>Niels</forename>
-                    </persName>
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
                  </persName>
               </publisher>
               <pubPlace>Tübingen</pubPlace>
@@ -156,7 +155,7 @@
               <msIdentifier>
                 <repository>archive.org</repository>
                 <idno>
-                  <!-- <idno type="URLImages">https://archive.org/details/sim_harpers-magazine_1926-11_153_918/page/n234</idno> -->
+                  <idno type="URLImages">https://archive.org/details/sim_harpers-magazine_1926-11_153_918/page/n234</idno>
                 </idno>
               </msIdentifier>
             </msDesc>
@@ -240,7 +239,7 @@
          <lb/>MIGNON LICENSEE REPRODUCING
          <lb/>ACTION</name>.
          <seg ana="#exact_reproduction #secret" resp="#np" type="topic">
-            <hi rendition="#i">Only <name type="artist">Welte-Mignon Licensee</name>
+            <hi rendition="#i">Only <name type="brand">Welte-Mignon Licensee</name>
             <lb/>possesses the secret of perfect reproduc-
             <lb/>tion.</hi>
         </seg>

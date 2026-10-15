@@ -11,26 +11,18 @@
                  </orgName>
               </author>
               <respStmt>
+                 <resp>Transcription and encoding</resp>
                  <persName xml:id="np">
                     <surname>Pfeffer</surname>
                     <forename>Niels</forename>
                  </persName>
               </respStmt>
            </titleStmt>
-           <notesStmt>
-              <note>
-                  Auf der gleichen Seite bewirbt die Aeolian
-                  Company über drei Spalten ein "Pianola Recital"
-                  mit Weihnachtsmusik. 
-              </note>
-           </notesStmt>
            <publicationStmt>
               <publisher>
                  <persName>
-                    <persName>
-                       <surname>Pfeffer</surname>
-                       <forename>Niels</forename>
-                    </persName>
+                    <surname>Pfeffer</surname>
+                    <forename>Niels</forename>
                  </persName>
               </publisher>
               <pubPlace>Tübingen</pubPlace>
@@ -44,12 +36,19 @@
                  </licence>
               </availability>
            </publicationStmt>
+           <notesStmt>
+              <note>
+                  Auf der gleichen Seite bewirbt die Aeolian
+                  Company über drei Spalten ein "Pianola Recital"
+                  mit Weihnachtsmusik. 
+              </note>
+           </notesStmt>
            <sourceDesc>
               <bibl>When Paderewski listens to his own Playing</bibl>
               <biblFull>
                  <titleStmt>
                     <title level="m" type="main">
-                        When Paderweski listens to his own playing
+                        When Paderewski listens to his own Playing
                     </title>
                     <author>
                        <orgName>M. Welte &amp; Sons</orgName>

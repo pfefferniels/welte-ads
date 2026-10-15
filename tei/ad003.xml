@@ -11,7 +11,8 @@
                     </orgName>
                 </author>
                 <respStmt>
-                    <persName>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="np">
                         <surname>Pfeffer</surname>
                         <forename>Niels</forename>
                     </persName>
@@ -20,10 +21,8 @@
             <publicationStmt>
                 <publisher>
                     <persName>
-                        <persName>
-                            <surname>Pfeffer</surname>
-                            <forename>Niels</forename>
-                        </persName>
+                        <surname>Pfeffer</surname>
+                        <forename>Niels</forename>
                     </persName>
                 </publisher>
                 <pubPlace>Tübingen</pubPlace>
@@ -41,8 +40,7 @@
                 <bibl>Das Reproduktions-Piano Welte-Mignon</bibl>
                 <biblFull>
                     <titleStmt>
-                        <title level="m" type="main">Welte-Mignon</title>
-                        <title level="m" type="sub">Reproduktions-Piano und -Flügel</title>
+                        <title level="m" type="main">Das Reproduktions-Piano Welte-Mignon</title>
                         <author>
                             <orgName>M. Welte &amp; Söhne G.m.b.H.</orgName>
                         </author>
@@ -58,7 +56,7 @@
                     <seriesStmt>
                         <title level="j" type="main">Zeitschrift für Instrumentenbau</title>
                         <biblScope unit="issue">30 (1909/10)</biblScope>
-                        <biblScope unit="pages">1044</biblScope>
+                        <biblScope unit="pages">1340</biblScope>
                     </seriesStmt>
                 </biblFull>
             </sourceDesc>
