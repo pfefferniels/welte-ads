@@ -87,20 +87,28 @@
     <facsimile>
         <surface>
             <graphic url="sn83030214-19131207.jp2" width="6063" height="8898" />
-            <zone points="4345,6343 4345,8754 5985,8754 5985,6343"
+            <zone points="4420,6460 4420,6765 5780,6765 5780,6460"
                 id="eSc_textblock_d7143252" />
+            <zone points="4645,6815 4645,7295 5835,7295 5835,6815"
+                id="zone_paragraph1" />
+            <zone points="4637,7325 4637,7990 5835,7990 5835,7325"
+                id="zone_paragraph2" />
+            <zone points="4645,8018 4645,8498 5842,8498 5842,8018"
+                id="zone_paragraph3" />
         </surface>
     </facsimile>
     <text>
         <div facs="#eSc_textblock_d7143252">
             <head>
                 <lb />
-                <hi rendition="#larger">
+                <hi rendition="#larger #b">
                     When <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> listens
                     <lb />to his own Playing
                 </hi>
             </head>
+        </div>
 
+        <div facs="#zone_paragraph1">
             <p>
                 <seg ana="#listening" resp="#np" type="topic">
                     <lb />–not while he sits at the piano, but
@@ -113,7 +121,9 @@
                     </name>.
                 </seg>
             </p>
+        </div>
 
+        <div facs="#zone_paragraph2">
             <p>
                 <lb />The wonderful
                 <name type="brand">Welte-Mignon</name>
@@ -133,7 +143,9 @@
                     <lb />of their playing.
                 </seg>
             </p>
+        </div>
 
+        <div facs="#zone_paragraph3">
             <p>
                 <lb />You can hear these masters of the piano
                 <lb />whenever you may wish to enjoy a delight-
@@ -144,7 +156,7 @@
                 </orgName>,
                 <address>
                     273 Fifth Avenue, between Twenty-
-                    <lb />ninth and Thirtienth Streets (opposite
+                    <lb />ninth and Thirtieth Streets (opposite
                     <lb />Holland House) New York.
                 </address>
             </p>

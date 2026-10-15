@@ -78,17 +78,27 @@
     <facsimile>
         <surface>
             <graphic url="ef-droop.png" width="786" height="1279" />
-            <zone points="293,35 293,348 750,348 750,35" id="eSc_textblock_ecd65fb1" />
+            <zone points="446,38 446,72 742,72 742,38" id="eSc_textblock_ecd65fb1" />
+            <zone points="364,96 364,162 742,162 742,96" id="zone_welte_mignon" />
+            <zone points="297,178 297,218 742,218 742,178" id="zone_reperforming" />
+            <zone points="309,232 309,350 742,350 742,232" id="zone_intro" />
             <zone points="296,373 296,352 57,352 57,373" id="eSc_textblock_6cbc3d51" />
-            <zone
-                points="729,406 700,493 680,510 635,511 680,517 697,542 695,715 629,744 689,756 692,854 590,880 587,882 264,882 260,880 164,869 150,857 147,792 76,769 73,446 39,428 36,395 40,386 707,386"
-                id="eSc_textblock_9aa8d87e" />
-            <zone
-                points="587,912 726,929 731,974 709,1003 709,1019 731,1107 561,1147 481,1153 224,1147 178,1116 42,1110 36,1094 59,1022 51,965 59,912 114,910 584,910"
-                id="eSc_textblock_634ec641" />
-            <zone
-                points="717,1182 731,1190 734,1232 723,1244 606,1249 56,1244 36,1235 36,1199 51,1185 472,1170"
-                id="eSc_textblock_7218a8b1" />
+            <zone points="42,384 42,437 742,437 742,384" id="eSc_textblock_9aa8d87e" />
+            <zone points="84,437 84,537 702,537 702,437" id="zone_novelist" />
+            <zone points="84,540 84,731 700,731 700,540" id="zone_quote" />
+            <zone points="84,738 84,771 335,771 335,738" id="zone_think" />
+            <zone points="164,771 164,866 700,866 700,771" id="zone_cordially" />
+            <zone points="278,867 278,890 582,890 582,867" id="zone_priced" />
+            <zone points="62,916 62,988 338,988 338,916" id="eSc_textblock_634ec641" />
+            <zone points="357,932 357,982 530,982 530,932" id="zone_other" />
+            <zone points="533,916 533,988 732,988 732,916" id="zone_pianos" />
+            <zone points="96,992 96,1040 684,1040 684,992" id="zone_victrolas" />
+            <zone points="63,1040 63,1084 716,1084 716,1040" id="zone_rolls" />
+            <zone points="44,1089 44,1123 369,1123 369,1089" id="zone_upright" />
+            <zone points="411,1089 411,1123 524,1123 524,1089" id="zone_grands" />
+            <zone points="567,1089 567,1123 738,1123 738,1089" id="zone_player" />
+            <zone points="221,1125 221,1158 572,1158 572,1125" id="zone_terms" />
+            <zone points="42,1190 42,1250 740,1250 740,1190" id="eSc_textblock_7218a8b1" />
             <zone points="35,36 35,358 300,358 300,36" id="eSc_textblock_3cda1b14" />
         </surface>
     </facsimile>
@@ -102,14 +112,24 @@
         </div>
 
         <div facs="#eSc_textblock_ecd65fb1">
-            <hi rendition="#right">
+            <hi rendition="#right #b">
                 <lb />The Original Welte-Built
-                <hi rendition="#larger">
-                    <lb />Welte-Mignon
-                </hi>
+            </hi>
+        </div>
+
+        <div facs="#zone_welte_mignon">
+            <hi rendition="#right #b">
+                <lb />Welte-Mignon
+            </hi>
+        </div>
+
+        <div facs="#zone_reperforming">
+            <hi rendition="#right #b">
                 <lb />Reperforming Grand Piano
             </hi>
+        </div>
 
+        <div facs="#zone_intro">
             <p>
                 <lb />The original instrument which astonished the
                 <lb />musical world, and for which scores and scores
@@ -119,8 +139,8 @@
         </div>
 
         <div facs="#eSc_textblock_6cbc3d51">
-            <hi rendition="#k">
-                <lb />In Mahagony
+            <hi rendition="#k #b">
+                <lb />In Mahogany
                 <measure commodity="wm-grand" unit="dollar" quantity="2575">
                     $2,575
                 </measure>
@@ -131,8 +151,9 @@
             <hi rendition="#b #i">
                 <lb /><persName>Mrs. Mary Roberts Rinehart</persName>––
             </hi>
-            
-            
+        </div>
+
+        <div facs="#zone_novelist">
             <hi rendition="#k">
                 <lb />our distinguished novelist and a lover of the best in
                 <lb />music, has written the foreword to the newly pub-
@@ -140,7 +161,10 @@
                 <lb />and which we will gladly send you.
                 <lb />We quote the following:
             </hi>
+        </div>
 
+        <div facs="#zone_quote">
+            <hi rendition="#i">
             <lb />
             <quote>
                 "Some ten years or so ago a friend took me into her house and showed
@@ -167,9 +191,17 @@
                 <lb />music those things which one does
                 not say with words-
             </quote>
+            </hi>
+        </div>
 
-            <hi rendition="#k">
+        <div facs="#zone_think">
+            <hi rendition="#k #b #i">
                 <lb />And to think
+            </hi>
+        </div>
+
+        <div facs="#zone_cordially">
+            <hi rendition="#k">
                 <lb />that
                 <seg ana="#home" type="topic" resp="#np">
                     you can have the most distinguished pian-
@@ -179,22 +211,48 @@
                 <lb />You are cordially invited to a demonstration
                 <lb />at any time.
             </hi>
+        </div>
 
-            <hi rendition="#smaller">
+        <div facs="#zone_priced">
+            <hi rendition="#b #i">
                 <lb /><name type="brand">Welte-Mignon</name> Grands Priced
+            From <measure commodity="wm-grand" unit="dollar" quantity="1695">$1,695</measure> Up
             </hi>
-            from <measure commodity="wm-grand" unit="dollar" quantity="1695">$ 1,695</measure> Up
         </div>
 
         <div facs="#eSc_textblock_634ec641">
-            <lb />And other
-            <lb /><name type="brand">Steinway</name>
-            <lb />High-Grade
-            <lb />Pianos
-            <lb />Player
-            Pianos-<name type="brand">Victrolas</name>-Records
-            <lb />Player Piano Rolls, Music, Musical Instruments
+            <hi rendition="#k #b">
+                <lb /><name type="brand">Steinway</name>
+            </hi>
+        </div>
 
+        <div facs="#zone_other">
+            <hi rendition="#c #k">
+                <lb />And other
+                <lb />High-Grade
+            </hi>
+        </div>
+
+        <div facs="#zone_pianos">
+            <hi rendition="#k #b">
+                <lb />Pianos
+            </hi>
+        </div>
+
+        <div facs="#zone_victrolas">
+            <hi rendition="#c #b">
+                <lb />Player
+                Pianos—<name type="brand">Victrolas</name>—Records
+            </hi>
+        </div>
+
+        <div facs="#zone_rolls">
+            <hi rendition="#c #b">
+                <lb />Player Piano Rolls, Music, Musical Instruments
+            </hi>
+        </div>
+
+        <div facs="#zone_upright">
             <lb />Guaranteed New Upright Pianos,
             <hi rendition="#b">
                 <measure commodity="upright" unit="dollar" quantity="325">
@@ -202,6 +260,9 @@
                 </measure>
             </hi>
             <space dim="horizontal" />
+        </div>
+
+        <div facs="#zone_grands">
             Grands,
             <hi rendition="#b">
                 <measure commodity="grand" unit="dollar" quantity="635">
@@ -209,22 +270,32 @@
                 </measure>
             </hi>
             <space dim="horizontal" />
+        </div>
+
+        <div facs="#zone_player">
             Player Pianos,
             <hi rendition="#b">
-                <measure commodity="player-piano" unit="dollar" quantity="559">
-                    $559
+                <measure commodity="player-piano" unit="dollar" quantity="550">
+                    $550
                 </measure>
             </hi>
+        </div>
+
+        <div facs="#zone_terms">
+            <hi rendition="#c">
             <lb />
             <seg ana="#affordability" resp="#np" type="topic">
                 Accommodating Terms of Payment.
             </seg>
+            </hi>
         </div>
 
         <div facs="#eSc_textblock_7218a8b1">
+            <hi rendition="#c #k #b">
             <lb />
             <orgName>E. F. Droop &amp; Sons Co.</orgName>,
             <address>1300 G</address>
+            </hi>
         </div>
     </text>
 </TEI>
