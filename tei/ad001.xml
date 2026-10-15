@@ -80,7 +80,7 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="BL_0003212_19220601_201_0005.pdf_page_1.png" />
+            <graphic url="BL_0003212_19220601_201_0005.pdf_page_1.png" width="2479" height="3508" />
             <zone points="1744,2989 1744,2645 2050,2645 2050,2989"
                 id="eSc_textblock_a280cbcc" />
             <zone points="1723,2659 1723,2802 2312,2802 2312,2659"

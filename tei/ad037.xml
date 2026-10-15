@@ -72,7 +72,7 @@
             <graphic url="annoshow-plus.jpg" width="2613" height="3945" />
             <zone points="2268,368 2338,429 2321,786 438,804 420,447 429,394 499,368"
                 id="eSc_textblock_40330f98" />
-            <zone points="664,1227 690,1262 672,1382 377,1391 401,1218"
+            <zone points="377,1218 690,1218 690,1391 377,1391"
                 id="eSc_textblock_01f2d6ec" />
             <zone points="358,1836 358,2381 1359,2381 1359,1836"
                 id="eSc_textblock_87ee5dfc" />
@@ -89,7 +89,7 @@
             <zone
                 points="2014,3348 2075,3366 2130,3445 2303,3480 2321,3548 1630,3574 1567,3618 1201,3618 1172,3565 438,3539 447,3471 646,3454 710,3340 1050,3331"
                 id="eSc_textblock_c3c4b41d" />
-            <zone points="2242,2963 2268,2989 2260,3136 1850,3145 1850,2963 1981,2928"
+            <zone points="1850,2928 2268,2928 2268,3145 1850,3145"
                 id="eSc_textblock_00775c4e" />
             <zone points="693,817 693,1750 2074,1750 2074,817"
                 id="eSc_textblock_243b00c3" />
@@ -115,7 +115,7 @@
                 <lb />"Wie erstaunlich und tief ergreifend ist es, sein vor
                 <lb />Jahren aufgenommenes Spiel in größter Vollendung durch
                 <lb /><name type="brand">"Welte-Mignon"</name> wiedergegeben zu hören! Der Ruf der
-                <lb /><name type="brand">"Welte-Mignon-Pianos"</name>, das Vollendetstse zu sein auf
+                <lb /><name type="brand">"Welte-Mignon-Pianos"</name>, das Vollendetste zu sein auf
                 <lb />diesem Gebiete, ist fest begründet in dieser
                 <seg ana="#exact_reproduction" resp="#np" type="topic">
                     getreuen
@@ -134,7 +134,7 @@
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Professor d'Albert</persName> für "Welte-Mignon" spielend.
         </div>
         <div facs="#eSc_textblock_d6a5ecdd">
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Professur Artur Nikisch</persName> schreibt:
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Professor Artur Nikisch</persName> schreibt:
             <quote type="testimonial">
                 <lb />"Den Reproduktionsapparat <name type="brand">"Welte-Mignon"</name> halte ich
                 <lb />für
@@ -183,10 +183,12 @@
             </seg>
         </div>
         <div facs="#eSc_textblock_c3c4b41d">
+            <hi rendition="#c">
             <lb /><orgName>M. Welte &amp; Söhne</orgName>
             <lb />Fabrik pneumatischer Musikwerke
             <lb />Freiburg i. Br.
             <lb />Gegründet 1832
+            </hi>
         </div>
         <div facs="#eSc_textblock_00775c4e">
             <lb />Individuelle
@@ -194,7 +196,9 @@
             <lb />Orgel-Virtuosen
             <lb />wiedergebend
         </div>
-        <div facs="#eSc_textblock_243b00c3" type="illustration" />
+        <div facs="#eSc_textblock_243b00c3" type="illustration">
+            <figure><desc>Photograph of Professor d'Albert playing for the Welte-Mignon</desc></figure>
+        </div>
         <div facs="#eSc_textblock_9a0baa4d" type="illustration" />
     </text>
 </TEI>

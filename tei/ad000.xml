@@ -143,27 +143,36 @@
             id="eSc_textblock_527025e7" />
          <zone points="249,3032 249,3251 988,3251 988,3032"
             id="eSc_textblock_0ca5f1e3" />
+         <zone points="69,1850 1153,1850 1153,2027 69,2027"
+            id="zone_frame_top" />
+         <zone points="69,3268 1153,3268 1153,3451 69,3451"
+            id="zone_frame_bottom" />
       </surface>
    </facsimile>
    <text>
+      <div type="illustration" facs="#zone_frame_top">
+         <figure><desc>Top of the hatched frame, with a Steinway lyre emblem in each corner</desc></figure>
+      </div>
       <div facs="#eSc_textblock_6103b8eb">
-         <hi rendition="#c">
-            <lb />The
+         <hi rendition="#c #uc">
+            <lb /><hi rendition="#smaller">The</hi>
             <head>
+               <hi rendition="#in">
                <orgName>
                   <lb /><name type="brand">Welte-
                   <lb />Mignon</name>
                </orgName>
+               </hi>
             </head>
          </hi>
       </div>
 
       <div facs="#eSc_textblock_f7822bda">
-         <hi rendition="#c">
+         <hi rendition="#c #uc">
             <lb />
                <seg type="topic" resp="#np" ana="#technical_invention">
                   After many inventions
-                  <lb />and many failures
+                  <lb /><hi rendition="#g">and many failures</hi>
                   <lb />the perfect instrument 
                </seg>
             </hi>
@@ -181,18 +190,21 @@
          </hi>
       </div>
       <div facs="#eSc_textblock_527025e7">
-         <hi rendition="#c">
+         <hi rendition="#c #uc">
             <lb />Call and hear it or
             <lb />write for catalogue </hi>
       </div>
       <div facs="#eSc_textblock_0ca5f1e3">
-         <hi rendition="#c">
-            <lb /><orgName>Steinway and Sons</orgName>,
+         <hi rendition="#c #uc">
+            <lb /><hi rendition="#in"><orgName>Steinway and Sons</orgName>,</hi>
             <lb />
             <address>
                Steinway Hall,<lb />Lower Seymour Street, W.
             </address>
          </hi>
+      </div>
+      <div type="illustration" facs="#zone_frame_bottom">
+         <figure><desc>Bottom of the hatched frame, with a Steinway lyre emblem in each corner</desc></figure>
       </div>
    </text>
 </TEI>

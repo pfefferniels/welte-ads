@@ -78,14 +78,34 @@
             </langUsage>
         </profileDesc>
   </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="sn89053729-19130206-seq21.png" width="1520" height="3450"/>
+      <zone points="182,202 1328,202 1328,584 182,584" id="zone_headline"/>
+      <zone points="296,632 1225,632 1225,886 296,886" id="zone_text"/>
+      <zone points="180,949 1330,949 1330,1206 180,1206" id="zone_brand"/>
+      <zone points="189,1277 1332,1277 1332,1339 189,1339" id="zone_recitals"/>
+      <zone points="200,1459 731,1459 731,2152 447,2152 447,1961 200,1961" id="zone_story"/>
+      <zone points="810,1416 1333,1416 1333,1584 810,1584" id="zone_damrosch"/>
+      <zone points="811,1612 1334,1612 1334,1810 811,1810" id="zone_hertz"/>
+      <zone points="173,2160 848,2160 848,2733 173,2733" id="zone_piano"/>
+      <zone points="852,1831 1351,1831 1351,3052 852,3052" id="zone_picture"/>
+      <zone points="234,2817 727,2817 727,3042 234,3042" id="zone_styles"/>
+      <zone points="127,3134 1396,3134 1396,3268 127,3268" id="zone_studio"/>
+      <zone points="113,3275 489,3275 489,3356 113,3356" id="zone_president"/>
+      <zone points="518,3281 996,3281 996,3353 518,3353" id="zone_street"/>
+      <zone points="1098,3275 1389,3275 1389,3356 1098,3356" id="zone_manager"/>
+    </surface>
+  </facsimile>
 
   <text>
     <body>
-      <div>
+      <div facs="#zone_headline">
         <hi rendition="#c">
             <head>
-                The playing of the world's most famous pianists
+                <hi rendition="#smaller"><lb/>The playing of the world's most famous pianists</hi>
                 <hi rendition="#larger">
+                  <hi rendition="#in #b">
                     <lb/>I. J.
                     <persName type="artist" corresp="https://d-nb.info/gnd/118986724">
                         Paderewski
@@ -94,39 +114,51 @@
                     <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">
                         Josef Hofmann
                     </persName>
+                  </hi>
                 </hi>
             </head>
+        </hi>
+      </div>
+      <div facs="#zone_text">
             <lb/>
-            <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carréno</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreño</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
-            <persName type="artist" corresp="https://d-nb.info/gnd/116204400">Bloomfield-Zeisler</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116204400">Bloomfield-<lb/>Zeisler</persName>,
             and others––
             is reproduced with
-            every subtle nuance of shade and expression by
-        </hi>
+            <lb/>every subtle nuance of shade and expres-<lb/>sion by
+      </div>
+      <div facs="#zone_brand">
+        <hi rendition="#c">
         <lb/>
         <name type="brand">
-            <hi rendition="#k">
-                The Welte-Mignon<lb/>
+            <hi rendition="#i">The</hi>
+            <hi rendition="#uc">
+                Welte-Mignon<lb/>
                 Autograph · Piano
             </hi>
         </name>
+        </hi>
+      </div>
+      <div facs="#zone_recitals">
         <lb/>
-        <hi rendition="#i">
+        <hi rendition="#i #c">
             Recitals at your convenience daily at our Showrooms
         </hi>
       </div>
 
-      <div type="panel">
-        <lb/>How <persName type="artist" corresp="https://d-nb.info/gnd/118697641">
+      <div type="panel" facs="#zone_story">
+        <hi rendition="#b"><lb/>How <persName type="artist" corresp="https://d-nb.info/gnd/118697641">
           EDVARD GRIEG
-        </persName> was Surprised by <persName corresp="https://d-nb.info/gnd/118632892">
+        </persName> was</hi>
+        <hi rendition="#b #right"><lb/>Surprised by <persName corresp="https://d-nb.info/gnd/118632892">
           Kaiser Wilhelm II
-        </persName>
+        </persName></hi>
         <p>
-          <lb />When starting on a trip to Norway, the German Emperor ordered a <name type="brand">Welte-
-          <lb/>-Mignon Autograph Piano</name> for his steam
+          <lb />When starting on a trip to Norway, the
+          <lb />German Emperor ordered a <name type="brand">Welte-
+          <lb/>Mignon Autograph Piano</name> for his steam
           <lb/> yacht. Some recent records made by
           <lb/>
           <persName key="grieg" corresp="https://d-nb.info/gnd/118697641">
@@ -137,16 +169,17 @@
           <lb />pleasantry at the artist’s expense.
         </p>
         <p>
-          On arriving at <placeName>Drontheim</placeName>, Grieg was
+          <lb /><lb />On arriving at <placeName>Drontheim</placeName>, Grieg was
           <lb />invited on board to meet the Kaiser.
           <lb />In the midst of their conversation the
-          <lb />signal was given to render one of
-          the Grieg records on the <name type="brand">Welte-Mignon</name>.
+          <lb />signal was given to render one of the
+          <lb />Grieg records on the <name type="brand">Welte-Mignon</name>.
         </p>
         <p>
-          To the delight of the Kaiser, the
+          <lb /><lb />To the delight of the Kaiser, the
           <lb />maestro instantly recognized his own
-          <lb />touch, and after the jest was explained,
+          <lb />touch, and after the
+          <lb />jest was explained,
           <lb />he had the exquisite
           <lb />pleasure of hearing,
           <lb />for the first time, the
@@ -156,57 +189,68 @@
       </div>
 
       <!-- First testimonial -->
-      <div>
+      <div facs="#zone_damrosch">
         <quote type="testimonial">
           <q>
-            I should not have thought it possible.
+            <lb />I should not have thought it possible.
             <lb />The Welte-Mignon is, without
             <lb />doubt, the most remarkable
-            <lb />musical invention of our age.
+            musical <lb />invention of our age.
           </q>
         </quote>
+        <hi rendition="#right">
         <lb/>
         <persName type="artist" corresp="https://d-nb.info/gnd/116020776">
           WALTER DAMROSCH
         </persName>,
-        <role>Conductor, New York Symphony Orchestra</role>
+        </hi>
+        <hi rendition="#right #smaller"><lb/><role>Conductor, New York Symphony Orchestra</role></hi>
       </div>
 
       <!-- Second testimonial -->
-      <div>
+      <div facs="#zone_hertz">
         <quote type="testimonial">
           <q>
-            The Welte-Mignon is indeed a rescuing
+            <lb />The Welte-Mignon is indeed a rescuing
             <lb />invention that renders the great piano
             <lb />virtuoso immortal and his art imper-
             <lb />ishable like the great compositions
             <lb />which he interprets.
           </q>
         </quote>
+        <hi rendition="#right">
         <lb/>
         <persName type="artist" corresp="https://d-nb.info/gnd/116753722">
           ALFRED HERTZ
         </persName>,
-        <role>Conductor, Metropolitan Opera House Orchestra</role>
+        </hi>
+        <hi rendition="#right #smaller"><lb/><role>Conductor, Metropolitan Opera House Orchestra</role></hi>
       </div>
 
-      <div type="illustration">
+      <div type="illustration" facs="#zone_piano">
         <figure>
           <desc>
             Illustration of a grand piano and a Welte-Mignon push-up.
-            Grieg and Wilhelm II. discussing about it.
           </desc>
         </figure>
         <lb/>
         <name type="brand">Welte-Mignon Autograph Piano</name>
         <lb/>
     </div>
+      <div type="illustration" facs="#zone_picture">
+        <figure>
+          <desc>
+            Grieg and Wilhelm II. discussing about it.
+          </desc>
+        </figure>
+      </div>
 
-      <div>
+      <div facs="#zone_styles">
         <p>
-          <name type="brand">Welte-Mignon</name> built in following styles:
+          <lb /><name type="brand">Welte-Mignon</name>s built in follow-
+          <lb />ing styles:
           <name type="brand">Welte Piano</name>, with
-          <lb />keyboard
+          <lb />keyboard;
           <name type="brand">Welte Piano</name>, with-
           <lb />out keyboard; and
           <name type="brand">Welte
@@ -214,15 +258,25 @@
         </p>
       </div>
 
-      <div type="footer">
+      <div type="footer" facs="#zone_studio">
         <p>
-          <name type="brand">The Welte-Mignon Studio</name>
-          <orgName>Cleveland &amp; Manning Piano Co.</orgName>
+          <hi rendition="#c #b #g"><lb/><name type="brand">The Welte-Mignon Studio</name></hi>
+          <hi rendition="#c #b #uc"><lb/><orgName>Cleveland &amp; Manning Piano Co.</orgName></hi>
         </p>
+      </div>
+      <div type="footer" facs="#zone_president">
         <address>
-          <lb/>J. B. CLEVELAND, President.
-          <lb/>80 N. Pryor St.
-          <lb/>H. S. HOLMES, Man. Director.
+          <hi rendition="#c"><lb/>J. B. CLEVELAND, <lb/>President.</hi>
+        </address>
+      </div>
+      <div type="footer" facs="#zone_street">
+        <address>
+          <hi rendition="#c #b"><lb/>80 N. Pryor St.</hi>
+        </address>
+      </div>
+      <div type="footer" facs="#zone_manager">
+        <address>
+          <hi rendition="#c"><lb/>H. S. HOLMES, <lb/>Man. Director.</hi>
         </address>
       </div>
     </body>

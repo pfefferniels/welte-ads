@@ -70,18 +70,19 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="BL_0001852_19221206_062_0067.pdf_page_1.png" />
-            <zone points="2149,413 2196,436 2196,551 2173,582 202,582 148,465 148,420 200,389"
+            <graphic url="BL_0001852_19221206_062_0067.pdf_page_1.png" width="2479" height="3508" />
+            <zone points="148,389 2196,389 2196,582 148,582"
                 id="eSc_textblock_183da727" />
-            <zone points="163,952 163,2626 1067,2626 1067,952"
+            <zone points="380,2076 380,2538 856,2538 856,2076"
                 id="eSc_textblock_6984ced5" />
             <zone points="1121,2032 1121,2643 2082,2643 2082,2032"
                 id="eSc_textblock_9478645f" />
             <zone points="165,2653 165,3155 2201,3155 2201,2653 835,2653"
                 id="eSc_textblock_c6563afe" />
-            <zone points="1674,1962 1668,1962 1668,1956 1674,1956"
+            <zone points="2142,612 1040,612 1040,1990 2142,1990"
                 id="eSc_textblock_732637de" />
-            <zone points="" id="eSc_dummyblock_" />
+            <zone points="383,1465 383,2074 857,2074 857,1465" id="eSc_dummyblock_" />
+            <zone points="196,984 1040,984 1040,1415 196,1415" id="zone_head" />
         </surface>
     </facsimile>
     <text>
@@ -107,15 +108,24 @@
                 </hi>
             </hi>
         </div>
-        <div facs="#eSc_dummyblock_">
+        <div facs="#zone_head">
             <lb />
+            <hi rendition="#c #uc">
             <head>
                 <name type="brand">
-                    Steinway
+                    <hi rendition="#larger">Steinway</hi>
                     <lb />Welte
                     <lb />Grand
                 </name>
             </head>
+            </hi>
+        </div>
+        <div type="illustration" facs="#eSc_textblock_732637de">
+            <figure>
+                <desc>Steinway grand piano with an oval portrait photograph of Paderewski</desc>
+            </figure>
+        </div>
+        <div facs="#eSc_dummyblock_">
             <lb />The <name type="brand">Welte-Mignon</name>, which<lb />
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 reproduces absolutely the
@@ -125,15 +135,15 @@
             <lb />the World's foremost and
             <lb />greatest reproducing instru-
             <lb />ments.
-            <lb />The <name type="brand">Steinway
+            <lb /><lb />The <name type="brand">Steinway
             Welte</name> is
             <lb />made also as a self-contained
             <lb />upright piano. Welte cabi-
             <lb />nets when desired can be
             <lb />supplied separately for at-
             <lb />tachment to any pianoforte.
-            <lb />Renderings
-            by:
+            <lb /><lb /><hi rendition="#c #i #smaller">Renderings
+            by:</hi>
         </div>
         <div facs="#eSc_textblock_6984ced5">
             <lb />
@@ -144,7 +154,7 @@
             <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>,
             <lb />
             <persName type="artist" corresp="https://d-nb.info/gnd/116422319">Mark Hambourg</persName>,
-            <persName type="artist" corresp="https://d-nb.info/gnd/134788370">Puish-<lb />noff</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/134788370">Pouish-<lb />noff</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/116040378">Fanny Davies</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/118501437">
                 d'Al-<lb />bert
@@ -159,9 +169,9 @@
                 Doh-<lb />nányi
             </persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
-            <persName type="artist" corresp="https://d-nb.info/gnd/116888652">Grünfeld</persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/116888652">Grünfeld</persName>,
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116662166">Lamond</persName>,
-            <persName type="artist" corresp="https://d-nb.info/gnd/120890143">Leschetitzky</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/120890143">Leschetizky</persName>,
             <lb />
             <persName type="artist" corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/116308621">Pugno</persName>,
@@ -170,13 +180,13 @@
             <persName type="artist">Sapellni-<lb />koff</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/117110450">Scharwenka</persName>,
             <persName type="artist">Schelling</persName>,
-            <persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Strauss</persName>,
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Strauss</persName>,
             <persName type="artist">Schumann</persName>, etc.
         </div>
         <div facs="#eSc_textblock_9478645f">
             <lb />
             <seg type="topic" resp="#np" ana="#distinction_from_mechanical">
-                <hi rendition="#in">U</hi>ntil the <name type="brand">Welte-Mignon</name>
+                <hi rendition="#dropcap">U</hi><hi rendition="#uc">ntil</hi> the <name type="brand">Welte-Mignon</name>
                 <lb />made its appearance all the
                 <lb />piano-playing <sic>'</sic>instruments
                 <lb />aimed at making the interpretation
@@ -190,20 +200,21 @@
         </div>
         <div facs="#eSc_textblock_c6563afe">
             <lb />
+            <hi rendition="#c #uc #larger">
             <head>
-                <orgName>Steinway &amp; Sons</orgName>
+                <hi rendition="#in #larger #g"><orgName>Steinway &amp; Sons</orgName></hi>
             </head>
+            </hi>
             <address>
-                <lb />Steinway Hall
-                <lb />15 &amp; 17, Lower Seymour Street,
-                London S.W.1
+                <hi rendition="#c #uc #larger"><lb />Steinway Hall</hi>
+                <hi rendition="#c #uc #in #larger"><lb />15 &amp; 17, Lower Seymour Street,
+                London, S.W.1</hi>
             </address>
-            <lb /><orgName>Steinway &amp; Sons</orgName>
+            <hi rendition="#c #i"><lb /><orgName>Steinway &amp; Sons</orgName>
             and their Agents make it conveniently possible for
-            music lovers to own a <name type="brand">Steinwa</name>. Pianos
-            <lb />of other makes takes taken in exchange. Write for particulars.
-            Branches and Agencies throughout the World
+            music lovers to own a <name type="brand">Steinway</name>. Pianos
+            <lb />of other makes taken in exchange. Write for particulars.
+            Branches and Agencies throughout the World.</hi>
         </div>
-        <div facs="#eSc_textblock_732637de" />
     </text>
 </TEI>
