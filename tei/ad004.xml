@@ -71,12 +71,12 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="v2_bsb00004266_01138_full_full_0_default.pdf_page_1.png" />
+            <graphic url="v2_bsb00004266_01138_full_full_0_default.pdf_page_1.png" width="2479" height="3508"/>
             <zone
-                points="2165,1941 2219,1980 2227,2079 2056,2243 1775,2252 1231,2279 647,2282 420,2235 395,2188 296,2149 280,1956 325,1917"
+                points="280,1917 2227,1917 2227,2282 280,2282"
                 id="eSc_textblock_5f4c4dd1" />
             <zone
-                points="1510,2401 2188,2447 2227,2533 2196,2671 1909,2671 1876,2697 1894,2759 2017,2798 2032,2913 1970,2975 2134,3009 2149,3069 2126,3092 1603,3116 350,3100 335,3009 374,2985 1013,2975 576,2960 459,2905 459,2783 491,2759 606,2767 639,2705 598,2656 296,2586 272,2447 296,2401 495,2385"
+                points="272,2385 2227,2385 2227,3116 272,3116"
                 id="eSc_textblock_1a33dd7c" />
             <zone points="476,492 476,956 852,956 852,492" id="eSc_textblock_0cb55a56" />
             <zone points="1097,494 1097,752 1097,980 1463,980 1463,494"
@@ -85,45 +85,64 @@
                 id="eSc_textblock_931f14ec" />
             <zone points="277,1183 277,1845 2217,1845 2217,1183"
                 id="eSc_textblock_851a1f28" />
+            <zone points="640,885 860,885 860,990 640,990" id="zone_caption_busoni" />
+            <zone points="1135,1000 1425,1000 1425,1040 1135,1040" id="zone_caption_nickisch" />
+            <zone points="1645,878 1885,878 1885,998 1645,998" id="zone_caption_reisenauer" />
             <zone points="" id="eSc_dummyblock_" />
         </surface>
     </facsimile>
     <text>
-        <div facs="#eSc_dummyblock_">
+        <div type="illustration" facs="#eSc_textblock_0cb55a56">
+            <figure>
+                <desc>Porträt Ferruccio Busoni (oval)</desc>
+            </figure>
+        </div>
+        <div facs="#zone_caption_busoni">
             <lb />
             <persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>
+        </div>
+        <div type="illustration" facs="#eSc_textblock_648b9252">
+            <figure>
+                <desc>Fotografie Arthur Nikisch</desc>
+            </figure>
+        </div>
+        <div facs="#zone_caption_nickisch">
             <lb />
             <persName corresp="https://d-nb.info/gnd/118786253">Prof. Arthur Nickisch</persName>
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>
         </div>
-        <div facs="#eSc_textblock_851a1f28">
+        <div type="illustration" facs="#eSc_textblock_931f14ec">
+            <figure>
+                <desc>Porträt Alfred Reisenauer (oval)</desc>
+            </figure>
+        </div>
+        <div facs="#zone_caption_reisenauer">
+            <lb />
+            <persName corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName> †
+        </div>
+        <div facs="#eSc_textblock_851a1f28"><hi rendition="#c">
             <lb />
             <head>
-                <hi rendition="#b">
+                <hi rendition="#b"><hi rendition="#in"><hi rendition="#in">
                     <orgName>WELTE-MIGNON</orgName>
-                </hi>
+                </hi></hi></hi>
             </head>
-            <lb />REPRODUKTIONS-PIANO
-            und -FLÜGEL <lb />
+            <lb /><hi rendition="#b"><hi rendition="#larger">REPRODUKTIONS-PIANO
+            und -FLÜGEL</hi></hi> <lb />
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen.
-            </seg>
+            </seg></hi>
         </div>
-        <div facs="#eSc_textblock_5f4c4dd1">
-            <lb />Welte-Philharmonie-Orgel<lb />für Privat-Salons,<lb />das individuelle Spiel
-            erster Orgel-Virtuosen wiedergebend.
+        <div facs="#eSc_textblock_5f4c4dd1"><hi rendition="#c">
+            <lb /><hi rendition="#in"><hi rendition="#in"><hi rendition="#larger">Welte-Philharmonie-Orgel</hi></hi></hi><lb /><hi rendition="#b">für Privat-Salons,<lb />das individuelle Spiel
+            erster Orgel-Virtuosen wiedergebend.</hi></hi>
         </div>
-        <div facs="#eSc_textblock_1a33dd7c">
-            <lb /><orgName>M. Welte &amp; Söhne G.m.b.H.</orgName>
-            <lb />Gegründet 1832.<lb />Freiburg in Baden.
+        <div facs="#eSc_textblock_1a33dd7c"><hi rendition="#c">
+            <lb /><hi rendition="#b"><hi rendition="#in"><hi rendition="#in"><hi rendition="#in"><orgName>M. Welte &amp; Söhne G.m.b.H.</orgName></hi></hi></hi></hi>
+            <lb />Gegründet 1832.<lb /><hi rendition="#in"><hi rendition="#in">Freiburg in Baden.</hi></hi>
             <lb />Vertreten an allen grösseren Plätzen der Welt. Erprobt in jedem Klima.
             <lb />Höchste Auszeichnungen auf allen Weltausstellungen.
-            <lb />Ausstellung zur Messe bei <orgName>Hug &amp; Co.</orgName>,
-            Markgrafenstr.10.
+            <lb /><hi rendition="#in"><hi rendition="#larger">Ausstellung zur Messe</hi></hi> bei <hi rendition="#b"><hi rendition="#in"><hi rendition="#larger"><orgName>Hug &amp; Co.</orgName>,</hi></hi></hi>
+            <hi rendition="#larger">Markgrafenstr.10.</hi></hi>
         </div>
-        <div facs="#eSc_textblock_0cb55a56" />
-        <div facs="#eSc_textblock_648b9252" />
-        <div facs="#eSc_textblock_931f14ec" />
     </text>
 </TEI>

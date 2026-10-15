@@ -77,7 +77,7 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="v2_bsb00130833_00141_2656_3632_1751_2424_full_0_default.pdf_page_1.png" />
+            <graphic url="v2_bsb00130833_00141_2656_3632_1751_2424_full_0_default.pdf_page_1.png" width="2479" height="3508"/>
             <zone points="60,170 60,1500 1166,1500 1166,170" id="eSc_textblock_c57eebad" />
             <zone points="1226,183 1226,1480 2365,1480 2365,183"
                 id="eSc_textblock_38858a02" />
@@ -103,7 +103,7 @@
         </surface>
     </facsimile>
     <text>
-        <div facs="#eSc_textblock_c57eebad">
+        <div facs="#eSc_textblock_c57eebad"><hi rendition="#b">
             <lb />
             <persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>
             <lb />
@@ -111,9 +111,9 @@
             <lb />
             <persName corresp="https://d-nb.info/gnd/118786253">Artur Nickisch</persName>
             <lb />
-            <persName corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName>
+            <persName corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName></hi>
         </div>
-        <div facs="#eSc_textblock_38858a02">
+        <div facs="#eSc_textblock_38858a02"><hi rendition="#b">
             <lb />
             <persName corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>
             <lb />
@@ -121,26 +121,25 @@
             <lb />
             <persName corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>
             <lb />
-            <persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>
+            <persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName></hi>
         </div>
         <div facs="#eSc_textblock_bbaf7988">
             <lb />Das Welte Mignon ist das
             <seg ana="#miracle" resp="#np" type="topic">Wunder der Wunder</seg>.
-            <lb />
-            <persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>.</div>
+            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>.</hi></div>
         <div facs="#eSc_textblock_0ace7367">
-            <lb />Eine unbedingt <seg ana="#technical_invention" type="topic" resp="#np">geniale Erfindung</seg> von hohem <lb />künstlerischen Wert.<lb /><persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>.</div>
+            <lb />Eine unbedingt <seg ana="#technical_invention" type="topic" resp="#np">geniale Erfindung</seg> von hohem <lb />künstlerischen Wert.<lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>.</hi></div>
         <div facs="#eSc_textblock_910008bc">
             <lb /><seg ana="#virtual_presence" type="topic" resp="#np">Man meint den betreffenden Künstler in Person<lb />vor sich zu haben und ihn
-            spielen zu hören.</seg><lb /><persName corresp="https://d-nb.info/gnd/118786253">Nickisch</persName>.</div>
+            spielen zu hören.</seg><lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118786253">Nickisch</persName>.</hi></div>
         <div facs="#eSc_textblock_9c944536">
             <quote>
-                <lb />Was ich Mignon vorzuwerfen hae, ist sein
+                <lb />Was ich Mignon vorzuwerfen habe; ist sein
                 <lb />Name, weil es weder der gewaltigen Wirkung dieses
                 <lb />Instruments noch seiner kolossalen Bedeutung ent-
                 <lb />spricht.
             </quote>
-            <lb /><persName corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>.
+            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>.</hi>
         </div>
         <div facs="#eSc_textblock_d5bad035">
             <quote>
@@ -150,19 +149,19 @@
                 </seg>
             </quote>
             <lb />
-            <persName corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName>.
+            <hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName>.</hi>
         </div>
         <div facs="#eSc_textblock_c91feaa0">
             <quote>
                 <lb />Welte Mignon ist für mich das <seg ana="#unreached_ideal" resp="#np" type="topic">unerreichte Ideal<lb />aller Musikinstrumente</seg>.
             </quote>
-            <lb /><persName corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>.
+            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>.</hi>
         </div>
         <div facs="#eSc_textblock_031c0fe4">
             <quote>
-                <lb />Der einzige Apparat der auf künstlerische<lb />Bedeutung Anspruch machen kann.
+                <lb />Der <hi rendition="#g">einzige</hi> Apparat der auf künstlerische<lb />Bedeutung Anspruch machen kann.
             </quote>
-            <lb /><persName corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>.
+            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>.</hi>
         </div>
         <div facs="#eSc_textblock_fce1a771">
             <lb />Mit dem Welte Mignon ist, wie die berühmtesten Künstler anerkennen, ein
@@ -183,7 +182,7 @@
                 <persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>,
                 <persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>,
                 <persName corresp="https://d-nb.info/gnd/116662166">Lamond</persName>,
-                <persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>
+                <persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>,
                 <lb /><persName corresp="https://d-nb.info/gnd/118598988">Reger</persName>,
                 <persName corresp="https://d-nb.info/gnd/11861911X">Strauss</persName>,
                 <persName corresp="https://d-nb.info/gnd/118986724">Paderewsky</persName> etc. vorspielen lassen.
@@ -191,21 +190,19 @@
             <lb />
             
             <hi rendition="#c">
-                <hi rendition="#b">
+                <hi rendition="#b"><hi rendition="#in">
                     Vorführung Donnerstag 8. Dezember<lb />Nachmittags
                     4 Uhr im Konzertsaal<lb />des Bayerischen Hofes.
-                </hi>
+                </hi></hi>
             </hi>
             <lb />Eintrittskarten zu 1.50, 1. – u.
-            50 Pf. sind bei <orgName>Alfred Schmid Nachf.</orgName>
-            <address>
-                Theatinerstr. 34
-            </address>, zu haben.
-            <lb />Donnerstag Nachmittag am 3 1/2 Uhr auch am Saaleingang.
+            50 Pf. sind bei <hi rendition="#b"><hi rendition="#in"><hi rendition="#larger"><orgName>Alfred Schmid Nachf.</orgName></hi></hi></hi>
+            <address>Theatinerstr. 34</address>, zu haben.
+            <lb /><hi rendition="#c">Donnerstag Nachmittag ab 3 1/2 Uhr auch am Saaleingang.</hi>
         </div>
         <div facs="#eSc_textblock_c8ece5c3">
             <lb />Diese Erfindung ist das unglaublichste an Vol-
             <lb />lendung, das man sich denken kann.
-            <lb /><persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>.</div>
+            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>.</hi></div>
     </text>
 </TEI>

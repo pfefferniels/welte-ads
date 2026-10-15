@@ -74,27 +74,27 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="v2_bsb00130861_00335_full_full_0_default.jpg" />
+            <graphic url="v2_bsb00130861_00335_full_full_0_default.jpg" width="4782" height="6220"/>
             <zone points="2829,4503 2829,5079 4369,5079 4369,4503"
                 id="eSc_textblock_fa9ab44f" />
             <zone points="2842,5097 2842,5488 4364,5488 4364,5097"
                 id="eSc_textblock_16a9ec04" />
             <zone points="2753,5494 2753,5737 4476,5726 4476,5494"
                 id="eSc_textblock_31285247" />
-            <zone points="2803,5844 2803,6031 4439,6031 4439,5844"
+            <zone points="2803,5870 2803,6031 4439,6031 4439,5870"
                 id="eSc_textblock_7c09e566" />
             <zone points="4125,5883 4125,5715 3098,5715 3098,5883"
                 id="eSc_textblock_bdf7ee80" />
         </surface>
     </facsimile>
     <text>
-        <div facs="#eSc_textblock_fa9ab44f">
+        <div facs="#eSc_textblock_fa9ab44f"><hi rendition="#c #b">
             <lb />
             <persName type="artist" corresp="https://d-nb.info/gnd/116942037">Felix Mottl</persName>
             <lb />
             <persName type="artist" corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>
             <lb />
-            <persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName></hi>
         </div>
         <div facs="#eSc_textblock_16a9ec04">
             <quote type="testimonial">
@@ -105,9 +105,9 @@
                 künstlerischen
                 <lb />Wert. Ich habe selten eine so schöne und freudige Ueberraschung
                 erlebt, wie heute, wo ich dieses
-                <lb />prächtige Instrument kennengelernt habe.
+                <lb />prächtige Instrument kennen gelernt habe.
             </quote>
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116942037">Felix Mottl</persName>.
+            <lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/116942037">Felix Mottl</persName>.</hi>
 
             <quote type="testimonial">
                 <lb />Mignon ist für mich
@@ -120,19 +120,19 @@
                     Schüler
                 </seg>, Publikum und alle Künstler.
             </quote>
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>.
+            <lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>.</hi>
 
-            <quote type="testimonial">
+            <hi rendition="#et2"><quote type="testimonial">
                 <lb />Das <name type="brand">Welte Mignon</name> ist eine ganz ausserordentliche Erfindung, von allen
                 <lb />derartigen Mechanismen der Einzige, der auf künstlerische Bedeutung Anspruch
-                <lb />machen kann. Den Erfindern meine aufrichte Bewunderung.
+                <lb />machen kann. Den Erfindern meine aufrichtige Bewunderung.
             </quote>
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName></div>
+            <lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>.</hi></hi></div>
         <div facs="#eSc_textblock_31285247">
             <lb />Mit dem <name type="brand">Welte Mignon</name>
             ist, wie die berühmtesten Künstler anerkennen, ein phantastisch scheinender Gedanke
-            <lb />verwirklicht, nämlich das Klavierspiel eines Künstlers mit all seinen persönlichen Eigenschaften - des Anschlags,
-            <lb />der Phrasierung, des Pedalgebrauchs, etc.
+            <lb />verwirklicht, nämlich das Klavierspiel eines Künstlers mit all' seinen persönlichen Eigenschaften - des Anschlags,
+            <lb />der Phrasierung, des Pedalgebrauchs etc.
             <seg ana="#immortality" type="topic" resp="#np">
                 zu verewigen
             </seg>.
@@ -160,15 +160,16 @@
                 <lb />vorspielen lassen.
             </seg>
         </div>
-        <div facs="#eSc_textblock_7c09e566">
-            <lb />des Bayerischen Hofes<lb />Eintrittskaren zu 50Pfg. sind bei
-            <orgName>Alfred Schmid Nachf.</orgName>,
-            <address>Theatinerstrasse 34</address>, zu haben.
-            <lb />Sonntag Nachmittag am 31/2 Uhr auch am Saaleingang.
-        </div>
-        <div facs="#eSc_textblock_bdf7ee80">
+        <div facs="#eSc_textblock_bdf7ee80"><hi rendition="#c #b">
             <lb />Vorführung Sonntag, d. 20. November
             <lb />Nachmittag 4 Uhr im Konzertsaal
+            <lb />des Bayerischen Hofes</hi>
+        </div>
+        <div facs="#eSc_textblock_7c09e566"><hi rendition="#c">
+            <lb />Eintrittskarten zu 50 Pfg. sind bei
+            <hi rendition="#b"><hi rendition="#in"><hi rendition="#larger"><orgName>Alfred Schmid Nachf.</orgName>,</hi></hi></hi>
+            <address>Theatinerstrasse 34</address>, zu haben.</hi>
+            <lb /><hi rendition="#c">Sonntag Nachmittag ab 3 1/2 Uhr auch am Saaleingang.</hi>
         </div>
     </text>
 </TEI>

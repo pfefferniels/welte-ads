@@ -81,7 +81,7 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="v2_bsb00085796_01060_full_full_0_default.jpg" />
+            <graphic url="v2_bsb00085796_01060_full_full_0_default.jpg" width="3485" height="5319"/>
             <zone points="422,318 422,683 2974,683 2974,318" id="eSc_textblock_ae5cff62" />
             <zone points="228,676 228,2347 1676,2347 1676,676"
                 id="eSc_textblock_fe5bb22e" />
@@ -94,11 +94,11 @@
         </surface>
     </facsimile>
     <text>
-        <div facs="#eSc_textblock_ae5cff62">
+        <div facs="#eSc_textblock_ae5cff62"><hi rendition="#c #b">
             <lb />Ein
             <seg ana="#miracle" type="topic" resp="#np">
                 musikalisches Weltwunder.
-            </seg>
+            </seg></hi>
         </div>
 
         <div facs="#eSc_textblock_fe5bb22e">
@@ -108,8 +108,8 @@
                 akustisches Seitenstück zur Platte des Photo-<lb />graphen
             </seg>
             - zu verwirklichen.
-            <lb />Die neue Erfindung ist das Reproduktionsklavier <name type="brand">"Mignon"</name>,
-            <lb />welches das Spiel der berühmten Meister des Klavierspiels selbsstätig und
+            <lb />Die neue Erfindung ist das <hi rendition="#in #b #u">Reproduktionsklavier <name type="brand">"Mignon"</name>,</hi>
+            <lb />welches das Spiel der berühmten Meister des Klavierspiels selbsttätig und
             <lb />
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 völlig getreu wiedergibt.
@@ -145,7 +145,7 @@
                 <persName>Liszt</persName>, <persName>Rubinstein</persName>, <persName>Bülow</persName><lb />lauschen und daran lernen
             </seg>. Von den Grossen der Gegenwart
             ist das Spiel<lb />aber nun für die Nachwelt festgehalten; schon jetzt sind zur
-            Reproduktin<lb />aufgenommen:
+            Reproduktion<lb />aufgenommen:
             <persName corresp="https://d-nb.info/gnd/118501437">Eugen d'Albert</persName>,
             <persName corresp="https://d-nb.info/gnd/116014326">Konrad Ansorge</persName>,
             <persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>,
@@ -184,12 +184,12 @@
                 künstlerisch vollendet begleiten lassen können.
             </seg>
             Die Bedeutung
-            <lb />der Erfindung in denn auch von allen namhaften Pianisten anerkannt worden,
+            <lb />der Erfindung ist denn auch von allen namhaften Pianisten anerkannt worden,
             <lb />wie nachfolgende Aeusserungen beweisen:
         </div>
         
         <div facs="#eSc_textblock_05c0264b">
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Eugen d'Albert</persName>:
+            <lb /><hi rendition="#larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Eugen d'Albert</persName>:</hi>
             <quote type="testimonial">
                 <lb />Das <name type="brand">Mignon-Reproduktionsklavier</name> ist
                 <lb />eine
@@ -198,7 +198,7 @@
                 </seg>
             </quote>
 
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116014326">Konrad Ansorge</persName>:
+            <lb /><hi rendition="#larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/116014326">Konrad Ansorge</persName>:</hi>
             <quote type="testimonial">
                 <seg ana="#educational_use" type="topic" resp="#np">
                     <lb />Es ist ein ausgezeichnetes Bildungs-
@@ -210,17 +210,17 @@
             </quote>
 
             <lb />
-            <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>:
+            <hi rendition="#larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>:</hi>
             <quote type="testimonial">
                 <lb /><name type="brand">Mignon</name> ist ebenso verblüffend für den
-                <lb />Eingeweihten, als sie
+                <lb />Uneingeweihten, als sie
                 <seg ana="#miracle" resp="#np" type="topic">
                     für den Einge-
                     <lb />weihten bewunderungswürdig sein muss.
                 </seg>
             </quote>
             
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>:
+            <lb /><hi rendition="#larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>:</hi>
             <quote type="testimonial">
                 <seg ana="#technical_invention" resp="#np" type="topic">
                     <lb />Meine Bewunderung für die grossartige
@@ -228,12 +228,12 @@
                 </seg>
             </quote>
 
-            <lb /><persName type="artist">Ernst von Dohnányi</persName>:
+            <lb /><hi rendition="#larger #u"><persName type="artist">Ernst von Dohnányi</persName>:</hi>
             <quote type="testimonial">
                 <lb />Man kann nur staunen und bewundern.
             </quote>
 
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>:
+            <lb /><hi rendition="#larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>:</hi>
             <quote type="testimonial">
                 <seg ana="#technical_invention #miracle" type="topic" resp="#np">
                     <lb /><name type="brand">Mignon</name> ist sicher eine der wunder-
@@ -242,8 +242,8 @@
                 </seg>
             </quote>
 
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116888652">Alfred
-            Grünfeld</persName>:
+            <lb /><hi rendition="#larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/116888652">Alfred
+            Grünfeld</persName>:</hi>
             <quote type="testimonial">
                 <lb />Ich gestehe gerne, dass ich geradezu
                 <lb />verblüfft war, als ich mit eigenen Ohren
@@ -254,15 +254,15 @@
         </div>
 
         <div facs="#eSc_textblock_a1117377">
-            <lb />Verführung des Klaviers kann einstweilen nur nach vorhergegangener Anmeldung
-            erfolgen.
-            <lb />Alleinvertretung bei
-            <orgName>Alfred Schmid Nachf.</orgName>,
-            <address>33-34 Theatinerstrasse 33-34.</address>
+            <lb /><hi rendition="#c">Vorführung des Klaviers kann einstweilen nur nach vorhergegangener Anmeldung
+            erfolgen.</hi>
+            <lb /><hi rendition="#c #b"><hi rendition="#in">Alleinvertretung bei
+            <hi rendition="#larger"><orgName>Alfred Schmid Nachf.</orgName>,</hi>
+            <address>33-34 Theatinerstrasse 33-34.</address></hi></hi>
         </div>
 
         <div facs="#eSc_textblock_daae2028">
-            <lb /><persName corresp="https://d-nb.info/gnd/116210419">Clotilde Kleeberg</persName>:<lb />
+            <lb /><hi rendition="#larger #u"><persName corresp="https://d-nb.info/gnd/116210419">Clotilde Kleeberg</persName>:</hi><lb />
             <quote type="testimonial">
                 <seg ana="#soulfulness" resp="#np" type="topic">
                     Es scheint mir, als ob in <name type="brand">Mignon</name> der Spie-<lb />gel der
@@ -270,7 +270,7 @@
                 </seg>.
             </quote>
             
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116662166">Frederic Lamond</persName>:
+            <lb /><hi rendition="#larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/116662166">Frederic Lamond</persName>:</hi>
             <lb />
             <quote type="testimonial">
                 <seg ana="#miracle" type="topic" resp="#np">
@@ -279,7 +279,7 @@
                 </seg>.
             </quote>
             
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>:
+            <lb /><hi rendition="#larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>:</hi>
             <quote type="testimonial">
                 <lb />Die Wiedergabe ist nach jeder Richtung,
                 <lb />sowohl was das rein technisch virtuose, als
@@ -287,13 +287,13 @@
                 <lb />betrifft, eine so verblüffend natürliche,
                 <seg ana="#virtual_presence" resp="#np" type="topic">
                     dass<lb />man
-                    wirklich meint, den Künstler in
-                    <lb />Person vor sich zu sehen und ihn spielen zu
+                    wirklich meint, den Künstler in Per-
+                    <lb />son vor sich zu sehen und ihn spielen zu
                     <lb />hören.
                 </seg>
             </quote>
             
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>:
+            <lb /><hi rendition="#larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>:</hi>
             <quote type="testimonial">
                 <lb />In dieser Wiedergabe findet man alle
                 <lb />charakteristischen Eigenschaften des Künst-
@@ -303,7 +303,7 @@
                 <lb />Verwendung der beiden Pedale.
             </quote>
             
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>:
+            <lb /><hi rendition="#larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>:</hi>
             <quote type="testimonial">
                 <lb />Hier ist zugleich ein technisches und philo-
                 <lb />sophisches Problem in vollendetster Form
@@ -311,8 +311,8 @@
             </quote>
             <lb />
             
-            <persName type="artist" corresp="https://d-nb.info/gnd/11863027X">Felix
-            Weingartner</persName>:
+            <hi rendition="#larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/11863027X">Felix
+            Weingartner</persName>:</hi>
             <quote type="testimonial">
                 <lb />Der <name type="brand">Mignon-Apparat</name> ist das Unglaublichste
                 <lb />an Vollendung, was man sich denken kann.<lb />
@@ -321,8 +321,8 @@
                     <lb />kann nun nicht mehr
                     untergehen
                 </seg> und spä-
-                <lb />tere Genarationen werden die Früchte die-
-                <lb />ser genialen Erfindung genissen.
+                <lb />tere Generationen werden die Früchte die-
+                <lb />ser genialen Erfindung geniessen.
             </quote>
         </div>
     </text>

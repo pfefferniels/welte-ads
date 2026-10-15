@@ -72,7 +72,7 @@
     <facsimile>
         <surface>
             <graphic url="v2_bsb00004256_01424_260_264_3011_2118_full_0_default_.pdf_page_1.png" width="3508" height="2479"/>
-            <zone points="2549,1976 2545,1976 2545,1972 2549,1973"
+            <zone points="3088,2258 2965,2258 2965,2198 3088,2198"
                 id="eSc_textblock_8679924f" />
             <zone points="744,145 744,378 2850,378 2850,145" id="eSc_textblock_10eee52d" />
             <zone points="1437,410 1437,1124 3326,1124 3326,410"
@@ -90,35 +90,42 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_10eee52d">
-            <lb />Das Reproduktions-Piano</div>
+            <lb /><hi rendition="#c #b">Das Reproduktions-Piano</hi></div>
+        <div type="illustration" facs="#eSc_textblock_61edb6ff">
+            <figure>
+                <desc>Welte-Mignon Reproduktions-Piano (Schrankmodell)</desc>
+            </figure>
+        </div>
         <div facs="#eSc_textblock_a959e5a4">
             <lb />
-            <head> Welte- <lb />Mignon </head>
+            <head><hi rendition="#c #b"> Welte- <lb />Mignon </hi></head>
         </div>
-        <div facs="#eSc_textblock_8235fd10">
-            <lb />bietet die Möglichkeit, das Originalspiel der
-            <lb />ersten Pianisten der Welt
+        <div facs="#eSc_textblock_8235fd10"><hi rendition="#c">
+            <lb />bietet die Möglichkeit, das <hi rendition="#b">Originalspiel der</hi>
+            <lb /><hi rendition="#b">ersten Pianisten der Welt</hi>
             <seg ana="#home" resp="#np" type="topic">
-                im eigenen
-                <lb />Heim zu hören.
-            </seg>
+                <hi rendition="#b">im eigenen</hi>
+                <lb /><hi rendition="#b">Heim</hi> zu hören.
+            </seg></hi>
         </div>
-        <div facs="#eSc_textblock_77dbd8b9">
+        <div facs="#eSc_textblock_77dbd8b9"><hi rendition="#c">
             <lb />
             <seg ana="#touch_of_a_button" resp="#np" type="topic">
                 Ein Druck auf den Knopf genügt, um einen 
-                <persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>,
+                <hi rendition="#b"><persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>,
                 <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>,
-                <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
-                , <lb /><persName corresp="https://d-nb.info/gnd/116429623">Reisenauer</persName>
+                <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,</hi>
+                <lb /><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/116429623">Reisenauer</persName></hi>
                 etc. zu zitieren.
-            </seg>
+            </seg></hi>
         </div>
         <div facs="#eSc_textblock_5dbfb787">
-            <lb /><orgName>M. Welte &amp; Söhne</orgName><lb />Hoflieferanten<lb />Freiburg i. Baden.
+            <lb /><hi rendition="#c #b"><hi rendition="#in"><hi rendition="#in"><hi rendition="#in"><orgName>M. Welte &amp; Söhne</orgName></hi></hi></hi></hi>
+            <lb /><hi rendition="#c">Hoflieferanten</hi>
+            <lb /><hi rendition="#c #b"><hi rendition="#in"><hi rendition="#larger">Freiburg i. Baden.</hi></hi></hi>
         </div>
-        <div facs="#eSc_textblock_8679924f" />
-        <div facs="#eSc_textblock_61edb6ff" />
+        <div facs="#eSc_textblock_8679924f">
+            <lb /><hi rendition="#right">549]</hi></div>
     </text>
 </TEI>
   

@@ -75,17 +75,17 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="v2_bsb00130680_00258_full_full_0_default.jpg" />
-            <zone points="2534,4086 2534,3069 833,3069 833,4086"
+            <graphic url="v2_bsb00130680_00258_full_full_0_default.jpg" width="4588" height="6144"/>
+            <zone points="1520,3060 2534,3060 2534,4086 833,4086 833,3360 1110,3360 1110,3205 1520,3205"
                 id="eSc_textblock_fedea684" />
             <zone points="824,3016 824,3336 1514,3336 1514,3016"
                 id="eSc_textblock_3824adc6" />
         </surface>
     </facsimile>
     <text>
-        <div facs="#eSc_textblock_3824adc6">
+        <div facs="#eSc_textblock_3824adc6"><hi rendition="#b">
             <lb />Das Reproduktions-
-            <lb />Klavier
+            <lb />Klavier</hi>
         </div>
 
         <div facs="#eSc_textblock_fedea684">
@@ -137,11 +137,10 @@
             <lb />Die nächste Vorführung des Reproduktionsklaviers findet Sonntag den 15. Dezember nach-
             <lb />mittags 5 Uhr statt, wozu Musikfreunde höflichst eingeladen sind.
             <lb />
-            <orgName>Pianohaus Alfred Schmid Nachf.</orgName>
-            <lb />Kgl. Bayer. Hofmusikalienhandlung,
+            <hi rendition="#c"><hi rendition="#in"><hi rendition="#larger"><orgName>Pianohaus Alfred Schmid Nachf.</orgName></hi></hi></hi>
+            <lb /><hi rendition="#c">Kgl. Bayer. Hofmusikalienhandlung,
             Hoflieferant Sr. Kgl. Hoheit des Prinzen
-            Rupprecht von Bayern.<lb /><address>34 Theatinerstrasse 34</address>
+            Rupprecht von Bayern.</hi><lb /><hi rendition="#c"><hi rendition="#larger"><address>34 Theatinerstrasse 34</address></hi></hi>
         </div>
-        <div facs="#eSc_textblock_3824adc6" />
     </text>
 </TEI>
