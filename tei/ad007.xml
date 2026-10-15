@@ -110,7 +110,7 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="0078.pdf_page_1.png" />
+            <graphic url="0078.pdf_page_1.png" width="2076" height="2724" />
             <zone points="345,425 345,795 1772,797 1772,425" id="eSc_textblock_49bbbbff" />
             <zone points="686,307 686,435 1435,435 1435,307" id="eSc_textblock_2d37ca29" />
             <zone points="987,873 987,1055 1790,1055 1790,873"
@@ -129,21 +129,23 @@
                 id="eSc_textblock_415177db" />
             <zone points="174,1635 174,1639 157,1639 160,1635"
                 id="eSc_textblock_48572ad5" />
+            <zone points="450,840 812,840 812,1270 450,1270" id="zone_portrait" />
+            <zone points="30,2150 2050,2150 2050,2690 30,2690" id="zone_organ" />
         </surface>
     </facsimile>
     <text>
         <div facs="#eSc_textblock_2d37ca29">
-            <lb />The <name type="brand">Welte Mignon</name>
+            <lb /><hi rendition="#c #b">The <name type="brand">Welte Mignon</name></hi>
         </div>
         <div facs="#eSc_textblock_49bbbbff">
             <lb />
-            <hi rendition="#in">I</hi>s
+            <hi rendition="#dropcap #framed">I</hi><hi rendition="#uc">s</hi>
             <seg ana="#technical_invention" type="topic" resp="#np">
                 the greatest achievement in the world of music
                 <lb />invention
             </seg>,
             as through it you may listen to accurate
-            <lb />interpretations upon your own piano of over five thou-
+            <lb />interpretations upon <hi rendition="#i">your own</hi> piano of over five thou-
             <lb />sand musical compositions,
             <seg ana="#exact_reproduction" resp="#np" type="topic">
                 precisely as they were
@@ -156,20 +158,29 @@
              of the
             <lb />world's most distinguished pianists.
         </div>
+        <div type="illustration" facs="#zone_portrait">
+            <figure>
+                <desc>Oval portrait of Josef Hofmann.</desc>
+            </figure>
+        </div>
         <div facs="#eSc_textblock_73db1303">
+            <hi rendition="#c #i">
             <lb />Among those who have recorded their
             <lb />wonderful playing for the <name type="brand">Welte
             <lb />Mignon</name>
             are
+            </hi>
         </div>
         <div facs="#eSc_textblock_60560364">
-            <lb />No living Pianist has done more to
+            <hi rendition="#c #i">
+            <lb />No living pianist has done more to
             <lb />engender a love for music among
             <lb />American people than
             <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>,
             <lb />whose art at the zenith of his great
             <lb />career has been preserved by the
             <lb /><name type="brand">Welte Mignon</name>.
+            </hi>
         </div>
         <div facs="#eSc_textblock_a80b3fdb">
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Ignace J. Paderewski</persName>
@@ -196,18 +207,27 @@
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/117110450">Xaver Scharwenka</persName>
         </div>
         <div facs="#eSc_textblock_8c1ac387">
-            <lb /><orgName>The Welte Studios</orgName>
+            <hi rendition="#c">
+            <head><hi rendition="#b"><lb /><orgName><hi rendition="#i">The</hi> Welte Studios</orgName></hi></head>
             <lb />
             <address>
-                665-5th Ave. at 53rd St.
-                <lb />New York
+                665-5<hi rendition="#sup #u">th</hi> Ave. at 53<hi rendition="#sup #u">rd</hi> St.
+                <lb /><hi rendition="#smaller"><hi rendition="#smaller">New York</hi></hi>
             </address>
+            </hi>
         </div>
         <div facs="#eSc_textblock_c2049f2c">
+            <hi rendition="#c #i">
             <lb />Exhibited in
             <address>
                 space 31, Main Floor, National Music Show
             </address>
+            </hi>
+        </div>
+        <div type="illustration" facs="#zone_organ">
+            <figure>
+                <desc>Ornamental base of the frame: organ pipes with the WM monogram in the centre.</desc>
+            </figure>
         </div>
         <div facs="#eSc_textblock_415177db" />
         <div facs="#eSc_textblock_48572ad5" />

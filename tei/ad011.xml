@@ -105,10 +105,10 @@
      </teiHeader>
       <facsimile>
         <surface>
-            <graphic url="new-york-herald-paderewski.png" />
-            <zone points="42,64 42,754 466,754 449,571 457,241 495,63"
+            <graphic url="new-york-herald-paderewski.png" width="965" height="1030" />
+            <zone points="42,63 466,63 466,754 42,754"
                 id="eSc_textblock_fa5427b3" />
-            <zone points="37,954 36,761 799,756 938,833 936,949"
+            <zone points="36,756 938,756 938,954 36,954"
                 id="eSc_textblock_e9f6344e" />
             <zone
                 points="486,47 495,264 461,292 473,342 467,428 479,510 445,567 445,733 602,735 614,794 653,755 696,786 732,755 956,805 956,40"
@@ -118,10 +118,10 @@
     <text>
         <div facs="#eSc_textblock_fa5427b3">
             <lb />
-            <head>
+            <head><hi rendition="#b #i #in #larger">
                 <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> WILL
-                <lb />Play Again
-            </head>
+                <lb /><hi rendition="#right">Play Again</hi>
+            </hi></head>
             <lb />
             <seg ana="#miracle" resp="#np" type="topic">
                 Thanks to the wizardry of <name type="brand">Hardman Welte-
@@ -150,12 +150,12 @@
             <hi rendition="#c">
                 Write for catalog.
                 <lb />
-                <seg ana="#affordability" resp="#np" type="topic">Convenient Terms</seg>
+                <seg ana="#affordability" resp="#np" type="topic"><hi rendition="#uc #b #smaller">Convenient Terms</hi></seg>
 
                 <app>
                   <rdg source="#A">
-                     <lb /><orgName>HARDMAN,PECK&amp;CO.</orgName>
-                     <lb />Founded 1842
+                     <lb /><hi rendition="#b #in"><orgName>HARDMAN,PECK&amp;CO.</orgName></hi>
+                     <lb /><hi rendition="#uc #b #smaller">Founded 1842</hi>
                   </rdg>
                   <rdg source="#B">
                      <hi rendition="#k">
@@ -172,18 +172,20 @@
                   </rdg>
                 </app>
             </hi>
+            <hi rendition="#c #b #larger">
             <lb />
             <address>
                433 Fifth Avenue, New York
                <lb />47-51 Flatbush Ave, Brooklyn
             </address>
-            <hi rendition="#c">
+            </hi>
+            <hi rendition="#c #b #i">
                 <lb />Represented in all Cities
             </hi>
         
         </div>
         <div facs="#eSc_textblock_e9f6344e">
-            <lb /><orgName>HARDMAN<lb />WELTE-MIGNON<lb />LICENSEE</orgName>
+            <lb /><orgName><hi rendition="#c #b"><hi rendition="#in #g2"><hi rendition="#in #larger"><hi rendition="#larger">HARDMAN</hi><lb />WELTE-MIGNON</hi></hi><lb /><hi rendition="#g2 #smaller">LICENSEE</hi></hi></orgName>
         
         </div>
         <div facs="#eSc_textblock_eeb83339" type="illustration">

@@ -112,34 +112,38 @@
      </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="sun-new-york-1920.png" />
+            <graphic url="sun-new-york-1920.png" width="950" height="1010" />
             <zone points="10,14 10,136 935,136 935,14" id="eSc_textblock_4f5aecd5" />
             <zone points="133,143 133,276 798,276 798,143" id="eSc_textblock_b669256d" />
             <zone
                 points="762,294 758,374 694,388 616,388 616,423 521,423 521,572 467,572 467,574 177,574 177,604 178,604 178,605 58,605 49,321 68,283 70,282 764,282 764,292"
                 id="eSc_textblock_cd8eef02" />
-            <zone points="49,1001 49,742 61,718 58,612 459,612 459,1003 52,1003"
+            <zone points="49,612 459,612 459,1003 49,1003"
                 id="eSc_textblock_6dcfb305" />
             <zone points="915,615 913,229 782,295 779,383 634,391 620,434 556,422 521,450 521,615"
                 id="eSc_textblock_8162a045" />
+            <zone points="478,617 892,617 892,748 478,748" id="zone_terms" />
         </surface>
     </facsimile>
     <text>
         <div facs="#eSc_textblock_4f5aecd5">
-            <lb /><orgName corresp="welte.studios">The Welte-Mignon Studios</orgName>
+            <hi rendition="#c #b #i">
+            <head><hi rendition="#larger"><lb /><orgName corresp="welte.studios"><hi rendition="#smaller"><hi rendition="#smaller #uu">The</hi></hi> Welte-Mignon Studios</orgName></hi></head>
             <lb />
             <address>
                667 Fifth Avenue-at 53rd Street
             </address>
+            </hi>
         </div>
         <div facs="#eSc_textblock_b669256d">
-            <lb />A really satisfactory way
-            <lb />to buy musical instruments</div>
+            <hi rendition="#c #b">
+            <lb />A really <hi rendition="#u">satisfactory</hi> way
+            <lb />to buy musical instruments</hi></div>
             <div facs="#eSc_textblock_cd8eef02">
-            <lb /><hi rendition="#in">A</hi> FEELING of utter confidence is engendered at the
+            <lb /><hi rendition="#dropcap #i">A</hi> FEELING of utter confidence is engendered at the
             <lb /><orgName corresp="welte.studios">Welte Mignon Studios</orgName>. You
             instinctively know
-            <lb />that your continued patronage is sought and, therefore,
+            <lb />that your <hi rendition="#u">continued</hi> patronage is sought and, therefore,
             <lb />that
             everything will be made to bend toward
             <lb />giving you thorough and complete
@@ -151,8 +155,10 @@
             <lb />accord with your own idea of what is
             <lb />equitable.</div>
             <div facs="#eSc_textblock_6dcfb305">
-            <lb />The Welte-Mignon
+            <head><hi rendition="#c #b #u #in">
+            <lb />The <hi rendition="#uc">Welte-Mignon</hi>
             <lb />Reproducing Piano
+            </hi></head>
             <lb />The instrument chosen by
             <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/124379923">Lhe-<lb/>vinne</persName>,
@@ -160,11 +166,12 @@
                 <sic>Hofman</sic>
             </persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>
-            <lb />and scores of others, to
+            and scores of others, to
             <lb />
             <seg ana="#immortality" resp="#np" type="topic">
                 preserve their genius for posterity.
             </seg>
+            <hi rendition="#smaller">
             <lb />You should hear <persName corresp="https://d-nb.info/gnd/118986724" type="artist">Paderewski's</persName> reproductions;
             <seg ana="#soulfulness" resp="#np" type="topic">
                 hear how
@@ -189,10 +196,10 @@
             selections for the <name type="brand">Welte-Mignon</name>. Imagine
             <lb />the delight to be derived from such a collection.
             <seg ana="#affordability" resp="#np" type="topic">
-                And consider
-                <lb />that the <name type="brand">Welte-Mignon Reproducing Piano</name> is within
+                And con-
+                <lb />sider that the <name type="brand">Welte-Mignon Reproducing Piano</name> is within
                 <lb />everyone's means, for it may be
-                bought on your terms, with
+                bought on your terms, with-
                 <lb />in reason.
             </seg>
             <lb />Just drop in at the <orgName>Studios</orgName> to hear the
@@ -200,6 +207,7 @@
             <lb />feel free to ask for your favorite selections. We consider the
             <lb />pleasure
             entirely ours.
+            </hi>
         </div>
 
         <div facs="#eSc_textblock_8162a045" type="illustration">
@@ -211,6 +219,17 @@
                     </desc>
                 </figure>
                 </seg>
+        </div>
+        <div facs="#zone_terms">
+            <lb /><hi rendition="#c #b #larger">WELTE TERMS:</hi>
+            <hi rendition="#i #b">
+            <lb />We maintain that if music is to be enjoyed by every-
+            <lb />one, it must be within everyone's reach. So we placed every
+            <lb />instrument in the Studios just there–within EVERYONE'S
+            <lb />means. Pick out any instrument you like, from lowest to
+            <lb />highest in price, and buy it on YOUR OWN TERMS,
+            <lb />within reason.
+            </hi>
         </div>
 
         <gap reason="irrelevant">

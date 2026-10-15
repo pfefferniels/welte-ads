@@ -84,12 +84,16 @@
         <surface>
             <graphic url="los-angeles-1909.png" width="676" height="1810"/>
             <zone points="20,18 19,513 657,522 656,18" id="eSc_textblock_b620cf2e" />
+            <zone points="245,486 390,486 390,507 245,507" id="zone_caption" />
             <zone
-                points="397,562 385,574 398,583 642,615 646,690 622,698 646,703 645,805 156,802 155,824 36,823 36,591 72,579 288,583 297,571 288,567 288,524 393,524"
+                points="36,524 646,524 646,824 36,824"
                 id="eSc_textblock_f1d73028" />
             <zone
-                points="602,844 598,1133 582,1142 598,1150 598,1378 582,1383 598,1391 598,1511 570,1523 590,1528 607,1560 646,1568 646,1704 614,1732 579,1732 570,1781 104,1776 83,1736 40,1728 20,1708 28,1568 76,1531 76,844 87,832"
+                points="76,832 602,832 602,1537 76,1537"
                 id="eSc_textblock_b2073d40" />
+            <zone points="82,1539 594,1539 594,1575 82,1575" id="zone_call" />
+            <zone points="24,1576 648,1576 648,1664 24,1664" id="zone_literature" />
+            <zone points="24,1668 648,1668 648,1795 24,1795" id="zone_birkel" />
         </surface>
     </facsimile>
     <text>
@@ -99,17 +103,20 @@
                     Illustration of a Welte-Mignon.
                 </desc>
             </figure>
-            <lb />DESIGN
-            OF OAK CASE
+        </div>
+        <div facs="#zone_caption">
+            <lb /><hi rendition="#c">DESIGN
+            OF OAK CASE</hi>
         </div>
 
             <div facs="#eSc_textblock_f1d73028">
                 <head>
-                    <hi rendition="#c">
+                    <hi rendition="#c #b">
                         <lb />THE
-                        <lb /><name type="brand">Welte-Mignon</name> 
+                        <lb /><hi rendition="#in #larger"><name type="brand">Welte-Mignon</name></hi> 
                     </hi>
                 </head>
+                <hi rendition="#b">
                 <lb />
                 <seg ana="#home" resp="#np" type="topic">
                     Brings to your home
@@ -126,6 +133,7 @@
                 </num>
                 other great
                 <lb />pianists.
+                </hi>
             </div>
             
             <div facs="#eSc_textblock_b2073d40">
@@ -135,16 +143,16 @@
                         <lb />through the various stages-experiment, medioc-
                         <lb />rity, excellence-but until the introduction of the
                         <lb /><name type="brand">Welte-Mignon</name>
-                        <lb />it has never reached supreme per-
+                        it has never reached supreme per-
                         <lb />fection. But today the science has reached its
-                        <lb />apex, the goal has been attained and beyond the splendid
+                        apex, <lb />the goal has been attained and beyond the splendid
                         <lb />achievement realized in the <name type="brand">Welte-Mignon</name> it is im-
                         <lb />possible to go.
                     </seg>
                 </p>
                 <p>
                     <lb />The <name type="brand">Welte-Mignon</name> brings to the
-                    <lb />music-lover the actual performances of every great living pian-
+                    music-lover <lb />the actual performances of every great living pian-
                     <lb />ist.
                     
                     <seg ana="#immortality">
@@ -158,7 +166,7 @@
                     <seg ana="#analogy_to_phonograph" resp="#np" type="topic">
                         <lb />What the <name type="brand">Victor</name> is doing for the famous singers
                         <lb />of the world the <name type="brand">Welte-Mignon</name> is
-                        <lb />accomplishing for the pianists.
+                        accomplishing <lb />for the pianists.
                     </seg>
                     But with this difference: The
                     <lb /><name type="brand">Victor</name> registers the voice vibrations on the disc,
@@ -169,38 +177,42 @@
                     <seg ana="#exact_reproduction">
                         thereby reproducing in every detail of
                         <lb />touch, tone and technique the actual
-                        <lb />renditions of the pianists, in every sense their original per-
+                        renditions of <lb />the pianists, in every sense their original per-
                         <lb />formances.
                     </seg>
                 </p>
                 <p>
                     <lb />The series of instruments containing the repro-
                     <lb />duction devices are the <name type="brand">Welte-Mignon</name>, as illustrated
-                    <lb />above, the <name type="brand">Steinway-Welte</name>, an upright
+                    <lb />above; the <name type="brand">Steinway-Welte</name>, an upright
                     <name type="brand">Steinway</name>
                     <lb />piano combined with the <name type="brand">Welte-Mignon</name>, and the
                     <lb /><name type="brand">Cabinet-Welte</name>, which may be attached to any grand
                     <lb />or upright piano of any make.
                 </p>
-
-                <lb />Call or Write for Descriptive Literature
+            </div>
+            <div facs="#zone_call">
+                <lb /><hi rendition="#c #b">Call or Write for Descriptive Literature</hi>
+            </div>
+            <div facs="#zone_literature">
                 <lb />We will gladly mail to interested parties descriptive literature and
                 <lb />prices of the <name type="brand">Welte-Mignon</name> instruments. We are especially desirous
                 <lb />that you come to our store and give these instruments your personal
                 <lb />inspection.
 
-                <hi rendition="#c">
+                <hi rendition="#c #b #smaller">
                     <lb />FREE RECITALS DAILY FROM 9 A. M. TO 5 P.M-Fourth Floor.
                 </hi>
-
+            </div>
+            <div facs="#zone_birkel">
                 <hi rendition="#c">
-                    <lb /><orgName key="birkel">Geo J. Birkel Company</orgName>
+                    <lb /><hi rendition="#in"><hi rendition="#in #larger #b"><orgName key="birkel">Geo J. Birkel Company</orgName></hi></hi>
                     <lb />
                     <name type="brand">Steinway</name>,
                     <name type="brand">Cecilian</name> and
                     <name type="brand">Victor</name> Dealers.
                     <address>
-                        <lb />345-347 South Spring Street
+                        <lb /><hi rendition="#in #b">345-347 South Spring Street</hi>
                     </address>
                 </hi>
             </div>

@@ -70,7 +70,7 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="welte-ad-example.pdf_page_1.png" />
+            <graphic url="welte-ad-example.pdf_page_1.png" width="3250" height="4500" />
             <zone points="449,139 449,569 2842,569 2842,139" id="eSc_textblock_c5442680" />
             <zone points="505,1432 505,1573 1418,1573 1418,1432"
                 id="eSc_textblock_a6014ae2" />
@@ -86,8 +86,10 @@
                 id="eSc_textblock_80803b8a" />
             <zone points="2381,1278 2381,1677 2381,1777 2902,1777 2902,1278"
                 id="eSc_textblock_b3e47c4c" />
-            <zone points="1637,2357 1637,2822 2873,2822 2873,2357"
+            <zone points="1637,2357 1637,2822 2873,2822 2873,2668 2480,2668 2480,2357"
                 id="eSc_textblock_e007686d" />
+            <zone points="2515,2252 2856,2252 2856,2668 2515,2668"
+                id="zone_terms_illustration" />
             <zone points="1776,2257 1776,2392 2318,2392 2318,2257"
                 id="eSc_textblock_53814f97" />
             <zone points="527,2881 527,3038 2695,3038 2695,2881"
@@ -127,31 +129,36 @@
     </facsimile>
     <text>
         <div facs="#eSc_textblock_c5442680">
-            <hi rendition="#c">
+            <hi rendition="#c #b">
                 <head>
-                    <lb />The
-                    <lb /><orgName>Welte Mignon Studios</orgName>
+                    <lb /><hi rendition="#smaller"><hi rendition="#smaller #i #uu">The</hi></hi>
+                    <orgName>Welte Mignon Studios</orgName>
                 </head>
-                <lb />Offer you exceptional opportunities
+                <lb /><hi rendition="#i #b">Offer you exceptional opportunities</hi>
             </hi>
+        </div>
+        <div type="illustration" facs="#eSc_textblock_7a8d435f">
+            <figure>
+                <desc>A woman playing a grand piano, a man seated and a woman standing beside her listening; a lamp and a picture in the background.</desc>
+            </figure>
         </div>
         <div facs="#eSc_textblock_a6014ae2">
             <lb />
-            <hi rendition="#u">
+            <hi rendition="#u #b">
                 The Master Himself
             </hi>
         </div>
         <div facs="#eSc_textblock_b536deda">
-            <lb />Not just mechanical playing of his compositions,<lb />but <seg ana="#virtual_presence" type="topic" resp="#np">his own fingers on your
-            keyboard</seg>.</div>
+            <hi rendition="#c #b"><lb />Not just mechanical playing of his compositions,<lb />but <seg ana="#virtual_presence" type="topic" resp="#np"><hi rendition="#i">his own fingers on your
+            keyboard</hi></seg>.</hi></div>
         <div facs="#eSc_textblock_e56f4d74">
             <lb />
-            <hi rendition="#u">
+            <hi rendition="#u #b">
                 <seg type="topic" ana="#touch_of_a_button" resp="#np">At Your Command</seg>
             </hi>
         </div>
         <div facs="#eSc_textblock_2389efb5">
-            <lb />Accept as soon as you can our cordial invita-
+            <lb /><hi rendition="#dropcap">A</hi><hi rendition="#uc">ccept</hi> as soon as you can our cordial invita-
             <lb />tion to spend a delightful hour or two with
             <lb />the masters of classic or popular music at our
             <lb />beautiful studios. We shall gladly play your fav-
@@ -184,6 +191,7 @@
                 you may hear it not only once, but
                 as often as you wish.
             </seg>
+            <hi rendition="#smaller">
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
@@ -195,7 +203,7 @@
             masters in all have
             <seg ana="#personality" type="topic" resp="#np">
                 played into the <name type="brand">Welte</name>
-                <lb />for you the very essence of their musical
+                <lb /><hi rendition="#i">for you</hi> the very essence of their musical
                 personalities
             </seg>,
             <seg ana="#distinction_from_mechanical">
@@ -212,9 +220,10 @@
             <lb />in to-day and hear your favorites.
             <seg ana="#affordability" resp="#np" type="topic">
                 And bear in mind that the <name type="brand">Welte</name>
-                <lb />is within your means, for it is sold on
+                <lb /><hi rendition="#i">is within your means</hi>, for it is sold on
                 terms–your own within reason.
             </seg>
+            </hi>
         </div>
         <div facs="#eSc_textblock_80803b8a">
             <lb />Our stock includes many examples of fine standard
@@ -229,34 +238,48 @@
             <measure commodity="unspecified" unit="dollar" quantity="450">
                 $450
             </measure>,
-            on a series of monthly payments–terms, your own
+            on a series of monthly payments–terms, <hi rendition="#i">your own</hi>
             <lb />within reason.
         </div>
+        <div type="illustration" facs="#eSc_textblock_5618094e">
+            <figure>
+                <desc>Two women and a girl listening to a woman playing an upright player piano.</desc>
+            </figure>
+        </div>
         <div facs="#eSc_textblock_b3e47c4c">
+            <hi rendition="#c #b #u">
             <lb />Pianos and
             <lb />Player-Pianos
             <lb />at the Prices
-            <lb />You expect
+            <lb />You Expect
             <lb />to Pay
+            </hi>
         </div>
 
         <div facs="#eSc_textblock_53814f97">
-            <lb />WELTE TERMS</div>
+            <lb /><hi rendition="#b #i #u">WELTE TERMS</hi></div>
         <div facs="#eSc_textblock_e007686d">
+            <hi rendition="#i">
             <lb />We maintain that if music is to be
-            <lb />enjoyed by everyone, it must be with
+            <lb />enjoyed by everyone, it must be with-
             <lb />in everyone's reach. So we placed
             <lb />every instrument in the <orgName>Welte
             <lb />Mignon Studios</orgName> just there–within
             <lb />EVERYONE'S means. Pick out any
             <lb />instrument you like, from lowest to highest price, and buy
             <lb />it on terms that are practically your own.
+            </hi>
+        </div>
+        <div type="illustration" facs="#zone_terms_illustration">
+            <figure>
+                <desc>A girl playing an upright piano.</desc>
+            </figure>
         </div>
         <div facs="#eSc_textblock_cd6fbfd8">
-            <lb />A wonderful showing of Phonographs
+            <lb /><hi rendition="#c #b #i">A wonderful showing of Phonographs</hi>
         </div>
         <div facs="#eSc_textblock_4ba7b7ec">
-            <lb /><name type="brand">VICTROLAS</name>
+            <lb /><hi rendition="#b #u"><name type="brand">VICTROLAS</name></hi>
         </div>
         <div facs="#eSc_textblock_3c860cc6">
             <gap reason="irrelevant">
@@ -274,9 +297,11 @@
         </div>
 
         <div facs="#eSc_textblock_3838333f">
-            <lb /><name type="brand">PATHE</name>
+            <lb /><hi rendition="#b #u"><name type="brand">PATHE</name></hi>
         </div>
 
+        <div facs="#eSc_textblock_d659d9d8">
+            <lb /><hi rendition="#b #u">RECORDS</hi></div>
         <div facs="#eSc_textblock_86963cd3">
             <gap reason="irrelevant">
                 <desc>
@@ -284,16 +309,17 @@
                 </desc>
             </gap>
         </div>
-        <div facs="#eSc_textblock_17b7db97">
+        <div facs="#eSc_textblock_0f423e68">
             <lb />
             <hi rendition="#c">
                 <hi rendition="#u">
-                    <hi rendition="#i">
+                    <hi rendition="#i #b">
                         Can you drop in at once?
                     </hi>
                 </hi>
             </hi>
-
+        </div>
+        <div facs="#eSc_textblock_17b7db97">
             <lb />No matter how many times you've visited the <orgName>Studios</orgName> before this,
             <lb />come in again; there's always something new to see and to hear. Re-
             <lb />member that you are never pressed to buy–just come in as you would
@@ -301,15 +327,17 @@
             <lb />morrow; at least, send this coupon by way of getting information on
             <lb />the latest instrument designs.
         </div>
-        <div facs="#eSc_textblock_d659d9d8">
-            <lb />RECORDS</div>
         <div facs="#eSc_textblock_0eb08447">
-            <lb /><orgName>The<lb />Welte Mignon Studios</orgName>
+            <lb /><hi rendition="#b"><orgName><hi rendition="#smaller"><hi rendition="#smaller #i #uu">The</hi></hi> Welte Mignon Studios</orgName></hi>
         </div>
         <div facs="#eSc_textblock_90b895ae">
-            <lb /><address>667 Fifth Avenue</address>
+            <lb /><hi rendition="#i #b"><address>667 Fifth Avenue</address></hi>
+        </div>
+        <div facs="#eSc_textblock_332b9320">
+            <lb /><hi rendition="#i #b"><address>At 53rd Street</address></hi>
         </div>
         <div facs="#eSc_textblock_d72e074e">
+            <hi rendition="#b">
             <lb /><orgName>The Welte Mignon Studios</orgName>,
             <lb /><address>667 Fifth Ave., New York.</address>
             <lb />Without any obligation to me, send com-
@@ -319,16 +347,15 @@
             <lb />Player Pianos
             <lb /><name type="brand">Victor</name>
             <lb /><name type="brand">Pathe</name>
+            </hi>
+            <hi rendition="#larger">
             <lb />Name
             <lb />Address
+            </hi>
+            <hi rendition="#right #smaller #b">
             <lb />Sun-Herald, 4-30.
+            </hi>
         </div>
-        <div facs="#eSc_textblock_332b9320">
-            <lb /><address>At 53rd Street</address>
-        </div>
-        <div facs="#eSc_textblock_0f423e68" />
         <div facs="#eSc_textblock_7021785f" />
-        <div facs="#eSc_textblock_7a8d435f" />
-        <div facs="#eSc_textblock_5618094e" />
     </text>
 </TEI>
