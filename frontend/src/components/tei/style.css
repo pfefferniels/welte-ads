@@ -322,6 +322,14 @@ tei-lb:before {
     margin: 0;
 }
 
+/* a caption printed under the picture */
+.layout .zone.illustration > tei-figure ~ tei-p:last-of-type {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.2em;
+}
+
 .layout .zone.illustration {
     border: none;
     outline: 2px dashed gray;

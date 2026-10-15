@@ -40,9 +40,10 @@ export interface PlacedZone extends Rect {
   id: string
   // width of the (cropped) page the zone is on
   pageWidth: number
-  // polygon relative to the zone's bounding box, present only when the
-  // zone is noticeably not a rectangle
+  // polygon relative to the zone's bounding box and the floats that make
+  // text follow it, present only when the zone is noticeably not a rectangle
   shape: Point[] | null
+  bands: Band[] | null
 }
 
 interface Layout {
@@ -156,9 +157,13 @@ export function computeLayout(facsimile: Facsimile, margin = 0.03): Layout {
         top: box.top - crop.top,
         width: box.width,
         height: box.height,
-        shape: isShaped(zone.points, box)
-          ? zone.points.map(([x, y]) => [x - box.left, y - box.top] as Point)
-          : null,
+        shape: null,
+        bands: null,
+      }
+      if (isShaped(zone.points, box)) {
+        const shape = zone.points.map(([x, y]) => [x - box.left, y - box.top] as Point)
+        const bands = exclusionBands(shape, box.width, box.height)
+        if (bands) Object.assign(zones[zone.id], { shape, bands })
       }
     }
 
@@ -190,26 +195,44 @@ const span = (shape: Point[], y: number): [number, number] | null => {
   return [Math.min(...xs), Math.max(...xs)]
 }
 
-interface Exclusions {
-  left: { width: number; polygon: Point[] } | null
-  right: { width: number; polygon: Point[] } | null
+interface FloatShape {
+  width: number
+  polygon: Point[]
+}
+
+interface Band {
+  height: number
+  left: FloatShape | null
+  right: FloatShape | null
 }
 
 /**
- * The parts of a zone's bounding box that lie outside its polygon, as two
- * float shapes (one hugging the left edge, one the right edge). Text placed
- * between them follows the outline of the zone.
+ * The parts of a zone's bounding box that lie outside its polygon, as float
+ * shapes along the left and right edges. Text placed between them follows
+ * the outline of the zone. The floats are cut into horizontal bands (at every
+ * corner of the outline and at least every 1/12 of the height) so that a
+ * notch on one side and a sliver on the other never compete for the same
+ * room. Exclusions shallower than `minDepth` (sloppy corners of an
+ * automatic segmentation) are ignored; null when nothing is left.
  */
-export function exclusions(shape: Point[], width: number, height: number, steps = 48): Exclusions {
-  // regular samples for slanted edges, plus rows just above and below every
-  // corner so that steps in the outline stay steps
+export function exclusionBands(
+  shape: Point[], width: number, height: number,
+  minDepth = 0.06 * width, steps = 48
+): Band[] | null {
+  const cuts = new Set<number>([0, height])
+  for (let i = 1; i < 12; i++) cuts.add((i / 12) * height)
+  for (const [, y] of shape) if (y > 1 && y < height - 1) cuts.add(y)
+  const bounds = Array.from(cuts).sort((a, b) => a - b)
+    .filter((y, i, all) => i === 0 || y === height || y - all[i - 1] >= 2)
+
+  // regular samples for slanted edges, plus rows just inside every band so
+  // that steps in the outline stay steps
   const ys = new Set<number>()
   for (let i = 0; i <= steps; i++) ys.add((i / steps) * height)
-  for (const [, y] of shape) {
+  for (const y of bounds) {
     ys.add(y - 0.5)
     ys.add(y + 0.5)
   }
-
   const rows = Array.from(ys)
     .filter(y => y >= 0 && y <= height)
     .sort((a, b) => a - b)
@@ -219,35 +242,50 @@ export function exclusions(shape: Point[], width: number, height: number, steps 
       return { y, from: s ? s[0] : 0, to: s ? s[1] : width }
     })
 
-  const leftWidth = Math.max(...rows.map(r => r.from))
-  const rightWidth = Math.max(...rows.map(r => width - r.to))
+  const bands: Band[] = []
+  for (let i = 1; i < bounds.length; i++) {
+    const top = bounds[i - 1]
+    const bottom = bounds[i]
+    const own = rows.filter(r => r.y >= top && r.y <= bottom)
+    if (own.length === 0) continue
 
-  const left = leftWidth > 1
-    ? {
-      width: leftWidth,
-      polygon: [
-        [0, 0] as Point,
-        ...rows.flatMap(r => [[r.from, r.y] as Point]),
-        [0, height] as Point,
-      ],
+    let left = Math.max(...own.map(r => r.from))
+    let right = Math.max(...own.map(r => width - r.to))
+    if (left < minDepth) left = 0
+    if (right < minDepth) right = 0
+    // both floats have to fit side by side, with room for text
+    if (left + right > width - minDepth) {
+      if (left >= right) right = 0
+      else left = 0
     }
-    : null
 
-  const right = rightWidth > 1
-    ? {
-      width: rightWidth,
-      polygon: [
-        [rightWidth, 0] as Point,
-        ...rows.map(r => [rightWidth - (width - r.to), r.y] as Point),
-        [rightWidth, height] as Point,
-      ],
-    }
-    : null
-
-  // two floats wider than the box would not sit side by side; keep the
-  // larger one
-  if (left && right && left.width + right.width >= width) {
-    return left.width >= right.width ? { left, right: null } : { left: null, right }
+    const h = bottom - top
+    const first = own[0]
+    const last = own[own.length - 1]
+    bands.push({
+      height: h,
+      left: left > 0
+        ? {
+          width: left,
+          polygon: [
+            [0, 0], [Math.min(first.from, left), 0],
+            ...own.map(r => [Math.min(r.from, left), r.y - top] as Point),
+            [Math.min(last.from, left), h], [0, h],
+          ],
+        }
+        : null,
+      right: right > 0
+        ? {
+          width: right,
+          polygon: [
+            [right, 0], [right - Math.min(width - first.to, right), 0],
+            ...own.map(r => [right - Math.min(width - r.to, right), r.y - top] as Point),
+            [right - Math.min(width - last.to, right), h], [right, h],
+          ],
+        }
+        : null,
+    })
   }
-  return { left, right }
+
+  return bands.some(b => b.left || b.right) ? bands : null
 }

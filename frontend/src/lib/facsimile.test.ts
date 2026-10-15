@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { computeLayout, exclusions, parsePoints } from "./facsimile"
+import { computeLayout, exclusionBands, parsePoints } from "./facsimile"
 
 describe("parsePoints", () => {
   it("reads TEI points, tolerating line breaks", () => {
@@ -71,15 +71,37 @@ describe("computeLayout", () => {
   })
 })
 
-describe("exclusions", () => {
-  it("excludes the cut-out corner of an L-shape on the right", () => {
-    const shape: [number, number][] = [[0, 0], [400, 0], [400, 100], [200, 100], [200, 300], [0, 300]]
-    const { left, right } = exclusions(shape, 400, 300, 6)
+describe("exclusionBands", () => {
+  // full width at the top, the right half cut away below y = 100
+  const l: [number, number][] = [[0, 0], [400, 0], [400, 100], [200, 100], [200, 300], [0, 300]]
 
-    expect(left).toBeNull()
-    expect(right?.width).toBe(200)
-    // nothing excluded in the upper third, everything right of x = 200 below
-    expect(right?.polygon[1]).toEqual([200, 0])
-    expect(right?.polygon.at(-2)).toEqual([0, 300])
+  it("excludes the cut-out corner of an L-shape on the right", () => {
+    const bands = exclusionBands(l, 400, 300)!
+    const at = (y: number) => {
+      let top = 0
+      for (const band of bands) {
+        if (y < top + band.height) return band
+        top += band.height
+      }
+      return bands[bands.length - 1]
+    }
+
+    expect(bands.reduce((h, b) => h + b.height, 0)).toBe(300)
+    expect(at(50).right).toBeNull()
+    expect(at(200).right?.width).toBe(200)
+    expect(bands.every(b => b.left === null)).toBe(true)
+  })
+
+  it("does not let a sliver on one side cancel a notch on the other", () => {
+    // a notch at the top left, and the bottom right corner cut off steeply
+    const shape: [number, number][] = [[150, 0], [400, 0], [400, 280], [20, 300], [0, 300], [0, 100], [150, 100]]
+    const bands = exclusionBands(shape, 400, 300)!
+    expect(bands[0].left?.width).toBe(150)
+    expect(bands[bands.length - 1].left).toBeNull()
+  })
+
+  it("ignores the sloppy corners of an automatic segmentation", () => {
+    const sloppy: [number, number][] = [[10, 0], [400, 0], [400, 290], [390, 300], [0, 300], [0, 8]]
+    expect(exclusionBands(sloppy, 400, 300)).toBeNull()
   })
 })

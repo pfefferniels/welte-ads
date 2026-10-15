@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef } from "react"
 import { Behavior } from "./Behavior"
 import { TEINodes } from "react-teirouter"
-import { PlacedZone, exclusions } from "../../lib/facsimile"
+import { PlacedZone } from "../../lib/facsimile"
 
 interface TEIProps {
     teiNode: Node
@@ -18,9 +18,9 @@ const fits = (el: HTMLElement, width: number, height: number) =>
 // The largest font size (in px) at which the content stays inside the box.
 const largestFitting = (
     el: HTMLElement, width: number, height: number, max: number,
-    accept: () => boolean = () => true
+    accept: () => boolean = () => true, min = 0.5
 ) => {
-    let lo = 0.5
+    let lo = min
     let hi = max
     for (let i = 0; i < 16; i++) {
         const mid = (lo + hi) / 2
@@ -74,12 +74,22 @@ const fitText = (el: HTMLElement, zone: PlacedZone, max: number, keepLines: bool
     let mode = 'wrap'
     if (keepLines) {
         let lines: number
-        if (zone.shape) {
+        if (zone.bands) {
             // text flows around the shape, so lines may not be kept with
-            // nowrap; instead allow no more lines than there are at a tiny size
+            // nowrap; instead allow no more lines than there are at a tiny
+            // size. Whether a long line has to wrap depends on where it falls
+            // relative to the shape, so search downwards rather than bisect.
             el.style.fontSize = '2px'
             const encoded = countLines(el)
-            lines = largestFitting(el, zone.width, zone.height, max, () => countLines(el) <= encoded)
+            const accept = () => countLines(el) <= encoded
+            lines = 0
+            for (let size = wrapped; size >= 0.5 * wrapped; size *= 0.97) {
+                el.style.fontSize = `${size}px`
+                if (fits(el, zone.width, zone.height) && accept()) {
+                    lines = largestFitting(el, zone.width, zone.height, size / 0.97, accept, size)
+                    break
+                }
+            }
         }
         else {
             el.style.whiteSpace = 'nowrap'
@@ -89,7 +99,7 @@ const fitText = (el: HTMLElement, zone: PlacedZone, max: number, keepLines: bool
         if (lines >= 0.5 * wrapped) {
             size = lines
             mode = 'lines'
-            if (!zone.shape) el.style.whiteSpace = 'nowrap'
+            if (!zone.bands) el.style.whiteSpace = 'nowrap'
         }
     }
 
@@ -139,9 +149,6 @@ const Div = ({ teiNode, availableRoutes, zoneGetter }: TEIProps & WithZoneGetter
         )
     }
 
-    const { left, right } = zone.shape
-        ? exclusions(zone.shape, zone.width, zone.height)
-        : { left: null, right: null }
     const polygon = (points: [number, number][]) =>
         `polygon(${points.map(([x, y]) => `${x}px ${y}px`).join(', ')})`
 
@@ -158,28 +165,23 @@ const Div = ({ teiNode, availableRoutes, zoneGetter }: TEIProps & WithZoneGetter
                 }}
                 data-zone={zone.id}
                 className={`zone ${isIllustration ? 'illustration' : 'div'}`}>
-                {left && (
-                    <span
-                        aria-hidden="true"
-                        className="exclusion"
-                        style={{
-                            float: 'left',
-                            width: left.width,
-                            height: zone.height,
-                            shapeOutside: polygon(left.polygon),
-                        }} />
-                )}
-                {right && (
-                    <span
-                        aria-hidden="true"
-                        className="exclusion"
-                        style={{
-                            float: 'right',
-                            width: right.width,
-                            height: zone.height,
-                            shapeOutside: polygon(right.polygon),
-                        }} />
-                )}
+                {zone.bands?.map((band, i) => (
+                    <React.Fragment key={i}>
+                        {(['left', 'right'] as const).map(side => (
+                            <span
+                                key={side}
+                                aria-hidden="true"
+                                className="exclusion"
+                                style={{
+                                    float: side,
+                                    clear: side,
+                                    width: band[side]?.width ?? 0,
+                                    height: band.height,
+                                    shapeOutside: band[side] ? polygon(band[side].polygon) : undefined,
+                                }} />
+                        ))}
+                    </React.Fragment>
+                ))}
                 <TEINodes
                     teiNodes={teiNode.childNodes}
                     availableRoutes={availableRoutes} />
