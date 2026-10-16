@@ -83,8 +83,13 @@
                   California, Illinois, Michigan, Minnesota and Virginia), the
                   Internet Archive, the Digitale Sammlungen of the Bayerische
                   Staatsbibliothek, ANNO (Austrian National Library), the
-                  International Arcade Museum Library and Georgia Historic
-                  Newspapers.</p>
+                  International Arcade Museum Library, Georgia Historic Newspapers,
+                  Delpher (KB, National Library of the Netherlands),
+                  eluxemburgensia (National Library of Luxembourg), RetroNews
+                  (Bibliothèque nationale de France), the archives of Le Temps,
+                  the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+                  Library), the National Library of Latvia (through Europeana),
+                  Canadiana and the Hemeroteca Nacional Digital de México.</p>
             </samplingDecl>
             <editorialDecl>
                <p>Each file transcribes one printing of an advertisement, the one
@@ -96,7 +101,11 @@
                <p>The regions and lines of the scans were mostly marked in
                   eScriptorium and converted from PAGE XML to TEI. The text was in
                   part recognised automatically (HTR) and corrected against the
-                  scan, in part transcribed by hand.</p>
+                  scan, in part transcribed by hand. The advertisements published
+                  outside Germany, the United Kingdom and the United States were
+                  transcribed from the scans, encoded, given their regions and
+                  annotated with topics by Claude, an AI model; their revision
+                  history says so.</p>
                <correction>
                   <p>Errors of the original are not corrected but marked with
                      <gi>sic</gi>.</p>
@@ -126,8 +135,8 @@
                      described in <gi>figure</gi>. Persons are linked to the GND with
                      <att>corresp</att>. Recurring motifs are marked as topics with
                      <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                     the taxonomy of topics; these are the editor's interpretation
-                     (<att>resp</att>).</p>
+                     the taxonomy of topics; these are an interpretation, by whom
+                     <att>resp</att> says.</p>
                </interpretation>
                <stdVals>
                   <p>Dates of publication are given in ISO 8601 in <att>when</att>,
