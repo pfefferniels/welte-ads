@@ -48,7 +48,7 @@ export const names = {
     "https://d-nb.info/gnd/116557680": "Ripper, Alice",
     "https://d-nb.info/gnd/118609467": "Schnabel, Artur",
     "https://d-nb.info/gnd/1080980598": "Śliwiński, Józef",
-    "https://d-nb.info/gnd/11728534X": "Wendling, Karl",
+    "https://d-nb.info/gnd/143688537": "Wendling, Karl",
     "https://d-nb.info/gnd/1126196894": "Boyle, George F.",
     "https://d-nb.info/gnd/116753722": "Hertz, Alfred",
     "https://d-nb.info/gnd/134807359": "La Forge, Frank",
