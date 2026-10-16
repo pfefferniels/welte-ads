@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Advertentieblad voor Limburg"</title>
+        <title type="sub">October 29, 1927</title>
+        <author>
+          <orgName key="hilger">Hilger</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Het Electrische Reproductie-Instrument Welte-Mignon</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Het Electrische Reproductie-Instrument Welte-Mignon</title>
+            <author><orgName>Hilger</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Advertentieblad voor Limburg</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2751283">Maastricht</pubPlace>
+            <date type="publication" when="1927-10-29">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Advertentieblad voor Limburg</title>
+            <biblScope unit="issue">October 29, 1927, No. 3034</biblScope>
+            <biblScope unit="pages">8</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMCC02:211125051:mpeg21:a00100</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad069-0.jpg" width="6021px" height="7903px"/>
+      <zone points="1227,5915 2476,5959 2476,6058 1227,6014" xml:id="zone_headline"/>
+      <zone points="1230,6023 2475,6067 2475,6240 1230,6196" xml:id="zone_brand_1"/>
+      <zone points="1309,6201 2390,6239 2390,6560 1309,6522" xml:id="zone_text_1"/>
+      <zone points="1226,6520 2468,6564 2468,6736 1226,6692" xml:id="zone_brand_2"/>
+      <zone points="1307,6697 2386,6735 2386,6871 1307,6833" xml:id="zone_text_2"/>
+      <zone points="1223,6833 2472,6877 2472,7048 1223,7004" xml:id="zone_brand_3"/>
+      <zone points="1309,7009 2385,7047 2385,7173 1309,7135" xml:id="zone_text_3"/>
+      <zone points="1528,7191 2195,7214 2195,7362 1528,7339" xml:id="zone_signature"/>
+      <zone points="1286,7334 2406,7374 2406,7463 1286,7423" xml:id="zone_address"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b"><lb/>Het Electrische Reproductie-Instrument</hi></head>
+      </div>
+      <div facs="#zone_brand_1">
+        <head><hi rendition="#c #in #b"><lb/><name type="brand">Welte-Mignon</name></hi></head>
+      </div>
+      <div facs="#zone_text_1">
+        <p><lb/><seg xml:id="topic_1" ana="#exact_reproduction" type="topic" resp="#claude">geeft natuurgetrouw het handspel der groote kunste-
+          <lb/>naars weer</seg>. De loftuigingen der groote Meesters zijn
+          <lb/>onbegrensd en Kunstenaars, als: <persName type="artist" corresp="https://d-nb.info/gnd/118501437">D’Albert</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116029579">Backhaus</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118953915"><sic>Careno</sic></persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724"><sic>Paderewsky</sic></persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118598988">Reger</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-
+          <lb/>Saëns</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Strauss</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116632658">Kwast-Hod<unclear>a</unclear>pp</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116791748">Friedberg</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/123787548">Schäfer</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/11863027X"><sic>Weingärtner</sic></persName>, kortom alle kunstenaars met wereld-
+          <lb/>roem, schromen niet te verklaren, dat bij</p>
+      </div>
+      <div facs="#zone_brand_2">
+        <ab><hi rendition="#c #in #b"><lb/><name type="brand">Welte-Mignon</name></hi></ab>
+      </div>
+      <div facs="#zone_text_2">
+        <p><lb/><seg xml:id="topic_2" ana="#soulfulness" type="topic" resp="#claude">de diep verborgen krachten van den kunstenaar</seg>, n.l.
+          <lb/><seg xml:id="topic_3" ana="#personality" type="topic" resp="#claude">zijn individueele aanslag, zijn opvatting en dynamiek</seg>,
+          <lb/>zich fascineerend openbaren, èn dat</p>
+      </div>
+      <div facs="#zone_brand_3">
+        <ab><hi rendition="#c #in #b"><lb/><name type="brand">Welte-Mignon</name></hi></ab>
+      </div>
+      <div facs="#zone_text_3">
+        <p><lb/>het <seg xml:id="topic_4" ana="#superiority" type="topic" resp="#claude">eenige reproductie-instrument</seg> is, dat aanspraak
+          <lb/>kan maken op <seg xml:id="topic_5" ana="#exact_reproduction" type="topic" resp="#claude">natuurgetrouwe weergave van het
+          <lb/>handspel</seg>.</p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c #in #b"><lb/><orgName>HILGER</orgName>,</hi></ab>
+      </div>
+      <div facs="#zone_address">
+        <ab><hi rendition="#c #b #larger"><lb/><address><addrLine>Wijker Brugstraat 18, Maastricht.</addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
