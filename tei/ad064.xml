@@ -186,7 +186,7 @@
       <zone points="208,328 720,328 720,494 208,494" xml:id="zone_welte"/>
       <zone points="438,509 1597,509 1597,737 838,737 838,862 893,862 893,908 438,908" xml:id="zone_quadrola"/>
       <zone points="841,775 1599,775 1599,857 841,857" xml:id="zone_subtitle"/>
-      <zone points="375,778 438,778 438,911 706,911 706,1208 207,1208 207,890 375,890" xml:id="zone_picture"/>
+      <zone points="375,778 436,778 436,911 706,911 706,1208 207,1208 207,890 375,890" xml:id="zone_picture"/>
       <zone points="850,919 1583,919 1583,1217 850,1217" xml:id="zone_text"/>
       <zone points="190,1252 1210,1252 1210,1438 190,1438" xml:id="zone_signature"/>
       <zone points="1263,1254 1577,1254 1577,1432 1263,1432" xml:id="zone_address"/>

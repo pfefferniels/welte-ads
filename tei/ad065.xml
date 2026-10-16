@@ -72,7 +72,7 @@
       <zone points="1506,336 2024,336 2024,517 1506,517" xml:id="zone_welte"/>
       <zone points="1733,532 2932,532 2932,770 2141,770 2141,900 2210,900 2210,943 1733,943" xml:id="zone_quadrola"/>
       <zone points="2143,806 2934,806 2934,896 2143,896" xml:id="zone_subtitle"/>
-      <zone points="1495,822 1733,822 1733,946 2014,946 2014,1281 1495,1281" xml:id="zone_picture"/>
+      <zone points="1495,822 1731,822 1731,946 2014,946 2014,1281 1495,1281" xml:id="zone_picture"/>
       <zone points="2059,954 2922,954 2922,1426 2059,1426" xml:id="zone_text"/>
       <zone points="1515,1463 1842,1463 1842,1519 1515,1519" xml:id="zone_letterhead_name"/>
       <zone points="2029,1431 2883,1431 2883,1576 2029,1576" xml:id="zone_letterhead_address"/>
