@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "De Nederlander" and "De Telegraaf"</title>
+        <title type="sub">July to September 1928</title>
+        <author>
+          <orgName key="benner">J. B. Benner &amp; Zn.</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Steinway-Welte electrische Reproductie Piano</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Steinway-Welte electrische Reproductie Piano</title>
+            <author><orgName>J. B. Benner &amp; Zn.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>De Nederlander</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747373">'s-Gravenhage</pubPlace>
+            <date type="publication" when="1928-09-01">1928</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">De Nederlander</title>
+            <biblScope unit="issue">September 1, 1928, No. 10727</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The masthead gives the editorial and administrative offices as Rijnstraat 9, 's-Gravenhage.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMKB15:000679053:mpeg21:a00024</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Steinway-Welte electrische Reproductie Piano,</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Steinway-Welte electrische Reproductie Piano,</title>
+            <author><orgName>J. B. Benner &amp; Zn.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>De Telegraaf</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2759794">Amsterdam</pubPlace>
+            <date type="publication" when="1928-07-28">1928</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">De Telegraaf</title>
+            <biblScope unit="issue">July 28, 1928, No. 13600</biblScope>
+            <biblScope unit="pages">16</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The first printing, with the same words in a different setting; the advertisement number "1703" is printed with it.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:110563504:mpeg21:a0170</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Steinway-Welte electrische Reproductie Piano</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Steinway-Welte electrische Reproductie Piano</title>
+            <author><orgName>J. B. Benner &amp; Zn.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>De Nederlander</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747373">'s-Gravenhage</pubPlace>
+            <date type="publication" when="1928-09-03">1928</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">De Nederlander</title>
+            <biblScope unit="issue">September 3, 1928, No. 10728</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Not checked on the scan; the OCR shows the same wording and line breaks as the transcribed printing.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMKB15:000679054:mpeg21:a00027</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad070-0.jpg" width="5782px" height="7400px"/>
+      <zone points="2580,1354 3006,1354 3006,1475 2580,1475" xml:id="zone_headline"/>
+      <zone points="2549,1478 3038,1478 3038,1650 2549,1650" xml:id="zone_text"/>
+      <zone points="2548,1666 2788,1666 2788,1720 2548,1720" xml:id="zone_signature"/>
+      <zone points="2791,1663 3037,1663 3037,1729 2791,1729" xml:id="zone_established"/>
+      <zone points="2549,1741 3036,1741 3036,1774 2549,1774" xml:id="zone_address"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in"><lb/><name type="brand">Steinway-Welte</name></hi></head>
+      </div>
+      <div facs="#zone_text">
+        <ab><hi rendition="#c"><lb/>electrische <hi rendition="#b">Reproductie Piano</hi><app><rdg source="#source_1 #source_3"/><rdg source="#source_2">,</rdg></app>
+          <lb/><seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">het allerbeste op dit gebied</seg>,
+          <lb/>zoo goed als nieuw, <hi rendition="#b"><seg xml:id="topic_2" ana="#affordability" type="topic" resp="#claude">zeer bil-
+          <lb/>lijk</seg> ter overname aange</hi><app><rdg source="#source_1 #source_3"><hi rendition="#b">-
+          <lb/>boden.</hi> Langd. garantie.</rdg><rdg source="#source_2">boden.
+          <lb/>Langd. garantie.</rdg></app></hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#b #larger"><lb/><orgName><app><rdg source="#source_1 #source_3">J. B. BENNER &amp; Zn.</rdg><rdg source="#source_2">J.B.BENNER&amp;Zn.</rdg></app></orgName></hi></ab>
+      </div>
+      <div facs="#zone_established">
+        <ab><hi rendition="#c #larger"><lb/>Gevestigd 1881
+          <lb/>Hofleveranciers</hi></ab>
+      </div>
+      <div facs="#zone_address">
+        <ab><hi rendition="#c #b"><lb/><address><addrLine>97 Noordeinde <app><rdg source="#source_1 #source_3">-</rdg><rdg source="#source_2">—</rdg></app> Den Haag</addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

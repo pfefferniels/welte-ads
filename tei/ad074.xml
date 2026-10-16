@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Bataviaasch Nieuwsblad"</title>
+        <title type="sub">October 7 and 10, 1911</title>
+        <author>
+          <orgName key="salzmann">Edmund Salzmann</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Heden ontpakt: EEN REPRODUCTIONS PIANO Welte Mignon.</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Heden ontpakt: EEN REPRODUCTIONS PIANO Welte Mignon.</title>
+            <author><orgName>Edmund Salzmann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Bataviaasch Nieuwsblad</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/1642911">Batavia</pubPlace>
+            <date type="publication" when="1911-10-07">1911</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Bataviaasch Nieuwsblad</title>
+            <biblScope unit="issue">October 7, 1911, No. 257</biblScope>
+            <biblScope unit="pages">11</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:011035898:mpeg21:a0049</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Heden ontpakt: EEN REPRODUCTIONS PIANO Welte Mignon.</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Heden ontpakt: EEN REPRODUCTIONS PIANO Welte Mignon.</title>
+            <author><orgName>Edmund Salzmann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Bataviaasch Nieuwsblad</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/1642911">Batavia</pubPlace>
+            <date type="publication" when="1911-10-10">1911</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Bataviaasch Nieuwsblad</title>
+            <biblScope unit="issue">October 10, 1911, No. 259</biblScope>
+            <biblScope unit="pages">11</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:011035900:mpeg21:a0051</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad074-0.jpg" width="2936px" height="4421px"/>
+      <zone points="788,78 1337,78 1337,151 788,151" xml:id="zone_headline"/>
+      <zone points="1028,174 1907,174 1907,255 1028,255" xml:id="zone_subhead"/>
+      <zone points="823,291 2107,291 2107,576 823,576" xml:id="zone_brand"/>
+      <zone points="785,579 2150,579 2150,1111 785,1111" xml:id="zone_text"/>
+      <zone points="1148,1129 2149,1129 2149,1342 1148,1342" xml:id="zone_signature"/>
+      <zone points="925,1361 2004,1361 2004,1437 925,1437" xml:id="zone_attest"/>
+      <zone points="2068,1394 2153,1394 2153,1434 2068,1434" xml:id="zone_number"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#b #i"><lb/>Heden ontpakt:</hi></head>
+      </div>
+      <div facs="#zone_subhead">
+        <ab><hi rendition="#c #larger"><lb/>EEN REPRODUCTIONS PIANO</hi></ab>
+      </div>
+      <div facs="#zone_brand">
+        <head><hi rendition="#c #in #b"><lb/><name type="brand">Welte Mignon</name>.</hi></head>
+      </div>
+      <div facs="#zone_text">
+        <p><hi rendition="#b"><lb/>Dit is <seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">het fraaiste, beste en nieuwste instrument</seg>,
+          <lb/>dat tot heden op dat gebied in den handel
+          <lb/>gebracht en nog niet op <placeName>Java</placeName> geimporteerd is.
+          <lb/>Het eerste exemplaar door mij nu verkocht aan
+          <lb/>een Administrateur in de <placeName>Preanger</placeName> wordt tot en
+          <lb/>met 15 October voor belangstellenden tentoon-
+          <lb/>gesteld bij den alleenvertegenwoordiger.</hi></p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#in #b"><orgName>Edmund Salzmann</orgName>,</hi>
+          <lb/><hi rendition="#b #i #smaller">Piano- en Muziekhandel,</hi>
+          <lb/><hi rendition="#b"><address><addrLine>NOORDWIJK No. 12, WELTEVREDEN.</addrLine></address></hi></hi></ab>
+      </div>
+      <div facs="#zone_attest">
+        <ab><hi rendition="#b #larger"><lb/>Attesten liggen ter inzage.</hi></ab>
+      </div>
+      <div facs="#zone_number">
+        <ab><hi rendition="#right #smaller"><lb/>8986</hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

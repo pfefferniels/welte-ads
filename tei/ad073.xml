@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Het nieuws van den dag voor Nederlandsch-Indië"</title>
+        <title type="sub">October 1911</title>
+        <author>
+          <orgName key="salzmann">Edmund Salzmann</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Heden ontpakt: eene reproductions-Piano WELTE-MIGNON.</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Heden ontpakt: eene reproductions-Piano WELTE-MIGNON.</title>
+            <author><orgName>Edmund Salzmann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Het nieuws van den dag voor Nederlandsch-Indië</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/1642911">Batavia</pubPlace>
+            <date type="publication" when="1911-10-02">1911</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Het nieuws van den dag voor Nederlandsch-Indië</title>
+            <biblScope unit="issue">October 2, 1911, No. 227</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010136135:mpeg21:a0079</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Heden ontpakt: eene reproductions-Piano WELTE-MIGNON.</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Heden ontpakt: eene reproductions-Piano WELTE-MIGNON.</title>
+            <author><orgName>Edmund Salzmann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Het nieuws van den dag voor Nederlandsch-Indië</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/1642911">Batavia</pubPlace>
+            <date type="publication" when="1911-10-05">1911</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Het nieuws van den dag voor Nederlandsch-Indië</title>
+            <biblScope unit="issue">October 5, 1911, No. 230</biblScope>
+            <biblScope unit="pages">8</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010136136:mpeg21:a0073</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Heden ontpakt: eene reproductions-Piano WELTE-MIGNON.</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Heden ontpakt: eene reproductions-Piano WELTE-MIGNON.</title>
+            <author><orgName>Edmund Salzmann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Het nieuws van den dag voor Nederlandsch-Indië</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/1642911">Batavia</pubPlace>
+            <date type="publication" when="1911-10-07">1911</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Het nieuws van den dag voor Nederlandsch-Indië</title>
+            <biblScope unit="issue">October 7, 1911, No. 232</biblScope>
+            <biblScope unit="pages">12</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010136138:mpeg21:a0109</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>Heden ontpakt: eene reproductions-Piano WELTE-MIGNON.</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Heden ontpakt: eene reproductions-Piano WELTE-MIGNON.</title>
+            <author><orgName>Edmund Salzmann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Het nieuws van den dag voor Nederlandsch-Indië</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/1642911">Batavia</pubPlace>
+            <date type="publication" when="1911-10-09">1911</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Het nieuws van den dag voor Nederlandsch-Indië</title>
+            <biblScope unit="issue">October 9, 1911, No. 233</biblScope>
+            <biblScope unit="pages">11</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010136139:mpeg21:a0091</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_5">
+        <bibl>Heden ontpakt: eene reproductions-Piano WELTE-MIGNON.</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Heden ontpakt: eene reproductions-Piano WELTE-MIGNON.</title>
+            <author><orgName>Edmund Salzmann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Het nieuws van den dag voor Nederlandsch-Indië</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/1642911">Batavia</pubPlace>
+            <date type="publication" when="1911-10-11">1911</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Het nieuws van den dag voor Nederlandsch-Indië</title>
+            <biblScope unit="issue">October 11, 1911, No. 235</biblScope>
+            <biblScope unit="pages">8</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010136141:mpeg21:a0069</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad073-0.jpg" width="3542px" height="5285px"/>
+      <zone points="1781,3983 2637,3983 2637,4056 1781,4056" xml:id="zone_headline"/>
+      <zone points="1822,4112 3401,4112 3401,4429 1822,4429" xml:id="zone_title"/>
+      <zone points="1778,4464 3442,4464 3442,4750 1778,4750" xml:id="zone_text"/>
+      <zone points="2185,4793 3423,4793 3423,5091 2185,5091" xml:id="zone_signature"/>
+      <zone points="1900,5147 2668,5147 2668,5210 1900,5210" xml:id="zone_attest"/>
+      <zone points="3353,5168 3439,5168 3439,5205 3353,5205" xml:id="zone_number"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#b #g"><lb/>Heden ontpakt:</hi></head>
+      </div>
+      <div facs="#zone_title">
+        <head><hi rendition="#c #in"><lb/>eene reproductions-Piano
+          <lb/><name type="brand">WELTE-MIGNON</name>.</hi></head>
+      </div>
+      <div facs="#zone_text">
+        <p><hi rendition="#b #smaller"><lb/>Dit is <seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">het fraaiste, beste en nieuwste instrument</seg> dat tot heden op dat gebied in den
+          <lb/>handel is gebracht en werd nog niet op <placeName>Java</placeName> geïmporteerd.</hi></p>
+        <p><hi rendition="#b #smaller"><lb/>Het eerste exemplaar door mij nu verkocht aan een administrateur in de <placeName>Preanger</placeName>,
+          <lb/>wordt tot en met 15 October voor belangstellenden tentoongesteld bij den alleenvertegen-
+          <lb/>woordiger</hi></p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#in"><orgName>EDMUND SALZMANN</orgName></hi>
+          <lb/><hi rendition="#larger">Piano- en Muziekhandel,</hi>
+          <lb/><hi rendition="#b"><address><addrLine>Noordwijk No. 12, Weltevreden</addrLine></address></hi></hi></ab>
+      </div>
+      <div facs="#zone_attest">
+        <ab><hi rendition="#b"><lb/>Attesten liggen ter inzage.</hi></ab>
+      </div>
+      <div facs="#zone_number">
+        <ab><hi rendition="#right #smaller"><lb/>6225</hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
