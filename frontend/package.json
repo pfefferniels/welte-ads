@@ -35,8 +35,8 @@
     "vitest": "^3.2.4"
   },
   "scripts": {
-    "dev": "node scripts/generate-artists-data.js && next dev",
-    "build": "node scripts/generate-artists-data.js && next build",
+    "dev": "next dev",
+    "build": "next build",
     "deploy": "npm run build",
     "lint": "eslint src/",
     "test": "vitest run",
