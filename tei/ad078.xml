@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Aftenposten"</title>
+        <title type="sub">January 10, 1908</title>
+        <author>
+          <orgName key="grondahl">Grøndahls Flygel- &amp; Pianolager</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Welte-Mignon Reproduktionsklaver.</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte-Mignon Reproduktionsklaver.</title>
+            <author><orgName>Grøndahls Flygel- &amp; Pianolager</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Aftenposten</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3143244">Kristiania</pubPlace>
+            <date type="publication" when="1908-01-10">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Aftenposten</title>
+            <biblScope unit="issue">January 10, 1908, No. 18</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>A reworking of Grøndahl's advertisement in Aftenposten of December 1,
+              1907 ("Reproduktionsklaveret “Mignon“"), now headed "Welte-Mignon".</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Nasjonalbiblioteket</repository>
+            <idno>
+              <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_aftenposten_null_null_19080110_49_18_2</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="no">Norwegian (Dano-Norwegian)</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad078-0.jpg" width="4620px" height="6092px"/>
+      <graphic type="IIIF" url="https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_aftenposten_null_null_19080110_49_18_2-1_003_null/full/full/0/default.jpg" width="4620px" height="6092px"/>
+      <zone points="2480,2880 3298,2880 3298,3002 2480,3002" xml:id="zone_headline"/>
+      <zone points="2664,3006 3112,3006 3112,3048 2664,3048" xml:id="zone_subheadline"/>
+      <zone points="2568,3054 3210,3054 3210,3600 2568,3600" xml:id="zone_picture"/>
+      <zone points="2392,3250 2522,3250 2522,3392 2392,3392" xml:id="zone_left"/>
+      <zone points="3213,3250 3418,3250 3418,3390 3213,3390" xml:id="zone_right"/>
+      <zone points="2382,3606 3392,3606 3392,3848 2382,3848" xml:id="zone_text"/>
+      <zone points="2550,3850 3212,3850 3212,3884 2550,3884" xml:id="zone_demonstration"/>
+      <zone points="2408,3888 3358,3888 3358,3992 2408,3992" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #in"><lb/><name type="brand">Welte-Mignon</name></hi></head>
+      </div>
+      <div facs="#zone_subheadline">
+        <head><hi rendition="#c #b"><lb/>Reproduktionsklaver.</hi></head>
+      </div>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>The Welte-Mignon cabinet player (Vorsetzer) in an Art Nouveau case</desc></figure>
+      </div>
+      <div facs="#zone_left">
+        <ab><hi rendition="#c #b"><lb/>Elegant
+          <lb/>Ydre</hi></ab>
+      </div>
+      <div facs="#zone_right">
+        <ab><hi rendition="#c #b"><seg xml:id="topic_1" ana="#technical_invention" type="topic" resp="#claude"><lb/>Drives ved
+          <lb/>Elektromotor</seg></hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/><seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">Gjengiver direkte Virtuosernes Spil med alle Finheder</seg>
+          <lb/>og med <seg xml:id="topic_3" ana="#personality" type="topic" resp="#claude">alle individuelle Karakteregenskaber</seg>.
+          <lb/>Klaverstykkerne er forespillet <sic>at</sic> Verdens første Com-
+          <lb/>ponister som:
+          <lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/119110016">Dohnanyi</persName></hi> etc., der alle har <seg xml:id="topic_4" ana="#miracle" type="topic" resp="#claude"><sic>ndtrykt</sic> sin
+          <lb/>Forbauselse og Beundring</seg> over <seg xml:id="topic_5" ana="#exact_reproduction" type="topic" resp="#claude">den i mindste Detail nøiagtige
+          <lb/>Gjengivelse</seg>.</p>
+      </div>
+      <div facs="#zone_demonstration">
+        <ab><hi rendition="#c #b"><lb/>Forespilles daglig Interessenter.</hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#in"><orgName>Grøndahls Flygel- &amp; Pianolager</orgName></hi></hi>
+          <lb/><address><addrLine>Carl Joh. Gd. 17.</addrLine> <addrLine>Telefon 7899.</addrLine></address></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

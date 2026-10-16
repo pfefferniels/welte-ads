@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Provinciale Geldersche en Nijmeegsche Courant"</title>
+        <title type="sub">November 13 and 20, 1910</title>
+        <author>
+          <orgName key="kettner">Kettners Pianohandel</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>BUITENGEWOON CONCERT … uitgevoerd door het REPRODUCTIE-APPARAAT „MIGNON” (Welte Vorsetzer)</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">BUITENGEWOON CONCERT … uitgevoerd door het REPRODUCTIE-APPARAAT „MIGNON” (Welte Vorsetzer)</title>
+            <author><orgName>Kettners Pianohandel</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Provinciale Geldersche en Nijmeegsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2750053">Nijmegen</pubPlace>
+            <date type="publication" when="1910-11-13">1910</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Provinciale Geldersche en Nijmeegsche Courant</title>
+            <biblScope unit="issue">November 13, 1910, No. 268</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMRANM02:000010550:mpeg21:a0040</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>BUITENGEWOON CONCERT … uitgevoerd door het REPRODUCTIE-APPARAAT „MIGNON” (Welte Vorsetzer)</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">BUITENGEWOON CONCERT … uitgevoerd door het REPRODUCTIE-APPARAAT „MIGNON” (Welte Vorsetzer)</title>
+            <author><orgName>Kettners Pianohandel</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Provinciale Geldersche en Nijmeegsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2750053">Nijmegen</pubPlace>
+            <date type="publication" when="1910-11-20">1910</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Provinciale Geldersche en Nijmeegsche Courant</title>
+            <biblScope unit="issue">November 20, 1910, No. 274</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMRANM02:000010564:mpeg21:a0024</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad048-0.jpg" width="4287px" height="6365px"/>
+      <zone points="3585,4698 4190,4698 4190,4772 3585,4772" xml:id="zone_venue"/>
+      <zone points="3510,4793 4220,4793 4220,5010 3510,5010" xml:id="zone_headline"/>
+      <zone points="3600,5020 4175,5020 4175,5140 3600,5140" xml:id="zone_title"/>
+      <zone points="3510,5160 3875,5160 3875,5378 3510,5378" xml:id="zone_artists_left"/>
+      <zone points="3905,5145 4220,5145 4220,5378 3905,5378" xml:id="zone_artists_right"/>
+      <zone points="3775,5386 4015,5386 4015,5434 3775,5434" xml:id="zone_lhevinne"/>
+      <zone points="3505,5448 4220,5448 4220,5748 3505,5778" xml:id="zone_apparatus"/>
+      <zone points="3600,5785 4185,5752 4185,5874 3600,5907" xml:id="zone_tickets"/>
+      <zone points="3505,5912 4215,5872 4215,6000 3505,6039" xml:id="zone_signature"/>
+      <zone points="3505,6039 4215,6000 4215,6080 3505,6123" xml:id="zone_booking"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_venue">
+        <ab><hi rendition="#c #larger"><lb/><placeName>Gebouw „de Vereeniging”</placeName>.</hi></ab>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c">
+          <hi rendition="#in #b"><lb/>BUITENGEWOON CONCERT</hi>
+          <lb/>op DINSDAG 22 NOVEMBER 1910 te 8 uren.
+        </hi></head>
+      </div>
+      <div facs="#zone_title">
+        <ab><hi rendition="#c">
+          <hi rendition="#b #larger"><lb/>Piano-Voordrachten</hi>
+          <hi rendition="#smaller"><lb/>VAN</hi>
+        </hi></ab>
+      </div>
+      <div facs="#zone_artists_left">
+        <ab><hi rendition="#b">
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/119466821">OLGA SAMAROFF</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118986724">J. J. PADEREWSKI</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/134863267">W. SAPELLNIKOFF</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118953915">TERÈSE <sic>CARRÉNO</sic></persName>,
+        </hi></ab>
+      </div>
+      <div facs="#zone_artists_right">
+        <ab><hi rendition="#b">
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/116308621">RAOUL PUGNO</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/116210419"><sic>CLOTILDEKLEEBERG</sic></persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/116060689">Prof. MAX PAUER</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118518011">FERRUCCIO BUSONI</persName>,
+        </hi></ab>
+      </div>
+      <div facs="#zone_lhevinne">
+        <ab><hi rendition="#c #b"><lb/><persName type="artist" corresp="https://d-nb.info/gnd/124379923">J. LHEVINNE</persName>,</hi></ab>
+      </div>
+      <div facs="#zone_apparatus">
+        <ab><hi rendition="#c">
+          <lb/>uitgevoerd door het
+          <hi rendition="#b #larger"><lb/>REPRODUCTIE-APPARAAT</hi>
+          <hi rendition="#in"><lb/>„<name type="brand">MIGNON</name>” (<name type="brand">Welte Vorsetzer</name>)</hi>
+          <hi rendition="#larger"><lb/>Concertvleugel <name type="brand">STEINWAY &amp; SONS</name>.</hi>
+        </hi></ab>
+      </div>
+      <div facs="#zone_tickets">
+        <ab><hi rendition="#c">
+          <lb/>Toegangsbewijzen worden op
+          <lb/>schriftelijke aanvrage verstrekt
+          <lb/>door den Generaal-Agent :::
+        </hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c">
+          <lb/><hi rendition="#b #larger"><orgName>KETTNERS PIANOHANDEL</orgName>,</hi>
+          <address><addrLine><lb/><hi rendition="#g">Heiligenweg</hi> 21, 23 <sic>25</sic>, Amsterdam.</addrLine></address>
+        </hi></ab>
+      </div>
+      <div facs="#zone_booking">
+        <ab><hi rendition="#c">
+          <lb/>Plaatsen zijn te bespreken aan het
+          <lb/><placeName>Gebouw „DE VEREENIGING”</placeName>.
+        </hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

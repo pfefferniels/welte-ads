@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Social"</title>
+        <title type="sub">April 1923</title>
+        <author>
+          <orgName key="stowers">John L. Stowers</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Josef Hofmann impresionando en la WELT-MIGNON</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Josef Hofmann impresionando en la WELT-MIGNON</title>
+            <author><orgName>John L. Stowers</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Social</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3553478">La Habana</pubPlace>
+            <date type="publication" when="1923-04">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Social</title>
+            <biblScope unit="issue">April 1923, No. 4 (labelled vol. III by the Internet Archive; probably vol. VIII)</biblScope>
+            <biblScope unit="pages">7</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Internet Archive</repository>
+            <idno>
+              <idno type="URLImages">https://archive.org/details/SocialVolIIINo4Abril1923/page/n4/mode/1up</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="es">Spanish</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad116-0.jpg" width="5208px" height="7045px"/>
+      <graphic type="IIIF" url="https://iiif.archive.org/image/iiif/3/SocialVolIIINo4Abril1923%2FSocial_vol_III_No_4_abril_1923_jp2.zip%2FSocial_vol_III_No_4_abril_1923_jp2%2FSocial_vol_III_No_4_abril_1923_0004.jp2/full/max/0/default.jpg" width="5208px" height="7045px"/>
+      <zone points="570,505 4695,505 4695,3575 570,3575" xml:id="zone_picture"/>
+      <zone points="1620,3675 3645,3675 3645,4045 1620,4045" xml:id="zone_caption"/>
+      <zone points="845,4380 4465,4380 4465,4952 845,4952" xml:id="zone_text"/>
+      <zone points="1540,4988 3770,4988 3770,5262 1540,5262" xml:id="zone_visit"/>
+      <zone points="1710,5335 3615,5335 3615,5978 1710,5978" xml:id="zone_signature"/>
+      <zone points="860,6000 4490,6000 4490,6285 860,6285" xml:id="zone_gap"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>Photograph: Josef Hofmann seated at a grand piano fitted for recording, a woman and three men standing or seated beside him, organ pipes behind</desc></figure>
+      </div>
+      <div facs="#zone_caption">
+        <ab><hi rendition="#c #i"><lb/><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName> impresionando en la <name type="brand"><sic>WELT-MIGNON</sic></name>
+          <lb/>la célebre Overture de Tannhauser, en la<unclear>,</unclear> que hace
+          <lb/>alarde de su estupenda ejecución y exquisito
+          <lb/>sentido poético.</hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/><hi rendition="#dropcap">L</hi>A MARAVILLOSA <seg xml:id="topic_1" ana="#exact_reproduction" type="topic" resp="#claude">fidelidad con que la <name type="brand"><sic>WELT-MIGNON</sic></name> recoge todos los detalles de la eje-
+          <lb/>cución en el piano de los grandes artistas, y la exactitud con que los reproduce</seg>—tanto en los
+          <lb/>arranques heroicos de bravura como en los más dulces y alados matices—han hecho que este
+          <lb/>instrumento incomparable <seg xml:id="topic_2" ana="#educational_use" type="topic" resp="#claude">figure actualmente en los grandes conservatorios del mundo, para que
+          <lb/>discípulos y profesores se den cabal cuenta de <seg xml:id="topic_3" ana="#personality" type="topic" resp="#claude">la manera individual de interpretar de cada uno de
+          <lb/>los grandes “virtuosi”</seg></seg> de la época.</p>
+      </div>
+      <div facs="#zone_visit">
+        <ab><hi rendition="#c"><lb/>Visite nuestro estudio y podrá usted oir este instrumento, del
+          <lb/>que decía el gran <persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-Saens</persName> que era <seg xml:id="topic_4" ana="#miracle" type="topic" resp="#claude">“la maravilla de las
+          <lb/>maravillas”</seg>.</hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><hi rendition="#i"><lb/>Representantes Exclusivos en la República de Cuba:</hi>
+          <lb/><hi rendition="#g #larger"><orgName>JOHN L. STOWERS</orgName></hi>
+          <hi rendition="#i"><address><addrLine><lb/>Edificio “Stowers”</addrLine>
+            <addrLine><lb/>San Rafael 29</addrLine>
+            <addrLine><lb/><placeName>HABANA</placeName></addrLine></address></hi></hi></ab>
+      </div>
+      <div facs="#zone_gap">
+        <ab><gap reason="irrelevant"><desc resp="#claude">3 lines on the Mason &amp; Hamlin piano: "Como complemento de la WELT-MIGNON oirá Ud en nuestro estudio el piano MASON &amp; HAMLIN, …"</desc></gap></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
