@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Rigasche Rundschau"</title>
+        <title type="sub">January 28, 1911</title>
+        <author>
+          <orgName key="zimmermann">Jul. Heinr. Zimmermann</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Das Reproduktions-Piano Welte-Mignon bietet die Möglichkeit</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Das Reproduktions-Piano Welte-Mignon bietet die Möglichkeit</title>
+            <author><orgName>Jul. Heinr. Zimmermann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Rigasche Rundschau</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/456172">Riga</pubPlace>
+            <date type="publication" when="1911-01-28">1911</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Rigasche Rundschau</title>
+            <biblScope unit="issue">Nr. 11, Sonnabend, 15 (28) January 1911</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The page is dated by the Julian calendar (Sonnabend, den 15. Januar
+              1911); <att>when</att> gives the Gregorian date.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Latvia (through Europeana)</repository>
+            <idno>
+              <idno type="URLImages">https://www.europeana.eu/item/9200303/BibliographicResource_3000059906704</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="de">German</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad103-0.jpg" width="2907px" height="3447px"/>
+      <graphic type="IIIF" url="https://iiif.europeana.eu/image/JIOQ3HX7ETLRSPMHVIGGGVBUF474Z5LGQ4NWZAPVXRXYZOYQWSRA/presentation_images/e91405f0-031c-11e6-95c4-fa163e60dd72/node-1/image/NLL/Rigasche_Rundschau/1911/01/15/pa001_riru1911n011_004/full/full/0/default.jpg" width="2907px" height="3447px"/>
+      <zone points="698,686 1404,686 1404,728 698,728" xml:id="zone_headline"/>
+      <zone points="648,730 1054,730 1054,1066 648,1066" xml:id="zone_picture"/>
+      <zone points="1068,738 1450,738 1450,982 1068,982" xml:id="zone_brand"/>
+      <zone points="1070,984 1452,984 1452,1066 1070,1066" xml:id="zone_text"/>
+      <zone points="648,1068 1452,1068 1452,1132 648,1132" xml:id="zone_button"/>
+      <zone points="716,1136 1384,1136 1384,1202 716,1202" xml:id="zone_maker"/>
+      <zone points="648,1204 1452,1204 1452,1382 648,1382" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #larger"><lb/>Das Reproduktions-Piano</hi></head>
+      </div>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>The Welte-Mignon cabinet player (Vorsetzer)</desc></figure>
+      </div>
+      <div facs="#zone_brand">
+        <head><hi rendition="#c #b #in"><lb/><name type="brand">Welte-
+          <lb/>Mignon</name></hi></head>
+      </div>
+      <div facs="#zone_text">
+        <ab><lb/>bietet die Möglichkeit, das <hi rendition="#b">Original-
+          <lb/>spiel der ersten Pianisten der
+          <lb/>Welt <seg xml:id="topic_1" ana="#home" type="topic" resp="#claude">im eigenen Heim</seg></hi> zu hören</ab>
+      </div>
+      <div facs="#zone_button">
+        <ab><hi rendition="#c"><lb/><seg xml:id="topic_2" ana="#touch_of_a_button" type="topic" resp="#claude">Ein Druck auf den Knopf genügt</seg>, <seg xml:id="topic_3" ana="#virtual_presence" type="topic" resp="#claude">um einen <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/116429623">Reisenauer</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/1080980598">Slivinsky</persName></hi> etc. zu zitieren</seg>.</hi></ab>
+      </div>
+      <div facs="#zone_maker">
+        <ab><hi rendition="#c"><lb/><hi rendition="#larger"><orgName>M. Welte &amp; Söhne</orgName>, Hoflieferanten,</hi>
+          <lb/><placeName>Freiburg i. Baden</placeName>.</hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#smaller">Alleinvertreter</hi>
+          <lb/><hi rendition="#in #b"><orgName>Jul. Heinr. Zimmermann</orgName></hi>
+          <lb/><hi rendition="#b"><address><addrLine><placeName>Petersburg</placeName>.</addrLine> <addrLine><placeName>Riga</placeName>, Scheunenstr. 15.</addrLine> <addrLine><placeName>Moskau</placeName>.</addrLine></address></hi></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

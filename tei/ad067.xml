@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Advertentieblad voor Limburg"</title>
+        <title type="sub">July 17, 1926</title>
+        <author>
+          <orgName key="hilger">Pianohaus Hilger</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Indien gij Uw salon wilt versieren met een electrisch reproductie-instrument, neem dan een Welte-Mignon</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Indien gij Uw salon wilt versieren met een electrisch reproductie-instrument, neem dan een Welte-Mignon</title>
+            <author><orgName>Pianohaus Hilger</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Advertentieblad voor Limburg</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2751283">Maastricht</pubPlace>
+            <date type="publication" when="1926-07-17">1926</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Advertentieblad voor Limburg</title>
+            <biblScope unit="issue">July 17, 1926, No. 2967</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMCC02:211124026:mpeg21:a00045</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad067-0.jpg" width="5681px" height="7351px"/>
+      <zone points="389,5616 1199,5616 1199,5692 389,5692" xml:id="zone_intro"/>
+      <zone points="398,5709 1182,5709 1182,5825 398,5825" xml:id="zone_brand_1"/>
+      <zone points="385,5843 1197,5843 1197,6027 385,6027" xml:id="zone_text_1"/>
+      <zone points="396,6040 1180,6040 1180,6158 396,6158" xml:id="zone_brand_2"/>
+      <zone points="384,6176 1193,6176 1193,6325 384,6325" xml:id="zone_text_2"/>
+      <zone points="393,6339 1175,6339 1175,6457 393,6457" xml:id="zone_brand_3"/>
+      <zone points="377,6473 1188,6473 1188,6547 377,6547" xml:id="zone_text_3"/>
+      <zone points="377,6636 1170,6636 1170,6892 377,6892" xml:id="zone_signature"/>
+      <zone points="505,6948 1062,6948 1062,6989 505,6989" xml:id="zone_atelier"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_intro">
+        <ab><lb/><seg xml:id="topic_1" ana="#home" type="topic" resp="#claude">Indien gij Uw salon wilt versieren</seg> met een
+          <lb/>electrisch reproductie-instrument, neem dan een</ab>
+      </div>
+      <div facs="#zone_brand_1">
+        <head><hi rendition="#c #in #b"><lb/><name type="brand">Welte-Mignon</name></hi></head>
+      </div>
+      <div facs="#zone_text_1">
+        <p><lb/>Alle groote kunstenaars roemen dit instrument
+          <lb/><seg xml:id="topic_2" ana="#superiority" type="topic" resp="#claude">als het hoogste, wat de Kunst op dit gebied be-
+          <lb/>reikt heeft</seg> en als het <hi rendition="#b">eenige,</hi> dat inderdaad aan-
+          <lb/>spraak kan maken op een <seg xml:id="topic_3" ana="#exact_reproduction" type="topic" resp="#claude">natuurgetrouwe weer-
+          <lb/>gave van het handspel</seg>.</p>
+      </div>
+      <div facs="#zone_brand_2">
+        <ab><hi rendition="#c #in #b"><lb/><name type="brand">Welte-Mignon</name></hi></ab>
+      </div>
+      <div facs="#zone_text_2">
+        <p><lb/><seg xml:id="topic_4" ana="#educational_use" type="topic" resp="#claude">wordt zelfs aan muzieklyceums gebruikt, om het
+          <lb/>spel en de verschillende opvattingen der grootste
+          <lb/>kunstenaars te demonstreeren</seg>.
+          <lb/>Behalve voor <seg xml:id="topic_5" ana="#home" type="topic" resp="#claude">huisgebruik</seg> is</p>
+      </div>
+      <div facs="#zone_brand_3">
+        <ab><hi rendition="#c #in #b"><lb/><name type="brand">Welte-Mignon</name></hi></ab>
+      </div>
+      <div facs="#zone_text_3">
+        <p><lb/>het <seg xml:id="topic_6" ana="#unreached_ideal" type="topic" resp="#claude">ideale instrument</seg> voor fijne consumptie-
+          <lb/>salons en hôtels.</p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#smaller">ALLEENVERKOOP:</hi>
+          <lb/><hi rendition="#in #b"><orgName>Pianohaus Hilger</orgName>,</hi>
+          <lb/><hi rendition="#b"><address><addrLine>Wijker Brugstraat 18, Maastricht.</addrLine></address></hi></hi></ab>
+      </div>
+      <div facs="#zone_atelier">
+        <ab><hi rendition="#c #smaller"><lb/>Atelier voor alle REPARATIËN.</hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
