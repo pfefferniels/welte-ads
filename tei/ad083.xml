@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Morgenbladet" and "Aftenposten"</title>
+        <title type="sub">January 27 to February 2, 1919</title>
+        <author>
+          <orgName key="grondahl">Grøndahl</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Welte-Mignon Elektrisk Produktionsinstrument</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte-Mignon Elektrisk Produktionsinstrument</title>
+            <author><orgName>Grøndahl</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Morgenbladet</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3143244">Kristiania</pubPlace>
+            <date type="publication" when="1919-01-27">1919</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Morgenbladet</title>
+            <biblScope unit="issue">January 27, 1919, No. 55</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The whole advertisement is hand-lettered; it is signed "ATELIER E·O"
+              outside the frame. Both "Ø"s of the signature are drawn as an O with a
+              dot or stroke inside.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Nasjonalbiblioteket</repository>
+            <idno>
+              <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_morgenbladet_null_null_19190127_102_55_1</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Welte-Mignon Elektrisk Reproduktionsinstrument</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte-Mignon Elektrisk Reproduktionsinstrument</title>
+            <author><orgName>Grøndahl</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Aftenposten</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3143244">Kristiania</pubPlace>
+            <date type="publication" when="1919-02-02">1919</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Aftenposten</title>
+            <biblScope unit="issue">February 2, 1919, No. 59</biblScope>
+            <biblScope unit="pages">9</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Checked on the scan: the misprint "PRODUKTIONSINSTRUMENT" is
+              corrected; otherwise the advertisement looked identical.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Nasjonalbiblioteket</repository>
+            <idno>
+              <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_aftenposten_null_null_19190202_60_59_2</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="no">Norwegian (Dano-Norwegian)</language>
+        <language ident="en">English</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad083-0.jpg" width="5962px" height="8939px"/>
+      <graphic type="IIIF" url="https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_morgenbladet_null_null_19190127_102_55_1-1_005_null/full/full/0/default.jpg" width="5962px" height="8939px"/>
+      <zone points="2206,4940 2832,4940 2832,5432 2206,5432" xml:id="zone_picture"/>
+      <zone points="2188,5435 2852,5435 2852,5655 2326,5655 2326,5750 2188,5750" xml:id="zone_logo"/>
+      <zone points="2329,5660 2818,5660 2818,5744 2329,5744" xml:id="zone_subheadline"/>
+      <zone points="2390,5788 2828,5788 2828,6034 2390,6034" xml:id="zone_text"/>
+      <zone points="2195,6075 2828,6075 2828,6266 2195,6266" xml:id="zone_cabinet_player"/>
+      <zone points="2195,6294 2828,6294 2828,6480 2195,6480" xml:id="zone_autograph_piano"/>
+      <zone points="2180,6508 2830,6508 2830,6728 2180,6728" xml:id="zone_autograph_grand"/>
+      <zone points="2206,6770 2830,6770 2830,7000 2206,7000" xml:id="zone_signature"/>
+      <zone points="2708,7102 2886,7102 2886,7136 2708,7136" xml:id="zone_artist"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>A grand piano with a Welte cabinet player (Vorsetzer) pushed up to its keyboard</desc></figure>
+      </div>
+      <div facs="#zone_logo">
+        <head><hi rendition="#c #in"><lb/><name type="brand">Welte-Mignon</name></hi></head>
+      </div>
+      <div facs="#zone_subheadline">
+        <ab><hi rendition="#c"><lb/>ELEKTRISK
+          <lb/><app>
+            <rdg source="#source_1"><sic>PRODUKTIONSINSTRUMENT</sic></rdg>
+            <rdg source="#source_2">REPRODUKTIONSINSTRUMENT</rdg>
+          </app></hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <ab><lb/><seg xml:id="topic_1" ana="#exact_reproduction" type="topic" resp="#claude">EN ABSOLUT TRO
+          <lb/>GJENGIVELSE AV
+          <lb/>VERDENSBERØMTE
+          <lb/>PIANISTER'S</seg> <seg xml:id="topic_2" ana="#personality" type="topic" resp="#claude">PERSON-
+          <lb/>LIGE SPIL OG INDIVI-
+          <lb/>DUELLE FORTOLKNING</seg></ab>
+      </div>
+      <div facs="#zone_cabinet_player">
+        <ab><lb/><hi rendition="#larger #u"><name type="brand">WELTE CABINET PLAYER</name></hi>
+          <hi rendition="#right"><lb/>KAN TILSÆTTES ETHVERT
+          <lb/>PIANO ELLER FLYGEL</hi></ab>
+      </div>
+      <div facs="#zone_autograph_piano">
+        <ab><lb/><hi rendition="#larger #u"><name type="brand">WELTE AUTOGRAPH PIANO</name></hi>
+          <hi rendition="#right"><lb/><name type="brand">STEINWAY &amp; SONS</name>
+          <lb/><name type="brand">MASON &amp; HAMLIN</name></hi></ab>
+      </div>
+      <div facs="#zone_autograph_grand">
+        <ab><lb/><hi rendition="#larger #u"><name type="brand">WELTE AUTOGRAPH FLYGEL</name></hi>
+          <hi rendition="#right"><lb/><name type="brand">STEINWAY &amp; SONS</name>
+          <lb/><name type="brand">MASON &amp; HAMLIN</name>
+          <lb/><unclear>m. fl.</unclear></hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/>ENEFORHANDLERE I NORGE
+          <lb/><hi rendition="#in"><orgName>GRØNDAHL</orgName></hi>
+          <lb/><seg type="slogan">LANDETS STØRSTE KLAVERFORRETNING</seg></hi></ab>
+      </div>
+      <div facs="#zone_artist">
+        <ab><hi rendition="#right #smaller"><lb/>ATELIER E·O</hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

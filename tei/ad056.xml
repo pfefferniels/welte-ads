@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Nieuwe Rotterdamsche Courant"</title>
+        <title type="sub">June 10, 1923</title>
+        <author>
+          <orgName key="muus">C. A. Muus</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>The Original Auto-Piano Cy. … AMERIKAANSCHE WELTE-MIGNON</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The Original Auto-Piano Cy. … AMERIKAANSCHE WELTE-MIGNON</title>
+            <author><orgName>C. A. Muus</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nieuwe Rotterdamsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1923-06-10">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nieuwe Rotterdamsche Courant</title>
+            <biblScope unit="issue">June 10, 1923</biblScope>
+            <biblScope unit="pages">14</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Placed under the heading "Mededeelingen en Aanbevelingen (buiten verantwoordelijkheid van de Redactie)", but set as a framed display ad.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010026623:mpeg21:a0085</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad056-0.jpg" width="5309px" height="7166px"/>
+      <zone points="4562,5590 4935,5590 4935,5985 4562,5985" xml:id="zone_artists"/>
+      <zone points="4330,6000 5175,6000 5175,6060 4330,6060" xml:id="zone_headline"/>
+      <zone points="4330,6064 5170,6064 5170,6225 4330,6225" xml:id="zone_brand"/>
+      <zone points="4325,6228 5175,6228 5175,6400 4325,6400" xml:id="zone_mignon"/>
+      <zone points="4330,6440 5175,6440 5175,6560 4330,6560" xml:id="zone_text"/>
+      <zone points="4330,6565 5165,6565 5165,6712 4330,6712" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_artists">
+        <ab><hi rendition="#i #b">
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118986724">PADEREWSKI</persName>.
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">HOFMANN</persName>.
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118518011">BUSONI</persName>.
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/116014490">PACHMANN</persName>.
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118501437">D’ ALBERT</persName>.
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118524186">DEBUSSY</persName>.
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/11861911X">R. STRAUSS</persName>.
+        </hi></ab>
+      </div>
+      <div facs="#zone_headline">
+        <ab><hi rendition="#c #b"><lb/>De beroemdste Pianisten der wereld spelen voor</hi></ab>
+      </div>
+      <div facs="#zone_brand">
+        <ab><hi rendition="#c #b">
+          <hi rendition="#in"><lb/><orgName>The Original Auto-Piano Cy.</orgName></hi>
+          <lb/>te <placeName>New-York</placeName>
+        </hi></ab>
+      </div>
+      <div facs="#zone_mignon">
+        <ab><hi rendition="#c">
+          <lb/>en dus ook voor hen, die in het bezit zijn van een
+          <hi rendition="#b #in"><lb/>AMERIKAANSCHE <name type="brand">WELTE-MIGNON</name></hi>
+        </hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/>Zonder verplichting dagelijks te hooren bij
+          <lb/>den vertegenwoordiger voor <placeName>Rotterdam</placeName> <hi rendition="#right #smaller">A.40</hi></p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c #b">
+          <lb/><hi rendition="#in"><orgName>C. A. MUUS</orgName></hi>
+          <address><addrLine><lb/>Van Oldenbarneveltstraat 110—112.</addrLine></address>
+        </hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

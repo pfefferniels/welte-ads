@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Saturday Night"</title>
+        <title type="sub">November 26, 1927</title>
+        <author>
+          <orgName key="heintzman">Heintzman &amp; Co.</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>The HEINTZMAN Welte-Mignon Reproducing Piano (With the Heintzman Welte-Mignon in your home …)</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The HEINTZMAN Welte-Mignon Reproducing Piano (With the Heintzman Welte-Mignon in your home …)</title>
+            <author><orgName>Heintzman &amp; Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Saturday Night</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/6167865">Toronto</pubPlace>
+            <date type="publication" when="1927-11-26">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Saturday Night</title>
+            <biblScope unit="issue">November 26, 1927, Vol. 43, No. 2</biblScope>
+            <biblScope unit="pages">30</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Internet Archive</repository>
+            <idno>
+              <idno type="URLImages">https://archive.org/details/sim_saturday-night_1927-11-26_43_2/page/n29/mode/1up</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="en">English</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad110-0.jpg" width="5414px" height="7370px"/>
+      <graphic type="IIIF" url="https://iiif.archive.org/image/iiif/3/sim_saturday-night_1927-11-26_43_2%2Fsim_saturday-night_1927-11-26_43_2_jp2.zip%2Fsim_saturday-night_1927-11-26_43_2_jp2%2Fsim_saturday-night_1927-11-26_43_2_0029.jp2/full/max/0/default.jpg" width="5414px" height="7370px"/>
+      <zone points="3828,4060 4888,4060 4888,4464 3828,4464" xml:id="zone_headline"/>
+      <zone points="3740,4488 4985,4488 4985,5858 3740,5858" xml:id="zone_picture"/>
+      <zone points="3866,5888 4868,5888 4868,6358 3866,6358" xml:id="zone_text"/>
+      <zone points="4056,6380 4684,6380 4684,6526 4056,6526" xml:id="zone_invitation"/>
+      <zone points="3760,6583 5002,6583 5002,6856 3760,6856" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c"><lb/><hi rendition="#i #larger">The</hi> <name type="brand"><hi rendition="#g #larger">HEINTZMAN</hi>
+          <lb/><hi rendition="#in">Welte-Mignon</hi>
+          <lb/><hi rendition="#smaller">(Licensee)</hi>
+          <lb/><hi rendition="#b #larger">Reproducing Piano</hi></name></hi></head>
+      </div>
+      <div type="illustration" facs="#zone_picture">
+        <figure xml:id="figure_1" ana="#home"><desc>A grand piano in a room, a framed portrait of a seventeenth-century gentleman on the wall, a side table with a lamp and a vase</desc></figure>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/>With the <name type="brand">Heintzman Welte-Mignon</name> in your
+          <lb/>home, <seg xml:id="topic_1" ana="#virtual_presence" type="topic" resp="#claude">you can have the companionship of the
+          <lb/>world’s greatest pianists</seg>. <seg xml:id="topic_2" ana="#touch_of_a_button" type="topic" resp="#claude"><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pach-
+          <lb/>mann</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/11918625X"><sic>Hoffman</sic></persName> and a host of others await your
+          <lb/>beck and call</seg>. Though they cannot appear in
+          <lb/>person, <seg xml:id="topic_3" ana="#virtual_presence" type="topic" resp="#claude">their spirit will pervade the room</seg>—<seg xml:id="topic_4" ana="#exact_reproduction" type="topic" resp="#claude">so
+          <lb/>exact is <name type="brand">Welte-Mignon</name> reproduction</seg>. The <name type="brand">Welte-
+          <lb/>Mignon</name> is <seg xml:id="topic_5" ana="#unreached_ideal" type="topic" resp="#claude">the ultimate in musical perfection—
+          <lb/>it is the outstanding and supreme instrument in
+          <lb/>its field</seg>.</p>
+      </div>
+      <div facs="#zone_invitation">
+        <ab><hi rendition="#c #i"><lb/>Come to our Salon and let it
+          <lb/>entertain you. Catalogue on
+          <lb/>request.</hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#b #i">Ye Olde Firme</hi>
+          <lb/><hi rendition="#in #larger"><orgName>Heintzman &amp; Co.</orgName></hi>
+          <lb/><address><addrLine>193-197 Yonge Street, - - Toronto.</addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

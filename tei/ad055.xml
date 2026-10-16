@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "De Maasbode"</title>
+        <title type="sub">June 7 to 10, 1923</title>
+        <author>
+          <orgName key="muus">C. A. Muus</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>PADEREWSKI. HOFMANN. … spelen voor THE ORIGINAL AUTO-PIANO Cy … Amerikaansche Welte-Mignon</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">PADEREWSKI. HOFMANN. … spelen voor THE ORIGINAL AUTO-PIANO Cy … Amerikaansche Welte-Mignon</title>
+            <author><orgName>C. A. Muus</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>De Maasbode</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1923-06-10">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">De Maasbode</title>
+            <biblScope unit="issue">June 10, 1923, No. 18804</biblScope>
+            <biblScope unit="pages">2</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMKB04:000192714:mpeg21:a0025</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Paderewski Hofmann Busoni … spelen voor THE ORIGINAL AUTO-PIANO Cy … Amerikaansche Welte-Mignon</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Paderewski Hofmann Busoni … spelen voor THE ORIGINAL AUTO-PIANO Cy … Amerikaansche Welte-Mignon</title>
+            <author><orgName>C. A. Muus</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>De Maasbode</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1923-06-07">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">De Maasbode</title>
+            <biblScope unit="issue">June 7, 1923, No. 18799</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>An earlier setting, unboxed, with the names in bold sans in upper and lower case.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMKB04:000192709:mpeg21:a0030</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Paderewski Hofmann Busoni … spelen voor THE ORIGINAL AUTO-PIANO Cy … Amerikaansche Welte-Mignon</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Paderewski Hofmann Busoni … spelen voor THE ORIGINAL AUTO-PIANO Cy … Amerikaansche Welte-Mignon</title>
+            <author><orgName>C. A. Muus</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>De Maasbode</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1923-06-08">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">De Maasbode</title>
+            <biblScope unit="issue">June 8, 1923, No. 18801</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The same setting as the printing of June 7 (unboxed, names in upper and lower case).</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMKB04:000192711:mpeg21:a0018</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad055-0.jpg" width="5054px" height="6894px"/>
+      <zone points="1985,490 2370,490 2370,802 1985,802" xml:id="zone_artists"/>
+      <zone points="1938,810 2425,810 2425,915 1938,915" xml:id="zone_headline"/>
+      <zone points="1938,920 2425,920 2425,1115 1938,1115" xml:id="zone_brand"/>
+      <zone points="1935,1145 2420,1145 2420,1415 1935,1415" xml:id="zone_text"/>
+      <zone points="1935,1438 2418,1438 2418,1603 1935,1603" xml:id="zone_signature"/>
+      <zone points="2338,1665 2575,1665 2575,1705 2338,1705" xml:id="zone_ref"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_artists">
+        <ab><hi rendition="#i #b">
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118986724">PADEREWSKI</persName>.
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">HOFMANN</persName>.
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118518011">BUSONI</persName>.
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/116014490">PACHMANN</persName>.
+          <lb/><app><rdg source="#source_1 #source_3"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">D’ALBERT</persName></rdg><rdg source="#source_2"><persName type="artist" corresp="https://d-nb.info/gnd/118501437"><sic>Ds Albert</sic></persName></rdg></app>.
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118524186">DEBUSSY</persName>.
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/11861911X"><app><rdg source="#source_1">R. STRAUSS</rdg><rdg source="#source_2 #source_3">A. Strauss</rdg></app></persName>,
+        </hi></ab>
+      </div>
+      <div facs="#zone_headline">
+        <ab><hi rendition="#c">
+          <hi rendition="#larger"><lb/>De beroemdste Pianisten der Wereld</hi>
+          <hi rendition="#smaller"><lb/>spelen voor</hi>
+        </hi></ab>
+      </div>
+      <div facs="#zone_brand">
+        <ab><hi rendition="#c #b">
+          <hi rendition="#in"><lb/><orgName>THE ORIGINAL
+          <lb/>AUTO-PIANO Cy</orgName></hi>
+          <hi rendition="#smaller"><lb/>TE <placeName>NEW-YORK</placeName></hi>
+        </hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/>en dus ook voor hen, <app><rdg source="#source_1 #source_3">die</rdg><rdg source="#source_2">welke</rdg></app> in
+          <lb/>het bezit zijn van een Ameri-
+          <lb/>kaansche <name type="brand">Welte-Mignon</name>.</p>
+        <p><lb/>Zonder verplichting dagelijks
+          <lb/>te hooren bij den vertegen-
+          <lb/>woordiger voor <placeName>Rotterdam</placeName></p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c #b">
+          <lb/><hi rendition="#in"><orgName>C. A. MUUS</orgName></hi>
+          <address><addrLine><lb/><app><rdg source="#source_1 #source_3">v. Oldenbarneveltstr.</rdg><rdg source="#source_2">v. Oldenbarneveldstr.</rdg></app> 110-112.</addrLine></address>
+        </hi></ab>
+      </div>
+      <div facs="#zone_ref">
+        <ab><hi rendition="#right #smaller"><lb/><app><rdg source="#source_1">Recl. R4027 40</rdg><rdg source="#source_2">45216 40</rdg><rdg source="#source_3">Recl. 45333 40</rdg></app></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Nieuwe Rotterdamsche Courant"</title>
+        <title type="sub">June 22, 1922</title>
+        <author>
+          <orgName key="hans.bruder">Hans Bruder, Eerste Rotterdamsche Muziekwerkenfabriek</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>WEGENS VERBOUWING … 1 WELTE MIGNON REPRODUCTIE PIANO</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">WEGENS VERBOUWING … 1 WELTE MIGNON REPRODUCTIE PIANO</title>
+            <author><orgName>Hans Bruder, Eerste Rotterdamsche Muziekwerkenfabriek</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nieuwe Rotterdamsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1922-06-22">1922</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nieuwe Rotterdamsche Courant</title>
+            <biblScope unit="issue">June 22, 1922</biblScope>
+            <biblScope unit="pages">11</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010026133:mpeg21:a0056</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad054-0.jpg" width="5387px" height="6947px"/>
+      <zone points="1500,5755 2618,5755 2618,5862 1500,5862" xml:id="zone_headline"/>
+      <zone points="1500,5880 2618,5880 2618,5929 1500,5929" xml:id="zone_lead"/>
+      <zone points="1585,5932 2618,5932 2618,6080 1585,6080" xml:id="zone_offer"/>
+      <zone points="1585,6085 2540,6085 2540,6240 1585,6240" xml:id="zone_other"/>
+      <zone points="1505,6250 2618,6250 2618,6418 1505,6418" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in"><lb/>WEGENS VERBOUWING</hi></head>
+      </div>
+      <div facs="#zone_lead">
+        <ab><hi rendition="#b"><lb/>en uitbreiding kunnen wij U zeer voordeelig aanbieden:</hi></ab>
+      </div>
+      <div facs="#zone_offer">
+        <ab><hi rendition="#b #larger"><lb/>1 <name type="brand">WELTE MIGNON</name> REPRODUCTIE PIANO,</hi>
+          <lb/>splinternieuw, mahonie met rollen. Prijs
+          <lb/>à contant <hi rendition="#b">f 2000,</hi> <hi rendition="#right #smaller">33113.50</hi></ab>
+      </div>
+      <div facs="#zone_other">
+        <gap reason="irrelevant"><desc resp="#claude">second offer, "1 nieuwe BRUDERSCHE VIOOLPIANO (Amati) met 10 muziekrollen en garantie. Buitengewone aanbieding f 3800."</desc></gap>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c #b">
+          <lb/>Eerste Rotterdamsche Muziekwerkenfabriek,
+          <lb/><hi rendition="#in #g"><orgName>HANS BRUDER</orgName>,</hi>
+          <address><addrLine><lb/>Kruisstraat 10, Rotterdam.</addrLine></address>
+        </hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

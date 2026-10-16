@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Morgenbladet"</title>
+        <title type="sub">January 24, 1919</title>
+        <author>
+          <orgName key="grondahl">Grøndahl</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Den berømte russiske pianist Lhévinne … The Welte-Mignon</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Den berømte russiske pianist Lhévinne … The Welte-Mignon</title>
+            <author><orgName>Grøndahl</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Morgenbladet</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3143244">Kristiania</pubPlace>
+            <date type="publication" when="1919-01-24">1919</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Morgenbladet</title>
+            <biblScope unit="issue">January 24, 1919, No. 49</biblScope>
+            <biblScope unit="pages">13</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Nasjonalbiblioteket</repository>
+            <idno>
+              <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_morgenbladet_null_null_19190124_102_49_1</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="no">Norwegian (Dano-Norwegian)</language>
+        <language ident="en">English</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad082-0.jpg" width="5962px" height="8939px"/>
+      <graphic type="IIIF" url="https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_morgenbladet_null_null_19190124_102_49_1-1_013_null/full/full/0/default.jpg" width="5962px" height="8939px"/>
+      <zone points="292,512 1836,512 1836,592 292,592" xml:id="zone_intro"/>
+      <zone points="282,624 1842,624 1842,864 282,864" xml:id="zone_name"/>
+      <zone points="425,920 1700,920 1700,1055 425,1055" xml:id="zone_recording"/>
+      <zone points="276,1116 1840,1116 1840,1334 276,1334" xml:id="zone_brand"/>
+      <zone points="276,1390 1540,1390 1540,1459 276,1459" xml:id="zone_testimonial_head"/>
+      <zone points="377,1485 1762,1485 1762,2029 377,2029" xml:id="zone_testimonial"/>
+      <zone points="632,2145 1483,2145 1483,2331 632,2331" xml:id="zone_models"/>
+      <zone points="288,2398 1830,2398 1830,2572 288,2572" xml:id="zone_cabinet_player"/>
+      <zone points="288,2627 1830,2627 1830,2895 288,2895" xml:id="zone_autograph_piano"/>
+      <zone points="288,2950 1824,2950 1824,3061 288,3061" xml:id="zone_autograph_grand"/>
+      <zone points="561,3176 1545,3176 1545,3560 561,3560" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_intro">
+        <head><hi rendition="#c #i #g"><lb/>Den berømte russiske pianist</hi></head>
+      </div>
+      <div facs="#zone_name">
+        <head><hi rendition="#c #in"><lb/><persName type="artist" corresp="https://d-nb.info/gnd/124379923">Lhévinne</persName></hi></head>
+      </div>
+      <div facs="#zone_recording">
+        <ab><hi rendition="#c"><lb/>som f. t. gjæster <placeName>Kristiania</placeName> har latt sit klaverspil
+          <lb/>opta av det elektriske reproduktionsinstrument</hi></ab>
+      </div>
+      <div facs="#zone_brand">
+        <head><hi rendition="#c #b #in #u"><lb/><name type="brand">The Welte-Mignon</name></hi></head>
+      </div>
+      <div facs="#zone_testimonial_head">
+        <ab><lb/>Om instrumentets gjengivelse uttaler <persName type="artist" corresp="https://d-nb.info/gnd/124379923">Lhévinne</persName>:</ab>
+      </div>
+      <div facs="#zone_testimonial">
+        <quote type="testimonial">
+          <p><lb/>Efter at ha endt min concertturne i <placeName>U. S. A.</placeName> har
+            <lb/>jeg idag for første gang hørt gjengit de komposi-
+            <lb/>tioner som jeg spilte for <hi rendition="#b"><name type="brand">The Welte Mignon</name></hi> — gjengit
+            <lb/>av <hi rendition="#b"><name type="brand">The Welte Mignon</name></hi> reproduktionsapparat <seg xml:id="topic_1" ana="#exact_reproduction" type="topic" resp="#claude">med en
+            <lb/>absolut nøiagtighet saavel hvad angaar tempo, an-
+            <lb/>slag og tonkvalitet som den correcte nuancering av
+            <lb/>foredraget</seg>.</p>
+          <p><lb/>I sandhet — <seg xml:id="topic_2" ana="#personality" type="topic" resp="#claude">instrumentet gjengir til fuldkommen-
+            <lb/>het min fortolkning av kompositionen</seg>.</p>
+        </quote>
+      </div>
+      <div facs="#zone_models">
+        <ab><hi rendition="#c"><lb/><hi rendition="#b #larger"><name type="brand">The Welte-Mignon</name></hi>
+          <lb/>faaes i følgende utførelser:</hi></ab>
+      </div>
+      <div facs="#zone_cabinet_player">
+        <ab><lb/><hi rendition="#in"><name type="brand">The Welte Cabinet Player</name></hi>
+          <lb/><hi rendition="#right">kan tilsættes ethvert piano eller flygel.</hi></ab>
+      </div>
+      <div facs="#zone_autograph_piano">
+        <ab><lb/><hi rendition="#in"><name type="brand">The Welte Autograph Piano</name></hi>
+          <hi rendition="#right #larger"><lb/><name type="brand">Steinway &amp; Sons</name>
+          <lb/><name type="brand">Mason &amp; Hamlin</name></hi></ab>
+      </div>
+      <div facs="#zone_autograph_grand">
+        <ab><lb/><hi rendition="#in"><name type="brand">The Welte Autograph Grand</name></hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#g">Eneforhandler i Norge</hi>
+          <lb/><hi rendition="#in"><orgName>Grøndahl</orgName></hi>
+          <lb/><seg type="slogan">Landets største Klaverforretning.</seg></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
