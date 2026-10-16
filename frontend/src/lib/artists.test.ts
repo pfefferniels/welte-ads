@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { artistShares, firstYear, periodOf } from "./artists"
+import { artistShares, artistTimelines, firstYear, periodOf } from "./artists"
 import { getAllMetadata } from "./tei"
 
 describe("artistShares", () => {
@@ -22,5 +22,18 @@ describe("artistShares", () => {
   it("puts every ad of the collection into a period", () => {
     const outside = getAllMetadata().filter(ad => periodOf(firstYear(ad)) < 0).map(ad => ad.slug)
     expect(outside).toEqual([])
+  })
+})
+
+describe("artistTimelines", () => {
+  it("counts the mentions and the ads of each artist per year of first printing", () => {
+    const { years, artists } = artistTimelines([
+      { dates: ["1913-12-13", "1913-11-15"], mentions: ["a", "a", "b"] },
+      { dates: ["1913"], mentions: ["a"] },
+      { dates: ["1920"], mentions: ["b"] },
+    ])
+    expect(years).toEqual([{ year: 1913, ads: 2, mentions: 4 }, { year: 1920, ads: 1, mentions: 1 }])
+    expect(artists.find(a => a.id === "a")).toEqual({ id: "a", mentions: 3, years: [{ year: 1913, mentions: 3, ads: 2 }] })
+    expect(artists.find(a => a.id === "b")!.years.map(y => y.year)).toEqual([1913, 1920])
   })
 })

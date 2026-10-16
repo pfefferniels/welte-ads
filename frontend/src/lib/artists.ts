@@ -79,3 +79,57 @@ export function artistShares(ads: Ad[]): { rows: ArtistRow[]; totals: PeriodTota
 
   return { rows, totals, all }
 }
+
+interface YearTotal {
+  year: number
+  ads: number
+  mentions: number
+}
+
+interface ArtistYear {
+  year: number
+  mentions: number
+  // the ads of the year that name the artist
+  ads: number
+}
+
+interface ArtistTimeline {
+  id: string
+  mentions: number
+  years: ArtistYear[]
+}
+
+/**
+ * The mentions of each artist per year. An ad counts once, in the year of its
+ * first printing; an artist it names twice counts twice.
+ */
+export function artistTimelines(ads: Ad[]): { years: YearTotal[]; artists: ArtistTimeline[] } {
+  const years = new Map<number, YearTotal>()
+  const artists = new Map<string, Map<number, ArtistYear>>()
+
+  for (const ad of ads) {
+    const year = firstYear(ad)
+    if (!Number.isFinite(year)) continue
+    const total = years.get(year) ?? { year, ads: 0, mentions: 0 }
+    total.ads += 1
+    total.mentions += ad.mentions.length
+    years.set(year, total)
+
+    ad.mentions.forEach((id, i) => {
+      if (!artists.has(id)) artists.set(id, new Map())
+      const perYear = artists.get(id)!
+      const entry = perYear.get(year) ?? { year, mentions: 0, ads: 0 }
+      entry.mentions += 1
+      if (ad.mentions.indexOf(id) === i) entry.ads += 1
+      perYear.set(year, entry)
+    })
+  }
+
+  return {
+    years: Array.from(years.values()).sort((a, b) => a.year - b.year),
+    artists: Array.from(artists, ([id, perYear]) => {
+      const list = Array.from(perYear.values()).sort((a, b) => a.year - b.year)
+      return { id, mentions: list.reduce((sum, y) => sum + y.mentions, 0), years: list }
+    }),
+  }
+}
