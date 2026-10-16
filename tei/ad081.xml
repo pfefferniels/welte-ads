@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Bergens Tidende"</title>
+        <title type="sub">January 26, 1919</title>
+        <author>
+          <orgName key="grondahl">Grøndahls Flygel &amp; Pianolager A/S</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>WELTE-MIGNON</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">WELTE-MIGNON</title>
+            <author><orgName>Grøndahls Flygel &amp; Pianolager A/S</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Bergens Tidende</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3161732">Bergen</pubPlace>
+            <date type="publication" when="1919-01-26">1919</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Bergens Tidende</title>
+            <biblScope unit="issue">January 26, 1919, No. 25</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The same block as in Grøndahl's advertisement in Morgenbladet of
+              December 19, 1918, with the signature re-set for the firm's Bergen
+              branch; no address is printed.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Nasjonalbiblioteket</repository>
+            <idno>
+              <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_bergenstidende_null_null_19190126_52_25_1</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="no">Norwegian (Dano-Norwegian)</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad081-0.jpg" width="6140px" height="8683px"/>
+      <graphic type="IIIF" url="https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_bergenstidende_null_null_19190126_52_25_1-1_003_null/full/full/0/default.jpg" width="6140px" height="8683px"/>
+      <zone points="5128,395 5996,395 5996,1440 5128,1440" xml:id="zone_picture"/>
+      <zone points="5268,1458 5912,1458 5912,1754 5268,1754" xml:id="zone_oval"/>
+      <zone points="5152,1818 6004,1818 6004,1992 5152,1992" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div type="illustration" facs="#zone_picture">
+        <figure xml:id="figure_1" ana="#listening" resp="#claude"><desc>Drawing of a salon with curtained windows and a statuette; a man and a woman seated on a sofa listen to a grand piano in the foreground, at which nobody sits; the brand name is drawn across the back wall in perspective capitals</desc></figure>
+        <ab><lb/><name type="brand">WELTE-MIGNON</name>
+          <lb/><hi rendition="#smaller">ATELIER E·O</hi></ab>
+      </div>
+      <div facs="#zone_oval">
+        <ab><hi rendition="#c"><lb/>Elektrisk Reproduktion.
+          <hi rendition="#b #g"><lb/>Flygler &amp; Pianoer
+          <lb/><name type="brand">Steinway - Welte.</name></hi>
+          <lb/>Eneforhandler</hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><orgName><lb/><hi rendition="#b #in">GRØNDAHLS</hi>
+          <lb/>FLYGEL &amp; PIANOLAGER A/S</orgName></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
