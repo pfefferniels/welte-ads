@@ -1,53 +1,62 @@
 import { describe, expect, it } from "vitest"
-import { artistBands, groupYears, naturalBreaks } from "./artists"
+import { artistTimelines, bandwidth, runsOf, smoothedShare } from "./artists"
 import { getAllMetadata } from "./tei"
 
-const points = (...values: number[]) => values.map(value => ({ value, weight: 1 }))
-
-describe("naturalBreaks", () => {
-  it("finds the groups with the least deviation within them", () => {
-    const { groups, within } = naturalBreaks(points(1, 2, 3, 10, 11, 20), 3)
-    expect(groups).toEqual([[0, 2], [3, 4], [5, 5]])
-    expect(within).toBeCloseTo(2 + 0.5)
-  })
-
-  it("weighs the points", () => {
-    const { groups } = naturalBreaks([{ value: 1, weight: 1 }, { value: 5, weight: 9 }, { value: 6, weight: 9 }], 2)
-    expect(groups).toEqual([[0, 0], [1, 2]])
+describe("artistTimelines", () => {
+  it("counts the mentions and the ads of each artist per year of first printing", () => {
+    const { years, artists } = artistTimelines([
+      { dates: ["1913-12-13", "1913-11-15"], mentions: ["a", "a", "b"] },
+      { dates: ["1913"], mentions: ["a"] },
+      { dates: ["1920"], mentions: ["b"] },
+    ])
+    expect(years).toEqual([{ year: 1913, ads: 2, mentions: 4 }, { year: 1920, ads: 1, mentions: 1 }])
+    expect(artists.find(a => a.id === "a")).toEqual({ id: "a", mentions: 3, years: [{ year: 1913, mentions: 3, ads: 2 }] })
+    expect(artists.find(a => a.id === "b")!.years.map(y => y.year)).toEqual([1913, 1920])
   })
 })
 
-describe("groupYears", () => {
-  const ads = [
-    { dates: ["1905"], mentions: ["a", "b"] },
-    { dates: ["1906"], mentions: ["a"] },
-    { dates: ["1913"], mentions: [] },
-    { dates: ["1920"], mentions: ["b", "c"] },
-    { dates: ["1921-03", "1919-05"], mentions: ["a"] },
-  ]
+describe("smoothedShare", () => {
+  const { years, artists } = artistTimelines([
+    { dates: ["1910"], mentions: ["a", "b"] },
+    { dates: ["1912"], mentions: ["b", "b"] },
+  ])
+  const a = artists.find(artist => artist.id === "a")!
 
-  it("groups the years of the mentions and finds the gaps without ads", () => {
-    const groups = groupYears(ads)
-    expect(groups.map(g => [g.from, g.to, g.ads, g.mentions, g.gapBefore])).toEqual([
-      [1905, 1906, 2, 3, false],
-      [1919, 1920, 2, 3, true],
-    ])
-    expect(groups[0].center).toBeCloseTo((2 * 1905 + 1906) / 3)
+  it("is the share of the year where the other years are far", () => {
+    expect(smoothedShare(a, years, 0.1, 1910)).toBeCloseTo(0.5)
+    expect(smoothedShare(a, years, 0.1, 1912)).toBeCloseTo(0)
   })
 
-  it("gives each artist's share of the mentions of a group", () => {
-    const groups = groupYears(ads)
-    const a = artistBands(ads, groups).find(band => band.id === "a")!
-    expect(a.mentions).toBe(3)
-    expect(a.groups.map(g => g.mentions)).toEqual([2, 1])
-    expect(a.groups[0].share).toBeCloseTo(2 / 3)
+  it("draws on the years around", () => {
+    const between = smoothedShare(a, years, 1, 1911)
+    expect(between).toBeCloseTo(1 / 4)
+    expect(smoothedShare(a, years, 1, 1910)).toBeGreaterThan(between)
+  })
+})
+
+describe("bandwidth", () => {
+  const years = [1900, 1901, 1902, 1910, 1911, 1912]
+
+  it("is narrower where the artists change than where they stay", () => {
+    // first a, then b
+    const changing = years.map((year, i) => ({ dates: [String(year)], mentions: i < 3 ? ["a", "a"] : ["b", "b"] }))
+    // always a twice and b once
+    const staying = years.map(year => ({ dates: [String(year)], mentions: ["a", "a", "b"] }))
+    expect(bandwidth(changing)).toBeLessThan(bandwidth(staying))
   })
 
-  it("puts every mention of the collection into a group", () => {
-    const all = getAllMetadata()
-    const groups = groupYears(all)
-    const counted = artistBands(all, groups).reduce((sum, band) => sum + band.mentions, 0)
-    expect(counted).toBe(all.reduce((sum, ad) => sum + ad.mentions.length, 0))
-    expect(groups.reduce((sum, g) => sum + g.mentions, 0)).toBe(counted)
+  it("is a few years for the collection", () => {
+    const h = bandwidth(getAllMetadata())
+    expect(h).toBeGreaterThanOrEqual(1)
+    expect(h).toBeLessThanOrEqual(3)
+  })
+})
+
+describe("runsOf", () => {
+  it("breaks where three or more years have no ads", () => {
+    const years = [1905, 1907, 1913, 1919, 1923].map(year => ({ year, ads: 1, mentions: 1 }))
+    expect(runsOf(years)).toEqual([[1905, 1907], [1913, 1913], [1919, 1919], [1923, 1923]])
+    expect(runsOf(years.slice(3))).toEqual([[1919, 1919], [1923, 1923]])
+    expect(runsOf([1919, 1922].map(year => ({ year, ads: 1, mentions: 1 })))).toEqual([[1919, 1922]])
   })
 })

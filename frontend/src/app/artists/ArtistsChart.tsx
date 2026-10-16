@@ -1,31 +1,35 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useMemo, useState } from "react"
 import { Box } from "@mui/material"
-import { area, curveMonotoneX } from "d3"
+import { area } from "d3"
 import theme from "../../theme"
-import type { ArtistBand, YearGroup } from "../../lib/artists"
+import { runsOf, smoothedShare } from "../../lib/artists"
+import type { ArtistTimeline, YearTotal } from "../../lib/artists"
 
-export interface Artist extends ArtistBand {
+export interface Artist extends ArtistTimeline {
   name: string
 }
 
 interface Props {
-  groups: YearGroup[]
+  years: YearTotal[]
   artists: Artist[]
   // all artists, also those not shown, so that a band keeps its thickness
   // when the selection changes
   scaleArtists: Artist[]
+  // the width of the kernel, in years
+  h: number
 }
 
 const WIDTH = 900
 const LABELS = 200 // the names
 const TOTALS = 48 // the column of totals
-const HEADER = 30 // the years of the groups
+const HEADER = 24
 const ROW = 26
 // the bands are thicker than a row, so that they overlap
 const MAX_THICKNESS = 60
-const BOTTOM = 72 // the axis and the counts of the groups
+const BOTTOM = 72 // the axis and the counts of the years
+const STEP = 0.1 // of the curves, in years
 
 const BAND = '#f7f2ed'
 const GRID = '#e6ded6'
@@ -36,95 +40,85 @@ const percent = (share: number) =>
 
 const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? '' : 's'}`
 
-// "1905–1907", or "1912" for a group of one year
-const span = (group: YearGroup) => group.from === group.to ? String(group.from) : `${group.from}–${group.to}`
-
 // earlier artists first: the mean year of their mentions
-const meanYear = (artist: Artist, groups: YearGroup[]) =>
-  artist.groups.reduce((sum, g, i) => sum + g.mentions * groups[i].center, 0) / artist.mentions
+const meanYear = (artist: Artist) =>
+  artist.years.reduce((sum, y) => sum + y.year * y.mentions, 0) / artist.mentions
 
-// the groups between two gaps without ads
-const runsOf = (groups: YearGroup[]) =>
-  groups.reduce((runs: number[][], group, i) => {
-    if (i === 0 || group.gapBefore) runs.push([i])
-    else runs[runs.length - 1].push(i)
-    return runs
-  }, [])
+export default function ArtistsChart({ years, artists, scaleArtists, h }: Props) {
+  const [active, setActive] = useState<{ artist: Artist; year: number } | null>(null)
 
-export default function ArtistsChart({ groups, artists, scaleArtists }: Props) {
-  const [active, setActive] = useState<{ artist: Artist; group: number } | null>(null)
+  const runs = useMemo(() => runsOf(years), [years])
+  const totalOf = new Map(years.map(y => [y.year, y]))
 
-  const max = Math.max(...scaleArtists.flatMap(a => a.groups.map(g => g.share)))
+  // the smoothed shares of every artist, from the start of each run to its end
+  const curves = useMemo(() => new Map(scaleArtists.map(artist => [artist.id, runs.map(([from, to]) => {
+    const points: [number, number][] = []
+    for (let t = from - 0.5; t <= to + 0.5 + 1e-9; t += STEP) points.push([t, smoothedShare(artist, years, h, t)])
+    return points
+  })])), [scaleArtists, runs, years, h])
+
+  const max = Array.from(curves.values()).flat(2)
+    .reduce((m, [, share]) => Math.max(m, share), 0)
   // the thickness of a band is proportional to the share
   const half = (share: number) => MAX_THICKNESS / 2 * share / max
 
-  const rows = [...artists].sort((a, b) => meanYear(a, groups) - meanYear(b, groups) || b.mentions - a.mentions)
-  const runs = runsOf(groups)
+  const rows = [...artists].sort((a, b) => meanYear(a) - meanYear(b) || b.mentions - a.mentions)
 
-  const first = groups[0].from - 0.5
-  const last = groups[groups.length - 1].to + 0.5
+  const first = runs[0][0] - 0.5
+  const last = runs[runs.length - 1][1] + 0.5
   const left = LABELS + 4
   const right = WIDTH - TOTALS - 4
   const x = (year: number) => left + (year - first) / (last - first) * (right - left)
   // room for the bands of the first and the last row
-  const overhang = (artist?: Artist) =>
-    artist ? Math.max(0, ...artist.groups.map(g => half(g.share) - ROW / 2)) : 0
+  const overhang = (artist?: Artist) => artist
+    ? Math.max(0, ...curves.get(artist.id)!.flat().map(([, share]) => half(share) - ROW / 2))
+    : 0
   const TOP = HEADER + overhang(rows[0])
   const y = (row: number) => TOP + row * ROW + ROW / 2
   const axis = TOP + rows.length * ROW + overhang(rows[rows.length - 1]) + 6
   const height = axis + BOTTOM
-  const years = Array.from({ length: last - first }, (_, i) => first + 0.5 + i)
+  const ticks = Array.from({ length: last - first }, (_, i) => first + 0.5 + i)
 
-  // each run of groups is one smooth band, through the share of each group at
-  // the mean year of its mentions, and level to the edges of the run
-  const bands = (artist: Artist, row: number) => runs.map(run => {
-    const g0 = groups[run[0]], g1 = groups[run[run.length - 1]]
-    const points: [number, number][] = [
-      [x(g0.from - 0.5), half(artist.groups[run[0]].share)],
-      ...run.map((g): [number, number] => [x(groups[g].center), half(artist.groups[g].share)]),
-      [x(g1.to + 0.5), half(artist.groups[run[run.length - 1]].share)],
-    ]
-    if (points.every(([, h]) => h === 0)) return null
-    return area<[number, number]>()
-      .x(([px]) => px)
-      .y0(([, h]) => y(row) - h)
-      .y1(([, h]) => y(row) + h)
-      .curve(curveMonotoneX)(points)
-  })
+  const bands = (artist: Artist, row: number) => curves.get(artist.id)!.map(points =>
+    points.every(([, share]) => share === 0) ? null : area<[number, number]>()
+      .x(([t]) => x(t))
+      .y0(([, share]) => y(row) - half(share))
+      .y1(([, share]) => y(row) + half(share))(points))
 
-  const describe = (artist: Artist, g: number) => {
-    const group = groups[g], mine = artist.groups[g]
-    return `${artist.name}, ${span(group)}: ${mine.mentions} of ${group.mentions} mentions ` +
-      `(${percent(mine.share)}), in ${mine.ads} of ${plural(group.ads, 'ad')}`
+  const facts = (artist: Artist, year: number) => {
+    const total = totalOf.get(year)!
+    const mine = artist.years.find(y => y.year === year)
+    return {
+      year: total.mentions
+        ? `${mine?.mentions ?? 0} of the ${total.mentions} mentions of the year, in ${mine?.ads ?? 0} of ${plural(total.ads, 'ad')}`
+        : `the ${plural(total.ads, 'ad')} of the year name no artists`,
+      around: `around ${year}: ${percent(smoothedShare(artist, years, h, year))} of the mentions`,
+    }
   }
 
-  const tooltipAt = active && x((groups[active.group].from + groups[active.group].to) / 2)
+  const activeRow = active ? rows.indexOf(active.artist) : -1
+  const activeFacts = active && facts(active.artist, active.year)
 
   return (
     <Box sx={{ overflowX: 'auto', my: 2 }}>
       <Box sx={{ position: 'relative', minWidth: 720 }}>
         <svg viewBox={`0 0 ${WIDTH} ${height}`} width="100%" role="group"
-          aria-label="Share of the mentions of artists, by groups of years" style={{ display: 'block', fontFamily: 'inherit' }}>
-          {/* the groups of years */}
-          {groups.map((group, g) => (
-            <g key={g}>
-              <rect x={x(group.from - 0.5)} width={x(group.to + 0.5) - x(group.from - 0.5)}
-                y={HEADER} height={axis - HEADER} fill={BAND} />
-              <text x={x((group.from + group.to) / 2)} y={HEADER - 10} fontSize={12} textAnchor="middle"
-                fill={theme.palette.text.primary}>
-                {span(group)}
-              </text>
-              {group.gapBefore && (
-                <Gap from={groups[g - 1].to + 1} to={group.from - 1}
-                  left={x(groups[g - 1].to + 0.5)} right={x(group.from - 0.5)} top={HEADER} bottom={axis} />
+          aria-label="Share of the mentions of artists over time" style={{ display: 'block', fontFamily: 'inherit' }}>
+          {/* the spans of years with ads, and the gaps between them */}
+          {runs.map(([from, to], r) => (
+            <g key={from}>
+              <rect x={x(from - 0.5)} width={x(to + 0.5) - x(from - 0.5)} y={HEADER} height={axis - HEADER} fill={BAND} />
+              {r > 0 && (
+                <Gap from={runs[r - 1][1] + 1} to={from - 1}
+                  left={x(runs[r - 1][1] + 0.5)} right={x(from - 0.5)} top={HEADER} bottom={axis} />
               )}
             </g>
           ))}
-          <text x={WIDTH - 4} y={HEADER - 10} fontSize={11} fill={MUTED} textAnchor="end">all</text>
+          <text x={WIDTH - 4} y={HEADER - 8} fontSize={11} fill={MUTED} textAnchor="end">all</text>
 
           {/* the axis */}
           <line x1={left} x2={right} y1={axis} y2={axis} stroke={MUTED} />
-          {years.map(year => (
+          {ticks.map(year => (
             <g key={year}>
               <line x1={x(year)} x2={x(year)} y1={axis} y2={axis + 4} stroke={MUTED} />
               {year % 5 === 0 && (
@@ -135,23 +129,22 @@ export default function ArtistsChart({ groups, artists, scaleArtists }: Props) {
           <g fontSize={11} fill={MUTED} textAnchor="middle">
             <text x={LABELS - 10} y={axis + 38} textAnchor="end">ads</text>
             <text x={LABELS - 10} y={axis + 54} textAnchor="end">mentions</text>
-            {groups.map((group, g) => (
-              <g key={g}>
-                <text x={x((group.from + group.to) / 2)} y={axis + 38}>{group.ads}</text>
-                <text x={x((group.from + group.to) / 2)} y={axis + 54}>{group.mentions}</text>
+            {years.map(year => (
+              <g key={year.year}>
+                <text x={x(year.year)} y={axis + 38}>{year.ads}</text>
+                <text x={x(year.year)} y={axis + 54}>{year.mentions}</text>
               </g>
             ))}
           </g>
 
           {/* the lines of the rows, interrupted where no ads appeared */}
-          {rows.map((artist, i) => runs.map(run => (
-            <line key={`${artist.id}-${run[0]}`} y1={y(i)} y2={y(i)} stroke={GRID} strokeWidth={0.75}
-              x1={x(groups[run[0]].from - 0.5)} x2={x(groups[run[run.length - 1]].to + 0.5)} />
+          {rows.map((artist, i) => runs.map(([from, to]) => (
+            <line key={`${artist.id}-${from}`} y1={y(i)} y2={y(i)} stroke={GRID} strokeWidth={0.75}
+              x1={x(from - 0.5)} x2={x(to + 0.5)} />
           )))}
           {active && (
-            <rect x={x(groups[active.group].from - 0.5)} y={y(rows.indexOf(active.artist)) - ROW / 2}
-              width={x(groups[active.group].to + 0.5) - x(groups[active.group].from - 0.5)} height={ROW}
-              fill={theme.palette.primary.main} fillOpacity={0.08} />
+            <rect x={x(active.year - 0.5)} y={y(activeRow) - ROW / 2} width={x(1) - x(0)} height={ROW}
+              fill={theme.palette.primary.main} fillOpacity={0.12} />
           )}
 
           {/* the bands overlap; the one pointed at stands out */}
@@ -176,24 +169,27 @@ export default function ArtistsChart({ groups, artists, scaleArtists }: Props) {
                 fill={MUTED} style={{ fontVariantNumeric: 'tabular-nums' }}>
                 {artist.mentions}
               </text>
-              {groups.map((group, g) => (
-                <rect key={g} x={x(group.from - 0.5)} y={y(i) - ROW / 2}
-                  width={x(group.to + 0.5) - x(group.from - 0.5)} height={ROW} fill="transparent"
-                  tabIndex={0} aria-label={describe(artist, g)} style={{ outline: 'none' }}
-                  onMouseEnter={() => setActive({ artist, group: g })} onMouseLeave={() => setActive(null)}
-                  onFocus={() => setActive({ artist, group: g })} onBlur={() => setActive(null)} />
-              ))}
+              {years.map(({ year }) => {
+                const f = facts(artist, year)
+                return (
+                  <rect key={year} x={x(year - 0.5)} y={y(i) - ROW / 2} width={x(1) - x(0)} height={ROW}
+                    fill="transparent" tabIndex={0} style={{ outline: 'none' }}
+                    aria-label={`${artist.name}, ${year}: ${f.year}; ${f.around}`}
+                    onMouseEnter={() => setActive({ artist, year })} onMouseLeave={() => setActive(null)}
+                    onFocus={() => setActive({ artist, year })} onBlur={() => setActive(null)} />
+                )
+              })}
             </g>
           ))}
         </svg>
 
-        {active && tooltipAt !== null && (
+        {active && activeFacts && (
           <Box role="status" sx={{
             position: 'absolute',
-            left: `${100 * tooltipAt / WIDTH}%`,
-            top: `${100 * (y(rows.indexOf(active.artist)) - ROW / 2) / height}%`,
+            left: `${100 * x(active.year) / WIDTH}%`,
+            top: `${100 * (y(activeRow) - ROW / 2) / height}%`,
             // towards the right edge, the tooltip opens inwards
-            transform: `translate(${tooltipAt > 0.7 * WIDTH ? 'calc(-100% + 24px)' : '-50%'}, calc(-100% - 6px))`,
+            transform: `translate(${x(active.year) > 0.7 * WIDTH ? 'calc(-100% + 24px)' : '-50%'}, calc(-100% - 6px))`,
             pointerEvents: 'none',
             background: '#fff',
             border: `1px solid ${GRID}`,
@@ -205,12 +201,11 @@ export default function ArtistsChart({ groups, artists, scaleArtists }: Props) {
             whiteSpace: 'nowrap',
             zIndex: 1,
           }}>
-            <strong>{active.artist.name}</strong>, {span(groups[active.group])}
+            <strong>{active.artist.name}</strong>, {active.year}
             <br />
-            {active.artist.groups[active.group].mentions} of the {groups[active.group].mentions} mentions
-            ({percent(active.artist.groups[active.group].share)})
+            {activeFacts.year}
             <br />
-            in {active.artist.groups[active.group].ads} of {plural(groups[active.group].ads, 'ad')}
+            <Box component="span" sx={{ color: 'text.secondary' }}>{activeFacts.around}</Box>
           </Box>
         )}
       </Box>
@@ -268,7 +263,7 @@ function Legend({ max, half }: { max: number; half: (share: number) => number })
           </g>
         ))}
       </svg>
-      <span>of the mentions in a group of years</span>
+      <span>of the mentions around a year</span>
     </Box>
   )
 }
