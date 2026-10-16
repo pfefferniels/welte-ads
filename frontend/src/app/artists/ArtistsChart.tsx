@@ -2,49 +2,32 @@
 
 import React, { useState } from "react"
 import { Box } from "@mui/material"
+import { area, curveMonotoneX } from "d3"
 import theme from "../../theme"
+import type { ArtistBand, YearGroup } from "../../lib/artists"
 
-interface Year {
-  year: number
-  ads: number
-  mentions: number
-}
-
-interface ArtistYear {
-  year: number
-  mentions: number
-  ads: number
-}
-
-export interface Artist {
-  id: string
+export interface Artist extends ArtistBand {
   name: string
-  mentions: number
-  years: ArtistYear[]
 }
-
-// what the area of a circle stands for: the mentions of an artist in a year,
-// or their share of all mentions of artists in that year
-export type Size = 'mentions' | 'share'
 
 interface Props {
-  years: Year[]
+  groups: YearGroup[]
   artists: Artist[]
-  // all artists, also those not shown, so that a circle keeps its size when
-  // the selection changes
+  // all artists, also those not shown, so that a band keeps its thickness
+  // when the selection changes
   scaleArtists: Artist[]
-  size: Size
 }
 
 const WIDTH = 900
 const LABELS = 200 // the names
 const TOTALS = 48 // the column of totals
-const TOP = 24
+const TOP = 30 // the years of the groups
 const ROW = 26
-const MAX_R = 17
-const BOTTOM = 70 // the axis and the counts per year
+const MAX_THICKNESS = ROW - 4
+const BOTTOM = 72 // the axis and the counts of the groups
 
-const GRID = '#ece6e0'
+const BAND = '#f7f2ed'
+const GRID = '#e6ded6'
 const MUTED = '#8a7f78'
 
 const percent = (share: number) =>
@@ -52,74 +35,125 @@ const percent = (share: number) =>
 
 const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? '' : 's'}`
 
+// "1905–1907", or "1912" for a group of one year
+const span = (group: YearGroup) => group.from === group.to ? String(group.from) : `${group.from}–${group.to}`
+
 // earlier artists first: the mean year of their mentions
-const meanYear = (artist: Artist) =>
-  artist.years.reduce((sum, y) => sum + y.year * y.mentions, 0) / artist.mentions
+const meanYear = (artist: Artist, groups: YearGroup[]) =>
+  artist.groups.reduce((sum, g, i) => sum + g.mentions * groups[i].center, 0) / artist.mentions
 
-export default function ArtistsChart({ years, artists, scaleArtists, size }: Props) {
-  const [active, setActive] = useState<{ artist: Artist; year: ArtistYear } | null>(null)
+// the groups between two gaps without ads
+const runsOf = (groups: YearGroup[]) =>
+  groups.reduce((runs: number[][], group, i) => {
+    if (i === 0 || group.gapBefore) runs.push([i])
+    else runs[runs.length - 1].push(i)
+    return runs
+  }, [])
 
-  const totalOf = new Map(years.map(y => [y.year, y]))
-  const value = (y: ArtistYear) =>
-    size === 'mentions' ? y.mentions : y.mentions / (totalOf.get(y.year)?.mentions || 1)
-  const max = Math.max(...scaleArtists.flatMap(a => a.years.map(value)))
-  // the area, not the radius, is proportional to the value; the smallest
-  // circles are kept visible
-  const radius = (v: number) => Math.max(2.5, MAX_R * Math.sqrt(v / max))
+export default function ArtistsChart({ groups, artists, scaleArtists }: Props) {
+  const [active, setActive] = useState<{ artist: Artist; group: number } | null>(null)
 
-  const rows = [...artists].sort((a, b) => meanYear(a) - meanYear(b) || b.mentions - a.mentions)
+  const max = Math.max(...scaleArtists.flatMap(a => a.groups.map(g => g.share)))
+  // the thickness of a band is proportional to the share
+  const half = (share: number) => MAX_THICKNESS / 2 * share / max
 
-  const first = years[0].year
-  const last = years[years.length - 1].year
-  const allYears = Array.from({ length: last - first + 1 }, (_, i) => first + i)
-  const left = LABELS + MAX_R
-  const right = WIDTH - TOTALS - MAX_R
-  const x = (year: number) => left + (year - first) / Math.max(1, last - first) * (right - left)
+  const rows = [...artists].sort((a, b) => meanYear(a, groups) - meanYear(b, groups) || b.mentions - a.mentions)
+  const runs = runsOf(groups)
+
+  const first = groups[0].from - 0.5
+  const last = groups[groups.length - 1].to + 0.5
+  const left = LABELS + 4
+  const right = WIDTH - TOTALS - 4
+  const x = (year: number) => left + (year - first) / (last - first) * (right - left)
   const y = (row: number) => TOP + row * ROW + ROW / 2
   const axis = TOP + rows.length * ROW + 6
   const height = axis + BOTTOM
+  const years = Array.from({ length: last - first }, (_, i) => first + 0.5 + i)
 
-  const describe = (artist: Artist, year: ArtistYear) => {
-    const total = totalOf.get(year.year)!
-    return `${artist.name}, ${year.year}: ${plural(year.mentions, 'mention')} in ${plural(year.ads, 'ad')}, ` +
-      `${percent(year.mentions / total.mentions)} of the ${total.mentions} mentions of the year`
+  // each run of groups is one smooth band, through the share of each group at
+  // the mean year of its mentions, and level to the edges of the run
+  const bands = (artist: Artist, row: number) => runs.map(run => {
+    const g0 = groups[run[0]], g1 = groups[run[run.length - 1]]
+    const points: [number, number][] = [
+      [x(g0.from - 0.5), half(artist.groups[run[0]].share)],
+      ...run.map((g): [number, number] => [x(groups[g].center), half(artist.groups[g].share)]),
+      [x(g1.to + 0.5), half(artist.groups[run[run.length - 1]].share)],
+    ]
+    if (points.every(([, h]) => h === 0)) return null
+    return area<[number, number]>()
+      .x(([px]) => px)
+      .y0(([, h]) => y(row) - h)
+      .y1(([, h]) => y(row) + h)
+      .curve(curveMonotoneX)(points)
+  })
+
+  const describe = (artist: Artist, g: number) => {
+    const group = groups[g], mine = artist.groups[g]
+    return `${artist.name}, ${span(group)}: ${mine.mentions} of ${group.mentions} mentions ` +
+      `(${percent(mine.share)}), in ${mine.ads} of ${plural(group.ads, 'ad')}`
   }
+
+  const tooltipAt = active && x((groups[active.group].from + groups[active.group].to) / 2)
 
   return (
     <Box sx={{ overflowX: 'auto', my: 2 }}>
       <Box sx={{ position: 'relative', minWidth: 720 }}>
         <svg viewBox={`0 0 ${WIDTH} ${height}`} width="100%" role="group"
-          aria-label="Mentions of artists per year" style={{ display: 'block', fontFamily: 'inherit' }}>
-          {/* the years */}
-          {allYears.filter(year => year % 5 === 0).map(year => (
-            <line key={year} x1={x(year)} x2={x(year)} y1={TOP} y2={axis} stroke={GRID} />
-          ))}
-          <line x1={left - MAX_R} x2={right + MAX_R} y1={axis} y2={axis} stroke={MUTED} />
-          {allYears.map(year => (
-            <g key={year} fontSize={11} textAnchor="middle" fill={totalOf.has(year) ? MUTED : GRID}>
-              <line x1={x(year)} x2={x(year)} y1={axis} y2={axis + 4} stroke="currentColor" style={{ color: MUTED }} />
-              <text x={x(year)} y={axis + 16}>{year}</text>
+          aria-label="Share of the mentions of artists, by groups of years" style={{ display: 'block', fontFamily: 'inherit' }}>
+          {/* the groups of years */}
+          {groups.map((group, g) => (
+            <g key={g}>
+              <rect x={x(group.from - 0.5)} width={x(group.to + 0.5) - x(group.from - 0.5)}
+                y={TOP} height={axis - TOP} fill={BAND} />
+              <text x={x((group.from + group.to) / 2)} y={TOP - 10} fontSize={12} textAnchor="middle"
+                fill={theme.palette.text.primary}>
+                {span(group)}
+              </text>
+              {group.gapBefore && (
+                <text x={(x(groups[g - 1].to + 0.5) + x(group.from - 0.5)) / 2} y={TOP - 10}
+                  fontSize={11} textAnchor="middle" fill={MUTED} fontStyle="italic">
+                  no ads
+                </text>
+              )}
             </g>
           ))}
-          <g fontSize={11} fill={MUTED}>
+          <text x={WIDTH - 4} y={TOP - 10} fontSize={11} fill={MUTED} textAnchor="end">all</text>
+
+          {/* the axis */}
+          <line x1={left} x2={right} y1={axis} y2={axis} stroke={MUTED} />
+          {years.map(year => (
+            <g key={year}>
+              <line x1={x(year)} x2={x(year)} y1={axis} y2={axis + 4} stroke={MUTED} />
+              {year % 5 === 0 && (
+                <text x={x(year)} y={axis + 16} fontSize={11} textAnchor="middle" fill={MUTED}>{year}</text>
+              )}
+            </g>
+          ))}
+          <g fontSize={11} fill={MUTED} textAnchor="middle">
             <text x={LABELS - 10} y={axis + 38} textAnchor="end">ads</text>
             <text x={LABELS - 10} y={axis + 54} textAnchor="end">mentions</text>
-            {years.map(year => (
-              <g key={year.year} textAnchor="middle">
-                <text x={x(year.year)} y={axis + 38}>{year.ads}</text>
-                <text x={x(year.year)} y={axis + 54}>{year.mentions}</text>
+            {groups.map((group, g) => (
+              <g key={g}>
+                <text x={x((group.from + group.to) / 2)} y={axis + 38}>{group.ads}</text>
+                <text x={x((group.from + group.to) / 2)} y={axis + 54}>{group.mentions}</text>
               </g>
             ))}
           </g>
-          <text x={WIDTH - 4} y={TOP - 8} fontSize={11} fill={MUTED} textAnchor="end">all</text>
 
           {rows.map((artist, i) => (
             <g key={artist.id}>
-              <line x1={left - MAX_R} x2={right + MAX_R} y1={y(i)} y2={y(i)} stroke={GRID} />
+              <line x1={left} x2={right} y1={y(i)} y2={y(i)} stroke={GRID} strokeWidth={0.75} />
+              {active?.artist === artist && (
+                <rect x={x(groups[active.group].from - 0.5)} y={y(i) - ROW / 2}
+                  width={x(groups[active.group].to + 0.5) - x(groups[active.group].from - 0.5)} height={ROW}
+                  fill={theme.palette.primary.main} fillOpacity={0.1} />
+              )}
+              {bands(artist, i).map((d, r) => d && (
+                <path key={r} d={d} fill={theme.palette.primary.main} fillOpacity={0.85} />
+              ))}
               <a href={artist.id}>
                 <text x={LABELS - 10} y={y(i)} fontSize={14} textAnchor="end" dominantBaseline="central"
-                  fill={theme.palette.text.primary}
-                  fontWeight={active?.artist === artist ? 700 : 400}>
+                  fill={theme.palette.text.primary} fontWeight={active?.artist === artist ? 700 : 400}>
                   {artist.name}
                 </text>
               </a>
@@ -127,35 +161,24 @@ export default function ArtistsChart({ years, artists, scaleArtists, size }: Pro
                 fill={MUTED} style={{ fontVariantNumeric: 'tabular-nums' }}>
                 {artist.mentions}
               </text>
+              {groups.map((group, g) => (
+                <rect key={g} x={x(group.from - 0.5)} y={y(i) - ROW / 2}
+                  width={x(group.to + 0.5) - x(group.from - 0.5)} height={ROW} fill="transparent"
+                  tabIndex={0} aria-label={describe(artist, g)} style={{ outline: 'none' }}
+                  onMouseEnter={() => setActive({ artist, group: g })} onMouseLeave={() => setActive(null)}
+                  onFocus={() => setActive({ artist, group: g })} onBlur={() => setActive(null)} />
+              ))}
             </g>
           ))}
-
-          {/* the circles of a row are drawn after all rows, so that a large one
-              lies over the line of the next row */}
-          {rows.map((artist, i) => artist.years.map(year => {
-            const r = radius(value(year))
-            const on = active?.artist === artist && active.year === year
-            return (
-              <g key={`${artist.id}-${year.year}`}>
-                <circle cx={x(year.year)} cy={y(i)} r={r}
-                  fill={theme.palette.primary.main} fillOpacity={on ? 1 : 0.75}
-                  stroke={on ? theme.palette.text.primary : '#fff'} strokeWidth={on ? 2 : 1.5} />
-                <circle cx={x(year.year)} cy={y(i)} r={Math.max(r + 3, 10)} fill="transparent"
-                  tabIndex={0} aria-label={describe(artist, year)} style={{ cursor: 'default', outline: 'none' }}
-                  onMouseEnter={() => setActive({ artist, year })} onMouseLeave={() => setActive(null)}
-                  onFocus={() => setActive({ artist, year })} onBlur={() => setActive(null)} />
-              </g>
-            )
-          }))}
         </svg>
 
-        {active && (
+        {active && tooltipAt !== null && (
           <Box role="status" sx={{
             position: 'absolute',
-            left: `${100 * x(active.year.year) / WIDTH}%`,
-            top: `${100 * y(rows.indexOf(active.artist)) / height}%`,
-            // towards the edges, the tooltip opens inwards
-            transform: `translate(${x(active.year.year) > 0.7 * WIDTH ? 'calc(-100% + 24px)' : '-50%'}, calc(-100% - 22px))`,
+            left: `${100 * tooltipAt / WIDTH}%`,
+            top: `${100 * (y(rows.indexOf(active.artist)) - ROW / 2) / height}%`,
+            // towards the right edge, the tooltip opens inwards
+            transform: `translate(${tooltipAt > 0.7 * WIDTH ? 'calc(-100% + 24px)' : '-50%'}, calc(-100% - 6px))`,
             pointerEvents: 'none',
             background: '#fff',
             border: `1px solid ${GRID}`,
@@ -167,47 +190,39 @@ export default function ArtistsChart({ years, artists, scaleArtists, size }: Pro
             whiteSpace: 'nowrap',
             zIndex: 1,
           }}>
-            <strong>{active.artist.name}</strong>, {active.year.year}
+            <strong>{active.artist.name}</strong>, {span(groups[active.group])}
             <br />
-            {plural(active.year.mentions, 'mention')} in {plural(active.year.ads, 'ad')}
+            {active.artist.groups[active.group].mentions} of the {groups[active.group].mentions} mentions
+            ({percent(active.artist.groups[active.group].share)})
             <br />
-            {percent(active.year.mentions / totalOf.get(active.year.year)!.mentions)} of
-            the {totalOf.get(active.year.year)!.mentions} mentions of the year
+            in {active.artist.groups[active.group].ads} of {plural(groups[active.group].ads, 'ad')}
           </Box>
         )}
       </Box>
 
-      <Legend max={max} radius={radius} size={size} />
+      <Legend max={max} half={half} />
     </Box>
   )
 }
 
-// three circles of the scale: the largest value, a third and a ninth of it
-function Legend({ max, radius, size }: { max: number; radius: (v: number) => number; size: Size }) {
-  const values = size === 'mentions'
-    ? Array.from(new Set([1, Math.round(max / 3), max])).filter(v => v >= 1)
-    : [max / 9, max / 3, max]
-  const label = (v: number) => size === 'mentions' ? String(v) : percent(v)
-  let at = 0
-  const placed = values.map(v => {
-    const r = radius(v)
-    const cx = at + r
-    at = cx + r + 30
-    return { v, r, cx }
-  })
-
+// bands of round shares up to the largest one
+function Legend({ max, half }: { max: number; half: (share: number) => number }) {
+  const shares = [0.01, 0.02, 0.05, 0.1, 0.2, 0.5].filter(share => share <= max).slice(-3)
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mt: 1, ml: { sm: `${100 * (LABELS - 120) / WIDTH}%` }, color: MUTED, fontSize: '0.95rem' }}>
-      <span>Area of a circle:</span>
-      <svg width={at} height={2 * MAX_R + 2} aria-hidden="true">
-        {placed.map(({ v, r, cx }) => (
-          <g key={v}>
-            <circle cx={cx} cy={MAX_R + 1} r={r} fill={theme.palette.primary.main} fillOpacity={0.75} />
-            <text x={cx + r + 4} y={MAX_R + 1} fontSize={12} dominantBaseline="central" fill={MUTED}>{label(v)}</text>
+      <span>Thickness of a band:</span>
+      <svg width={shares.length * 76} height={MAX_THICKNESS + 2} aria-hidden="true">
+        {shares.map((share, i) => (
+          <g key={share}>
+            <rect x={i * 76} y={MAX_THICKNESS / 2 + 1 - half(share)} width={28} height={2 * half(share)}
+              rx={Math.min(2, half(share))} fill={theme.palette.primary.main} fillOpacity={0.85} />
+            <text x={i * 76 + 34} y={MAX_THICKNESS / 2 + 1} fontSize={12} dominantBaseline="central" fill={MUTED}>
+              {percent(share)}
+            </text>
           </g>
         ))}
       </svg>
-      <span>{size === 'mentions' ? 'mentions in a year' : 'of the mentions of a year'}</span>
+      <span>of the mentions in a group of years</span>
     </Box>
   )
 }

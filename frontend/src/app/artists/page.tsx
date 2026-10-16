@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Typography } from '@mui/material'
 import { getAllMetadata } from "../../lib/tei"
-import { artistShares, artistTimelines, PERIODS } from "../../lib/artists"
+import { artistBands, groupYears } from "../../lib/artists"
 import { names } from "../../labels/names"
 import ArtistsView from "./ArtistsView"
 
@@ -11,28 +11,33 @@ export const metadata = {
 
 export default function ArtistsPage() {
   const ads = getAllMetadata()
-  const { rows, totals } = artistShares(ads)
-  const { years, artists } = artistTimelines(ads)
-  const name = (id: string) => names[id] || id
+  const groups = groupYears(ads)
+  const artists = artistBands(ads, groups)
 
   return (
     <Container component="main" maxWidth="md">
       <h2>Mentioned Artists</h2>
       <Typography>
-        How often the advertisements mention an artist, by the year in which
-        an advertisement was first printed. An advertisement counts once,
-        however often it was printed; an artist it names twice counts twice.
-        The circles can also show an artist&apos;s share of all mentions of
-        artists in a year, and the table their share in three periods. The
-        counts are those of the advertisements in this collection, which is
-        a selection.
+        How much of the advertising each artist received over time. The
+        thickness of a band is the artist&apos;s share of all mentions of
+        artists in a group of years. An advertisement counts once, in the
+        year of its first printing, however often it was printed; an artist
+        it names twice counts twice. The counts are those of the
+        advertisements in this collection, which is a selection.
+      </Typography>
+      <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+        The years are grouped by Fisher&apos;s optimal grouping (&ldquo;Jenks
+        natural breaks&rdquo;) of the years of all mentions, which keeps the
+        variance of the years within the groups as small as possible. There
+        are {groups.length} groups, because a further one would explain less
+        than one per cent more of the variance. Between the groups, the bands
+        are smoothed; they break where no advertisements appeared for several
+        years.
       </Typography>
 
       <ArtistsView
-        years={years}
-        artists={artists.map(artist => ({ ...artist, name: name(artist.id) }))}
-        periods={rows.map(row => ({ ...row, name: name(row.id) }))}
-        columns={PERIODS.map((period, i) => ({ label: period.label, ...totals[i] }))}
+        groups={groups}
+        artists={artists.map(artist => ({ ...artist, name: names[artist.id] || artist.id }))}
       />
     </Container>
   )

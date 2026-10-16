@@ -1,135 +1,166 @@
-interface Period {
-  label: string
-  from: number
-  to: number
-}
-
-// the phases of the advertising: M. Welte & Söhne and its dealers before the
-// war, the American companies after it, the campaigns of the Auto Pneumatic
-// Action Co.
-export const PERIODS: Period[] = [
-  { label: '1905–1914', from: 1905, to: 1914 },
-  { label: '1919–1923', from: 1919, to: 1923 },
-  { label: '1924–1928', from: 1924, to: 1928 },
-]
-
 interface Ad {
   dates: string[]
   // one entry per mention of an artist, so an artist named twice is in it twice
   mentions: string[]
 }
 
-interface Share {
+// the year an ad was first printed
+const firstYear = (ad: Ad) =>
+  Math.min(...ad.dates.map(date => Number(date.slice(0, 4))).filter(Boolean))
+
+interface Point {
+  value: number
+  weight: number
+}
+
+// the sum of squared deviations from the mean of points[i..j]
+const deviation = (points: Point[], i: number, j: number) => {
+  let w = 0, s = 0, q = 0
+  for (let k = i; k <= j; k++) {
+    w += points[k].weight
+    s += points[k].weight * points[k].value
+    q += points[k].weight * points[k].value ** 2
+  }
+  return w ? q - s * s / w : 0
+}
+
+/**
+ * Fisher's optimal grouping ("Jenks natural breaks"): the division of the
+ * sorted, weighted points into k consecutive groups with the least sum of
+ * squared deviations within the groups. Returns the first and last index of
+ * each group and that sum.
+ */
+export function naturalBreaks(points: Point[], k: number): { groups: [number, number][]; within: number } {
+  const n = points.length
+  const cost = Array.from({ length: k + 1 }, () => new Array<number>(n).fill(Infinity))
+  const start = Array.from({ length: k + 1 }, () => new Array<number>(n).fill(0))
+  for (let j = 0; j < n; j++) cost[1][j] = deviation(points, 0, j)
+  for (let g = 2; g <= k; g++) {
+    for (let j = g - 1; j < n; j++) {
+      for (let i = g - 1; i <= j; i++) {
+        const c = cost[g - 1][i - 1] + deviation(points, i, j)
+        if (c < cost[g][j]) {
+          cost[g][j] = c
+          start[g][j] = i
+        }
+      }
+    }
+  }
+
+  const groups: [number, number][] = []
+  for (let g = k, j = n - 1; g >= 1; g--) {
+    const i = start[g][j]
+    groups.unshift([i, j])
+    j = i - 1
+  }
+  return { groups, within: cost[k][n - 1] }
+}
+
+// a further group has to explain at least this share of the variance
+const MIN_GAIN = 0.01
+
+export interface YearGroup {
+  // the first and last year with a mention
+  from: number
+  to: number
+  // the mean year of its mentions
+  center: number
+  ads: number
   mentions: number
+  // between the group before and this one lie three or more years in which
+  // no ad appeared
+  gapBefore: boolean
+}
+
+/**
+ * The years grouped by Fisher's optimal grouping of the years of all
+ * mentions. The number of groups is the smallest beyond which a further
+ * group would explain less than one per cent more of the variance of the
+ * years (the "goodness of variance fit").
+ */
+export function groupYears(ads: Ad[]): YearGroup[] {
+  const weights = new Map<number, number>()
+  for (const ad of ads) {
+    if (!ad.mentions.length) continue
+    const year = firstYear(ad)
+    weights.set(year, (weights.get(year) ?? 0) + ad.mentions.length)
+  }
+  const points = Array.from(weights, ([value, weight]) => ({ value, weight }))
+    .sort((a, b) => a.value - b.value)
+
+  const total = deviation(points, 0, points.length - 1)
+  const fit = (within: number) => (total ? 1 - within / total : 1)
+  let best = naturalBreaks(points, 1)
+  for (let k = 2; k <= points.length; k++) {
+    const next = naturalBreaks(points, k)
+    if (fit(next.within) - fit(best.within) < MIN_GAIN) break
+    best = next
+  }
+
+  const adYears = new Set(ads.map(firstYear))
+  // the longest run of years between a and b in which no ad appeared
+  const silence = (a: number, b: number) => {
+    let run = 0, longest = 0
+    for (let year = a + 1; year < b; year++) {
+      run = adYears.has(year) ? 0 : run + 1
+      longest = Math.max(longest, run)
+    }
+    return longest
+  }
+
+  return best.groups.map(([i, j], g) => {
+    const from = points[i].value
+    const to = points[j].value
+    const part = points.slice(i, j + 1)
+    const mentions = part.reduce((sum, p) => sum + p.weight, 0)
+    const previous = g > 0 ? points[best.groups[g - 1][1]].value : from
+    return {
+      from,
+      to,
+      center: part.reduce((sum, p) => sum + p.value * p.weight, 0) / mentions,
+      ads: ads.filter(ad => firstYear(ad) >= from && firstYear(ad) <= to).length,
+      mentions,
+      gapBefore: silence(previous, from) >= 3,
+    }
+  })
+}
+
+interface ArtistInGroup {
+  mentions: number
+  ads: number
+  // of all mentions of artists in the group
   share: number
 }
 
-interface ArtistRow {
-  id: string
-  periods: Share[]
-  total: Share
-}
-
-interface PeriodTotal {
-  ads: number
-  mentions: number
-}
-
-// the year an ad was first printed
-export const firstYear = (ad: Ad) =>
-  Math.min(...ad.dates.map(date => Number(date.slice(0, 4))).filter(Boolean))
-
-export const periodOf = (year: number) =>
-  PERIODS.findIndex(period => year >= period.from && year <= period.to)
-
-/**
- * Each artist's share of all mentions of artists in the ads of a period. An
- * ad counts once, in the year of its first printing, however often it was
- * printed.
- */
-export function artistShares(ads: Ad[]): { rows: ArtistRow[]; totals: PeriodTotal[]; all: PeriodTotal } {
-  const totals: PeriodTotal[] = PERIODS.map(() => ({ ads: 0, mentions: 0 }))
-  const counts = new Map<string, number[]>()
-
-  for (const ad of ads) {
-    const p = periodOf(firstYear(ad))
-    if (p < 0) continue
-    totals[p].ads += 1
-    totals[p].mentions += ad.mentions.length
-    for (const id of ad.mentions) {
-      if (!counts.has(id)) counts.set(id, PERIODS.map(() => 0))
-      counts.get(id)![p] += 1
-    }
-  }
-
-  const all = {
-    ads: totals.reduce((sum, t) => sum + t.ads, 0),
-    mentions: totals.reduce((sum, t) => sum + t.mentions, 0),
-  }
-  const share = (n: number, of: number) => (of ? n / of : 0)
-
-  const rows = Array.from(counts, ([id, perPeriod]) => {
-    const mentions = perPeriod.reduce((sum, n) => sum + n, 0)
-    return {
-      id,
-      periods: perPeriod.map((n, p) => ({ mentions: n, share: share(n, totals[p].mentions) })),
-      total: { mentions, share: share(mentions, all.mentions) },
-    }
-  })
-
-  return { rows, totals, all }
-}
-
-interface YearTotal {
-  year: number
-  ads: number
-  mentions: number
-}
-
-interface ArtistYear {
-  year: number
-  mentions: number
-  // the ads of the year that name the artist
-  ads: number
-}
-
-interface ArtistTimeline {
+export interface ArtistBand {
   id: string
   mentions: number
-  years: ArtistYear[]
+  groups: ArtistInGroup[]
 }
 
 /**
- * The mentions of each artist per year. An ad counts once, in the year of its
- * first printing; an artist it names twice counts twice.
+ * Each artist's mentions in each group of years. An ad counts once, in the
+ * year of its first printing; an artist it names twice counts twice.
  */
-export function artistTimelines(ads: Ad[]): { years: YearTotal[]; artists: ArtistTimeline[] } {
-  const years = new Map<number, YearTotal>()
-  const artists = new Map<string, Map<number, ArtistYear>>()
-
+export function artistBands(ads: Ad[], groups: YearGroup[]): ArtistBand[] {
+  const bands = new Map<string, ArtistBand>()
   for (const ad of ads) {
     const year = firstYear(ad)
-    if (!Number.isFinite(year)) continue
-    const total = years.get(year) ?? { year, ads: 0, mentions: 0 }
-    total.ads += 1
-    total.mentions += ad.mentions.length
-    years.set(year, total)
-
+    const g = groups.findIndex(group => year >= group.from && year <= group.to)
+    if (g < 0) continue
     ad.mentions.forEach((id, i) => {
-      if (!artists.has(id)) artists.set(id, new Map())
-      const perYear = artists.get(id)!
-      const entry = perYear.get(year) ?? { year, mentions: 0, ads: 0 }
-      entry.mentions += 1
-      if (ad.mentions.indexOf(id) === i) entry.ads += 1
-      perYear.set(year, entry)
+      if (!bands.has(id)) {
+        bands.set(id, { id, mentions: 0, groups: groups.map(() => ({ mentions: 0, ads: 0, share: 0 })) })
+      }
+      const band = bands.get(id)!
+      band.mentions += 1
+      band.groups[g].mentions += 1
+      if (ad.mentions.indexOf(id) === i) band.groups[g].ads += 1
     })
   }
-
-  return {
-    years: Array.from(years.values()).sort((a, b) => a.year - b.year),
-    artists: Array.from(artists, ([id, perYear]) => {
-      const list = Array.from(perYear.values()).sort((a, b) => a.year - b.year)
-      return { id, mentions: list.reduce((sum, y) => sum + y.mentions, 0), years: list }
-    }),
+  const list = Array.from(bands.values())
+  for (const band of list) {
+    band.groups.forEach((group, g) => { group.share = group.mentions / groups[g].mentions })
   }
+  return list
 }
