@@ -8,7 +8,8 @@ import Name from "./Name"
 import Note from "./Note"
 import Seg from "./Seg"
 import Figure from "./Figure"
-import Metadata, { Change } from "./Metadata"
+import Metadata, { Change, SourceDesc } from "./Metadata"
+import Ref from "./Ref"
 import MsIdentifier from "./MsIdentifier"
 import './style.css'
 import { Box, Dialog, DialogContent, IconButton, Paper, Stack, ToggleButton, ToggleButtonGroup, Tooltip } from "@mui/material"
@@ -24,6 +25,8 @@ const headerRoutes: Routes = {
   "tei-tei": Tei,
   "tei-teiheader": Metadata,
   "tei-change": Change,
+  "tei-sourcedesc": SourceDesc,
+  "tei-ref": Ref,
   "tei-facsimile": Hidden,
   "tei-text": Hidden,
   "tei-persname": Name,
@@ -99,6 +102,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topic
     "tei-seg": Seg,
     "tei-figure": Figure,
     "tei-note": Note,
+    "tei-ref": Ref,
     "tei-msidentifier": MsIdentifier
   }), [layout])
 
@@ -110,6 +114,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topic
     "tei-seg": Seg,
     "tei-figure": Figure,
     "tei-note": Note,
+    "tei-ref": Ref,
     "tei-msidentifier": MsIdentifier
   }), [])
 

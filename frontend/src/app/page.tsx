@@ -2,6 +2,7 @@ import React from "react"
 import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
 import { getMarkdownContent } from "../lib/markdown"
+import { getAllMetadata } from "../lib/tei"
 import { EDITION, EDITOR } from "../lib/site"
 import OrcidLink from "../components/orcid"
 
@@ -25,7 +26,12 @@ const contentStyles = {
 }
 
 export default function HomePage() {
-  const { html } = getMarkdownContent('introduction.md')
+  const ads = getAllMetadata()
+  const printings = ads.flatMap(ad => ad.dates)
+  const years = printings.map(date => Number(date.slice(0, 4)))
+  const size = `At present, the collection holds ${ads.length} advertisements `
+    + `in ${printings.length} printings from ${Math.min(...years)} to ${Math.max(...years)}.`
+  const html = getMarkdownContent('introduction.md').html.replace('{{size}}', size)
 
   return (
     <Container component="main" maxWidth="md">

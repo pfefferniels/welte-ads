@@ -1,7 +1,7 @@
 // Copies the shared encoding description (tei/shared/encoding.xml) into the
 // <encodingDesc> of every advertisement: the project description, the
-// editorial principles, and those renditions and topics that the
-// advertisement uses, so that each file explains its own markup. Also
+// principles of selection and transcription, and those renditions and topics
+// that the advertisement uses, so that each file explains its own markup. Also
 // points every advertisement to the TEI schema.
 //
 // Run it after changing tei/shared/encoding.xml, or after using a new
@@ -31,6 +31,7 @@ const declarations = pattern => {
 }
 
 const projectDesc = block('projectDesc')
+const samplingDecl = block('samplingDecl')
 const editorialDecl = block('editorialDecl')
 const taxonomyDesc = shared.match(/<taxonomy[^>]*>\s*\n([ \t]*)(<desc>[\s\S]*?<\/desc>)/)
 const renditions = declarations(/^([ \t]*)<rendition xml:id="([^"]+)"[\s\S]*?<\/rendition>/gm)
@@ -72,6 +73,7 @@ const encodingDesc = (xml, file) => {
   const lines = [
     `${at(0)}<encodingDesc>`,
     reindent(projectDesc, at(1)),
+    reindent(samplingDecl, at(1)),
     reindent(editorialDecl, at(1)),
   ]
 

@@ -1,44 +1,98 @@
 import React from "react"
+import Link from "next/link"
 import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
+import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material"
 import { getMarkdownContent } from "../../lib/markdown"
+import { getEncodingDescription } from "../../lib/encoding"
+import { getTopics } from "../../lib/tei"
+import { EDITION } from "../../lib/site"
 
 export const metadata = {
   title: 'Guidelines',
 }
 
 const contentStyles = {
-  "& p": {
-    textIndent: "2rem",
-  },
-  "& p:first-of-type, & h2 + p, & h3 + p, & h4 + p, & h5 + p, & h6 + p, & .noindent p": {
-    textIndent: "0",
-  },
-  "& blockquote": {
-    marginLeft: "5rem",
-  },
-  "& .data-footnote-backref": {
-    marginLeft: ".75rem",
+  "& code": {
+    fontSize: "0.9em",
   },
 }
 
+const Paragraphs = ({ paragraphs }: { paragraphs: string[] }) => (
+  <>
+    {paragraphs.map((html, i) => (
+      <Typography key={i} variant="body1" component="p" sx={contentStyles}
+        dangerouslySetInnerHTML={{ __html: html }} />
+    ))}
+  </>
+)
+
 export default function GuidelinesPage() {
-  const { html } = getMarkdownContent('guidelines.md')
+  const { selection, principles, renditions } = getEncodingDescription()
+  const topics = Object.entries(getTopics())
+  const { html: example } = getMarkdownContent('guidelines.md')
 
   return (
     <Container component="main" maxWidth="md">
       <Typography variant="h3" component="h2" gutterBottom={false}>
-        Welte-Mignon Advertisements Collection
+        {EDITION}
       </Typography>
-      <Typography variant="h4" component="h3" gutterBottom={false}>
+      <Typography variant="h4" component="h3" gutterBottom>
         Guidelines
       </Typography>
+      <Typography variant="body1" component="p">
+        The principles below are those that every TEI file of the collection
+        states in its <code>&lt;encodingDesc&gt;</code>.
+      </Typography>
+
+      <Typography variant="h5" component="h3">Selection</Typography>
+      <Paragraphs paragraphs={selection} />
+
+      {principles.map(section => (
+        <React.Fragment key={section.heading}>
+          <Typography variant="h5" component="h3">{section.heading}</Typography>
+          <Paragraphs paragraphs={section.paragraphs} />
+        </React.Fragment>
+      ))}
+
+      <Typography variant="h5" component="h3">Typography</Typography>
+      <Typography variant="body1" component="p">
+        The values of <code>@rendition</code> are defined in CSS:
+      </Typography>
+      <Table size="small" sx={{ mb: 3 }}>
+        <TableHead>
+          <TableRow>
+            <TableCell>Value</TableCell>
+            <TableCell>Meaning (CSS)</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {renditions.map(({ id, css }) => (
+            <TableRow key={id}>
+              <TableCell><code>#{id}</code></TableCell>
+              <TableCell><code>{css}</code></TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+
+      <Typography variant="h5" component="h3">Topics</Typography>
+      <Typography variant="body1" component="p">
+        The topics are:{' '}
+        {topics.map(([key, topic], i) => (
+          <React.Fragment key={key}>
+            {i > 0 && ', '}
+            <Link href={`/topic/${key}`}>{topic.label}</Link>
+          </React.Fragment>
+        ))}.
+      </Typography>
+
       <Typography
         sx={contentStyles}
         variant="body1"
         gutterBottom
         component="div"
-        dangerouslySetInnerHTML={{ __html: html }}
+        dangerouslySetInnerHTML={{ __html: example }}
       />
     </Container>
   )

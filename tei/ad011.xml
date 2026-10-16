@@ -37,12 +37,7 @@
                  </licence>
               </availability>
            </publicationStmt>
-           <notesStmt>
-                <note resp="#np">
-                    [...]
-                </note>
-           </notesStmt>
-           <sourceDesc xml:id="A">
+           <sourceDesc xml:id="source_1">
               <bibl>Paderewski will play again</bibl>
               <biblFull>
                  <titleStmt>
@@ -73,7 +68,7 @@
                  </msIdentifier>
               </msDesc>
            </sourceDesc>
-           <sourceDesc xml:id="B">
+           <sourceDesc xml:id="source_2">
             <bibl>Paderewski will play again</bibl>
             <biblFull>
                <titleStmt>
@@ -114,7 +109,33 @@
                  piano rolls as objects of a digital edition. The collection is
                  published at https://anz.welte225.org.</p>
            </projectDesc>
+           <samplingDecl>
+              <p>The collection gathers print advertisements for the Welte-Mignon
+                 reproducing piano that appeared between 1905 and 1930 and were
+                 published by M. Welte &amp; Söhne, by one of its licensees, or by a
+                 dealer or agent selling the instrument. Each advertisement is
+                 encoded once; its further printings, in the same or in other
+                 periodicals, are listed as further sources.</p>
+              <p>The advertisements were found in digitised newspapers and
+                 magazines: Chronicling America (Library of Congress), the British
+                 Newspaper Archive, HathiTrust (copies of the Universities of
+                 California, Illinois, Michigan, Minnesota and Virginia), the
+                 Internet Archive, the Digitale Sammlungen of the Bayerische
+                 Staatsbibliothek, ANNO (Austrian National Library), the
+                 International Arcade Museum Library and Georgia Historic
+                 Newspapers.</p>
+           </samplingDecl>
            <editorialDecl>
+              <p>Each file transcribes one printing of an advertisement, the one
+                 whose scan its facsimile zones refer to; <att>decls</att> on
+                 <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+                 printings were identified as the same advertisement but not
+                 collated word for word; differences that were noticed are
+                 recorded with <gi>app</gi> or in a note.</p>
+              <p>The regions and lines of the scans were mostly marked in
+                 eScriptorium and converted from PAGE XML to TEI. The text was in
+                 part recognised automatically (HTR) and corrected against the
+                 scan, in part transcribed by hand.</p>
               <correction>
                  <p>Errors of the original are not corrected but marked with
                     <gi>sic</gi>.</p>
@@ -193,6 +214,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc>
+           <change when="2026-10-16">Transcribed printing marked; empty note removed.</change>
            <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
            <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
            <change when="2026-10-15">Made valid against tei_all.</change>
@@ -214,7 +236,7 @@
                 xml:id="eSc_textblock_eeb83339" />
         </surface>
     </facsimile>
-    <text>
+    <text decls="#source_1">
         <body>
         <div facs="#eSc_textblock_fa5427b3">
             <lb />
@@ -253,11 +275,11 @@
                 <seg xml:id="topic_5" ana="#affordability" resp="#np" type="topic"><hi rendition="#uc #b #smaller">Convenient Terms</hi></seg>
 
                 <app>
-                  <rdg source="#A">
+                  <rdg source="#source_1">
                      <lb /><hi rendition="#b #in"><orgName>HARDMAN,PECK&amp;CO.</orgName></hi>
                      <lb /><hi rendition="#uc #b #smaller">Founded 1842</hi>
                   </rdg>
-                  <rdg source="#B">
+                  <rdg source="#source_2">
                      <hi rendition="#k">
                         <lb />Exclusive Representatives
                         <lb /><orgName>Schmoller &amp; Mueller</orgName>

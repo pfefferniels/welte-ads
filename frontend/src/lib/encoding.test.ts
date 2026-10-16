@@ -24,11 +24,21 @@ const pointers = (doc: Document, attribute: string) => Array.from(new Set(
   Array.from(doc.querySelectorAll(`[${attribute}]`)).flatMap(el =>
     (el.getAttribute(attribute) || "").split(/\s+/).filter(Boolean).map(value => value.replace(/^#/, "")))))
 
+// the scans of these do not tell which printing they show
+const unknownPrinting = ["ad007.xml", "ad029.xml"]
+
 const ads = fs.readdirSync(teiDir).filter(file => file.endsWith(".xml")).sort()
   .map(file => ({ file, xml: fs.readFileSync(path.join(teiDir, file), "utf-8") }))
 
-describe.each(ads)("$file", ({ xml }) => {
+describe.each(ads)("$file", ({ file, xml }) => {
   const doc = parse(xml)
+
+  it("points to the printing that it transcribes", () => {
+    const decls = doc.getElementsByTagName("text")[0].getAttribute("decls")
+    if (unknownPrinting.includes(file)) return expect(decls).toBeNull()
+    const sources = Array.from(doc.getElementsByTagName("sourceDesc")).map(source => `#${source.getAttribute("xml:id")}`)
+    expect(sources).toContain(decls)
+  })
 
   it("points to the TEI schema", () => {
     expect(schema).toBeDefined()
@@ -36,7 +46,7 @@ describe.each(ads)("$file", ({ xml }) => {
   })
 
   it("carries the shared project description and editorial principles", () => {
-    for (const element of ["projectDesc", "editorialDecl"]) {
+    for (const element of ["projectDesc", "samplingDecl", "editorialDecl"]) {
       expect(text(doc.getElementsByTagName(element)[0])).toBe(text(shared.getElementsByTagName(element)[0]))
     }
   })

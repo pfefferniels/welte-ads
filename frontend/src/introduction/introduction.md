@@ -14,8 +14,13 @@ The present collection includes advertisements, which:
 
 - appear in print publications between 1905 and 1930
 - advertise the Welte-Mignon reproducing piano
-- are published by either the company M. Welte & Sons itself
-  or one of the licensee companies.
+- are published by M. Welte & Sons, by one of its licensees, or
+  by a dealer or agent selling the instrument.
+
+{{size}} Each advertisement is transcribed from one of its printings;
+the others are listed as further sources. How the advertisements were
+found, transcribed and annotated is described in the
+[Guidelines](/guidelines/).
 
 
 

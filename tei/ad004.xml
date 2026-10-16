@@ -37,7 +37,7 @@
                     </licence>
                 </availability>
             </publicationStmt>
-            <sourceDesc>
+            <sourceDesc xml:id="source_1">
                 <bibl>Welte-Mignon Reproduktions-Piano und Flügel</bibl>
                 <biblFull>
                     <titleStmt>
@@ -61,6 +61,12 @@
                         <biblScope unit="pages">1044</biblScope>
                     </seriesStmt>
                 </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>Bayerische Staatsbibliothek</repository>
+                        <idno type="URLImages">https://www.digitale-sammlungen.de/en/view/bsb00004266?page=1138</idno>
+                    </msIdentifier>
+                </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -72,7 +78,33 @@
                   piano rolls as objects of a digital edition. The collection is
                   published at https://anz.welte225.org.</p>
             </projectDesc>
+            <samplingDecl>
+               <p>The collection gathers print advertisements for the Welte-Mignon
+                  reproducing piano that appeared between 1905 and 1930 and were
+                  published by M. Welte &amp; Söhne, by one of its licensees, or by a
+                  dealer or agent selling the instrument. Each advertisement is
+                  encoded once; its further printings, in the same or in other
+                  periodicals, are listed as further sources.</p>
+               <p>The advertisements were found in digitised newspapers and
+                  magazines: Chronicling America (Library of Congress), the British
+                  Newspaper Archive, HathiTrust (copies of the Universities of
+                  California, Illinois, Michigan, Minnesota and Virginia), the
+                  Internet Archive, the Digitale Sammlungen of the Bayerische
+                  Staatsbibliothek, ANNO (Austrian National Library), the
+                  International Arcade Museum Library and Georgia Historic
+                  Newspapers.</p>
+            </samplingDecl>
             <editorialDecl>
+               <p>Each file transcribes one printing of an advertisement, the one
+                  whose scan its facsimile zones refer to; <att>decls</att> on
+                  <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+                  printings were identified as the same advertisement but not
+                  collated word for word; differences that were noticed are
+                  recorded with <gi>app</gi> or in a note.</p>
+               <p>The regions and lines of the scans were mostly marked in
+                  eScriptorium and converted from PAGE XML to TEI. The text was in
+                  part recognised automatically (HTR) and corrected against the
+                  scan, in part transcribed by hand.</p>
                <correction>
                   <p>Errors of the original are not corrected but marked with
                      <gi>sic</gi>.</p>
@@ -131,6 +163,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
+            <change when="2026-10-16">Transcribed printing marked; link to the digital images added.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Made valid against tei_all.</change>
@@ -161,7 +194,7 @@
             <zone points="1645,878 1885,878 1885,998 1645,998" xml:id="zone_caption_reisenauer" />
         </surface>
     </facsimile>
-    <text>
+    <text decls="#source_1">
         <body>
         <div type="illustration" facs="#eSc_textblock_0cb55a56">
             <figure>
