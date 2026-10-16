@@ -141,7 +141,7 @@ export const names = {
     "norsk.flygel": "Norsk Flygel og Pianolager, Kristiania",
     "winther": "A/S Chr. Winther, København",
     "geisler": "A. H. Geisler & Co., København",
-    "zimmermann": "Jul. Heinr. Zimmermann, Riga",
+    "zimmermann": "Jul. Heinr. Zimmermann, Riga and St Petersburg",
     "mason.risch": "Mason & Risch, London (Ontario)",
     "heintzman": "Heintzman & Co., Toronto",
     "wagner.levien": "A. Wagner & Levien, Sucs., México",

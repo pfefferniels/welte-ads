@@ -32,5 +32,6 @@ export const coordinates = {
     'https://www.geonames.org/3530597': { lat: 19.42847, long: -99.12766 },
     'https://www.geonames.org/3553478': { lat: 23.13302, long: -82.38304 },
     'https://www.geonames.org/3451190': { lat: -22.90642, long: -43.18223 },
-    'https://www.geonames.org/3871336': { lat: -33.45694, long: -70.64827 }
+    'https://www.geonames.org/3871336': { lat: -33.45694, long: -70.64827 },
+    'https://www.geonames.org/498817': { lat: 59.93863, long: 30.31413 }
 } as { [index: string]: Coordinate }
