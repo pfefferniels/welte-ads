@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "The Mexican Herald"</title>
+        <title type="sub">May 19, 1907</title>
+        <author>
+          <orgName key="wagner.levien">A. Wagner &amp; Levien, Sucs.</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>THE WELTE Artistic Player Piano</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">THE WELTE Artistic Player Piano</title>
+            <author><orgName>A. Wagner &amp; Levien, Sucs.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Mexican Herald</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3530597">Mexico City</pubPlace>
+            <date type="publication" when="1907-05-19">1907</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Mexican Herald</title>
+            <biblScope unit="issue">Sunday, May 19, 1907</biblScope>
+            <biblScope unit="pages">7</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Hemeroteca Nacional Digital de México</repository>
+            <idno>
+              <idno type="URLImages">https://hndm.iib.unam.mx/consulta/publicacion/visualizar/558075be7d1e63c9fea1a34d?pagina=558a34567d1ed64f16a3f6cc</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="en">English</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad114-0.jpg" width="3962px" height="5431px"/>
+      <zone points="1728,1518 2738,1518 2738,1817 1728,1817" xml:id="zone_headline"/>
+      <zone points="1858,1847 2612,1847 2612,1942 1858,1942" xml:id="zone_subhead"/>
+      <zone points="1948,2014 2542,2014 2542,2343 1948,2343" xml:id="zone_text"/>
+      <zone points="1858,2408 2617,2408 2617,2472 1858,2472" xml:id="zone_agents"/>
+      <zone points="1798,2488 2682,2488 2682,2647 1798,2647" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b"><lb/>THE
+          <lb/><hi rendition="#in"><name type="brand">WELTE</name></hi></hi></head>
+      </div>
+      <div facs="#zone_subhead">
+        <ab><hi rendition="#c #larger"><lb/><name type="brand">Artistic Player Piano</name></hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <ab><hi rendition="#c"><lb/>The <name type="brand">Welte</name> gives the <seg xml:id="topic_1" ana="#exact_reproduction" type="topic" resp="#claude">abso-
+          <lb/>lutely true reproduction of
+          <lb/>the interpretation</seg> of the
+          <lb/><hi rendition="#g">World's Most Famous</hi>
+          <lb/>Pianists.</hi></ab>
+      </div>
+      <div facs="#zone_agents">
+        <ab><hi rendition="#c"><lb/>General Agents for the Entire Mexican Republic:</hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#larger"><orgName>A. WAGNER &amp; LEVIEN; SUCS.</orgName></hi>
+          <lb/><address><addrLine>Zuleta 13 y 14.</addrLine> <addrLine><placeName>MEXICO</placeName>.</addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

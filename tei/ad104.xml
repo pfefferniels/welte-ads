@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "London Evening Advertiser" and "The Free Press"</title>
+        <title type="sub">December 10, 1924</title>
+        <author>
+          <orgName key="mason.risch">Mason &amp; Risch</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Rhythmic Beat of a Gaucho Dance —When Phantom Fingers Play</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Rhythmic Beat of a Gaucho Dance —When Phantom Fingers Play</title>
+            <author><orgName>Mason &amp; Risch</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>London Evening Advertiser</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/6058560">London, Ontario</pubPlace>
+            <date type="publication" when="1924-12-10">1924</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">London Evening Advertiser</title>
+            <biblScope unit="issue">December 10, 1924, 61st Year, No. 24142</biblScope>
+            <biblScope unit="pages">8</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Canadiana</repository>
+            <idno>
+              <idno type="URLImages">https://www.canadiana.ca/view/oocihm.N_00257_19241210/8</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Rhythmic Beat of a Gaucho Dance —When Phantom Fingers Play</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Rhythmic Beat of a Gaucho Dance —When Phantom Fingers Play</title>
+            <author><orgName>Mason &amp; Risch</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Free Press</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/6058560">London, Ontario</pubPlace>
+            <date type="publication" when="1924-12-10">1924</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Free Press</title>
+            <biblScope unit="issue">December 10, 1924</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Canadiana</repository>
+            <idno>
+              <idno type="URLImages">https://www.canadiana.ca/view/oocihm.N_00400_192412/195</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="en">English</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad104-0.jpg" width="5400px" height="6344px"/>
+      <graphic type="IIIF" url="https://image-tor.canadiana.ca/iiif/2/69429%2Fc0b27pq8m229/full/full/0/default.jpg" width="5400px" height="6344px"/>
+      <zone points="3215,480 4960,480 4960,1945 3215,1945" xml:id="zone_picture"/>
+      <zone points="3365,2028 4862,2028 4862,2276 3365,2276" xml:id="zone_headline"/>
+      <zone points="3360,2306 4445,2306 4445,3012 3360,3012" xml:id="zone_text"/>
+      <zone points="3375,3016 4445,3016 4445,3115 3375,3115" xml:id="zone_invitation"/>
+      <zone points="4565,2295 4895,2295 4895,2655 4565,2655" xml:id="zone_vignette"/>
+      <zone points="4568,2665 4938,2665 4938,2898 4568,2898" xml:id="zone_caption"/>
+      <zone points="3590,3125 4330,3125 4330,3190 3590,3190" xml:id="zone_address"/>
+      <zone points="3274,3255 3568,3255 3568,3746 3274,3746" xml:id="zone_faun_left"/>
+      <zone points="3576,3278 4704,3278 4704,3698 3576,3698" xml:id="zone_logo"/>
+      <zone points="4712,3225 5040,3225 5040,3720 4712,3720" xml:id="zone_faun_right"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div type="illustration" facs="#zone_picture">
+        <figure xml:id="figure_1" ana="#dance"><desc>A woman in a flounced, patterned dress dancing with a fan, guitar players and dancers behind her; at the right a grand piano projecting beyond the frame of the picture</desc></figure>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#i #in"><lb/>Rhythmic Beat of a Gaucho Dance
+          <lb/>—When <seg xml:id="topic_1" ana="#phantom_body" type="topic" resp="#claude">Phantom Fingers Play</seg></hi></head>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/><hi rendition="#dropcap">W</hi>ATCH <seg xml:id="topic_2" ana="#phantom_body" type="topic" resp="#claude">the keys of your piano moving, though no one
+          <lb/>sits before it!</seg> With every move comes forth the
+          <lb/>pulsating rhythm of a colorful tango—beautiful
+          <lb/>melody, strongly accented, native of the vast pampas
+          <lb/>south of the Amazon. So strongly suggestive is the
+          <lb/>music, <seg xml:id="topic_3" ana="#dance" type="topic" resp="#claude">you see the bronzed Gaucho and his gorgeous belle
+          <lb/>gracefully dancing</seg>. But who is playing with such wonderful
+          <lb/>finesse? <seg xml:id="topic_4" ana="#exact_reproduction" type="topic" resp="#claude">It is one of the great artists of the pianoforte, whose
+          <lb/>playing actually produced the movement of the keys just as
+          <lb/>you see them</seg>. <seg xml:id="topic_5" ana="#miracle" type="topic" resp="#claude">The <name type="brand">Mason &amp; Risch Welte-Mignon</name> has
+          <lb/>wrought this miracle</seg>. <seg xml:id="topic_6" ana="#touch_of_a_button" type="topic" resp="#claude">It has put at your command the
+          <lb/>genius of all the famous concert pianists</seg>. Your choice of any
+          <lb/>selection through the whole range of musical composition will
+          <lb/>be perfectly rendered by your favorite pianist <seg xml:id="topic_7" ana="#virtual_presence" type="topic" resp="#claude">just as if he
+          <lb/>favored you personally</seg>.</p>
+      </div>
+      <div facs="#zone_invitation">
+        <p><lb/>We will gladly have the Masters play your favorite selections
+          <lb/>for you any time you visit our show rooms.</p>
+      </div>
+      <div type="illustration" facs="#zone_vignette">
+        <figure xml:id="figure_2" ana="#phantom_body"><desc>Two hands playing a piano keyboard, emerging from a dark vignette</desc></figure>
+      </div>
+      <div facs="#zone_caption">
+        <ab><hi rendition="#i #smaller"><lb/>These are the <seg xml:id="topic_8" ana="#phantom_body" type="topic" resp="#claude">Phantom
+          <lb/>Hands</seg> of a thousand
+          <lb/><seg xml:id="topic_9" ana="#immortality" type="topic" resp="#claude">immortal pianists, their
+          <lb/>genius preserved forever</seg>
+          <lb/><seg xml:id="topic_10" ana="#miracle" type="topic" resp="#claude">through the miracle of
+          <lb/><name type="brand">Welte-Mignon</name> reproduc-
+          <lb/>tion</seg>.</hi></ab>
+      </div>
+      <div facs="#zone_address">
+        <ab><hi rendition="#c #b"><lb/><address><addrLine><app>
+            <rdg source="#source_1">248 DUNDAS STREET, LONDON.</rdg>
+            <rdg source="#source_2">248 DUNDAS STREET LONDON</rdg>
+          </app></addrLine></address></hi></ab>
+      </div>
+      <div type="illustration" facs="#zone_faun_left">
+        <figure><desc>Framed panel: a faun playing pan-pipes</desc></figure>
+      </div>
+      <div facs="#zone_logo">
+        <ab><hi rendition="#c"><lb/><orgName>MASON &amp; RISCH</orgName>
+          <lb/><hi rendition="#in"><name type="brand">Welte-Mignon</name></hi>
+          <lb/>REPRODUCING PIANO</hi></ab>
+      </div>
+      <div type="illustration" facs="#zone_faun_right">
+        <figure><desc>Framed panel: a faun playing pan-pipes</desc></figure>
+      </div>
+    </body>
+  </text>
+</TEI>

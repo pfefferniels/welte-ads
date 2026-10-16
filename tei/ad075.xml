@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Morgenbladet"</title>
+        <title type="sub">December 1, 1907</title>
+        <author>
+          <orgName key="grondahl">Grøndahls Flygel- &amp; Pianolager</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>„Mignon“ – Reproduktionsklavér.</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">„Mignon“ – Reproduktionsklavér.</title>
+            <author><orgName>Grøndahls Flygel- &amp; Pianolager</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Morgenbladet</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3143244">Kristiania</pubPlace>
+            <date type="publication" when="1907-12-01">1907</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Morgenbladet</title>
+            <biblScope unit="issue">December 1, 1907, No. 686</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The advertisement names the instrument only as „Mignon“; the name
+              Welte is not printed. It is identified as the Welte-Mignon by the
+              picture of the cabinet player (the same block as in Grøndahl's
+              "Welte-Mignon Reproduktionsklaver" advertisement in Aftenposten,
+              January 10, 1908), by the electric drive and by the testimonials of
+              Welte artists.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Nasjonalbiblioteket</repository>
+            <idno>
+              <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_morgenbladet_null_null_19071201_89_686_1</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="no">Norwegian (Dano-Norwegian)</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad075-0.jpg" width="7247px" height="11300px"/>
+      <graphic type="IIIF" url="https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_morgenbladet_null_null_19071201_89_686_1-1_003_null/full/full/0/default.jpg" width="7247px" height="11300px"/>
+      <zone points="2200,4295 3920,4295 3920,4492 2200,4492" xml:id="zone_headline"/>
+      <zone points="2525,4542 3598,4542 3598,5452 2525,5452" xml:id="zone_picture"/>
+      <zone points="2210,4778 2498,4778 2498,5168 2210,5168" xml:id="zone_left"/>
+      <zone points="3605,4712 3920,4712 3920,5265 3605,5265" xml:id="zone_right"/>
+      <zone points="2200,5486 3920,5486 3920,5612 2200,5612" xml:id="zone_text"/>
+      <zone points="2490,5643 3092,5643 3092,5706 2490,5706" xml:id="zone_extracts"/>
+      <zone points="2200,5712 3920,5712 3920,5912 2200,5912" xml:id="zone_dohnanyi"/>
+      <zone points="2200,5922 3920,5922 3920,6124 2200,6124" xml:id="zone_gruenfeld"/>
+      <zone points="2200,6145 3920,6145 3920,6265 2200,6265" xml:id="zone_artists"/>
+      <zone points="2612,6270 3500,6270 3500,6328 2612,6328" xml:id="zone_demonstration"/>
+      <zone points="2200,6372 3920,6372 3920,6542 2200,6542" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><lb/><hi rendition="#b #in">„<name type="brand">Mignon</name>“</hi> – Reproduktionsklavér.</head>
+      </div>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>The Welte-Mignon cabinet player (Vorsetzer) in an Art Nouveau case</desc></figure>
+      </div>
+      <div facs="#zone_left">
+        <ab><hi rendition="#c"><seg xml:id="topic_1" ana="#home" type="topic" resp="#claude"><lb/>Elegant
+          <lb/>Ydre.
+          <lb/>En Pryd
+          <lb/>for enhver
+          <lb/>Salon.</seg></hi></ab>
+      </div>
+      <div facs="#zone_right">
+        <ab><hi rendition="#c"><seg xml:id="topic_2" ana="#technical_invention" type="topic" resp="#claude"><lb/>Drives ved
+          <lb/>Elektro-
+          <lb/>motor</seg>; kan
+          <lb/>tilkobles
+          <lb/>hvilken-
+          <lb/>somhelst
+          <lb/>Lysledning.</hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <ab><lb/><seg xml:id="topic_3" ana="#exact_reproduction" type="topic" resp="#claude">Gjengiver direkte Virtuosernes Spil med alle Finheder</seg>
+          <lb/>og <seg xml:id="topic_4" ana="#personality" type="topic" resp="#claude">alle individuelle Karaktéregenskaber</seg>.</ab>
+      </div>
+      <div facs="#zone_extracts">
+        <ab><lb/>Uddrag af nogle Udtalelser:</ab>
+      </div>
+      <div facs="#zone_dohnanyi">
+        <ab><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/119110016">Ernst v. Dohnányi</persName>:</hi>
+          <quote type="testimonial">
+            <lb/>Ved Opførelsen af <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> er det nu <sic>lykkes</sic> <seg xml:id="topic_5" ana="#exact_reproduction" type="topic" resp="#claude">paa det nøiagtigste
+            <lb/>at gjengive enhvers Spil</seg> og <seg xml:id="topic_6" ana="#immortality" type="topic" resp="#claude">bevare dette for kommende Tider</seg>. <seg xml:id="topic_7" ana="#miracle" type="topic" resp="#claude">Man kan kun
+            <lb/>forbauses og beundre</seg>.
+          </quote></ab>
+      </div>
+      <div facs="#zone_gruenfeld">
+        <ab><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/116888652">Alfred Grünfeld</persName>:</hi>
+          <quote type="testimonial">
+            <lb/>De af mig spillede Stykker blev gjengivet <seg xml:id="topic_8" ana="#exact_reproduction" type="topic" resp="#claude">med alle af mig indlagte
+            <lb/>Nuancer</seg> og <seg xml:id="topic_9" ana="#virtual_presence" type="topic" resp="#claude">saa skuffende ligt, at mine nærværende Venner havde Følelsen af,
+            <lb/>at jeg selv sad ved Flyglet</seg>.
+          </quote></ab>
+      </div>
+      <div facs="#zone_artists">
+        <ab><lb/>Noderne er indspillet af alle store Componister og Pianister som:
+          <lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/119110016">Dohnányi</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carréno</persName></hi> etc.</ab>
+      </div>
+      <div facs="#zone_demonstration">
+        <ab><hi rendition="#c #b"><lb/>Forespilles daglig Interessenter.</hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c #b"><lb/><hi rendition="#in"><orgName>Grøndahls Flygel- &amp; Pianolager</orgName></hi>
+          <lb/><address><addrLine>Carl Joh.s Gd. 17. Telef. 7899.</addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

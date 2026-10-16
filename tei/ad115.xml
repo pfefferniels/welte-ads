@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Jueves de Excélsior"</title>
+        <title type="sub">September 1924</title>
+        <author>
+          <orgName key="repertorio.nacional">Repertorio Nacional de Música, S. A.</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>BALDWIN - WELTE REPRODUCTORES</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">BALDWIN - WELTE REPRODUCTORES</title>
+            <author><orgName>Repertorio Nacional de Música, S. A.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Jueves de Excélsior</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3530597">México</pubPlace>
+            <date type="publication" when="1924-09">1924</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Jueves de Excélsior</title>
+            <biblScope unit="issue">September 4, 1924 (as filed by the library); the page header reads "Septiembre 28 de 1924"</biblScope>
+            <biblScope unit="pages">11</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The Hemeroteca Nacional Digital de México files this page in the issue of September 4, 1924, and the other pages of that issue carry the date "Septiembre 4 de 1924". The header of this page, however, reads "México, D. F., Septiembre 28 de 1924". September 28, 1924 was a Sunday, while the weekly appeared on Thursdays. The page may be misfiled from a later issue, or its header may be misprinted; only the month is therefore given.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Hemeroteca Nacional Digital de México</repository>
+            <idno>
+              <idno type="URLImages">https://hndm.iib.unam.mx/consulta/publicacion/visualizar/558075be7d1e63c9fea1a314?pagina=558a35137d1ed64f16b0b4de</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="es">Spanish</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad115-0.jpg" width="1983px" height="2974px"/>
+      <zone points="1530,160 1896,160 1896,446 1530,446" xml:id="zone_picture"/>
+      <zone points="1495,450 1881,450 1881,549 1495,549" xml:id="zone_headline"/>
+      <zone points="1517,559 1859,559 1859,588 1517,588" xml:id="zone_subhead"/>
+      <zone points="1495,596 1881,596 1881,828 1495,828" xml:id="zone_text"/>
+      <zone points="1524,834 1874,834 1874,896 1524,896" xml:id="zone_terms"/>
+      <zone points="1497,901 1882,901 1882,962 1497,962" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>A grand piano in a framed panel</desc></figure>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in"><lb/><name type="brand">BALDWIN - WELTE</name>
+          <lb/>REPRODUCTORES</hi></head>
+      </div>
+      <div facs="#zone_subhead">
+        <ab><hi rendition="#c #g #smaller"><lb/>VERTICALES Y DE COLA</hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <ab><hi rendition="#b #larger"><lb/>CAMBIE USTED SU PIANO</hi>
+          <lb/>por un magnífico Reproduc-
+          <lb/>tor eléctrico “<name type="brand"><hi rendition="#g">BALDWIN-</hi>
+          <lb/>WELTE MIGNON</name>”
+          <lb/>Venga Ud. a oír a los gran-
+          <lb/>des pianistas de fama mun-
+          <lb/>dial el día que guste a nues-
+          <lb/>tro salón de exposición.</ab>
+      </div>
+      <div facs="#zone_terms">
+        <ab><hi rendition="#c"><seg xml:id="topic_1" ana="#affordability" type="topic" resp="#claude"><lb/>Ventas en condiciones Fáciles.
+          <lb/>Admitimos su piano en cuenta.</seg></hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><orgName>Repertorio Nacional de Música, S. A.</orgName>
+          <lb/><hi rendition="#b #smaller"><address><addrLine>4a. Calle de Tacuba, 36</addrLine></address></hi></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
