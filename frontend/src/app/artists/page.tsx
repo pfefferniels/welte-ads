@@ -25,7 +25,8 @@ interface Mention {
 }
 
 interface ArtistMetadata {
-    dates: string[]
+    // the year of the ad's first printing
+    year: number
     mentions: string[]
 }
 
@@ -48,20 +49,18 @@ export default function ArtistsPage() {
         d3.select(artistsSvg.current).selectAll('*').remove()
 
         const mentionsPerYear: Mention[] = data.reduce((acc: Mention[], curr: ArtistMetadata) => {
-            curr.dates.forEach((date: string) => {
-                curr.mentions.forEach((mention_: string) => {
-                    const existingMention = acc.find(mention => mention.name === mention_ && mention.year === Number(date))
-                    if (existingMention) {
-                        existingMention.count += 1
-                    }
-                    else {
-                        acc.push({
-                            name: mention_,
-                            year: Number(date),
-                            count: 1
-                        } as Mention)
-                    }
-                })
+            curr.mentions.forEach((mention_: string) => {
+                const existingMention = acc.find(mention => mention.name === mention_ && mention.year === curr.year)
+                if (existingMention) {
+                    existingMention.count += 1
+                }
+                else {
+                    acc.push({
+                        name: mention_,
+                        year: curr.year,
+                        count: 1
+                    } as Mention)
+                }
             })
             return acc
         }, [] as Mention[])
@@ -83,9 +82,16 @@ export default function ArtistsPage() {
 
         const svgElement = d3.select(artistsSvg.current)
 
+        const radiusScale = d3.scaleLinear()
+            .domain([0, Math.max(...mentionsPerYear.map(mention => mention.count))])
+            .range([0, 30])
+
+        // the rows of the artists stack up from the axis, so the chart grows
+        // with the number of artists
+        const stack = mentionsPerArtist.reduce((sum, mention) => sum + radiusScale(mention.count), 0)
         const margin = { top: 30, right: 30, bottom: 30, left: 60 },
             width = 1000 - margin.left - margin.right,
-            height = 500 - margin.top - margin.bottom
+            height = Math.max(440, Math.ceil(stack))
 
         svgElement
             .attr("width", width + margin.left + margin.right)
@@ -97,10 +103,6 @@ export default function ArtistsPage() {
         const x = d3.scaleLinear()
             .domain([1905, 1935])
             .range([0, width])
-
-        const radiusScale = d3.scaleLinear()
-            .domain([0, Math.max(...mentionsPerYear.map(mention => mention.count))])
-            .range([0, 30])
 
         const y = (artist: string) => {
             let value = 0
@@ -171,8 +173,10 @@ export default function ArtistsPage() {
         <Container component="main" maxWidth="md">
             <h2>Mentioned Artists</h2>
             <Typography>
-                The following plot shows, how often artists
-                were mentioned in the advertisements per year.
+                The following plot shows how often artists are
+                mentioned in the advertisements, by the year in which an
+                advertisement was first printed. An advertisement that was
+                printed several times counts once.
             </Typography>
 
             <svg ref={artistsSvg} />

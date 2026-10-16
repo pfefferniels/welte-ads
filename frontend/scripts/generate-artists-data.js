@@ -19,13 +19,17 @@ const data = files.map(file => {
   const dom = new JSDOM(xmlString, { contentType: 'text/xml' })
   const doc = dom.window.document
 
-  const dates = Array.from(doc.querySelectorAll('date[type="publication"]'))
-    .map(date => date.innerHTML)
+  // an ad counts once, in the year of its first printing, however often it
+  // was printed
+  const years = Array.from(doc.querySelectorAll('date[type="publication"]'))
+    .map(date => Number((date.getAttribute('when') || date.textContent || '').slice(0, 4)))
+    .filter(Boolean)
+  const year = Math.min(...years)
   // only the recording artists, not composers or other persons mentioned
   const mentions = Array.from(doc.querySelectorAll('persName[corresp][type="artist"]'))
     .map(name => name.getAttribute('corresp') || '')
 
-  return { dates, mentions }
+  return { year, mentions }
 })
 
 fs.writeFileSync(
