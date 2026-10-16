@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Algemeen Handelsblad" and "De Telegraaf"</title>
+        <title type="sub">December 1924 to April 1925</title>
+        <author>
+          <orgName key="kettner">Kettner</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Welte Quadrola PIANO of VLEUGEL</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte Quadrola PIANO of VLEUGEL</title>
+            <author><orgName>Kettner</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Algemeen Handelsblad</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2759794">Amsterdam</pubPlace>
+            <date type="publication" when="1924-12-17">1924</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Algemeen Handelsblad</title>
+            <biblScope unit="issue">December 17, 1924, No. 31532</biblScope>
+            <biblScope unit="pages">10</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Placed under the heading "(Ingezonden mededeelingen)."; a framed display ad.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010656845:mpeg21:a0064</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Welte Quadrola PIANO of VLEUGEL</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte Quadrola PIANO of VLEUGEL</title>
+            <author><orgName>Kettner</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>De Telegraaf</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2759794">Amsterdam</pubPlace>
+            <date type="publication" when="1924-12-17">1924</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">De Telegraaf</title>
+            <biblScope unit="issue">December 17, 1924, No. 12293</biblScope>
+            <biblScope unit="pages">9</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Placed under the heading "INGEZONDEN MEDEDEELINGEN."</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:110562928:mpeg21:a0090</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Welte Quadrola PIANO of VLEUGEL</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte Quadrola PIANO of VLEUGEL</title>
+            <author><orgName>Kettner</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Algemeen Handelsblad</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2759794">Amsterdam</pubPlace>
+            <date type="publication" when="1925-04-02">1925</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Algemeen Handelsblad</title>
+            <biblScope unit="issue">April 2, 1925, No. 31637</biblScope>
+            <biblScope unit="pages">6</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010657487:mpeg21:a0044</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>Welte Quadrola PIANO of VLEUGEL</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte Quadrola PIANO of VLEUGEL</title>
+            <author><orgName>Kettner</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>De Telegraaf</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2759794">Amsterdam</pubPlace>
+            <date type="publication" when="1925-04-02">1925</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">De Telegraaf</title>
+            <biblScope unit="issue">April 2, 1925, No. 12398</biblScope>
+            <biblScope unit="pages">9</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>"(Adv.)" is printed below the ad.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:110563004:mpeg21:a0093</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_5">
+        <bibl>Welte Quadrola PIANO of VLEUGEL</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte Quadrola PIANO of VLEUGEL</title>
+            <author><orgName>Kettner</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Algemeen Handelsblad</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2759794">Amsterdam</pubPlace>
+            <date type="publication" when="1925-04-07">1925</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Algemeen Handelsblad</title>
+            <biblScope unit="issue">April 7, 1925, No. 31642</biblScope>
+            <biblScope unit="pages">6</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010657495:mpeg21:a0052</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad064-0.jpg" width="5036px" height="6632px"/>
+      <zone points="208,328 720,328 720,494 208,494" xml:id="zone_welte"/>
+      <zone points="438,509 1597,509 1597,737 838,737 838,862 893,862 893,908 438,908" xml:id="zone_quadrola"/>
+      <zone points="841,775 1599,775 1599,857 841,857" xml:id="zone_subtitle"/>
+      <zone points="375,778 438,778 438,911 706,911 706,1208 207,1208 207,890 375,890" xml:id="zone_picture"/>
+      <zone points="850,919 1583,919 1583,1217 850,1217" xml:id="zone_text"/>
+      <zone points="190,1252 1210,1252 1210,1438 190,1438" xml:id="zone_signature"/>
+      <zone points="1263,1254 1577,1254 1577,1432 1263,1432" xml:id="zone_address"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_welte">
+        <head><hi rendition="#in #b"><lb/><name type="brand">Welte</name></hi></head>
+      </div>
+      <div facs="#zone_quadrola">
+        <head><hi rendition="#in #larger"><lb/><name type="brand">Quadrola</name></hi></head>
+      </div>
+      <div facs="#zone_subtitle">
+        <ab><hi rendition="#c #larger"><lb/>PIANO of VLEUGEL</hi></ab>
+      </div>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>A grand piano drawn in horizontal hatching, behind the large initial Q of "Quadrola"</desc></figure>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/><hi rendition="#g"><seg xml:id="topic_1" ana="#technical_invention" type="topic" resp="#claude">Het nieuwe combinatie-instrument</seg> der</hi>
+          <lb/>beroemde <orgName>WELTE-FABRIEKEN</orgName> kan op
+          <lb/>vier verschillende manieren bespeeld worden
+          <hi rendition="#et2"><lb/>1e. met het klavier</hi>
+          <hi rendition="#et2"><lb/>2e. als reproductie-piano</hi>
+          <hi rendition="#et2"><lb/>3e. als kunstspel-instrument</hi>
+          <lb/>a. met voetbeweging; b. met electr. drijfkracht.</p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#in #b"><lb/><orgName>KETTNER</orgName></hi></ab>
+      </div>
+      <div facs="#zone_address">
+        <ab><hi rendition="#c #smaller #g"><address><addrLine><lb/>AMSTERDAM</addrLine>
+          <addrLine><lb/><hi rendition="#u">HEILIGEWEG 21—25</hi></addrLine>
+          <addrLine><lb/>HILVERSUM</addrLine>
+          <addrLine><lb/>UTRECHT   ARNHEM</addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

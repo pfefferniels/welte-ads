@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Berlingske Politiske og Avertissementstidende"</title>
+        <title type="sub">January 18, 1926</title>
+        <author>
+          <orgName key="winther">A/S Chr. Winther</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Welte Mignon &amp; Ducanola</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte Mignon &amp; Ducanola</title>
+            <author><orgName>A/S Chr. Winther</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Berlingske Politiske og Avertissementstidende</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2618425">København</pubPlace>
+            <date type="publication" when="1926-01-18">1926</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Berlingske Politiske og Avertissementstidende</title>
+            <biblScope unit="issue">No. 14, evening edition (Aften), January 18, 1926</biblScope>
+            <biblScope unit="pages">7</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Mediestream (Royal Danish Library)</repository>
+            <idno>
+              <idno type="URLImages">https://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3A3452d9a8-72b5-4c97-be6d-e4f30fd80a86</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="da">Danish</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad099-0.jpg" width="4935px" height="6669px"/>
+      <zone points="2380,2338 3580,2338 3580,3113 2380,3113" xml:id="zone_picture"/>
+      <zone points="3650,2500 4311,2500 4311,2928 3650,2928" xml:id="zone_headline"/>
+      <zone points="3722,2954 4293,2954 4293,3076 3722,3076" xml:id="zone_other"/>
+      <zone points="2899,3134 4016,3134 4016,3215 2899,3215" xml:id="zone_intro"/>
+      <zone points="2533,3219 4369,3219 4369,3338 2533,3338" xml:id="zone_welte"/>
+      <zone points="2536,3340 4374,3340 4374,3458 2536,3458" xml:id="zone_other2"/>
+      <zone points="2533,3459 4368,3459 4368,3579 2533,3579" xml:id="zone_realiserer"/>
+      <zone points="2530,3582 4364,3582 4364,3665 2530,3665" xml:id="zone_priser"/>
+      <zone points="2865,3667 4030,3667 4030,3733 2865,3733" xml:id="zone_bytte"/>
+      <zone points="2531,3735 3473,3735 3473,3871 2531,3871" xml:id="zone_signature"/>
+      <zone points="3513,3735 4344,3735 4344,3863 3513,3863" xml:id="zone_firm"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div type="illustration" facs="#zone_picture">
+        <figure xml:id="figure_1" ana="#sitting_woman #listening" resp="#claude"><desc>A woman in evening dress playing a grand piano; a man in an armchair at left and a man seated on a stool at right listen</desc></figure>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#b #in"><lb/><name type="brand">Welte
+          <lb/>Mignon</name>
+          <lb/>&amp;</hi></head>
+      </div>
+      <div facs="#zone_other">
+        <ab><gap reason="irrelevant"><desc resp="#claude">name of the other product (Ducanola.)</desc></gap></ab>
+      </div>
+      <div facs="#zone_intro">
+        <ab><hi rendition="#c"><lb/><seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">De to ypperste Kunstspilinstrumenter, der findes</seg>, kendt Verden
+          <lb/>over beundret og anbefalet af alle de største Musiknavne.</hi></ab>
+      </div>
+      <div facs="#zone_welte">
+        <p><hi rendition="#b #in"><lb/><name type="brand">Welte Mignon</name></hi> indbygget <name type="brand">Steinway</name> Flygler og Pianoer, drives ved Elektricitet, men kan og
+          <lb/>saa benyttes til Haandspil. Dets <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">Gengivelse af Kunstnerens Spil er saa nøj-
+          <lb/>agtigt og fuldendt</seg>, <seg xml:id="topic_3" ana="#virtual_presence" type="topic" resp="#claude">som sad han selv foran Instrumentet</seg></p>
+      </div>
+      <div facs="#zone_other2">
+        <ab><gap reason="irrelevant"><desc resp="#claude">3-line paragraph on the other product (Ducanola)</desc></gap></ab>
+      </div>
+      <div facs="#zone_realiserer">
+        <p><hi rendition="#b #in"><lb/>Vi realiserer</hi> forskellige fine 1ste Kl.s selvspillende Instrumenter og Forsatsapparater til
+          <lb/><hi rendition="#b">meget billige Priser.</hi>
+          <lb/><hi rendition="#b">Vi indbygger</hi> Spilleapparat i Deres Piano eller Flygel.</p>
+      </div>
+      <div facs="#zone_priser">
+        <p><hi rendition="#b #in"><lb/>Vore Priser</hi> <seg xml:id="topic_4" ana="#affordability" type="topic" resp="#claude">er de billigste, vore Betalingsvilkaar yderst kulante</seg> og vor Garanti den mest
+          <lb/>betryggende</p>
+      </div>
+      <div facs="#zone_bytte">
+        <ab><hi rendition="#c #b"><lb/>Brugte Flygler og Pianoer tages i Bytte.</hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#b"><lb/><hi rendition="#in"><orgName>A/S Chr. Winther</orgName>,</hi>
+          <lb/><address><addrLine>Frederiksborggade 36. (Nørrehus).</addrLine></address></hi></ab>
+      </div>
+      <div facs="#zone_firm">
+        <ab><hi rendition="#c #b #smaller"><lb/>Skandinaviens største Magasin for Flygler, Pianoer,
+          <lb/>Harmoniums og pneumatiske Instrumenter.
+          <lb/>— Grundlagt 1885. —</hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

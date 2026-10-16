@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Le Figaro"</title>
+        <title type="sub">December 20, 1928</title>
+        <author>
+          <orgName key="disco">DISCO</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>3 SEMAINES EXCEPTIONNELLES… DISCO … GAVEAU WELTE-MIGNON</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">3 SEMAINES EXCEPTIONNELLES… DISCO … GAVEAU WELTE-MIGNON</title>
+            <author><orgName>DISCO</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Le Figaro</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2988507">Paris</pubPlace>
+            <date type="publication" when="1928-12-20">1928</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Le Figaro</title>
+            <biblScope unit="issue">December 20, 1928</biblScope>
+            <biblScope unit="pages">8</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The scan is RetroNews's full-page render of the issue (document 725f7bd6-d7b7-43c8-8abb-e3bf45c87ac1, page 8). The same issue is in Gallica (ark:/12148/cb34355551z/date19281220), which could not be opened from here.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>RetroNews (Bibliothèque nationale de France)</repository>
+            <idno>
+              <idno type="URLImages">https://www.retronews.fr/journal/le-figaro/20-decembre-1928/104/295721/8</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="fr">French</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad072-0.jpg" width="5067px" height="6998px"/>
+      <zone points="384,262 718,262 718,357 384,357" xml:id="zone_border_top_left"/>
+      <zone points="1150,262 2264,262 2264,358 1200,358" xml:id="zone_border_top_right"/>
+      <zone points="288,262 383,262 383,2944 288,2944" xml:id="zone_border_left"/>
+      <zone points="2170,360 2264,360 2244,2947 2150,2946" xml:id="zone_border_right"/>
+      <zone points="288,2945 2264,2949 2264,3046 288,3042" xml:id="zone_border_bottom"/>
+      <zone points="735,265 1002,265 1002,468 2015,468 2015,662 2120,662 2120,812 452,918 452,668 735,668" xml:id="zone_headline"/>
+      <zone points="578,918 1975,812 1975,912 578,1002" xml:id="zone_date"/>
+      <zone points="878,985 1660,985 1660,1568 878,1568" xml:id="zone_picture"/>
+      <zone points="830,1590 1720,1590 1720,1776 830,1776" xml:id="zone_address"/>
+      <zone points="470,1792 2060,1792 2060,2210 470,2210" xml:id="zone_offer"/>
+      <zone points="900,2220 1615,2220 1615,2326 900,2326" xml:id="zone_other"/>
+      <zone points="650,2330 1872,2330 1872,2450 650,2450" xml:id="zone_product"/>
+      <zone points="495,2525 2035,2525 2035,2770 495,2770" xml:id="zone_prices"/>
+      <zone points="575,2792 1950,2792 1950,2902 575,2902" xml:id="zone_payment"/>
+      <zone points="2062,2888 2138,2888 2138,2944 2062,2944" xml:id="zone_mark"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div type="frame" facs="#zone_border_top_left">
+        <ab><lb/>PHONOS</ab>
+      </div>
+      <div type="frame" facs="#zone_border_top_right">
+        <ab><lb/>PIANOS AUTOMATIQUES.</ab>
+      </div>
+      <div type="frame" facs="#zone_border_left">
+        <ab><lb/>PHONOS_DISQUES_PIANOS AUTOMATIQUES_PHONOS_DISQUES_PIANOS AUTOMATIQUES</ab>
+      </div>
+      <div type="frame" facs="#zone_border_right">
+        <ab><lb/>PHONOS_DISQUES_PIANOS AUTOMATIQUES_PHONOS_DISQUES_PIANOS AUTOMATIQUES</ab>
+      </div>
+      <div type="frame" facs="#zone_border_bottom">
+        <ab><lb/>PHONOS_ DISQUES_ PIANOS AUTOMATIQUES.</ab>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#b #in">
+          <lb/>3 SEMAINES
+          <lb/>EXCEPTIONNELLES...
+        </hi></head>
+      </div>
+      <div facs="#zone_date">
+        <ab><hi rendition="#c #b #i"><lb/>du 20 Décembre au 10 Janvier 1929</hi></ab>
+      </div>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>Gramophone record with the name DISCO across it in a black band</desc></figure>
+        <ab><hi rendition="#c #b #in"><lb/><orgName>DISCO</orgName></hi></ab>
+      </div>
+      <div facs="#zone_address">
+        <ab><hi rendition="#c">
+          <lb/><hi rendition="#b #g"><address><addrLine>40, RUE LA <sic>BOËTIE</sic></addrLine></address></hi>
+          <hi rendition="#b #i"><lb/>à l’occasion de l’inauguration
+          <lb/>de son Département</hi>
+        </hi></ab>
+      </div>
+      <div facs="#zone_offer">
+        <ab><hi rendition="#c">
+          <lb/><hi rendition="#b #larger">"PIANOS AUTOMATIQUES"</hi>
+          <lb/><hi rendition="#b #i">met en vente à des</hi>
+          <lb/><hi rendition="#b #in">CONDITIONS UNIQUES</hi>
+          <lb/><hi rendition="#b">UNE</hi>
+          <lb/><hi rendition="#b #in">SÉRIE TRÈS LIMITÉE</hi>
+        </hi></ab>
+      </div>
+      <div facs="#zone_other">
+        <gap reason="irrelevant"><desc resp="#claude">"de GAVEAU-AUTO (DROITS et à QUEUES)", the Gaveau player piano</desc></gap>
+      </div>
+      <div facs="#zone_product">
+        <ab><hi rendition="#c">
+          <lb/><hi rendition="#b #g">et de <name type="brand">GAVEAU WELTE-MIGNON</name></hi>
+          <lb/><hi rendition="#b #i"><seg xml:id="topic_1" ana="#exact_reproduction" type="topic" resp="#claude">Reproduction parfaite du jeu des grands <sic>maitres</sic></seg></hi>
+        </hi></ab>
+      </div>
+      <div facs="#zone_prices">
+        <ab>
+          <lb/><hi rendition="#c #b #larger">QUELQUES PRIX!...</hi>
+          <lb/><hi rendition="#b">PIANO DROIT ............ <del rend="strikethrough">19.000</del> ............ 13.000</hi>
+          <lb/><hi rendition="#b">PIANO À QUEUE .......... <del rend="strikethrough">28.800</del> ............ 20.000</hi>
+        </ab>
+      </div>
+      <div facs="#zone_payment">
+        <ab><hi rendition="#c #b #g"><lb/><seg xml:id="topic_2" ana="#affordability" type="topic" resp="#claude">GRANDES FACILITÉS DE PAIEMENT</seg></hi></ab>
+      </div>
+      <div type="illustration" facs="#zone_mark">
+        <figure><desc>Monogram "ABC" in a lozenge (mark at the lower right)</desc></figure>
+      </div>
+    </body>
+  </text>
+</TEI>

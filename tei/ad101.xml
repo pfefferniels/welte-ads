@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Rigasche Rundschau"</title>
+        <title type="sub">February 9, 1909</title>
+        <author>
+          <orgName key="zimmermann">Jul. Heinr. Zimmermann</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Das Meisterspiel-Wiedergabeklavier „MIGNON“ … Herr Frédéric Lamond schreibt über Mignon</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Das Meisterspiel-Wiedergabeklavier „MIGNON“ … Herr Frédéric Lamond schreibt über Mignon</title>
+            <author><orgName>Jul. Heinr. Zimmermann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Rigasche Rundschau</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/456172">Riga</pubPlace>
+            <date type="publication" when="1909-02-09">1909</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Rigasche Rundschau</title>
+            <biblScope unit="issue">Nr. 21, Dienstag, 27 January (9 February) 1909</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The page is dated by the Julian calendar (Dienstag, den 27. Januar
+              1909); <att>when</att> gives the Gregorian date. The opening paragraph
+              repeats Zimmermann's advertisement of September 1908; the testimonial
+              is new.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Latvia (through Europeana)</repository>
+            <idno>
+              <idno type="URLImages">https://www.europeana.eu/item/9200303/BibliographicResource_3000059905652</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="de">German</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad101-0.jpg" width="2260px" height="3216px"/>
+      <graphic type="IIIF" url="https://iiif.europeana.eu/image/MVZI3G3DIRGOZSZN5HJXMQR6P3HIFUIN5KZALIB7PNWYVLS64YQQ/presentation_images/184de450-0325-11e6-95c4-fa163e60dd72/node-1/image/NLL/Rigasche_Rundschau/1909/01/27/pa001_riru1909n021_004/full/full/0/default.jpg" width="2260px" height="3216px"/>
+      <zone points="262,320 800,320 800,462 262,462" xml:id="zone_headline"/>
+      <zone points="260,466 800,466 800,556 260,556" xml:id="zone_maker"/>
+      <zone points="260,558 800,558 800,603 260,603" xml:id="zone_wonder"/>
+      <zone points="260,605 800,605 800,719 260,719" xml:id="zone_artists"/>
+      <zone points="260,720 700,720 700,750 260,750" xml:id="zone_testimonial_head"/>
+      <zone points="288,751 802,751 802,929 288,929" xml:id="zone_testimonial"/>
+      <zone points="265,930 804,930 804,1062 265,1062" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c"><lb/><hi rendition="#b">Das Meisterspiel-Wiedergabeklavier</hi>
+          <lb/><hi rendition="#in">„<name type="brand">MIGNON</name>“</hi></hi></head>
+      </div>
+      <div facs="#zone_maker">
+        <p><lb/>ist von einer speciell in der Konstruktion der elektro-
+          <lb/>pneumatischen Werke seit vielen Jahren berühmten
+          <lb/>Fabrik — <hi rendition="#b"><orgName>M. WELTE &amp; SÖHNE</orgName></hi> in <placeName>Freiburg</placeName> und
+          <lb/><placeName>New-York</placeName>, gebaut.</p>
+      </div>
+      <div facs="#zone_wonder">
+        <ab><hi rendition="#c #b #larger"><lb/><seg xml:id="topic_1" ana="#miracle" type="topic" resp="#claude">Es ist ein wahres Wunder der Welt</seg></hi></ab>
+      </div>
+      <div facs="#zone_artists">
+        <p><lb/>Künstler von Weltruf, die <hi rendition="#b"><name type="brand">MIGNON</name></hi> gehört und
+          <lb/>die auch selbst eine grosse Anzahl Piècen für den
+          <lb/>Apparat gespielt haben, spenden demselben ihr höchstes
+          <lb/>Lob und <seg xml:id="topic_2" ana="#superiority" type="topic" resp="#claude">bezeichnen ihn als das <hi rendition="#b">Vollendetste,</hi> was
+          <lb/>bisher existiert</seg>.</p>
+      </div>
+      <div facs="#zone_testimonial_head">
+        <ab><lb/>Herr <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/116662166">Frédéric Lamond</persName></hi> schreibt über <name type="brand">Mignon</name>:</ab>
+      </div>
+      <div facs="#zone_testimonial">
+        <quote type="testimonial">
+          <p><lb/>Ich sehe den „<name type="brand">MIGNON</name>“-Apparat <seg xml:id="topic_3" ana="#miracle" type="topic" resp="#claude">als das grösste Wunder
+            <lb/>der Jetztzeit</seg> an. Er ist in jeder Hinsicht über alles Lob
+            <lb/>erhaben und <seg xml:id="topic_4" ana="#immortality" type="topic" resp="#claude">es ist nur zu bedauern, dass diese Erfindung
+            <lb/>nicht siebzig Jahre früher gemacht wurde, als die beiden
+            <lb/>grossen Klaviermeister <persName type="composer" corresp="https://d-nb.info/gnd/118520539">Chopin</persName> und <persName type="composer" corresp="https://d-nb.info/gnd/118573527">Liszt</persName> auf der Höhe
+            <lb/>ihrer Kunst waren</seg>. Der „<name type="brand">MIGNON</name>“-Apparat erweckt die
+            <lb/>kühnsten Hoffnungen für die künftigen Generationen
+            <lb/>sowie für den Pianisten der Zukunft.</p>
+        </quote>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#smaller">Bereitwilligste Vorführung beim Alleinvertreter</hi>
+          <lb/><hi rendition="#in #b"><orgName>Jul. Heinr. Zimmermann</orgName>,</hi>
+          <lb/><address><addrLine><placeName>Riga</placeName>, Scheunenstrasse № 15.</addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Rotterdamsch Nieuwsblad"</title>
+        <title type="sub">September 11, 1924</title>
+        <author>
+          <orgName key="quispel">C. Quispel</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>ESTEY-WELTE Reproductie Piano’s</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">ESTEY-WELTE Reproductie Piano’s</title>
+            <author><orgName>C. Quispel</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Rotterdamsch Nieuwsblad</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1924-09-11">1924</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Rotterdamsch Nieuwsblad</title>
+            <biblScope unit="issue">September 11, 1924, No. 14255</biblScope>
+            <biblScope unit="pages">20</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010495147:mpeg21:a0136</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad063-0.jpg" width="4157px" height="5948px"/>
+      <zone points="1304,4061 2221,4061 2221,4158 1304,4158" xml:id="zone_headline"/>
+      <zone points="1580,4180 1942,4180 1942,4218 1580,4218" xml:id="zone_subhead"/>
+      <zone points="2225,4175 2336,4175 2336,4207 2225,4207" xml:id="zone_number"/>
+      <zone points="1310,4201 1464,4201 1464,4424 1310,4424" xml:id="zone_picture"/>
+      <zone points="1776,4220 2336,4220 2336,4422 1776,4422" xml:id="zone_signature"/>
+      <zone points="1306,4452 2335,4452 2335,4504 1306,4504" xml:id="zone_terms"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in"><lb/><name type="brand">ESTEY-WELTE</name></hi></head>
+      </div>
+      <div facs="#zone_subhead">
+        <ab><hi rendition="#c #b #smaller"><lb/>Reproductie Piano’s</hi></ab>
+      </div>
+      <div facs="#zone_number">
+        <ab><hi rendition="#right #smaller"><lb/>49603 40</hi></ab>
+      </div>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>Monogram of the interlaced letters S and T in an oval</desc></figure>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#right"><lb/>Vertegenwoordiger:
+          <lb/><hi rendition="#b #larger #g"><orgName>C. QUISPEL</orgName></hi>
+          <lb/><hi rendition="#b #smaller">PIANOFABRIKANT,</hi>
+          <lb/><hi rendition="#b"><address><addrLine>Goudschesingel 3, Rotterdam.</addrLine></address></hi></hi></ab>
+      </div>
+      <div facs="#zone_terms">
+        <ab><hi rendition="#c #b #g"><lb/><seg xml:id="topic_1" ana="#affordability" type="topic" resp="#claude">Vraagt onze speciale Aankoop Voorwaarden.</seg></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

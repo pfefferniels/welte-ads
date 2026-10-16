@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Berlingske Politiske og Avertissementstidende"</title>
+        <title type="sub">December 16, 1919</title>
+        <author>
+          <orgName key="winther">A/S. Chr. Winther</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Welte Mignon, Verdens fineste Kunstspilapparat – Puccini skriver</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte Mignon, Verdens fineste Kunstspilapparat – Puccini skriver</title>
+            <author><orgName>A/S. Chr. Winther</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Berlingske Politiske og Avertissementstidende</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2618425">København</pubPlace>
+            <date type="publication" when="1919-12-16">1919</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Berlingske Politiske og Avertissementstidende</title>
+            <biblScope unit="issue">No. 350, evening edition (Aften), December 16, 1919</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Mediestream (Royal Danish Library)</repository>
+            <idno>
+              <idno type="URLImages">https://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3A3a12e98f-ec2d-41fe-a0c5-5a0687b2a238</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="da">Danish</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad089-0.jpg" width="4844px" height="6648px"/>
+      <zone points="3613,5532 4170,5532 4170,5642 3613,5642" xml:id="zone_headline"/>
+      <zone points="3574,5644 4196,5644 4196,5718 3574,5718" xml:id="zone_subhead"/>
+      <zone points="3601,5720 4178,5720 4178,5778 3601,5778" xml:id="zone_steinway"/>
+      <zone points="3603,5821 4171,5821 4171,6067 3603,6067" xml:id="zone_testimonial"/>
+      <zone points="3574,6110 4185,6110 4185,6185 3574,6185" xml:id="zone_prospekt"/>
+      <zone points="3628,6187 4137,6187 4137,6256 3628,6256" xml:id="zone_signature"/>
+      <zone points="3574,6258 4190,6258 4190,6342 3574,6342" xml:id="zone_address"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in"><lb/><name type="brand">Welte Mignon</name>,</hi></head>
+      </div>
+      <div facs="#zone_subhead">
+        <ab><hi rendition="#c"><lb/><seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">Verdens fineste Kunstspilapparat</seg>
+          <lb/>til Gengivelse af Kunstnerens Spil.</hi></ab>
+      </div>
+      <div facs="#zone_steinway">
+        <ab><hi rendition="#c #b"><lb/>Indbygget i <name type="brand">Steinway</name>.</hi></ab>
+      </div>
+      <div facs="#zone_testimonial">
+        <ab><lb/><hi rendition="#b"><persName type="composer" corresp="https://d-nb.info/gnd/118596942"><unclear>Ciaconio</unclear> Puccini</persName></hi> skriver:
+          <quote type="testimonial">
+            <lb/>Jeg var virkelig forbavset,
+            <lb/>da jeg hørte ›<name type="brand">Welte Mignon</name>‹.
+            <lb/>Den <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">gengiver <seg xml:id="topic_3" ana="#personality" type="topic" resp="#claude">Kunstnerens
+            <lb/>Ejendommelighed</seg> paa den
+            <lb/>mest fuldkomne Maade</seg>.
+          </quote></ab>
+      </div>
+      <div facs="#zone_prospekt">
+        <ab><hi rendition="#c #b"><lb/>Forlang Prospekt.
+          <lb/>Forevises uden Købetvang.</hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c #b #in"><lb/><orgName>A/S. Chr. Winther</orgName></hi></ab>
+      </div>
+      <div facs="#zone_address">
+        <ab><hi rendition="#c #b"><address><lb/><addrLine>Gothersgade 2, Telf. Palæ 229<unclear>8</unclear></addrLine>
+          <lb/><addrLine>Lige overf. <orgName>Wilh. Hansens Musikforl.</orgName></addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

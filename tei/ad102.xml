@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Rigasche Rundschau"</title>
+        <title type="sub">March 17, 1909</title>
+        <author>
+          <orgName key="zimmermann">Jul. Heinr. Zimmermann</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Das Reproduktions-Piano Welte-Mignon … Wiener Konservatorium</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Das Reproduktions-Piano Welte-Mignon … Wiener Konservatorium</title>
+            <author><orgName>Jul. Heinr. Zimmermann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Rigasche Rundschau</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/456172">Riga</pubPlace>
+            <date type="publication" when="1909-03-17">1909</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Rigasche Rundschau</title>
+            <biblScope unit="issue">Nr. 51, Mittwoch, 4 (17) March 1909</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The page is dated by the Julian calendar (Mittwoch, den 4. März
+              1909); <att>when</att> gives the Gregorian date. The hyphen in
+              "Reproduktions-Piano" is printed as a double hyphen.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Latvia (through Europeana)</repository>
+            <idno>
+              <idno type="URLImages">https://www.europeana.eu/item/9200303/BibliographicResource_3000059905820</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="de">German</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad102-0.jpg" width="2280px" height="3224px"/>
+      <graphic type="IIIF" url="https://iiif.europeana.eu/image/RBMW76OYQQRCCCBC6DISVIAWXPTPGR7REVUXOQZ3OC2L6AMQWN7A/presentation_images/5c13f070-0326-11e6-95c4-fa163e60dd72/node-1/image/NLL/Rigasche_Rundschau/1909/03/04/pa001_riru1909n051_004/full/full/0/default.jpg" width="2280px" height="3224px"/>
+      <zone points="560,278 1216,278 1216,326 560,326" xml:id="zone_headline"/>
+      <zone points="350,348 766,348 766,690 350,690" xml:id="zone_picture"/>
+      <zone points="876,346 1314,346 1314,574 876,574" xml:id="zone_brand"/>
+      <zone points="784,596 1400,596 1400,682 784,682" xml:id="zone_text"/>
+      <zone points="522,688 1236,688 1236,736 522,736" xml:id="zone_conservatory"/>
+      <zone points="400,738 1356,738 1356,796 400,796" xml:id="zone_achievement"/>
+      <zone points="400,798 1346,798 1346,972 400,972" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #larger"><lb/>Das Reproduktions-Piano</hi></head>
+      </div>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>The Welte-Mignon cabinet player (Vorsetzer)</desc></figure>
+      </div>
+      <div facs="#zone_brand">
+        <head><hi rendition="#c #b #in"><lb/><name type="brand">Welte-
+          <lb/>Mignon</name></hi></head>
+      </div>
+      <div facs="#zone_text">
+        <ab><hi rendition="#c"><lb/>wurde soeben vom k. k. österreichischen Ministerium für
+          <lb/>Kultus und Unterricht <seg xml:id="topic_1" ana="#educational_use" type="topic" resp="#claude">zu <hi rendition="#b">pädagogischen Zwecken</hi></seg>
+          <lb/>für das</hi></ab>
+      </div>
+      <div facs="#zone_conservatory">
+        <ab><hi rendition="#c #larger #g"><lb/><orgName>Wiener Konservatorium</orgName></hi></ab>
+      </div>
+      <div facs="#zone_achievement">
+        <ab><hi rendition="#c"><lb/>angekauft. Ein glänzender Beweis für die <seg xml:id="topic_2" ana="#superiority" type="topic" resp="#claude"><hi rendition="#b">unerreichten Leistungen</hi> unseres
+          <lb/>Instrumentes in <hi rendition="#b">künstlerischer Beziehung.</hi></seg></hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#smaller">Bereitwilligste Vorführung beim Alleinvertreter</hi>
+          <lb/><hi rendition="#in #b"><orgName>Jul. Heinr. Zimmermann</orgName>,</hi>
+          <lb/><address><addrLine><placeName>Riga</placeName>, Scheunenstrasse № 15.</addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

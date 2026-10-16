@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Berlingske Politiske og Avertissementstidende"</title>
+        <title type="sub">April 1 and May 1, 1912</title>
+        <author>
+          <orgName key="winther">Chr. Winther</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Welte-Pianon Reproduktions-Klaven</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte-Pianon Reproduktions-Klaven</title>
+            <author><orgName>Chr. Winther</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Berlingske Politiske og Avertissementstidende</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2618425">København</pubPlace>
+            <date type="publication" when="1912-04-01">1912</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Berlingske Politiske og Avertissementstidende</title>
+            <biblScope unit="issue">No. 78, evening edition (Aften), April 1, 1912</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Mediestream (Royal Danish Library)</repository>
+            <idno>
+              <idno type="URLImages">https://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3A2dabeec2-db46-43a2-b56d-914d10a784d4</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Welte-Pianon Reproduktions-Klaven</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte-Pianon Reproduktions-Klaven</title>
+            <author><orgName>Chr. Winther</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Berlingske Politiske og Avertissementstidende</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2618425">København</pubPlace>
+            <date type="publication" when="1912-05-01">1912</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Berlingske Politiske og Avertissementstidende</title>
+            <biblScope unit="issue">No. 102, evening edition (Aften), May 1, 1912</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The same setting; this printing reads “Tryk”.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Mediestream (Royal Danish Library)</repository>
+            <idno>
+              <idno type="URLImages">https://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3A72d5c28e-bc43-4e59-9c43-200cd69b7270</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="da">Danish</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad086-0.jpg" width="5521px" height="7678px"/>
+      <zone points="4704,5014 5137,5014 5137,5081 4704,5081" xml:id="zone_headline"/>
+      <zone points="4723,5083 5140,5083 5140,5116 4723,5116" xml:id="zone_subhead"/>
+      <zone points="4571,5117 5279,5117 5279,5251 4571,5251" xml:id="zone_text"/>
+      <zone points="4573,5252 5280,5252 5280,5387 4573,5387" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in"><lb/><name type="brand">Welte-Pianon</name></hi></head>
+      </div>
+      <div facs="#zone_subhead">
+        <ab><hi rendition="#c"><lb/>Reproduktions-<sic>Klaven</sic>,</hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <ab><lb/>byder Muligheden <hi rendition="#b">at høre Verdens
+          <lb/>første Pianister <seg xml:id="topic_1" ana="#home" type="topic" resp="#claude">i Ens eget Hjem</seg>.</hi>
+          <lb/><seg xml:id="topic_2" ana="#touch_of_a_button" type="topic" resp="#claude">Et <app><rdg source="#source_1"><sic>Trvk</sic></rdg><rdg source="#source_2">Tryk</rdg></app> paa Knappen</seg>, og der gengives
+          <lb/>en <hi rendition="#b #g"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Albert</persName> <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116429623">Reisenauer</persName></hi> etc.</ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/>Eneforhandler for Danmark:
+          <lb/>Piano- og Orgel-Fabrikant
+          <lb/><hi rendition="#b"><orgName>Chr. Winther</orgName>,</hi> <address><addrLine>Frederiksborggade 36,</addrLine>
+          <lb/><addrLine>›Nørrehus‹, Kjøbenhavn.</addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

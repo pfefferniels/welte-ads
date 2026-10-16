@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "København", "Dagbladet" and "Nationaltidende"</title>
+        <title type="sub">August to September 1925</title>
+        <author>
+          <orgName key="winther">A/S Chr. Winther</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Kunstspil-instrumenterne Welte Mignon</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Kunstspil-instrumenterne Welte Mignon</title>
+            <author><orgName>A/S Chr. Winther</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>København</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2618425">København</pubPlace>
+            <date type="publication" when="1925-09-13">1925</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">København</title>
+            <biblScope unit="issue">No. 253, Sunday morning (Søndag Morgen), September 13, 1925</biblScope>
+            <biblScope unit="pages">12</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Mediestream (Royal Danish Library)</repository>
+            <idno>
+              <idno type="URLImages">https://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3A1df2fa3a-df18-42a9-84da-1e297cdcdfa2</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Kunstspil-instrumenterne Welte Mignon</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Kunstspil-instrumenterne Welte Mignon</title>
+            <author><orgName>A/S Chr. Winther</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Dagbladet</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2618425">København</pubPlace>
+            <date type="publication" when="1925-08-19">1925</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Dagbladet</title>
+            <biblScope unit="issue">August 19, 1925</biblScope>
+            <biblScope unit="pages">13</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The same logo design (checked in a reduced view).</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Mediestream (Royal Danish Library)</repository>
+            <idno>
+              <idno type="URLImages">https://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3Afa531a61-bd1e-4b5f-9682-c5cda0f944c2</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Kunstspil-instrumenterne Welte Mignon</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Kunstspil-instrumenterne Welte Mignon</title>
+            <author><orgName>A/S Chr. Winther</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nationaltidende</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2618425">København</pubPlace>
+            <date type="publication" when="1925-09-04">1925</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nationaltidende</title>
+            <biblScope unit="issue">evening edition, September 4, 1925</biblScope>
+            <biblScope unit="pages">7</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The same logo design (checked in a reduced view).</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Mediestream (Royal Danish Library)</repository>
+            <idno>
+              <idno type="URLImages">https://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3Ad77989e0-5da4-4346-8c9d-bb1daef97b82</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="da">Danish</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad098-0.jpg" width="5187px" height="6630px"/>
+      <zone points="212,4262 655,4262 655,4332 608,4332 608,4402 546,4402 546,4442 500,4442 500,4487 331,4487 331,4514 212,4514" xml:id="zone_logo"/>
+      <zone points="609,4333 848,4333 848,4393 609,4393" xml:id="zone_address"/>
+      <zone points="547,4405 770,4405 770,4477 502,4477 502,4443 547,4443" xml:id="zone_text"/>
+      <zone points="332,4489 834,4489 834,4563 332,4563" xml:id="zone_brand"/>
+      <zone points="324,4566 838,4566 838,4628 324,4628" xml:id="zone_text2"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_logo">
+        <ab><hi rendition="#i #b"><lb/><orgName><hi rendition="#smaller">A/S</hi>
+          <lb/><hi rendition="#in">Chr. Winther</hi></orgName></hi></ab>
+      </div>
+      <div facs="#zone_address">
+        <ab><hi rendition="#i"><address><lb/><addrLine>Frederiksborgg. 36</addrLine>
+          <lb/><addrLine>Nørrehus.</addrLine></address></hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <ab><hi rendition="#c"><lb/>Kunstspil-
+          <lb/>instrumenterne</hi></ab>
+      </div>
+      <div facs="#zone_brand">
+        <ab><hi rendition="#c #b #in"><lb/><name type="brand">Welte Mignon</name> og <gap reason="irrelevant"><desc resp="#claude">name of the other product (Ducanola)</desc></gap></hi></ab>
+      </div>
+      <div facs="#zone_text2">
+        <ab><hi rendition="#c #b"><lb/>er <seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">ubetinget de fineste og mest frem-
+          <lb/>ragende Kunstspilapparater</seg>,</hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

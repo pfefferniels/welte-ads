@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Nationaltidende" and "Berlingske Politiske og Avertissementstidende"</title>
+        <title type="sub">October to November 1921</title>
+        <author>
+          <orgName key="winther">A/S Chr. Winther</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Brugt Welte Mignon Flygel</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Brugt Welte Mignon Flygel</title>
+            <author><orgName>A/S Chr. Winther</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nationaltidende</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2618425">København</pubPlace>
+            <date type="publication" when="1921-10-10">1921</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nationaltidende</title>
+            <biblScope unit="issue">No. 15881, evening edition (Aften-Udgave), October 10, 1921</biblScope>
+            <biblScope unit="pages">2</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Mediestream (Royal Danish Library)</repository>
+            <idno>
+              <idno type="URLImages">https://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3A239abe42-c871-43be-9664-dcb8ef1eba6d</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Brugt Welte Mignon Flygel</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Brugt Welte Mignon Flygel</title>
+            <author><orgName>A/S Chr. Winther</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nationaltidende</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2618425">København</pubPlace>
+            <date type="publication" when="1921-10-20">1921</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nationaltidende</title>
+            <biblScope unit="issue">evening edition, October 20, 1921</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Mediestream (Royal Danish Library)</repository>
+            <idno>
+              <idno type="URLImages">https://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3A7390b12c-fe27-4aa7-8817-ed3a2c5868f2</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Brugt Welte Mignon Flygel</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Brugt Welte Mignon Flygel</title>
+            <author><orgName>A/S Chr. Winther</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nationaltidende</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2618425">København</pubPlace>
+            <date type="publication" when="1921-11-10">1921</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nationaltidende</title>
+            <biblScope unit="issue">evening edition, November 10, 1921</biblScope>
+            <biblScope unit="pages">2</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Mediestream (Royal Danish Library)</repository>
+            <idno>
+              <idno type="URLImages">https://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3Aff767433-14d2-40f6-89fc-81e64d9fa067</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>Brugt Welte Mignon Flygel</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Brugt Welte Mignon Flygel</title>
+            <author><orgName>A/S Chr. Winther</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Berlingske Politiske og Avertissementstidende</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2618425">København</pubPlace>
+            <date type="publication" when="1921-11-26">1921</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Berlingske Politiske og Avertissementstidende</title>
+            <biblScope unit="issue">evening edition (Aften), November 26, 1921</biblScope>
+            <biblScope unit="pages">2</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Mediestream (Royal Danish Library)</repository>
+            <idno>
+              <idno type="URLImages">https://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3A0184b707-497c-492d-b948-6fd13408a383</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="da">Danish</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad092-0.jpg" width="4787px" height="6953px"/>
+      <zone points="1186,695 1450,695 1450,866 1186,866" xml:id="zone_headline"/>
+      <zone points="1521,727 1787,727 1787,925 1521,925" xml:id="zone_side"/>
+      <zone points="1193,926 1793,926 1793,1222 1193,1222" xml:id="zone_text"/>
+      <zone points="1196,1225 1794,1225 1794,1356 1196,1356" xml:id="zone_text2"/>
+      <zone points="1248,1360 1739,1360 1739,1490 1248,1490" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#b #in"><lb/>Brugt <name type="brand">Welte
+          <lb/>Mignon</name> Flygel</hi></head>
+      </div>
+      <div facs="#zone_side">
+        <ab><hi rendition="#c"><hi rendition="#b"><lb/><name type="brand">Steinway</name>
+          <lb/>Salon</hi>
+          <lb/><seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">Verdens fineste
+          <lb/>Kunstspilapparat</seg>
+          <lb/><hi rendition="#b">anbefalet af
+          <lb/>alle</hi> Nutidens</hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/>største Musiknavne, haves paa Lager
+          <lb/>og sælges med <hi rendition="#b">fuldtud betryg-
+          <lb/>gende Garanti.</hi> Instrumentet er
+          <lb/>fuldstændig som nyt, og der kan er-
+          <lb/>holdes et Repertoire omfattende saa-
+          <lb/>vel alle Klassikerne indspillet af
+          <lb/>Verdens betydeligste Virtuoser, som
+          <lb/><seg xml:id="topic_2" ana="#popular" type="topic" resp="#claude">Øjeblikkets kendte og populære
+          <lb/><seg xml:id="topic_3" ana="#dance" type="topic" resp="#claude">Danse</seg></seg>.</p>
+      </div>
+      <div facs="#zone_text2">
+        <p><lb/>Instrumentet demonstreres og fore-
+          <lb/>vises daglig og indbyder vi alle Mu-
+          <lb/>sikinteresserede til et Besøg i vort
+          <lb/>Magasin.</p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#b #in"><orgName>A/S Chr. Winther</orgName>,</hi>
+          <lb/><hi rendition="#b"><address><addrLine>Frederiksborggade 36.</addrLine></address></hi>
+          <lb/>Grundl. 1885.</hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
