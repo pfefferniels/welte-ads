@@ -7,16 +7,13 @@ import theme from "../../theme"
 import { runsOf, smoothedMentions, smoothedShare } from "../../lib/artists"
 import type { ArtistTimeline, YearTotal } from "../../lib/artists"
 
-export interface Artist extends ArtistTimeline {
+interface Artist extends ArtistTimeline {
   name: string
 }
 
 interface Props {
   years: YearTotal[]
   artists: Artist[]
-  // all artists, also those not shown, so that a band keeps its thickness
-  // when the selection changes
-  scaleArtists: Artist[]
   // the width of the kernel, in years
   h: number
 }
@@ -52,7 +49,7 @@ const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? '' : 's'}`
 const meanYear = (artist: Artist) =>
   artist.years.reduce((sum, y) => sum + y.year * y.mentions, 0) / artist.mentions
 
-export default function ArtistsChart({ years, artists, scaleArtists, h }: Props) {
+export default function ArtistsChart({ years, artists, h }: Props) {
   const [active, setActive] = useState<{ artist: Artist; year: number } | null>(null)
 
   const runs = useMemo(() => runsOf(years), [years])
@@ -60,13 +57,13 @@ export default function ArtistsChart({ years, artists, scaleArtists, h }: Props)
 
   // the smoothed shares and mentions of every artist, from the start of each
   // run to its end
-  const curves = useMemo(() => new Map(scaleArtists.map(artist => [artist.id, runs.map(([from, to]) => {
+  const curves = useMemo(() => new Map(artists.map(artist => [artist.id, runs.map(([from, to]) => {
     const points: Point[] = []
     for (let t = from - 0.5; t <= to + 0.5 + 1e-9; t += STEP) {
       points.push([t, smoothedShare(artist, years, h, t), smoothedMentions(artist, h, t)])
     }
     return points
-  })])), [scaleArtists, runs, years, h])
+  })])), [artists, runs, years, h])
 
   const all = Array.from(curves.values()).flat(2)
   const max = all.reduce((m, [, share]) => Math.max(m, share), 0)

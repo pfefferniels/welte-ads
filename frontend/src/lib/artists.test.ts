@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { artistTimelines, bandwidth, runsOf, smoothedMentions, smoothedShare } from "./artists"
+import { artistTimelines, bandwidth, headOf, runsOf, smoothedMentions, smoothedShare } from "./artists"
 import { getAllMetadata } from "./tei"
 
 describe("artistTimelines", () => {
@@ -73,5 +73,25 @@ describe("runsOf", () => {
     expect(runsOf(years)).toEqual([[1905, 1907], [1913, 1913], [1919, 1919], [1923, 1923]])
     expect(runsOf(years.slice(3))).toEqual([[1919, 1919], [1923, 1923]])
     expect(runsOf([1919, 1922].map(year => ({ year, ads: 1, mentions: 1 })))).toEqual([[1919, 1922]])
+  })
+})
+
+describe("headOf", () => {
+  it("keeps the values above the mean of a heavy-tailed distribution", () => {
+    const head = headOf([1, 1, 1, 1, 1, 2, 2, 3, 8, 20])!
+    expect(head.mean).toBe(4)
+    expect([1, 3, 4, 5, 20].filter(head.isHead)).toEqual([5, 20])
+  })
+
+  it("refuses a distribution without a small head", () => {
+    expect(headOf([1, 2, 3, 4])).toBeNull()
+  })
+
+  it("finds a head among the artists of the collection", () => {
+    const counts = artistTimelines(getAllMetadata()).artists.map(a => a.mentions)
+    const head = headOf(counts)!
+    expect(head).not.toBeNull()
+    expect(head.isHead(Math.max(...counts))).toBe(true)
+    expect(head.isHead(1)).toBe(false)
   })
 })

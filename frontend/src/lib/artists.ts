@@ -117,6 +117,18 @@ export function bandwidth(ads: Ad[]): number {
   return WIDTHS[fits.indexOf(Math.max(...fits))]
 }
 
+/**
+ * The head of a heavy-tailed distribution, as head/tail breaks find it
+ * (Jiang 2013): the values above the mean. The division only applies where
+ * the head is a minority (here: less than 40 per cent), as it is when there
+ * are far more small values than large ones.
+ */
+export function headOf(values: number[]): { mean: number; isHead: (value: number) => boolean } | null {
+  const mean = values.reduce((sum, v) => sum + v, 0) / values.length
+  const head = values.filter(v => v > mean).length
+  return head / values.length < 0.4 ? { mean, isHead: (value: number) => value > mean } : null
+}
+
 /** The spans of years with ads, broken where three or more years passed
  * without an ad. */
 export function runsOf(years: YearTotal[]): [number, number][] {

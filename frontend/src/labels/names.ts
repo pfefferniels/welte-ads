@@ -50,6 +50,7 @@ export const names = {
     "https://d-nb.info/gnd/1080980598": "Śliwiński, Józef",
     "https://d-nb.info/gnd/11728534X": "Wendling, Karl",
     "https://d-nb.info/gnd/1126196894": "Boyle, George F.",
+    "https://d-nb.info/gnd/116753722": "Hertz, Alfred",
     "https://d-nb.info/gnd/134807359": "La Forge, Frank",
     "https://d-nb.info/gnd/137141823": "Novaes, Guiomar",
     "https://d-nb.info/gnd/118695312": "Glazunov, Alexander",
