@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Algemeen Handelsblad", "Het Vaderland" and "Arnhemsche Courant"</title>
+        <title type="sub">June to July 1918</title>
+        <author>
+          <orgName key="dupont">Henri C. Dupont &amp; Co.</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>GELEGENHEIDSKOOP Van een zoo goed als nieuwe Kunstspel-Piano „Welte-Mignon”</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">GELEGENHEIDSKOOP Van een zoo goed als nieuwe Kunstspel-Piano „Welte-Mignon”</title>
+            <author><orgName>Henri C. Dupont &amp; Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Algemeen Handelsblad</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2759794">Amsterdam</pubPlace>
+            <date type="publication" when="1918-06-19">1918</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Algemeen Handelsblad</title>
+            <biblScope unit="issue">June 19, 1918, evening edition, No. 29184</biblScope>
+            <biblScope unit="pages">8</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010653292:mpeg21:a0061</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>GELEGENHEIDSKOOP Van een zoo goed als nieuwe Kunstspel-Piano „Welte-Mignon”</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">GELEGENHEIDSKOOP Van een zoo goed als nieuwe Kunstspel-Piano „Welte-Mignon”</title>
+            <author><orgName>Henri C. Dupont &amp; Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Het Vaderland</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747373">'s-Gravenhage</pubPlace>
+            <date type="publication" when="1918-07-03">1918</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Het Vaderland</title>
+            <biblScope unit="issue">July 3, 1918, No. 182</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Not inspected on the scan; the OCR gives the same wording.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMKB23:001521005:mpeg21:a00172</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>GELEGENHEIDSKOOP Van een zoo goed als nieuwe Kunstspel-Piano „Welte-Mignon”</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">GELEGENHEIDSKOOP Van een zoo goed als nieuwe Kunstspel-Piano „Welte-Mignon”</title>
+            <author><orgName>Henri C. Dupont &amp; Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Arnhemsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2759661">Arnhem</pubPlace>
+            <date type="publication" when="1918-07-17">1918</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Arnhemsche Courant</title>
+            <biblScope unit="issue">July 17, 1918, No. 9826</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Same wording; looked at on the scan at low resolution only.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMKB08:000108057:mpeg21:a0021</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad051-0.jpg" width="5042px" height="6614px"/>
+      <zone points="3925,966 4840,966 4840,1040 3925,1040" xml:id="zone_headline"/>
+      <zone points="3830,1043 4912,1043 4912,1196 3830,1196" xml:id="zone_offer"/>
+      <zone points="3785,1198 4945,1198 4945,1320 3785,1320" xml:id="zone_text"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in"><lb/>GELEGENHEIDSKOOP</hi></head>
+      </div>
+      <div facs="#zone_offer">
+        <ab><hi rendition="#c #b">
+          <hi rendition="#smaller"><lb/>Van een zoo goed als nieuwe</hi>
+          <hi rendition="#in"><lb/>Kunstspel-Piano „<name type="brand">Welte-Mignon</name>”</hi>
+          <hi rendition="#smaller"><lb/>(speelt door <seg xml:id="topic_1" ana="#technical_invention" type="topic" resp="#claude">electrische beweegkracht</seg>)</hi>
+        </hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <ab><lb/>met motor, 62 muziekrollen en rollenkast. Voor billijken prijs <hi rendition="#sup">aan-</hi>
+          <lb/>geboden door en te bezichtigen bij <orgName>HENRI C. DUPONT &amp; Co.</orgName>,
+          <lb/>Pianohandel <placeName>Nijmegen</placeName>. <hi rendition="#right">(33054)</hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

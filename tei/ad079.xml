@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Morgenbladet"</title>
+        <title type="sub">June 27 to 28, 1908</title>
+        <author>
+          <orgName key="grondahl">Grøndahl</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Mignon Soiré</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Mignon Soiré</title>
+            <author><orgName>Grøndahl</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Morgenbladet</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3143244">Kristiania</pubPlace>
+            <date type="publication" when="1908-06-27">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Morgenbladet</title>
+            <biblScope unit="issue">June 27, 1908, No. 362</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>A dealer's demonstration of the "Reproduktionsklaver Mignon" on
+              Monday, June 29, 1908; the name Welte is not printed.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Nasjonalbiblioteket</repository>
+            <idno>
+              <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_morgenbladet_null_null_19080627_90_362_2</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Mignon Soiré</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Mignon Soiré</title>
+            <author><orgName>Grøndahl</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Morgenbladet</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3143244">Kristiania</pubPlace>
+            <date type="publication" when="1908-06-28">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Morgenbladet</title>
+            <biblScope unit="issue">June 28, 1908, No. 363</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Compared with the first printing only through the library's OCR,
+              which has the same text.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Nasjonalbiblioteket</repository>
+            <idno>
+              <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_morgenbladet_null_null_19080628_90_363_1</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="no">Norwegian (Dano-Norwegian)</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad079-0.jpg" width="7033px" height="11211px"/>
+      <graphic type="IIIF" url="https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_morgenbladet_null_null_19080627_90_362_2-1_003_null/full/full/0/default.jpg" width="7033px" height="11211px"/>
+      <zone points="3128,7322 3956,7322 3956,7442 3128,7442" xml:id="zone_headline"/>
+      <zone points="3235,7492 3862,7492 3862,7552 3235,7552" xml:id="zone_date"/>
+      <zone points="3308,7576 3722,7576 3722,7984 3308,7984" xml:id="zone_programme"/>
+      <zone points="3198,8000 3878,8000 3878,8058 3198,8058" xml:id="zone_admission"/>
+      <zone points="3128,8078 3956,8078 3956,8436 3128,8436" xml:id="zone_note"/>
+      <zone points="3128,8466 3956,8466 3956,8632 3128,8632" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in"><lb/><name type="brand">Mignon</name> Soiré</hi></head>
+      </div>
+      <div facs="#zone_date">
+        <ab><hi rendition="#c"><lb/>Mandag 29de Kl. 6—7.</hi></ab>
+      </div>
+      <div facs="#zone_programme">
+        <ab><hi rendition="#c"><lb/><hi rendition="#b">Program:</hi>
+          <hi rendition="#larger"><lb/><persName type="composer" corresp="https://d-nb.info/gnd/118573527">Liszt</persName>
+          <lb/><persName type="composer" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>
+          <lb/><persName type="composer" corresp="https://d-nb.info/gnd/117401234">Sinding</persName></hi>
+          <lb/>m. fl.</hi></ab>
+      </div>
+      <div facs="#zone_admission">
+        <ab><hi rendition="#c"><lb/>Adgang for Interesserede.</hi></ab>
+      </div>
+      <div facs="#zone_note">
+        <p><lb/>Mærk: Samtlige Composi-
+          <lb/>tioner udføres paa Reproduk-
+          <lb/>tionsklaver <hi rendition="#b"><name type="brand">Mignon</name></hi>, der <seg xml:id="topic_1" ana="#exact_reproduction" type="topic" resp="#claude">gjen-
+          <lb/>giver selvstændig Virtuosernes
+          <lb/>Spil med alle Finheder</seg> og <seg xml:id="topic_2" ana="#personality" type="topic" resp="#claude">indi-
+          <lb/>viduelle Karakteregenskaber</seg>.</p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#b #in"><orgName>Grøndahl</orgName></hi>
+          <lb/><address><addrLine>Carl Joh.gd. 17.</addrLine> <addrLine>Telef. 78 99.</addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

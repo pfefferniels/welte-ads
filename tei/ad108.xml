@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Saturday Night"</title>
+        <title type="sub">October 1, 1927</title>
+        <author>
+          <orgName key="heintzman">Heintzman &amp; Co.</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Welte-Mignon Reproducing Pianos (The wild rhythm of a mazurka …)</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte-Mignon Reproducing Pianos (The wild rhythm of a mazurka …)</title>
+            <author><orgName>Heintzman &amp; Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Saturday Night</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/6167865">Toronto</pubPlace>
+            <date type="publication" when="1927-10-01">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Saturday Night</title>
+            <biblScope unit="issue">October 1, 1927, Vol. 42, No. 46</biblScope>
+            <biblScope unit="pages">26</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Internet Archive</repository>
+            <idno>
+              <idno type="URLImages">https://archive.org/details/sim_saturday-night_1927-10-01_42_46/page/n25/mode/1up</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="en">English</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad108-0.jpg" width="5570px" height="7359px"/>
+      <graphic type="IIIF" url="https://iiif.archive.org/image/iiif/3/sim_saturday-night_1927-10-01_42_46%2Fsim_saturday-night_1927-10-01_42_46_jp2.zip%2Fsim_saturday-night_1927-10-01_42_46_jp2%2Fsim_saturday-night_1927-10-01_42_46_0025.jp2/full/max/0/default.jpg" width="5570px" height="7359px"/>
+      <zone points="3676,3476 5000,3476 5000,5134 3676,5134" xml:id="zone_picture"/>
+      <zone points="3935,5162 4752,5162 4752,5436 3935,5436" xml:id="zone_headline"/>
+      <zone points="3843,5474 4826,5474 4826,6264 3843,6264" xml:id="zone_text"/>
+      <zone points="4015,6306 4648,6306 4648,6485 4015,6485" xml:id="zone_invitation"/>
+      <zone points="3782,6532 4872,6532 4872,6864 3782,6864" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>A grand piano, in a ruled frame with ornamental bands above and below</desc></figure>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c"><lb/><hi rendition="#in"><name type="brand">Welte-Mignon</name></hi>
+          <lb/><hi rendition="#smaller">(Licensee)</hi>
+          <lb/><hi rendition="#b #larger">Reproducing Pianos</hi></hi></head>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/><seg xml:id="topic_1" ana="#suit_every_mood" type="topic" resp="#claude">The wild rhythm of a mazurka, the lure
+          <lb/>of a Venetian love lyric, the poignant
+          <lb/>charm of a simple plantation melody</seg>,
+          <lb/>assume a new beauty when formed
+          <lb/>under the hands of a master.</p>
+        <p><lb/><seg xml:id="topic_2" ana="#touch_of_a_button" type="topic" resp="#claude">At a touch of a key</seg> the <name type="brand">Heintzman &amp;
+          <lb/>Co. Welte-Mignon Reproducing Piano</name>
+          <lb/>will shower forth the glorious music of
+          <lb/>a <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> or a <persName type="artist" corresp="https://d-nb.info/gnd/118641832">Rachmaninoff</persName> or a
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName> — <seg xml:id="topic_3" ana="#exact_reproduction" type="topic" resp="#claude">their actual playing,
+          <lb/>their technique, tone color and tempo</seg>.</p>
+        <p><lb/>Marvellous! Yes, but <seg xml:id="topic_4" ana="#affordability" type="topic" resp="#claude">you can easily
+          <lb/>have one of these pianos in your home</seg>.</p>
+      </div>
+      <div facs="#zone_invitation">
+        <ab><hi rendition="#i #smaller"><lb/>Come to our Music Salons and
+          <lb/>hear the wonderful <name type="brand">Welte-Mignon</name>
+          <lb/>play for you the music of the
+          <lb/>masters—or write for descriptive
+          <lb/>literature.</hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#b #i">Ye Olde Firme</hi>
+          <lb/><hi rendition="#in #larger"><orgName>Heintzman &amp; Co.</orgName></hi>
+          <lb/><address><addrLine>193-197 YONGE STREET</addrLine>
+          <lb/><addrLine>TORONTO</addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

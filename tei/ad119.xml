@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Correio da Manhã"</title>
+        <title type="sub">June 1 to June 3, 1913</title>
+        <author>
+          <orgName key="rabeca.de.ouro">A Rabeca de Ouro</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>WELTE-MIGNON A CASA A RABECA DE OURO tem a honra de convidar</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">WELTE-MIGNON A CASA A RABECA DE OURO tem a honra de convidar</title>
+            <author><orgName>A Rabeca de Ouro</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Correio da Manhã</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3451190">Rio de Janeiro</pubPlace>
+            <date type="publication" when="1913-06-01">1913</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Correio da Manhã</title>
+            <biblScope unit="issue">Sunday, June 1, 1913, Anno XII, No. 5236</biblScope>
+            <biblScope unit="pages">[13]</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Internet Archive</repository>
+            <idno>
+              <idno type="URLImages">https://archive.org/details/CorreioDaManha_RJ_1913_05236/page/n12/mode/1up</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>WELTE-MIGNON A CASA A' RABECA DE OURO tem a honra de convidar</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">WELTE-MIGNON A CASA A' RABECA DE OURO tem a honra de convidar</title>
+            <author><orgName>A Rabeca de Ouro</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Correio da Manhã</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3451190">Rio de Janeiro</pubPlace>
+            <date type="publication" when="1913-06-03">1913</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Correio da Manhã</title>
+            <biblScope unit="issue">Tuesday, June 3, 1913, No. 5238</biblScope>
+            <biblScope unit="pages">[13]</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Internet Archive</repository>
+            <idno>
+              <idno type="URLImages">https://archive.org/details/CorreioDaManha_RJ_1913_05238/page/n12/mode/1up</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="pt">Portuguese</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad119-0.jpg" width="5062px" height="7205px"/>
+      <graphic type="IIIF" url="https://iiif.archive.org/image/iiif/3/CorreioDaManha_RJ_1913_05236%2FCorreioDaManha_RJ_1913_05236_jp2.zip%2FCorreioDaManha_RJ_1913_05236_jp2%2FCorreioDaManha_RJ_1913_05236_0012.jp2/full/max/0/default.jpg" width="5062px" height="7205px"/>
+      <zone points="2168,3688 3530,3688 3530,3842 2168,3842" xml:id="zone_headline"/>
+      <zone points="2582,3856 3110,3856 3110,3930 2582,3930" xml:id="zone_casa"/>
+      <zone points="2008,3940 3702,3940 3702,4078 2008,4078" xml:id="zone_firm"/>
+      <zone points="1998,4098 3705,4098 3705,4538 1998,4538" xml:id="zone_text"/>
+      <zone points="1998,4598 3705,4598 3705,4722 1998,4722" xml:id="zone_audicoes"/>
+      <zone points="2222,4752 3492,4752 3492,4858 2222,4858" xml:id="zone_address"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in"><lb/><name type="brand">WELTE-MIGNON</name></hi></head>
+      </div>
+      <div facs="#zone_casa">
+        <ab><hi rendition="#c #b #g"><lb/>A CASA</hi></ab>
+      </div>
+      <div facs="#zone_firm">
+        <ab><hi rendition="#c #in"><lb/><app>
+            <rdg source="#source_1"><orgName>A RABECA DE OURO</orgName></rdg>
+            <rdg source="#source_2"><orgName>A’ RABECA DE OURO</orgName></rdg>
+          </app></hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <p><hi rendition="#b"><lb/>tem a honra de convidar os amadores de bôa
+          <lb/>musica para virem ouvir este apparelho que
+          <lb/><seg xml:id="topic_1" ana="#technical_invention" type="topic" resp="#claude">por meio da electricidade</seg> reproduz musicas
+          <lb/><sic>interpretradas</sic> por <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewsky</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-Saens</persName>;
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/117396923">Vianna da Motta</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118518011">F. Busoni</persName> e outras celebri-
+          <lb/>dades.</hi></p>
+      </div>
+      <div facs="#zone_audicoes">
+        <p><lb/><hi rendition="#b">Audições</hi> todos os dias das 2 horas da tarde em
+          <lb/>deante, na unica agencia <seg xml:id="topic_2" ana="#miracle" type="topic" resp="#claude">desta maravilha</seg> á</p>
+      </div>
+      <div facs="#zone_address">
+        <ab><hi rendition="#c #b #in"><lb/><address><addrLine>RUA DA CARIOCA 65</addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

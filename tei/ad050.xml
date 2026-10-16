@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Provinciale Geldersche en Nijmeegsche Courant"</title>
+        <title type="sub">June 10, 1918</title>
+        <author>
+          <orgName key="dupont">Henri C. Dupont &amp; Co.</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>GELEGENHEIDSKOOP van een zoo goed als nieuwe KUNSTSPEL-PIANO „WELTE-MIGNON”</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">GELEGENHEIDSKOOP van een zoo goed als nieuwe KUNSTSPEL-PIANO „WELTE-MIGNON”</title>
+            <author><orgName>Henri C. Dupont &amp; Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Provinciale Geldersche en Nijmeegsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2750053">Nijmegen</pubPlace>
+            <date type="publication" when="1918-06-10">1918</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Provinciale Geldersche en Nijmeegsche Courant</title>
+            <biblScope unit="issue">June 10, 1918, No. 134</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMRANM02:000019715:mpeg21:a0027</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad050-0.jpg" width="4375px" height="6409px"/>
+      <zone points="2465,2285 3372,2285 3372,2357 2465,2357" xml:id="zone_headline"/>
+      <zone points="2245,2376 3588,2376 3588,2595 2245,2595" xml:id="zone_offer"/>
+      <zone points="2245,2608 3588,2608 3588,2714 2245,2714" xml:id="zone_text"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in"><lb/>GELEGENHEIDSKOOP</hi></head>
+      </div>
+      <div facs="#zone_offer">
+        <ab><hi rendition="#c">
+          <hi rendition="#b #smaller"><lb/>van een zoo goed als nieuwe</hi>
+          <hi rendition="#b #larger"><lb/>KUNSTSPEL-PIANO „<name type="brand">WELTE-MIGNON</name>”,</hi>
+          <hi rendition="#b #smaller"><lb/>met Motor, 62 Muziekrollen en Rollenkast.</hi>
+        </hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <ab><lb/>Voor zeer billijken prijs te koop en te bezichtigen bij <orgName>HENRI C.
+          <lb/>DUPONT &amp; Co.</orgName>, Pianohandel, <placeName>Nijmegen</placeName>.</ab>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "La Nación"</title>
+        <title type="sub">November 3, 1922</title>
+        <author>
+          <orgName key="doggenweiler">Casa Doggenweiler</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>ULTIMAS NOVEDADES PIANOS ELECTRICOS DE REPRODUCCION WELTE - MIGNON</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">ULTIMAS NOVEDADES PIANOS ELECTRICOS DE REPRODUCCION WELTE - MIGNON</title>
+            <author><orgName>Casa Doggenweiler</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>La Nación</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3871336">Santiago</pubPlace>
+            <date type="publication" when="1922-11-03">1922</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">La Nación</title>
+            <biblScope unit="issue">Friday, November 3, 1922</biblScope>
+            <biblScope unit="pages">6</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Internet Archive</repository>
+            <idno>
+              <idno type="URLImages">https://archive.org/details/DiarioLaNacionSantiago_19221103/page/n5/mode/1up</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="es">Spanish</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad121-0.jpg" width="3737px" height="5369px"/>
+      <graphic type="IIIF" url="https://iiif.archive.org/image/iiif/3/DiarioLaNacionSantiago_19221103%2FDiarioLaNacionSantiago_19221103_jp2.zip%2FDiarioLaNacionSantiago_19221103_jp2%2FDiarioLaNacionSantiago_19221103_0005.jp2/full/max/0/default.jpg" width="3737px" height="5369px"/>
+      <zone points="1903,4175 2117,4175 2117,4397 1903,4397" xml:id="zone_box_left"/>
+      <zone points="2145,4152 3480,4152 3480,4392 2145,4392" xml:id="zone_firm"/>
+      <zone points="3487,4177 3622,4177 3622,4392 3487,4392" xml:id="zone_box_right"/>
+      <zone points="1880,4440 2765,4440 2765,4830 1880,4830" xml:id="zone_headline"/>
+      <zone points="1880,4850 2765,4850 2765,5060 1880,5060" xml:id="zone_maker"/>
+      <zone points="1922,5085 2695,5085 2695,5178 1922,5178" xml:id="zone_models"/>
+      <zone points="2815,4432 3606,4432 3606,5185 2815,5185" xml:id="zone_picture"/>
+      <zone points="2697,5182 2765,5182 2765,5212 2697,5212" xml:id="zone_code"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_box_left">
+        <ab><hi rendition="#c #b #framed"><lb/>Música
+          <lb/>Pianos</hi></ab>
+      </div>
+      <div facs="#zone_firm">
+        <head><hi rendition="#c #in"><lb/><orgName>Casa Doggenweiler</orgName></hi></head>
+      </div>
+      <div facs="#zone_box_right">
+        <ab><hi rendition="#b #framed"><address><addrLine><lb/>A. Prat 166</addrLine>
+          <addrLine><lb/>Cas. 2654</addrLine>
+          <addrLine><lb/>Teléf. 961</addrLine></address></hi></ab>
+      </div>
+      <div facs="#zone_headline">
+        <ab><hi rendition="#b #larger"><lb/>ULTIMAS NOVEDADES</hi>
+          <lb/>PIANOS ELECTRICOS
+          <hi rendition="#right"><lb/>DE REPRODUCCION</hi>
+          <hi rendition="#b #in"><lb/><name type="brand">WELTE - MIGNON</name></hi></ab>
+      </div>
+      <div facs="#zone_maker">
+        <ab><hi rendition="#b #smaller"><lb/>de la afamada fábrica:</hi>
+          <hi rendition="#b #in"><lb/><orgName>THE AUTOPIANO Co.</orgName></hi></ab>
+      </div>
+      <div facs="#zone_models">
+        <ab><hi rendition="#c #b"><lb/>ULTIMOS MODELOS</hi></ab>
+      </div>
+      <div type="illustration" facs="#zone_picture">
+        <figure xml:id="figure_1" ana="#home"><desc>Drawing in a circle: a family in a parlour, a father carrying a baby and two children, gathered round a woman playing an upright piano marked "Autopiano"</desc></figure>
+      </div>
+      <div facs="#zone_code">
+        <ab><hi rendition="#smaller"><lb/>3-N.</hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

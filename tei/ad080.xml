@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Morgenbladet"</title>
+        <title type="sub">December 19, 1918</title>
+        <author>
+          <orgName key="grondahl">Grøndahl</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>WELTE-MIGNON</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">WELTE-MIGNON</title>
+            <author><orgName>Grøndahl</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Morgenbladet</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3143244">Kristiania</pubPlace>
+            <date type="publication" when="1918-12-19">1918</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Morgenbladet</title>
+            <biblScope unit="issue">December 19, 1918, No. 640</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The same block, with a re-set signature, appeared in Bergens Tidende
+              on January 26, 1919; it is encoded separately.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Nasjonalbiblioteket</repository>
+            <idno>
+              <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_morgenbladet_null_null_19181219_100_640_1</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="no">Norwegian (Dano-Norwegian)</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad080-0.jpg" width="5841px" height="9017px"/>
+      <graphic type="IIIF" url="https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_morgenbladet_null_null_19181219_100_640_1-1_005_null/full/full/0/default.jpg" width="5841px" height="9017px"/>
+      <zone points="3028,300 3880,300 3880,1362 3028,1362" xml:id="zone_picture"/>
+      <zone points="3150,1368 3772,1368 3772,1658 3150,1658" xml:id="zone_oval"/>
+      <zone points="3025,1670 3885,1670 3885,1802 3025,1802" xml:id="zone_signature"/>
+      <zone points="3028,1806 3890,1806 3890,1852 3028,1852" xml:id="zone_slogan"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div type="illustration" facs="#zone_picture">
+        <figure xml:id="figure_1" ana="#listening" resp="#claude"><desc>Drawing of a salon with curtained windows and a statuette; a man and a woman seated on a sofa listen to a grand piano in the foreground, at which nobody sits; the brand name is drawn across the back wall in perspective capitals</desc></figure>
+        <ab><lb/><name type="brand">WELTE-MIGNON</name>
+          <lb/><hi rendition="#smaller">ATELIER E·O</hi></ab>
+      </div>
+      <div facs="#zone_oval">
+        <ab><hi rendition="#c"><lb/>Elektrisk Reproduktion.
+          <hi rendition="#b #g"><lb/>Flygler &amp; Pianoer
+          <lb/><name type="brand">Steinway - Welte.</name></hi>
+          <lb/>Eneforhandler</hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c #in"><lb/><orgName>GRØNDAHL</orgName></hi></ab>
+      </div>
+      <div facs="#zone_slogan">
+        <ab><hi rendition="#c #smaller"><lb/><seg type="slogan">LANDETS STØRSTE KLAVERFORRETNING:</seg></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -48,6 +48,9 @@
           <notesStmt>
             <note>A reworking of Grøndahl's advertisement in Aftenposten of December 1,
               1907 ("Reproduktionsklaveret “Mignon“"), now headed "Welte-Mignon".</note>
+            <note>Some lowercase f's of the roman type have lost their kern and print
+              like t ("torespillet at" for "forespillet af", "Teleton" for "Telefon");
+              they are transcribed as f.</note>
           </notesStmt>
         </biblFull>
         <msDesc>
@@ -103,7 +106,7 @@
       <div facs="#zone_text">
         <p><lb/><seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">Gjengiver direkte Virtuosernes Spil med alle Finheder</seg>
           <lb/>og med <seg xml:id="topic_3" ana="#personality" type="topic" resp="#claude">alle individuelle Karakteregenskaber</seg>.
-          <lb/>Klaverstykkerne er forespillet <sic>at</sic> Verdens første Com-
+          <lb/>Klaverstykkerne er forespillet af Verdens første Com-
           <lb/>ponister som:
           <lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/119110016">Dohnanyi</persName></hi> etc., der alle har <seg xml:id="topic_4" ana="#miracle" type="topic" resp="#claude"><sic>ndtrykt</sic> sin
           <lb/>Forbauselse og Beundring</seg> over <seg xml:id="topic_5" ana="#exact_reproduction" type="topic" resp="#claude">den i mindste Detail nøiagtige

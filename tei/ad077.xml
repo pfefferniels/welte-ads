@@ -49,6 +49,9 @@
             <note>A dealer's demonstration of the Mignon on December 11 and 12, 1907.
               Every piece is "spillet af" a named pianist, that is, played back
               from Welte-Mignon rolls; the name Welte is not printed.</note>
+            <note>Some lowercase f's of the roman type have lost their kern and print
+              like t ("Spillet at" for "Spillet af" in the lines on Schnabel and on
+              Dohnanyi's second piece); they are transcribed as f.</note>
           </notesStmt>
         </biblFull>
         <msDesc>
@@ -100,7 +103,7 @@
           <lb/><hi rendition="#b"><persName type="composer" corresp="https://d-nb.info/gnd/118514253">Brahms</persName>:</hi> Capriccio, Op. 76.
           <lb/><hi rendition="#right">Spillet af <persName type="artist" corresp="https://d-nb.info/gnd/119110016">Ernst von Dohnanyi</persName>.</hi>
           <lb/><hi rendition="#b"><persName type="composer" corresp="https://d-nb.info/gnd/118514253">Brahms</persName>:</hi> Intermezzo, Op. 119.
-          <lb/><hi rendition="#right">Spillet <sic>at</sic> <persName type="artist" corresp="https://d-nb.info/gnd/118609467">Arthur Schnabel</persName>.</hi>
+          <lb/><hi rendition="#right">Spillet af <persName type="artist" corresp="https://d-nb.info/gnd/118609467">Arthur Schnabel</persName>.</hi>
           <lb/><hi rendition="#b"><persName type="composer" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>:</hi> <foreign xml:lang="de">Schmetterling</foreign>
           <lb/><foreign xml:lang="de">Vøglein</foreign>.
           <lb/>Brudefølget drager forbi.
@@ -110,7 +113,7 @@
           <lb/><hi rendition="#b"><persName type="composer" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>:</hi> Menuett.
           <lb/><hi rendition="#right">Spillet af <persName type="artist" corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>.</hi>
           <lb/><hi rendition="#b"><persName type="composer" corresp="https://d-nb.info/gnd/118573527">Liszt</persName>:</hi> Rakocy-Marsch.
-          <lb/><hi rendition="#right">Spillet <sic>at</sic> <persName type="artist" corresp="https://d-nb.info/gnd/119110016">Ernst von Dohnanyi</persName>.</hi></ab>
+          <lb/><hi rendition="#right">Spillet af <persName type="artist" corresp="https://d-nb.info/gnd/119110016">Ernst von Dohnanyi</persName>.</hi></ab>
       </div>
       <div facs="#zone_admission">
         <ab><hi rendition="#b"><lb/>Adgang kun mod Kort, der udleveres
