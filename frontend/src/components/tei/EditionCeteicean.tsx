@@ -12,9 +12,10 @@ import Metadata, { Change, SourceDesc } from "./Metadata"
 import Ref from "./Ref"
 import MsIdentifier from "./MsIdentifier"
 import './style.css'
-import { Box, Dialog, DialogContent, IconButton, Paper, Stack, ToggleButton, ToggleButtonGroup, Tooltip } from "@mui/material"
-import { Code, Download, LayersOutlined, Title } from "@mui/icons-material"
+import { Box, Dialog, DialogContent, IconButton, Paper, Stack, ToggleButton, ToggleButtonGroup, Tooltip, Typography } from "@mui/material"
+import { Code, Download, ImageOutlined, LayersOutlined, Title } from "@mui/icons-material"
 import { Facsimile, computeLayout } from "../../lib/facsimile"
+import { iiifImageUrl, libraryOf } from "../../lib/iiif"
 import type { Topic } from "../../lib/tei"
 import { TopicsContext } from "./TopicsContext"
 
@@ -49,10 +50,17 @@ interface Props {
   facsimile: Facsimile
   original: string
   topics: Record<string, Topic>
+  // the links to the digital images of the transcribed printing
+  imageLinks: string[]
 }
 
-const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topics }: Props) => {
-  const [mode, setMode] = useState<'layout' | 'text'>('text')
+type Mode = 'layout' | 'text' | 'facsimile'
+
+// the gap between pages side by side in the facsimile view, in image pixels
+const pageGap = 40
+
+const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topics, imageLinks }: Props) => {
+  const [mode, setMode] = useState<Mode>('text')
   const mounted = useSyncExternalStore(
     () => () => {},
     () => true,
@@ -80,6 +88,23 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topic
 
   const layout = useMemo(() => computeLayout(facsimile), [facsimile])
   const hasLayout = Object.keys(layout.zones).length > 0
+
+  // the pages that their libraries serve through IIIF, side by side
+  const pages = useMemo(() => {
+    const served = facsimile.surfaces.flatMap((surface, index) => surface.iiif ? [{
+      index,
+      image: surface.iiif,
+      // the zones fit where the library's image is the scan they were drawn on
+      zonesFit: surface.width === surface.iiif.width && surface.height === surface.iiif.height,
+    }] : [])
+    return served.map((page, i) => ({
+      ...page,
+      left: served.slice(0, i).reduce((sum, before) => sum + before.image.width + pageGap, 0),
+    }))
+  }, [facsimile])
+  const pagesWidth = pages.length ? pages[pages.length - 1].left + pages[pages.length - 1].image.width : 0
+  const pagesHeight = Math.max(0, ...pages.map(page => page.image.height))
+  const library = pages.length ? libraryOf(pages[0].image.service, imageLinks) : null
   // ?debug outlines the zones and puts the facsimile (if it is found under
   // /facs/<ad>-<surface>.png) beneath the text; ?debug=facs shows only the
   // facsimile
@@ -195,21 +220,24 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topic
     }
   }, [mode, mounted])
 
-  // fit the whole advertisement into the view whenever the view opens
+  // fit the whole advertisement (or its pages) into the view whenever the
+  // view opens
   useLayoutEffect(() => {
     const div = divRef.current
-    if (mode !== 'layout' || !div || layout.width === 0 || layout.height === 0) return
+    const [width, height] = mode === 'layout' ? [layout.width, layout.height]
+      : mode === 'facsimile' ? [pagesWidth, pagesHeight] : [0, 0]
+    if (!div || width === 0 || height === 0) return
 
     const padding = 10
     const fitted = Math.min(
-      (div.clientWidth - 2 * padding) / layout.width,
-      (div.clientHeight - 2 * padding) / layout.height)
+      (div.clientWidth - 2 * padding) / width,
+      (div.clientHeight - 2 * padding) / height)
     setZoom(fitted)
     setPos({
-      x: (div.clientWidth - layout.width * fitted) / 2,
+      x: (div.clientWidth - width * fitted) / 2,
       y: padding,
     })
-  }, [mode, layout, mounted])
+  }, [mode, layout, pagesWidth, pagesHeight, mounted])
 
   if (!mounted) return null
 
@@ -220,7 +248,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topic
           size='small'
           value={mode}
           exclusive
-          onChange={(_, value) => setMode(value as 'layout' | 'text')}
+          onChange={(_, value) => value && setMode(value as Mode)}
           aria-label="display mode"
         >
           {/* the tooltips sit inside the buttons: the group passes its
@@ -233,6 +261,11 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topic
           <ToggleButton value="text" aria-label="Text view">
             <Tooltip title="Text view" placement="right">
               <Title />
+            </Tooltip>
+          </ToggleButton>
+          <ToggleButton value="facsimile" aria-label="Facsimile" disabled={pages.length === 0}>
+            <Tooltip title="Facsimile" placement="right">
+              <ImageOutlined />
             </Tooltip>
           </ToggleButton>
         </ToggleButtonGroup>
@@ -266,6 +299,68 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topic
           <Renderer prefixed={prefixed} elements={elements} routes={headerRoutes} />
         </DialogContent>
       </Dialog>
+
+      {mode === 'facsimile' && (
+        <>
+          <Box
+            ref={divRef}
+            className='container'
+            sx={{ ml: 7 }}
+            style={{ height: '90vh', overflow: 'hidden' }}>
+            <div
+              style={{
+                position: 'relative',
+                width: pagesWidth,
+                height: pagesHeight,
+                transform: `translate(${pos.x}px, ${pos.y}px) scale(${zoom})`,
+                transformOrigin: '0 0'
+              }}>
+              {pages.map(page => (
+                <Paper
+                  key={page.index}
+                  elevation={5}
+                  square
+                  style={{
+                    position: 'absolute',
+                    left: page.left,
+                    top: 0,
+                    width: page.image.width,
+                    height: page.image.height,
+                    overflow: 'hidden'
+                  }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={iiifImageUrl(page.image, 2000)}
+                    alt={`Page ${page.index + 1} of the advertisement as printed`}
+                    draggable={false}
+                    style={{ display: 'block', width: '100%', height: '100%' }} />
+                  {page.zonesFit && (
+                    <svg
+                      viewBox={`0 0 ${page.image.width} ${page.image.height}`}
+                      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none' }}>
+                      {facsimile.zones.filter(zone => zone.surface === page.index).map(zone => (
+                        <polygon
+                          key={zone.id}
+                          points={zone.points.map(point => point.join(',')).join(' ')}
+                          fill="none"
+                          stroke="#8b5e3c"
+                          strokeOpacity={0.7}
+                          strokeWidth={Math.max(2, page.image.width / 600)} />
+                      ))}
+                    </svg>
+                  )}
+                </Paper>
+              ))}
+            </div>
+          </Box>
+          <Typography variant="body2" component="p" sx={{ ml: 7, mt: 1, color: 'text.secondary' }}>
+            Image: {library?.url ? <a href={library.url}>{library.name}</a> : library?.name}.
+            {pages.some(page => page.zonesFit)
+              ? ' The outlines are the regions of the transcription.'
+              : ' The regions of the transcription were drawn on another scan, so they are not shown.'}
+          </Typography>
+        </>
+      )}
 
       {mode === 'layout'
         ? (
@@ -359,7 +454,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topic
               )}
             </div>
           </Box>)
-        : (
+        : mode === 'text' && (
           <Box sx={{ ml: 7 }}>
             <Renderer prefixed={prefixed} elements={elements} routes={textRoutes} />
           </Box>

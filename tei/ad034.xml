@@ -161,7 +161,11 @@
                   <p>Every region of the original page is a <gi>div</gi> that points to
                      its zone in the <gi>facsimile</gi> with <att>facs</att>. The
                      lines of the original are marked with <gi>lb</gi>; the typography
-                     is recorded with <att>rendition</att>.</p>
+                     is recorded with <att>rendition</att>. The zones refer to the
+                     first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+                     drawn on. Where the holding library serves the page through
+                     IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+                     gives that image and its size.</p>
                </segmentation>
                <interpretation>
                   <p>Parts of an advertisement that concern other products than the
@@ -212,7 +216,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked.</change>
+            <change when="2026-10-16">Transcribed printing marked; the page through IIIF added.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Further printings found on archive.org added as sources.</change>
@@ -226,6 +230,7 @@
     <facsimile>
         <surface>
             <graphic url="world-famous-welte.png" width="715px" height="987px" />
+            <graphic type="IIIF" url="https://iiif.archive.org/image/iiif/3/countrylife37gard%2Fcountrylife37gard_jp2.zip%2Fcountrylife37gard_jp2%2Fcountrylife37gard_0174.jp2/full/max/0/default.jpg" width="3221px" height="4705px"/>
             <zone points="541,162 545,247 506,269 322,269 318,188 320,164 328,160"
                 xml:id="eSc_textblock_562dfbcc" />
             <zone points="118,341 590,341 590,382 118,382" xml:id="eSc_textblock_4271fc05" />

@@ -152,7 +152,11 @@
                  <p>Every region of the original page is a <gi>div</gi> that points to
                     its zone in the <gi>facsimile</gi> with <att>facs</att>. The
                     lines of the original are marked with <gi>lb</gi>; the typography
-                    is recorded with <att>rendition</att>.</p>
+                    is recorded with <att>rendition</att>. The zones refer to the
+                    first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+                    drawn on. Where the holding library serves the page through
+                    IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+                    gives that image and its size.</p>
               </segmentation>
               <interpretation>
                  <p>Parts of an advertisement that concern other products than the
@@ -214,7 +218,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc>
-           <change when="2026-10-16">Transcribed printing marked; empty note removed; persons linked to the GND and typed.</change>
+           <change when="2026-10-16">Transcribed printing marked; empty note removed; persons linked to the GND and typed; the page through IIIF added.</change>
            <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
            <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
            <change when="2026-10-15">Made valid against tei_all.</change>
@@ -227,6 +231,7 @@
       <facsimile>
         <surface>
             <graphic url="new-york-herald-paderewski.png" width="965px" height="1030px" />
+            <graphic type="IIIF" url="https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_bindweed_ver02:data:sn83045774:0027174416A:1921050101:0073/full/full/0/default.jpg" width="5766px" height="7676px"/>
             <zone points="42,63 466,63 466,754 42,754"
                 xml:id="eSc_textblock_fa5427b3" />
             <zone points="36,756 938,756 938,954 36,954"

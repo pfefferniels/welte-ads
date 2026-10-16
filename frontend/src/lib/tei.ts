@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { JSDOM } from 'jsdom'
 import { Facsimile, FacsSurface, FacsZone, Point, parsePoints } from './facsimile'
+import { iiifService } from './iiif'
 
 const TEI_NS = 'http://www.tei-c.org/ns/1.0'
 const TEIEG_NS = 'http://www.tei-c.org/ns/Examples'
@@ -246,11 +247,16 @@ function extractFacsimile(doc: Document): Facsimile {
   }
 
   doc.querySelectorAll('facsimile surface').forEach((surface, index) => {
-    const graphic = surface.querySelector('graphic')
+    const graphic = surface.querySelector('graphic:not([type="IIIF"])')
+    const iiif = surface.querySelector('graphic[type="IIIF"]')
+    const service = iiifService(iiif?.getAttribute('url') || '')
+    const iiifWidth = num(iiif?.getAttribute('width') ?? null)
+    const iiifHeight = num(iiif?.getAttribute('height') ?? null)
     surfaces.push({
       url: graphic?.getAttribute('url') || '',
       width: num(graphic?.getAttribute('width') ?? null),
       height: num(graphic?.getAttribute('height') ?? null),
+      iiif: service && iiifWidth && iiifHeight ? { service, width: iiifWidth, height: iiifHeight } : null,
     })
 
     surface.querySelectorAll('zone').forEach(zone => {
@@ -313,6 +319,8 @@ interface AdMetadata {
   topicSegments: TopicSegment[]
   // the transcription as plain text, for searching
   fullText: string
+  // the links to the digital images of the printing that is transcribed
+  imageLinks: string[]
 }
 
 interface AdData extends AdMetadata {
@@ -362,7 +370,15 @@ function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
     })
     .flat()
 
-  return { company, title, titleMain, titleSub, dates, newspapers, mentions, topicSegments, fullText: plainText(xmlString) }
+  // the printing that the text is transcribed from, or else the first
+  const decls = (doc.querySelector('text')?.getAttribute('decls') || '').replace(/^#/, '')
+  const sources = Array.from(doc.querySelectorAll('sourceDesc'))
+  const transcribed = sources.find(source => source.getAttribute('xml:id') === decls) || sources[0]
+  const imageLinks = Array.from(transcribed?.querySelectorAll('idno[type="URLImages"]') || [])
+    .map(idno => (idno.textContent || '').trim())
+    .filter(Boolean)
+
+  return { company, title, titleMain, titleSub, dates, newspapers, mentions, topicSegments, fullText: plainText(xmlString), imageLinks }
 }
 
 /**

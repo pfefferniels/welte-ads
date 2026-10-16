@@ -129,7 +129,11 @@
                  <p>Every region of the original page is a <gi>div</gi> that points to
                     its zone in the <gi>facsimile</gi> with <att>facs</att>. The
                     lines of the original are marked with <gi>lb</gi>; the typography
-                    is recorded with <att>rendition</att>.</p>
+                    is recorded with <att>rendition</att>. The zones refer to the
+                    first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+                    drawn on. Where the holding library serves the page through
+                    IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+                    gives that image and its size.</p>
               </segmentation>
               <interpretation>
                  <p>Parts of an advertisement that concern other products than the
@@ -173,7 +177,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc>
-           <change when="2026-10-16">Transcribed printing marked; note translated into English; persons linked to the GND and typed.</change>
+           <change when="2026-10-16">Transcribed printing marked; note translated into English; persons linked to the GND and typed; the page through IIIF added.</change>
            <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
            <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
            <change when="2026-10-15">Made valid against tei_all.</change>
@@ -185,6 +189,7 @@
     <facsimile>
         <surface>
             <graphic url="sn83030214-19131207.jp2" width="6063px" height="8898px" />
+            <graphic type="IIIF" url="https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_parkins_ver01:data:sn83030214:00206531721:1913120701:0105/full/full/0/default.jpg" width="6063px" height="8898px"/>
             <zone points="4420,6460 4420,6765 5780,6765 5780,6460"
                 xml:id="eSc_textblock_d7143252" />
             <zone points="4645,6815 4645,7295 5835,7295 5835,6815"

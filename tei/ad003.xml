@@ -120,7 +120,11 @@
                   <p>Every region of the original page is a <gi>div</gi> that points to
                      its zone in the <gi>facsimile</gi> with <att>facs</att>. The
                      lines of the original are marked with <gi>lb</gi>; the typography
-                     is recorded with <att>rendition</att>.</p>
+                     is recorded with <att>rendition</att>. The zones refer to the
+                     first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+                     drawn on. Where the holding library serves the page through
+                     IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+                     gives that image and its size.</p>
                </segmentation>
                <interpretation>
                   <p>Parts of an advertisement that concern other products than the
@@ -166,7 +170,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked; link to the digital images added; persons linked to the GND and typed.</change>
+            <change when="2026-10-16">Transcribed printing marked; link to the digital images added; persons linked to the GND and typed; the page through IIIF added.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Made valid against tei_all.</change>
@@ -179,6 +183,7 @@
     <facsimile>
         <surface>
             <graphic url="v2_bsb00004256_01424_260_264_3011_2118_full_0_default_.pdf_page_1.png" width="3508px" height="2479px"/>
+            <graphic type="IIIF" url="https://api.digitale-sammlungen.de/iiif/image/v2/bsb00004256_01424/full/full/0/default.jpg" width="3465px" height="4724px"/>
             <zone points="3088,2258 2965,2258 2965,2198 3088,2198"
                 xml:id="eSc_textblock_8679924f" />
             <zone points="744,145 744,378 2850,378 2850,145" xml:id="eSc_textblock_10eee52d" />

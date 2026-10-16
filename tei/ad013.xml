@@ -126,7 +126,11 @@
                  <p>Every region of the original page is a <gi>div</gi> that points to
                     its zone in the <gi>facsimile</gi> with <att>facs</att>. The
                     lines of the original are marked with <gi>lb</gi>; the typography
-                    is recorded with <att>rendition</att>.</p>
+                    is recorded with <att>rendition</att>. The zones refer to the
+                    first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+                    drawn on. Where the holding library serves the page through
+                    IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+                    gives that image and its size.</p>
               </segmentation>
               <interpretation>
                  <p>Parts of an advertisement that concern other products than the
@@ -183,7 +187,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc>
-           <change when="2026-10-16">Transcribed printing marked.</change>
+           <change when="2026-10-16">Transcribed printing marked; the page through IIIF added.</change>
            <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
            <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
            <change when="2026-10-15">Made valid against tei_all.</change>
@@ -196,6 +200,7 @@
     <facsimile>
         <surface>
             <graphic url="los-angeles-1909.png" width="676px" height="1810px"/>
+            <graphic type="IIIF" url="https://tile.loc.gov/image-services/iiif/service:ndnp:curiv:batch_curiv_pescadero_ver01:data:sn85042462:00175035758:1909022101:0365/full/full/0/default.jpg" width="6872px" height="9483px"/>
             <zone points="20,18 19,513 657,522 656,18" xml:id="eSc_textblock_b620cf2e" />
             <zone points="245,486 390,486 390,507 245,507" xml:id="zone_caption" />
             <zone

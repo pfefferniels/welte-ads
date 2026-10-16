@@ -125,7 +125,11 @@
                  <p>Every region of the original page is a <gi>div</gi> that points to
                     its zone in the <gi>facsimile</gi> with <att>facs</att>. The
                     lines of the original are marked with <gi>lb</gi>; the typography
-                    is recorded with <att>rendition</att>.</p>
+                    is recorded with <att>rendition</att>. The zones refer to the
+                    first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+                    drawn on. Where the holding library serves the page through
+                    IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+                    gives that image and its size.</p>
               </segmentation>
               <interpretation>
                  <p>Parts of an advertisement that concern other products than the
@@ -166,7 +170,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc>
-           <change when="2026-10-16">Transcribed printing marked.</change>
+           <change when="2026-10-16">Transcribed printing marked; the page through IIIF added.</change>
            <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
            <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
            <change when="2026-10-15">Made valid against tei_all.</change>
@@ -179,6 +183,7 @@
     <facsimile>
         <surface>
             <graphic url="nyt-1913.png" width="750px" height="1048px" />
+            <graphic type="IIIF" url="https://iiif.archive.org/image/iiif/3/sim_new-york-times_1913-11-14_62_20383%2Fsim_new-york-times_1913-11-14_62_20383_jp2.zip%2Fsim_new-york-times_1913-11-14_62_20383_jp2%2Fsim_new-york-times_1913-11-14_62_20383_0002.jp2/full/max/0/default.jpg" width="7000px" height="8592px"/>
             <zone points="175,92 175,140 585,140 585,92" xml:id="eSc_textblock_32cfe758" />
             <zone points="282,140 282,174 472,174 472,140" xml:id="zone_freiburg" />
             <zone points="134,180 134,224 625,224 625,180" xml:id="zone_announce" />

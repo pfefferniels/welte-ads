@@ -1,12 +1,17 @@
 // Facsimile model shared between the build step (lib/tei.ts) and the
 // layout view. Kept free of Node imports so it can run in the browser.
 
+import type { IIIFImage } from './iiif'
+
 export type Point = [number, number]
 
 export interface FacsSurface {
+  // the scan that the zones were drawn on
   url: string
   width: number | null
   height: number | null
+  // the page as its library serves it through IIIF
+  iiif?: IIIFImage | null
 }
 
 export interface FacsZone {

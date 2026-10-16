@@ -44,6 +44,7 @@ export default async function AdPage({ params }: { params: Promise<{ slug: strin
         facsimile={ad.facsimile}
         original={ad.original}
         topics={getTopics()}
+        imageLinks={ad.imageLinks}
       />
       <Citation
         title={ad.title}

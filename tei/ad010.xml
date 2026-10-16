@@ -125,7 +125,11 @@
                   <p>Every region of the original page is a <gi>div</gi> that points to
                      its zone in the <gi>facsimile</gi> with <att>facs</att>. The
                      lines of the original are marked with <gi>lb</gi>; the typography
-                     is recorded with <att>rendition</att>.</p>
+                     is recorded with <att>rendition</att>. The zones refer to the
+                     first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+                     drawn on. Where the holding library serves the page through
+                     IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+                     gives that image and its size.</p>
                </segmentation>
                <interpretation>
                   <p>Parts of an advertisement that concern other products than the
@@ -178,7 +182,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked; link to the digital images added; note translated into English; persons linked to the GND and typed.</change>
+            <change when="2026-10-16">Transcribed printing marked; link to the digital images added; note translated into English; persons linked to the GND and typed; the page through IIIF added.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Made valid against tei_all.</change>
@@ -192,6 +196,7 @@
     <facsimile>
         <surface>
             <graphic url="v2_bsb00130680_00258_full_full_0_default.jpg" width="4588px" height="6144px"/>
+            <graphic type="IIIF" url="https://api.digitale-sammlungen.de/iiif/image/v2/bsb00130680_00258/full/full/0/default.jpg" width="4588px" height="6144px"/>
             <zone points="1520,3060 2534,3060 2534,4086 833,4086 833,3360 1110,3360 1110,3205 1520,3205"
                 xml:id="eSc_textblock_fedea684" />
             <zone points="824,3016 824,3336 1514,3336 1514,3016"
