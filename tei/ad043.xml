@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Gazette de Lausanne"</title>
+        <title type="sub">January 16, 1910</title>
+        <author>
+          <orgName key="dingler">Dingler &amp; Cie</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>WELTE-MIGNON reproduit exactement le jeu des artistes</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">WELTE-MIGNON reproduit exactement le jeu des artistes</title>
+            <author><orgName>Dingler &amp; Cie</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Gazette de Lausanne</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2659994">Lausanne</pubPlace>
+            <date type="publication" when="1910-01-16">1910</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Gazette de Lausanne</title>
+            <biblScope unit="issue">No. 15, January 16, 1910</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Le Temps archives</repository>
+            <idno>
+              <idno type="URLImages">https://www.letempsarchives.ch/page/GDL_1910_01_16/4/article/1221271</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="fr">French</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad043-0.jpg" width="5176px" height="7103px"/>
+      <graphic type="IIIF" url="https://dedieletemps.cybor.ch/iiif_letemps/GDL_1910_01_16_4/full/full/0/default.jpg" width="5176px" height="7103px"/>
+      <zone points="1172,4528 2136,4528 2136,4698 1172,4698" xml:id="zone_headline"/>
+      <zone points="1152,4728 2136,4728 2136,4830 1152,4830" xml:id="zone_text"/>
+      <zone points="1185,4852 2108,4852 2108,5048 1185,5048" xml:id="zone_auditions"/>
+      <zone points="1152,5060 2136,5060 2136,5460 1152,5460" xml:id="zone_gap"/>
+      <zone points="1145,5500 2136,5500 2136,5958 1145,5958" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in"><lb/><name type="brand">WELTE-MIGNON</name></hi></head>
+      </div>
+      <div facs="#zone_text">
+        <ab><hi rendition="#c #larger"><lb/><seg xml:id="topic_1" ana="#exact_reproduction" type="topic" resp="#claude">reproduit exactement le jeu des artistes</seg></hi></ab>
+      </div>
+      <div facs="#zone_auditions">
+        <ab><hi rendition="#c #b">
+          <lb/><hi rendition="#larger">Auditions Gratuites</hi>
+          <lb/>tous les mardis et vendredis à 4 heures
+          <lb/><hi rendition="#g">S’adresser au magasin</hi></hi></ab>
+      </div>
+      <div facs="#zone_gap">
+        <gap reason="irrelevant"><desc resp="#claude">new pianos from fr. 650.—; tuning, repairs, hire</desc></gap>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c">
+          <lb/><hi rendition="#b #in"><orgName>Dingler &amp; C<hi rendition="#sup">ie</hi></orgName></hi>
+          <address>
+            <addrLine><lb/><hi rendition="#larger">GALERIES DU COMMERCE</hi></addrLine>
+            <addrLine><lb/>LAUSANNE</addrLine>
+          </address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

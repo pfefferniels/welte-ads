@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Journal de Genève"</title>
+        <title type="sub">November 6, 1927</title>
+        <author>
+          <orgName key="kneifel.beroud">Kneifel-Béroud</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Salle du Conservatoire … RÉCITAL DE PIANO exécuté par le Steinway-Welte</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Salle du Conservatoire … RÉCITAL DE PIANO exécuté par le Steinway-Welte</title>
+            <author><orgName>Kneifel-Béroud</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Journal de Genève</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2660646">Genève</pubPlace>
+            <date type="publication" when="1927-11-06">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Journal de Genève</title>
+            <biblScope unit="issue">No. 304, November 6, 1927</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Le Temps archives</repository>
+            <idno>
+              <idno type="URLImages">https://www.letempsarchives.ch/page/JDG_1927_11_06/3/article/6411476</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="fr">French</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad045-0.jpg" width="3506px" height="5397px"/>
+      <graphic type="IIIF" url="https://dedieletemps.cybor.ch/iiif_letemps/JDG_1927_11_06_3/full/full/0/default.jpg" width="3506px" height="5397px"/>
+      <zone points="2640,3110 3285,3110 3285,3161 2640,3161" xml:id="zone_venue"/>
+      <zone points="2748,3166 3200,3166 3200,3205 2748,3205" xml:id="zone_date"/>
+      <zone points="2570,3208 3352,3208 3352,3263 2570,3263" xml:id="zone_headline"/>
+      <zone points="2758,3274 3165,3274 3165,3357 2758,3357" xml:id="zone_brand"/>
+      <zone points="2568,3362 3355,3362 3355,3635 2568,3635" xml:id="zone_text"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_venue">
+        <ab><hi rendition="#c #b #larger"><lb/><placeName>Salle du Conservatoire</placeName></hi></ab>
+      </div>
+      <div facs="#zone_date">
+        <ab><hi rendition="#c"><lb/>Mardi 8 novembre<unclear>,</unclear> à 20 h 30</hi></ab>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in #g"><lb/>RÉCITAL DE PIANO</hi></head>
+      </div>
+      <div facs="#zone_brand">
+        <ab><hi rendition="#c">
+          <lb/>exécuté par le
+          <lb/><hi rendition="#larger #g"><name type="brand">Steinway-Welte</name></hi></hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <p>
+          <lb/><seg xml:id="topic_1" ana="#exact_reproduction" type="topic" resp="#claude">reproduction intégrale et scrupuleusement fidèle
+          <lb/>du jeu de quelques <sic>maître</sic> du clavier</seg>, dont : <persName type="artist" corresp="https://d-nb.info/gnd/118501437">Eugène
+          <lb/>d’Albert</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/117223794">Stavenhagen</persName><unclear>,</unclear> <persName type="artist" corresp="https://d-nb.info/gnd/118524186">Debussy</persName><unclear>,</unclear> etc.
+          <lb/>Au programme: <persName type="composer" corresp="https://d-nb.info/gnd/11850553X">Bach</persName><unclear>,</unclear> <persName type="composer" corresp="https://d-nb.info/gnd/118584596">Mozart</persName>, <persName type="composer" corresp="https://d-nb.info/gnd/118508288">Beethoven</persName>, <persName type="composer" corresp="https://d-nb.info/gnd/118610961">Schu-
+          <lb/>bert</persName><unclear>,</unclear> <persName type="composer" corresp="https://d-nb.info/gnd/118520539">Chopin</persName><unclear>,</unclear> <persName type="composer" corresp="https://d-nb.info/gnd/118573527">Liszt</persName><unclear>,</unclear> <persName type="composer" corresp="https://d-nb.info/gnd/118524186">Debussy</persName><unclear>,</unclear> <persName type="composer" corresp="https://d-nb.info/gnd/118642545">Stravinsky</persName>, etc.
+          <lb/>Ce concert <unclear>é</unclear>tant donné à bureaux fermés, prière
+          <lb/>de s’adresser à la maison <orgName>Kneifel-Béroud</orgName>, pianos<unclear>,</unclear>
+          <lb/><address><addrLine>2<unclear>0</unclear>, Terraillet</addrLine></address>, qui enverra des invitations à toutes
+          <lb/>personnes qui en feront la demande.
+        </p>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Journal de Genève"</title>
+        <title type="sub">December 1927</title>
+        <author>
+          <orgName key="kneifel.beroud">Kneifel-Béroud</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Le grand succès du Steinway-Welte</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Le grand succès du Steinway-Welte</title>
+            <author><orgName>Kneifel-Béroud</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Journal de Genève</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2660646">Genève</pubPlace>
+            <date type="publication" when="1927-12-10">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Journal de Genève</title>
+            <biblScope unit="issue">No. 338, December 10, 1927</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Le Temps archives</repository>
+            <idno>
+              <idno type="URLImages">https://www.letempsarchives.ch/page/JDG_1927_12_10/3/article/6421238</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Le grand succès du Steinway-Welte</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Le grand succès du Steinway-Welte</title>
+            <author><orgName>Kneifel-Béroud</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Journal de Genève</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2660646">Genève</pubPlace>
+            <date type="publication" when="1927-12-17">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Journal de Genève</title>
+            <biblScope unit="issue">No. 345, December 17, 1927</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Le Temps archives</repository>
+            <idno>
+              <idno type="URLImages">https://www.letempsarchives.ch/page/JDG_1927_12_17/4/article/6423230</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Le grand succès du Steinway-Welte</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Le grand succès du Steinway-Welte</title>
+            <author><orgName>Kneifel-Béroud</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Journal de Genève</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2660646">Genève</pubPlace>
+            <date type="publication" when="1927-12-24">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Journal de Genève</title>
+            <biblScope unit="issue">No. 352, December 24, 1927</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Le Temps archives</repository>
+            <idno>
+              <idno type="URLImages">https://www.letempsarchives.ch/page/JDG_1927_12_24/5/article/6425474</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>Le grand succès du Steinway-Welte</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Le grand succès du Steinway-Welte</title>
+            <author><orgName>Kneifel-Béroud</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Journal de Genève</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2660646">Genève</pubPlace>
+            <date type="publication" when="1927-12-31">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Journal de Genève</title>
+            <biblScope unit="issue">No. 358, December 31, 1927</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Le Temps archives</repository>
+            <idno>
+              <idno type="URLImages">https://www.letempsarchives.ch/page/JDG_1927_12_31/3/article/6427151</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="fr">French</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad046-0.jpg" width="3451px" height="5429px"/>
+      <graphic type="IIIF" url="https://dedieletemps.cybor.ch/iiif_letemps/JDG_1927_12_10_3/full/full/0/default.jpg" width="3451px" height="5429px"/>
+      <zone points="1035,4893 1350,4893 1350,4934 1035,4934" xml:id="zone_intro"/>
+      <zone points="890,4945 1676,4945 1676,5040 890,5040" xml:id="zone_headline"/>
+      <zone points="1033,5042 1676,5042 1676,5170 1033,5170" xml:id="zone_text"/>
+      <zone points="1035,5173 1676,5173 1676,5265 1035,5265" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_intro">
+        <ab><lb/>Le grand succès du</ab>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in #g"><lb/><name type="brand">Steinway-Welte</name></hi></head>
+      </div>
+      <div facs="#zone_text">
+        <ab>
+          <lb/>au dernier concert au <placeName>Conservatoire</placeName> a
+          <lb/>prouvé <seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">son éclatante supériorité dans la
+          <lb/>reproduction <sic>de jeu</sic> des maîtres du clavier</seg>
+          <lb/>Voir les différents modèles chez</ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab>
+          <lb/><hi rendition="#c #b #g"><orgName>KNEIFEL-BÉROUD</orgName></hi>
+          <lb/>Magasin de Pianos, <address><addrLine>Passage du Terraillet</addrLine></address></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
