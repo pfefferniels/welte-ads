@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Luxemburger Wort"</title>
+        <title type="sub">May 24 and June 19, 1926</title>
+        <author>
+          <orgName key="schellenberg">B. Schellenberg</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Täglich Vorträge des Reproduktions-Pianos „Welte-Mignon“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Täglich Vorträge des Reproduktions-Pianos „Welte-Mignon“</title>
+            <author><orgName>B. Schellenberg</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Luxemburger Wort</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2960316">Luxemburg</pubPlace>
+            <date type="publication" when="1926-06-19">1926</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Luxemburger Wort</title>
+            <biblScope unit="issue">June 19, 1926</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>eluxemburgensia (Bibliothèque nationale du Luxembourg)</repository>
+            <idno>
+              <idno type="URLImages">https://viewer.eluxemburgensia.lu/ark:70795/79gskj/pages/5/articles/DTL308</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Täglich Vorträge des Reproduktions-Pianos „Welte-Mignon“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Täglich Vorträge des Reproduktions-Pianos „Welte-Mignon“</title>
+            <author><orgName>B. Schellenberg</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Luxemburger Wort</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2960316">Luxemburg</pubPlace>
+            <date type="publication" when="1926-05-24">1926</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Luxemburger Wort</title>
+            <biblScope unit="issue">May 24, 1926</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>First printing; the same setting, checked on the scan.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>eluxemburgensia (Bibliothèque nationale du Luxembourg)</repository>
+            <idno>
+              <idno type="URLImages">https://viewer.eluxemburgensia.lu/ark:70795/mhj8w8/pages/4/articles/DTL225</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="de">German</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad071-0.jpg" width="4547px" height="6437px"/>
+      <graphic type="IIIF" url="https://iiif.eluxemburgensia.lu/image/iiif/2/ark%3A70795%2F79gskj%2Fpages%2F5/full/full/0/default.jpg" width="4547px" height="6437px"/>
+      <zone points="90,4058 622,4058 622,4146 90,4146" xml:id="zone_headline"/>
+      <zone points="632,4066 922,4066 922,4142 632,4142" xml:id="zone_lead"/>
+      <zone points="90,4146 922,4146 922,4258 90,4258" xml:id="zone_text"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#b #in"><lb/>Täglich Vorträge</hi></head>
+      </div>
+      <div facs="#zone_lead">
+        <ab><hi rendition="#g"><lb/>des Reproduk-
+          <lb/>tions-Pianos</hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <ab><lb/>„<name type="brand">Welte-Mignon</name>“ in den Geschäftsräumen der Firma
+          <lb/><hi rendition="#b"><orgName>B. Schellenberg</orgName>,</hi> Fournisseur de la Cour, <address><addrLine>Luxbg.-
+          <lb/>Gare, Avenue Adolphe 9.</addrLine></address> Tél. 40-31. <hi rendition="#right">[3968</hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

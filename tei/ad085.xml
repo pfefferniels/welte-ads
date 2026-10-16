@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Morgenbladet" and "Aftenposten"</title>
+        <title type="sub">November 13 to 15, 1920</title>
+        <author>
+          <orgName key="norsk.flygel">Norsk Flygel og Pianolager A/S</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Steinway-Piano med indbygget første Rangs Spilleapparat</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Steinway-Piano med indbygget første Rangs Spilleapparat</title>
+            <author><orgName>Norsk Flygel og Pianolager A/S</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Morgenbladet</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3143244">Kristiania</pubPlace>
+            <date type="publication" when="1920-11-13">1920</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Morgenbladet</title>
+            <biblScope unit="issue">November 13, 1920, No. 573</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>A single used instrument offered for sale: a Steinway piano with a built-in Welte player for electric drive. The name Mignon is not printed.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Nasjonalbiblioteket</repository>
+            <idno>
+              <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_morgenbladet_null_null_19201113_102_573_1</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Steinway-Piano med indbygget første Rangs Spilleapparat</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Steinway-Piano med indbygget første Rangs Spilleapparat</title>
+            <author><orgName>Norsk Flygel og Pianolager A/S</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Morgenbladet</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3143244">Kristiania</pubPlace>
+            <date type="publication" when="1920-11-15">1920</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Morgenbladet</title>
+            <biblScope unit="issue">November 15, 1920, No. 574</biblScope>
+            <biblScope unit="pages">6</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Compared with the first printing only through the library's OCR, which has the same text.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Nasjonalbiblioteket</repository>
+            <idno>
+              <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_morgenbladet_null_null_19201115_102_574_1</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Steinway-Piano med indbygget første Rangs Spilleapparat</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Steinway-Piano med indbygget første Rangs Spilleapparat</title>
+            <author><orgName>Norsk Flygel og Pianolager A/S</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Aftenposten</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3143244">Kristiania</pubPlace>
+            <date type="publication" when="1920-11-13">1920</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Aftenposten</title>
+            <biblScope unit="issue">November 13, 1920, No. 562</biblScope>
+            <biblScope unit="pages">9</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Compared with the first printing only through the library's OCR, which has the same text, in a narrower setting.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Nasjonalbiblioteket</repository>
+            <idno>
+              <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_aftenposten_null_null_19201113_61_562_2</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>Steinway-Piano med indbygget første Rangs Spilleapparat</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Steinway-Piano med indbygget første Rangs Spilleapparat</title>
+            <author><orgName>Norsk Flygel og Pianolager A/S</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Aftenposten</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3143244">Kristiania</pubPlace>
+            <date type="publication" when="1920-11-15">1920</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Aftenposten</title>
+            <biblScope unit="issue">November 15, 1920, No. 564</biblScope>
+            <biblScope unit="pages">10</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Compared with the first printing only through the library's OCR, which has the same text, in a narrower setting.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Nasjonalbiblioteket</repository>
+            <idno>
+              <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_aftenposten_null_null_19201115_61_564_1</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="no">Norwegian (Dano-Norwegian)</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad085-0.jpg" width="5945px" height="8963px"/>
+      <graphic type="IIIF" url="https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_morgenbladet_null_null_19201113_102_573_1-1_005_null/full/full/0/default.jpg" width="5945px" height="8963px"/>
+      <zone points="5042,7046 5882,7046 5882,7252 5042,7252" xml:id="zone_headline"/>
+      <zone points="5012,7254 5908,7254 5908,7491 5012,7491" xml:id="zone_text"/>
+      <zone points="5056,7493 5902,7493 5902,7608 5056,7608" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in"><lb/><name type="brand">Steinway-Piano</name></hi></head>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/>med indbygget første Rangs Spille-
+          <lb/>apparat for elektrisk drift (<name type="brand">Welte</name>)
+          <lb/><seg xml:id="topic_1" ana="#affordability" type="topic" resp="#claude">billig tilsalgs</seg>. Andet Instrument
+          <lb/>kan indbyttes ved Salg.</p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c #b"><lb/><orgName>Norsk Flygel og Pianolager A/S</orgName>,
+          <lb/><address><addrLine>Bygdø Allée 3, Chr.a.</addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

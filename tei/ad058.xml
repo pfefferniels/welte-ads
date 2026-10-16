@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Nieuwe Rotterdamsche Courant"</title>
+        <title type="sub">March 28 to April 11, 1924</title>
+        <author>
+          <orgName key="quispel">C. Quispel</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Als Reproductie Piano is de Estey-Welte in elk opzicht een Meesterstuk</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Als Reproductie Piano is de Estey-Welte in elk opzicht een Meesterstuk</title>
+            <author><orgName>C. Quispel</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nieuwe Rotterdamsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1924-03-28">1924</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nieuwe Rotterdamsche Courant</title>
+            <biblScope unit="issue">March 28, 1924</biblScope>
+            <biblScope unit="pages">16</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010027119:mpeg21:a0091</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Als Reproductie Piano is de Estey-Welte in elk opzicht een Meesterstuk</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Als Reproductie Piano is de Estey-Welte in elk opzicht een Meesterstuk</title>
+            <author><orgName>C. Quispel</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nieuwe Rotterdamsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1924-04-04">1924</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nieuwe Rotterdamsche Courant</title>
+            <biblScope unit="issue">April 4, 1924</biblScope>
+            <biblScope unit="pages">12</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Not inspected closely on the scan; the OCR gives the same text.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010027131:mpeg21:a0039</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Als Reproductie Piano is de Estey-Welte in elk opzicht een Meesterstuk</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Als Reproductie Piano is de Estey-Welte in elk opzicht een Meesterstuk</title>
+            <author><orgName>C. Quispel</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nieuwe Rotterdamsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1924-04-11">1924</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nieuwe Rotterdamsche Courant</title>
+            <biblScope unit="issue">April 11, 1924</biblScope>
+            <biblScope unit="pages">11</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Checked on the scan: the same setting.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010027143:mpeg21:a0054</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad058-0.jpg" width="5282px" height="7173px"/>
+      <zone points="2570,295 2780,295 2780,532 2570,532" xml:id="zone_picture"/>
+      <zone points="2505,546 2812,546 2812,711 2505,711" xml:id="zone_lead"/>
+      <zone points="2225,713 3090,713 3090,873 2225,873" xml:id="zone_brand"/>
+      <zone points="2322,876 2982,876 2982,1049 2322,1049" xml:id="zone_masterpiece"/>
+      <zone points="2320,1051 2982,1051 2982,1464 2320,1464" xml:id="zone_text"/>
+      <zone points="2362,1470 2938,1470 2938,1772 2362,1772" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>Monogram of interlaced letters (S and T?) in an oval</desc></figure>
+      </div>
+      <div facs="#zone_lead">
+        <ab><hi rendition="#c">
+          <lb/>Als
+          <lb/>Reproductie
+          <lb/>Piano is de
+        </hi></ab>
+      </div>
+      <div facs="#zone_brand">
+        <head><hi rendition="#c #in"><lb/><name type="brand">Estey-Welte</name></hi></head>
+      </div>
+      <div facs="#zone_masterpiece">
+        <ab><hi rendition="#c">
+          <lb/>in elk opzicht een
+          <hi rendition="#in"><lb/><seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">Meesterstuk</seg></hi>
+        </hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/>Van uit <placeName>Amerika</placeName> heeft de
+          <lb/><name type="brand">Estey-Welte</name> <seg xml:id="topic_2" ana="#popular" type="topic" resp="#claude">reeds een
+          <lb/>triomftocht gemaakt door
+          <lb/>de geheele wereld</seg>.</p>
+        <p><lb/>Iedereen die belang stelt,
+          <lb/>noodigen wij uit om te ko-
+          <lb/>men zien en hooren.</p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c">
+          <hi rendition="#in"><lb/><orgName>C. Quispel</orgName></hi>
+          <lb/>Pianofabrikant
+          <address>
+            <addrLine><hi rendition="#smaller"><lb/>Goudsche Singel 3</hi></addrLine>
+            <addrLine><lb/>Rotterdam</addrLine>
+          </address>
+        </hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

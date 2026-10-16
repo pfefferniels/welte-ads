@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Nieuwe Rotterdamsche Courant", "Algemeen Handelsblad", "De Telegraaf" and "De Maasbode"</title>
+        <title type="sub">September 12 and 19, 1923</title>
+        <author>
+          <orgName key="auto.piano.co">The Auto-Piano Co.</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>THE AUTO-PIANO CO. NEW YORK EXPOSEERT JAARBEURS UTRECHT</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">THE AUTO-PIANO CO. NEW YORK EXPOSEERT JAARBEURS UTRECHT</title>
+            <author><orgName>The Auto-Piano Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nieuwe Rotterdamsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1923-09-12">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nieuwe Rotterdamsche Courant</title>
+            <biblScope unit="issue">September 12, 1923</biblScope>
+            <biblScope unit="pages">8</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010026782:mpeg21:a0039</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>THE AUTO-PIANO CO. NEW YORK EXPOSEERT JAARBEURS UTRECHT</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">THE AUTO-PIANO CO. NEW YORK EXPOSEERT JAARBEURS UTRECHT</title>
+            <author><orgName>The Auto-Piano Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Algemeen Handelsblad</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2759794">Amsterdam</pubPlace>
+            <date type="publication" when="1923-09-12">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Algemeen Handelsblad</title>
+            <biblScope unit="issue">September 12, 1923, No. 31074</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Checked on the scan: the same setting in capitals, with "AUTO=PIANO" in the first line and the reference number "(39446)".</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010657145:mpeg21:a0019</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>THE AUTO-PIANO CO. NEW YORK EXPOSEERT JAARBEURS UTRECHT</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">THE AUTO-PIANO CO. NEW YORK EXPOSEERT JAARBEURS UTRECHT</title>
+            <author><orgName>The Auto-Piano Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>De Telegraaf</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2759794">Amsterdam</pubPlace>
+            <date type="publication" when="1923-09-12">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">De Telegraaf</title>
+            <biblScope unit="issue">September 12, 1923, No. 18835</biblScope>
+            <biblScope unit="pages">8</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Not inspected closely on the scan; the OCR gives the same wording.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:110564088:mpeg21:a0191</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>THE AUTO-PIANO CO. NEW YORK EXPOSEERT JAARBEURS UTRECHT</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">THE AUTO-PIANO CO. NEW YORK EXPOSEERT JAARBEURS UTRECHT</title>
+            <author><orgName>The Auto-Piano Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>De Maasbode</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1923-09-12">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">De Maasbode</title>
+            <biblScope unit="issue">September 12, 1923, No. 18964</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Not inspected closely on the scan; the OCR gives the same wording.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMKB04:000189051:mpeg21:a0050</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_5">
+        <bibl>THE AUTO-PIANO Co. :: NEW YORK :: EXPOSEERT JAARBEURS UTRECHT</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">THE AUTO-PIANO Co. :: NEW YORK :: EXPOSEERT JAARBEURS UTRECHT</title>
+            <author><orgName>The Auto-Piano Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Algemeen Handelsblad</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2759794">Amsterdam</pubPlace>
+            <date type="publication" when="1923-09-19">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Algemeen Handelsblad</title>
+            <biblScope unit="issue">September 19, 1923, No. 31081</biblScope>
+            <biblScope unit="pages">2</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Checked on the scan. Reset in upper and lower case under "Ingezonden Mededeelingen": "THE AUTO-PIANO Co. / :: NEW YORK :: / EXPOSEERT JAARBEURS UTRECHT / VASTE GEBOUW, STAND 5031 / Hoort de Rondo-Art (Welte-Mignon) met / combineerende patenten van / Welte en Auto-Piano Co."</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010657157:mpeg21:a0013</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_6">
+        <bibl>THE AUTO-PIANO CO. NEW YORK EXPOSEERT JAARBEURS UTRECHT</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">THE AUTO-PIANO CO. NEW YORK EXPOSEERT JAARBEURS UTRECHT</title>
+            <author><orgName>The Auto-Piano Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>De Maasbode</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1923-09-19">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">De Maasbode</title>
+            <biblScope unit="issue">September 19, 1923, No. 18976</biblScope>
+            <biblScope unit="pages">7</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Not inspected closely on the scan; the OCR gives the same wording.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMKB04:000189080:mpeg21:a0045</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_7">
+        <bibl>THE AUTO-PIANO CO. NEW YORK EXPOSEERT JAARBEURS UTRECHT</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">THE AUTO-PIANO CO. NEW YORK EXPOSEERT JAARBEURS UTRECHT</title>
+            <author><orgName>The Auto-Piano Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nieuwe Rotterdamsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1923-09-19">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nieuwe Rotterdamsche Courant</title>
+            <biblScope unit="issue">September 19, 1923</biblScope>
+            <biblScope unit="pages">8</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Not inspected closely on the scan; the OCR gives the same wording (placed under "Mededeelingen en Aanbevelingen").</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (Koninklijke Bibliotheek)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010026794:mpeg21:a0034</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad057-0.jpg" width="5321px" height="7080px"/>
+      <zone points="2815,4300 4475,4300 4475,4418 2815,4418" xml:id="zone_headline"/>
+      <zone points="3270,4428 4020,4428 4020,4485 3270,4485" xml:id="zone_newyork"/>
+      <zone points="2815,4512 4475,4512 4475,4672 2815,4672" xml:id="zone_fair"/>
+      <zone points="2815,4715 4475,4715 4475,4862 2815,4862" xml:id="zone_text"/>
+      <zone points="4425,4985 4590,4985 4590,5025 4425,5025" xml:id="zone_ref"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #in"><lb/><orgName>THE <app><rdg source="#source_1">AUTO-PIANO</rdg><rdg source="#source_2">AUTO=PIANO</rdg></app> CO.</orgName></hi></head>
+      </div>
+      <div facs="#zone_newyork">
+        <ab><hi rendition="#c #b"><lb/><placeName>NEW YORK</placeName></hi></ab>
+      </div>
+      <div facs="#zone_fair">
+        <ab><hi rendition="#c #b">
+          <lb/>EXPOSEERT <hi rendition="#in">JAARBEURS</hi> <placeName>UTRECHT</placeName>
+          <hi rendition="#smaller"><lb/>VASTE GEBOUW, STAND 5031</hi>
+        </hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <ab><lb/>HOORT DE <hi rendition="#b"><name type="brand">RONDO-ART</name></hi> (<name type="brand">WELTE-MIGNON</name>) <seg xml:id="topic_1" ana="#technical_invention" type="topic" resp="#claude">MET COMBI-
+          <lb/>NEERENDE PATENTEN VAN <hi rendition="#b">WELTE</hi> EN <hi rendition="#b">AUTO-PIANO CO.</hi></seg></ab>
+      </div>
+      <div facs="#zone_ref">
+        <ab><hi rendition="#right #smaller"><lb/><app><rdg source="#source_1">42238.75</rdg><rdg source="#source_2">(39446)</rdg></app></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

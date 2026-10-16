@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Nieuwe Rotterdamsche Courant"</title>
+        <title type="sub">May 5, 1924</title>
+        <author>
+          <orgName key="rijken.de.lange">Rijken &amp; De Lange</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>DE REPRODUCTIE-PIANO’S EN VLEUGELS WELTE-MIGNON</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">DE REPRODUCTIE-PIANO’S EN VLEUGELS WELTE-MIGNON</title>
+            <author><orgName>Rijken &amp; De Lange</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nieuwe Rotterdamsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1924-05-05">1924</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nieuwe Rotterdamsche Courant</title>
+            <biblScope unit="issue">May 5, 1924</biblScope>
+            <biblScope unit="pages">7</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010027181:mpeg21:a0025</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad061-0.jpg" width="5366px" height="7148px"/>
+      <zone points="2800,4492 3844,4492 3844,4562 2800,4562" xml:id="zone_headline"/>
+      <zone points="2958,4566 3685,4566 3685,4696 2958,4696" xml:id="zone_brand"/>
+      <zone points="2950,4702 3704,4702 3704,4868 2950,4868" xml:id="zone_invention"/>
+      <zone points="2949,4869 3701,4869 3701,5046 2949,5046" xml:id="zone_instruments"/>
+      <zone points="2950,5047 3848,5047 3848,5093 2950,5093" xml:id="zone_dealer"/>
+      <zone points="2805,5094 3848,5094 3848,5226 2805,5226" xml:id="zone_signature"/>
+      <zone points="3794,5370 3940,5370 3940,5404 3794,5404" xml:id="zone_number"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b"><lb/>DE REPRODUCTIE-PIANO’S EN VLEUGELS</hi></head>
+      </div>
+      <div facs="#zone_brand">
+        <head><hi rendition="#c #b #in"><lb/><name type="brand">WELTE-MIGNON</name></hi></head>
+      </div>
+      <div facs="#zone_invention">
+        <ab><hi rendition="#c #b #smaller"><lb/><seg xml:id="topic_1" ana="#technical_invention" type="topic" resp="#claude">ORIGINEELE VINDING</seg> VAN DE FIRMA</hi>
+          <hi rendition="#c #b #larger"><lb/><orgName>M. WELTE u. SöHNE</orgName></hi>
+          <hi rendition="#right #b"><lb/><placeName>FREIBURG</placeName>.</hi></ab>
+      </div>
+      <div facs="#zone_instruments">
+        <ab><hi rendition="#b #i #smaller"><lb/>IN INSTRUMENTEN VAN:</hi>
+          <hi rendition="#c #b #in #g2"><lb/><name type="brand">STEINWAY</name></hi>
+          <hi rendition="#c #b #smaller"><lb/>en andere 1e Klasse Fabrikaten.</hi></ab>
+      </div>
+      <div facs="#zone_dealer">
+        <ab><hi rendition="#c #b #smaller"><lb/>Steeds te hooren bij de Vertegenwoordigers</hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c #b"><lb/><hi rendition="#in"><orgName>RIJKEN &amp; DE LANGE</orgName></hi>
+          <lb/><address><addrLine>BINNENROTTE 154. — ROTTERDAM</addrLine></address></hi></ab>
+      </div>
+      <div facs="#zone_number">
+        <ab><hi rendition="#right #smaller"><lb/>22003.60</hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
