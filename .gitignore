@@ -6,3 +6,6 @@ frontend/tsconfig.tsbuildinfo
 
 # OS
 .DS_Store
+
+# downloaded schemas
+frontend/.cache/

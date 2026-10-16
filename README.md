@@ -15,6 +15,11 @@ which is also where the site reads the topics from. After changing that file,
 or after using a new rendition or topic in an advertisement, run
 `npm run sync-tei` in `frontend/`; `npm test` fails until the files agree.
 
+`npm run validate-tei` validates all files against their schema with
+`xmllint`. On every push and pull request, GitHub Actions validates the TEI
+and runs the type check, the linter, the tests and knip; `main` is deployed
+only when they pass.
+
 ## Layout view
 
 Each ad page has a layout view that places the text of every
