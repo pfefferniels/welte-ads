@@ -2,9 +2,9 @@
 
 import React, { useMemo, useState } from "react"
 import { Box } from "@mui/material"
-import { area, interpolateLab, piecewise } from "d3"
+import { area, interpolateHcl } from "d3"
 import theme from "../../theme"
-import { runsOf, smoothedShare } from "../../lib/artists"
+import { runsOf, smoothedMentions, smoothedShare } from "../../lib/artists"
 import type { ArtistTimeline, YearTotal } from "../../lib/artists"
 
 export interface Artist extends ArtistTimeline {
@@ -29,15 +29,19 @@ const ROW = 32
 const MAX_THICKNESS = ROW - 4
 const BOTTOM = 72 // the axis and the counts of the years
 const STEP = 0.1 // of the curves, in years
+const STOPS = 5 // a colour every fifth step, every half year
 
-const BAND = '#f7f2ed'
-const GRID = '#e6ded6'
+const GRID = '#e4e4e4'
 const MUTED = '#8a7f78'
 
-// a band's colour tells how often the artist is mentioned in all, from light
-// (once) to dark (most often), on a logarithmic scale; the lightest blue
-// still stands out from the background
-const RAMP = piecewise(interpolateLab, ['#6da7ec', '#3987e5', '#256abf', '#184f95', '#0d366b'])
+// a band's colour tells how often the artist is mentioned per year around a
+// time: blue where seldom, turning red, and darker, the more often; the
+// colour changes slowly at first, so that blue is the rule and red stands out
+const RAMP = interpolateHcl('#3987e5', '#c62f2b')
+const EASE = 1.5
+
+// a point of a band: the time, the share and the mentions per year
+type Point = [number, number, number]
 
 const percent = (share: number) =>
   `${(100 * share).toLocaleString('en-GB', { maximumFractionDigits: share < 0.1 ? 1 : 0 })}%`
@@ -54,19 +58,23 @@ export default function ArtistsChart({ years, artists, scaleArtists, h }: Props)
   const runs = useMemo(() => runsOf(years), [years])
   const totalOf = new Map(years.map(y => [y.year, y]))
 
-  // the smoothed shares of every artist, from the start of each run to its end
+  // the smoothed shares and mentions of every artist, from the start of each
+  // run to its end
   const curves = useMemo(() => new Map(scaleArtists.map(artist => [artist.id, runs.map(([from, to]) => {
-    const points: [number, number][] = []
-    for (let t = from - 0.5; t <= to + 0.5 + 1e-9; t += STEP) points.push([t, smoothedShare(artist, years, h, t)])
+    const points: Point[] = []
+    for (let t = from - 0.5; t <= to + 0.5 + 1e-9; t += STEP) {
+      points.push([t, smoothedShare(artist, years, h, t), smoothedMentions(artist, h, t)])
+    }
     return points
   })])), [scaleArtists, runs, years, h])
 
-  const max = Array.from(curves.values()).flat(2)
-    .reduce((m, [, share]) => Math.max(m, share), 0)
-  // the thickness of a band is proportional to the share
+  const all = Array.from(curves.values()).flat(2)
+  const max = all.reduce((m, [, share]) => Math.max(m, share), 0)
+  const most = all.reduce((m, [, , rate]) => Math.max(m, rate), 0)
+  // the thickness of a band is proportional to the share, the colour to the
+  // mentions per year
   const half = (share: number) => MAX_THICKNESS / 2 * share / max
-  const most = Math.max(...scaleArtists.map(artist => artist.mentions))
-  const colour = (mentions: number) => RAMP(Math.log(mentions) / Math.log(most))
+  const colour = (rate: number) => RAMP((rate / most) ** EASE)
 
   const rows = [...artists].sort((a, b) => meanYear(a) - meanYear(b) || b.mentions - a.mentions)
 
@@ -81,10 +89,15 @@ export default function ArtistsChart({ years, artists, scaleArtists, h }: Props)
   const ticks = Array.from({ length: last - first }, (_, i) => first + 0.5 + i)
 
   const bands = (artist: Artist, row: number) => curves.get(artist.id)!.map(points =>
-    points.every(([, share]) => share === 0) ? null : area<[number, number]>()
-      .x(([t]) => x(t))
-      .y0(([, share]) => y(row) - half(share))
-      .y1(([, share]) => y(row) + half(share))(points))
+    points.every(([, share]) => share === 0) ? null : {
+      d: area<Point>()
+        .x(([t]) => x(t))
+        .y0(([, share]) => y(row) - half(share))
+        .y1(([, share]) => y(row) + half(share))(points)!,
+      from: points[0][0],
+      to: points[points.length - 1][0],
+      stops: points.filter((_, i) => i % STOPS === 0 || i === points.length - 1),
+    })
 
   const facts = (artist: Artist, year: number) => {
     const total = totalOf.get(year)!
@@ -93,7 +106,8 @@ export default function ArtistsChart({ years, artists, scaleArtists, h }: Props)
       year: total.mentions
         ? `${mine?.mentions ?? 0} of the ${total.mentions} mentions of the year, in ${mine?.ads ?? 0} of ${plural(total.ads, 'ad')}`
         : `the ${plural(total.ads, 'ad')} of the year name no artists`,
-      around: `around ${year}: ${percent(smoothedShare(artist, years, h, year))} of the mentions`,
+      around: `around ${year}: ${percent(smoothedShare(artist, years, h, year))} of the mentions, ` +
+        `${smoothedMentions(artist, h, year).toLocaleString('en-GB', { maximumFractionDigits: 1 })} a year`,
     }
   }
 
@@ -105,15 +119,10 @@ export default function ArtistsChart({ years, artists, scaleArtists, h }: Props)
       <Box sx={{ position: 'relative', minWidth: 720 }}>
         <svg viewBox={`0 0 ${WIDTH} ${height}`} width="100%" role="group"
           aria-label="Share of the mentions of artists over time" style={{ display: 'block', fontFamily: 'inherit' }}>
-          {/* the spans of years with ads, and the gaps between them */}
-          {runs.map(([from, to], r) => (
-            <g key={from}>
-              <rect x={x(from - 0.5)} width={x(to + 0.5) - x(from - 0.5)} y={TOP} height={axis - TOP} fill={BAND} />
-              {r > 0 && (
-                <Gap from={runs[r - 1][1] + 1} to={from - 1}
-                  left={x(runs[r - 1][1] + 0.5)} right={x(from - 0.5)} top={TOP} bottom={axis} />
-              )}
-            </g>
+          {/* the gaps between the spans of years with ads */}
+          {runs.slice(1).map(([from], r) => (
+            <Gap key={from} from={runs[r][1] + 1} to={from - 1}
+              left={x(runs[r][1] + 0.5)} right={x(from - 0.5)} top={TOP} bottom={axis} />
           ))}
           <text x={WIDTH - 4} y={TOP - 8} fontSize={11} fill={MUTED} textAnchor="end">all</text>
 
@@ -145,13 +154,21 @@ export default function ArtistsChart({ years, artists, scaleArtists, h }: Props)
           )))}
           {active && (
             <rect x={x(active.year - 0.5)} y={y(activeRow) - ROW / 2} width={x(1) - x(0)} height={ROW}
-              fill={theme.palette.primary.main} fillOpacity={0.12} />
+              fill="#000" fillOpacity={0.05} />
           )}
 
-          {/* the band pointed at is outlined */}
-          {rows.map((artist, i) => bands(artist, i).map((d, r) => d && (
-            <path key={`${artist.id}-${r}`} d={d} fill={colour(artist.mentions)}
-              stroke={active?.artist === artist ? theme.palette.text.primary : 'none'} strokeWidth={1.25} />
+          {/* the colour changes along a band; the band pointed at is outlined */}
+          {rows.map((artist, i) => bands(artist, i).map((band, r) => band && (
+            <g key={`${artist.id}-${r}`}>
+              <linearGradient id={`band-${i}-${r}`} gradientUnits="userSpaceOnUse"
+                x1={x(band.from)} x2={x(band.to)} y1={0} y2={0}>
+                {band.stops.map(([t, , rate]) => (
+                  <stop key={t.toFixed(1)} offset={(t - band.from) / (band.to - band.from)} stopColor={colour(rate)} />
+                ))}
+              </linearGradient>
+              <path d={band.d} fill={`url(#band-${i}-${r})`}
+                stroke={active?.artist === artist ? theme.palette.text.primary : 'none'} strokeWidth={1.25} />
+            </g>
           )))}
 
           {rows.map((artist, i) => (
@@ -245,16 +262,17 @@ function Gap({ from, to, left, right, top, bottom }: GapProps) {
 interface LegendProps {
   max: number
   half: (share: number) => number
+  // the most mentions per year
   most: number
-  colour: (mentions: number) => string
+  colour: (rate: number) => string
 }
 
-// the thickness of round shares up to the largest one, and the colours of
-// round numbers of mentions
+// the thickness of round shares up to the largest one, and the colours from
+// no mentions to the most per year
 function Legend({ max, half, most, colour }: LegendProps) {
   const shares = [0.01, 0.02, 0.05, 0.1, 0.2, 0.5].filter(share => share <= max).slice(-3)
-  const counts = [1, 3, 10, 30, 100].filter(n => n <= most)
-  const swatch = colour(Math.round(Math.sqrt(most)))
+  const rates = Array.from({ length: Math.floor(most) + 1 }, (_, i) => i)
+  const bar = 140
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', columnGap: 4, rowGap: 1, mt: 1, ml: { sm: `${100 * (LABELS - 120) / WIDTH}%` }, color: MUTED, fontSize: '0.95rem' }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
@@ -262,7 +280,7 @@ function Legend({ max, half, most, colour }: LegendProps) {
         <svg width={shares.length * 64} height={MAX_THICKNESS + 2} aria-hidden="true">
           {shares.map((share, i) => (
             <g key={share}>
-              <rect x={i * 64} y={MAX_THICKNESS / 2 + 1 - half(share)} width={24} height={2 * half(share)} fill={swatch} />
+              <rect x={i * 64} y={MAX_THICKNESS / 2 + 1 - half(share)} width={24} height={2 * half(share)} fill={colour(0)} />
               <text x={i * 64 + 30} y={MAX_THICKNESS / 2 + 1} fontSize={12} dominantBaseline="central" fill={MUTED}>
                 {percent(share)}
               </text>
@@ -271,13 +289,14 @@ function Legend({ max, half, most, colour }: LegendProps) {
         </svg>
       </Box>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-        <span>Colour: mentions in all</span>
-        <svg width={counts.length * 44} height={16} aria-hidden="true">
-          {counts.map((n, i) => (
-            <g key={n}>
-              <rect x={i * 44} y={2} width={16} height={12} rx={2} fill={colour(n)} />
-              <text x={i * 44 + 21} y={8} fontSize={12} dominantBaseline="central" fill={MUTED}>{n}</text>
-            </g>
+        <span>Colour: mentions per year</span>
+        <svg width={bar + 16} height={30} aria-hidden="true">
+          <linearGradient id="band-legend">
+            {[0, 0.25, 0.5, 0.75, 1].map(t => <stop key={t} offset={t} stopColor={colour(t * most)} />)}
+          </linearGradient>
+          <rect x={4} y={2} width={bar} height={10} rx={2} fill="url(#band-legend)" />
+          {rates.map(rate => (
+            <text key={rate} x={4 + bar * rate / most} y={24} fontSize={12} textAnchor="middle" fill={MUTED}>{rate}</text>
           ))}
         </svg>
       </Box>

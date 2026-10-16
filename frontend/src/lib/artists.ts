@@ -76,6 +76,15 @@ export function smoothedShare(artist: ArtistTimeline, years: YearTotal[], h: num
   return all ? mine / all : 0
 }
 
+/**
+ * How often an artist is mentioned per year around a year: the mentions
+ * smoothed with the same kernel, scaled so that they add up to the
+ * artist's mentions over all time.
+ */
+export function smoothedMentions(artist: ArtistTimeline, h: number, at: number): number {
+  return artist.years.reduce((sum, y) => sum + kernel(at - y.year, h) * y.mentions, 0) / (h * Math.sqrt(2 * Math.PI))
+}
+
 // the widths tried, in years
 const WIDTHS = Array.from({ length: 19 }, (_, i) => 0.5 + i * 0.25)
 

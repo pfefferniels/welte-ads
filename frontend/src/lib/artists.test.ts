@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { artistTimelines, bandwidth, runsOf, smoothedShare } from "./artists"
+import { artistTimelines, bandwidth, runsOf, smoothedMentions, smoothedShare } from "./artists"
 import { getAllMetadata } from "./tei"
 
 describe("artistTimelines", () => {
@@ -31,6 +31,21 @@ describe("smoothedShare", () => {
     const between = smoothedShare(a, years, 1, 1911)
     expect(between).toBeCloseTo(1 / 4)
     expect(smoothedShare(a, years, 1, 1910)).toBeGreaterThan(between)
+  })
+})
+
+describe("smoothedMentions", () => {
+  const { artists } = artistTimelines([
+    { dates: ["1910"], mentions: ["a", "a", "a"] },
+    { dates: ["1913"], mentions: ["a"] },
+  ])
+  const a = artists[0]
+
+  it("spreads the mentions over the years around, keeping their number", () => {
+    let sum = 0
+    for (let t = 1890; t <= 1935; t += 0.01) sum += 0.01 * smoothedMentions(a, 2, t)
+    expect(sum).toBeCloseTo(4, 3)
+    expect(smoothedMentions(a, 2, 1910)).toBeGreaterThan(smoothedMentions(a, 2, 1913))
   })
 })
 

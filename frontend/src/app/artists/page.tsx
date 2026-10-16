@@ -21,7 +21,7 @@ export default function ArtistsPage() {
         How much of the advertising each artist received over time. The
         thickness of a band is the artist&apos;s share of all mentions of
         artists around a year; its colour, how often the artist is mentioned
-        in all. An advertisement counts once, in the year of
+        per year around then, from blue (seldom) to red (often). An advertisement counts once, in the year of
         its first printing, however often it was printed; an artist it names
         twice counts twice. The counts are those of the advertisements in this
         collection, which is a selection.
