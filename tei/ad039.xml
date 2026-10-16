@@ -173,7 +173,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc>
-           <change when="2026-10-16">Transcribed printing marked; note translated into English.</change>
+           <change when="2026-10-16">Transcribed printing marked; note translated into English; persons linked to the GND and typed.</change>
            <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
            <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
            <change when="2026-10-15">Made valid against tei_all.</change>
@@ -201,7 +201,7 @@
             <head>
                 <lb />
                 <hi rendition="#larger #b">
-                    When <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> listens
+                    When <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> listens
                     <lb />to his own Playing
                 </hi>
             </head>
@@ -228,12 +228,12 @@
                 <name type="brand">Welte-Mignon</name>
                 <hi rendition="#i">auto-
                 <lb />graphic</hi> records of playing by
-                <persName corresp="https://d-nb.info/gnd/118986724">
+                <persName type="artist" corresp="https://d-nb.info/gnd/118986724">
                     Pader-
                     <lb />ewski
                 </persName>,
-                <persName corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
-                <persName corresp="https://d-nb.info/gnd/118953915">Carreño</persName> and other
+                <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreño</persName> and other
                 <lb />great artists have all been heard by
                 <lb />the musicians themselves and
                 <seg xml:id="topic_2" ana="#exact_reproduction" resp="#np" type="topic">

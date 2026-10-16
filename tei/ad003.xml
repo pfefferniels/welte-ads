@@ -166,7 +166,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked; link to the digital images added.</change>
+            <change when="2026-10-16">Transcribed printing marked; link to the digital images added; persons linked to the GND and typed.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Made valid against tei_all.</change>
@@ -219,10 +219,10 @@
             <lb />
             <seg xml:id="topic_2" ana="#touch_of_a_button" resp="#np" type="topic">
                 Ein Druck auf den Knopf genügt, um einen 
-                <hi rendition="#b"><persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>,
-                <persName corresp="https://d-nb.info/gnd/118518011">Busoni</persName>,
-                <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,</hi>
-                <lb /><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/116429623">Reisenauer</persName></hi>
+                <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,</hi>
+                <lb /><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/116429623">Reisenauer</persName></hi>
                 etc. zu zitieren.
             </seg></hi></ab>
         </div>

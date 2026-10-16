@@ -403,7 +403,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc>
-           <change when="2026-10-16">Transcribed printing marked.</change>
+           <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
            <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
            <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
            <change when="2026-10-15">Further printings found on archive.org added as sources.</change>
@@ -458,10 +458,10 @@
             <lb />piano equipped with the famous <name type="brand">WELTE-
             <lb />MIGNON Licensee Reproducing Action</name>.
             <lb />Think what this means:
-            <persName corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName>,
-            <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
-            <persName corresp="https://d-nb.info/gnd/119362112">Casella</persName>,
-            <persName corresp="https://d-nb.info/gnd/118694820">Gieseking</persName> and a
+            <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName>,
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/119362112">Casella</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118694820">Gieseking</persName> and a
             <lb />host of other world-famous pianists.
             <seg xml:id="topic_3" ana="#distinction_from_mechanical #personality">
                 Not<lb />approximations of their playing, but their<lb />very individuality.

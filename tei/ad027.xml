@@ -175,7 +175,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked.</change>
+            <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Made valid against tei_all.</change>
@@ -233,7 +233,7 @@
             <ab><lb />Who but a
             <persName type="artist" corresp="https://d-nb.info/gnd/119466821">Samaroff</persName> can achieve
             <lb />the crashing fortissimo with
-            <lb />which <persName type="composer">Wagner</persName>
+            <lb />which <persName type="composer" corresp="https://d-nb.info/gnd/118594117">Wagner</persName>
             meant his glorious
             <lb />composition to be played? Or,
             <seg xml:id="topic_2" ana="#suit_every_mood" resp="#np" type="topic">
@@ -242,7 +242,7 @@
             </seg>, who but
             <persName type="artist" corresp="https://d-nb.info/gnd/116014490">de<lb />Pachmann</persName>
             can so entrance you
-            <lb />with <persName type="composer">Chopin's</persName> sensuous Nocturne?
+            <lb />with <persName type="composer" corresp="https://d-nb.info/gnd/118520539">Chopin's</persName> sensuous Nocturne?
             <lb />True music-lovers are satisfied only
             <lb />with the world's greatest masters.
             <lb />The <name type="brand">Welte-Mignon*</name> satisfies in this

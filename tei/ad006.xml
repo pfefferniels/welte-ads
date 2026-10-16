@@ -60,6 +60,12 @@
                         <biblScope unit="pages">5</biblScope>
                     </seriesStmt>
                 </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>Library of Congress</repository>
+                        <idno type="URLImages">https://chroniclingamerica.loc.gov/lccn/sn83030273/1920-04-30/ed-1/seq-5/</idno>
+                    </msIdentifier>
+                </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -196,7 +202,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked.</change>
+            <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed; link to the digital images added.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Made valid against tei_all.</change>
@@ -308,13 +314,13 @@
             <lb />prices and on exceptional terms.</ab>
         </div>
         <div facs="#eSc_textblock_2cbb468e">
-            <ab><lb />If <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
+            <ab><lb />If <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
             played to you, on your own piano, ex-
             <lb />actly as he played at the very zenith of his career when
             <lb />those marvelous fingers performed miracles, you could
             <lb />count it a great event in your life. This is what the
             <lb /><name type="brand">WELTE MIGNON Reproducing Piano</name> will do for you.
-            <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
             <seg xml:id="topic_3" ana="#soulfulness" type="topic" resp="#np">
                 played his soul into the <name type="brand">Welte</name>
             </seg>,

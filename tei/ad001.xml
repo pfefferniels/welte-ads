@@ -165,7 +165,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked.</change>
+            <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Made valid against tei_all.</change>
             <change when="2026-10-15">TEI header corrected.</change>
@@ -238,7 +238,7 @@
             <persName type="artist" corresp="https://d-nb.info/gnd/116014490">Pachmann</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>, <lb />
             <persName type="artist" corresp="https://d-nb.info/gnd/116422319">Hambourg</persName>,
-            <persName type="artist">Leonard <lb />Borwick</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/117621641">Leonard <lb />Borwick</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/116040378">Fanny Davies</persName>, etc.</ab> </div>
         <div facs="#eSc_textblock_6282f9b6">
             <ab><lb /><orgName>Steinway &amp; Sons</orgName>

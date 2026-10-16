@@ -177,7 +177,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked.</change>
+            <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Further printings found on archive.org added as sources.</change>
@@ -281,10 +281,10 @@
             <persName type="artist" corresp="https://d-nb.info/gnd/116204400">Bloomfield-Zeisler</persName>,
             <lb />
             <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreño</persName>,
-            <persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/118524186">
                 Debussy
             </persName>,
-            <persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/119110016">
                 Doh-<lb />nányi
             </persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
@@ -296,9 +296,9 @@
             <persName type="artist" corresp="https://d-nb.info/gnd/116308621">Pugno</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-<lb />Saens</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/119466821">Samaroff</persName>,
-            <persName type="artist">Sapellni-<lb />koff</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/134863267">Sapellni-<lb />koff</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/117110450">Scharwenka</persName>,
-            <persName type="artist">Schelling</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/117216615">Schelling</persName>,
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Strauss</persName>,
             <persName type="artist">Schumann</persName>, etc.</ab>
         </div>

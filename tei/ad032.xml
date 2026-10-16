@@ -173,7 +173,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked.</change>
+            <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Made valid against tei_all.</change>
@@ -258,7 +258,7 @@
 
         <div facs="#eSc_textblock_9aa8d87e">
             <ab><hi rendition="#b #i">
-                <lb /><persName>Mrs. Mary Roberts Rinehart</persName>––
+                <lb /><persName corresp="https://d-nb.info/gnd/119204002">Mrs. Mary Roberts Rinehart</persName>––
             </hi></ab>
         </div>
 

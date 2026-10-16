@@ -307,7 +307,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc>
-           <change when="2026-10-16">Transcribed printing marked.</change>
+           <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
            <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
            <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
            <change when="2026-10-15">Made valid against tei_all.</change>
@@ -377,7 +377,7 @@
       <div facs="#eSc_textblock_3e3a75c6">
          <ab><hi rendition="#right">
          <lb/>
-         <persName corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>
+         <persName type="artist" corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>
          and many others.
          <lb/>You can now have <name type="brand">Welte-Mignon
          <lb/>Licensee</name> in one hundred and fifteen

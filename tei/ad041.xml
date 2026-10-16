@@ -158,7 +158,7 @@
             </langUsage>
         </profileDesc>
     <revisionDesc>
-      <change when="2026-10-16">Transcribed printing marked.</change>
+      <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
       <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
       <change when="2026-10-15">Made valid against tei_all.</change>
       <change when="2026-10-15">TEI header corrected.</change>
@@ -247,7 +247,7 @@
           <lb/>Mignon Autograph Piano</name> for his steam
           <lb/> yacht. Some recent records made by
           <lb/>
-          <persName key="grieg" corresp="https://d-nb.info/gnd/118697641">
+          <persName type="artist" key="grieg" corresp="https://d-nb.info/gnd/118697641">
             Edvard Grieg
           </persName>
           were included, which

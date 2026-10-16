@@ -175,7 +175,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc>
-           <change when="2026-10-16">Transcribed printing marked.</change>
+           <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
            <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
            <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
            <change when="2026-10-15">Made valid against tei_all.</change>
@@ -234,7 +234,7 @@
                 <desc>Portrait of Pachmann</desc>
             </figure>
             <p>
-                <persName corresp="https://d-nb.info/gnd/116014490">
+                <persName type="artist" corresp="https://d-nb.info/gnd/116014490">
                     <lb />Vladimir<lb />
                     <hi rendition="#k">De Pachmann</hi>
                 </persName>
@@ -281,7 +281,7 @@
                 <desc>Portrait of Bloomfield-Zeisler</desc>
             </figure>
             <p>
-                <persName corresp="https://d-nb.info/gnd/116204400">
+                <persName type="artist" corresp="https://d-nb.info/gnd/116204400">
                     <lb />Fannie<lb />
                     <hi rendition="#k">Bloomfield-Zeisler</hi>
                 </persName>
@@ -329,35 +329,35 @@
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116327642">Gabrilowitsch</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116713178">Saar</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>
-                <lb /><persName type="artist">Boyle</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/1126196894">Boyle</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreno</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>
                 <lb /><persName type="artist">Conradi</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118524186">Debussy</persName></ab>
             </div>
             <div facs="#eSc_textblock_a5e73e7d">
-                <ab><lb /><persName type="artist">La Forge</persName>
+                <ab><lb /><persName type="artist" corresp="https://d-nb.info/gnd/134807359">La Forge</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>
-                <lb /><persName type="artist">Dohnanyi</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119110016">Dohnanyi</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119281953">Ganz</persName>
-                <lb /><persName type="artist">Saint-Saens</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-Saens</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>
-                <lb /><persName type="artist">Humperdinck</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11855476X">Humperdinck</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/120890143">Leschetizky</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119466821">Samaroff</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/117110450">Scharwenka</persName></ab>
             </div>
             <div facs="#eSc_textblock_b0a4f1b7">
-                <ab><lb /><persName type="artist">Novaes</persName>
+                <ab><lb /><persName type="artist" corresp="https://d-nb.info/gnd/137141823">Novaes</persName>
                 <lb /><persName type="artist">De Horvath</persName>
-                <lb /><persName type="artist">Glazunoff</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118695312">Glazunoff</persName>
                 <lb /><persName type="artist">Boguslawski</persName>
-                <lb /><persName type="artist">Landowska</persName>
-                <lb /><persName type="artist">Leoncavallo</persName>
-                <lb /><persName type="artist">Elly Ney</persName>
-                <lb /><persName type="artist">Ravel</persName>
-                <lb /><persName type="artist">Scriabin</persName>
-                <lb /><persName type="artist">Cyril Scott</persName></ab>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119037890">Landowska</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118779559">Leoncavallo</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118587552">Elly Ney</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118598651">Ravel</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118614916">Scriabin</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119495732">Cyril Scott</persName></ab>
             </div>
         </div>
 

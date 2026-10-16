@@ -195,7 +195,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked; link to the digital images added; note translated into English.</change>
+            <change when="2026-10-16">Transcribed printing marked; link to the digital images added; note translated into English; persons linked to the GND and typed.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Made valid against tei_all.</change>
@@ -235,33 +235,33 @@
         <body>
         <div facs="#eSc_textblock_c57eebad"><ab><hi rendition="#b">
             <lb />
-            <persName corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>
             <lb />
-            <persName corresp="https://d-nb.info/gnd/116942037">Felix Mottl</persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/116942037">Felix Mottl</persName>
             <lb />
-            <persName corresp="https://d-nb.info/gnd/118786253">Artur Nickisch</persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/118786253">Artur Nickisch</persName>
             <lb />
-            <persName corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName></hi></ab>
+            <persName type="artist" corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName></hi></ab>
         </div>
         <div facs="#eSc_textblock_38858a02"><ab><hi rendition="#b">
             <lb />
-            <persName corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>
             <lb />
-            <persName corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>
             <lb />
-            <persName corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>
+            <persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>
             <lb />
-            <persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName></hi></ab>
+            <persName type="artist" corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName></hi></ab>
         </div>
         <div facs="#eSc_textblock_bbaf7988">
             <ab><lb />Das Welte Mignon ist das
             <seg xml:id="topic_1" ana="#miracle" resp="#np" type="topic">Wunder der Wunder</seg>.
-            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>.</hi></ab></div>
+            <lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreno</persName>.</hi></ab></div>
         <div facs="#eSc_textblock_0ace7367">
-            <ab><lb />Eine unbedingt <seg xml:id="topic_2" ana="#technical_invention" type="topic" resp="#np">geniale Erfindung</seg> von hohem <lb />künstlerischen Wert.<lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>.</hi></ab></div>
+            <ab><lb />Eine unbedingt <seg xml:id="topic_2" ana="#technical_invention" type="topic" resp="#np">geniale Erfindung</seg> von hohem <lb />künstlerischen Wert.<lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/116942037">Mottl</persName>.</hi></ab></div>
         <div facs="#eSc_textblock_910008bc">
             <ab><lb /><seg xml:id="topic_3" ana="#virtual_presence" type="topic" resp="#np">Man meint den betreffenden Künstler in Person<lb />vor sich zu haben und ihn
-            spielen zu hören.</seg><lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118786253">Nickisch</persName>.</hi></ab></div>
+            spielen zu hören.</seg><lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Nickisch</persName>.</hi></ab></div>
         <div facs="#eSc_textblock_9c944536">
             <ab><quote>
                 <lb />Was ich Mignon vorzuwerfen habe; ist sein
@@ -269,7 +269,7 @@
                 <lb />Instruments noch seiner kolossalen Bedeutung ent-
                 <lb />spricht.
             </quote>
-            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>.</hi></ab>
+            <lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>.</hi></ab>
         </div>
         <div facs="#eSc_textblock_d5bad035">
             <ab><quote>
@@ -279,19 +279,19 @@
                 </seg>
             </quote>
             <lb />
-            <hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName>.</hi></ab>
+            <hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName>.</hi></ab>
         </div>
         <div facs="#eSc_textblock_c91feaa0">
             <ab><quote>
                 <lb />Welte Mignon ist für mich das <seg xml:id="topic_5" ana="#unreached_ideal" resp="#np" type="topic">unerreichte Ideal<lb />aller Musikinstrumente</seg>.
             </quote>
-            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>.</hi></ab>
+            <lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>.</hi></ab>
         </div>
         <div facs="#eSc_textblock_031c0fe4">
             <ab><quote>
                 <lb />Der <hi rendition="#g">einzige</hi> Apparat der auf künstlerische<lb />Bedeutung Anspruch machen kann.
             </quote>
-            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>.</hi></ab>
+            <lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>.</hi></ab>
         </div>
         <div facs="#eSc_textblock_fce1a771">
             <ab><lb />Mit dem Welte Mignon ist, wie die berühmtesten Künstler anerkennen, ein
@@ -309,13 +309,13 @@
             <seg xml:id="topic_9" ana="#touch_of_a_button" type="topic" resp="#np">
                 Der Besitzer<lb />eines Welte Mignon kann sich jederzeit von den
                 berühmtesten Musikern, wie
-                <persName corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>,
-                <persName corresp="https://d-nb.info/gnd/118953915">Carreno</persName>,
-                <persName corresp="https://d-nb.info/gnd/116662166">Lamond</persName>,
-                <persName corresp="https://d-nb.info/gnd/116942037">Mottl</persName>,
-                <lb /><persName corresp="https://d-nb.info/gnd/118598988">Reger</persName>,
-                <persName corresp="https://d-nb.info/gnd/11861911X">Strauss</persName>,
-                <persName corresp="https://d-nb.info/gnd/118986724">Paderewsky</persName> etc. vorspielen lassen.
+                <persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreno</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/116662166">Lamond</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/116942037">Mottl</persName>,
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118598988">Reger</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Strauss</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewsky</persName> etc. vorspielen lassen.
             </seg>
             <lb />
             
@@ -333,7 +333,7 @@
         <div facs="#eSc_textblock_c8ece5c3">
             <ab><lb />Diese Erfindung ist das unglaublichste an Vol-
             <lb />lendung, das man sich denken kann.
-            <lb /><hi rendition="#right #b"><persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>.</hi></ab></div>
+            <lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>.</hi></ab></div>
         </body>
     </text>
 </TEI>

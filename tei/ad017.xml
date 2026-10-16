@@ -168,7 +168,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc>
-           <change when="2026-10-16">Transcribed printing marked.</change>
+           <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
            <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
            <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
            <change when="2026-10-15">Made valid against tei_all.</change>
@@ -273,7 +273,7 @@
             <lb /><name type="brand"><hi rendition="#k">The</hi> <hi rendition="#i">Original Welte-Mignon</hi></name> as manufac-
             <lb />tured by the new <orgName>Welte-Mignon Corp.</orgName>
             <lb />not only retains all the marvelous features
-            <lb />invented by <persName>Edwin Welte</persName>, but also has many
+            <lb />invented by <persName corresp="https://d-nb.info/gnd/13335492X">Edwin Welte</persName>, but also has many
             <lb />refinements in manufacture which places it
             <lb />in its rightful position as THE <hi rendition="#i">reproducing</hi>
             <lb />piano. We invite comparison.

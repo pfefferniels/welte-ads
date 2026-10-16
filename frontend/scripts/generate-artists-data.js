@@ -21,7 +21,8 @@ const data = files.map(file => {
 
   const dates = Array.from(doc.querySelectorAll('date[type="publication"]'))
     .map(date => date.innerHTML)
-  const mentions = Array.from(doc.querySelectorAll('persName[corresp]'))
+  // only the recording artists, not composers or other persons mentioned
+  const mentions = Array.from(doc.querySelectorAll('persName[corresp][type="artist"]'))
     .map(name => name.getAttribute('corresp') || '')
 
   return { dates, mentions }

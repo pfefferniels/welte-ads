@@ -166,7 +166,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc>
-           <change when="2026-10-16">Transcribed printing marked.</change>
+           <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
            <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
            <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
            <change when="2026-10-15">Made valid against tei_all.</change>
@@ -234,7 +234,7 @@
 
             <lb />
             <signed>Richard Singer</signed>
-            <signed><persName type="artist"><unclear reason="illegible">Epstein</unclear></persName></signed>
+            <signed><persName type="artist" corresp="https://d-nb.info/gnd/130243019"><unclear reason="illegible">Epstein</unclear></persName></signed>
 
             <lb />
             <signed><persName type="artist" corresp="https://d-nb.info/gnd/118524186">Claude Debussy</persName></signed>

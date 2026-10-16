@@ -163,7 +163,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked.</change>
+            <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Made valid against tei_all.</change>
@@ -246,7 +246,7 @@
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116204400">Fannie Bloomfield-Zeisler</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116014490">Vladimir de Pachmann</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/124379923">Josef Lhévinne</persName>
-            <lb /><persName type="artist">Yolando Merö</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/134620151">Yolando Merö</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Camille Saint-Saëns</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>
@@ -259,10 +259,10 @@
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/117110450">Xaver Scharwenka</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/120890143">Theodor Leschetizky</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116422319">Mark Hambourg</persName>
-            <lb /><persName type="artist">Ernest Schelling</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/117216615">Ernest Schelling</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">A. Eugene d'Albert</persName>
-            <lb /><persName type="artist">Myrtle Elvyn</persName>
-            <lb /><persName type="artist">Carl <sic>Frieberg</sic></persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/134366999">Myrtle Elvyn</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116791748">Carl <sic>Frieberg</sic></persName>
             <hi rendition="#c">
             <lb />And 132 Other Artists<lb />Of Like Eminence
             </hi>

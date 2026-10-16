@@ -178,7 +178,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked; link to the digital images added; note translated into English.</change>
+            <change when="2026-10-16">Transcribed printing marked; link to the digital images added; note translated into English; persons linked to the GND and typed.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Made valid against tei_all.</change>
@@ -229,9 +229,9 @@
             <lb />gemacht worden ist. Dann wäre es möglich, auch
             <seg xml:id="topic_3" ana="#educational_use" resp="#np" type="topic">
                 heute noch sich an dem Spiel der grossen
-                <lb />Meister wie <persName type="composer">Chopin</persName>,
-                <persName type="composer">Liszt</persName>, <persName type="composer">Rubinstein</persName>,
-                <persName type="composer">Bülow</persName> etc. zu erfreuen und davon zu lernen
+                <lb />Meister wie <persName type="composer" corresp="https://d-nb.info/gnd/118520539">Chopin</persName>,
+                <persName type="composer" corresp="https://d-nb.info/gnd/118573527">Liszt</persName>, <persName type="composer" corresp="https://d-nb.info/gnd/118926802">Rubinstein</persName>,
+                <persName type="composer" corresp="https://d-nb.info/gnd/118664638">Bülow</persName> etc. zu erfreuen und davon zu lernen
             </seg>.
             Von fast
             <lb />allen Grossen der Gegenwart, seien es Pianisten, Komponisten oder Dirigenten,
@@ -240,7 +240,7 @@
                 <lb />spiel nun für die Nachwelt festgehalten.
             </seg>
             <lb />Aus den zahlreichen begeisterten Kundgebungen der massgebendsten Künstler sei nur die
-            <lb /><persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartners</persName> nachstehend angeführt:
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11863027X">Felix Weingartners</persName> nachstehend angeführt:
             <lb />
             <quote type="testimonial">
                 "Das Reproduktionsklavier ist das unglaublichste an Vollendung, was man sich denken kann.

@@ -307,7 +307,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked.</change>
+            <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Further printings found on archive.org added as sources.</change>
@@ -390,7 +390,7 @@
                 <lb />declare it impossible to believe that the artist is not actually playing.
             </seg>
             <hi rendition="#et2">
-                <lb /><hi rendition="#b"><persName>Walter Damrosch</persName></hi> <hi rendition="#i">says:
+                <lb /><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/116020776">Walter Damrosch</persName></hi> <hi rendition="#i">says:
                 <quote>
                     "The Welte is without a doubt
                     <lb />the

@@ -204,6 +204,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
+            <change when="2026-10-16">Persons linked to the GND and typed.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Made valid against tei_all.</change>
@@ -306,10 +307,10 @@
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/124379923">Joseph Lhevinne</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116888652">Alfred Grunfeld</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119281953">Rudolf Ganz</persName>
-            <lb /><persName type="artist">Ernest Schelling</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/117216615">Ernest Schelling</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116422319">Mark Hambourg</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116977108">Emil Sauer</persName>
-            <lb /><persName type="artist">E. Humperdinck</persName>
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11855476X">E. Humperdinck</persName>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/117110450">Xaver Scharwenka</persName></ab>
         </div>
         <div facs="#eSc_textblock_8c1ac387">

@@ -214,7 +214,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc>
-           <change when="2026-10-16">Transcribed printing marked; empty note removed.</change>
+           <change when="2026-10-16">Transcribed printing marked; empty note removed; persons linked to the GND and typed.</change>
            <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
            <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
            <change when="2026-10-15">Made valid against tei_all.</change>
@@ -241,7 +241,7 @@
         <div facs="#eSc_textblock_fa5427b3">
             <lb />
             <head><hi rendition="#b #i #in #larger">
-                <persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> WILL
+                <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> WILL
                 <lb /><hi rendition="#right">Play Again</hi>
             </hi></head>
             <ab><lb />

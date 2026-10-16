@@ -211,7 +211,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked; note translated into English.</change>
+            <change when="2026-10-16">Transcribed printing marked; note translated into English; persons linked to the GND and typed.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Made valid against tei_all.</change>
@@ -277,7 +277,7 @@
                 Wer mit der Spielweise
                 <persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Alberts</persName>,
                 <persName type="artist" corresp="https://d-nb.info/gnd/116662166">Lamonds</persName>,
-                <persName type="artist">Rislers</persName>,
+                <persName type="artist" corresp="https://d-nb.info/gnd/116558121">Rislers</persName>,
                 <persName type="artist" corresp="https://d-nb.info/gnd/117223794">Staven-<lb />hagens</persName>
                 etc. vertraut ist, vermag sie bei der
                 Wiedergabe sofort zu erkennen.
@@ -286,35 +286,35 @@
             existiert hätte, könnten wir<lb />auch heute noch
             <seg xml:id="topic_8" ana="#educational_use" type="topic" resp="#np">
                 dem Spiel der grossen Meister wie
-                <persName>Liszt</persName>, <persName>Rubinstein</persName>, <persName>Bülow</persName><lb />lauschen und daran lernen
+                <persName type="composer" corresp="https://d-nb.info/gnd/118573527">Liszt</persName>, <persName type="composer" corresp="https://d-nb.info/gnd/118926802">Rubinstein</persName>, <persName type="composer" corresp="https://d-nb.info/gnd/118664638">Bülow</persName><lb />lauschen und daran lernen
             </seg>. Von den Grossen der Gegenwart
             ist das Spiel<lb />aber nun für die Nachwelt festgehalten; schon jetzt sind zur
             Reproduktion<lb />aufgenommen:
-            <persName corresp="https://d-nb.info/gnd/118501437">Eugen d'Albert</persName>,
-            <persName corresp="https://d-nb.info/gnd/116014326">Konrad Ansorge</persName>,
-            <persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>,
-            <persName corresp="https://d-nb.info/gnd/118953915">Teresa<lb />Carreno</persName>,
-            <persName>Ernst von Dohnányi</persName>,
-            <persName>Artur Friedheim</persName>,
-            <persName corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>,
-            <persName corresp="https://d-nb.info/gnd/116888652">Alfred<lb />Grünfeld</persName>,
-            <persName>Heinrich Grünfeld</persName>,
-            <persName corresp="https://d-nb.info/gnd/116210419">Clotilde Kleeberg</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118501437">Eugen d'Albert</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116014326">Konrad Ansorge</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa<lb />Carreno</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/119110016">Ernst von Dohnányi</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116796170">Artur Friedheim</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116888652">Alfred<lb />Grünfeld</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116888733">Heinrich Grünfeld</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116210419">Clotilde Kleeberg</persName>,
             <persName>Alexander Krah</persName>,
-            <persName corresp="https://d-nb.info/gnd/116662166">Frederic<lb />Lamond</persName>,
-            <persName corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>,
-            <persName>Egon Petri</persName>,
-            <persName corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>,
-            <persName corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>,
-            <persName corresp="https://d-nb.info/gnd/119388472">Carl Reinecke</persName>,
-            <lb /><persName corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>,
-            <persName>Alice Ripper</persName>,
-            <persName corresp="https://d-nb.info/gnd/117110450">Xaver Scharwenka</persName>,
-            <persName>Artur Schnabel</persName>,
-            <persName>Joseph<lb />Slivinski</persName>,
-            <persName corresp="https://d-nb.info/gnd/117223794">Bernhard Stavenhagen</persName>,
-            <persName corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>,
-            <persName>Karl Wendling</persName>. Das<lb />Reproduktionsklavier bedeutet für die Hausmusik
+            <persName type="artist" corresp="https://d-nb.info/gnd/116662166">Frederic<lb />Lamond</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116133767">Egon Petri</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/119388472">Carl Reinecke</persName>,
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116557680">Alice Ripper</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/117110450">Xaver Scharwenka</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/118609467">Artur Schnabel</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/1080980598">Joseph<lb />Slivinski</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/117223794">Bernhard Stavenhagen</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/11728534X">Karl Wendling</persName>. Das<lb />Reproduktionsklavier bedeutet für die Hausmusik
             eine unendliche Bereiche-<lb />rung.
             
             Nicht nur, dass man
@@ -372,7 +372,7 @@
                 </seg>
             </quote>
 
-            <lb /><hi rendition="#larger #u"><persName type="artist">Ernst von Dohnányi</persName>:</hi>
+            <lb /><hi rendition="#larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/119110016">Ernst von Dohnányi</persName>:</hi>
             <quote type="testimonial">
                 <lb />Man kann nur staunen und bewundern.
             </quote>
@@ -406,7 +406,7 @@
         </div>
 
         <div facs="#eSc_textblock_daae2028">
-            <ab><lb /><hi rendition="#larger #u"><persName corresp="https://d-nb.info/gnd/116210419">Clotilde Kleeberg</persName>:</hi><lb />
+            <ab><lb /><hi rendition="#larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/116210419">Clotilde Kleeberg</persName>:</hi><lb />
             <quote type="testimonial">
                 <seg xml:id="topic_17" ana="#soulfulness" resp="#np" type="topic">
                     Es scheint mir, als ob in <name type="brand">Mignon</name> der Spie-<lb />gel der

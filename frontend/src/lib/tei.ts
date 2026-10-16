@@ -311,6 +311,8 @@ interface AdMetadata {
   newspapers: string[]
   mentions: string[]
   topicSegments: TopicSegment[]
+  // the transcription as plain text, for searching
+  fullText: string
 }
 
 interface AdData extends AdMetadata {
@@ -338,9 +340,10 @@ function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
     date => date.getAttribute('when') || date.textContent || ''
   )
   const newspapers = Array.from(doc.querySelectorAll('title[level="j"]')).map(
-    title => title.innerHTML
+    title => (title.textContent || '').replace(/\s+/g, ' ').trim()
   )
-  const mentions = Array.from(doc.querySelectorAll('persName[corresp]')).map(
+  // the recording artists that the ad names
+  const mentions = Array.from(doc.querySelectorAll('persName[corresp][type="artist"]')).map(
     name => name.getAttribute('corresp') || ''
   )
   // topics are marked on text segments and on figures (what a picture shows)
@@ -359,7 +362,25 @@ function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
     })
     .flat()
 
-  return { company, title, titleMain, titleSub, dates, newspapers, mentions, topicSegments }
+  return { company, title, titleMain, titleSub, dates, newspapers, mentions, topicSegments, fullText: plainText(xmlString) }
+}
+
+/**
+ * The text of an ad as one line of plain text: a word broken at the end of
+ * a line with a hyphen is joined again ("reproduc-<lb/>tions"), so that a
+ * search finds it.
+ */
+export function plainText(xmlString: string): string {
+  const start = xmlString.indexOf('<text')
+  const end = xmlString.lastIndexOf('</text>')
+  if (start < 0 || end < 0) return ''
+  const body = xmlString.slice(start, end + '</text>'.length)
+    .replace(/-\s*<lb\s*\/>\s*(?=[a-zäöüßàâçéèêëîïôûùÿñæœ])/g, '')
+    // a hyphen before a capital belongs to the word ("Welte-<lb/>Mignon")
+    .replace(/-\s*<lb\s*\/>\s*/g, '-')
+    .replace(/<lb\s*\/>/g, ' ')
+  const doc = new JSDOM(body, { contentType: 'text/xml' }).window.document
+  return (doc.documentElement.textContent || '').replace(/\s+/g, ' ').trim()
 }
 
 function getTeiDir(): string {

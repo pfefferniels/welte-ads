@@ -163,7 +163,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked; link to the digital images added.</change>
+            <change when="2026-10-16">Transcribed printing marked; link to the digital images added; persons linked to the GND and typed.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Made valid against tei_all.</change>
@@ -203,7 +203,7 @@
         </div>
         <div facs="#zone_caption_busoni">
             <ab><lb />
-            <persName corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName></ab>
+            <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName></ab>
         </div>
         <div type="illustration" facs="#eSc_textblock_648b9252">
             <figure>
@@ -212,7 +212,7 @@
         </div>
         <div facs="#zone_caption_nickisch">
             <ab><lb />
-            <persName corresp="https://d-nb.info/gnd/118786253">Prof. Arthur Nickisch</persName></ab>
+            <persName type="artist" corresp="https://d-nb.info/gnd/118786253">Prof. Arthur Nickisch</persName></ab>
         </div>
         <div type="illustration" facs="#eSc_textblock_931f14ec">
             <figure>
@@ -221,7 +221,7 @@
         </div>
         <div facs="#zone_caption_reisenauer">
             <ab><lb />
-            <persName corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName> †</ab>
+            <persName type="artist" corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName> †</ab>
         </div>
         <div facs="#eSc_textblock_851a1f28"><head><hi rendition="#c">
             <lb />

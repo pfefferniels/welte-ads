@@ -174,7 +174,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc>
-           <change when="2026-10-16">Transcribed printing marked.</change>
+           <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
            <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
            <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
            <change when="2026-10-15">Made valid against tei_all.</change>
@@ -246,7 +246,7 @@
                 <desc>Portrait of Brard</desc>
             </figure>
             <p>
-                <persName type="artist">
+                <persName type="artist" corresp="https://d-nb.info/gnd/123180465">
                     <lb />Magdeleine<lb />
                     <hi rendition="#k">Brard</hi>
                 </persName>
@@ -257,7 +257,7 @@
                 <desc>Portrait of Singer</desc>
             </figure>
             <p>
-                <persName type="artist">
+                <persName type="artist" corresp="https://d-nb.info/gnd/11740263X">
                     <lb />Richard<lb />
                     <hi rendition="#k">Singer</hi>
                 </persName>
@@ -291,7 +291,7 @@
             </figure>
             <p>
                 <lb />
-                <persName type="artist">
+                <persName type="artist" corresp="https://d-nb.info/gnd/116997249">
                     George<lb />
                     <hi rendition="#k">Liebling</hi>
                 </persName>
@@ -384,13 +384,13 @@
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118524186">Debussy</persName></ab>
             </div>
             <div facs="#eSc_textblock_49b5a03a">
-                <ab><lb /><persName type="artist">La Forge</persName>
+                <ab><lb /><persName type="artist" corresp="https://d-nb.info/gnd/134807359">La Forge</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/134788370">Poushnoff</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118524186">Debussy</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119281953">Ganz</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-Saens</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>
-                <lb /><persName type="artist">Humperdinck</persName>
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11855476X">Humperdinck</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/120890143">Leschetitzky</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/119466821">Samaroff</persName>
                 <lb /><persName type="artist" corresp="https://d-nb.info/gnd/117110450">Scharwenka</persName></ab>

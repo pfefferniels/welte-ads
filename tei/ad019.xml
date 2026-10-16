@@ -199,7 +199,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc>
-           <change when="2026-10-16">Transcribed printing marked.</change>
+           <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
            <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
            <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
            <change when="2026-10-15">Made valid against tei_all.</change>
@@ -321,17 +321,17 @@
                 <lb />side rests a small tablet with eight ivory but-
                 <lb />tons . . . She presses one . . . From her
                 <lb />superb piano, a</hi> <name type="brand">WELTE-MIGNON</name>, <hi rendition="#i">flow the
-                <lb />magic strains of a <persName type="composer">Chopin</persName> Nocturne . . .
-                <lb /><persName corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> is playing . . . Silence for a mo-
+                <lb />magic strains of a <persName type="composer" corresp="https://d-nb.info/gnd/118520539">Chopin</persName> Nocturne . . .
+                <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> is playing . . . Silence for a mo-
                 <lb />ment . . . the silence of appreciation . . .
                 <lb />She touches another button, choosing at ran-
-                <lb />dom . . . <persName corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>—playing
-                <persName type="composer">Mendels-
+                <lb />dom . . . <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName>—playing
+                <persName type="composer" corresp="https://d-nb.info/gnd/118580779">Mendels-
                 <lb />sohn's</persName> "Rondo Capriccioso."</hi>
             </seg>
             <seg xml:id="topic_10" ana="#suit_every_mood" resp="#np" type="topic">
                 <hi rendition="#i">In modern mood
-                <lb />she turns to <persName type="composer">Gershwin</persName> . . . "The Rhap-
+                <lb />she turns to <persName type="composer" corresp="https://d-nb.info/gnd/118639226">Gershwin</persName> . . . "The Rhap-
                 <lb />sody in Blue" . . .</hi>
             </seg>
             <seg xml:id="topic_11" ana="#listening" resp="#np" type="topic">

@@ -232,7 +232,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked.</change>
+            <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
             <change when="2026-10-15">Further printings found on archive.org added as sources.</change>
@@ -350,11 +350,11 @@
 
         <pb />
         <div facs="#eSc_textblock_1211376e">
-            <ab><hi rendition="#right"><lb /><hi rendition="#in #larger"><hi rendition="#larger"><persName>Michael Welte</persName></hi></hi>
+            <ab><hi rendition="#right"><lb /><hi rendition="#in #larger"><hi rendition="#larger"><persName corresp="https://d-nb.info/gnd/1128739232">Michael Welte</persName></hi></hi>
             <lb />The Clockmaker of Freiburg</hi></ab>
         </div>
         <div facs="#eSc_textblock_e5a2870f">
-            <ab><lb /><hi rendition="#k">To <persName>Michael Welte</persName>,</hi>
+            <ab><lb /><hi rendition="#k">To <persName corresp="https://d-nb.info/gnd/1128739232">Michael Welte</persName>,</hi>
             <lb />the chiming clock-
             <lb />maker of a dreamy
             <lb />hamlet in Germany,
@@ -374,7 +374,7 @@
             <lb />chimes play a tune.
             <lb />On the
             accuracy and novelty of his chim-
-            <lb />ing clocks, <persName>Michael Welte</persName>, in 1832, founded
+            <lb />ing clocks, <persName corresp="https://d-nb.info/gnd/1128739232">Michael Welte</persName>, in 1832, founded
             <lb />the firm of <orgName>M. Welte &amp; Sons</orgName>, a venerable in-
             <lb />stitution now located at <placeName>Freiburg, Germany</placeName>.
             <lb />The years elapsed and Welte's clocks
@@ -385,7 +385,7 @@
         </div>
         <div facs="#eSc_textblock_07d9cc5e">
             <ab><lb /><hi rendition="#k">In</hi> 1849, after three years of patient toil,
-            <lb /><persName>Michael Welte</persName> brought forth his first Orches-
+            <lb /><persName corresp="https://d-nb.info/gnd/1128739232">Michael Welte</persName> brought forth his first Orches-
             <lb />trion, the clumsy forerunner of the marvelous
             <lb />Philharmonic Organs of the present day.
             <quote>
@@ -401,7 +401,7 @@
             </quote>
             <lb />
             <seg xml:id="topic_2" ana="#technical_invention" resp="#np" type="topic">
-                Many years before <persName>Edison</persName> dreamed his
+                Many years before <persName corresp="https://d-nb.info/gnd/118528912">Edison</persName> dreamed his
                 <lb />thrilling dream of the phonograph the fame
                 <lb />of Welte's new invention had traveled
                 <lb />through all Europe
@@ -410,10 +410,10 @@
             <lb />mechanically operated musical instruments.
             <lb />Dukes and statesmen, musicians of low rank
             <lb />and high rank, came from afar to listen and
-            <lb />marvel at <persName>Michael Welte's</persName> astounding crea-
+            <lb />marvel at <persName corresp="https://d-nb.info/gnd/1128739232">Michael Welte's</persName> astounding crea-
             <lb />tion. The firm expanded and the business of
             <lb /><orgName>M. Welte &amp; Sons</orgName> attained large proportions.
-            <lb />In 1865, <persName>Emil Welte</persName>, a son of the founder,</ab>
+            <lb />In 1865, <persName corresp="https://d-nb.info/gnd/1271366029">Emil Welte</persName>, a son of the founder,</ab>
         </div>
         <div facs="#eSc_textblock_d9110567">
             <ab><lb />Welte's Wonder Invention</ab>
@@ -424,11 +424,11 @@
             <lb />trions, coming now from two hemispheres, led,
             <lb />in 1872, to the removal to Freiburg, which
             <lb />thus became the musical shrine of Europe.
-            <lb />Eight years later <persName>Michael Welte</persName>, the clock-
+            <lb />Eight years later <persName corresp="https://d-nb.info/gnd/1128739232">Michael Welte</persName>, the clock-
             <lb />maker, closed his eyes forever, leaving his
             <lb />sons endowed with his own inventive genius.
             <seg xml:id="topic_3" ana="#technical_invention" resp="#np" type="topic">
-                <lb />In 1887, <persName>Emil Welte</persName>
+                <lb />In 1887, <persName corresp="https://d-nb.info/gnd/1271366029">Emil Welte</persName>
                 startled the world by the
                 <lb />invention of a paper music-roll in connection
                 <lb />with a pneumatic action,
@@ -560,12 +560,12 @@
             </persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/116204400">Bloomfield-Zeisler</persName>,
-            <lb /><persName type="artist">Levy</persName>,
-            <persName type="artist">Singer</persName>,
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/1217035621">Levy</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/11740263X">Singer</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>,<lb />
-            <persName type="artist">Liebling</persName>,
-            <persName type="artist">Saar</persName></hi> and
+            <persName type="artist" corresp="https://d-nb.info/gnd/116997249">Liebling</persName>,
+            <persName type="artist" corresp="https://d-nb.info/gnd/116713178">Saar</persName></hi> and
             <hi rendition="#k"><persName type="artist">Boguslawski</persName></hi>
             are but
             <lb /><hi rendition="#smaller">*Licensed under original <name type="brand">Welte-Mignon</name> patents</hi></ab>
@@ -623,7 +623,7 @@
                 <lb />ten!
             </seg>
             You will be amazed and con-
-            <lb />vinced because the spirit of <persName>Michael
+            <lb />vinced because the spirit of <persName corresp="https://d-nb.info/gnd/1128739232">Michael
             <lb />Welte</persName>, the chiming clock-maker of
             <lb /><placeName>Freiburg</placeName> lives in every <name type="brand">Welte-
             <lb />Mignon Reproducing Action</name>.
@@ -653,7 +653,7 @@
             <lb />Reproducing Action</name>,</hi>
             <lb /><hi rendition="#k">Select</hi> a <name type="brand">Welte-Mignon* Repro-
             <lb />ducing Piano</name> first of all because it
-            <lb />embodies the genius of <persName>Michael
+            <lb />embodies the genius of <persName corresp="https://d-nb.info/gnd/1128739232">Michael
             <lb />Welte</persName>, and then, again, select it be-
             <lb />cause 112 of America's most promi-
             <lb />nent piano manufacturers have se-

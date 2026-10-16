@@ -207,7 +207,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc>
-           <change when="2026-10-16">Transcribed printing marked; links to the digital images restored.</change>
+           <change when="2026-10-16">Transcribed printing marked; links to the digital images restored; persons linked to the GND and typed.</change>
            <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
            <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
            <change when="2026-10-15">Made valid against tei_all.</change>
@@ -292,8 +292,8 @@
                 </seg>
                 You are my
                 <lb />undying 'alter ego'–thru you my own invisible hands
-                <lb />render the spell of my <persName type="composer">Chopin</persName>, my
-                <persName type="composer">Liszt</persName>. You have
+                <lb />render the spell of my <persName type="composer" corresp="https://d-nb.info/gnd/118520539">Chopin</persName>, my
+                <persName type="composer" corresp="https://d-nb.info/gnd/118573527">Liszt</persName>. You have
                 <lb />my unqualified endorsement.
                 <seg xml:id="topic_5" ana="#immortality">
                     <hi rendition="#i">Thru you I live forever."</hi>
@@ -303,7 +303,7 @@
          <div facs="#eSc_textblock_6aa6819d">
             <signed><lb />
             <hi rendition="#i">
-                <persName corresp="https://d-nb.info/gnd/116014490">V. de Pachmann</persName>
+                <persName type="artist" corresp="https://d-nb.info/gnd/116014490">V. de Pachmann</persName>
             </hi></signed>
          </div>
          <div facs="#eSc_textblock_5b251767">

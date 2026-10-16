@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
 import { JSDOM } from "jsdom"
-import { getAllMetadata, markRedundantLineBreaks, tidySpaceBeforePunctuation } from "./tei"
+import { getAllMetadata, markRedundantLineBreaks, plainText, tidySpaceBeforePunctuation } from "./tei"
 
 const marked = (body: string) => {
   const xml = `<TEI xmlns="http://www.tei-c.org/ns/1.0"><text>${body}</text></TEI>`
@@ -59,5 +59,21 @@ describe("getAllMetadata", () => {
 
   it("lists a segment with several topics once per topic", () => {
     expect(segments.filter(segment => /\s/.test(segment.topic))).toEqual([])
+  })
+})
+
+describe("plainText", () => {
+  const tei = (body: string) => `<TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader><title>Header</title></teiHeader><text><body>${body}</body></text></TEI>`
+
+  it("joins a word broken at the end of a line", () => {
+    expect(plainText(tei("<p>flawless reproduc-<lb/>tions of the &amp; playing</p>"))).toBe("flawless reproductions of the & playing")
+  })
+
+  it("keeps a hyphen before a capital and separates lines", () => {
+    expect(plainText(tei("<p>Welte-<lb/>Mignon<lb/>Studios</p>"))).toBe("Welte-Mignon Studios")
+  })
+
+  it("leaves out the header", () => {
+    expect(plainText(tei("<p>Text</p>"))).toBe("Text")
   })
 })
