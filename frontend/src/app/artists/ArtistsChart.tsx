@@ -21,9 +21,10 @@ interface Props {
 const WIDTH = 900
 const LABELS = 200 // the names
 const TOTALS = 48 // the column of totals
-const TOP = 30 // the years of the groups
+const HEADER = 30 // the years of the groups
 const ROW = 26
-const MAX_THICKNESS = ROW - 4
+// the bands are thicker than a row, so that they overlap
+const MAX_THICKNESS = 60
 const BOTTOM = 72 // the axis and the counts of the groups
 
 const BAND = '#f7f2ed'
@@ -65,8 +66,12 @@ export default function ArtistsChart({ groups, artists, scaleArtists }: Props) {
   const left = LABELS + 4
   const right = WIDTH - TOTALS - 4
   const x = (year: number) => left + (year - first) / (last - first) * (right - left)
+  // room for the bands of the first and the last row
+  const overhang = (artist?: Artist) =>
+    artist ? Math.max(0, ...artist.groups.map(g => half(g.share) - ROW / 2)) : 0
+  const TOP = HEADER + overhang(rows[0])
   const y = (row: number) => TOP + row * ROW + ROW / 2
-  const axis = TOP + rows.length * ROW + 6
+  const axis = TOP + rows.length * ROW + overhang(rows[rows.length - 1]) + 6
   const height = axis + BOTTOM
   const years = Array.from({ length: last - first }, (_, i) => first + 0.5 + i)
 
@@ -104,20 +109,18 @@ export default function ArtistsChart({ groups, artists, scaleArtists }: Props) {
           {groups.map((group, g) => (
             <g key={g}>
               <rect x={x(group.from - 0.5)} width={x(group.to + 0.5) - x(group.from - 0.5)}
-                y={TOP} height={axis - TOP} fill={BAND} />
-              <text x={x((group.from + group.to) / 2)} y={TOP - 10} fontSize={12} textAnchor="middle"
+                y={HEADER} height={axis - HEADER} fill={BAND} />
+              <text x={x((group.from + group.to) / 2)} y={HEADER - 10} fontSize={12} textAnchor="middle"
                 fill={theme.palette.text.primary}>
                 {span(group)}
               </text>
               {group.gapBefore && (
-                <text x={(x(groups[g - 1].to + 0.5) + x(group.from - 0.5)) / 2} y={TOP - 10}
-                  fontSize={11} textAnchor="middle" fill={MUTED} fontStyle="italic">
-                  no ads
-                </text>
+                <Gap from={groups[g - 1].to + 1} to={group.from - 1}
+                  left={x(groups[g - 1].to + 0.5)} right={x(group.from - 0.5)} top={HEADER} bottom={axis} />
               )}
             </g>
           ))}
-          <text x={WIDTH - 4} y={TOP - 10} fontSize={11} fill={MUTED} textAnchor="end">all</text>
+          <text x={WIDTH - 4} y={HEADER - 10} fontSize={11} fill={MUTED} textAnchor="end">all</text>
 
           {/* the axis */}
           <line x1={left} x2={right} y1={axis} y2={axis} stroke={MUTED} />
@@ -140,17 +143,29 @@ export default function ArtistsChart({ groups, artists, scaleArtists }: Props) {
             ))}
           </g>
 
+          {/* the lines of the rows, interrupted where no ads appeared */}
+          {rows.map((artist, i) => runs.map(run => (
+            <line key={`${artist.id}-${run[0]}`} y1={y(i)} y2={y(i)} stroke={GRID} strokeWidth={0.75}
+              x1={x(groups[run[0]].from - 0.5)} x2={x(groups[run[run.length - 1]].to + 0.5)} />
+          )))}
+          {active && (
+            <rect x={x(groups[active.group].from - 0.5)} y={y(rows.indexOf(active.artist)) - ROW / 2}
+              width={x(groups[active.group].to + 0.5) - x(groups[active.group].from - 0.5)} height={ROW}
+              fill={theme.palette.primary.main} fillOpacity={0.08} />
+          )}
+
+          {/* the bands overlap; the one pointed at stands out */}
+          {rows
+            .map((artist, i) => ({ artist, i }))
+            .sort((a, b) => Number(a.artist === active?.artist) - Number(b.artist === active?.artist))
+            .map(({ artist, i }) => bands(artist, i).map((d, r) => d && (
+              <path key={`${artist.id}-${r}`} d={d} fill={theme.palette.primary.main}
+                fillOpacity={active?.artist === artist ? 0.8 : 0.35}
+                stroke={theme.palette.primary.main} strokeOpacity={0.8} strokeWidth={0.75} />
+            )))}
+
           {rows.map((artist, i) => (
             <g key={artist.id}>
-              <line x1={left} x2={right} y1={y(i)} y2={y(i)} stroke={GRID} strokeWidth={0.75} />
-              {active?.artist === artist && (
-                <rect x={x(groups[active.group].from - 0.5)} y={y(i) - ROW / 2}
-                  width={x(groups[active.group].to + 0.5) - x(groups[active.group].from - 0.5)} height={ROW}
-                  fill={theme.palette.primary.main} fillOpacity={0.1} />
-              )}
-              {bands(artist, i).map((d, r) => d && (
-                <path key={r} d={d} fill={theme.palette.primary.main} fillOpacity={0.85} />
-              ))}
               <a href={artist.id}>
                 <text x={LABELS - 10} y={y(i)} fontSize={14} textAnchor="end" dominantBaseline="central"
                   fill={theme.palette.text.primary} fontWeight={active?.artist === artist ? 700 : 400}>
@@ -205,6 +220,36 @@ export default function ArtistsChart({ groups, artists, scaleArtists }: Props) {
   )
 }
 
+interface GapProps {
+  from: number
+  to: number
+  left: number
+  right: number
+  top: number
+  bottom: number
+}
+
+// years without ads, in square brackets
+function Gap({ from, to, left, right, top, bottom }: GapProps) {
+  const inset = 10, serif = 6
+  const l = left + inset, r = right - inset
+  const height = bottom - top - 8
+  const long = `${from}–${to}: no advertisements published`
+  // the text runs upwards; the short one where the rows are few
+  const text = long.length * 6.5 < height - 24 ? long : `${from}–${to}: no ads`
+  return (
+    <g stroke={MUTED} strokeWidth={1.25} fill="none">
+      <path d={`M ${l + serif} ${top + 4} H ${l} V ${bottom - 4} H ${l + serif}`} />
+      <path d={`M ${r - serif} ${top + 4} H ${r} V ${bottom - 4} H ${r - serif}`} />
+      <text transform={`translate(${(l + r) / 2}, ${(top + bottom) / 2}) rotate(-90)`}
+        textAnchor="middle" dominantBaseline="central" stroke="none" fill={MUTED}
+        fontSize={13} fontStyle="italic" letterSpacing="0.04em">
+        {text}
+      </text>
+    </g>
+  )
+}
+
 // bands of round shares up to the largest one
 function Legend({ max, half }: { max: number; half: (share: number) => number }) {
   const shares = [0.01, 0.02, 0.05, 0.1, 0.2, 0.5].filter(share => share <= max).slice(-3)
@@ -215,7 +260,8 @@ function Legend({ max, half }: { max: number; half: (share: number) => number })
         {shares.map((share, i) => (
           <g key={share}>
             <rect x={i * 76} y={MAX_THICKNESS / 2 + 1 - half(share)} width={28} height={2 * half(share)}
-              rx={Math.min(2, half(share))} fill={theme.palette.primary.main} fillOpacity={0.85} />
+              fill={theme.palette.primary.main} fillOpacity={0.35}
+              stroke={theme.palette.primary.main} strokeOpacity={0.8} strokeWidth={0.75} />
             <text x={i * 76 + 34} y={MAX_THICKNESS / 2 + 1} fontSize={12} dominantBaseline="central" fill={MUTED}>
               {percent(share)}
             </text>
