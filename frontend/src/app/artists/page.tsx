@@ -28,31 +28,15 @@ export default function ArtistsPage() {
     <Container component="main" maxWidth="md">
       <h2>Mentioned Artists</h2>
       <Typography>
-        How much of the advertising each artist received over time. The
-        thickness of a band is the artist&apos;s share of all mentions of
-        artists around a year; its colour, how often the artist is mentioned
-        per year around then, from blue (seldom) to red (often). An
-        advertisement counts once, in the year of its first printing, however
-        often it was printed; an artist it names twice counts twice. The
-        counts are those of the advertisements in this collection, which is a
-        selection.
+        How much of the advertising each artist received over time.
       </Typography>
       <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-        Few advertisements appeared in some years, so a year alone says little.
-        The share around a year therefore draws on the neighbouring years as
-        well, the less the further away they are (a Gaussian kernel with a
-        standard deviation of {h.toLocaleString('en-GB')} years). This width is the one with
-        which the other advertisements best predict the artists that an
-        advertisement names (leave-one-out cross-validation). The bands break
-        where no advertisements appeared for several years.
+        Smoothed over neighbouring years (Gaussian kernel, σ = {h.toLocaleString('en-GB')} years,
+        chosen by cross-validation).
         {head && <>
-          {' '}Most artists are named only once or twice, a few very often. The
-          chart shows the {shown.length} of {named.length} artists who are
-          mentioned more often than the average artist ({format(head.mean)} times):
-          the head of the distribution, as head/tail breaks divide it (Bin Jiang,
-          {' '}<a href="https://doi.org/10.1080/00330124.2012.700499">&ldquo;Head/Tail Breaks: A New
-          Classification Scheme for Data with a Heavy-Tailed Distribution&rdquo;</a>,
-          {' '}<i>The Professional Geographer</i> 65, 2013, 482–494).
+          {' '}Shown are the {shown.length} of {named.length} artists mentioned more often
+          than average ({format(head.mean)} times;{' '}
+          <a href="https://doi.org/10.1080/00330124.2012.700499">head/tail breaks</a>).
         </>}
       </Typography>
 
