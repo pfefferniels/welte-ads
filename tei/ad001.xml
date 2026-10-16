@@ -165,7 +165,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
+            <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed; typo “unchallanged” corrected.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Made valid against tei_all.</change>
             <change when="2026-10-15">TEI header corrected.</change>
@@ -222,7 +222,7 @@
             <ab><lb /><hi rendition="#in">T</hi>he first recording
             <lb />piano ever invented
             <lb />the <name type="brand">Welte Mignon</name> re-
-            <lb />mains unchallanged as
+            <lb />mains unchallenged as
             <lb />the world's greatest in-
             <lb />strument of reproduction
             <lb />
