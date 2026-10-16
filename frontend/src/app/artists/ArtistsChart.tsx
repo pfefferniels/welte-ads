@@ -2,7 +2,7 @@
 
 import React, { useMemo, useState } from "react"
 import { Box } from "@mui/material"
-import { area } from "d3"
+import { area, interpolateLab, piecewise } from "d3"
 import theme from "../../theme"
 import { runsOf, smoothedShare } from "../../lib/artists"
 import type { ArtistTimeline, YearTotal } from "../../lib/artists"
@@ -24,16 +24,20 @@ interface Props {
 const WIDTH = 900
 const LABELS = 200 // the names
 const TOTALS = 48 // the column of totals
-const HEADER = 24
-const ROW = 26
-// the bands are thicker than a row, so that they overlap
-const MAX_THICKNESS = 60
+const TOP = 24
+const ROW = 32
+const MAX_THICKNESS = ROW - 4
 const BOTTOM = 72 // the axis and the counts of the years
 const STEP = 0.1 // of the curves, in years
 
 const BAND = '#f7f2ed'
 const GRID = '#e6ded6'
 const MUTED = '#8a7f78'
+
+// a band's colour tells how often the artist is mentioned in all, from light
+// (once) to dark (most often), on a logarithmic scale; the lightest blue
+// still stands out from the background
+const RAMP = piecewise(interpolateLab, ['#6da7ec', '#3987e5', '#256abf', '#184f95', '#0d366b'])
 
 const percent = (share: number) =>
   `${(100 * share).toLocaleString('en-GB', { maximumFractionDigits: share < 0.1 ? 1 : 0 })}%`
@@ -61,6 +65,8 @@ export default function ArtistsChart({ years, artists, scaleArtists, h }: Props)
     .reduce((m, [, share]) => Math.max(m, share), 0)
   // the thickness of a band is proportional to the share
   const half = (share: number) => MAX_THICKNESS / 2 * share / max
+  const most = Math.max(...scaleArtists.map(artist => artist.mentions))
+  const colour = (mentions: number) => RAMP(Math.log(mentions) / Math.log(most))
 
   const rows = [...artists].sort((a, b) => meanYear(a) - meanYear(b) || b.mentions - a.mentions)
 
@@ -69,13 +75,8 @@ export default function ArtistsChart({ years, artists, scaleArtists, h }: Props)
   const left = LABELS + 4
   const right = WIDTH - TOTALS - 4
   const x = (year: number) => left + (year - first) / (last - first) * (right - left)
-  // room for the bands of the first and the last row
-  const overhang = (artist?: Artist) => artist
-    ? Math.max(0, ...curves.get(artist.id)!.flat().map(([, share]) => half(share) - ROW / 2))
-    : 0
-  const TOP = HEADER + overhang(rows[0])
   const y = (row: number) => TOP + row * ROW + ROW / 2
-  const axis = TOP + rows.length * ROW + overhang(rows[rows.length - 1]) + 6
+  const axis = TOP + rows.length * ROW + 6
   const height = axis + BOTTOM
   const ticks = Array.from({ length: last - first }, (_, i) => first + 0.5 + i)
 
@@ -107,14 +108,14 @@ export default function ArtistsChart({ years, artists, scaleArtists, h }: Props)
           {/* the spans of years with ads, and the gaps between them */}
           {runs.map(([from, to], r) => (
             <g key={from}>
-              <rect x={x(from - 0.5)} width={x(to + 0.5) - x(from - 0.5)} y={HEADER} height={axis - HEADER} fill={BAND} />
+              <rect x={x(from - 0.5)} width={x(to + 0.5) - x(from - 0.5)} y={TOP} height={axis - TOP} fill={BAND} />
               {r > 0 && (
                 <Gap from={runs[r - 1][1] + 1} to={from - 1}
-                  left={x(runs[r - 1][1] + 0.5)} right={x(from - 0.5)} top={HEADER} bottom={axis} />
+                  left={x(runs[r - 1][1] + 0.5)} right={x(from - 0.5)} top={TOP} bottom={axis} />
               )}
             </g>
           ))}
-          <text x={WIDTH - 4} y={HEADER - 8} fontSize={11} fill={MUTED} textAnchor="end">all</text>
+          <text x={WIDTH - 4} y={TOP - 8} fontSize={11} fill={MUTED} textAnchor="end">all</text>
 
           {/* the axis */}
           <line x1={left} x2={right} y1={axis} y2={axis} stroke={MUTED} />
@@ -147,15 +148,11 @@ export default function ArtistsChart({ years, artists, scaleArtists, h }: Props)
               fill={theme.palette.primary.main} fillOpacity={0.12} />
           )}
 
-          {/* the bands overlap; the one pointed at stands out */}
-          {rows
-            .map((artist, i) => ({ artist, i }))
-            .sort((a, b) => Number(a.artist === active?.artist) - Number(b.artist === active?.artist))
-            .map(({ artist, i }) => bands(artist, i).map((d, r) => d && (
-              <path key={`${artist.id}-${r}`} d={d} fill={theme.palette.primary.main}
-                fillOpacity={active?.artist === artist ? 0.8 : 0.35}
-                stroke={theme.palette.primary.main} strokeOpacity={0.8} strokeWidth={0.75} />
-            )))}
+          {/* the band pointed at is outlined */}
+          {rows.map((artist, i) => bands(artist, i).map((d, r) => d && (
+            <path key={`${artist.id}-${r}`} d={d} fill={colour(artist.mentions)}
+              stroke={active?.artist === artist ? theme.palette.text.primary : 'none'} strokeWidth={1.25} />
+          )))}
 
           {rows.map((artist, i) => (
             <g key={artist.id}>
@@ -210,7 +207,7 @@ export default function ArtistsChart({ years, artists, scaleArtists, h }: Props)
         )}
       </Box>
 
-      <Legend max={max} half={half} />
+      <Legend max={max} half={half} most={most} colour={colour} />
     </Box>
   )
 }
@@ -245,25 +242,45 @@ function Gap({ from, to, left, right, top, bottom }: GapProps) {
   )
 }
 
-// bands of round shares up to the largest one
-function Legend({ max, half }: { max: number; half: (share: number) => number }) {
+interface LegendProps {
+  max: number
+  half: (share: number) => number
+  most: number
+  colour: (mentions: number) => string
+}
+
+// the thickness of round shares up to the largest one, and the colours of
+// round numbers of mentions
+function Legend({ max, half, most, colour }: LegendProps) {
   const shares = [0.01, 0.02, 0.05, 0.1, 0.2, 0.5].filter(share => share <= max).slice(-3)
+  const counts = [1, 3, 10, 30, 100].filter(n => n <= most)
+  const swatch = colour(Math.round(Math.sqrt(most)))
   return (
-    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mt: 1, ml: { sm: `${100 * (LABELS - 120) / WIDTH}%` }, color: MUTED, fontSize: '0.95rem' }}>
-      <span>Thickness of a band:</span>
-      <svg width={shares.length * 76} height={MAX_THICKNESS + 2} aria-hidden="true">
-        {shares.map((share, i) => (
-          <g key={share}>
-            <rect x={i * 76} y={MAX_THICKNESS / 2 + 1 - half(share)} width={28} height={2 * half(share)}
-              fill={theme.palette.primary.main} fillOpacity={0.35}
-              stroke={theme.palette.primary.main} strokeOpacity={0.8} strokeWidth={0.75} />
-            <text x={i * 76 + 34} y={MAX_THICKNESS / 2 + 1} fontSize={12} dominantBaseline="central" fill={MUTED}>
-              {percent(share)}
-            </text>
-          </g>
-        ))}
-      </svg>
-      <span>of the mentions around a year</span>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', columnGap: 4, rowGap: 1, mt: 1, ml: { sm: `${100 * (LABELS - 120) / WIDTH}%` }, color: MUTED, fontSize: '0.95rem' }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+        <span>Thickness: share of the mentions around a year</span>
+        <svg width={shares.length * 64} height={MAX_THICKNESS + 2} aria-hidden="true">
+          {shares.map((share, i) => (
+            <g key={share}>
+              <rect x={i * 64} y={MAX_THICKNESS / 2 + 1 - half(share)} width={24} height={2 * half(share)} fill={swatch} />
+              <text x={i * 64 + 30} y={MAX_THICKNESS / 2 + 1} fontSize={12} dominantBaseline="central" fill={MUTED}>
+                {percent(share)}
+              </text>
+            </g>
+          ))}
+        </svg>
+      </Box>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+        <span>Colour: mentions in all</span>
+        <svg width={counts.length * 44} height={16} aria-hidden="true">
+          {counts.map((n, i) => (
+            <g key={n}>
+              <rect x={i * 44} y={2} width={16} height={12} rx={2} fill={colour(n)} />
+              <text x={i * 44 + 21} y={8} fontSize={12} dominantBaseline="central" fill={MUTED}>{n}</text>
+            </g>
+          ))}
+        </svg>
+      </Box>
     </Box>
   )
 }
