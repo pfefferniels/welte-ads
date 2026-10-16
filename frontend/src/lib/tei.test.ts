@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
 import { JSDOM } from "jsdom"
-import { getAllMetadata, markRedundantLineBreaks, plainText, tidySpaceBeforePunctuation } from "./tei"
+import { getAdBySlug, getAllMetadata, markRedundantLineBreaks, plainText, staticText, tidySpaceBeforePunctuation } from "./tei"
 
 const marked = (body: string) => {
   const xml = `<TEI xmlns="http://www.tei-c.org/ns/1.0"><text>${body}</text></TEI>`
@@ -75,5 +75,22 @@ describe("plainText", () => {
 
   it("leaves out the header", () => {
     expect(plainText(tei("<p>Text</p>"))).toBe("Text")
+  })
+})
+
+describe("staticText", () => {
+  it("keeps the text and leaves out the header", () => {
+    const html = staticText('<tei-TEI><tei-teiHeader><tei-title>Title</tei-title></tei-teiHeader>' +
+      '<tei-text><tei-body><tei-hi class="b">Welte</tei-hi><tei-lb></tei-lb>Mignon</tei-body></tei-text></tei-TEI>')
+    expect(html).toBe('<tei-text><tei-body><tei-hi class="b">Welte</tei-hi><tei-lb></tei-lb>Mignon</tei-body></tei-text>')
+  })
+
+  it("holds the transcription of every ad", () => {
+    for (const { slug } of getAllMetadata()) {
+      const ad = getAdBySlug(slug)
+      const text = new JSDOM(ad.textHtml).window.document.body.textContent || ''
+      expect(text.replace(/\s+/g, ' ').trim().length, slug).toBeGreaterThan(0)
+      expect(ad.textHtml, slug).not.toContain('tei-teiheader')
+    }
   })
 })

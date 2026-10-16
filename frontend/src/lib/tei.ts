@@ -279,7 +279,18 @@ function extractFacsimile(doc: Document): Facsimile {
   return { surfaces, zones }
 }
 
-function prefixTei(xmlString: string): { prefixed: string; elements: string[]; css: string; facsimile: Facsimile } {
+/**
+ * The <text> of the prefixed TEI as HTML: the custom elements that the
+ * stylesheet lays out, before the edition renders them in the browser. It
+ * gives search engines, web archives and readers without JavaScript the
+ * transcription.
+ */
+export function staticText(prefixed: string): string {
+  const doc = new JSDOM(prefixed).window.document
+  return doc.querySelector('tei-text')?.outerHTML || ''
+}
+
+function prefixTei(xmlString: string): { prefixed: string; elements: string[]; css: string; facsimile: Facsimile; textHtml: string } {
   const dom = new JSDOM(xmlString, { contentType: 'text/xml' })
   const doc = dom.window.document
   const elements = new Set<string>()
@@ -297,6 +308,7 @@ function prefixTei(xmlString: string): { prefixed: string; elements: string[]; c
     elements: Array.from(elements),
     css,
     facsimile,
+    textHtml: staticText(prefixed),
   }
 }
 
@@ -328,6 +340,8 @@ interface AdData extends AdMetadata {
   elements: string[]
   facsimile: Facsimile
   original: string
+  // the text alone, as HTML that the page holds before the edition takes over
+  textHtml: string
 }
 
 function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
@@ -431,7 +445,7 @@ export function getAllAds(): AdData[] {
   return files.map(file => {
     const slug = file.replace('.xml', '')
     const xmlString = fs.readFileSync(path.join(teiDir, file), 'utf-8')
-    const { prefixed, elements, facsimile } = prefixTei(xmlString)
+    const { prefixed, elements, facsimile, textHtml } = prefixTei(xmlString)
     const metadata = extractMetadata(xmlString)
 
     return {
@@ -441,6 +455,7 @@ export function getAllAds(): AdData[] {
       elements,
       facsimile,
       original: xmlString,
+      textHtml,
     }
   })
 }
@@ -448,7 +463,7 @@ export function getAllAds(): AdData[] {
 export function getAdBySlug(slug: string): AdData {
   const teiDir = getTeiDir()
   const xmlString = fs.readFileSync(path.join(teiDir, `${slug}.xml`), 'utf-8')
-  const { prefixed, elements, facsimile } = prefixTei(xmlString)
+  const { prefixed, elements, facsimile, textHtml } = prefixTei(xmlString)
   const metadata = extractMetadata(xmlString)
 
   return {
@@ -458,6 +473,7 @@ export function getAdBySlug(slug: string): AdData {
     elements,
     facsimile,
     original: xmlString,
+    textHtml,
   }
 }
 

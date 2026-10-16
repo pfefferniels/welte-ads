@@ -52,6 +52,8 @@ interface Props {
   topics: Record<string, Topic>
   // the links to the digital images of the transcribed printing
   imageLinks: string[]
+  // the text as the server renders it, shown until the edition takes over
+  children?: React.ReactNode
 }
 
 type Mode = 'layout' | 'text' | 'facsimile'
@@ -59,7 +61,7 @@ type Mode = 'layout' | 'text' | 'facsimile'
 // the gap between pages side by side in the facsimile view, in image pixels
 const pageGap = 40
 
-const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topics, imageLinks }: Props) => {
+const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topics, imageLinks, children }: Props) => {
   const [mode, setMode] = useState<Mode>('text')
   const mounted = useSyncExternalStore(
     () => () => {},
@@ -239,7 +241,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topic
     })
   }, [mode, layout, pagesWidth, pagesHeight, mounted])
 
-  if (!mounted) return null
+  if (!mounted) return <Box sx={{ ml: 7 }} className="static-text">{children}</Box>
 
   return (
     <TopicsContext.Provider value={topics}>

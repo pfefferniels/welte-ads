@@ -45,7 +45,9 @@ export default async function AdPage({ params }: { params: Promise<{ slug: strin
         original={ad.original}
         topics={getTopics()}
         imageLinks={ad.imageLinks}
-      />
+      >
+        <div dangerouslySetInnerHTML={{ __html: ad.textHtml }} />
+      </EditionCeteicean>
       <Citation
         title={ad.title}
         company={company}

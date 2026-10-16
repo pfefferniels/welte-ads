@@ -393,3 +393,18 @@ tei-lb:before {
     text-decoration-color: rgba(0, 0, 0, 0.3);
     text-decoration-thickness: 0.04em;
 }
+
+/* the text as the server renders it, before the edition takes over: the
+   notes, which the edition opens from an icon, stand in brackets */
+.static-text tei-note::before {
+    content: '[Note: ';
+}
+
+.static-text tei-note::after {
+    content: ']';
+}
+
+.static-text tei-note {
+    color: gray;
+    font-size: 0.9em;
+}
