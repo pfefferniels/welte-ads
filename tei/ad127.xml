@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Музыка и театр"</title>
+        <title type="sub">October 23, 1923</title>
+        <author>
+          <orgName key="m.welte">M. Welte &amp; Söhne</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>3 КОНЦЕРТА 3 Вельте-Миньон</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">3 КОНЦЕРТА 3 Вельте-Миньон</title>
+            <author><orgName>M. Welte &amp; Söhne</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Музыка и театр</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/498817">Петроград</pubPlace>
+            <date type="publication" when="1923-10-23">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Музыка и театр</title>
+            <biblScope unit="issue">No. 42, 23 October 1923</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>No advertiser is named. The advertisement is ascribed to M. Welte &amp; Söhne because of
+              the maker's line «Аппарат Вельте-Миньон фабрики Вельте и с-вья в Фрейбурге» and the mechanic from Freiburg,
+              E. Pfeiffer («Механик Е. Пфейфер из Фрейбурга»).</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>St Petersburg State Theatre Library</repository>
+            <idno>
+              <idno type="URLImages">https://lib.sptl.spb.ru/ru/nodes/1590#mode/inspect/page/4/zoom/4</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="ru">Russian</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-17" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad127-0.jpg" width="643px" height="959px"/>
+      <zone points="65,58 590,58 590,94 65,94" xml:id="zone_venue"/>
+      <zone points="78,95 582,95 582,130 78,130" xml:id="zone_dates"/>
+      <zone points="148,131 505,131 505,180 148,180" xml:id="zone_headline"/>
+      <zone points="64,183 588,183 588,217 64,217" xml:id="zone_artists"/>
+      <zone points="178,218 473,218 473,232 178,232" xml:id="zone_programmes"/>
+      <zone points="110,233 228,233 228,249 110,249" xml:id="zone_piano"/>
+      <zone points="328,233 537,233 537,249 328,249" xml:id="zone_mechanic"/>
+      <zone points="142,250 510,250 510,264 142,264" xml:id="zone_maker"/>
+      <zone points="62,265 590,265 590,292 62,292" xml:id="zone_tickets"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_venue">
+        <ab><hi rendition="#c"><lb/><hi rendition="#b #g"><placeName>ЗАЛ ГОСУДАРСТВЕННОЙ АКАДЕМИЧЕСКОЙ КАПЕЛЛЫ</placeName></hi>
+          <lb/><hi rendition="#smaller">(<address><addrLine>Мойка, 20</addrLine></address>).</hi></hi></ab>
+      </div>
+      <div facs="#zone_dates">
+        <ab><hi rendition="#c"><lb/>В Среду, 24-го; в Воскресенье, 28-го и в Среду. <hi rendition="#b">31</hi>-го Октября 1923 г.
+          <lb/><hi rendition="#b">в 8½ час вечера.</hi></hi></ab>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c"><lb/><hi rendition="#b">3</hi> <hi rendition="#g2">КОНЦЕРТА</hi> <hi rendition="#b">3</hi>
+          <lb/><hi rendition="#in #b #g"><name type="brand">Вельте-Миньон</name></hi></hi></head>
+      </div>
+      <div facs="#zone_artists">
+        <ab><hi rendition="#c"><lb/><seg xml:id="topic_1" ana="#virtual_presence" type="topic" resp="#claude">В ИСПОЛНЕНИИ: <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">ГОФМАНА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118518011">БУЗОНИ</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116584319">ЕСИПОВОЙ</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118501437">д‘АЛЬБЕРА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116977108">ЗАУЭРА</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118614916">СКРЯБИНА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116429623">РЕЙЗЕНАУЭРА</persName></hi> и <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118986724">ПАДЕРЕВСКОГО</persName></hi></seg><hi rendition="#b">.</hi></hi></ab>
+      </div>
+      <div facs="#zone_programmes">
+        <ab><hi rendition="#c"><lb/>ПОДРОБНЫЕ ПРОГРАММЫ в ТЕКСТЕ стр. 20.</hi></ab>
+      </div>
+      <div facs="#zone_piano">
+        <ab><lb/>Рояль <hi rendition="#b"><name type="brand">К. Бехштейн</name>.</hi></ab>
+      </div>
+      <div facs="#zone_mechanic">
+        <ab><lb/>Механик <hi rendition="#b"><persName>Е. Пфейфер</persName></hi> из <placeName>Фрейбурга</placeName>.</ab>
+      </div>
+      <div facs="#zone_maker">
+        <ab><hi rendition="#c"><lb/>Аппарат <name type="brand">Вельте-Миньон</name> фабрики <orgName>Вельте и с-вья</orgName> в <placeName>Фрейбурге</placeName>.</hi></ab>
+      </div>
+      <div facs="#zone_tickets">
+        <ab><hi rendition="#c"><lb/>Билеты продаются в Центральной театральной кассе <address><addrLine>пр. 25 Октября, 23</addrLine></address>, телеф. 133—50 и
+          <lb/>в дни концертов с 7 ч. веч. при входе в зал.</hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

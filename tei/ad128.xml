@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Жизнь искусства"</title>
+        <title type="sub">October 23, 1923</title>
+        <author>
+          <orgName key="m.welte">M. Welte &amp; Söhne</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>3 КОНЦЕРТА ВЕЛЬТЕ-МИНЬОН</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">3 КОНЦЕРТА ВЕЛЬТЕ-МИНЬОН</title>
+            <author><orgName>M. Welte &amp; Söhne</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Жизнь искусства</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/498817">Петроград</pubPlace>
+            <date type="publication" when="1923-10-23">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Жизнь искусства</title>
+            <biblScope unit="issue">No. 42 (917), 23 October 1923</biblScope>
+            <biblScope unit="pages">37</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>No advertiser is named, and this setting has no maker's line. The advertisement is
+              ascribed to M. Welte &amp; Söhne because it announces the same three concerts as the
+              advertisements of the same date in «Музыка и театр» and «Театр», which carry the
+              maker's line «Аппарат Вельте-Миньон фабрики Вельте и с-вья в Фрейбурге». The page is numbered 37; it is
+              page 39 of the library's scan.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>St Petersburg State Theatre Library</repository>
+            <idno>
+              <idno type="URLImages">https://lib.sptl.spb.ru/ru/nodes/2270#mode/inspect/page/39/zoom/4</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="ru">Russian</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-17" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad128-0.jpg" width="1240px" height="1754px"/>
+      <zone points="98,1308 745,1308 745,1361 98,1361" xml:id="zone_venue"/>
+      <zone points="98,1362 745,1362 745,1400 555,1400 555,1431 296,1431 296,1400 98,1400" xml:id="zone_dates"/>
+      <zone points="154,1402 194,1402 194,1432 651,1432 651,1402 691,1402 691,1452 745,1452 745,1500 100,1500 100,1452 154,1452" xml:id="zone_headline"/>
+      <zone points="98,1501 742,1501 742,1546 98,1546" xml:id="zone_artists"/>
+      <zone points="230,1547 612,1547 612,1568 230,1568" xml:id="zone_programmes"/>
+      <zone points="100,1569 747,1569 747,1609 100,1609" xml:id="zone_tickets"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_venue">
+        <ab><hi rendition="#c"><lb/><placeName>ЗАЛ ГОСУДАРСТВЕННОЙ АКАДЕМИЧЕСКОЙ КАПЕЛЛЫ</placeName>
+          <lb/><hi rendition="#b">(<address><addrLine><hi rendition="#g">Мойка</hi>, 20</addrLine></address>).</hi></hi></ab>
+      </div>
+      <div facs="#zone_dates">
+        <ab><hi rendition="#c"><lb/><hi rendition="#larger">В Среду, 24, в Воскресенье, 28 и в Среду 31 Октября</hi>
+          <lb/>в 8¹/₂ час. вечера.</hi></ab>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c"><lb/><hi rendition="#in">3</hi> <hi rendition="#g2">КОНЦЕРТА</hi> <hi rendition="#in">3</hi>
+          <lb/><hi rendition="#in #b #g"><name type="brand">ВЕЛЬТЕ-МИНЬОН</name></hi></hi></head>
+      </div>
+      <div facs="#zone_artists">
+        <ab><hi rendition="#c"><lb/><seg xml:id="topic_1" ana="#virtual_presence" type="topic" resp="#claude">В ИСПОЛНЕНИИ<hi rendition="#b">: <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">ГОФМАНА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118518011">БУЗОНИ</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116584319">ЕСИПОВОЙ</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118501437">д‘АЛЬБЕРА</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/116977108"><sic>ЗАУЗРА</sic></persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118614916">СКРЯБИНА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116429623"><sic>РЕЙЗЕНАУЗРА</sic></persName> и <persName type="artist" corresp="https://d-nb.info/gnd/118986724">ПАДЕРЕВСКОГО</persName></hi></seg>.</hi></ab>
+      </div>
+      <div facs="#zone_programmes">
+        <ab><hi rendition="#c"><lb/>ПРОГРАММЫ КОНЦЕРТОВ СМ. В ТЕКСТЕ.</hi></ab>
+      </div>
+      <div facs="#zone_tickets">
+        <ab><hi rendition="#c #i"><lb/><hi rendition="#b">БИЛЕТЫ</hi> продаются в Центральной кассе, <address><addrLine>Пр. 25 Октября, 23</addrLine></address>. тел. 133-50
+          <lb/>и в дни концертов с 7 ч. веч. при входе в зал.</hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
