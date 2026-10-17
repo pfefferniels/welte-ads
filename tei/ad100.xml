@@ -4,8 +4,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Ad in "Rigasche Rundschau"</title>
-        <title type="sub">September 23 to 26, 1908</title>
+        <title type="main">Ad in "Rigasche Rundschau", "Rigasche Zeitung" and "Düna-Zeitung"</title>
+        <title type="sub">September 23 to 29, 1908</title>
         <author>
           <orgName key="zimmermann">Jul. Heinr. Zimmermann</orgName>
         </author>
@@ -86,6 +86,112 @@
             <repository>National Library of Latvia (through Europeana)</repository>
             <idno>
               <idno type="URLImages">https://www.europeana.eu/item/9200303/BibliographicResource_3000059907681</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Das Meisterspiel-Wiedergabeklavier „MIGNON“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Das Meisterspiel-Wiedergabeklavier „MIGNON“</title>
+            <author><orgName>Jul. Heinr. Zimmermann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Rigasche Zeitung</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/456172">Riga</pubPlace>
+            <date type="publication" when="1908-09-26">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Rigasche Zeitung</title>
+            <biblScope unit="issue">Nr. 213, Sonnabend, 13 September 1908</biblScope>
+            <biblScope unit="pages">6</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The page is dated by the Julian calendar only (Sonnabend, den 13.
+              September 1908); <att>when</att> gives the Gregorian date. Compared
+              with the transcription on the scan, block by block: the same setting
+              and line breaks, with the picture. The only difference noticed is
+              "nun," for "nun;" in Reisenauer's poem.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Latvian National Library (periodika.lv)</repository>
+            <idno>
+              <idno type="URLImages">https://periodika.lv/periodika2-viewer/?lang=fr#issueType:P|issue:141036|article:DIVL308|panel:pa</idno>
+              <idno type="URLImages">https://periodika.lv/periodika2-viewer/img/page?pid=IMG00006&amp;issue=141036</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>Das Meisterspiel-Wiedergabeklavier „MIGNON“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Das Meisterspiel-Wiedergabeklavier „MIGNON“</title>
+            <author><orgName>Jul. Heinr. Zimmermann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Rigasche Zeitung</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/456172">Riga</pubPlace>
+            <date type="publication" when="1908-09-29">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Rigasche Zeitung</title>
+            <biblScope unit="issue">Nr. 215, Dienstag, 16 September 1908</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The page is dated by the Julian calendar only (Dienstag, den 16.
+              September 1908); <att>when</att> gives the Gregorian date. Compared
+              with the transcription on the scan, block by block: the same setting
+              as in the issue of 13 September, with "nun," in Reisenauer's poem. A
+              crease in the paper damages the last lines of Zöllner's poem and the
+              signature, which are still legible.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Latvian National Library (periodika.lv)</repository>
+            <idno>
+              <idno type="URLImages">https://periodika.lv/periodika2-viewer/?lang=fr#issueType:P|issue:34665|article:DIVL190|panel:pa</idno>
+              <idno type="URLImages">https://periodika.lv/periodika2-viewer/img/page?pid=IMG00004&amp;issue=34665</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_5">
+        <bibl>Das Meisterspiel-Wiedergabeklavier „MIGNON“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Das Meisterspiel-Wiedergabeklavier „MIGNON“</title>
+            <author><orgName>Jul. Heinr. Zimmermann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Düna-Zeitung</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/456172">Riga</pubPlace>
+            <date type="publication" when="1908-09-26">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Düna-Zeitung</title>
+            <biblScope unit="issue">Nr. 213, Sonnabend, 13 (26) September 1908</biblScope>
+            <biblScope unit="pages">8</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The issue is dated by the Julian calendar, with the Gregorian date
+              in brackets; <att>when</att> gives the Gregorian date. Compared with
+              the transcription on the scan, block by block: the same setting and
+              line breaks, with the picture and "nun;" in Reisenauer's poem; no
+              difference noticed.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Latvian National Library (periodika.lv)</repository>
+            <idno>
+              <idno type="URLImages">https://periodika.lv/periodika2-viewer/?lang=fr#issueType:P|issue:163312|article:DIVL286|panel:pa</idno>
+              <idno type="URLImages">https://periodika.lv/periodika2-viewer/img/page?pid=IMG00008&amp;issue=163312</idno>
             </idno>
           </msIdentifier>
         </msDesc>
@@ -239,6 +345,7 @@
     </profileDesc>
     <revisionDesc>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+      <change when="2026-10-17" who="#claude">Further printings added.</change>
     </revisionDesc>
   </teiHeader>
   <facsimile>
@@ -333,7 +440,7 @@
           <l><lb/>Will oft man nicht erkennen,</l>
           <l><lb/>Möcht' Publikum dann und Kritik,</l>
           <l><lb/>Die sie gehört, „verbrennen“!</l>
-          <l><lb/>Doch, sind sie „festgenagelt“ nun;</l>
+          <l><lb/>Doch, sind sie „festgenagelt“ nun<app><rdg source="#source_1 #source_5">;</rdg><rdg source="#source_3 #source_4">,</rdg></app></l>
           <l><lb/>So muss man zu- sie -geben,</l>
           <l><lb/>Drum sei der „<name type="brand">Mignon</name>apparat“</l>
           <l><lb/><seg xml:id="topic_6" ana="#educational_use" type="topic" resp="#claude">Ein Lehrer euch fürs Leben</seg>.</l>

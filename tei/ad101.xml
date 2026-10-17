@@ -4,7 +4,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Ad in "Rigasche Rundschau"</title>
+        <title type="main">Ad in "Rigasche Rundschau" and "Düna-Zeitung"</title>
         <title type="sub">February 9, 1909</title>
         <author>
           <orgName key="zimmermann">Jul. Heinr. Zimmermann</orgName>
@@ -57,6 +57,45 @@
             <repository>National Library of Latvia (through Europeana)</repository>
             <idno>
               <idno type="URLImages">https://www.europeana.eu/item/9200303/BibliographicResource_3000059905652</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Das Meisterspiel-Wiedergabeklavier „MIGNON“ … Herr Frédéric Lamond schreibt über „MIGNON“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Das Meisterspiel-Wiedergabeklavier „MIGNON“ … Herr Frédéric Lamond schreibt über „MIGNON“</title>
+            <author><orgName>Jul. Heinr. Zimmermann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Düna-Zeitung</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/456172">Riga</pubPlace>
+            <date type="publication" when="1909-02-09">1909</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Düna-Zeitung</title>
+            <biblScope unit="issue">Nr. 21, Dienstag, 27 January (9 February) 1909</biblScope>
+            <biblScope unit="pages">6</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The page is dated by the Julian calendar, with the Gregorian date in
+              brackets (Dienstag, den 27. Januar (9. Februar) 1909); <att>when</att>
+              gives the Gregorian date. Compared line by line with the transcription
+              on the scan. The same text in a different setting, with other line
+              breaks throughout, which are not recorded. The differences in wording
+              and punctuation are recorded with <gi>app</gi>: "speziell", the full
+              stop after "Welt", „MIGNON“ in the heading of the testimonial, „Mignon“
+              (bold) in the testimonial, "die Pianisten", no comma after the firm's
+              name and no "№" in the address.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Latvian National Library (periodika.lv)</repository>
+            <idno>
+              <idno type="URLImages">https://periodika.lv/periodika2-viewer/?lang=fr#issueType:P|issue:801709|article:DIVL180|panel:pa</idno>
+              <idno type="URLImages">https://periodika.lv/periodika2-viewer/img/page?pid=IMG00006&amp;issue=801709</idno>
             </idno>
           </msIdentifier>
         </msDesc>
@@ -175,6 +214,7 @@
     </profileDesc>
     <revisionDesc>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+      <change when="2026-10-17" who="#claude">Further printings added.</change>
     </revisionDesc>
   </teiHeader>
   <facsimile>
@@ -197,13 +237,13 @@
           <lb/><hi rendition="#in">„<name type="brand">MIGNON</name>“</hi></hi></head>
       </div>
       <div facs="#zone_maker">
-        <p><lb/>ist von einer speciell in der Konstruktion der elektro-
+        <p><lb/>ist von einer <app><rdg source="#source_1">speciell</rdg><rdg source="#source_2">speziell</rdg></app> in der Konstruktion der elektro-
           <lb/>pneumatischen Werke seit vielen Jahren berühmten
           <lb/>Fabrik — <hi rendition="#b"><orgName>M. WELTE &amp; SÖHNE</orgName></hi> in <placeName>Freiburg</placeName> und
           <lb/><placeName>New-York</placeName>, gebaut.</p>
       </div>
       <div facs="#zone_wonder">
-        <ab><hi rendition="#c #b #larger"><lb/><seg xml:id="topic_1" ana="#miracle" type="topic" resp="#claude">Es ist ein wahres Wunder der Welt</seg></hi></ab>
+        <ab><hi rendition="#c #b #larger"><lb/><seg xml:id="topic_1" ana="#miracle" type="topic" resp="#claude">Es ist ein wahres Wunder der Welt</seg><app><rdg source="#source_1"/><rdg source="#source_2">.</rdg></app></hi></ab>
       </div>
       <div facs="#zone_artists">
         <p><lb/>Künstler von Weltruf, die <hi rendition="#b"><name type="brand">MIGNON</name></hi> gehört und
@@ -213,24 +253,24 @@
           <lb/>bisher existiert</seg>.</p>
       </div>
       <div facs="#zone_testimonial_head">
-        <ab><lb/>Herr <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/116662166">Frédéric Lamond</persName></hi> schreibt über <name type="brand">Mignon</name>:</ab>
+        <ab><lb/>Herr <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/116662166">Frédéric Lamond</persName></hi> schreibt über <app><rdg source="#source_1"><name type="brand">Mignon</name></rdg><rdg source="#source_2">„<name type="brand">MIGNON</name>“</rdg></app>:</ab>
       </div>
       <div facs="#zone_testimonial">
         <quote type="testimonial">
-          <p><lb/>Ich sehe den „<name type="brand">MIGNON</name>“-Apparat <seg xml:id="topic_3" ana="#miracle" type="topic" resp="#claude">als das grösste Wunder
+          <p><lb/>Ich sehe den „<app><rdg source="#source_1"><name type="brand">MIGNON</name></rdg><rdg source="#source_2"><hi rendition="#b"><name type="brand">Mignon</name></hi></rdg></app>“-Apparat <seg xml:id="topic_3" ana="#miracle" type="topic" resp="#claude">als das grösste Wunder
             <lb/>der Jetztzeit</seg> an. Er ist in jeder Hinsicht über alles Lob
             <lb/>erhaben und <seg xml:id="topic_4" ana="#immortality" type="topic" resp="#claude">es ist nur zu bedauern, dass diese Erfindung
             <lb/>nicht siebzig Jahre früher gemacht wurde, als die beiden
             <lb/>grossen Klaviermeister <persName type="composer" corresp="https://d-nb.info/gnd/118520539">Chopin</persName> und <persName type="composer" corresp="https://d-nb.info/gnd/118573527">Liszt</persName> auf der Höhe
-            <lb/>ihrer Kunst waren</seg>. Der „<name type="brand">MIGNON</name>“-Apparat erweckt die
+            <lb/>ihrer Kunst waren</seg>. Der „<app><rdg source="#source_1"><name type="brand">MIGNON</name></rdg><rdg source="#source_2"><hi rendition="#b"><name type="brand">Mignon</name></hi></rdg></app>“-Apparat erweckt die
             <lb/>kühnsten Hoffnungen für die künftigen Generationen
-            <lb/>sowie für den Pianisten der Zukunft.</p>
+            <lb/>sowie für <app><rdg source="#source_1">den</rdg><rdg source="#source_2">die</rdg></app> Pianisten der Zukunft.</p>
         </quote>
       </div>
       <div facs="#zone_signature">
         <ab><hi rendition="#c"><lb/><hi rendition="#smaller">Bereitwilligste Vorführung beim Alleinvertreter</hi>
-          <lb/><hi rendition="#in #b"><orgName>Jul. Heinr. Zimmermann</orgName>,</hi>
-          <lb/><address><addrLine><placeName>Riga</placeName>, Scheunenstrasse № 15.</addrLine></address></hi></ab>
+          <lb/><hi rendition="#in #b"><orgName>Jul. Heinr. Zimmermann</orgName><app><rdg source="#source_1">,</rdg><rdg source="#source_2"/></app></hi>
+          <lb/><address><addrLine><placeName>Riga</placeName>, Scheunenstrasse <app><rdg source="#source_1">№ </rdg><rdg source="#source_2"/></app>15.</addrLine></address></hi></ab>
       </div>
     </body>
   </text>

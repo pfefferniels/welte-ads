@@ -107,6 +107,7 @@ export const names = {
     "https://d-nb.info/gnd/119069261": "Kreisler, Fritz",
     "https://d-nb.info/gnd/1212078756": "Samson-Himmelstjerna, Guido von",
     "https://d-nb.info/gnd/123787548": "Schäfer, Dirk",
+    "https://d-nb.info/gnd/116584319": "Esipova, Anna",
     "welte.studios": "Welte Mignon Studios",
     "m.welte": "M. Welte & Söhne",
     "m.welte.sons": "M. Welte & Sons, Inc.",
