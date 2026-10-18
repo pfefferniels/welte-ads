@@ -18,6 +18,10 @@
                         <forename>Niels</forename>
                     </persName>
                 </respStmt>
+                <respStmt>
+                    <resp>Further printings</resp>
+                    <name xml:id="claude">Claude (AI model by Anthropic)</name>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>
