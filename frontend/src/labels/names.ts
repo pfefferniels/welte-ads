@@ -128,6 +128,7 @@ export const names = {
     "https://d-nb.info/gnd/118729667": "Luise, Grand Duchess of Baden",
     "https://d-nb.info/gnd/119241544": "Friedrich II., Grand Duke of Baden",
     "https://d-nb.info/gnd/116823984": "Hilda, Grand Duchess of Baden",
+    "https://d-nb.info/gnd/118591177": "Paganini, Niccolò",
     "welte.studios": "Welte Mignon Studios",
     "m.welte": "M. Welte & Söhne",
     "m.welte.sons": "M. Welte & Sons, Inc.",
