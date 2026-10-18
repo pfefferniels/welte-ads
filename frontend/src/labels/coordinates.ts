@@ -33,5 +33,19 @@ export const coordinates = {
     'https://www.geonames.org/3553478': { lat: 23.13302, long: -82.38304 },
     'https://www.geonames.org/3451190': { lat: -22.90642, long: -43.18223 },
     'https://www.geonames.org/3871336': { lat: -33.45694, long: -70.64827 },
-    'https://www.geonames.org/498817': { lat: 59.93863, long: 30.31413 }
+    'https://www.geonames.org/498817': { lat: 59.93863, long: 30.31413 },
+    'https://www.geonames.org/2147714': { lat: -33.86785, long: 151.20732 },
+    'https://www.geonames.org/2158177': { lat: -37.814, long: 144.96332 },
+    'https://www.geonames.org/2078025': { lat: -34.92866, long: 138.59863 },
+    'https://www.geonames.org/2063523': { lat: -31.95224, long: 115.8614 },
+    'https://www.geonames.org/2160517': { lat: -41.43876, long: 147.13467 },
+    'https://www.geonames.org/2673730': { lat: 59.32938, long: 18.06871 },
+    'https://www.geonames.org/2711537': { lat: 57.70716, long: 11.96679 },
+    'https://www.geonames.org/2657896': { lat: 47.36667, long: 8.55 },
+    'https://www.geonames.org/2661552': { lat: 46.94809, long: 7.44744 },
+    'https://www.geonames.org/6077243': { lat: 45.50884, long: -73.58781 },
+    'https://www.geonames.org/2761369': { lat: 48.20849, long: 16.37208 },
+    'https://www.geonames.org/3054643': { lat: 47.49835, long: 19.04045 },
+    'https://www.geonames.org/3117735': { lat: 40.4165, long: -3.70256 },
+    'https://www.geonames.org/3128760': { lat: 41.38879, long: 2.15899 }
 } as { [index: string]: Coordinate }
