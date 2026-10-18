@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Svenska Dagbladet", "Dagens Nyheter" and "Aftonbladet"</title>
+        <title type="sub">November 8 to 11, 1908</title>
+        <author>
+          <orgName key="dahlstrom">Dahlströms Orgel- &amp; Pianomagasin</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>2:dra Konserten. Tolf pianister konsertera medelst ”Mignon-Apparat” å flygel</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">2:dra Konserten. Tolf pianister konsertera medelst ”Mignon-Apparat” å flygel</title>
+            <author><orgName>Dahlströms Orgel- &amp; Pianomagasin</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Svenska Dagbladet</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2673730">Stockholm</pubPlace>
+            <date type="publication" when="1908-11-08">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Svenska Dagbladet</title>
+            <biblScope unit="issue">Nr 305, Söndagen den 8 November 1908</biblScope>
+            <biblScope unit="pages">16</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>An announcement of a concert, set as an advertisement. The concert, the second of two, was held in the hall of K. F. U. M.; the ad is signed by Dahlströms Orgel- &amp; Pianomagasin, which supplied the Ibach grand and the Mignon apparatus. The ad for the first concert, of 4 November, is ad159.</note>
+            <note>The ad names the instrument only as "Mignon", never as Welte-Mignon. It is identified as the Welte-Mignon through its advertiser and through the pianists of the programmes of both concerts, who recorded for Welte.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Kungliga biblioteket (tidningar.kb.se)</repository>
+            <idno>
+              <idno type="URLImages">https://data.kb.se/dark-78778/part/1/page/16</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>2:dra Konserten. Tolf pianister konsertera medelst ”Mignon-Apparat” å flygel</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">2:dra Konserten. Tolf pianister konsertera medelst ”Mignon-Apparat” å flygel</title>
+            <author><orgName>Dahlströms Orgel- &amp; Pianomagasin</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Dagens Nyheter</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2673730">Stockholm</pubPlace>
+            <date type="publication" when="1908-11-08">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Dagens Nyheter</title>
+            <biblScope unit="issue">Söndagen den 8 November 1908</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan, the whole ad at a readable size: the same text with the seal, newly set ("2:dra konserten.", "Tolf Pianister", the box set across, "11 November", "Hrr Elkan &amp; Schildknecht, Drottninggatan 28"); not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Kungliga biblioteket (tidningar.kb.se)</repository>
+            <idno>
+              <idno type="URLImages">https://data.kb.se/dark-3693968/part/1/page/4</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>2:dra Konserten. Tolf pianister konsertera medelst ”Mignon-Apparat” å flygel</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">2:dra Konserten. Tolf pianister konsertera medelst ”Mignon-Apparat” å flygel</title>
+            <author><orgName>Dahlströms Orgel- &amp; Pianomagasin</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Svenska Dagbladet</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2673730">Stockholm</pubPlace>
+            <date type="publication" when="1908-11-10">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Svenska Dagbladet</title>
+            <biblScope unit="issue">Nr 307, Tisdagen den 10 November 1908</biblScope>
+            <biblScope unit="pages">12</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan, the whole ad at a readable size: the setting of 8 November; not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Kungliga biblioteket (tidningar.kb.se)</repository>
+            <idno>
+              <idno type="URLImages">https://data.kb.se/dark-78776/part/1/page/12</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>2:dra Konserten. Tolf pianister konsertera medelst ”Mignon-Apparat” å flygel</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">2:dra Konserten. Tolf pianister konsertera medelst ”Mignon-Apparat” å flygel</title>
+            <author><orgName>Dahlströms Orgel- &amp; Pianomagasin</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Dagens Nyheter</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2673730">Stockholm</pubPlace>
+            <date type="publication" when="1908-11-10">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Dagens Nyheter</title>
+            <biblScope unit="issue">Tisdagen den 10 November 1908</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan, the ad down to the line "Ibach-Flygel och 'Mignon-Apparat' från" at a readable size: the setting of Dagens Nyheter of 8 November; not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Kungliga biblioteket (tidningar.kb.se)</repository>
+            <idno>
+              <idno type="URLImages">https://data.kb.se/dark-3693970/part/1/page/4</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_5">
+        <bibl>2:dra Konserten. Tolf pianister konsertera medelst ”Mignon-Apparat” å flygel</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">2:dra Konserten. Tolf pianister konsertera medelst ”Mignon-Apparat” å flygel</title>
+            <author><orgName>Dahlströms Orgel- &amp; Pianomagasin</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Aftonbladet</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2673730">Stockholm</pubPlace>
+            <date type="publication" when="1908-11-10">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Aftonbladet</title>
+            <biblScope unit="issue">Tisdagen den 10 November 1908</biblScope>
+            <biblScope unit="pages">2</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan, the whole ad at a readable size: newly set as "2:a Konserten", without the seal, with the programme of twelve pieces (Kleeberg, Pachmann, Burmeister, d'Albert, Nikisch, Merö, Paderewski, Landowska, Pauer, Stavenhagen, Ney, Pugno) run on as one paragraph, with »Mignon» quotation marks and the number (178—), partly illegible; not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Kungliga biblioteket (tidningar.kb.se)</repository>
+            <idno>
+              <idno type="URLImages">https://data.kb.se/dark-64685/part/1/page/2</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_6">
+        <bibl>2:dra Konserten. Tolf pianister konsertera medelst ”Mignon-Apparat” å flygel</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">2:dra Konserten. Tolf pianister konsertera medelst ”Mignon-Apparat” å flygel</title>
+            <author><orgName>Dahlströms Orgel- &amp; Pianomagasin</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Svenska Dagbladet</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2673730">Stockholm</pubPlace>
+            <date type="publication" when="1908-11-11">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Svenska Dagbladet</title>
+            <biblScope unit="issue">Nr 308, Onsdagen den 11 November 1908</biblScope>
+            <biblScope unit="pages">12</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan, the whole ad at a readable size: newly set with the programme of twelve pieces (Kleeberg, Pachmann, Burmeister, d'Albert, Nikisch, Merö, Paderewski, Landowska, Pauer, Stavenhagen, Ney, Pugno), without the seal and with the signature in small type; not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Kungliga biblioteket (tidningar.kb.se)</repository>
+            <idno>
+              <idno type="URLImages">https://data.kb.se/dark-78777/part/1/page/12</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_7">
+        <bibl>2:dra Konserten. Tolf pianister konsertera medelst ”Mignon-Apparat” å flygel</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">2:dra Konserten. Tolf pianister konsertera medelst ”Mignon-Apparat” å flygel</title>
+            <author><orgName>Dahlströms Orgel- &amp; Pianomagasin</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Dagens Nyheter</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2673730">Stockholm</pubPlace>
+            <date type="publication" when="1908-11-11">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Dagens Nyheter</title>
+            <biblScope unit="issue">Onsdagen den 11 November 1908</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan, the ad down to the line beginning "delst elektrisk kraft" at a readable size: newly set with the programme of twelve pieces (Kleeberg, Pachmann, Burmeister, d'Albert, Nikisch, Merö, Paderewski, Landowska, Pauer, Stavenhagen, Ney, Pugno), beginning "Konserter medelst"; not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Kungliga biblioteket (tidningar.kb.se)</repository>
+            <idno>
+              <idno type="URLImages">https://data.kb.se/dark-3693971/part/1/page/4</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México, the
+            St Petersburg State Theatre Library, Trove (National Library of
+            Australia), the newspapers of the Kungliga biblioteket of Sweden,
+            e-newspaperarchives.ch, BAnQ numérique (Bibliothèque et Archives
+            nationales du Québec), the Biblioteca Virtual de Prensa
+            Histórica, the archive of ABC and ARCA (Biblioteca de
+            Catalunya).</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="framed" scheme="css">border: 1px solid;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="distinction_from_mechanical">
+             <gloss>Distinction from Mechanical</gloss>
+             <desc>Often, the adverts try to distinguish reproducing piano rolls
+                from mere mechanical methods (such as the player piano).</desc>
+          </category>
+          <category xml:id="exact_reproduction">
+             <gloss>Exact Reproduction</gloss>
+             <desc>In virtually all promotional materials between 1905 and 1926,
+                the claim of exact and faithful reproduction, of absolute
+                accurateness is consistently emphasized.</desc>
+          </category>
+          <category xml:id="technical_invention">
+             <gloss>Technical Invention</gloss>
+          </category>
+          <category xml:id="virtual_presence">
+             <gloss>Virtual Presence</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="sv">Swedish</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad160-0.jpg" width="5862px" height="7583px"/>
+      <graphic type="IIIF" url="https://data.kb.se/iiif/3/dark-78778%2Fbib13434192_19081108_11631_305_0016.jp2/full/max/0/default.jpg" width="5862px" height="7583px"/>
+      <zone points="2565,328 2792,328 2792,625 2565,625" xml:id="zone_box"/>
+      <zone points="2796,334 3333,334 3333,640 2796,640" xml:id="zone_headline"/>
+      <zone points="2565,648 3335,648 3335,745 2565,745" xml:id="zone_text"/>
+      <zone points="2565,746 3335,746 3335,842 2565,842" xml:id="zone_tickets"/>
+      <zone points="2570,845 2884,845 2884,1124 2570,1124" xml:id="zone_seal"/>
+      <zone points="2890,844 3335,844 3335,1126 2890,1126" xml:id="zone_text2"/>
+      <zone points="2565,1127 3335,1127 3335,1222 2565,1222" xml:id="zone_text3"/>
+      <zone points="2565,1223 3335,1223 3335,1340 2565,1340" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_box">
+        <ab><hi rendition="#c #framed"><lb/><seg xml:id="topic_1" ana="#technical_invention" type="topic" resp="#claude">Beundrans-
+          <lb/>värd
+          <lb/>upp-
+          <lb/>finning!</seg></hi></ab>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c"><lb/><hi rendition="#in">2:dra Konserten</hi>
+          <lb/><hi rendition="#in #b">Tolf
+          <lb/>pianister</hi></hi></head>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/><seg xml:id="topic_2" ana="#virtual_presence" type="topic" resp="#claude">konsertera medelst <hi rendition="#b">”<name type="brand">Mignon-Apparat</name>”</hi> å fly-
+          <lb/>gel</seg>, Onsdagen <hi rendition="#b">11 Nov.</hi> kl. 8 e. m. i <hi rendition="#b"><orgName>K. F. U.
+          <lb/>M</orgName>:s</hi> hörsal.</p>
+      </div>
+      <div facs="#zone_tickets">
+        <p><lb/>Biljetter med program à 1 kr. erhållas hos
+          <lb/>hrr <orgName>Elkan &amp; Schildknecht</orgName>, <address><addrLine>Drottningg. 28</addrLine></address> fr.
+          <lb/>o. m. Tisdag och vid ingången.</p>
+      </div>
+      <div type="illustration" facs="#zone_seal">
+        <figure><desc>Round seal of the firm with a winged putto blowing a wind instrument, inscribed "DAHLSTRÖMS ORGEL- &amp; PIANOMAGASIN · STOCKHOLM"</desc></figure>
+      </div>
+      <div facs="#zone_text2">
+        <p part="I"><lb/><seg xml:id="topic_3" ana="#distinction_from_mechanical" type="topic" resp="#claude">”<name type="brand">Mignon</name>” är <hi rendition="#b">icke</hi> att
+          <lb/>förväxla med andra spel-
+          <lb/>apparater, som endast
+          <lb/>mekaniskt utföra ett mu-
+          <lb/>sikstycke</seg>, emedan beröm-
+          <lb/>da <hi rendition="#b">konstnärer inspelat</hi>
+          <lb/>kompositionerna i ”<name type="brand">Mig-
+          <lb/>non</name>”, som medelst elek-
+          <lb/>trisk kraft återgifver det</p>
+      </div>
+      <div facs="#zone_text3">
+        <p part="F"><lb/><seg xml:id="topic_4" ana="#exact_reproduction" type="topic" resp="#claude">karaktäristiska hos hvarje pianist, hans an-
+          <lb/>slag, nyansering, tempo- och pedalbehand-
+          <lb/>ling</seg>.</p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#b">Ibach-Flygel och ”<name type="brand">Mignon-Apparat</name>” från</hi>
+          <lb/><hi rendition="#in"><orgName>Dahlströms Orgel- &amp; Pianomagasin</orgName>.</hi></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
