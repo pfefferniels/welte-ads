@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Neue Zürcher Zeitung"</title>
+        <title type="sub">December 28, 1913</title>
+        <author>
+          <orgName key="hug">Hug &amp; Co.</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Welte-Mignon Reproduktions-Piano. Im eigenen Heim</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte-Mignon Reproduktions-Piano. Im eigenen Heim</title>
+            <author><orgName>Hug &amp; Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Neue Zürcher Zeitung</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2657896">Zürich</pubPlace>
+            <date type="publication" when="1913-12-28">1913</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Neue Zürcher Zeitung</title>
+            <biblScope unit="issue">Nr. 359, Ausgabe 04, 28 December 1913</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>e-newspaperarchives.ch</repository>
+            <idno>
+              <idno type="URLImages">https://www.e-newspaperarchives.ch/?a=d&amp;d=NZZ19131228-04.2.20.1</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Welte-Mignon Reproduktions-Piano. Im eigenen Heim</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte-Mignon Reproduktions-Piano. Im eigenen Heim</title>
+            <author><orgName>Hug &amp; Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Neue Zürcher Zeitung</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2657896">Zürich</pubPlace>
+            <date type="publication" when="1914-01-25">1914</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Neue Zürcher Zeitung</title>
+            <biblScope unit="issue">Nr. 114, 25 January 1914</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Known from the library's OCR only, which gives the testimonials of Nikisch and Carreño; not seen on the scan.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>e-newspaperarchives.ch</repository>
+            <idno>
+              <idno type="URLImages">https://www.e-newspaperarchives.ch/?a=d&amp;d=NZZ19140125-01.2.14.1</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Welte-Mignon Reproduktions-Piano. Im eigenen Heim</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte-Mignon Reproduktions-Piano. Im eigenen Heim</title>
+            <author><orgName>Hug &amp; Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Neue Zürcher Zeitung</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2657896">Zürich</pubPlace>
+            <date type="publication" when="1914-05-24">1914</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Neue Zürcher Zeitung</title>
+            <biblScope unit="issue">Nr. 791, 24 May 1914</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Known from the library's OCR only, which gives the testimonials of Nikisch and Carreño; not seen on the scan.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>e-newspaperarchives.ch</repository>
+            <idno>
+              <idno type="URLImages">https://www.e-newspaperarchives.ch/?a=d&amp;d=NZZ19140524-01.2.18.1</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México, the
+            St Petersburg State Theatre Library, Trove (National Library of
+            Australia), the newspapers of the Kungliga biblioteket of Sweden,
+            e-newspaperarchives.ch, BAnQ numérique (Bibliothèque et Archives
+            nationales du Québec), the Biblioteca Virtual de Prensa
+            Histórica, the archive of ABC and ARCA (Biblioteca de
+            Catalunya).</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="framed" scheme="css">border: 1px solid;</rendition>
+        <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="home">
+             <gloss>Home</gloss>
+          </category>
+          <category xml:id="miracle">
+             <gloss>Miracle</gloss>
+          </category>
+          <category xml:id="touch_of_a_button">
+             <gloss>Touch of a Button</gloss>
+             <desc>The Welte-Mignon is permanently available and "objectified"
+                for the entertainment of the owner – on the touch of a
+                button.</desc>
+          </category>
+          <category xml:id="virtual_presence">
+             <gloss>Virtual Presence</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="de">German</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad179-0.jpg" width="3816px" height="5461px"/>
+      <zone points="2665,2012 3568,2012 3568,2448 2665,2448" xml:id="zone_headline"/>
+      <zone points="2665,2502 3095,2502 3095,2775 2665,2775" xml:id="zone_nikisch"/>
+      <zone points="3138,2498 3575,2498 3575,2771 3138,2771" xml:id="zone_carreno"/>
+      <zone points="2772,2825 3468,2825 3468,3335 2772,3335" xml:id="zone_home"/>
+      <zone points="2805,3385 3442,3385 3442,3682 2805,3682" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c"><lb/><hi rendition="#in #b"><name type="brand">WELTE-MIGNON</name></hi>
+          <lb/><hi rendition="#larger #b">Reproduktions-Piano.</hi></hi></head>
+      </div>
+      <div facs="#zone_nikisch">
+        <p rendition="#framed"><hi rendition="#c"><lb/>Prof. <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName></hi>
+          <lb/>sagt:</hi>
+          <quote type="testimonial"><hi rendition="#i"><lb/><seg xml:id="topic_1" ana="#virtual_presence" type="topic" resp="#claude">Man meint den betref-
+          <lb/>fenden Künstler in Per-
+          <lb/>son vor sich zu haben
+          <lb/>u. ihn spielen zu hören</seg>.</hi></quote></p>
+      </div>
+      <div facs="#zone_carreno">
+        <p rendition="#framed"><hi rendition="#c"><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName></hi>
+          <lb/>sagt:</hi>
+          <quote type="testimonial"><lb/>Das <name type="brand">Welte-Mignon</name> ist
+          <lb/>das <seg xml:id="topic_2" ana="#miracle" type="topic" resp="#claude">Wunder der Wunder</seg>
+          <lb/>in den mechanischen Er-
+          <lb/>findungen.</quote></p>
+      </div>
+      <div facs="#zone_home">
+        <head><lb/><hi rendition="#c #in #b"><seg xml:id="topic_3" ana="#home" type="topic" resp="#claude">Im eigenen Heim</seg></hi></head>
+        <p><hi rendition="#c #b"><lb/>das individuelle Spiel berühmter
+          <lb/>Klaviervirtuosen <seg xml:id="topic_4" ana="#touch_of_a_button" type="topic" resp="#claude">ohne jedes per-
+          <lb/>sönliche Zutun jederzeit hören
+          <lb/>zu können</seg>, ist ein unvergleich-
+          <lb/>licher Kunstgenuss.</hi></p>
+        <p><lb/><hi rendition="#c">◘</hi></p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#b #larger">ALLEIN-VERTRETUNG:</hi>
+          <lb/><hi rendition="#in #b"><orgName>HUG &amp; Co.</orgName></hi>
+          <address><addrLine><lb/><hi rendition="#b #larger"><placeName>ZÜRICH</placeName>, Sonnenquai.</hi></addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
