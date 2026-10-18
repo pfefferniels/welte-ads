@@ -9,12 +9,20 @@ export interface IIIFImage {
   height: number
 }
 
-// the libraries whose IIIF services the collection uses
-const LIBRARIES = [
+// the libraries whose IIIF services the collection uses; `site` is the host
+// of the library's own pages where it differs from that of its images
+const LIBRARIES: { host: string; name: string; site?: string }[] = [
   { host: 'digitale-sammlungen.de', name: 'Bayerische Staatsbibliothek' },
   { host: 'loc.gov', name: 'Library of Congress' },
   { host: 'archive.org', name: 'Internet Archive' },
+  { host: 'dedieletemps.cybor.ch', name: 'Le Temps archives', site: 'letempsarchives.ch' },
+  { host: 'eluxemburgensia.lu', name: 'Bibliothèque nationale du Luxembourg' },
+  { host: 'nb.no', name: 'Nasjonalbiblioteket' },
+  { host: 'europeana.eu', name: 'National Library of Latvia (Europeana)' },
+  { host: 'canadiana.ca', name: 'Canadiana' },
 ]
+
+const isOn = (host: string, domain: string) => host === domain || host.endsWith('.' + domain)
 
 const hostname = (url: string) => {
   try {
@@ -51,11 +59,8 @@ export function iiifImageUrl(image: IIIFImage, width: number): string {
  * links of the printing. */
 export function libraryOf(service: string, links: string[]): { name: string; url: string | null } | null {
   const host = hostname(service)
-  const library = LIBRARIES.find(l => host === l.host || host.endsWith('.' + l.host))
+  const library = LIBRARIES.find(l => isOn(host, l.host))
   if (!library) return null
-  const url = links.find(link => {
-    const h = hostname(link)
-    return h === library.host || h.endsWith('.' + library.host)
-  }) || null
+  const url = links.find(link => isOn(hostname(link), library.site || library.host)) || null
   return { name: library.name, url }
 }

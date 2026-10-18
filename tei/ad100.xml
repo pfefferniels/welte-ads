@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Rigasche Rundschau", "Rigasche Zeitung" and "Düna-Zeitung"</title>
+        <title type="sub">September 23 to 29, 1908</title>
+        <author>
+          <orgName key="zimmermann">Jul. Heinr. Zimmermann</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Das Meisterspiel-Wiedergabeklavier „MIGNON“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Das Meisterspiel-Wiedergabeklavier „MIGNON“</title>
+            <author><orgName>Jul. Heinr. Zimmermann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Rigasche Rundschau</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/456172">Riga</pubPlace>
+            <date type="publication" when="1908-09-23">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Rigasche Rundschau</title>
+            <biblScope unit="issue">Nr. 210, 1. Beilage, 10 (23) September 1908</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The issue is dated by the Julian calendar, with the Gregorian date
+              in brackets; <att>when</att> gives the Gregorian date.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Latvia (through Europeana)</repository>
+            <idno>
+              <idno type="URLImages">https://www.europeana.eu/item/9200303/BibliographicResource_3000059907566</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Das Meisterspiel-Wiedergabeklavier „MIGNON“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Das Meisterspiel-Wiedergabeklavier „MIGNON“</title>
+            <author><orgName>Jul. Heinr. Zimmermann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Rigasche Rundschau</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/456172">Riga</pubPlace>
+            <date type="publication" when="1908-09-26">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Rigasche Rundschau</title>
+            <biblScope unit="issue">13 (26) September 1908</biblScope>
+            <biblScope unit="pages">12</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Identified as the same design from the library's OCR and a partial
+              view of the scan; not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Latvia (through Europeana)</repository>
+            <idno>
+              <idno type="URLImages">https://www.europeana.eu/item/9200303/BibliographicResource_3000059907681</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Das Meisterspiel-Wiedergabeklavier „MIGNON“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Das Meisterspiel-Wiedergabeklavier „MIGNON“</title>
+            <author><orgName>Jul. Heinr. Zimmermann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Rigasche Zeitung</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/456172">Riga</pubPlace>
+            <date type="publication" when="1908-09-26">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Rigasche Zeitung</title>
+            <biblScope unit="issue">Nr. 213, Sonnabend, 13 September 1908</biblScope>
+            <biblScope unit="pages">6</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The page is dated by the Julian calendar only (Sonnabend, den 13.
+              September 1908); <att>when</att> gives the Gregorian date. Compared
+              with the transcription on the scan, block by block: the same setting
+              and line breaks, with the picture. The only difference noticed is
+              "nun," for "nun;" in Reisenauer's poem.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Latvian National Library (periodika.lv)</repository>
+            <idno>
+              <idno type="URLImages">https://periodika.lv/periodika2-viewer/?lang=fr#issueType:P|issue:141036|article:DIVL308|panel:pa</idno>
+              <idno type="URLImages">https://periodika.lv/periodika2-viewer/img/page?pid=IMG00006&amp;issue=141036</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>Das Meisterspiel-Wiedergabeklavier „MIGNON“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Das Meisterspiel-Wiedergabeklavier „MIGNON“</title>
+            <author><orgName>Jul. Heinr. Zimmermann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Rigasche Zeitung</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/456172">Riga</pubPlace>
+            <date type="publication" when="1908-09-29">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Rigasche Zeitung</title>
+            <biblScope unit="issue">Nr. 215, Dienstag, 16 September 1908</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The page is dated by the Julian calendar only (Dienstag, den 16.
+              September 1908); <att>when</att> gives the Gregorian date. Compared
+              with the transcription on the scan, block by block: the same setting
+              as in the issue of 13 September, with "nun," in Reisenauer's poem. A
+              crease in the paper damages the last lines of Zöllner's poem and the
+              signature, which are still legible.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Latvian National Library (periodika.lv)</repository>
+            <idno>
+              <idno type="URLImages">https://periodika.lv/periodika2-viewer/?lang=fr#issueType:P|issue:34665|article:DIVL190|panel:pa</idno>
+              <idno type="URLImages">https://periodika.lv/periodika2-viewer/img/page?pid=IMG00004&amp;issue=34665</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_5">
+        <bibl>Das Meisterspiel-Wiedergabeklavier „MIGNON“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Das Meisterspiel-Wiedergabeklavier „MIGNON“</title>
+            <author><orgName>Jul. Heinr. Zimmermann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Düna-Zeitung</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/456172">Riga</pubPlace>
+            <date type="publication" when="1908-09-26">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Düna-Zeitung</title>
+            <biblScope unit="issue">Nr. 213, Sonnabend, 13 (26) September 1908</biblScope>
+            <biblScope unit="pages">8</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The issue is dated by the Julian calendar, with the Gregorian date
+              in brackets; <att>when</att> gives the Gregorian date. Compared with
+              the transcription on the scan, block by block: the same setting and
+              line breaks, with the picture and "nun;" in Reisenauer's poem; no
+              difference noticed.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Latvian National Library (periodika.lv)</repository>
+            <idno>
+              <idno type="URLImages">https://periodika.lv/periodika2-viewer/?lang=fr#issueType:P|issue:163312|article:DIVL286|panel:pa</idno>
+              <idno type="URLImages">https://periodika.lv/periodika2-viewer/img/page?pid=IMG00008&amp;issue=163312</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México and the
+            St Petersburg State Theatre Library.</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+        <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="analogy_to_photography">
+             <gloss>Analogy to Photography</gloss>
+          </category>
+          <category xml:id="analysis">
+             <gloss>Analysis</gloss>
+          </category>
+          <category xml:id="distinction_from_mechanical">
+             <gloss>Distinction from Mechanical</gloss>
+             <desc>Often, the adverts try to distinguish reproducing piano rolls
+                from mere mechanical methods (such as the player piano).</desc>
+          </category>
+          <category xml:id="educational_use">
+             <gloss>Educational Use</gloss>
+          </category>
+          <category xml:id="exact_reproduction">
+             <gloss>Exact Reproduction</gloss>
+             <desc>In virtually all promotional materials between 1905 and 1926,
+                the claim of exact and faithful reproduction, of absolute
+                accurateness is consistently emphasized.</desc>
+          </category>
+          <category xml:id="immortality">
+             <gloss>Immortality</gloss>
+             <desc>This topic emphasizes the perdurance of the reproductions and
+                how thus the recording artists become immortal.</desc>
+          </category>
+          <category xml:id="miracle">
+             <gloss>Miracle</gloss>
+          </category>
+          <category xml:id="personality">
+             <gloss>Personality</gloss>
+          </category>
+          <category xml:id="popular">
+             <gloss>Popular</gloss>
+          </category>
+          <category xml:id="superiority">
+             <gloss>Superiority</gloss>
+          </category>
+          <category xml:id="technical_invention">
+             <gloss>Technical Invention</gloss>
+          </category>
+          <category xml:id="virtual_presence">
+             <gloss>Virtual Presence</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="de">German</language>
+        <language ident="fr">French</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+      <change when="2026-10-17" who="#claude">Further printings added.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad100-0.jpg" width="2172px" height="2997px"/>
+      <graphic type="IIIF" url="https://iiif.europeana.eu/image/2OZ7SXKWYVZ4PCMQW2KKJMQ3KFZK6SX6MSTXSONOGCAEHJV4SK2Q/presentation_images/3dea8f20-032e-11e6-95c4-fa163e60dd72/node-1/image/NLL/Rigasche_Rundschau/1908/09/10/riru1908n210_005/full/full/0/default.jpg" width="2172px" height="2997px"/>
+      <zone points="785,1374 1160,1374 1160,1676 785,1676" xml:id="zone_picture"/>
+      <zone points="1180,1376 1610,1376 1610,1495 1180,1495" xml:id="zone_headline"/>
+      <zone points="1176,1498 1610,1498 1610,1568 1176,1568" xml:id="zone_maker"/>
+      <zone points="1180,1570 1610,1570 1610,1611 1180,1611" xml:id="zone_wonder"/>
+      <zone points="1176,1614 1610,1614 1610,1702 1176,1702" xml:id="zone_artists"/>
+      <zone points="908,1705 1492,1705 1492,1743 908,1743" xml:id="zone_autographs"/>
+      <zone points="786,1746 1182,1746 1182,1872 786,1872" xml:id="zone_saint_saens"/>
+      <zone points="786,1882 1182,1882 1182,2023 786,2023" xml:id="zone_leschetitzky"/>
+      <zone points="786,2031 1182,2031 1182,2370 786,2370" xml:id="zone_reisenauer"/>
+      <zone points="786,2378 1182,2378 1182,2468 786,2468" xml:id="zone_auer"/>
+      <zone points="786,2476 1182,2476 1182,2601 786,2601" xml:id="zone_schmidt"/>
+      <zone points="786,2609 1182,2609 1182,2732 786,2732" xml:id="zone_reinecke"/>
+      <zone points="1210,1746 1607,1746 1607,1988 1210,1988" xml:id="zone_gruenfeld"/>
+      <zone points="1210,1996 1607,1996 1607,2188 1210,2188" xml:id="zone_slivinski"/>
+      <zone points="1210,2196 1607,2196 1607,2372 1210,2372" xml:id="zone_nikisch"/>
+      <zone points="1210,2378 1607,2378 1607,2451 1210,2451" xml:id="zone_himmelstjerna"/>
+      <zone points="1210,2458 1607,2458 1607,2498 1210,2498" xml:id="zone_waack"/>
+      <zone points="1210,2506 1607,2506 1607,2732 1210,2732" xml:id="zone_zoellner"/>
+      <zone points="785,2736 1602,2736 1602,2834 785,2834" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>The Welte-Mignon cabinet player (Vorsetzer)</desc></figure>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c"><lb/><hi rendition="#b">Das Meisterspiel-Wiedergabeklavier</hi>
+          <lb/><hi rendition="#in">„<name type="brand">MIGNON</name>“</hi></hi></head>
+      </div>
+      <div facs="#zone_maker">
+        <p><lb/>ist von einer speciell in der Konstruktion der elektro-
+          <lb/>pneumatischen Werke seit vielen Jahren berühmten
+          <lb/>Fabrik — <hi rendition="#b"><orgName>M. WELTE &amp; SÖHNE</orgName></hi> in <placeName>Freiburg</placeName> und
+          <lb/><sic>und</sic> <placeName>New-York</placeName>, gebaut.</p>
+      </div>
+      <div facs="#zone_wonder">
+        <ab><hi rendition="#c #b #larger"><lb/><seg xml:id="topic_1" ana="#miracle" type="topic" resp="#claude">Es ist ein wahres Wunder der Welt.</seg></hi></ab>
+      </div>
+      <div facs="#zone_artists">
+        <p><lb/>Künstler von Weltruf, die <hi rendition="#b"><name type="brand">MIGNON</name></hi> gehört und
+          <lb/>die auch selbst eine grosse Anzahl Piècen für den
+          <lb/>Apparat gespielt haben, spenden demselben ihr höchstes
+          <lb/>Lob und <seg xml:id="topic_2" ana="#superiority" type="topic" resp="#claude">bezeichnen ihn als das <hi rendition="#b">Vollendetste</hi>, was
+          <lb/>bisher existiert</seg>.</p>
+      </div>
+      <div facs="#zone_autographs">
+        <head><hi rendition="#c #larger"><lb/>Aus <name type="brand">MIGNON</name>'s Autographenmappe:</hi></head>
+      </div>
+      <div facs="#zone_saint_saens">
+        <p><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Camille Saint-Saëns</persName>:</hi>
+          <quote type="testimonial">Kennst du das Land?
+          <lb/><foreign xml:lang="fr">Connais-tu le pays ou fleurit la merveille?</foreign> Das
+          <lb/>Wunder, das ist <hi rendition="#b">„<name type="brand">Mignon</name>“</hi>, ein bescheidener Name
+          <lb/>einer bewunderungswürdigen Sache. Man kann
+          <lb/>nur bedauern, dass diese Erfindung nicht schon früher
+          <lb/>gemacht wurde, <seg xml:id="topic_3" ana="#immortality" type="topic" resp="#claude">denn dann könnten wir noch heute
+          <lb/><persName type="composer" corresp="https://d-nb.info/gnd/118508288">Beethoven</persName>, <persName type="composer" corresp="https://d-nb.info/gnd/118584596">Mozart</persName> und <persName type="composer" corresp="https://d-nb.info/gnd/118520539">Chopin</persName> selbst spielen hören</seg>.</quote></p>
+      </div>
+      <div facs="#zone_leschetitzky">
+        <p><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/120890143">Theodor Leschetitzky</persName>:</hi>
+          <quote type="testimonial">Ich muss diese
+          <lb/>Erfindung, die sich so ganz einfach <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> nennt,
+          <lb/>als ein wahres Wunder bezeichnen, und muss es nur
+          <lb/>bedauern, dass dieses Wunder nicht seit 100 Jahren
+          <lb/>geschehen ist. <seg xml:id="topic_4" ana="#educational_use" type="topic" resp="#claude">Wie viel hätte „alt und jung“ daraus
+          <lb/>lernen können</seg>. Wie gern möchte man jung sein
+          <lb/>und bleiben, um aus diesem Wunderbaren ohne
+          <lb/>Ende schöpfen zu können.</quote></p>
+      </div>
+      <div facs="#zone_reisenauer">
+        <p><lb/>Prof. <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>:</hi>
+          <quote type="testimonial">Dass <seg xml:id="topic_5" ana="#analysis" type="topic" resp="#claude">das alt-
+          <lb/>griechische Sprichwort „Erkenne dich selbst“ im
+          <lb/>vollsten Umfange zu betätigen nun auch dem Pia-
+          <lb/>nisten möglich wurde</seg>, ist das Verdienst Ihrer wun-
+          <lb/>derbaren Erfindung: des <name type="brand">Mignon</name>apparates; aber es
+          <lb/>wird ihm durch diesen auch möglich, andere zu
+          <lb/>erkennen und gerecht zu beurteilen, ohne die, sei
+          <lb/>es sym- oder antipathisch beeinflussende Anwesen-
+          <lb/>heit der „Person“. Hier ist zugleich ein technisches
+          <lb/>und ein philosophisches Problem in vollendetster
+          <lb/>Form gelöst.</quote></p>
+        <lg>
+          <l><lb/>Die falschen Noten, die man spielt,</l>
+          <l><lb/>Will oft man nicht erkennen,</l>
+          <l><lb/>Möcht' Publikum dann und Kritik,</l>
+          <l><lb/>Die sie gehört, „verbrennen“!</l>
+          <l><lb/>Doch, sind sie „festgenagelt“ nun<app><rdg source="#source_1 #source_5">;</rdg><rdg source="#source_3 #source_4">,</rdg></app></l>
+          <l><lb/>So muss man zu- sie -geben,</l>
+          <l><lb/>Drum sei der „<name type="brand">Mignon</name>apparat“</l>
+          <l><lb/><seg xml:id="topic_6" ana="#educational_use" type="topic" resp="#claude">Ein Lehrer euch fürs Leben</seg>.</l>
+        </lg>
+      </div>
+      <div facs="#zone_auer">
+        <p><lb/>Prof. <hi rendition="#b"><persName corresp="https://d-nb.info/gnd/118995022">L. Auer</persName>:</hi>
+          <quote type="testimonial">Nach meiner Meinung sollten
+          <lb/>die Konservatorien, Musikschulen diesen Wunder-
+          <lb/>Apparat <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> genannt, <seg xml:id="topic_7" ana="#educational_use" type="topic" resp="#claude">zu pädagogischen
+          <lb/>Zwecken, für die lernende Jugend anwenden</seg>. Warum
+          <lb/>giebt es kein Violin-<name type="brand">Mignon</name>?</quote></p>
+      </div>
+      <div facs="#zone_schmidt">
+        <p><lb/><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/117506338">Hans Schmidt</persName>:</hi>
+          <quote type="testimonial">So braucht auf diesem
+          <lb/>Gebiete reproduktiver Kunst das Schöne nicht mehr
+          <lb/>zu sterben! Die flüchtigsten aller Kunstgenüsse
+          <lb/>sind zum Bleiben und damit wohl die schönsten
+          <lb/>aller Augenblicke zum Verweilen gebracht. <seg xml:id="topic_8" ana="#immortality" type="topic" resp="#claude">Eine
+          <lb/>Stunde nie geahnter noch gehoffter, nun erreichter
+          <lb/>Unsterblichkeit</seg>.</quote></p>
+      </div>
+      <div facs="#zone_reinecke">
+        <p><lb/>Prof. <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/119388472">Karl Reinecke</persName>:</hi>
+          <quote type="testimonial">Ich kann nicht umhin,
+          <lb/>meine aufrichtige Bewunderung auszusprechen über
+          <lb/><seg xml:id="topic_9" ana="#exact_reproduction" type="topic" resp="#claude">den hohen Grad von Treue und Genauigkeit, mit
+          <lb/>welchem der Apparat <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> das Spiel des
+          <lb/>Künstlers wiedergibt</seg>. <seg xml:id="topic_10" ana="#distinction_from_mechanical" type="topic" resp="#claude">Es ist ein gewaltiger Schritt
+          <lb/>getan von dem dereinstigen elektrischen Klavier
+          <lb/>bis zu diesem Apparat</seg>.</quote></p>
+      </div>
+      <div facs="#zone_gruenfeld">
+        <p><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/116888652">Alfred Grünfeld</persName>:</hi>
+          <quote type="testimonial">Es ist mir ein lebhaftes
+          <lb/>Bedürfnis, meiner uneingeschränkten Bewunderung
+          <lb/>für den mir heute vorgeführten neuen selbsttätigen
+          <lb/>Klavierspielapparat <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> Ausdruck zu geben.
+          <lb/>Ich gestehe gern, dass ich geradezu verblüfft war,
+          <lb/>als ich mit eigenen Ohren hörte, <seg xml:id="topic_11" ana="#exact_reproduction" type="topic" resp="#claude">in welcher vorzüg-
+          <lb/>lichen und exakten Weise derselbe die von Künst-
+          <lb/>lerhand gespielten Musikstücke wiedergibt</seg>. Da
+          <lb/>die Wiedergabe nicht nur die Auffassung, sondern
+          <lb/><seg xml:id="topic_12" ana="#personality" type="topic" resp="#claude">auch die kleinsten charakteristischen Eigenheiten
+          <lb/>des Spielers deutlich erkennen lässt</seg>, halte ich
+          <lb/><hi rendition="#b">„<name type="brand">Mignon</name>“</hi> ganz besonders dazu geeignet, <seg xml:id="topic_13" ana="#popular" type="topic" resp="#claude">vollendet
+          <lb/>künstlerische Musik in den weitesten Kreisen
+          <lb/>populär zu machen</seg>.</quote></p>
+      </div>
+      <div facs="#zone_slivinski">
+        <p><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/1080980598">Joseph Slivinski</persName>:</hi>
+          <quote type="testimonial">Es ist bis jetzt der
+          <lb/>sehnlichste Wunsch eines jeden Pianisten gewesen,
+          <lb/>sich selbst hören zu können. Dank der genialen
+          <lb/>Erfindung des Reproduktionsklaviers <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> ist
+          <lb/>der Wunsch erfüllt worden, und zwar in einer so
+          <lb/>vollendeten Weise, <seg xml:id="topic_14" ana="#analogy_to_photography" type="topic" resp="#claude">die nur mit der Photographie
+          <lb/>zu vergleichen ist</seg>. <seg xml:id="topic_15" ana="#exact_reproduction" type="topic" resp="#claude">Nichts wird verloren — jede
+          <lb/>kleinste Nüance wird aufs genaueste wiedergegeben</seg>.
+          <lb/>Man kann nicht umhin — jeder, der es hört, muss
+          <lb/>begeistert sein und ich bin glücklich, hiermit meine
+          <lb/>hohe Begeisterung ausdrücken zu können.</quote></p>
+      </div>
+      <div facs="#zone_nikisch">
+        <p><lb/>Prof. <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>:</hi>
+          <quote type="testimonial">Ich habe mich gestern
+          <lb/>durch Vermittelung des <name type="brand">Mignon</name>-Apparates selbst
+          <lb/>Klavier spielen hören. Das war für mich eine
+          <lb/>Sensation eigener Art. Die Vollkommenheit, mit
+          <lb/>welcher <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> <seg xml:id="topic_16" ana="#personality" type="topic" resp="#claude">die künstlerische Eigenart des
+          <lb/>Spielenden mit allen Schwächen und Vorzügen
+          <lb/>wiedergiebt</seg>, ist ganz wunderbar, und ich wiederhole,
+          <lb/>was ich seinerzeit, als ich das Instrument zum
+          <lb/>erstenmale hörte sagte: <seg xml:id="topic_17" ana="#technical_invention" type="topic" resp="#claude">„Es ist eine epochemachende
+          <lb/>Erfindung!“</seg></quote></p>
+      </div>
+      <div facs="#zone_himmelstjerna">
+        <p><lb/><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/1212078756">Guido Samson v. Himmelstierna</persName>:</hi>
+          <quote type="testimonial">Eine
+          <lb/>äusserst <sic>interesante</sic> Erfindung — <seg xml:id="topic_18" ana="#immortality" type="topic" resp="#claude">schade dass es
+          <lb/>zu Lebzeiten unserer verstorbenen grossen Meister
+          <lb/>kein derartiges Instrument gegeben hat</seg>.</quote></p>
+      </div>
+      <div facs="#zone_waack">
+        <p><lb/><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/1140502735">Carl Waack</persName>:</hi>
+          <quote type="testimonial">Ein fast lebendiger Mechanismus,
+          <lb/>wie ich ihn vordem nie gehört noch gesehen....</quote></p>
+      </div>
+      <div facs="#zone_zoellner">
+        <ab><lb/><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/117010235">Heinrich Zöllner</persName>:</hi></ab>
+        <quote type="testimonial">
+          <lg>
+            <l><lb/><hi rendition="#b">„<name type="brand">Mignon</name>“</hi>, du Fabel-Zauberwesen!</l>
+            <l><lb/>Nun sag mir eins! <seg xml:id="topic_19" ana="#miracle" type="topic" resp="#claude">Man soll kein Wunder glauben!</seg></l>
+            <l><lb/>Du bannst die Seelen, bringst es fertig,</l>
+            <l><lb/>Dem Raum, der Zeit die Macht zu rauben!</l>
+            <l><lb/>Durch deine Kraft — so wunderbar wie tückisch —</l>
+            <l><lb/><seg xml:id="topic_20" ana="#virtual_presence" type="topic" resp="#claude">Gelingt's, die Besten der Kollegen zu zitieren</seg>.</l>
+            <l><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118501437">D'Albert</persName>, <sic><persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-Saëns</persName><persName type="artist" corresp="https://d-nb.info/gnd/116796170">Friedheim</persName></sic>, <persName type="artist" corresp="https://d-nb.info/gnd/11863027X">Weingartner</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118786253">Nikisch</persName>,</l>
+            <l><lb/>Sie mussten nolens volens alle mir klavieren!</l>
+            <l><lb/>Begreiflich ist, dass jeder Meister</l>
+            <l><lb/>Der Tonkunst hoch dich lobt und preist;</l>
+            <l><lb/>Denn du zitierst nicht bloss die Geister,</l>
+            <l><lb/><seg xml:id="topic_21" ana="#immortality" type="topic" resp="#claude">In dir lebt fort des Künstlers Geist!</seg></l>
+          </lg>
+        </quote>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#smaller">Bereitwilligste Vorführung beim Alleinvertreter</hi>
+          <lb/><hi rendition="#in #b"><orgName>Jul. Heinr. Zimmermann</orgName>, <placeName>Riga</placeName>,</hi> <address><addrLine>Scheunenstr. 15,</addrLine>
+          <lb/><addrLine>eigenes Haus.</addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

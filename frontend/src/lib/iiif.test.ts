@@ -36,4 +36,10 @@ describe("libraryOf", () => {
       "https://chroniclingamerica.loc.gov/lccn/sn83030214/1913-12-07/ed-1/seq-3",
     ])).toEqual({ name: "Library of Congress", url: "https://chroniclingamerica.loc.gov/lccn/sn83030214/1913-12-07/ed-1/seq-3" })
   })
+
+  it("finds the link of a library whose pages are on another host than its images", () => {
+    expect(libraryOf("https://dedieletemps.cybor.ch/iiif_letemps/GDL_1909_12_19_4", [
+      "https://www.letempsarchives.ch/page/GDL_1909_12_19/4/article/439259",
+    ])).toEqual({ name: "Le Temps archives", url: "https://www.letempsarchives.ch/page/GDL_1909_12_19/4/article/439259" })
+  })
 })

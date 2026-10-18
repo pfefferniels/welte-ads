@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Обозрѣніе театровъ"</title>
+        <title type="sub">January 28 to February 1, 1908</title>
+        <author>
+          <orgName key="zimmermann">Юлій Генрихъ Циммерманъ</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Падеревскаго, Гофмана. Рейзенауэра, Грига, Лешетицкаго, Грюнфельда … можно слышать въ передачѣ піано-Репродуктора „Миньонъ“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Падеревскаго, Гофмана. Рейзенауэра, Грига, Лешетицкаго, Грюнфельда … можно слышать въ передачѣ піано-Репродуктора „Миньонъ“</title>
+            <author><orgName>Юлій Генрихъ Циммерманъ</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Обозрѣніе театровъ</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/498817">С.-Петербургъ</pubPlace>
+            <date type="publication" when="1908-01-28">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Обозрѣніе театровъ</title>
+            <biblScope unit="issue">15 (28) January 1908, No. 308</biblScope>
+            <biblScope unit="pages">8</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The issue is dated by the Julian calendar (Вторникъ, 15 Января 1908 г.);
+              <att>when</att> gives the Gregorian date. The advertisement fills the right-hand column of the page, beside the programme of the Народный домъ.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>St Petersburg State Theatre Library</repository>
+            <idno>
+              <idno type="URLImages">https://lib.sptl.spb.ru/ru/nodes/8036#mode/inspect/page/8/zoom/4</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Падеревскаго, Гофмана. Рейзенауэра, Грига, Лешетицкаго, Грюнфельда … можно слышать въ передачѣ піано-Репродуктора „Миньонъ“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Падеревскаго, Гофмана. Рейзенауэра, Грига, Лешетицкаго, Грюнфельда … можно слышать въ передачѣ піано-Репродуктора „Миньонъ“</title>
+            <author><orgName>Юлій Генрихъ Циммерманъ</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Обозрѣніе театровъ</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/498817">С.-Петербургъ</pubPlace>
+            <date type="publication" when="1908-01-29">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Обозрѣніе театровъ</title>
+            <biblScope unit="issue">16 (29) January 1908, No. 309</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Dated by the Julian calendar; <att>when</att> gives the Gregorian date.
+              Identified as the same advertisement from the page image; not collated
+              line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>St Petersburg State Theatre Library</repository>
+            <idno>
+              <idno type="URLImages">https://lib.sptl.spb.ru/ru/nodes/8037#mode/inspect/page/4/zoom/4</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Падеревскаго, Гофмана. Рейзенауэра, Грига, Лешетицкаго, Грюнфельда … можно слышать въ передачѣ піано-Репродуктора „Миньонъ“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Падеревскаго, Гофмана. Рейзенауэра, Грига, Лешетицкаго, Грюнфельда … можно слышать въ передачѣ піано-Репродуктора „Миньонъ“</title>
+            <author><orgName>Юлій Генрихъ Циммерманъ</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Обозрѣніе театровъ</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/498817">С.-Петербургъ</pubPlace>
+            <date type="publication" when="1908-01-30">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Обозрѣніе театровъ</title>
+            <biblScope unit="issue">17 (30) January 1908, No. 310</biblScope>
+            <biblScope unit="pages">6</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Dated by the Julian calendar; <att>when</att> gives the Gregorian date.
+              Identified as the same advertisement from the page image; not collated
+              line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>St Petersburg State Theatre Library</repository>
+            <idno>
+              <idno type="URLImages">https://lib.sptl.spb.ru/ru/nodes/8038#mode/inspect/page/6/zoom/4</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>Падеревскаго, Гофмана. Рейзенауэра, Грига, Лешетицкаго, Грюнфельда … можно слышать въ передачѣ піано-Репродуктора „Миньонъ“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Падеревскаго, Гофмана. Рейзенауэра, Грига, Лешетицкаго, Грюнфельда … можно слышать въ передачѣ піано-Репродуктора „Миньонъ“</title>
+            <author><orgName>Юлій Генрихъ Циммерманъ</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Обозрѣніе театровъ</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/498817">С.-Петербургъ</pubPlace>
+            <date type="publication" when="1908-01-31">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Обозрѣніе театровъ</title>
+            <biblScope unit="issue">18 (31) January 1908, No. 311</biblScope>
+            <biblScope unit="pages">10</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Dated by the Julian calendar; <att>when</att> gives the Gregorian date.
+              Identified as the same advertisement from the page image; not collated
+              line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>St Petersburg State Theatre Library</repository>
+            <idno>
+              <idno type="URLImages">https://lib.sptl.spb.ru/ru/nodes/8039#mode/inspect/page/10/zoom/4</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_5">
+        <bibl>Падеревскаго, Гофмана. Рейзенауэра, Грига, Лешетицкаго, Грюнфельда … можно слышать въ передачѣ піано-Репродуктора „Миньонъ“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Падеревскаго, Гофмана. Рейзенауэра, Грига, Лешетицкаго, Грюнфельда … можно слышать въ передачѣ піано-Репродуктора „Миньонъ“</title>
+            <author><orgName>Юлій Генрихъ Циммерманъ</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Обозрѣніе театровъ</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/498817">С.-Петербургъ</pubPlace>
+            <date type="publication" when="1908-02-01">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Обозрѣніе театровъ</title>
+            <biblScope unit="issue">19 January (1 February) 1908, No. 312</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Dated by the Julian calendar; <att>when</att> gives the Gregorian date.
+              Identified as the same advertisement from the page image; not collated
+              line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>St Petersburg State Theatre Library</repository>
+            <idno>
+              <idno type="URLImages">https://lib.sptl.spb.ru/ru/nodes/8040#mode/inspect/page/5/zoom/4</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México and the
+            St Petersburg State Theatre Library.</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+        <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="exact_reproduction">
+             <gloss>Exact Reproduction</gloss>
+             <desc>In virtually all promotional materials between 1905 and 1926,
+                the claim of exact and faithful reproduction, of absolute
+                accurateness is consistently emphasized.</desc>
+          </category>
+          <category xml:id="personality">
+             <gloss>Personality</gloss>
+          </category>
+          <category xml:id="superiority">
+             <gloss>Superiority</gloss>
+          </category>
+          <category xml:id="technical_invention">
+             <gloss>Technical Invention</gloss>
+          </category>
+          <category xml:id="virtual_presence">
+             <gloss>Virtual Presence</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="ru">Russian</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad122-0.jpg" width="1655px" height="2425px"/>
+      <zone points="907,308 1566,308 1566,540 907,540" xml:id="zone_names"/>
+      <zone points="914,558 1553,558 1553,670 914,670" xml:id="zone_others"/>
+      <zone points="912,690 1548,690 1548,822 912,822" xml:id="zone_illusion"/>
+      <zone points="929,836 1548,836 1548,962 929,962" xml:id="zone_brand"/>
+      <zone points="911,980 1565,980 1565,1096 911,1096" xml:id="zone_unique"/>
+      <zone points="907,1122 1549,1122 1549,1334 907,1334" xml:id="zone_invention"/>
+      <zone points="905,1366 1550,1366 1550,1640 905,1640" xml:id="zone_impression"/>
+      <zone points="905,1662 1543,1662 1543,1867 905,1867" xml:id="zone_demonstration"/>
+      <zone points="907,1902 1540,1902 1540,2226 907,2226" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_names">
+        <ab><hi rendition="#c #larger"><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Падеревскаго</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Гофмана</persName>.
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/116429623">Рейзенауэра</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Грига</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/120890143">Леше-
+          <lb/>тицкаго</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116888652">Грюнфельда</persName>,</hi></ab>
+      </div>
+      <div facs="#zone_others">
+        <ab><hi rendition="#c"><lb/>и болѣе 100 другихъ извѣстныхъ піа-
+          <lb/>нистовъ и композиторовъ,</hi></ab>
+      </div>
+      <div facs="#zone_illusion">
+        <ab><hi rendition="#c"><lb/><hi rendition="#b"><seg xml:id="topic_1" ana="#virtual_presence" type="topic" resp="#claude">съ полной иллюзіей ихъ личной игры</seg></hi>
+          <lb/>можно слышать въ передачѣ</hi></ab>
+      </div>
+      <div facs="#zone_brand">
+        <ab><hi rendition="#c"><lb/><hi rendition="#smaller">піано-Реп-</hi>
+          <lb/><hi rendition="#smaller">родуктора</hi> <hi rendition="#in">„<name type="brand">Миньонъ</name>“</hi>.</hi></ab>
+      </div>
+      <div facs="#zone_unique">
+        <ab><hi rendition="#c"><lb/><seg xml:id="topic_2" ana="#superiority" type="topic" resp="#claude"><hi rendition="#b">Единственный</hi> инструментъ, играющій
+          <lb/>полнымъ объемомъ клавіатуры</seg>.</hi></ab>
+      </div>
+      <div facs="#zone_invention">
+        <p><lb/>Это <seg xml:id="topic_3" ana="#technical_invention" type="topic" resp="#claude">новѣйшее музыкальное изобрѣтеніе</seg>
+          <lb/>помощью электричества <seg xml:id="topic_4" ana="#personality" type="topic" resp="#claude">передаетъ всѣ
+          <lb/>характерныя особенности оттѣнковъ и
+          <lb/>туше исполнителей</seg>.</p>
+      </div>
+      <div facs="#zone_impression">
+        <p><hi rendition="#larger"><lb/><seg xml:id="topic_5" ana="#virtual_presence" type="topic" resp="#claude">Поразительное впечатлѣніе со-
+          <lb/>вершенно живой игры</seg> <seg xml:id="topic_6" ana="#exact_reproduction" type="topic" resp="#claude">остав-
+          <lb/>ляетъ мѣсто критики только
+          <lb/>индивидуальности піанистовъ,
+          <lb/>но не передачи инструментомъ</seg></hi></p>
+      </div>
+      <div facs="#zone_demonstration">
+        <p><hi rendition="#larger"><lb/>Всѣмъ интересующимся Піано-
+          <lb/>Репродукторъ „<name type="brand">Миньонъ</name>“ охот-
+          <lb/>но демонстрируется ежеднев-
+          <lb/>но въ магазинѣ</hi></p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><orgName><hi rendition="#i #b">Юлій Генрихъ</hi>
+          <lb/><hi rendition="#in #b">Циммерманъ</hi></orgName><hi rendition="#in #b">.</hi>
+          <lb/><placeName>С.-Петербургъ</placeName>, <address><addrLine>Морская 34.</addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

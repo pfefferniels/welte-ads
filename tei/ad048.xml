@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Provinciale Geldersche en Nijmeegsche Courant"</title>
+        <title type="sub">November 13 and 20, 1910</title>
+        <author>
+          <orgName key="kettner">Kettners Pianohandel</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>BUITENGEWOON CONCERT … uitgevoerd door het REPRODUCTIE-APPARAAT „MIGNON” (Welte Vorsetzer)</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">BUITENGEWOON CONCERT … uitgevoerd door het REPRODUCTIE-APPARAAT „MIGNON” (Welte Vorsetzer)</title>
+            <author><orgName>Kettners Pianohandel</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Provinciale Geldersche en Nijmeegsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2750053">Nijmegen</pubPlace>
+            <date type="publication" when="1910-11-13">1910</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Provinciale Geldersche en Nijmeegsche Courant</title>
+            <biblScope unit="issue">November 13, 1910, No. 268</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMRANM02:000010550:mpeg21:a0040</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>BUITENGEWOON CONCERT … uitgevoerd door het REPRODUCTIE-APPARAAT „MIGNON” (Welte Vorsetzer)</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">BUITENGEWOON CONCERT … uitgevoerd door het REPRODUCTIE-APPARAAT „MIGNON” (Welte Vorsetzer)</title>
+            <author><orgName>Kettners Pianohandel</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Provinciale Geldersche en Nijmeegsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2750053">Nijmegen</pubPlace>
+            <date type="publication" when="1910-11-20">1910</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Provinciale Geldersche en Nijmeegsche Courant</title>
+            <biblScope unit="issue">November 20, 1910, No. 274</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMRANM02:000010564:mpeg21:a0024</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México and the
+            St Petersburg State Theatre Library.</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+        <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
+      </tagsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad048-0.jpg" width="4287px" height="6365px"/>
+      <zone points="3585,4698 4190,4698 4190,4772 3585,4772" xml:id="zone_venue"/>
+      <zone points="3510,4793 4220,4793 4220,5010 3510,5010" xml:id="zone_headline"/>
+      <zone points="3600,5020 4175,5020 4175,5140 3600,5140" xml:id="zone_title"/>
+      <zone points="3510,5160 3875,5160 3875,5378 3510,5378" xml:id="zone_artists_left"/>
+      <zone points="3905,5145 4220,5145 4220,5378 3905,5378" xml:id="zone_artists_right"/>
+      <zone points="3775,5386 4015,5386 4015,5434 3775,5434" xml:id="zone_lhevinne"/>
+      <zone points="3505,5448 4220,5448 4220,5748 3505,5778" xml:id="zone_apparatus"/>
+      <zone points="3600,5785 4185,5752 4185,5874 3600,5907" xml:id="zone_tickets"/>
+      <zone points="3505,5912 4215,5872 4215,6000 3505,6039" xml:id="zone_signature"/>
+      <zone points="3505,6039 4215,6000 4215,6080 3505,6123" xml:id="zone_booking"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_venue">
+        <ab><hi rendition="#c #larger"><lb/><placeName>Gebouw „de Vereeniging”</placeName>.</hi></ab>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c">
+          <hi rendition="#in #b"><lb/>BUITENGEWOON CONCERT</hi>
+          <lb/>op DINSDAG 22 NOVEMBER 1910 te 8 uren.
+        </hi></head>
+      </div>
+      <div facs="#zone_title">
+        <ab><hi rendition="#c">
+          <hi rendition="#b #larger"><lb/>Piano-Voordrachten</hi>
+          <hi rendition="#smaller"><lb/>VAN</hi>
+        </hi></ab>
+      </div>
+      <div facs="#zone_artists_left">
+        <ab><hi rendition="#b">
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/119466821">OLGA SAMAROFF</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118986724">J. J. PADEREWSKI</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/134863267">W. SAPELLNIKOFF</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118953915">TERÈSE <sic>CARRÉNO</sic></persName>,
+        </hi></ab>
+      </div>
+      <div facs="#zone_artists_right">
+        <ab><hi rendition="#b">
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/116308621">RAOUL PUGNO</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/116210419"><sic>CLOTILDEKLEEBERG</sic></persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/116060689">Prof. MAX PAUER</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118518011">FERRUCCIO BUSONI</persName>,
+        </hi></ab>
+      </div>
+      <div facs="#zone_lhevinne">
+        <ab><hi rendition="#c #b"><lb/><persName type="artist" corresp="https://d-nb.info/gnd/124379923">J. LHEVINNE</persName>,</hi></ab>
+      </div>
+      <div facs="#zone_apparatus">
+        <ab><hi rendition="#c">
+          <lb/>uitgevoerd door het
+          <hi rendition="#b #larger"><lb/>REPRODUCTIE-APPARAAT</hi>
+          <hi rendition="#in"><lb/>„<name type="brand">MIGNON</name>” (<name type="brand">Welte Vorsetzer</name>)</hi>
+          <hi rendition="#larger"><lb/>Concertvleugel <name type="brand">STEINWAY &amp; SONS</name>.</hi>
+        </hi></ab>
+      </div>
+      <div facs="#zone_tickets">
+        <ab><hi rendition="#c">
+          <lb/>Toegangsbewijzen worden op
+          <lb/>schriftelijke aanvrage verstrekt
+          <lb/>door den Generaal-Agent :::
+        </hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c">
+          <lb/><hi rendition="#b #larger"><orgName>KETTNERS PIANOHANDEL</orgName>,</hi>
+          <address><addrLine><lb/><hi rendition="#g">Heiligenweg</hi> 21, 23 <sic>25</sic>, Amsterdam.</addrLine></address>
+        </hi></ab>
+      </div>
+      <div facs="#zone_booking">
+        <ab><hi rendition="#c">
+          <lb/>Plaatsen zijn te bespreken aan het
+          <lb/><placeName>Gebouw „DE VEREENIGING”</placeName>.
+        </hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

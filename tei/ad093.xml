@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Berlingske Politiske og Avertissementstidende"</title>
+        <title type="sub">August 25 and September 8, 1922</title>
+        <author>
+          <orgName key="winther">A/S Chr. Winther</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>KUNSTMUSIK i Hjemmet</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">KUNSTMUSIK i Hjemmet</title>
+            <author><orgName>A/S Chr. Winther</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Berlingske Politiske og Avertissementstidende</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2618425">København</pubPlace>
+            <date type="publication" when="1922-09-08">1922</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Berlingske Politiske og Avertissementstidende</title>
+            <biblScope unit="issue">No. 210, evening edition (Aften), September 8, 1922</biblScope>
+            <biblScope unit="pages">8</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Mediestream (Royal Danish Library)</repository>
+            <idno>
+              <idno type="URLImages">https://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3A1c56d8cd-2dd9-4112-8c4a-e0d7d796fd87</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>KUNSTMUSIK i Hjemmet</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">KUNSTMUSIK i Hjemmet</title>
+            <author><orgName>A/S Chr. Winther</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Berlingske Politiske og Avertissementstidende</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2618425">København</pubPlace>
+            <date type="publication" when="1922-08-25">1922</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Berlingske Politiske og Avertissementstidende</title>
+            <biblScope unit="issue">evening edition (Aften), August 25, 1922</biblScope>
+            <biblScope unit="pages">6</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The same text and layout.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Mediestream (Royal Danish Library)</repository>
+            <idno>
+              <idno type="URLImages">https://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3A5380148c-6e3a-49a2-b303-fe0eb15cc01f</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México and the
+            St Petersburg State Theatre Library.</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="affordability">
+             <gloss>Affordability</gloss>
+          </category>
+          <category xml:id="home">
+             <gloss>Home</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="da">Danish</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad093-0.jpg" width="5067px" height="6958px"/>
+      <zone points="2797,2730 3345,2730 3345,2825 2797,2825" xml:id="zone_headline"/>
+      <zone points="2936,2836 3202,2836 3202,2877 2936,2877" xml:id="zone_subhead"/>
+      <zone points="2783,2878 3360,2878 3360,2952 2783,2952" xml:id="zone_text"/>
+      <zone points="2791,2953 3344,2953 3344,3060 2791,3060" xml:id="zone_brand"/>
+      <zone points="2755,3061 3385,3061 3385,3205 2755,3205" xml:id="zone_text2"/>
+      <zone points="2757,3207 3385,3207 3385,3358 2757,3358" xml:id="zone_other"/>
+      <zone points="2816,3359 3327,3359 3327,3432 2816,3432" xml:id="zone_terms"/>
+      <zone points="2801,3433 3341,3433 3341,3520 2801,3520" xml:id="zone_signature"/>
+      <zone points="2813,3521 3334,3521 3334,3561 2813,3561" xml:id="zone_address"/>
+      <zone points="2756,3562 3388,3562 3388,3640 2756,3640" xml:id="zone_firm"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in"><lb/>KUNSTMUSIK</hi></head>
+      </div>
+      <div facs="#zone_subhead">
+        <ab><hi rendition="#c #b"><lb/><seg xml:id="topic_1" ana="#home" type="topic" resp="#claude">i Hjemmet</seg>.</hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <ab><hi rendition="#c"><lb/>Eneforhandling af det verdens-
+          <lb/>kendte Kunstspilleapparat</hi></ab>
+      </div>
+      <div facs="#zone_brand">
+        <ab><hi rendition="#c #b #in"><lb/><name type="brand">Welte Mignon</name>,</hi></ab>
+      </div>
+      <div facs="#zone_text2">
+        <p><lb/>indbygget i <hi rendition="#b"><name type="brand">Steinway</name> Flygler</hi>
+          <lb/>og <hi rendition="#b">Pianoer</hi> og som <hi rendition="#b">Forsats-
+          <lb/>apparat</hi> anbefalet af Nutidens
+          <lb/>berømte Musikautoriteter.</p>
+      </div>
+      <div facs="#zone_other">
+        <ab><gap reason="irrelevant"><desc resp="#claude">4 lines on other new and used instruments in stock (Angelus, Estrella, Pianola, Ducanola m. fl.)</desc></gap></ab>
+      </div>
+      <div facs="#zone_terms">
+        <ab><hi rendition="#c"><lb/>Fineste Garanti.
+          <lb/><seg xml:id="topic_2" ana="#affordability" type="topic" resp="#claude">Lempelige Betalingsvilkaar</seg>.</hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c #b #in"><lb/><orgName>A/S Chr. Winther</orgName>,</hi></ab>
+      </div>
+      <div facs="#zone_address">
+        <ab><hi rendition="#c #b"><lb/><address><addrLine>Frederiksborggade 36.</addrLine></address></hi></ab>
+      </div>
+      <div facs="#zone_firm">
+        <ab><hi rendition="#c"><lb/>Største og førende Forretning i
+          <lb/>pneumat. Instrumenter. Etabl.1885.</hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

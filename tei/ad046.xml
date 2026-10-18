@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Journal de Genève"</title>
+        <title type="sub">December 1927</title>
+        <author>
+          <orgName key="kneifel.beroud">Kneifel-Béroud</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Le grand succès du Steinway-Welte</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Le grand succès du Steinway-Welte</title>
+            <author><orgName>Kneifel-Béroud</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Journal de Genève</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2660646">Genève</pubPlace>
+            <date type="publication" when="1927-12-10">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Journal de Genève</title>
+            <biblScope unit="issue">No. 338, December 10, 1927</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Le Temps archives</repository>
+            <idno>
+              <idno type="URLImages">https://www.letempsarchives.ch/page/JDG_1927_12_10/3/article/6421238</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Le grand succès du Steinway-Welte</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Le grand succès du Steinway-Welte</title>
+            <author><orgName>Kneifel-Béroud</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Journal de Genève</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2660646">Genève</pubPlace>
+            <date type="publication" when="1927-12-17">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Journal de Genève</title>
+            <biblScope unit="issue">No. 345, December 17, 1927</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Le Temps archives</repository>
+            <idno>
+              <idno type="URLImages">https://www.letempsarchives.ch/page/JDG_1927_12_17/4/article/6423230</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Le grand succès du Steinway-Welte</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Le grand succès du Steinway-Welte</title>
+            <author><orgName>Kneifel-Béroud</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Journal de Genève</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2660646">Genève</pubPlace>
+            <date type="publication" when="1927-12-24">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Journal de Genève</title>
+            <biblScope unit="issue">No. 352, December 24, 1927</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Le Temps archives</repository>
+            <idno>
+              <idno type="URLImages">https://www.letempsarchives.ch/page/JDG_1927_12_24/5/article/6425474</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>Le grand succès du Steinway-Welte</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Le grand succès du Steinway-Welte</title>
+            <author><orgName>Kneifel-Béroud</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Journal de Genève</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2660646">Genève</pubPlace>
+            <date type="publication" when="1927-12-31">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Journal de Genève</title>
+            <biblScope unit="issue">No. 358, December 31, 1927</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Le Temps archives</repository>
+            <idno>
+              <idno type="URLImages">https://www.letempsarchives.ch/page/JDG_1927_12_31/3/article/6427151</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México and the
+            St Petersburg State Theatre Library.</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="superiority">
+             <gloss>Superiority</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="fr">French</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad046-0.jpg" width="3451px" height="5429px"/>
+      <graphic type="IIIF" url="https://dedieletemps.cybor.ch/iiif_letemps/JDG_1927_12_10_3/full/full/0/default.jpg" width="3451px" height="5429px"/>
+      <zone points="1035,4893 1350,4893 1350,4934 1035,4934" xml:id="zone_intro"/>
+      <zone points="890,4945 1676,4945 1676,5040 890,5040" xml:id="zone_headline"/>
+      <zone points="1033,5042 1676,5042 1676,5170 1033,5170" xml:id="zone_text"/>
+      <zone points="1035,5173 1676,5173 1676,5265 1035,5265" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_intro">
+        <ab><lb/>Le grand succès du</ab>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in #g"><lb/><name type="brand">Steinway-Welte</name></hi></head>
+      </div>
+      <div facs="#zone_text">
+        <ab>
+          <lb/>au dernier concert au <placeName>Conservatoire</placeName> a
+          <lb/>prouvé <seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">son éclatante supériorité dans la
+          <lb/>reproduction <sic>de jeu</sic> des maîtres du clavier</seg>
+          <lb/>Voir les différents modèles chez</ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab>
+          <lb/><hi rendition="#c #b #g"><orgName>KNEIFEL-BÉROUD</orgName></hi>
+          <lb/>Magasin de Pianos, <address><addrLine>Passage du Terraillet</addrLine></address></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

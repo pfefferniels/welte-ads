@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Aftenposten"</title>
+        <title type="sub">December 1, 1907</title>
+        <author>
+          <orgName key="grondahl">Grøndahl's Flygel- &amp; Pianolager</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Reproduktionsklaveret “Mignon“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Reproduktionsklaveret “Mignon“</title>
+            <author><orgName>Grøndahl's Flygel- &amp; Pianolager</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Aftenposten</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3143244">Kristiania</pubPlace>
+            <date type="publication" when="1907-12-01">1907</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Aftenposten</title>
+            <biblScope unit="issue">December 1, 1907, No. 708</biblScope>
+            <biblScope unit="pages">2</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The advertisement names the instrument only as “Mignon“; the name
+              Welte is not printed. It is identified as the Welte-Mignon by the
+              picture of the cabinet player (the same block as in Grøndahl's
+              "Welte-Mignon Reproduktionsklaver" advertisement in Aftenposten,
+              January 10, 1908) and by the electric drive. A differently worded
+              setting appeared in Morgenbladet on the same day.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Nasjonalbiblioteket</repository>
+            <idno>
+              <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_aftenposten_null_null_19071201_48_708_2</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México and the
+            St Petersburg State Theatre Library.</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="exact_reproduction">
+             <gloss>Exact Reproduction</gloss>
+             <desc>In virtually all promotional materials between 1905 and 1926,
+                the claim of exact and faithful reproduction, of absolute
+                accurateness is consistently emphasized.</desc>
+          </category>
+          <category xml:id="home">
+             <gloss>Home</gloss>
+          </category>
+          <category xml:id="miracle">
+             <gloss>Miracle</gloss>
+          </category>
+          <category xml:id="personality">
+             <gloss>Personality</gloss>
+          </category>
+          <category xml:id="technical_invention">
+             <gloss>Technical Invention</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="no">Norwegian (Dano-Norwegian)</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad076-0.jpg" width="4800px" height="7502px"/>
+      <graphic type="IIIF" url="https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_aftenposten_null_null_19071201_48_708_2-1_002_null/full/full/0/default.jpg" width="4800px" height="7502px"/>
+      <zone points="3855,2462 4420,2462 4420,2514 3855,2514" xml:id="zone_headline"/>
+      <zone points="3700,2518 4565,2518 4565,2634 3700,2634" xml:id="zone_brand"/>
+      <zone points="3612,2702 3788,2702 3788,3145 3612,3145" xml:id="zone_left"/>
+      <zone points="3802,2662 4450,2662 4450,3220 3802,3220" xml:id="zone_picture"/>
+      <zone points="4455,2716 4678,2716 4678,3165 4455,3165" xml:id="zone_right"/>
+      <zone points="3600,3230 4662,3230 4662,3395 3600,3395" xml:id="zone_text"/>
+      <zone points="3908,3402 4362,3402 4362,3444 3908,3444" xml:id="zone_demonstration"/>
+      <zone points="3685,3450 4580,3450 4580,3565 3685,3565" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b"><lb/>Reproduktionsklaveret</hi></head>
+      </div>
+      <div facs="#zone_brand">
+        <head><hi rendition="#c #b #in"><lb/>“<name type="brand">Mignon</name>“</hi></head>
+      </div>
+      <div facs="#zone_left">
+        <ab><hi rendition="#c"><seg xml:id="topic_1" ana="#home" type="topic" resp="#claude"><lb/>Ved sit
+          <lb/>elegante
+          <lb/>Ydre
+          <lb/>en Pryd
+          <lb/>for
+          <lb/>enhver
+          <lb/>Salon.</seg></hi></ab>
+      </div>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>The Welte-Mignon cabinet player (Vorsetzer) in an Art Nouveau case</desc></figure>
+      </div>
+      <div facs="#zone_right">
+        <ab><hi rendition="#c"><seg xml:id="topic_2" ana="#technical_invention" type="topic" resp="#claude"><lb/>Drives ved
+          <lb/>Elektro-
+          <lb/>motor</seg>,
+          <lb/>der kan
+          <lb/>tilkobles
+          <lb/>enhver
+          <lb/>Lysledning.</hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/><seg xml:id="topic_3" ana="#exact_reproduction" type="topic" resp="#claude">Gjengiver direkte Virtuosernes Spil med alle Finheder</seg> og med <seg xml:id="topic_4" ana="#personality" type="topic" resp="#claude">alle in-
+          <lb/>dividuelle Karaktéregenskaber</seg>.
+          <lb/>Klavérstykkerne er forespillet af Verdens første Componister som:
+          <lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/119110016"><sic>Donányi</sic></persName></hi> etc., der alle har <seg xml:id="topic_5" ana="#miracle" type="topic" resp="#claude">udtrykt sin Forbau-
+          <lb/>selse og Beundring</seg> over <seg xml:id="topic_6" ana="#exact_reproduction" type="topic" resp="#claude">den i mindste Detail nøiagtige Gjengivelse</seg>.</p>
+      </div>
+      <div facs="#zone_demonstration">
+        <ab><hi rendition="#c"><lb/>Forespilles daglig Interessenter.</hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#in"><orgName>Grøndahl's Flygel- &amp; Pianolager</orgName>,</hi>
+          <lb/><hi rendition="#b"><address><addrLine>Carl Johs.gd. 17, Telef. 7899.</addrLine></address></hi></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

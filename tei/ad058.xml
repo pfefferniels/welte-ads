@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Nieuwe Rotterdamsche Courant"</title>
+        <title type="sub">March 28 to April 11, 1924</title>
+        <author>
+          <orgName key="quispel">C. Quispel</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Als Reproductie Piano is de Estey-Welte in elk opzicht een Meesterstuk</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Als Reproductie Piano is de Estey-Welte in elk opzicht een Meesterstuk</title>
+            <author><orgName>C. Quispel</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nieuwe Rotterdamsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1924-03-28">1924</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nieuwe Rotterdamsche Courant</title>
+            <biblScope unit="issue">March 28, 1924</biblScope>
+            <biblScope unit="pages">16</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010027119:mpeg21:a0091</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Als Reproductie Piano is de Estey-Welte in elk opzicht een Meesterstuk</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Als Reproductie Piano is de Estey-Welte in elk opzicht een Meesterstuk</title>
+            <author><orgName>C. Quispel</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nieuwe Rotterdamsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1924-04-04">1924</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nieuwe Rotterdamsche Courant</title>
+            <biblScope unit="issue">April 4, 1924</biblScope>
+            <biblScope unit="pages">12</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Not inspected closely on the scan; the OCR gives the same text.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010027131:mpeg21:a0039</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Als Reproductie Piano is de Estey-Welte in elk opzicht een Meesterstuk</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Als Reproductie Piano is de Estey-Welte in elk opzicht een Meesterstuk</title>
+            <author><orgName>C. Quispel</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nieuwe Rotterdamsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1924-04-11">1924</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nieuwe Rotterdamsche Courant</title>
+            <biblScope unit="issue">April 11, 1924</biblScope>
+            <biblScope unit="pages">11</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Checked on the scan: the same setting.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010027143:mpeg21:a0054</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México and the
+            St Petersburg State Theatre Library.</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="popular">
+             <gloss>Popular</gloss>
+          </category>
+          <category xml:id="superiority">
+             <gloss>Superiority</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="nl">Dutch</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad058-0.jpg" width="5282px" height="7173px"/>
+      <zone points="2570,295 2780,295 2780,532 2570,532" xml:id="zone_picture"/>
+      <zone points="2505,546 2812,546 2812,711 2505,711" xml:id="zone_lead"/>
+      <zone points="2225,713 3090,713 3090,873 2225,873" xml:id="zone_brand"/>
+      <zone points="2322,876 2982,876 2982,1049 2322,1049" xml:id="zone_masterpiece"/>
+      <zone points="2320,1051 2982,1051 2982,1464 2320,1464" xml:id="zone_text"/>
+      <zone points="2362,1470 2938,1470 2938,1772 2362,1772" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>Monogram of interlaced letters (S and T?) in an oval</desc></figure>
+      </div>
+      <div facs="#zone_lead">
+        <ab><hi rendition="#c">
+          <lb/>Als
+          <lb/>Reproductie
+          <lb/>Piano is de
+        </hi></ab>
+      </div>
+      <div facs="#zone_brand">
+        <head><hi rendition="#c #in"><lb/><name type="brand">Estey-Welte</name></hi></head>
+      </div>
+      <div facs="#zone_masterpiece">
+        <ab><hi rendition="#c">
+          <lb/>in elk opzicht een
+          <hi rendition="#in"><lb/><seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">Meesterstuk</seg></hi>
+        </hi></ab>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/>Van uit <placeName>Amerika</placeName> heeft de
+          <lb/><name type="brand">Estey-Welte</name> <seg xml:id="topic_2" ana="#popular" type="topic" resp="#claude">reeds een
+          <lb/>triomftocht gemaakt door
+          <lb/>de geheele wereld</seg>.</p>
+        <p><lb/>Iedereen die belang stelt,
+          <lb/>noodigen wij uit om te ko-
+          <lb/>men zien en hooren.</p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c">
+          <hi rendition="#in"><lb/><orgName>C. Quispel</orgName></hi>
+          <lb/>Pianofabrikant
+          <address>
+            <addrLine><hi rendition="#smaller"><lb/>Goudsche Singel 3</hi></addrLine>
+            <addrLine><lb/>Rotterdam</addrLine>
+          </address>
+        </hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

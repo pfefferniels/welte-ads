@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Saturday Night"</title>
+        <title type="sub">October 27, 1928</title>
+        <author>
+          <orgName key="heintzman">Heintzman &amp; Co.</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>The HEINTZMAN Welte - Mignon REPRODUCING PIANO (with Reginald Stewart)</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The HEINTZMAN Welte - Mignon REPRODUCING PIANO (with Reginald Stewart)</title>
+            <author><orgName>Heintzman &amp; Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Saturday Night</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/6167865">Toronto</pubPlace>
+            <date type="publication" when="1928-10-27">1928</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Saturday Night</title>
+            <biblScope unit="issue">October 27, 1928, Vol. 43, No. 50</biblScope>
+            <biblScope unit="pages">6</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Internet Archive</repository>
+            <idno>
+              <idno type="URLImages">https://archive.org/details/sim_saturday-night_1928-10-27_43_50/page/n5/mode/1up</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México and the
+            St Petersburg State Theatre Library.</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
+        <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+        <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="home">
+             <gloss>Home</gloss>
+          </category>
+          <category xml:id="superiority">
+             <gloss>Superiority</gloss>
+          </category>
+          <category xml:id="touch_of_a_button">
+             <gloss>Touch of a Button</gloss>
+             <desc>The Welte-Mignon is permanently available and "objectified"
+                for the entertainment of the owner – on the touch of a
+                button.</desc>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="en">English</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad112-0.jpg" width="5402px" height="7314px"/>
+      <graphic type="IIIF" url="https://iiif.archive.org/image/iiif/3/sim_saturday-night_1928-10-27_43_50%2Fsim_saturday-night_1928-10-27_43_50_jp2.zip%2Fsim_saturday-night_1928-10-27_43_50_jp2%2Fsim_saturday-night_1928-10-27_43_50_0005.jp2/full/max/0/default.jpg" width="5402px" height="7314px"/>
+      <zone points="3605,3425 4840,3425 4840,4780 3605,4780" xml:id="zone_picture"/>
+      <zone points="3555,4812 4905,4812 4905,5150 3555,5150" xml:id="zone_headline"/>
+      <zone points="3742,5204 4715,5204 4715,5526 3742,5526" xml:id="zone_text"/>
+      <zone points="3556,5618 4273,5618 4273,6010 3556,6010" xml:id="zone_stewart"/>
+      <zone points="3558,6029 4273,6029 4273,6370 3558,6370" xml:id="zone_recordings"/>
+      <zone points="4290,5582 4872,5582 4872,6378 4290,6378" xml:id="zone_portrait"/>
+      <zone points="3750,6418 4714,6418 4714,6486 3750,6486" xml:id="zone_invitation"/>
+      <zone points="3698,6519 4768,6519 4768,6786 3698,6786" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div type="illustration" facs="#zone_picture">
+        <figure xml:id="figure_1" ana="#home"><desc>A grand piano in a room, a framed portrait of a seventeenth-century gentleman on the wall, a side table with a lamp</desc></figure>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c"><lb/><hi rendition="#in">The <name type="brand">HEINTZMAN</name></hi>
+          <lb/><hi rendition="#i #larger"><name type="brand">Welte - Mignon</name></hi>
+          <lb/><hi rendition="#g">REPRODUCING PIANO</hi></hi></head>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/><seg xml:id="topic_1" ana="#touch_of_a_button" type="topic" resp="#claude">The famous compositions of the ages played by
+          <lb/>internationally famous pianists are at your com-
+          <lb/>mand</seg>. Through the <name type="brand">Welte-Mignon Reproducing
+          <lb/>Piano</name>, <seg xml:id="topic_2" ana="#home" type="topic" resp="#claude">the genius of <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName>,
+          <lb/>and hundreds of others of the musically great, is
+          <lb/>transported to your home</seg> for your entertainment.
+          <lb/><seg xml:id="topic_3" ana="#superiority" type="topic" resp="#claude"><name type="brand">Welte Mignon</name> was the first reproducing piano pro-
+          <lb/>nounced perfect by great artists—it is still so
+          <lb/>regarded</seg>.</p>
+      </div>
+      <div facs="#zone_stewart">
+        <ab><hi rendition="#c"><lb/><hi rendition="#b #larger"><persName type="artist">Reginald Stewart</persName></hi>
+          <lb/><hi rendition="#b #i">Famous Canadian Concert Pianist
+          <lb/>is an exclusive <name type="brand">Welte-Mignon</name>
+          <lb/>Artist.</hi>
+          <lb/><hi rendition="#i #smaller">The following Recordings by
+          <lb/><persName type="artist">Reginald Stewart</persName> are now
+          <lb/>obtainable at Heintzman Hall.</hi></hi></ab>
+      </div>
+      <div facs="#zone_recordings">
+        <list>
+          <item><lb/>Sonata in C Major, op. 2, No. 3
+            <lb/>Parts 1, 2, 3, 4 ......<persName type="composer" corresp="https://d-nb.info/gnd/118508288">Beethoven</persName></item>
+          <item><lb/>Humoreske ..........<persName type="composer" corresp="https://d-nb.info/gnd/118638157">Tschaikowsky</persName></item>
+          <item><lb/>Watteau Paysage .......<persName type="composer" corresp="https://d-nb.info/gnd/118964046">Godowsky</persName></item>
+          <item><lb/>Tambourin Chinois, <persName type="composer" corresp="https://d-nb.info/gnd/119069261">Kreisler</persName>-<persName type="composer">Chaliff</persName></item>
+          <item><lb/>Minuet from <sic>L’Artesienne</sic> ........
+            <lb/><persName type="composer" corresp="https://d-nb.info/gnd/118511440">Bizet</persName>-<persName type="composer" corresp="https://d-nb.info/gnd/118641832">Rachmaninoff</persName></item>
+          <item><lb/>Liebesfreud ..<persName type="composer" corresp="https://d-nb.info/gnd/119069261">Kreisler</persName>-<persName type="composer" corresp="https://d-nb.info/gnd/118641832">Rachmaninoff</persName></item>
+        </list>
+      </div>
+      <div type="illustration" facs="#zone_portrait">
+        <figure><desc>Photographic portrait of Reginald Stewart in profile</desc></figure>
+      </div>
+      <div facs="#zone_invitation">
+        <ab><hi rendition="#c #b #i #smaller"><lb/>Visit our Music Salon and hear the wonderful <name type="brand">Heintzman
+          <lb/>Welte-Mignon</name> play for you the music of the masters.</hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#b #i">Ye Olde Firme</hi>
+          <lb/><hi rendition="#in #larger"><orgName>Heintzman &amp; Co.</orgName></hi>
+          <lb/><hi rendition="#b"><address><addrLine>193-197 Yonge Street, Toronto.</addrLine></address></hi></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
