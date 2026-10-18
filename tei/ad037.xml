@@ -60,6 +60,330 @@
                     </seriesStmt>
                 </biblFull>
             </sourceDesc>
+            <sourceDesc xml:id="source_2">
+                <bibl>Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</title>
+                        <author>
+                            <orgName>M. Welte &amp; Söhne</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Sport im Bild</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/2950159">Berlin</pubPlace>
+                        <date type="publication" when="1921">1921</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Sport im Bild</title>
+                        <biblScope unit="issue">Nr. 19, 1921</biblScope>
+                        <biblScope unit="pages">652</biblScope>
+                    </seriesStmt>
+                    <notesStmt>
+                        <note>Seen on the scan at low resolution only: the same design, not
+                            collated line by line. The exact date of the issue is not known:
+                            the running head gives only the number of the issue.</note>
+                    </notesStmt>
+                </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>ANNO (Austrian National Library)</repository>
+                        <idno>
+                            <idno type="URLImages">https://anno.onb.ac.at/cgi-content/anno-plus?aid=sib&amp;datum=1921&amp;page=652</idno>
+                        </idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+            <sourceDesc xml:id="source_3">
+                <bibl>Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</title>
+                        <author>
+                            <orgName>M. Welte &amp; Söhne</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Sport im Bild</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/2950159">Berlin</pubPlace>
+                        <date type="publication" when="1921">1921</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Sport im Bild</title>
+                        <biblScope unit="issue">Nr. 20, 1921</biblScope>
+                        <biblScope unit="pages">IV</biblScope>
+                    </seriesStmt>
+                    <notesStmt>
+                        <note>Seen on the scan at low resolution only: the same design, not
+                            collated line by line. The exact date of the issue is not known:
+                            the running head gives only the number of the issue.</note>
+                    </notesStmt>
+                </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>ANNO (Austrian National Library)</repository>
+                        <idno>
+                            <idno type="URLImages">https://anno.onb.ac.at/cgi-content/anno-plus?aid=sib&amp;datum=1921&amp;page=690</idno>
+                        </idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+            <sourceDesc xml:id="source_4">
+                <bibl>Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</title>
+                        <author>
+                            <orgName>M. Welte &amp; Söhne</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Sport im Bild</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/2950159">Berlin</pubPlace>
+                        <date type="publication" when="1921">1921</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Sport im Bild</title>
+                        <biblScope unit="issue">Nr. 35, 1921</biblScope>
+                        <biblScope unit="pages">1288</biblScope>
+                    </seriesStmt>
+                    <notesStmt>
+                        <note>Seen on the scan at low resolution only: the same design, not
+                            collated line by line. The exact date of the issue is not known:
+                            the running head gives only the number of the issue.</note>
+                    </notesStmt>
+                </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>ANNO (Austrian National Library)</repository>
+                        <idno>
+                            <idno type="URLImages">https://anno.onb.ac.at/cgi-content/anno-plus?aid=sib&amp;datum=1921&amp;page=1288</idno>
+                        </idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+            <sourceDesc xml:id="source_5">
+                <bibl>Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</title>
+                        <author>
+                            <orgName>M. Welte &amp; Söhne</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Sport im Bild</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/2950159">Berlin</pubPlace>
+                        <date type="publication" when="1921">1921</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Sport im Bild</title>
+                        <biblScope unit="issue">Nr. 38, 1921</biblScope>
+                        <biblScope unit="pages">1510</biblScope>
+                    </seriesStmt>
+                    <notesStmt>
+                        <note>Seen on the scan at low resolution only: the same design, not
+                            collated line by line. The exact date of the issue is not known:
+                            the running head gives only the number of the issue.</note>
+                    </notesStmt>
+                </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>ANNO (Austrian National Library)</repository>
+                        <idno>
+                            <idno type="URLImages">https://anno.onb.ac.at/cgi-content/anno-plus?aid=sib&amp;datum=1921&amp;page=1510</idno>
+                        </idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+            <sourceDesc xml:id="source_6">
+                <bibl>Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</title>
+                        <author>
+                            <orgName>M. Welte &amp; Söhne</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Sport im Bild</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/2950159">Berlin</pubPlace>
+                        <date type="publication" when="1921">1921</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Sport im Bild</title>
+                        <biblScope unit="issue">Nr. 42, 1921</biblScope>
+                        <biblScope unit="pages">IV</biblScope>
+                    </seriesStmt>
+                    <notesStmt>
+                        <note>Seen on the scan at low resolution only: the same design, not
+                            collated line by line. The exact date of the issue is not known:
+                            the running head gives only the number of the issue.</note>
+                    </notesStmt>
+                </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>ANNO (Austrian National Library)</repository>
+                        <idno>
+                            <idno type="URLImages">https://anno.onb.ac.at/cgi-content/anno-plus?aid=sib&amp;datum=1921&amp;page=1644</idno>
+                        </idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+            <sourceDesc xml:id="source_7">
+                <bibl>Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</title>
+                        <author>
+                            <orgName>M. Welte &amp; Söhne</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Sport im Bild</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/2950159">Berlin</pubPlace>
+                        <date type="publication" when="1921">1921</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Sport im Bild</title>
+                        <biblScope unit="issue">Nr. 51, 1921</biblScope>
+                        <biblScope unit="pages">2100</biblScope>
+                    </seriesStmt>
+                    <notesStmt>
+                        <note>Seen on the scan at low resolution only: the same design, not
+                            collated line by line. The exact date of the issue is not known:
+                            the running head gives only the number of the issue.</note>
+                    </notesStmt>
+                </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>ANNO (Austrian National Library)</repository>
+                        <idno>
+                            <idno type="URLImages">https://anno.onb.ac.at/cgi-content/anno-plus?aid=sib&amp;datum=1921&amp;page=2100</idno>
+                        </idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+            <sourceDesc xml:id="source_8">
+                <bibl>Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</title>
+                        <author>
+                            <orgName>M. Welte &amp; Söhne</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Sport im Bild</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/2950159">Berlin</pubPlace>
+                        <date type="publication" when="1922">1922</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Sport im Bild</title>
+                        <biblScope unit="issue">Nr. 1, 1922</biblScope>
+                        <biblScope unit="pages">3</biblScope>
+                    </seriesStmt>
+                    <notesStmt>
+                        <note>Seen on the scan at low resolution only: the same design, not
+                            collated line by line. The exact date of the issue is not known:
+                            the running head gives only the number of the issue.</note>
+                    </notesStmt>
+                </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>ANNO (Austrian National Library)</repository>
+                        <idno>
+                            <idno type="URLImages">https://anno.onb.ac.at/cgi-content/anno-plus?aid=sib&amp;datum=1922&amp;page=3</idno>
+                        </idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+            <sourceDesc xml:id="source_9">
+                <bibl>Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</title>
+                        <author>
+                            <orgName>M. Welte &amp; Söhne</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Sport im Bild</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/2950159">Berlin</pubPlace>
+                        <date type="publication" when="1922">1922</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Sport im Bild</title>
+                        <biblScope unit="issue">Nr. 2, 1922</biblScope>
+                        <biblScope unit="pages">72</biblScope>
+                    </seriesStmt>
+                    <notesStmt>
+                        <note>Seen on the scan at low resolution only: the same design, not
+                            collated line by line. The exact date of the issue is not known:
+                            the running head gives only the number of the issue.</note>
+                    </notesStmt>
+                </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>ANNO (Austrian National Library)</repository>
+                        <idno>
+                            <idno type="URLImages">https://anno.onb.ac.at/cgi-content/anno-plus?aid=sib&amp;datum=1922&amp;page=72</idno>
+                        </idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+            <sourceDesc xml:id="source_10">
+                <bibl>Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen</title>
+                        <author>
+                            <orgName>M. Welte &amp; Söhne</orgName>
+                        </author>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher>
+                            <orgName>Sport im Bild</orgName>
+                        </publisher>
+                        <pubPlace ref="https://www.geonames.org/2950159">Berlin</pubPlace>
+                        <date type="publication" when="1922">1922</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="j" type="main">Sport im Bild</title>
+                        <biblScope unit="issue">Nr. 6, 1922</biblScope>
+                        <biblScope unit="pages">223</biblScope>
+                    </seriesStmt>
+                    <notesStmt>
+                        <note>Seen on the scan at low resolution only: the same design, not
+                            collated line by line. The exact date of the issue is not known:
+                            the running head gives only the number of the issue.</note>
+                    </notesStmt>
+                </biblFull>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>ANNO (Austrian National Library)</repository>
+                        <idno>
+                            <idno type="URLImages">https://anno.onb.ac.at/cgi-content/anno-plus?aid=sib&amp;datum=1922&amp;page=223</idno>
+                        </idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <projectDesc>
@@ -89,8 +413,13 @@
                   (Bibliothèque nationale de France), the archives of Le Temps,
                   the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
                   Library), the National Library of Latvia (through Europeana),
-                  Canadiana, the Hemeroteca Nacional Digital de México and the
-                  St Petersburg State Theatre Library.</p>
+                  Canadiana, the Hemeroteca Nacional Digital de México, the
+                  St Petersburg State Theatre Library, Trove (National Library of
+                  Australia), the newspapers of the Kungliga biblioteket of Sweden,
+                  e-newspaperarchives.ch, BAnQ numérique (Bibliothèque et Archives
+                  nationales du Québec), the Biblioteca Virtual de Prensa
+                  Histórica, the archive of ABC and ARCA (Biblioteca de
+                  Catalunya).</p>
             </samplingDecl>
             <editorialDecl>
                <p>Each file transcribes one printing of an advertisement, the one
@@ -189,6 +518,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
+            <change when="2026-10-18" who="#claude">Nine further printings in Sport im Bild 1921–1922 added as further sources by Claude.</change>
             <change when="2026-10-16">Transcribed printing marked.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>

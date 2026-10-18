@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Sport im Bild"</title>
+        <title type="sub">1924</title>
+        <author>
+          <orgName key="m.welte">M. Welte &amp; Söhne</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Welte-Mignon-Piano, Welte-Philharmonie-Orgel. Die Instrumente der Unsterblichen</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte-Mignon-Piano, Welte-Philharmonie-Orgel. Die Instrumente der Unsterblichen</title>
+            <author><orgName>M. Welte &amp; Söhne</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Sport im Bild</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2950159">Berlin</pubPlace>
+            <date type="publication" when="1924">1924</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Sport im Bild</title>
+            <biblScope unit="issue">Nr. 6, 1924</biblScope>
+            <biblScope unit="pages">298</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The advertisement presents two products of similar weight, the
+              Welte-Mignon piano and the Welte-Philharmonie organ. The line of the
+              headline that names the organ is not transcribed but marked as a gap;
+              the rest of the text and the picture refer to both instruments.</note>
+            <note>The exact date of the issue is not known: the running heads of the
+              scan give only the number of the issue, and its cover could not be
+              reached.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>ANNO (Austrian National Library)</repository>
+            <idno>
+              <idno type="URLImages">https://anno.onb.ac.at/cgi-content/anno-plus?aid=sib&amp;datum=1924&amp;page=298</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México, the
+            St Petersburg State Theatre Library, Trove (National Library of
+            Australia), the newspapers of the Kungliga biblioteket of Sweden,
+            e-newspaperarchives.ch, BAnQ numérique (Bibliothèque et Archives
+            nationales du Québec), the Biblioteca Virtual de Prensa
+            Histórica, the archive of ABC and ARCA (Biblioteca de
+            Catalunya).</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+        <rendition xml:id="uc" scheme="css">text-transform: uppercase;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="home">
+             <gloss>Home</gloss>
+          </category>
+          <category xml:id="immortality">
+             <gloss>Immortality</gloss>
+             <desc>This topic emphasizes the perdurance of the reproductions and
+                how thus the recording artists become immortal.</desc>
+          </category>
+          <category xml:id="sitting_woman">
+             <gloss>Sitting Woman</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="de">German</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad198-0.jpg" width="2553px" height="3915px"/>
+      <zone points="322,1900 1502,1900 1502,2110 322,2110" xml:id="zone_headline"/>
+      <zone points="345,2112 1478,2112 1478,3300 345,3300" xml:id="zone_picture"/>
+      <zone points="325,3312 1490,3312 1490,3412 325,3412" xml:id="zone_names"/>
+      <zone points="325,3415 1490,3415 1490,3558 325,3558" xml:id="zone_slogan"/>
+      <zone points="325,3560 1490,3560 1490,3672 325,3672" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #uc #b #in"><lb/><name type="brand">Welte-Mignon-Piano</name></hi>
+          <lb/><gap reason="irrelevant"><desc resp="#claude">The second line of the headline names the organ: "WELTE-PHILHARMONIE-ORGEL"</desc></gap>
+          <lb/><hi rendition="#c #uc #b"><seg xml:id="topic_1" ana="#immortality" type="topic" resp="#claude">Die Instrumente der Unsterblichen</seg></hi></head>
+      </div>
+      <div type="illustration" facs="#zone_picture">
+        <figure xml:id="figure_1" ana="#sitting_woman"><desc>A drawing of a salon: organ pipes behind a draped curtain, a grand piano at the left, a woman in an evening gown reclining on a cushioned seat with sheet music in her hand, and a man in evening dress standing behind her with his hand on her shoulder; a monogram at the lower left</desc></figure>
+      </div>
+      <div facs="#zone_names">
+        <ab><hi rendition="#c #uc"><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118598988">Reger</persName> · <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName> · <persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-Sa<unclear>ë</unclear>ns</persName> · <persName type="artist" corresp="https://d-nb.info/gnd/118786253">Nikisch</persName> · <persName type="artist" corresp="https://d-nb.info/gnd/116429623">Reisenauer</persName>
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreño</persName> · <persName type="artist" corresp="https://d-nb.info/gnd/120890143">Leschetizky</persName> · <persName type="artist" corresp="https://d-nb.info/gnd/116942037">Mottl</persName> ·</hi></ab>
+      </div>
+      <div facs="#zone_slogan">
+        <p><hi rendition="#c #uc #b #larger"><lb/><seg xml:id="topic_2" ana="#immortality" type="topic" resp="#claude">Ihre Kunst verewigt</seg> <seg xml:id="topic_3" ana="#home" type="topic" resp="#claude">im
+          <lb/>vornehmen Heim</seg></hi></p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c #uc"><lb/><orgName>M.Welte &amp; Söhne</orgName> ✶ <placeName>Freiburg i·Br·</placeName></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
