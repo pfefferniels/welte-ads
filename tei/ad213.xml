@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Dziennik Poznański"</title>
+        <title type="sub">August 20 to September 3, 1911</title>
+        <author>
+          <orgName key="neumann">B. Neumann</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>„Mignon“ Najlepszy fortepian artystyczny w świecie!</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">„Mignon“ Najlepszy fortepian artystyczny w świecie!</title>
+            <author><orgName>B. Neumann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Dziennik Poznański</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3088171">Poznań</pubPlace>
+            <date type="publication" when="1911-08-20">1911</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Dziennik Poznański</title>
+            <biblScope unit="issue">R. 53, nr 189, 20 sierpnia 1911</biblScope>
+            <biblScope unit="pages">6</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The advertisement does not name Welte. The "Mignon" is taken to be
+              the Welte-Mignon on these grounds: the name and the three forms in
+              which the dealer offers it, which are the forms in which M. Welte
+              &amp; Söhne sold the Mignon: the reproducing piano with a keyboard
+              (the Welte-Mignon built into a piano), the cabinet without a keyboard,
+              and the push-up player ("Vorsetzer") to be set before any piano.
+              The same dealer's brand-list advertisements of December 1911 in the
+              same paper list the instrument as "Welt Söhne-Mignon".</note>
+            <note>The print is worn: several i's of the bold condensed type have
+              lost their dots ("Codzleń", "wystawle", "klawlatury" at first sight),
+              the o of the first "Mignon" in the list is broken, and the P of
+              "POZNAŃ" looks like an F. They are transcribed as intended, as the
+              clean reprint of 27 August confirms. The number at the end of the line
+              "Jedyny skład…" reads 6916, with a damaged third digit; the reprints
+              have 6946, which is given here as an uncertain reading. Polona labels
+              the page 6.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Polona (Biblioteka Narodowa)</repository>
+            <idno>
+              <idno type="URLImages">https://polona.pl/item-view/bb3a4e78-e9c1-4ad3-b6df-3f54266eb822</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>„Mignon“ Najlepszy fortepian artystyczny w świecie!</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">„Mignon“ Najlepszy fortepian artystyczny w świecie!</title>
+            <author><orgName>B. Neumann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Dziennik Poznański</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3088171">Poznań</pubPlace>
+            <date type="publication" when="1911-08-27">1911</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Dziennik Poznański</title>
+            <biblScope unit="issue">R. 53, nr 195, 27 sierpnia 1911</biblScope>
+            <biblScope unit="pages">9</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, with the same line breaks and
+              the number 6946, in a narrower frame; not collated line by line. The
+              print is clean here ("Codzień", "wystawie", "POZNAŃ"). Polona labels
+              the page 9.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Polona (Biblioteka Narodowa)</repository>
+            <idno>
+              <idno type="URLImages">https://polona.pl/item-view/13125941-0948-44c6-a6f8-56c7d0b4d2ba</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>„Mignon“ Najlepszy fortepian artystyczny w świecie!</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">„Mignon“ Najlepszy fortepian artystyczny w świecie!</title>
+            <author><orgName>B. Neumann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Dziennik Poznański</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3088171">Poznań</pubPlace>
+            <date type="publication" when="1911-09-03">1911</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Dziennik Poznański</title>
+            <biblScope unit="issue">R. 53, nr 201, 3 września 1911</biblScope>
+            <biblScope unit="pages">11</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, with the same line breaks and
+              the number 6946; not collated line by line. The print is worn in the
+              list of the three forms. Polona labels the page 11.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Polona (Biblioteka Narodowa)</repository>
+            <idno>
+              <idno type="URLImages">https://polona.pl/item-view/40b17469-ed60-421e-ac6d-3156c8291b1b</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México, the
+            St Petersburg State Theatre Library, Trove (National Library of
+            Australia), the newspapers of the Kungliga biblioteket of Sweden,
+            e-newspaperarchives.ch, BAnQ numérique (Bibliothèque et Archives
+            nationales du Québec), the Biblioteca Virtual de Prensa
+            Histórica, the archive of ABC and ARCA (Biblioteca de
+            Catalunya).</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+        <rendition xml:id="right" scheme="css">text-align: right;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="superiority">
+             <gloss>Superiority</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="pl">Polish</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad213-0.jpg" width="3553px" height="4858px"/>
+      <graphic type="IIIF" url="https://polona.pl/iiif/3/8ebb104d-c930-404a-bfa5-691156faa261/full/max/0/default.jpg" width="3553px" height="4858px"/>
+      <zone points="2112,2570 3360,2570 3360,2782 2112,2782" xml:id="zone_headline"/>
+      <zone points="2112,2810 3360,2810 3360,2920 2112,2920" xml:id="zone_slogan"/>
+      <zone points="2112,2955 3360,2955 3360,3272 2112,3272" xml:id="zone_list"/>
+      <zone points="2112,3288 3360,3288 3360,3580 2112,3580" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #in #b"><lb/>„<name type="brand">Mignon</name>“</hi></head>
+      </div>
+      <div facs="#zone_slogan">
+        <ab><hi rendition="#c #larger #b"><lb/><seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">Najlepszy fortepian artystyczny w świecie!</seg></hi></ab>
+      </div>
+      <div facs="#zone_list">
+        <p><hi rendition="#c"><lb/>W 3 wykonaniach zawsze na składzie:</hi></p>
+        <list>
+          <item><hi rendition="#b"><lb/><name type="brand">Mignon</name>-fortepian z klawiaturą,</hi></item>
+          <item><hi rendition="#b"><lb/><name type="brand">Mignon</name>-fortepian bez klawiatury,</hi></item>
+          <item><hi rendition="#b"><lb/><name type="brand">Mignon</name> do przystawiania do każdego fortepianu.</hi></item>
+        </list>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/>Jedyny skład na <hi rendition="#g"><placeName>Poznań</placeName></hi> i prowincyą: <hi rendition="#right"><unclear reason="damaged">6946</unclear></hi>
+          <lb/><hi rendition="#in #b"><orgName>B. Neumann</orgName></hi> <address><addrLine><hi rendition="#b">: <placeName>POZNAŃ</placeName> :</hi></addrLine>
+          <addrLine><lb/><hi rendition="#b">ul. Bismarka 10</hi></addrLine></address>
+          <lb/><hi rendition="#b">Codzień próby „<name type="brand">Mignon</name>“ w mojej wystawie.</hi></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

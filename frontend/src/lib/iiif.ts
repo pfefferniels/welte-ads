@@ -21,6 +21,7 @@ const LIBRARIES: { host: string; name: string; site?: string }[] = [
   { host: 'europeana.eu', name: 'National Library of Latvia (Europeana)' },
   { host: 'canadiana.ca', name: 'Canadiana' },
   { host: 'data.kb.se', name: 'Kungliga biblioteket' },
+  { host: 'polona.pl', name: 'Polona (Biblioteka Narodowa)' },
 ]
 
 const isOn = (host: string, domain: string) => host === domain || host.endsWith('.' + domain)

@@ -189,5 +189,7 @@ export const names = {
     "kohn.albert": "Kohn Albert, Budapest",
     "salvi": "C. Salvi, Angelus-Hall, Madrid",
     "guarro": "Angelus-Hall, Guarro Germans, Barcelona",
-    "custin": "E. Custin, La Habana"
+    "custin": "E. Custin, La Habana",
+    "ecke": "Karol Ecke, Poznań",
+    "neumann": "B. Neumann, Poznań"
 } as { [index: string]: string }

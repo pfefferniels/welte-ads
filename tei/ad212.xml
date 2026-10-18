@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Dziennik Poznański"</title>
+        <title type="sub">December 8 and 11, 1907</title>
+        <author>
+          <orgName key="ecke">Karol Ecke</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Donoszę uprzejmie, że odebrałem sensacyjny, samogrający Fortepian reprodukcyjny „Mignon“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Donoszę uprzejmie, że odebrałem sensacyjny, samogrający Fortepian reprodukcyjny „Mignon“</title>
+            <author><orgName>Karol Ecke</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Dziennik Poznański</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3088171">Poznań</pubPlace>
+            <date type="publication" when="1907-12-08">1907</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Dziennik Poznański</title>
+            <biblScope unit="issue">R. 49, nr 282, 8 grudnia 1907, dodatek</biblScope>
+            <biblScope unit="pages">2</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The advertisement offers two products of similar weight: the
+              reproducing piano "Mignon", and the piano-playing device "Fonola"
+              (Hupfeld's Phonola), which takes about a third of the ad. The Mignon
+              part and the signature are transcribed; the Fonola part is marked as
+              a gap.</note>
+            <note>The advertisement does not name Welte. The "Mignon" is taken to be
+              the Welte-Mignon on these grounds: the name together with the term
+              "fortepian reprodukcyjny" (reproducing piano), and the testimonials,
+              which are Polish versions of those in Welte-Mignon advertising
+              elsewhere: Paderewski's complaint about the instrument's modest name
+              (in French, "Le seul reproche que j'aie à faire au «WELTE-MIGNON-PIANO»
+              c'est le nom qu'il porte…", La Stampa, 5 June 1908, p. 8, where
+              d'Albert and Weingartner are quoted as well) and Carreño's remark on
+              her recording of a Liszt rhapsody.</note>
+            <note>The page is page 2 of the supplement ("dodatek"); Polona labels it
+              2. The number 8515 stands at the end of the first paragraph.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Polona (Biblioteka Narodowa)</repository>
+            <idno>
+              <idno type="URLImages">https://polona.pl/item-view/ed21df31-cb98-4a7d-895a-42e43e0de84b</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Donoszę uprzejmie, że odebrałem sensacyjny, samogrający Fortepian reprodukcyjny „Mignon“</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Donoszę uprzejmie, że odebrałem sensacyjny, samogrający Fortepian reprodukcyjny „Mignon“</title>
+            <author><orgName>Karol Ecke</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Dziennik Poznański</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3088171">Poznań</pubPlace>
+            <date type="publication" when="1907-12-11">1907</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Dziennik Poznański</title>
+            <biblScope unit="issue">R. 49, nr 284, 11 grudnia 1907</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same setting, with the same line breaks and
+              the number 8515, including the Fonola part; not collated line by line.
+              Polona labels the page 3.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Polona (Biblioteka Narodowa)</repository>
+            <idno>
+              <idno type="URLImages">https://polona.pl/item-view/c008ab74-aba9-4963-ac33-03cdc471df5c</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México, the
+            St Petersburg State Theatre Library, Trove (National Library of
+            Australia), the newspapers of the Kungliga biblioteket of Sweden,
+            e-newspaperarchives.ch, BAnQ numérique (Bibliothèque et Archives
+            nationales du Québec), the Biblioteca Virtual de Prensa
+            Histórica, the archive of ABC and ARCA (Biblioteca de
+            Catalunya).</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+        <rendition xml:id="right" scheme="css">text-align: right;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="educational_use">
+             <gloss>Educational Use</gloss>
+          </category>
+          <category xml:id="exact_reproduction">
+             <gloss>Exact Reproduction</gloss>
+             <desc>In virtually all promotional materials between 1905 and 1926,
+                the claim of exact and faithful reproduction, of absolute
+                accurateness is consistently emphasized.</desc>
+          </category>
+          <category xml:id="immortality">
+             <gloss>Immortality</gloss>
+             <desc>This topic emphasizes the perdurance of the reproductions and
+                how thus the recording artists become immortal.</desc>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="pl">Polish</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad212-0.jpg" width="3517px" height="4984px"/>
+      <graphic type="IIIF" url="https://polona.pl/iiif/3/54306aef-7e6e-4690-ac67-1e5dc0778216/full/max/0/default.jpg" width="3517px" height="4984px"/>
+      <zone points="178,195 1495,195 1495,604 178,604" xml:id="zone_headline"/>
+      <zone points="178,605 1495,605 1495,731 178,731" xml:id="zone_text"/>
+      <zone points="178,719 1495,719 1495,836 178,836" xml:id="zone_albert"/>
+      <zone points="178,837 1495,837 1495,982 178,982" xml:id="zone_paderewski"/>
+      <zone points="178,983 1495,983 1495,1069 178,1069" xml:id="zone_weingartner"/>
+      <zone points="178,1070 1495,1070 1495,1192 178,1192" xml:id="zone_carreno"/>
+      <zone points="178,1194 1495,1194 1495,1611 178,1611" xml:id="zone_fonola"/>
+      <zone points="178,1614 1495,1614 1495,1915 178,1915" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c"><lb/><hi rendition="#b">Donoszę uprzejmie, że odebrałem sensacyjny, samogrający</hi>
+          <lb/><hi rendition="#in">Fortepian reprodukcyjny</hi>
+          <lb/><hi rendition="#in #b">„<name type="brand">Mignon</name>“</hi>
+          <lb/><hi rendition="#larger #b">który lubownicy dobrej fortepianowej muzyki w moim maga-
+          <lb/>zynie na życzenie usłyszeć mogą.</hi></hi></head>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/><hi rendition="#b">„<name type="brand">Mignon</name>“</hi> <seg xml:id="topic_1" ana="#exact_reproduction" type="topic" resp="#claude">oddaje najdokładniej grę pierwszorzędnych pianistów z wszelkiemi indywi-
+          <lb/>dualnemi właściwościami uderzenia jak i również dynamicznemi i rytmicznemi odcienami gry</seg>.</p>
+        <p><lb/>Najsławniejsi pianiści współcześni wydali o cudownym instrumencie nadzwyczaj po-
+          <lb/>chlebny sąd: <hi rendition="#right">8515</hi></p>
+      </div>
+      <div facs="#zone_albert">
+        <p><lb/><hi rendition="#in #b"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Eugeniusz d’Albert</persName>:</hi>
+          <quote type="testimonial"><lb/><hi rendition="#b">„<name type="brand">Mignon</name>“</hi> <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">odtwarza w najdokładniejszy spo-
+          <lb/>sób wszystkie cechy indywidualne gry artysty</seg>.
+          <lb/>Wynalazek ten ma nie tylko wielką doniosłość
+          <lb/>artystyczną, ale również zarazem i <seg xml:id="topic_3" ana="#educational_use" type="topic" resp="#claude">pedagogiczną</seg>.</quote></p>
+      </div>
+      <div facs="#zone_paderewski">
+        <p><lb/><hi rendition="#in #b"><persName type="artist" corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>:</hi>
+          <quote type="testimonial"><lb/>Jeden tylko zarzut mogę fortepianowi <hi rendition="#b">„<name type="brand">Mi-
+          <lb/>gnon</name>“</hi> uczynić, mianowicie, że wywierając tak
+          <lb/>olbrzymie artystyczne wrażenie i posiadając
+          <lb/>taką kolosalną doniosłość, nadano mu tak
+          <lb/>skromną nazwę.</quote></p>
+      </div>
+      <div facs="#zone_weingartner">
+        <p><lb/><hi rendition="#in #b"><persName type="artist" corresp="https://d-nb.info/gnd/11863027X">Feliks Weingartner</persName>:</hi>
+          <quote type="testimonial"><lb/>Dzięki genialnemu wynalazkowi <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> <seg xml:id="topic_4" ana="#immortality" type="topic" resp="#claude">nie
+          <lb/>zaginie i dla przyszłych pokoleń gra wielkich
+          <lb/>naszych współczesnych pianistów</seg>.</quote></p>
+      </div>
+      <div facs="#zone_carreno">
+        <p><lb/><hi rendition="#in #b"><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreno</persName>:</hi>
+          <quote type="testimonial"><lb/>Reprodukcyjny fortepian <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> <seg xml:id="topic_5" ana="#exact_reproduction" type="topic" resp="#claude">oddaje
+          <lb/>z taką dokładnością przezemnie wykonaną Ra-
+          <lb/>psodyę <persName type="composer" corresp="https://d-nb.info/gnd/118573527">Liszta</persName></seg>, że chciałabym niniejszem dla
+          <lb/>zadziwiającego wynalazku mój podziw wyrazić</quote></p>
+      </div>
+      <div facs="#zone_fonola">
+        <ab><gap reason="irrelevant"><desc resp="#claude">The second offer, the piano-playing device "Fonola": "Również można w magazynie moim usłyszeć na żądanie aparat do gry na fortepianie „Fonola“.", with a paragraph of four lines ("Aparat ten, obecnie udoskonalony, jest jedynym w swoim rodzaju…").</desc></gap></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#in"><orgName>Karol Ecke</orgName>,</hi> <address><addrLine><hi rendition="#larger #b"><placeName>Poznań</placeName>,</hi></addrLine>
+          <addrLine><lb/><hi rendition="#larger">ul. Rycerska 39</hi></addrLine></address>
+          <lb/><hi rendition="#larger #b">Największy i najstarszy
+          <lb/>skład fortepianów w <placeName>Poznaniu</placeName>.</hi></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
