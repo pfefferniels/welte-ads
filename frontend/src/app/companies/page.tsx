@@ -2,6 +2,7 @@ import React from "react"
 import { Container, Typography } from '@mui/material'
 import { getAllMetadata } from "../../lib/tei"
 import { coordinates } from "../../labels/coordinates"
+import { names } from "../../labels/names"
 import { Marker } from "../../components/worldMap"
 import CompaniesClient from "./CompaniesClient"
 
@@ -30,6 +31,7 @@ export default function CompaniesPage() {
     acc.push({
       coordinate: coord,
       companyName: curr.name,
+      label: names[curr.name] ?? curr.name,
       adCount: 1
     })
 
@@ -41,7 +43,10 @@ export default function CompaniesPage() {
       <h2>Companies</h2>
       <Typography>
         Different companies advertised for the Welte-Mignon all
-        over the world.
+        over the world. Each circle stands for a company in one
+        place, and its size grows with the logarithm of the number
+        of ads. Scroll or use the buttons to zoom, drag to pan and
+        point at a circle to see which company it is.
       </Typography>
 
       <CompaniesClient markers={markers} />
