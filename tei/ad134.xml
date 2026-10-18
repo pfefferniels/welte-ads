@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "The Advertiser" and "The Express and Telegraph"</title>
+        <title type="sub">June 23 to 28, 1923</title>
+        <author>
+          <orgName key="savery">Savery's Pianos Limited</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Spend a part of your Winter Evening with Paderewski</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Spend a part of your Winter Evening with Paderewski</title>
+            <author><orgName>Savery's Pianos Limited</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Advertiser</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2078025">Adelaide</pubPlace>
+            <date type="publication" when="1923-06-23">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Advertiser</title>
+            <biblScope unit="issue">Saturday, June 23, 1923</biblScope>
+            <biblScope unit="pages">14</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The instrument offered is a Behr Bros. reproducing piano with the De Luxe action, the American licence of the Welte-Mignon.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article74196259</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page7269349</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Spend a part of your Winter Evening with Paderewski</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Spend a part of your Winter Evening with Paderewski</title>
+            <author><orgName>Savery's Pianos Limited</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Express and Telegraph</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2078025">Adelaide</pubPlace>
+            <date type="publication" when="1923-06-28">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Express and Telegraph</title>
+            <biblScope unit="issue">Thursday, June 28, 1923</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line. Below the address a coupon is added: "CUT THIS OUT AND MAIL TO US. Please supply particulars of the Reproducing Piano advertised above—the price being £300. Savery's Pianos, Limited."</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article210981735</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page23140026</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Spend a part of your Winter Evening with Paderewski</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Spend a part of your Winter Evening with Paderewski</title>
+            <author><orgName>Savery's Pianos Limited</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Advertiser</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2078025">Adelaide</pubPlace>
+            <date type="publication" when="1923-06-28">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Advertiser</title>
+            <biblScope unit="issue">Thursday, June 28, 1923</biblScope>
+            <biblScope unit="pages">10</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design with the same coupon as in The Express and Telegraph of the same day; not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article74185657</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page7269369</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México, the
+            St Petersburg State Theatre Library, Trove (National Library of
+            Australia), the newspapers of the Kungliga biblioteket of Sweden,
+            e-newspaperarchives.ch, BAnQ numérique (Bibliothèque et Archives
+            nationales du Québec), the Biblioteca Virtual de Prensa
+            Histórica, the archive of ABC and ARCA (Biblioteca de
+            Catalunya).</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="g2" scheme="css">letter-spacing: 0.3em;</rendition>
+        <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="k" scheme="css">font-variant: small-caps;</rendition>
+        <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+        <rendition xml:id="right" scheme="css">text-align: right;</rendition>
+        <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="affordability">
+             <gloss>Affordability</gloss>
+          </category>
+          <category xml:id="distinction_from_mechanical">
+             <gloss>Distinction from Mechanical</gloss>
+             <desc>Often, the adverts try to distinguish reproducing piano rolls
+                from mere mechanical methods (such as the player piano).</desc>
+          </category>
+          <category xml:id="exact_reproduction">
+             <gloss>Exact Reproduction</gloss>
+             <desc>In virtually all promotional materials between 1905 and 1926,
+                the claim of exact and faithful reproduction, of absolute
+                accurateness is consistently emphasized.</desc>
+          </category>
+          <category xml:id="virtual_presence">
+             <gloss>Virtual Presence</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="en">English</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad134-0.jpg" width="3643px" height="4811px"/>
+      <zone points="2375,226 3455,226 3455,287 2375,287" xml:id="zone_banner"/>
+      <zone points="2440,330 3400,330 3400,454 2440,454" xml:id="zone_headline"/>
+      <zone points="2685,458 3165,458 3165,1205 2685,1205" xml:id="zone_portrait"/>
+      <zone points="2525,1218 3305,1218 3305,1383 2525,1383" xml:id="zone_paderewski"/>
+      <zone points="2525,1388 3305,1388 3305,1585 2525,1585" xml:id="zone_text"/>
+      <zone points="2425,1598 3400,1598 3400,1732 2425,1732" xml:id="zone_signature"/>
+      <zone points="2440,1745 3400,1745 3400,1880 2440,1880" xml:id="zone_logo"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_banner">
+        <head><hi rendition="#c #g2"><lb/><orgName>SAVERY'S PIANOS LIMITED</orgName>.</hi></head>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c"><lb/><hi rendition="#in"><seg xml:id="topic_1" ana="#virtual_presence" type="topic" resp="#claude">Spend a part of your Winter Evening</seg></hi>
+          <lb/><hi rendition="#larger">with</hi></hi></head>
+      </div>
+      <div type="illustration" facs="#zone_portrait">
+        <figure><desc>Portrait drawing of Ignacy Jan Paderewski in profile</desc></figure>
+      </div>
+      <div facs="#zone_paderewski">
+        <head><hi rendition="#c #in"><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118986724">PADEREWSKI</persName></hi></head>
+        <p><lb/>who recorded the <hi rendition="#k"><name type="brand">De Luxe</name></hi> (<name type="brand">Welte-Mignon</name>) <hi rendition="#k">Rolls</hi>
+          <lb/>interpreted by the <hi rendition="#k"><name type="brand">Behr Bros.</name> Reproducing Piano</hi>
+          <lb/>when at the zenith of his fame.</p>
+      </div>
+      <div facs="#zone_text">
+        <p><hi rendition="#b #i"><lb/>This instrument <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">faithfully reflects the master's technique</seg>
+          <lb/><seg xml:id="topic_3" ana="#distinction_from_mechanical" type="topic" resp="#claude">without the slightest indication of mechanical blemish</seg>.</hi></p>
+        <p><lb/>We can offer this master <sic>intrument</sic> <seg xml:id="topic_4" ana="#affordability" type="topic" resp="#claude">at the price of an
+          <lb/>ordinary Player Piano</seg>, and will be pleased to make a
+          <lb/>liberal allowance on any piano taken as part payment.</p>
+        <p><hi rendition="#c"><lb/>Please phone 284, or 4812 for Catalogue.</hi></p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#i #b #smaller">Sole Agents for South Australia :</hi>
+          <lb/><hi rendition="#i #b #in"><orgName>Savery's Pianos Limited</orgName></hi></hi>
+          <address><addrLine><lb/><hi rendition="#i #b">Opposite James Marshall's</hi></addrLine>
+            <addrLine><hi rendition="#i #b #right">29 RUNDLE STREET</hi></addrLine></address></ab>
+      </div>
+      <div type="illustration" facs="#zone_logo">
+        <figure><desc>Ornamental cartouche with the name "SAVERY'S"</desc></figure>
+      </div>
+    </body>
+  </text>
+</TEI>

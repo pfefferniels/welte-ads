@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Daily Telegraph Pictorial", "The Land" and "The Catholic Press"</title>
+        <title type="sub">October 11, 1928 to May 2, 1929</title>
+        <author>
+          <orgName key="paling">Paling's</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>The Laffargue Welte Reproducing Player Piano</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The Laffargue Welte Reproducing Player Piano</title>
+            <author><orgName>Paling's</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Daily Telegraph Pictorial</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1928-10-11">1928</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Daily Telegraph Pictorial</title>
+            <biblScope unit="issue">Thursday, October 11, 1928</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Trove catalogues the paper as The Daily Telegraph (Sydney); its running head at this date reads "Daily Telegraph Pictorial". The advertiser is W. H. Paling &amp; Co. Ltd., who sign as "Paling's".</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article246858495</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page27148884</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>The Laffargue Welte Reproducing Player Piano</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The Laffargue Welte Reproducing Player Piano</title>
+            <author><orgName>Paling's</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Land</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1928-10-26">1928</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Land</title>
+            <biblScope unit="issue">Friday, October 26, 1928</biblScope>
+            <biblScope unit="pages">19</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design with the same picture and text, set throughout in a heavy bold type and with other line breaks in the text. Not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article111652865</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page11391576</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>The Laffargue Welte Reproducing Player Piano</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The Laffargue Welte Reproducing Player Piano</title>
+            <author><orgName>Paling's</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Daily Telegraph Pictorial</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1928-11-29">1928</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Daily Telegraph Pictorial</title>
+            <biblScope unit="issue">Thursday, November 29, 1928</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same setting as on 11 October 1928, not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article248043417</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page27308732</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>The Laffargue Welte Reproducing Player Piano</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The Laffargue Welte Reproducing Player Piano</title>
+            <author><orgName>Paling's</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Catholic Press</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1928-12-06">1928</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Catholic Press</title>
+            <biblScope unit="issue">Thursday, December 6, 1928</biblScope>
+            <biblScope unit="pages">10</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan (lower part): the bold setting of The Land, not collated line by line. Trove's article 107356317 bundles several advertisements of the page and begins with another advertiser.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article107356317</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page11998716</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_5">
+        <bibl>The Laffargue Welte Reproducing Player Piano</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The Laffargue Welte Reproducing Player Piano</title>
+            <author><orgName>Paling's</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Land</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1928-12-07">1928</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Land</title>
+            <biblScope unit="issue">Friday, December 7, 1928</biblScope>
+            <biblScope unit="pages">23</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the bold setting of 26 October 1928, not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article111654766</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page11391710</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_6">
+        <bibl>The Laffargue Welte Reproducing Player Piano</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The Laffargue Welte Reproducing Player Piano</title>
+            <author><orgName>Paling's</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Daily Telegraph Pictorial</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1929-05-02">1929</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Daily Telegraph Pictorial</title>
+            <biblScope unit="issue">Thursday, May 2, 1929</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the bold setting of The Land, with a line added at the foot: "Branches at— NEWCASTLE, LISMORE, BRISBANE, TOOWOOMBA, ROCKHAMPTON." Not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article245642389</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page26971559</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México, the
+            St Petersburg State Theatre Library, Trove (National Library of
+            Australia), the newspapers of the Kungliga biblioteket of Sweden,
+            e-newspaperarchives.ch, BAnQ numérique (Bibliothèque et Archives
+            nationales du Québec), the Biblioteca Virtual de Prensa
+            Histórica, the archive of ABC and ARCA (Biblioteca de
+            Catalunya).</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+        <rendition xml:id="right" scheme="css">text-align: right;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="exact_reproduction">
+             <gloss>Exact Reproduction</gloss>
+             <desc>In virtually all promotional materials between 1905 and 1926,
+                the claim of exact and faithful reproduction, of absolute
+                accurateness is consistently emphasized.</desc>
+          </category>
+          <category xml:id="home">
+             <gloss>Home</gloss>
+          </category>
+          <category xml:id="immediate_recognizability">
+             <gloss>Immediate Recognizability</gloss>
+          </category>
+          <category xml:id="virtual_presence">
+             <gloss>Virtual Presence</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="en">English</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad144-0.jpg" width="3786px" height="4768px"/>
+      <zone points="2375,318 3368,318 3368,712 2375,712" xml:id="zone_headline"/>
+      <zone points="2370,720 2792,720 2792,1012 2370,1012" xml:id="zone_player"/>
+      <zone points="2395,705 3325,705 3325,1992 2395,1992" xml:id="zone_picture"/>
+      <zone points="2373,2018 3370,2018 3370,2607 2373,2607" xml:id="zone_text"/>
+      <zone points="2373,2620 3372,2620 3372,2875 2373,2875" xml:id="zone_text2"/>
+      <zone points="2373,2885 3372,2885 3372,3150 2373,3150" xml:id="zone_text3"/>
+      <zone points="2585,3165 3375,3165 3375,3612 2585,3612" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><lb/><hi rendition="#larger">The</hi>
+          <lb/><hi rendition="#in"><name type="brand">LAFFARGUE</name></hi>
+          <lb/><hi rendition="#i #larger"><name type="brand">Welte</name> Reproducing</hi></head>
+      </div>
+      <div facs="#zone_player">
+        <head><hi rendition="#in"><lb/>Player
+          <lb/>Piano</hi></head>
+      </div>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>Photograph of a grand piano with its lid raised and the pedal lyre showing</desc></figure>
+      </div>
+      <div facs="#zone_text">
+        <p><hi rendition="#b #larger"><lb/>This beautiful instrument <seg xml:id="topic_1" ana="#exact_reproduction" type="topic" resp="#claude">reproduces
+          <lb/>the actual playing of the World's
+          <lb/>great Pianists. Every shade and de-
+          <lb/>gree of accent, rhythm, and tone is
+          <lb/>duplicated perfectly and exactly as
+          <lb/>the Artist rendered it—nothing is
+          <lb/>added, nothing lost</seg>. The perform-
+          <lb/>ance of the <name type="brand">Welte</name> is <seg xml:id="topic_2" ana="#immediate_recognizability" type="topic" resp="#claude">so vivid, so real,
+          <lb/>that it deceives even the Artists them-
+          <lb/>selves</seg>.</hi></p>
+      </div>
+      <div facs="#zone_text2">
+        <p><hi rendition="#b"><lb/>The <name type="brand">Welte</name> Reproducer will reveal to you the
+          <lb/>musical treasures of the World. <seg xml:id="topic_3" ana="#home" type="topic" resp="#claude">In the pri-
+          <lb/>vacy of your home</seg> it will <seg xml:id="topic_4" ana="#virtual_presence" type="topic" resp="#claude">summon one by one
+          <lb/>the Master Pianists to interpret for you</seg> the
+          <lb/>glorious music of the great Composers.</hi></p>
+      </div>
+      <div facs="#zone_text3">
+        <p><hi rendition="#b"><lb/>We would be pleased to demonstrate the <name type="brand">Welte</name>
+          <lb/>to you—a visit to our Showrooms carries no
+          <lb/>obligation.</hi></p>
+        <p><hi rendition="#b"><lb/>May we expect you, or shall we send you our
+          <lb/>Art Catalogue?</hi></p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><lb/><hi rendition="#in #i"><orgName>Palings</orgName></hi>
+          <address><addrLine><lb/><hi rendition="#b">338 GEORGE STREET</hi></addrLine>
+            <addrLine><lb/><hi rendition="#b">206 Pitt Street,</hi></addrLine>
+            <addrLine><lb/><hi rendition="#b #right"><placeName>SYDNEY</placeName>.</hi></addrLine></address></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

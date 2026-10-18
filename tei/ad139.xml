@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "The Daily News", "The West Australian" and "The Call"</title>
+        <title type="sub">May 31 to June 3, 1927</title>
+        <author>
+          <orgName key="nicholson.perth">Nicholson's Limited</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>To the Musical Public. An Invitation Is Extended to Hear the Bechstein Welte Reproducing Piano</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">To the Musical Public. An Invitation Is Extended to Hear the Bechstein Welte Reproducing Piano</title>
+            <author><orgName>Nicholson's Limited</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Daily News</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2063523">Perth</pubPlace>
+            <date type="publication" when="1927-05-31">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Daily News</title>
+            <biblScope unit="issue">Tuesday, May 31, 1927</biblScope>
+            <biblScope unit="pages">9</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>An announcement of three recitals, set as an advertisement.</note>
+            <note>The advertisement offers two products of similar weight: the Bechstein-Welte reproducing piano, and the new Orthophonic records played on a "His Master's Voice" gramophone, with songs accompanied on the Gulbransen player piano. Only the Welte part and the details of the recitals are transcribed; the other part is marked as a gap.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article78745623</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page7921012</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>The Musical Public. An Invitation Is Extended to Hear the Bechstein Welte Reproducing Piano</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The Musical Public. An Invitation Is Extended to Hear the Bechstein Welte Reproducing Piano</title>
+            <author><orgName>Nicholson's Limited</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The West Australian</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2063523">Perth</pubPlace>
+            <date type="publication" when="1927-06-01">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The West Australian</title>
+            <biblScope unit="issue">Wednesday, June 1, 1927</biblScope>
+            <biblScope unit="pages">2</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same copy in the paper's own setting, a single column among the entertainment advertisements, headed "THE MUSICAL PUBLIC" in spaced capitals. Not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article32031049</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page2753419</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Musical Recitals. An Invitation Is Extended to Hear the Bechstein Welte Reproducing Piano</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Musical Recitals. An Invitation Is Extended to Hear the Bechstein Welte Reproducing Piano</title>
+            <author><orgName>Nicholson's Limited</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Daily News</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2063523">Perth</pubPlace>
+            <date type="publication" when="1927-06-02">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Daily News</title>
+            <biblScope unit="issue">Thursday, June 2, 1927</biblScope>
+            <biblScope unit="pages">9</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan (upper part): the same design with the same setting of the text, but with the headline "MUSICAL RECITALS" and "the world" for "hte world". Not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article78744242</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page7921043</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>Musical Recital. An Invitation Is Extended to Hear the Bechstein Welte Reproducing Piano</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Musical Recital. An Invitation Is Extended to Hear the Bechstein Welte Reproducing Piano</title>
+            <author><orgName>Nicholson's Limited</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The West Australian</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2063523">Perth</pubPlace>
+            <date type="publication" when="1927-06-02">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The West Australian</title>
+            <biblScope unit="issue">Thursday, June 2, 1927</biblScope>
+            <biblScope unit="pages">2</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the column setting of 1 June 1927 with the headline "MUSICAL RECITAL". Not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article32031281</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page2753438</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_5">
+        <bibl>The Musical Public. An Invitation Is Extended to Hear the Bechstein Welte Reproducing Piano</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The Musical Public. An Invitation Is Extended to Hear the Bechstein Welte Reproducing Piano</title>
+            <author><orgName>Nicholson's Limited</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Call</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2063523">Perth</pubPlace>
+            <date type="publication" when="1927-06-03">1927</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Call</title>
+            <biblScope unit="issue">Friday, June 3, 1927</biblScope>
+            <biblScope unit="pages">6</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same copy in the paper's own single-column setting, headed "THE MUSICAL PUBLIC", with "AN" printed twice before "INVITATION". Not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article210801916</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page22949462</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México, the
+            St Petersburg State Theatre Library, Trove (National Library of
+            Australia), the newspapers of the Kungliga biblioteket of Sweden,
+            e-newspaperarchives.ch, BAnQ numérique (Bibliothèque et Archives
+            nationales du Québec), the Biblioteca Virtual de Prensa
+            Histórica, the archive of ABC and ARCA (Biblioteca de
+            Catalunya).</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="educational_use">
+             <gloss>Educational Use</gloss>
+          </category>
+          <category xml:id="immediate_recognizability">
+             <gloss>Immediate Recognizability</gloss>
+          </category>
+          <category xml:id="miracle">
+             <gloss>Miracle</gloss>
+          </category>
+          <category xml:id="soulfulness">
+             <gloss>Soulfulness</gloss>
+          </category>
+          <category xml:id="technical_invention">
+             <gloss>Technical Invention</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="en">English</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad139-0.jpg" width="3942px" height="5698px"/>
+      <zone points="340,3332 1610,3332 1610,3437 340,3437" xml:id="zone_headline"/>
+      <zone points="470,3475 1480,3475 1480,3720 470,3720" xml:id="zone_invitation"/>
+      <zone points="468,3725 1470,3725 1470,3805 468,3805" xml:id="zone_text"/>
+      <zone points="468,3815 1470,3815 1470,3890 468,3890" xml:id="zone_backhaus"/>
+      <zone points="468,3905 1470,3905 1470,3985 468,3985" xml:id="zone_pachmann"/>
+      <zone points="468,3995 1470,3995 1470,4105 468,4105" xml:id="zone_leoncavallo"/>
+      <zone points="468,4125 1470,4125 1470,4240 468,4240" xml:id="zone_wood"/>
+      <zone points="660,4245 1280,4245 1280,4290 660,4290" xml:id="zone_programmes"/>
+      <zone points="465,4295 1460,4295 1460,4670 465,4670" xml:id="zone_orthophonic"/>
+      <zone points="560,4672 1380,4672 1380,4995 560,4995" xml:id="zone_recitals"/>
+      <zone points="470,4998 1455,4998 1455,5160 470,5160" xml:id="zone_invite"/>
+      <zone points="380,5175 1540,5175 1540,5315 380,5315" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in"><lb/>TO THE MUSICAL PUBLIC</hi></head>
+      </div>
+      <div facs="#zone_invitation">
+        <head><hi rendition="#c #b"><lb/>An Invitation
+          <lb/>Is Extended to Hear
+          <lb/><hi rendition="#in"><name type="brand">THE BECHSTEIN WELTE</name></hi>
+          <lb/><hi rendition="#larger">REPRODUCING PIANO</hi></hi></head>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/>A new musical instrument <seg xml:id="topic_1" ana="#technical_invention" type="topic" resp="#claude">embracing the Pianoforte and the
+          <lb/>art of the Pianist</seg> with bewildering effect.</p>
+      </div>
+      <div facs="#zone_backhaus">
+        <p><lb/><persName type="artist" corresp="https://d-nb.info/gnd/116029579">William Backhaus</persName>, the celebrated Pianist, writes:—<quote type="testimonial">“For me
+          <lb/>this is <seg xml:id="topic_2" ana="#miracle" type="topic" resp="#claude">one of the wonders of <sic>hte</sic> world</seg>.”</quote></p>
+      </div>
+      <div facs="#zone_pachmann">
+        <p><lb/><persName type="artist" corresp="https://d-nb.info/gnd/116014490"><sic>Vladimar</sic> de Pachmann</persName>:—<quote type="testimonial">“The <name type="brand">Welte</name> <seg xml:id="topic_3" ana="#soulfulness" type="topic" resp="#claude">reproduces the living
+          <lb/>soul of the artist</seg>.”</quote></p>
+      </div>
+      <div facs="#zone_leoncavallo">
+        <p><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118779559">R. Leoncavallo</persName>:—<quote type="testimonial">“Something like a sensation of fear comes
+          <lb/>over the listener when <seg xml:id="topic_4" ana="#immediate_recognizability" type="topic" resp="#claude">he hears the execution of an artist, who
+          <lb/>is well known to him, reproduced</seg>.</quote></p>
+      </div>
+      <div facs="#zone_wood">
+        <p><lb/><persName corresp="https://d-nb.info/gnd/118807854">Sir Henry Wood</persName>:—<quote type="testimonial">“I cannot imagine anything <seg xml:id="topic_5" ana="#educational_use" type="topic" resp="#claude">more instruc-
+          <lb/>tive than to listen, with the music in the hand, to the classical
+          <lb/>masterpieces, interpreted by our greatest living pianists</seg>.”</quote></p>
+      </div>
+      <div facs="#zone_programmes">
+        <ab><hi rendition="#c #b"><lb/>PROGRAMMES ON APPLICATION</hi></ab>
+      </div>
+      <div facs="#zone_orthophonic">
+        <gap reason="irrelevant"><desc resp="#claude">An invitation to hear "The New Orthophonic Recordings" played on the latest "His Master's Voice" instrument, and songs by leading artists "accompanied on the Gulbransen Registering Piano"</desc></gap>
+      </div>
+      <div facs="#zone_recitals">
+        <ab><hi rendition="#c #b"><lb/>Three Recitals to be Held
+          <lb/><hi rendition="#in">At The <placeName>Y.A.L. Auditorium</placeName>,</hi>
+          <lb/>COMMENCING
+          <lb/><hi rendition="#in">Friday, June 3, Tuesday, June 7.
+          <lb/>and Thursday, June 9.</hi></hi></ab>
+      </div>
+      <div facs="#zone_invite">
+        <p><lb/><orgName>NICHOLSON'S</orgName>, always to the forefront in anything of
+          <lb/>interest to the music-loving public, cordially invite you to call at
+          <lb/>the Box Office and secure seats for any of these recitals.</p>
+        <ab><hi rendition="#c #b"><lb/>PROGRAMMES ON APPLICATION AT BOX OFFICE</hi></ab>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c #b #in"><lb/><orgName>NICHOLSON'S LIMITED</orgName>.</hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

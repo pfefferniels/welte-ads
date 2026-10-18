@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "The Sydney Morning Herald", "Evening News", "The Star", "The Daily Telegraph", "Sunday Times" and "Sunday Sun"</title>
+        <title type="sub">July 24 and 25, 1909</title>
+        <author>
+          <orgName key="nicholson">Nicholson and Company, Ltd.</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>A Great Musical Invention. "Steinway-Welte."</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">A Great Musical Invention. "Steinway-Welte."</title>
+            <author><orgName>Nicholson and Company, Ltd.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Sydney Morning Herald</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1909-07-24">1909</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Sydney Morning Herald</title>
+            <biblScope unit="issue">Saturday, July 24, 1909</biblScope>
+            <biblScope unit="pages">10</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The advertisement fills the last column of the page, in a frame. The same copy appeared on 24 and 25 July 1909 in five other Sydney papers, each of which set it in its own type and layout. "1809" in the paragraph on the regret of musicians is printed so in this and in most of the other printings and seems to be intended.</note>
+            <note>The same copy also appeared in The Bulletin (Sydney) of 12 August 1909, according to the OCR of Trove's digitised magazines. That printing was not seen on the scan, and its link could not be retrieved because Trove's search pages are behind a bot check.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article15081630</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page1307374</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>A Great Musical Invention. "Steinway-Welte."</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">A Great Musical Invention. "Steinway-Welte."</title>
+            <author><orgName>Nicholson and Co., Ltd.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Evening News</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1909-07-24">1909</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Evening News</title>
+            <biblScope unit="issue">Saturday, July 24, 1909</biblScope>
+            <biblScope unit="pages">14</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same copy in the paper's own setting, across the width of several columns, with the headline in upper and lower case ("A Great Musical Invention.") and the names of the two pianists set below their testimonials. Differences noticed: "TERESO CARRENNO", "MARK HAMBURG", "NICHOLSON AND CO., LTD.". Not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article114773862</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page12163138</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>A Great Musical Invention. "Steinway-Welte."</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">A Great Musical Invention. "Steinway-Welte."</title>
+            <author><orgName>Nicholson &amp; Co., Ltd.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Star</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1909-07-24">1909</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Star</title>
+            <biblScope unit="issue">Saturday, July 24, 1909</biblScope>
+            <biblScope unit="pages">14</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same copy in the paper's own setting, in a frame with rounded corners. Differences noticed: "1805." for "1809", "TERESA CARRENNO" and "MARK HAMBOURG" as display lines below the testimonials, "Agents :----", "NICHOLSON &amp; CO., LTD.", "342 GEORGE-ST., SYDNEY.". Not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article230502763</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page24890323</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>A Great Musical Invention. "Steinway-Welte."</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">A Great Musical Invention. "Steinway-Welte."</title>
+            <author><orgName>Nicholson &amp; Co., Ltd.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Daily Telegraph</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1909-07-24">1909</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Daily Telegraph</title>
+            <biblScope unit="issue">Saturday, July 24, 1909</biblScope>
+            <biblScope unit="pages">7</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same copy in the paper's own setting, with "STEINWAY-WELTE." in a framed line below the headline. Differences noticed: "TERESA CARRENNO." and "MARK HAMBURG." set to the right below the testimonials, "DAILY RECITALS.", "NICHOLSON &amp; CO., LTD.", "342 GEORGE-ST., SYDNEY.". Not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article238321623</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page25704369</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_5">
+        <bibl>A Great Musical Invention. "Steinway-Welte."</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">A Great Musical Invention. "Steinway-Welte."</title>
+            <author><orgName>Nicholson &amp; Company Limited</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Sunday Times</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1909-07-25">1909</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Sunday Times</title>
+            <biblScope unit="issue">Sunday, July 25, 1909</biblScope>
+            <biblScope unit="pages">11</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same copy in the paper's own setting, in two columns below a headline in shaded type ("A.. Great MUSICAL INVENTION “Steinway--Welte”"). Differences noticed: "TERESO CARRENNO", "Nicholson &amp; Company Limited". Not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article126596182</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page13498016</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_6">
+        <bibl>A Great Musical Invention. "Steinway-Welte."</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">A Great Musical Invention. "Steinway-Welte."</title>
+            <author><orgName>Nicholson and Co., Ltd.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Sunday Sun</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1909-07-25">1909</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Sunday Sun</title>
+            <biblScope unit="issue">Sunday, July 25, 1909</biblScope>
+            <biblScope unit="pages">9</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same copy in the paper's own setting, close to that of The Star of 24 July but with other line breaks. Differences noticed: "1805," (or "1895,"; the scan is not clear) for "1809", "TERESA CARRENNO." and "MARK HAMBOURG." as display lines, "NICHOLSON AND CO., LTD.". Not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article227020998</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page24883256</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México, the
+            St Petersburg State Theatre Library, Trove (National Library of
+            Australia), the newspapers of the Kungliga biblioteket of Sweden,
+            e-newspaperarchives.ch, BAnQ numérique (Bibliothèque et Archives
+            nationales du Québec), the Biblioteca Virtual de Prensa
+            Histórica, the archive of ABC and ARCA (Biblioteca de
+            Catalunya).</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+        <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="analogy_to_photography">
+             <gloss>Analogy to Photography</gloss>
+          </category>
+          <category xml:id="exact_reproduction">
+             <gloss>Exact Reproduction</gloss>
+             <desc>In virtually all promotional materials between 1905 and 1926,
+                the claim of exact and faithful reproduction, of absolute
+                accurateness is consistently emphasized.</desc>
+          </category>
+          <category xml:id="immortality">
+             <gloss>Immortality</gloss>
+             <desc>This topic emphasizes the perdurance of the reproductions and
+                how thus the recording artists become immortal.</desc>
+          </category>
+          <category xml:id="technical_invention">
+             <gloss>Technical Invention</gloss>
+          </category>
+          <category xml:id="touch_of_a_button">
+             <gloss>Touch of a Button</gloss>
+             <desc>The Welte-Mignon is permanently available and "objectified"
+                for the entertainment of the owner – on the touch of a
+                button.</desc>
+          </category>
+          <category xml:id="unreached_ideal">
+             <gloss>Ideal Instrument</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="en">English</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad130-0.jpg" width="3952px" height="4867px"/>
+      <zone points="3015,395 3825,395 3825,845 3015,845" xml:id="zone_headline"/>
+      <zone points="3030,870 3820,870 3820,1050 3030,1050" xml:id="zone_perfect"/>
+      <zone points="3030,1135 3820,1135 3820,1350 3030,1350" xml:id="zone_reproduction"/>
+      <zone points="3030,1400 3820,1400 3820,2018 3030,2018" xml:id="zone_description"/>
+      <zone points="3015,2045 3820,2045 3820,2532 3015,2532" xml:id="zone_operation"/>
+      <zone points="3030,2545 3820,2545 3820,2830 3030,2830" xml:id="zone_posterity"/>
+      <zone points="3000,2935 3830,2935 3830,3015 3000,3015" xml:id="zone_opinions"/>
+      <zone points="3180,3035 3832,3035 3832,3455 3180,3455" xml:id="zone_carreno"/>
+      <zone points="3180,3490 3832,3490 3832,3865 3180,3865" xml:id="zone_hambourg"/>
+      <zone points="3030,3900 3820,3900 3820,4180 3030,4180" xml:id="zone_text2"/>
+      <zone points="3008,4295 3812,4295 3812,4620 3008,4620" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c #b #in"><lb/>A GREAT
+          <lb/>MUSICAL INVENTION.
+          <lb/>“<name type="brand">STEINWAY-WELTE</name>.”</hi></head>
+      </div>
+      <div facs="#zone_perfect">
+        <head><hi rendition="#c #b"><lb/>After Many Inventions and Many Failures—
+          <lb/><hi rendition="#larger"><seg xml:id="topic_1" ana="#unreached_ideal" type="topic" resp="#claude">A PERFECT INSTRUMENT.</seg></hi></hi></head>
+      </div>
+      <div facs="#zone_reproduction">
+        <head><hi rendition="#b #larger"><lb/>An Instrument of Reproduction.</hi></head>
+        <p><lb/><seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">Exact and individual renderings</seg> of Classi-
+          <lb/>cal Music played by the World's greatest
+          <lb/>Pianists.</p>
+      </div>
+      <div facs="#zone_description">
+        <head><hi rendition="#b #larger"><lb/>“<name type="brand">STEINWAY-WELTE</name>”</hi></head>
+        <p><lb/>consists of an Upright Pianoforte, with a
+          <lb/>pneumatic attachment which is actuated
+          <lb/>by electricity instead of foot power. This
+          <lb/>attachment <seg xml:id="topic_3" ana="#technical_invention" type="topic" resp="#claude">represents the highest possible
+          <lb/>development of the pneumatic piano-player</seg>,
+          <lb/>inasmuch as it furnishes a reproduction of
+          <lb/>the actual interpretation placed upon the
+          <lb/>written score of a great composer by the
+          <lb/>great modern executant. In the words of
+          <lb/>a well-known musician, <seg xml:id="topic_4" ana="#analogy_to_photography" type="topic" resp="#claude">“It is a photo-
+          <lb/>graph.”</seg></p>
+      </div>
+      <div facs="#zone_operation">
+        <head><hi rendition="#b #in"><lb/>OPERATION.</hi></head>
+        <p><lb/>After the insertion of the perforated roll, a
+          <lb/><seg xml:id="topic_5" ana="#touch_of_a_button" type="topic" resp="#claude">button is pressed, which starts the motor</seg>;
+          <lb/>the tempo lever is set to the mark which
+          <lb/>represents the exact time at which the
+          <lb/>artist played.</p>
+        <p><lb/>Every piece rendered with distinction, for
+          <lb/>over 100 Artists of renown have played for
+          <lb/>this instrument.</p>
+      </div>
+      <div facs="#zone_posterity">
+        <p><lb/><seg xml:id="topic_6" ana="#immortality" type="topic" resp="#claude">It immortalises a single performance so that the
+          <lb/>touch of a Pianist who has even now passed away may
+          <lb/>be handed down to remote posterity</seg>.</p>
+        <p><lb/>The regret of Musicians must ever be that this
+          <lb/>great invention was not brought out in 1809 instead
+          <lb/>of 1909.</p>
+      </div>
+      <div facs="#zone_opinions">
+        <head><hi rendition="#b #larger"><lb/>Opinions of the World's Famous Musicians:</hi></head>
+      </div>
+      <div facs="#zone_carreno">
+        <p><quote type="testimonial"><lb/>“My ADMIRATION of the greatest
+          <lb/>invention, which bears the name of
+          <lb/>‘<name type="brand">STEINWAY-WELTE</name>,’ is unlimited. In
+          <lb/>my opinion it is <seg xml:id="topic_7" ana="#technical_invention" type="topic" resp="#claude">the most amazing of all
+          <lb/>inventions which have hitherto been made
+          <lb/>in the field of Musical Instruments</seg>, and
+          <lb/>its name will become known and create
+          <lb/>the greatest sensation throughout the
+          <lb/>world.</quote>—<hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118953915">TERESA <sic>CARRENNO</sic></persName></hi>.”</p>
+      </div>
+      <div facs="#zone_hambourg">
+        <p><quote type="testimonial"><lb/>“I had heard a great deal about the
+          <lb/>‘<name type="brand">STEINWAY-WELTE</name>,’ and am more than
+          <lb/>delighted after having heard it played.
+          <lb/>What I found most astonishing was <seg xml:id="topic_8" ana="#exact_reproduction" type="topic" resp="#claude">the
+          <lb/>perfect reproduction of touch, even to the
+          <lb/>finest shadings</seg>. In short, the ‘<name type="brand">STEIN-
+          <lb/>WAY-WELTE</name>’ is not only human, but
+          <lb/>super-human.</quote>—<hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/116422319">MARK <sic>HAMBURG</sic></persName></hi>.”</p>
+      </div>
+      <div facs="#zone_text2">
+        <p><lb/>Testimonies by other famous Musicians may be seen
+          <lb/>on application.</p>
+        <p><lb/>The “<name type="brand">STEINWAY-WELTE</name>” may also be used as an
+          <lb/>ordinary piano at immediate notice.</p>
+        <p><lb/>This INSTRUMENT is for you to SEE and HEAR.</p>
+        <p><lb/>Public cordially invited to daily recitals.</p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#b">SOLE AGENTS:—</hi>
+          <lb/><hi rendition="#b #in"><orgName>NICHOLSON AND COMPANY, LTD.</orgName>,</hi>
+          <lb/><hi rendition="#b #smaller">PALATIAL MUSIC WAREHOUSE,</hi>
+          <address><addrLine><lb/><hi rendition="#b #larger">342 GEORGE-STREET, <placeName>SYDNEY</placeName>.</hi></addrLine></address></hi></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

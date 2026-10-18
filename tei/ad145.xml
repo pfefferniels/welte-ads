@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Daily Telegraph Pictorial" and "The Catholic Press"</title>
+        <title type="sub">October 18, 1928 to July 3, 1930</title>
+        <author>
+          <orgName key="paling">Paling's</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>The Behning Welte Reproducer</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The Behning Welte Reproducer</title>
+            <author><orgName>Paling's</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Daily Telegraph Pictorial</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1928-10-18">1928</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Daily Telegraph Pictorial</title>
+            <biblScope unit="issue">Thursday, October 18, 1928</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Trove catalogues the paper as The Daily Telegraph (Sydney); its running head at this date reads "Daily Telegraph Pictorial". The advertiser is W. H. Paling &amp; Co. Ltd., who sign as "Paling's". The address line varies between the printings; see the notes on the further sources.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article246856938</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page27149113</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>The Behning Welte Reproducer</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The Behning Welte Reproducer</title>
+            <author><orgName>Paling's</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Daily Telegraph Pictorial</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1928-10-25">1928</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Daily Telegraph Pictorial</title>
+            <biblScope unit="issue">Thursday, October 25, 1928</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line. The address reads "338 GEORGE STREET, 206 Pitt St., SYDNEY", as on 18 October 1928.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article246861044</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page27149345</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>The Behning Welte Reproducer</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The Behning Welte Reproducer</title>
+            <author><orgName>Paling's</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Catholic Press</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1928-12-20">1928</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Catholic Press</title>
+            <biblScope unit="issue">Thursday, December 20, 1928</biblScope>
+            <biblScope unit="pages">6</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line. In the paragraph on social functions the text reads "the WELTE will delight and interest your guests and ease the duties of hospitality" for "the WELTE will interest your guests and relieve the strain of hospitality". The address is set in heavier type as "338 GEORGE ST., 206-10 Pitt St., SYDNEY".</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article107354862</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page11998824</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>The Behning Welte Reproducer</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The Behning Welte Reproducer</title>
+            <author><orgName>Paling's</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Daily Telegraph Pictorial</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1929-02-21">1929</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Daily Telegraph Pictorial</title>
+            <biblScope unit="issue">Thursday, February 21, 1929</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line. The same changed wording and address as in The Catholic Press of 20 December 1928.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article245521150</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page26976197</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_5">
+        <bibl>The Behning Welte Reproducer</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The Behning Welte Reproducer</title>
+            <author><orgName>Paling's</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Catholic Press</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1929-02-28">1929</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Catholic Press</title>
+            <biblScope unit="issue">Thursday, February 28, 1929</biblScope>
+            <biblScope unit="pages">10</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line. The same changed wording and address as in The Catholic Press of 20 December 1928.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article107343436</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page12000761</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_6">
+        <bibl>The Behning Welte Reproducer</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The Behning Welte Reproducer</title>
+            <author><orgName>Paling's</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>The Catholic Press</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1930-07-03">1930</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">The Catholic Press</title>
+            <biblScope unit="issue">Thursday, July 3, 1930</biblScope>
+            <biblScope unit="pages">10</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line. The wording of 18 October 1928 ("relieve the strain of hospitality") and the address "338 GEORGE STREET, 206 Pitt St., SYDNEY".</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article106250441</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page11692224</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México, the
+            St Petersburg State Theatre Library, Trove (National Library of
+            Australia), the newspapers of the Kungliga biblioteket of Sweden,
+            e-newspaperarchives.ch, BAnQ numérique (Bibliothèque et Archives
+            nationales du Québec), the Biblioteca Virtual de Prensa
+            Histórica, the archive of ABC and ARCA (Biblioteca de
+            Catalunya).</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+        <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="exact_reproduction">
+             <gloss>Exact Reproduction</gloss>
+             <desc>In virtually all promotional materials between 1905 and 1926,
+                the claim of exact and faithful reproduction, of absolute
+                accurateness is consistently emphasized.</desc>
+          </category>
+          <category xml:id="home">
+             <gloss>Home</gloss>
+          </category>
+          <category xml:id="hostess">
+             <gloss>Hostess</gloss>
+          </category>
+          <category xml:id="unreached_ideal">
+             <gloss>Ideal Instrument</gloss>
+          </category>
+          <category xml:id="virtual_presence">
+             <gloss>Virtual Presence</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="en">English</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad145-0.jpg" width="3765px" height="4737px"/>
+      <zone points="2385,312 3322,312 3322,1578 2385,1578" xml:id="zone_picture"/>
+      <zone points="2388,432 2652,432 2652,566 2388,566" xml:id="zone_caption"/>
+      <zone points="2260,1506 3434,1506 3434,1964 2260,1964" xml:id="zone_headline"/>
+      <zone points="2270,2110 2525,2110 2525,2276 2270,2276" xml:id="zone_side"/>
+      <zone points="2555,1996 3405,1996 3405,2452 2555,2452" xml:id="zone_text"/>
+      <zone points="2560,2486 3405,2486 3405,2928 2560,2928" xml:id="zone_text2"/>
+      <zone points="2560,2952 3405,2952 3405,3114 2560,3114" xml:id="zone_text3"/>
+      <zone points="2270,2978 2498,2978 2498,3122 2270,3122" xml:id="zone_side2"/>
+      <zone points="2460,3183 3382,3183 3382,3542 2460,3542" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>Photograph of a grand piano with its lid raised and the pedal lyre showing</desc></figure>
+      </div>
+      <div facs="#zone_caption">
+        <ab><hi rendition="#i #b"><lb/><seg xml:id="topic_1" ana="#unreached_ideal" type="topic" resp="#claude">The Perfect
+          <lb/>Reproducing
+          <lb/>Player Piano</seg></hi></ab>
+      </div>
+      <div facs="#zone_headline">
+        <head><lb/><hi rendition="#i #in">The</hi>
+          <lb/><hi rendition="#in"><name type="brand">BEHNING</name></hi>
+          <lb/><hi rendition="#larger"><name type="brand">Welte</name> Reproducer</hi></head>
+      </div>
+      <div facs="#zone_side">
+        <p><hi rendition="#i #smaller"><lb/>The <name type="brand">Behning</name>
+          <lb/>can be played
+          <lb/>by hand in the
+          <lb/>ordinary way
+          <lb/>if desired.</hi></p>
+      </div>
+      <div facs="#zone_text">
+        <p><hi rendition="#b"><lb/>This beautiful instrument <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">reproduces
+          <lb/>with marvellous fidelity the actual
+          <lb/>personal playing of the great Master
+          <lb/>Pianists</seg>. <seg xml:id="topic_3" ana="#home" type="topic" resp="#claude">Right in your home</seg>, the
+          <lb/><name type="brand">WELTE</name> at your bidding will re-create
+          <lb/>in its perfection and beauty the playing
+          <lb/>of the genius <seg xml:id="topic_4" ana="#virtual_presence" type="topic" resp="#claude">just as perfectly as if the
+          <lb/>Artist seated himself anew and played
+          <lb/>again for you alone</seg>.</hi></p>
+      </div>
+      <div facs="#zone_text2">
+        <p><hi rendition="#b"><lb/>An ideal Instrument for homes where
+          <lb/>frequent social functions demand much
+          <lb/>entertaining, the <name type="brand">WELTE</name> will <seg xml:id="topic_5" ana="#hostess" type="topic" resp="#claude">interest
+          <lb/>your guests and relieve the strain of
+          <lb/>hospitality</seg>.</hi></p>
+        <p><hi rendition="#b"><lb/>A visible token of culture, its graceful
+          <lb/>lines and artistic appearance will add
+          <lb/>charm and dignity to the finest home.</hi></p>
+      </div>
+      <div facs="#zone_text3">
+        <p><hi rendition="#b"><lb/>May we have the pleasure of demon-
+          <lb/>strating the <name type="brand">WELTE</name>, or shall we send
+          <lb/>you our Art Catalogue?</hi></p>
+      </div>
+      <div facs="#zone_side2">
+        <p><hi rendition="#i #smaller"><lb/>Your present
+          <lb/>instrument
+          <lb/>taken in ex-
+          <lb/>change.</hi></p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><lb/><hi rendition="#in #i"><orgName>Palings</orgName></hi>
+          <address><addrLine><lb/><hi rendition="#b">338 GEORGE STREET,</hi></addrLine>
+            <addrLine><lb/><hi rendition="#b">206 Pitt St., <placeName>SYDNEY</placeName></hi></addrLine></address></ab>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Daily Telegraph Pictorial"</title>
+        <title type="sub">October 4, 1928</title>
+        <author>
+          <orgName key="paling">Paling's</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>A Concert by Living Pianists in Your Home. The Laffargue Welte Reproducer</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">A Concert by Living Pianists in Your Home. The Laffargue Welte Reproducer</title>
+            <author><orgName>Paling's</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Daily Telegraph Pictorial</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2147714">Sydney</pubPlace>
+            <date type="publication" when="1928-10-04">1928</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Daily Telegraph Pictorial</title>
+            <biblScope unit="issue">Thursday, October 4, 1928</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Trove catalogues the paper as The Daily Telegraph (Sydney); its running head at this date reads "Daily Telegraph Pictorial". The advertiser is W. H. Paling &amp; Co. Ltd., who sign as "Paling's".</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>National Library of Australia (Trove)</repository>
+            <idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-article246857365</idno>
+              <idno type="URLImages">https://nla.gov.au/nla.news-page27148652</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México, the
+            St Petersburg State Theatre Library, Trove (National Library of
+            Australia), the newspapers of the Kungliga biblioteket of Sweden,
+            e-newspaperarchives.ch, BAnQ numérique (Bibliothèque et Archives
+            nationales du Québec), the Biblioteca Virtual de Prensa
+            Histórica, the archive of ABC and ARCA (Biblioteca de
+            Catalunya).</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="framed" scheme="css">border: 1px solid;</rendition>
+        <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+        <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="analogy_to_photography">
+             <gloss>Analogy to Photography</gloss>
+          </category>
+          <category xml:id="exact_reproduction">
+             <gloss>Exact Reproduction</gloss>
+             <desc>In virtually all promotional materials between 1905 and 1926,
+                the claim of exact and faithful reproduction, of absolute
+                accurateness is consistently emphasized.</desc>
+          </category>
+          <category xml:id="home">
+             <gloss>Home</gloss>
+          </category>
+          <category xml:id="immediate_recognizability">
+             <gloss>Immediate Recognizability</gloss>
+          </category>
+          <category xml:id="immortality">
+             <gloss>Immortality</gloss>
+             <desc>This topic emphasizes the perdurance of the reproductions and
+                how thus the recording artists become immortal.</desc>
+          </category>
+          <category xml:id="phantom_body">
+             <gloss>Phantom Body</gloss>
+          </category>
+          <category xml:id="secret">
+             <gloss>Secret</gloss>
+             <desc>Perfect reproduction and its manufacturing is a secret
+                possessed only by the Welte-Mignon company.</desc>
+          </category>
+          <category xml:id="touch_of_a_button">
+             <gloss>Touch of a Button</gloss>
+             <desc>The Welte-Mignon is permanently available and "objectified"
+                for the entertainment of the owner – on the touch of a
+                button.</desc>
+          </category>
+          <category xml:id="virtual_presence">
+             <gloss>Virtual Presence</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="en">English</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad143-0.jpg" width="3848px" height="4779px"/>
+      <zone points="2325,390 3420,390 3420,965 2325,965" xml:id="zone_picture"/>
+      <zone points="2425,962 3255,962 3255,1315 2425,1315" xml:id="zone_headline"/>
+      <zone points="2288,1385 3450,1385 3450,1670 2288,1670" xml:id="zone_text"/>
+      <zone points="2300,1740 3435,1740 3435,2040 2300,2040" xml:id="zone_laffargue"/>
+      <zone points="2298,2108 3045,2108 3045,2500 2298,2500" xml:id="zone_text2"/>
+      <zone points="2295,2545 3045,2545 3045,2980 2295,2980" xml:id="zone_text3"/>
+      <zone points="3140,2105 3445,2105 3445,2735 3140,2735" xml:id="zone_fingers"/>
+      <zone points="3140,2775 3450,2775 3450,3228 3140,3228" xml:id="zone_side"/>
+      <zone points="2410,3200 3262,3200 3262,3625 2410,3625" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div type="illustration" facs="#zone_picture">
+        <figure><desc>Drawing of a drawing room: a grand piano with a lamp on it, and two women and a man listening from a sofa</desc></figure>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#b #in"><lb/><seg xml:id="topic_1" ana="#virtual_presence" type="topic" resp="#claude">A Concert
+          <lb/>By Living Pianists
+          <lb/>In Your Home</seg></hi></head>
+      </div>
+      <div facs="#zone_text">
+        <p><hi rendition="#larger"><lb/><seg xml:id="topic_2" ana="#home" type="topic" resp="#claude">In the privacy and comfort of your home with your
+          <lb/>intimate friends around</seg>, <seg xml:id="topic_3" ana="#touch_of_a_button" type="topic" resp="#claude">you can summon in an in-
+          <lb/>stant the Master Pianists of the World</seg> to reveal for
+          <lb/>you and your guests the grandeur and beauty of the
+          <lb/>music of the Great Composers.</hi></p>
+      </div>
+      <div facs="#zone_laffargue">
+        <head><hi rendition="#framed"><lb/><hi rendition="#b">The</hi>
+          <lb/><hi rendition="#b #in"><name type="brand">LAFFARGUE</name></hi> <hi rendition="#b #larger"><name type="brand">Welte</name>
+          <lb/>Reproducer</hi></hi></head>
+      </div>
+      <div facs="#zone_text2">
+        <p><lb/>The <name type="brand">LAFFARGUE Welte</name> Reproducer
+          <lb/>will give you <seg xml:id="topic_4" ana="#exact_reproduction" type="topic" resp="#claude">flawless reproductions of
+          <lb/>the playing of the greatest pianoforte
+          <lb/>geniuses—not an approximately cor-
+          <lb/>rect interpretation, but a faultless
+          <lb/>personal performance</seg>, <seg xml:id="topic_5" ana="#immediate_recognizability" type="topic" resp="#claude">so vivid, so real,
+          <lb/>that it deceives even the great artists
+          <lb/>themselves</seg>.</p>
+      </div>
+      <div facs="#zone_text3">
+        <p><lb/>The original playing is <seg xml:id="topic_6" ana="#analogy_to_photography" type="topic" resp="#claude">recorded by a
+          <lb/>special Photographic process</seg>, <seg xml:id="topic_7" ana="#secret" type="topic" resp="#claude">which
+          <lb/>only the <name type="brand">Welte</name> possesses—there is no
+          <lb/>other Reproducer like it</seg>.</p>
+        <p><lb/>Once you hear this glorious instrument
+          <lb/>you will understand what the great <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De
+          <lb/>Pachmann</persName> meant when he said,
+          <lb/><quote type="testimonial">“<seg xml:id="topic_8" ana="#immortality" type="topic" resp="#claude">Through you I live for ever.</seg>”</quote></p>
+      </div>
+      <div facs="#zone_fingers">
+        <ab><hi rendition="#b #in"><lb/><seg xml:id="topic_9" ana="#phantom_body" type="topic" resp="#claude">The
+          <lb/>Master's
+          <lb/>Fingers
+          <lb/>On
+          <lb/>Your
+          <lb/>Piano</seg></hi></ab>
+      </div>
+      <div facs="#zone_side">
+        <p><hi rendition="#b #smaller"><lb/>May we have the
+          <lb/>pleasure of de-
+          <lb/>monstrating the
+          <lb/><name type="brand">Welte</name> for you?</hi></p>
+        <p><hi rendition="#b #smaller"><lb/>Your attendance
+          <lb/>at our Showroom
+          <lb/>entails no obliga-
+          <lb/>tion.</hi></p>
+        <p><hi rendition="#b #smaller"><lb/>Catalogue and
+          <lb/>particulars of our
+          <lb/>Easy Terms on
+          <lb/>request.</hi></p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><lb/><hi rendition="#in #i"><orgName>Paling's</orgName></hi>
+          <address><addrLine><lb/><hi rendition="#b #larger">338 GEORGE STREET,</hi></addrLine>
+            <addrLine><lb/><hi rendition="#b #larger"><placeName>SYDNEY</placeName>.</hi></addrLine>
+            <addrLine><lb/><hi rendition="#b #c">and at 206 Pitt Street, next to Lyceum Theatre.</hi></addrLine></address></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
