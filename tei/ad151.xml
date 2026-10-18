@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Svenska Dagbladet"</title>
+        <title type="sub">September 5, 1908</title>
+        <author>
+          <orgName key="dahlstrom">Dahlströms Orgel- &amp; Pianomagasin</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Nytt! Reproduktions-Pianinot ”MIGNON” är det bästa självspelande pianinot i hela världen</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Nytt! Reproduktions-Pianinot ”MIGNON” är det bästa självspelande pianinot i hela världen</title>
+            <author><orgName>Dahlströms Orgel- &amp; Pianomagasin</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Svenska Dagbladet</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2673730">Stockholm</pubPlace>
+            <date type="publication" when="1908-09-05">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Svenska Dagbladet</title>
+            <biblScope unit="issue">Nr 241, Lördagen den 5 September 1908</biblScope>
+            <biblScope unit="pages">12</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The ad names the instrument only as "Mignon", never as Welte-Mignon. It is identified as the Welte-Mignon through the pianists said to have recorded for it (d'Albert, Carreño), who recorded for Welte.</note>
+            <note>The last two lines, on the other stock of the shop, are marked as a gap.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Kungliga biblioteket (tidningar.kb.se)</repository>
+            <idno>
+              <idno type="URLImages">https://data.kb.se/dark-78699/part/1/page/12</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México, the
+            St Petersburg State Theatre Library, Trove (National Library of
+            Australia), the newspapers of the Kungliga biblioteket of Sweden,
+            e-newspaperarchives.ch, BAnQ numérique (Bibliothèque et Archives
+            nationales du Québec), the Biblioteca Virtual de Prensa
+            Histórica, the archive of ABC and ARCA (Biblioteca de
+            Catalunya).</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="exact_reproduction">
+             <gloss>Exact Reproduction</gloss>
+             <desc>In virtually all promotional materials between 1905 and 1926,
+                the claim of exact and faithful reproduction, of absolute
+                accurateness is consistently emphasized.</desc>
+          </category>
+          <category xml:id="home">
+             <gloss>Home</gloss>
+          </category>
+          <category xml:id="immortality">
+             <gloss>Immortality</gloss>
+             <desc>This topic emphasizes the perdurance of the reproductions and
+                how thus the recording artists become immortal.</desc>
+          </category>
+          <category xml:id="miracle">
+             <gloss>Miracle</gloss>
+          </category>
+          <category xml:id="personality">
+             <gloss>Personality</gloss>
+          </category>
+          <category xml:id="superiority">
+             <gloss>Superiority</gloss>
+          </category>
+          <category xml:id="technical_invention">
+             <gloss>Technical Invention</gloss>
+          </category>
+          <category xml:id="virtual_presence">
+             <gloss>Virtual Presence</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="sv">Swedish</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad151-0.jpg" width="5141px" height="7593px"/>
+      <graphic type="IIIF" url="https://data.kb.se/iiif/3/dark-78699%2Fbib13434192_19080905_0_241_0012.jp2/full/max/0/default.jpg" width="5141px" height="7593px"/>
+      <zone points="268,3632 552,3632 552,4042 268,4042" xml:id="zone_nytt"/>
+      <zone points="578,3632 978,3632 978,4045 578,4045" xml:id="zone_picture"/>
+      <zone points="1025,3632 1815,3632 1815,4074 1025,4074" xml:id="zone_headline"/>
+      <zone points="268,4086 1815,4086 1815,4284 268,4284" xml:id="zone_text"/>
+      <zone points="268,4290 1388,4290 1388,4330 268,4330" xml:id="zone_intro"/>
+      <zone points="268,4341 1388,4341 1388,4439 268,4439" xml:id="zone_dalbert"/>
+      <zone points="268,4439 1388,4439 1388,4568 268,4568" xml:id="zone_carreno"/>
+      <zone points="268,4568 1388,4568 1388,4757 268,4757" xml:id="zone_stenhammar"/>
+      <zone points="1390,4362 1815,4362 1815,4748 1390,4748" xml:id="zone_seal"/>
+      <zone points="268,4758 1815,4758 1815,4852 268,4852" xml:id="zone_musiktidningen"/>
+      <zone points="268,4872 1815,4872 1815,4968 268,4968" xml:id="zone_text2"/>
+      <zone points="268,4972 1815,4972 1815,5062 268,5062" xml:id="zone_demonstration"/>
+      <zone points="268,5078 1815,5078 1815,5328 268,5328" xml:id="zone_signature"/>
+      <zone points="268,5338 1815,5338 1815,5442 268,5442" xml:id="zone_gap"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_nytt">
+        <head><hi rendition="#in"><lb/>Nytt!</hi></head>
+      </div>
+      <div type="illustration" facs="#zone_picture">
+        <ab><hi rendition="#c #b"><lb/>”<name type="brand">MIGNON</name>”.</hi></ab>
+        <figure><desc>Drawing of the "Mignon" as a cabinet with a pierced gallery at the top and two doors in its lower part</desc></figure>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#c"><lb/><hi rendition="#in">Reproduktions-Pianinot</hi>
+          <lb/><hi rendition="#in #b">”<name type="brand">MIGNON</name>”</hi>
+          <lb/>är det <seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude"><hi rendition="#b">bästa</hi> självspelande
+          <lb/>pianinot i <hi rendition="#b">hela världen</hi></seg>, ty
+          <lb/><seg xml:id="topic_2" ana="#personality" type="topic" resp="#claude">det <hi rendition="#b">personliga</hi> i föredraget
+          <lb/>återgives</seg>.</hi></head>
+      </div>
+      <div facs="#zone_text">
+        <p><hi rendition="#b"><lb/>Musici: kompositörer, pianister, ja alla som hört be-
+          <lb/>undra och erkänna <name type="brand">Mignonpianinot</name> vara överlägset al-
+          <lb/>la andra självspelande instrument. ”<name type="brand">Mignon</name>” spelar
+          <lb/>utan mänsklig hjälp.</hi></p>
+      </div>
+      <div facs="#zone_intro">
+        <p><lb/>Av hundratals omdömen meddelas:</p>
+      </div>
+      <div facs="#zone_dalbert">
+        <p><lb/><hi rendition="#b #g"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">EUGEN d'ALBERT</persName>:</hi> <quote type="testimonial">”— — <seg xml:id="topic_3" ana="#exact_reproduction" type="topic" resp="#claude">Genom noggrann reproduktion av
+          <lb/>uppfattning och föredragssätt</seg> äger detta instrument ett
+          <lb/>konstnärligt värde —”</quote></p>
+      </div>
+      <div facs="#zone_carreno">
+        <p><lb/><hi rendition="#b #g"><persName type="artist" corresp="https://d-nb.info/gnd/118953915">TERESA CARRENO</persName>:</hi> <quote type="testimonial">”<name type="brand">Mignon</name>” har för mig spelat VI Rhap-
+          <lb/>sodien av <persName type="composer" corresp="https://d-nb.info/gnd/118573527">Liszt</persName>, som jag spelat för detta underbara instru-
+          <lb/>ment, och <seg xml:id="topic_4" ana="#exact_reproduction" type="topic" resp="#claude">återgivandet är så noggrant</seg>, att jag måste ut-
+          <lb/>trycka min beundran för <seg xml:id="topic_5" ana="#technical_invention" type="topic" resp="#claude">denna otroliga uppfinning</seg>.”</quote></p>
+      </div>
+      <div facs="#zone_stenhammar">
+        <p><lb/><hi rendition="#b #g"><persName type="artist" corresp="https://d-nb.info/gnd/121861600">WILHELM STENHAMMAR</persName>:</hi> <quote type="testimonial">”Instrumentet uttrycker sitt
+          <lb/>eget lov i högsta tonart. <seg xml:id="topic_6" ana="#miracle" type="topic" resp="#claude">Den som hört det, står stum
+          <lb/>inför detta under</seg>. <seg xml:id="topic_7" ana="#immortality" type="topic" resp="#claude">Om <name type="brand">Mignonklaveret</name> funnits 100 år tidi-
+          <lb/>gare, kunde vi ännu i dag få höra <persName type="composer" corresp="https://d-nb.info/gnd/118508288">Beethoven</persName>, <persName type="composer" corresp="https://d-nb.info/gnd/118520539">Chopin</persName>, <persName type="composer" corresp="https://d-nb.info/gnd/118573527">Liszt</persName>,
+          <lb/>alla stora kompositörer och pianister spela</seg>. Vad detta
+          <lb/>skulle betyda för oss, är omätligt.”</quote></p>
+      </div>
+      <div type="illustration" facs="#zone_seal">
+        <figure><desc>Round seal of the firm with a winged putto blowing a wind instrument, inscribed "DAHLSTRÖMS ORGEL- &amp; PIANOMAGASIN · STOCKHOLM"</desc></figure>
+      </div>
+      <div facs="#zone_musiktidningen">
+        <p><lb/><hi rendition="#b #g"><title level="j">MUSIKTIDNINGEN</title></hi> den 6 nov. 1907: <quote type="testimonial">”<seg xml:id="topic_8" ana="#exact_reproduction" type="topic" resp="#claude">Anslag, dynamiska skiftningar m. m. återgivas
+          <lb/>förvånande väl</seg> och <seg xml:id="topic_9" ana="#virtual_presence" type="topic" resp="#claude">det hela verkar som om en verkligt levande pianist trakterade
+          <lb/>instrumentet</seg>.”</quote></p>
+      </div>
+      <div facs="#zone_text2">
+        <p><hi rendition="#b"><lb/>För <seg xml:id="topic_10" ana="#home" type="topic" resp="#claude">hem</seg>, konsertsalonger, musikinstitut, sjukhus, sanatorier, klubblokaler,
+          <lb/>förstkl. restauranger m. m. blir ”<name type="brand">Mignon</name>” en stor ackvisition.</hi></p>
+      </div>
+      <div facs="#zone_demonstration">
+        <p><lb/>”<name type="brand">Mignon</name>” demonstreras <hi rendition="#b">tisdag</hi> och <hi rendition="#b">fredag</hi> 7—8 e. m. (Andra tider efter över-
+          <lb/>enskommelse) hos</p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c"><lb/><hi rendition="#in #b"><orgName>Dahlströms Orgel- &amp; Pianomagasin</orgName></hi>
+          <address><addrLine><lb/><hi rendition="#b">41 Drottninggatan 41.</hi></addrLine></address></hi></ab>
+      </div>
+      <div facs="#zone_gap">
+        <ab><gap reason="irrelevant"><desc resp="#claude">2 lines on the other stock: "Världsberömda Pianinon, Flyglar och Orglar i stort urval. Musikförlag."</desc></gap></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
