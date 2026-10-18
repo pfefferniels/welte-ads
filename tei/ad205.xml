@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Diario de la Marina"</title>
+        <title type="sub">November 9 to December 7, 1919</title>
+        <author>
+          <orgName key="stowers">John L. Stowers</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</title>
+            <author><orgName>John L. Stowers</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Diario de la Marina</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3553478">La Habana</pubPlace>
+            <date type="publication" when="1919-11-09">1919</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Diario de la Marina</title>
+            <biblScope unit="issue">Año LXXXVII, Núm. 313, morning edition (Edición de la mañana), Sunday, November 9, 1919</biblScope>
+            <biblScope unit="pages">11</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The body names, beside the Welte-Mignon, the other makes Stowers sold (Mason &amp; Hamlin, J. L. Stowers, Estey, R. S. Howard); it is transcribed in full. The newspaper's insertion code below the frame is not transcribed.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Biblioteca Virtual de Prensa Histórica</repository>
+            <idno>
+              <idno type="URLImages">https://prensahistorica.mcu.es/es/catalogo_imagenes/grupo.do?path=2001043736&amp;idImagen=2008577495</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</title>
+            <author><orgName>John L. Stowers</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Diario de la Marina</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3553478">La Habana</pubPlace>
+            <date type="publication" when="1919-11-13">1919</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Diario de la Marina</title>
+            <biblScope unit="issue">Año LXXXVII, Núm. 317, morning edition (Edición de la mañana), Thursday, November 13, 1919</biblScope>
+            <biblScope unit="pages">7</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Biblioteca Virtual de Prensa Histórica</repository>
+            <idno>
+              <idno type="URLImages">https://prensahistorica.mcu.es/es/catalogo_imagenes/grupo.do?path=2001043743&amp;idImagen=2008577601</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</title>
+            <author><orgName>John L. Stowers</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Diario de la Marina</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3553478">La Habana</pubPlace>
+            <date type="publication" when="1919-11-16">1919</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Diario de la Marina</title>
+            <biblScope unit="issue">Año LXXXVII, Núm. 320, morning edition (Edición de la mañana), Sunday, November 16, 1919</biblScope>
+            <biblScope unit="pages">11</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Biblioteca Virtual de Prensa Histórica</repository>
+            <idno>
+              <idno type="URLImages">https://prensahistorica.mcu.es/es/catalogo_imagenes/grupo.do?path=2001043749&amp;idImagen=2008577693</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</title>
+            <author><orgName>John L. Stowers</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Diario de la Marina</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3553478">La Habana</pubPlace>
+            <date type="publication" when="1919-11-20">1919</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Diario de la Marina</title>
+            <biblScope unit="issue">Año LXXXVII, Núm. 324, morning edition (Edición de la mañana), Thursday, November 20, 1919</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Biblioteca Virtual de Prensa Histórica</repository>
+            <idno>
+              <idno type="URLImages">https://prensahistorica.mcu.es/es/catalogo_imagenes/grupo.do?path=2001043756&amp;idImagen=2008577803</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_5">
+        <bibl>EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</title>
+            <author><orgName>John L. Stowers</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Diario de la Marina</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3553478">La Habana</pubPlace>
+            <date type="publication" when="1919-11-23">1919</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Diario de la Marina</title>
+            <biblScope unit="issue">Año LXXXVII, Núm. 327, morning edition (Edición de la mañana), Sunday, November 23, 1919</biblScope>
+            <biblScope unit="pages">14</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Biblioteca Virtual de Prensa Histórica</repository>
+            <idno>
+              <idno type="URLImages">https://prensahistorica.mcu.es/es/catalogo_imagenes/grupo.do?path=2001043762&amp;idImagen=2008577908</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_6">
+        <bibl>EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</title>
+            <author><orgName>John L. Stowers</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Diario de la Marina</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3553478">La Habana</pubPlace>
+            <date type="publication" when="1919-11-27">1919</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Diario de la Marina</title>
+            <biblScope unit="issue">Año LXXXVII, Núm. 331, morning edition (Edición de la mañana), Thursday, November 27, 1919</biblScope>
+            <biblScope unit="pages">8</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Biblioteca Virtual de Prensa Histórica</repository>
+            <idno>
+              <idno type="URLImages">https://prensahistorica.mcu.es/es/catalogo_imagenes/grupo.do?path=2001043769&amp;idImagen=2008578014</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_7">
+        <bibl>EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</title>
+            <author><orgName>John L. Stowers</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Diario de la Marina</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3553478">La Habana</pubPlace>
+            <date type="publication" when="1919-11-30">1919</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Diario de la Marina</title>
+            <biblScope unit="issue">Año LXXXVII, Núm. 334, morning edition (Edición de la mañana), Sunday, November 30, 1919</biblScope>
+            <biblScope unit="pages">15</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Biblioteca Virtual de Prensa Histórica</repository>
+            <idno>
+              <idno type="URLImages">https://prensahistorica.mcu.es/es/catalogo_imagenes/grupo.do?path=2001043775&amp;idImagen=2008578121</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_8">
+        <bibl>EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</title>
+            <author><orgName>John L. Stowers</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Diario de la Marina</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3553478">La Habana</pubPlace>
+            <date type="publication" when="1919-12-04">1919</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Diario de la Marina</title>
+            <biblScope unit="issue">Año LXXXVII, Núm. 338, morning edition (Edición de la mañana), Thursday, December 4, 1919</biblScope>
+            <biblScope unit="pages">9</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Biblioteca Virtual de Prensa Histórica</repository>
+            <idno>
+              <idno type="URLImages">https://prensahistorica.mcu.es/es/catalogo_imagenes/grupo.do?path=2001043782&amp;idImagen=2008578233</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_9">
+        <bibl>EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">EL WELTE MIGNON ES EL UNICO PIANO RECONOCIDO POR LOS GRANDES ARTISTAS</title>
+            <author><orgName>John L. Stowers</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Diario de la Marina</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3553478">La Habana</pubPlace>
+            <date type="publication" when="1919-12-07">1919</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Diario de la Marina</title>
+            <biblScope unit="issue">Año LXXXVII, Núm. 341, morning edition (Edición de la mañana), Sunday, December 7, 1919</biblScope>
+            <biblScope unit="pages">13</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Biblioteca Virtual de Prensa Histórica</repository>
+            <idno>
+              <idno type="URLImages">https://prensahistorica.mcu.es/es/catalogo_imagenes/grupo.do?path=2001043788&amp;idImagen=2008578333</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México, the
+            St Petersburg State Theatre Library, Trove (National Library of
+            Australia), the newspapers of the Kungliga biblioteket of Sweden,
+            e-newspaperarchives.ch, BAnQ numérique (Bibliothèque et Archives
+            nationales du Québec), the Biblioteca Virtual de Prensa
+            Histórica, the archive of ABC and ARCA (Biblioteca de
+            Catalunya).</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+        <rendition xml:id="right" scheme="css">text-align: right;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="exact_reproduction">
+             <gloss>Exact Reproduction</gloss>
+             <desc>In virtually all promotional materials between 1905 and 1926,
+                the claim of exact and faithful reproduction, of absolute
+                accurateness is consistently emphasized.</desc>
+          </category>
+          <category xml:id="home">
+             <gloss>Home</gloss>
+          </category>
+          <category xml:id="immediate_recognizability">
+             <gloss>Immediate Recognizability</gloss>
+          </category>
+          <category xml:id="popular">
+             <gloss>Popular</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="es">Spanish</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad205-0.jpg" width="3284px" height="4452px"/>
+      <zone points="100,3005 400,3005 400,3398 100,3398" xml:id="zone_pugno"/>
+      <zone points="100,3402 400,3402 400,3756 100,3756" xml:id="zone_carreno"/>
+      <zone points="100,3764 400,3764 400,4178 100,4178" xml:id="zone_hofmann"/>
+      <zone points="418,3005 1358,3005 1358,3626 418,3626" xml:id="zone_headline"/>
+      <zone points="452,3646 1322,3646 1322,4010 452,4010" xml:id="zone_text"/>
+      <zone points="418,4030 1352,4030 1352,4180 418,4180" xml:id="zone_signature"/>
+      <zone points="1380,3005 1702,3005 1702,3393 1380,3393" xml:id="zone_ganz"/>
+      <zone points="1380,3402 1702,3402 1702,3786 1380,3786" xml:id="zone_busoni"/>
+      <zone points="1380,3800 1702,3800 1702,4178 1380,4178" xml:id="zone_liszt"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div type="illustration" facs="#zone_pugno">
+        <figure><desc>Portrait drawing of Raoul Pugno, with the name written below: "Pugno"</desc></figure>
+        <ab><lb/><persName type="artist" corresp="https://d-nb.info/gnd/116308621">Pugno</persName></ab>
+        <p><quote type="testimonial"><seg xml:id="topic_1" ana="#immediate_recognizability" type="topic" resp="#claude"><lb/>“Puedo decir que me he
+            <lb/>oído a mi mismo.”</seg></quote>
+          <lb/><hi rendition="#right #b">—<persName type="artist" corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>.</hi></p>
+      </div>
+      <div type="illustration" facs="#zone_carreno">
+        <figure><desc>Portrait drawing of Teresa Carreño, with the name written below: "Carreño"</desc></figure>
+        <ab><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreño</persName></ab>
+        <p><quote type="testimonial"><lb/>“Este nombre tiene una
+            <lb/>significación colosal.”</quote>
+          <lb/><hi rendition="#right #b">—<persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreño</persName>.</hi></p>
+      </div>
+      <div type="illustration" facs="#zone_hofmann">
+        <figure><desc>Portrait drawing of Josef Hofmann, with the name written below: "Hofmann"</desc></figure>
+        <ab><lb/><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName></ab>
+        <p><quote type="testimonial"><lb/>“Incomparable.”</quote>
+          <lb/><hi rendition="#right #b">—<persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Joseph Hofmann</persName>.</hi></p>
+      </div>
+      <div facs="#zone_headline">
+        <head><hi rendition="#in"><lb/>EL <name type="brand">WELTE MIGNON</name> ES EL UNICO
+          <lb/>PIANO RECONOCIDO POR LOS GRAN-
+          <lb/>DES ARTISTAS, TALES COMO: <persName type="artist" corresp="https://d-nb.info/gnd/116308621">PUGNO</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">HOFMANN</persName>, <persName corresp="https://d-nb.info/gnd/118573527">LISZT</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118953915">CARREÑO</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118518011">BUS-<lb/>SONI</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116327642">GABRILOWICH</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/119281953">GANZ</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">PADE-<lb/>REWSKY</persName>, ETC. <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">COMO EL UNICO RE-
+          <lb/>PRODUCTOR EXACTO DE SUS MAG-
+          <lb/>NIFICAS OBRAS</seg>. NO GASTE SU DINE-
+          <lb/>RO EN COMPRAR UN PIANO DE MAR-
+          <lb/>CA DESCONOCIDA.</hi></head>
+      </div>
+      <div facs="#zone_text">
+        <p><lb/>Cuando usted puede adquirir los famosos pianos “<name type="brand">WELTE
+          <lb/>MIGNON</name>,” “MASON &amp; HAMLIN,” “J. L. STOWERS,” “ESTEY
+          <lb/>COMPANY,” &amp; “R. S. HOWARD” los cuales son construídos espe-
+          <lb/>cialmente para el clima tropical, con caoba de Cuba teniendo todas
+          <lb/>las partes metálicas internas de cobre y bronce.</p>
+        <p><lb/>Al adquirir usted un piano de estas marcas no solamente lo
+          <lb/>hace a criterio propio, sino también bajo el mismo juicio de más
+          <lb/>de <seg xml:id="topic_3" ana="#popular" type="topic" resp="#claude">DIEZ MIL familias, que en esta República poseen estos pianos</seg>.</p>
+        <p><lb/><seg xml:id="topic_4" ana="#home" type="topic" resp="#claude">Uno de estos instrumentos en su hogar<unclear>,</unclear> es una representación
+          <lb/>evidente de su cultura musical</seg>.</p>
+        <p><lb/>Pase a oirlos, o solicite catálogos.</p>
+      </div>
+      <div facs="#zone_signature">
+        <ab><hi rendition="#c #b #larger"><lb/>Depósito exclusivo para la Isla de Cuba:</hi>
+          <lb/><hi rendition="#c #b #in"><orgName>John L. Stowers.</orgName> <address><addrLine>San Rafael 29.</addrLine> <addrLine><placeName>Habana.</placeName></addrLine></address></hi></ab>
+      </div>
+      <div type="illustration" facs="#zone_ganz">
+        <figure><desc>Portrait drawing of Rudolph Ganz, with the name written below: "Ganz"</desc></figure>
+        <ab><lb/><persName type="artist" corresp="https://d-nb.info/gnd/119281953">Ganz</persName></ab>
+        <p><quote type="testimonial"><lb/>“Es una cosa magnífica.”</quote>
+          <lb/><hi rendition="#right #b">—<persName type="artist" corresp="https://d-nb.info/gnd/119281953"><sic>Rudolh</sic> Ganz</persName>.</hi></p>
+      </div>
+      <div type="illustration" facs="#zone_busoni">
+        <figure><desc>Portrait drawing of Ferruccio Busoni, with the name written below: "Busoni"</desc></figure>
+        <ab><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName></ab>
+        <p><quote type="testimonial"><lb/>“Causará gran placer al
+            <lb/>público en general.”</quote>
+          <lb/><hi rendition="#right #b">—<persName type="artist" corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>.</hi></p>
+      </div>
+      <div type="illustration" facs="#zone_liszt">
+        <figure><desc>Portrait drawing of Franz Liszt, with the name written below: "Liszt"</desc></figure>
+        <ab><lb/><persName corresp="https://d-nb.info/gnd/118573527">Liszt</persName></ab>
+        <p><quote type="testimonial"><lb/>“Estoy admiradísimo.”</quote>
+          <lb/><hi rendition="#right #b">—<persName corresp="https://d-nb.info/gnd/118573527">Liszt</persName>.</hi></p>
+      </div>
+    </body>
+  </text>
+</TEI>

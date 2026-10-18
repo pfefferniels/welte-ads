@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ad in "Diario de la Marina"</title>
+        <title type="sub">May 13 to June 24, 1917</title>
+        <author>
+          <orgName key="stowers">John L. Stowers</orgName>
+        </author>
+        <respStmt>
+          <resp>Editor</resp>
+          <persName xml:id="np"><surname>Pfeffer</surname><forename>Niels</forename></persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcription, encoding and annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher><persName><surname>Pfeffer</surname><forename>Niels</forename></persName></publisher>
+        <pubPlace>Tübingen</pubPlace>
+        <date>2026</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc xml:id="source_1">
+        <bibl>Ya llegó el día de tener Música eléctrica perfecta</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Ya llegó el día de tener Música eléctrica perfecta</title>
+            <author><orgName>John L. Stowers</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Diario de la Marina</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3553478">La Habana</pubPlace>
+            <date type="publication" when="1917-05-13">1917</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Diario de la Marina</title>
+            <biblScope unit="issue">Año LXXXV, Núm. 133, morning edition (Edición de la mañana), Sunday, May 13, 1917</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The text runs in six columns between four portraits; it is transcribed in reading order, column by column. The Violano-Virtuoso and the Howard pianos and player pianos are named only in the running text, which is transcribed in full.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Biblioteca Virtual de Prensa Histórica</repository>
+            <idno>
+              <idno type="URLImages">https://prensahistorica.mcu.es/es/catalogo_imagenes/grupo.do?path=2001042123&amp;idImagen=2008554272</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Ya llegó el día de tener Música eléctrica perfecta</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Ya llegó el día de tener Música eléctrica perfecta</title>
+            <author><orgName>John L. Stowers</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Diario de la Marina</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3553478">La Habana</pubPlace>
+            <date type="publication" when="1917-05-27">1917</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Diario de la Marina</title>
+            <biblScope unit="issue">Año LXXXV, Núm. 147, morning edition (Edición de la mañana), Sunday, May 27, 1917</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Biblioteca Virtual de Prensa Histórica</repository>
+            <idno>
+              <idno type="URLImages">https://prensahistorica.mcu.es/es/catalogo_imagenes/grupo.do?path=2001042149&amp;idImagen=2008554605</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Ya llegó el día de tener Música eléctrica perfecta</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Ya llegó el día de tener Música eléctrica perfecta</title>
+            <author><orgName>John L. Stowers</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Diario de la Marina</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3553478">La Habana</pubPlace>
+            <date type="publication" when="1917-06-03">1917</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Diario de la Marina</title>
+            <biblScope unit="issue">Año LXXXV, Núm. 154, morning edition (Edición de la mañana), Sunday, June 3, 1917</biblScope>
+            <biblScope unit="pages">5</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Biblioteca Virtual de Prensa Histórica</repository>
+            <idno>
+              <idno type="URLImages">https://prensahistorica.mcu.es/es/catalogo_imagenes/grupo.do?path=2001042162&amp;idImagen=2008554770</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>Ya llegó el día de tener Música eléctrica perfecta</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Ya llegó el día de tener Música eléctrica perfecta</title>
+            <author><orgName>John L. Stowers</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Diario de la Marina</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3553478">La Habana</pubPlace>
+            <date type="publication" when="1917-06-17">1917</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Diario de la Marina</title>
+            <biblScope unit="issue">Año LXXXV, Núm. 168, morning edition (Edición de la mañana), Sunday, June 17, 1917</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Biblioteca Virtual de Prensa Histórica</repository>
+            <idno>
+              <idno type="URLImages">https://prensahistorica.mcu.es/es/catalogo_imagenes/grupo.do?path=2001042184&amp;idImagen=2008555053</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_5">
+        <bibl>Ya llegó el día de tener Música eléctrica perfecta</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Ya llegó el día de tener Música eléctrica perfecta</title>
+            <author><orgName>John L. Stowers</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Diario de la Marina</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3553478">La Habana</pubPlace>
+            <date type="publication" when="1917-06-24">1917</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Diario de la Marina</title>
+            <biblScope unit="issue">Año LXXXV, Núm. 175, morning edition (Edición de la mañana), Sunday, June 24, 1917</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Seen on the scan: the same design, not collated line by line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Biblioteca Virtual de Prensa Histórica</repository>
+            <idno>
+              <idno type="URLImages">https://prensahistorica.mcu.es/es/catalogo_imagenes/grupo.do?path=2001042197&amp;idImagen=2008555225</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+         <p>The Welte-Mignon Advertisements Collection brings together print
+            advertisements for the Welte-Mignon reproducing piano that appeared
+            between 1905 and 1930. It was created as part of the PhD project
+            "Grünfelds Geist" at the University of Tübingen, which considers
+            piano rolls as objects of a digital edition. The collection is
+            published at https://anz.welte225.org.</p>
+      </projectDesc>
+      <samplingDecl>
+         <p>The collection gathers print advertisements for the Welte-Mignon
+            reproducing piano that appeared between 1905 and 1930 and were
+            published by M. Welte &amp; Söhne, by one of its licensees, or by a
+            dealer or agent selling the instrument. Each advertisement is
+            encoded once; its further printings, in the same or in other
+            periodicals, are listed as further sources.</p>
+         <p>The advertisements were found in digitised newspapers and
+            magazines: Chronicling America (Library of Congress), the British
+            Newspaper Archive, HathiTrust (copies of the Universities of
+            California, Illinois, Michigan, Minnesota and Virginia), the
+            Internet Archive, the Digitale Sammlungen of the Bayerische
+            Staatsbibliothek, ANNO (Austrian National Library), the
+            International Arcade Museum Library, Georgia Historic Newspapers,
+            Delpher (KB, National Library of the Netherlands),
+            eluxemburgensia (National Library of Luxembourg), RetroNews
+            (Bibliothèque nationale de France), the archives of Le Temps,
+            the Nasjonalbiblioteket of Norway, Mediestream (Royal Danish
+            Library), the National Library of Latvia (through Europeana),
+            Canadiana, the Hemeroteca Nacional Digital de México, the
+            St Petersburg State Theatre Library, Trove (National Library of
+            Australia), the newspapers of the Kungliga biblioteket of Sweden,
+            e-newspaperarchives.ch, BAnQ numérique (Bibliothèque et Archives
+            nationales du Québec), the Biblioteca Virtual de Prensa
+            Histórica, the archive of ABC and ARCA (Biblioteca de
+            Catalunya).</p>
+      </samplingDecl>
+      <editorialDecl>
+         <p>Each file transcribes one printing of an advertisement, the one
+            whose scan its facsimile zones refer to; <att>decls</att> on
+            <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
+            printings were identified as the same advertisement but not
+            collated word for word; differences that were noticed are
+            recorded with <gi>app</gi> or in a note.</p>
+         <p>The regions and lines of the scans were mostly marked in
+            eScriptorium and converted from PAGE XML to TEI. The text was in
+            part recognised automatically (HTR) and corrected against the
+            scan, in part transcribed by hand. The advertisements published
+            outside Germany, the United Kingdom and the United States were
+            transcribed from the scans, encoded, given their regions and
+            annotated with topics by Claude, an AI model; their revision
+            history says so.</p>
+         <correction>
+            <p>Errors of the original are not corrected but marked with
+               <gi>sic</gi>.</p>
+         </correction>
+         <normalization>
+            <p>Spelling and punctuation follow the original and are not
+               normalised. Text set in capitals is often transcribed in mixed
+               case and marked with the rendition <val>#uc</val>.</p>
+         </normalization>
+         <hyphenation eol="all">
+            <p>Hyphens at the end of a line are kept as printed.</p>
+         </hyphenation>
+         <segmentation>
+            <p>Every region of the original page is a <gi>div</gi> that points to
+               its zone in the <gi>facsimile</gi> with <att>facs</att>. The
+               lines of the original are marked with <gi>lb</gi>; the typography
+               is recorded with <att>rendition</att>. The zones refer to the
+               first <gi>graphic</gi> of a <gi>surface</gi>, the scan they were
+               drawn on. Where the holding library serves the page through
+               IIIF, a second <gi>graphic</gi> of the type <val>IIIF</val>
+               gives that image and its size.</p>
+         </segmentation>
+         <interpretation>
+            <p>Parts of an advertisement that concern other products than the
+               Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
+               which describes them in a <gi>desc</gi>. Illustrations are
+               described in <gi>figure</gi>. Persons are linked to the GND with
+               <att>corresp</att>. Recurring motifs are marked as topics with
+               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
+               the taxonomy of topics; these are an interpretation, by whom
+               <att>resp</att> says.</p>
+         </interpretation>
+         <stdVals>
+            <p>Dates of publication are given in ISO 8601 in <att>when</att>,
+               as precisely as they are known.</p>
+         </stdVals>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
+        <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+        <rendition xml:id="right" scheme="css">text-align: right;</rendition>
+        <rendition xml:id="u" scheme="css">text-decoration: underline;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="exact_reproduction">
+             <gloss>Exact Reproduction</gloss>
+             <desc>In virtually all promotional materials between 1905 and 1926,
+                the claim of exact and faithful reproduction, of absolute
+                accurateness is consistently emphasized.</desc>
+          </category>
+          <category xml:id="superiority">
+             <gloss>Superiority</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage><language ident="es">Spanish</language></langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface>
+      <graphic url="ad201-0.jpg" width="3460px" height="4798px"/>
+      <zone points="650,3255 3200,3255 3200,3425 650,3425" xml:id="zone_headline"/>
+      <zone points="1880,3440 3330,3440 3330,3612 1880,3612" xml:id="zone_headline2"/>
+      <zone points="240,3290 650,3290 650,3998 240,3998" xml:id="zone_portrait1"/>
+      <zone points="215,4002 650,4002 650,4255 215,4255" xml:id="zone_text1"/>
+      <zone points="655,3460 1100,3460 1100,4262 655,4262" xml:id="zone_text2"/>
+      <zone points="1100,3470 1505,3470 1505,4110 1100,4110" xml:id="zone_portrait2"/>
+      <zone points="1100,4135 1540,4135 1540,4255 1100,4255" xml:id="zone_text3"/>
+      <zone points="1530,3620 1990,3620 1990,4258 1530,4258" xml:id="zone_text4"/>
+      <zone points="2000,3632 2410,3632 2410,4252 2000,4252" xml:id="zone_portrait3"/>
+      <zone points="2415,3635 2885,3635 2885,4272 2415,4272" xml:id="zone_text5"/>
+      <zone points="2880,3645 3330,3645 3330,3800 2880,3800" xml:id="zone_text6"/>
+      <zone points="2880,3836 3300,3836 3300,4528 2880,4528" xml:id="zone_portrait4"/>
+      <zone points="215,4268 2875,4268 2875,4492 215,4492" xml:id="zone_signature"/>
+    </surface>
+  </facsimile>
+  <text decls="#source_1">
+    <body>
+      <div facs="#zone_headline">
+        <head><hi rendition="#b #in"><lb/>Ya llegó el día de tener Música</hi></head>
+      </div>
+      <div facs="#zone_headline2">
+        <head><hi rendition="#b #in #right"><lb/>eléctrica perfecta</hi></head>
+      </div>
+      <div type="illustration" facs="#zone_portrait1">
+        <figure><desc>Halftone portrait photograph of Ignacy Jan Paderewski; his name, barely legible, in the lower right corner</desc></figure>
+      </div>
+      <div facs="#zone_text1">
+        <p><lb/>En el mundo musical se ha re-
+          <lb/>movido una gran admiración acer-
+          <lb/>ca de la perfección que han ob-
+          <lb/>tenido los fabricantes de los pia-
+          <lb/>nos eléctricos</p>
+      </div>
+      <div facs="#zone_text2">
+        <ab><hi rendition="#b #larger #u"><lb/><orgName>R. S. Howard</orgName>
+          <lb/>y <orgName>J. L. Stowers</orgName></hi></ab>
+        <p><lb/>al adaptar a los mismos la acción
+          <lb/>eléctrica</p>
+        <ab><hi rendition="#b #in #u"><lb/><name type="brand">Auto de Luxe</name>
+          <lb/><name type="brand">Welte Mignon</name></hi></ab>
+        <p><lb/>que constituye una verdadera obra
+          <lb/>artística porque <seg xml:id="topic_1" ana="#exact_reproduction" type="topic" resp="#claude">interpreta, con la
+          <lb/>mayor exactitud y alma, la músi-
+          <lb/>ca de los grandes pianistas</seg>, tales</p>
+      </div>
+      <div type="illustration" facs="#zone_portrait2">
+        <figure><desc>Portrait drawing of a young man in a dark jacket, not named; monogram "S" in the lower left corner</desc></figure>
+      </div>
+      <div facs="#zone_text3">
+        <p><lb/>como: <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Ho<unclear>f</unclear>mann</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Bu-<lb/>soni</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/119281953">Ganz</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint Saens</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreño</persName>,</p>
+      </div>
+      <div facs="#zone_text4">
+        <p><lb/><persName type="artist" corresp="https://d-nb.info/gnd/116327642">Gabrilowitsch</persName> y otros, por lo que
+          <lb/>queda comprobado que actual-
+          <lb/>mente tenemos <seg xml:id="topic_2" ana="#superiority" type="topic" resp="#claude">la música eléctri-
+          <lb/>ca más perfecta del mundo</seg>.</p>
+        <p><lb/>Todas las revistas musicales de
+          <lb/>los Estados Unidos han dedicado
+          <lb/>extensas páginas que tratan sobre
+          <lb/>la perfección de estos instrumen-
+          <lb/>tos.</p>
+        <p><lb/>Queda el lector invitado a ha-
+          <lb/>cer una visita a la exhibición de
+          <lb/>los mismos, donde será merecida-</p>
+      </div>
+      <div type="illustration" facs="#zone_portrait3">
+        <figure><desc>Portrait drawing of a man with a tie, not named; monogram "S" in the lower left corner</desc></figure>
+      </div>
+      <div facs="#zone_text5">
+        <p><lb/>mente atendido.</p>
+        <p><lb/>Además, esta casa, cuenta con
+          <lb/>varios expertos mecánicos, adies-
+          <lb/>trados en los Estados Unidos, que
+          <lb/>ilustran extensamente a quienes
+          <lb/>van al salón de conciertos, don-
+          <lb/>de se oyen las melodiosas voces
+          <lb/>de VIOLANO-VIRTUOSO, el <name type="brand">MIG-
+          <lb/>NON</name> y un sinnúmero de pianos y
+          <lb/>pianolas Howard, incuestionable-
+          <lb/>mente las mejores del mundo.</p>
+        <p><lb/>Y en cuanto al archivo, no hay</p>
+      </div>
+      <div facs="#zone_text6">
+        <p><lb/>para qué decir que es extensísi
+          <lb/>mo. Todo lo mejor que se ha es
+          <lb/>crito en música, aquí se encuentra</p>
+      </div>
+      <div type="illustration" facs="#zone_portrait4">
+        <figure><desc>Portrait drawing of a young man with dark wavy hair, not named; monogram "S" in the lower right corner</desc></figure>
+      </div>
+      <div facs="#zone_signature">
+        <ab><lb/><hi rendition="#b #in"><orgName>JOHN L. STOWERS</orgName></hi>
+          <address><addrLine><lb/><hi rendition="#b #u">SAN RAFAEL, 29.</hi></addrLine>
+            <addrLine><lb/><hi rendition="#b #u">TELEFONO A-3962.</hi></addrLine>
+            <addrLine><lb/><hi rendition="#b #in"><placeName>HABANA</placeName></hi></addrLine></address></ab>
+      </div>
+    </body>
+  </text>
+</TEI>
