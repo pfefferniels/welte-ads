@@ -1,83 +1,40 @@
-"use client"
-
-import React, { useEffect, useRef } from 'react'
-import * as d3 from 'd3'
+import React from 'react'
+import Link from 'next/link'
 import { stringToColour } from '../helpers/stringToColour'
+import { layoutBubbles, WeighedTerm } from '../lib/bubbles'
 import "./weighedCircles.css"
-import { useRouter } from 'next/navigation'
-
-interface WeighedTerm extends d3.SimulationNodeDatum {
-    topic: string
-    label: string
-    weight: number
-}
 
 interface TopicsCircleProps {
     data: WeighedTerm[]
 }
 
+// The circles are laid out when the page is built, so that the chart is
+// part of the static page and every circle is a link.
 export const WeighedCircles = ({ data }: TopicsCircleProps) => {
-    const svgRef = useRef<SVGSVGElement>(null)
-    const router = useRouter()
-
-    useEffect(() => {
-        if (!svgRef.current) return
-
-        // reset
-        svgRef.current.innerHTML = ''
-
-        const width = 1000, height = 800;
-
-        const svg = d3.select(svgRef.current)
-            .attr('width', width)
-            .attr('height', height);
-
-        // Scales the weight of a term to the radius
-        // of the circle representing it
-        const radiusScale = d3.scaleLinear()
-            .domain([0, d3.max(data, (d: WeighedTerm) => d.weight) ?? 0])
-            .range([0, 150]);
-
-        const simulation = d3.forceSimulation(data)
-            .force('charge', d3.forceManyBody().strength(7))
-            .force('collide', d3.forceCollide().radius(d => radiusScale((d as WeighedTerm).weight) + 1))
-            .force('center', d3.forceCenter(width / 2, height / 2))
-            .force('radial', d3.forceRadial((d: WeighedTerm) => radiusScale(d.weight), width / 2, height / 2));
-
-        const node = svg.append('g')
-            .attr('class', 'nodes')
-            .selectAll('g')
-            .data(data)
-            .enter()
-            .append('g')
-
-        // Draw the circles
-        node.attr('class', 'circle-group')
-            .on('click', (_, d) => {
-                router.push(`/topic/${d.topic}`)
-            })
-        
-        node
-            .append('circle')
-            .attr('class', 'weighted-circle')
-            .attr('r', d => radiusScale(d.weight))
-            .style("fill", (d: WeighedTerm) => stringToColour(d.topic))
-
-        // Draw the labels
-        node.append("text")
-            .attr('class', 'circle-label')
-            .style('font-size', d => 0.25 * radiusScale(d.weight) + 'px')
-            .text(d => d.label)
-
-        // Update the positions in each tick
-        simulation.nodes(data)
-            .on('tick', () => {
-                node
-                    .attr('transform', d => `translate(${d.x}, ${d.y})`)
-            });
-    }, [data, router])
+    const { bubbles, viewBox } = layoutBubbles(data)
 
     return (
-        <svg width={900} height={700} ref={svgRef} />
+        <svg className="weighed-circles" viewBox={viewBox.join(' ')} role="list" aria-label="Topics">
+            {bubbles.map(bubble => (
+                <g key={bubble.topic} transform={`translate(${bubble.x}, ${bubble.y})`} role="listitem">
+                    <Link href={`/topic/${bubble.topic}`} className="circle-group">
+                        <title>
+                            {`${bubble.label}: ${bubble.weight} ${bubble.weight === 1 ? 'occurrence' : 'occurrences'}`}
+                        </title>
+                        <circle
+                            className="weighted-circle"
+                            r={bubble.r}
+                            fill={stringToColour(bubble.topic)} />
+                        <text className="circle-label" fontSize={bubble.fontSize}>
+                            {bubble.lines.map((line, i) => (
+                                <tspan key={i} x={0} y={`${(i - (bubble.lines.length - 1) / 2) * 1.1}em`}>
+                                    {line}
+                                </tspan>
+                            ))}
+                        </text>
+                    </Link>
+                </g>
+            ))}
+        </svg>
     )
 }

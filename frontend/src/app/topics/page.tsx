@@ -1,34 +1,26 @@
 import React from 'react'
 import { Container, Typography } from '@mui/material'
 import { getAllMetadata, getTopics } from "../../lib/tei"
-import TopicsClient from "./TopicsClient"
+import { WeighedCircles } from "../../components/weighedCircles"
 
 export const metadata = {
   title: 'Topics',
 }
 
-interface Segment {
-  topic: string
-}
-
 export default function TopicsPage() {
-  const allMetadata = getAllMetadata()
-
-  const unorderedTopics = allMetadata
-    .map(m => m.topicSegments as Segment[])
-    .flat()
-    .map((segment: Segment) => segment.topic)
-
-  const counts = unorderedTopics.reduce((acc: Record<string, number>, value: string) => {
-    acc[value] = (acc[value] || 0) + 1
-    return acc
-  }, {})
+  // how often each topic is marked, on a passage or on a picture
+  const counts = new Map<string, number>()
+  for (const { topicSegments } of getAllMetadata()) {
+    for (const { topic } of topicSegments) {
+      counts.set(topic, (counts.get(topic) ?? 0) + 1)
+    }
+  }
 
   const topics = getTopics()
-  const weighedTopics = Object.keys(counts).map(key => ({
-    topic: key,
-    label: topics[key]?.label || key,
-    weight: counts[key]
+  const weighedTopics = Array.from(counts, ([topic, weight]) => ({
+    topic,
+    label: topics[topic]?.label || topic,
+    weight,
   }))
 
   return (
@@ -37,10 +29,11 @@ export default function TopicsPage() {
       <Typography>
         Topics are understood as recurring motifs,
         such as the illustration of a half-transparent &quot;ghost&quot;
-        sitting at the piano.
+        sitting at the piano. The area of each circle grows with
+        the number of passages and pictures marked with its topic.
       </Typography>
 
-      <TopicsClient data={weighedTopics} />
+      <WeighedCircles data={weighedTopics} />
     </Container>
   )
 }
