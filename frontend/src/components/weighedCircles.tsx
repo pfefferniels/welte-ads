@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { stringToColour } from '../helpers/stringToColour'
+import { topicPath } from '../helpers/topicPath'
 import { layoutBubbles, WeighedTerm } from '../lib/bubbles'
 import "./weighedCircles.css"
 
@@ -17,7 +18,7 @@ export const WeighedCircles = ({ data }: TopicsCircleProps) => {
         <svg className="weighed-circles" viewBox={viewBox.join(' ')} role="list" aria-label="Topics">
             {bubbles.map(bubble => (
                 <g key={bubble.topic} transform={`translate(${bubble.x}, ${bubble.y})`} role="listitem">
-                    <Link href={`/topic/${bubble.topic}`} className="circle-group">
+                    <Link href={topicPath(bubble.topic)} className="circle-group">
                         <title>
                             {`${bubble.label}: ${bubble.weight} ${bubble.weight === 1 ? 'occurrence' : 'occurrences'}`}
                         </title>

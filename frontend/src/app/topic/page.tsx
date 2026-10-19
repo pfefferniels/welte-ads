@@ -1,27 +1,21 @@
 import React from 'react'
-import { getAllMetadata, getTopics } from "../../lib/tei"
-import TopicClient from "./TopicClient"
+import Link from 'next/link'
+import { Container, Typography } from '@mui/material'
+import TopicRedirect from "./TopicRedirect"
 
 export const metadata = {
   title: 'Topic',
 }
 
-export interface Segment {
-  link: string
-  topic: string
-  text: string
-}
-
-export default function TopicPage() {
-  const allMetadata = getAllMetadata()
-
-  const segments: Segment[] = allMetadata.flatMap(meta =>
-    meta.topicSegments.map(segment => ({
-      link: `/${meta.slug}${segment.id}`,
-      topic: segment.topic,
-      text: segment.text,
-    }))
+// Each topic has its own page now; this one only keeps the links working
+// that told the topics apart by the fragment (/topic/#home).
+export default function TopicIndexPage() {
+  return (
+    <Container component="main" maxWidth="md">
+      <TopicRedirect />
+      <Typography>
+        See the <Link href="/topics">overview of the topics</Link>.
+      </Typography>
+    </Container>
   )
-
-  return <TopicClient segments={segments} topics={getTopics()} />
 }

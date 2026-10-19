@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
 import { JSDOM } from "jsdom"
-import { getAdBySlug, getAllMetadata, markRedundantLineBreaks, plainText, staticText, tidySpaceBeforePunctuation } from "./tei"
+import { getAdBySlug, getAllMetadata, markRedundantLineBreaks, passageText, plainText, staticText, tidySpaceBeforePunctuation } from "./tei"
 
 const marked = (body: string) => {
   const xml = `<TEI xmlns="http://www.tei-c.org/ns/1.0"><text>${body}</text></TEI>`
@@ -73,8 +73,41 @@ describe("plainText", () => {
     expect(plainText(tei("<p>Welte-<lb/>Mignon<lb/>Studios</p>"))).toBe("Welte-Mignon Studios")
   })
 
+  it("joins a word broken inside an element", () => {
+    expect(plainText(tei('<p><hi rendition="#i">music in-</hi>\n<lb/>vention</p>'))).toBe("music invention")
+    expect(plainText(tei("<p>el fra<unclear>-</unclear>\n<lb/>seo</p>"))).toBe("el fraseo")
+  })
+
+  it("keeps a dash at the end of a line apart", () => {
+    expect(plainText(tei("<p>for you -\n<lb/>tonight</p>"))).toBe("for you - tonight")
+  })
+
   it("leaves out the header", () => {
     expect(plainText(tei("<p>Text</p>"))).toBe("Text")
+  })
+})
+
+describe("passageText", () => {
+  const passage = (body: string) => {
+    const xml = `<TEI xmlns="http://www.tei-c.org/ns/1.0"><text>${body}</text></TEI>`
+    const doc = new JSDOM(xml, { contentType: "text/xml" }).window.document
+    return passageText(doc.querySelector("[ana]")!)
+  }
+
+  it("separates the lines of a passage", () => {
+    expect(passage('<seg ana="#x">\n  Phantom<lb/>Hands\n</seg>')).toBe("Phantom Hands")
+  })
+
+  it("gives only the reading that the facsimile shows", () => {
+    expect(passage('<seg ana="#x">met <app><rdg>gecombineerde</rdg><rdg>combineerende</rdg></app> patenten</seg>'))
+      .toBe("met gecombineerde patenten")
+    expect(passage('<seg ana="#x"><app><rdg>Trvk</rdg><lem>Tryk</lem></app></seg>')).toBe("Tryk")
+  })
+
+  it("leaves out pictures and notes", () => {
+    expect(passage('<seg ana="#x"><figure><desc>A pianist.</desc></figure>phantom hands<note>On hands.</note></seg>'))
+      .toBe("phantom hands")
+    expect(passage('<figure ana="#x"><desc>A pianist.</desc></figure>')).toBe("")
   })
 })
 
