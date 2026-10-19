@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
+import Link from "next/link"
 import * as d3 from 'd3'
-import { Box, IconButton, Stack, Tooltip } from "@mui/material"
+import { Box, IconButton, Popover, Stack, Tooltip, Typography } from "@mui/material"
 import { Add, CenterFocusStrong, Remove } from "@mui/icons-material"
 import { stringToColour } from "../helpers/stringToColour"
 
@@ -9,11 +10,19 @@ export interface Coordinate {
     long: number
 }
 
+interface MarkerAd {
+    slug: string
+    title: string
+    // when the ad appeared, e.g. "March to July 1926"
+    when: string
+    newspapers: string[]
+}
+
 export interface Marker {
     coordinate: Coordinate
     companyName: string
     label: string
-    adCount: number
+    ads: MarkerAd[]
 }
 
 interface WorldMapProps {
@@ -26,6 +35,9 @@ const height = 500
 export const WorldMap = ({ markers }: WorldMapProps) => {
     const svgRef = useRef<SVGSVGElement>(null)
     const zoomRef = useRef<d3.ZoomBehavior<SVGSVGElement, unknown>>(null)
+    // the clicked marker and where it was clicked, kept while the popover closes
+    const [selected, setSelected] = useState<{ marker: Marker, top: number, left: number }>()
+    const [open, setOpen] = useState(false)
 
     useEffect(() => {
         if (!svgRef.current) return
@@ -49,7 +61,7 @@ export const WorldMap = ({ markers }: WorldMapProps) => {
 
             // Scale for bubble size: logarithmic, so that the few companies
             // with many ads do not bury the many with only one or two
-            const maxCount = d3.max(markers, marker => marker.adCount) ?? 1
+            const maxCount = d3.max(markers, marker => marker.ads.length) ?? 1
             const size = d3.scaleLog()
                 .domain([1, Math.max(maxCount, 2)])
                 .range([3, 24])
@@ -69,7 +81,7 @@ export const WorldMap = ({ markers }: WorldMapProps) => {
             // The circles are positioned rather than scaled when zooming,
             // so that they keep their size and the legend stays valid.
             const points = [...markers]
-                .sort((a, b) => b.adCount - a.adCount)
+                .sort((a, b) => b.ads.length - a.ads.length)
                 .map(marker => {
                     const [x, y] = projection([marker.coordinate.long, marker.coordinate.lat])!
                     return { ...marker, x, y }
@@ -78,14 +90,19 @@ export const WorldMap = ({ markers }: WorldMapProps) => {
                 .selectAll("circle")
                 .data(points)
                 .join("circle")
-                .attr("r", d => size(d.adCount))
+                .attr("r", d => size(d.ads.length))
                 .style("fill", d => stringToColour(d.companyName))
+                .style("cursor", "pointer")
                 .attr("fill-opacity", .3)
                 .attr('stroke', 'black')
                 .attr('stroke-width', 0.5)
+                .on("click", (event: MouseEvent, d) => {
+                    setSelected({ marker: d, top: event.clientY, left: event.clientX })
+                    setOpen(true)
+                })
             circles
                 .append("title")
-                .text(d => `${d.label}: ${d.adCount} ${d.adCount === 1 ? 'ad' : 'ads'}`)
+                .text(d => `${d.label}: ${d.ads.length} ${d.ads.length === 1 ? 'ad' : 'ads'}`)
 
             // Add legend: values evenly spaced on the logarithmic scale
             const valuesToShow = [1, 3, 10]
@@ -200,6 +217,34 @@ export const WorldMap = ({ markers }: WorldMapProps) => {
                     </IconButton>
                 </Tooltip>
             </Stack>
+            <Popover
+                open={open}
+                onClose={() => setOpen(false)}
+                anchorReference="anchorPosition"
+                anchorPosition={selected && { top: selected.top, left: selected.left }}
+                slotProps={{ paper: { sx: { maxWidth: 340, maxHeight: '50vh' } } }}
+            >
+                {selected && (
+                    <Box sx={{ px: 2, py: 1.5 }}>
+                        <Typography component="h3" sx={{ fontSize: '1.1rem', fontWeight: 600, lineHeight: 1.25, pb: 0 }}>
+                            {selected.marker.label}
+                        </Typography>
+                        <Typography variant="body2" sx={{ color: 'text.secondary', mb: 1 }}>
+                            {selected.marker.ads.length} {selected.marker.ads.length === 1 ? 'ad' : 'ads'}
+                        </Typography>
+                        <Box component="ul" sx={{ m: 0, p: 0, listStyle: 'none' }}>
+                            {selected.marker.ads.map(ad => (
+                                <Box component="li" key={ad.slug} sx={{ mb: 1, fontSize: '1.05rem', lineHeight: 1.25 }}>
+                                    <Link href={`/${ad.slug}`}>{ad.title}</Link>
+                                    <Typography variant="body2" sx={{ fontSize: '0.85rem', color: 'text.secondary' }}>
+                                        {ad.when} · {ad.newspapers.join('; ')}
+                                    </Typography>
+                                </Box>
+                            ))}
+                        </Box>
+                    </Box>
+                )}
+            </Popover>
         </Box>
     )
 }
