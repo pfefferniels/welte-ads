@@ -115,6 +115,36 @@
           </msIdentifier>
         </msDesc>
       </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>The Original Auto-Piano Cy. … AMERIKAANSCHE WELTE-MIGNON</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">The Original Auto-Piano Cy. … AMERIKAANSCHE WELTE-MIGNON</title>
+            <author><orgName>C. A. Muus</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nieuwe Rotterdamsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747891">Rotterdam</pubPlace>
+            <date type="publication" when="1923-06-10">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nieuwe Rotterdamsche Courant</title>
+            <biblScope unit="issue">June 10, 1923</biblScope>
+            <biblScope unit="pages">14</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Placed under the heading "Mededeelingen en Aanbevelingen (buiten verantwoordelijkheid van de Redactie)", but set as a framed display ad. Set anew in longer lines, with the headline in one bold line, the firm's name and "te New-York" in upper and lower case, "Amerikaansche Welte-Mignon" in large bold capitals on a line of its own, and the number "A.40" at the right of the line "den vertegenwoordiger voor Rotterdam" instead of below the advertisement.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010026623:mpeg21:a0085</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc>
@@ -158,7 +188,12 @@
             <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
             printings were identified as the same advertisement but not
             collated word for word; differences that were noticed are
-            recorded with <gi>app</gi> or in a note.</p>
+            recorded with <gi>app</gi>, whose first <gi>rdg</gi> is that of
+            the transcribed printing, or in a note. A printing that was set
+            anew counts as the same advertisement as long as its words
+            differ only in spelling, punctuation or a few words; its note
+            describes the setting, whose line breaks and type are not
+            recorded.</p>
          <p>The regions and lines of the scans were mostly marked in
             eScriptorium and converted from PAGE XML to TEI. The text was in
             part recognised automatically (HTR) and corrected against the
@@ -222,6 +257,7 @@
       <langUsage><language ident="nl">Dutch</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-20" who="#claude">Merged with the former ad056 (Nieuwe Rotterdamsche Courant, June 10, 1923, a new setting of the same text); its printings are further sources, its readings are recorded with app.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -246,28 +282,28 @@
           <lb/><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">HOFMANN</persName>.
           <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118518011">BUSONI</persName>.
           <lb/><persName type="artist" corresp="https://d-nb.info/gnd/116014490">PACHMANN</persName>.
-          <lb/><app><rdg source="#source_1 #source_3"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">D’ALBERT</persName></rdg><rdg source="#source_2"><persName type="artist" corresp="https://d-nb.info/gnd/118501437"><sic>Ds Albert</sic></persName></rdg></app>.
+          <lb/><app><rdg source="#source_1 #source_3 #source_4"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">D’ALBERT</persName></rdg><rdg source="#source_2"><persName type="artist" corresp="https://d-nb.info/gnd/118501437"><sic>Ds Albert</sic></persName></rdg></app>.
           <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118524186">DEBUSSY</persName>.
-          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/11861911X"><app><rdg source="#source_1">R. STRAUSS</rdg><rdg source="#source_2 #source_3">A. Strauss</rdg></app></persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/11861911X"><app><rdg source="#source_1 #source_4">R. STRAUSS</rdg><rdg source="#source_2 #source_3">A. Strauss</rdg></app></persName><app><rdg source="#source_1 #source_2 #source_3">,</rdg><rdg source="#source_4">.</rdg></app>
         </hi></ab>
       </div>
       <div facs="#zone_headline">
         <ab><hi rendition="#c">
-          <hi rendition="#larger"><lb/>De beroemdste Pianisten der Wereld</hi>
+          <hi rendition="#larger"><lb/>De beroemdste Pianisten der <app><rdg source="#source_1 #source_2 #source_3">Wereld</rdg><rdg source="#source_4">wereld</rdg></app></hi>
           <hi rendition="#smaller"><lb/>spelen voor</hi>
         </hi></ab>
       </div>
       <div facs="#zone_brand">
         <ab><hi rendition="#c #b">
           <hi rendition="#in"><lb/><orgName>THE ORIGINAL
-          <lb/>AUTO-PIANO Cy</orgName></hi>
+          <lb/>AUTO-PIANO Cy<app><rdg source="#source_1 #source_2 #source_3"/><rdg source="#source_4">.</rdg></app></orgName></hi>
           <hi rendition="#smaller"><lb/>TE <placeName>NEW-YORK</placeName></hi>
         </hi></ab>
       </div>
       <div facs="#zone_text">
-        <p><lb/>en dus ook voor hen, <app><rdg source="#source_1 #source_3">die</rdg><rdg source="#source_2">welke</rdg></app> in
+        <p><lb/>en dus ook voor hen, <app><rdg source="#source_1 #source_3 #source_4">die</rdg><rdg source="#source_2">welke</rdg></app> in
           <lb/>het bezit zijn van een Ameri-
-          <lb/>kaansche <name type="brand">Welte-Mignon</name>.</p>
+          <lb/>kaansche <name type="brand">Welte-Mignon</name><app><rdg source="#source_1 #source_2 #source_3">.</rdg><rdg source="#source_4"/></app></p>
         <p><lb/>Zonder verplichting dagelijks
           <lb/>te hooren bij den vertegen-
           <lb/>woordiger voor <placeName>Rotterdam</placeName></p>
@@ -275,11 +311,11 @@
       <div facs="#zone_signature">
         <ab><hi rendition="#c #b">
           <lb/><hi rendition="#in"><orgName>C. A. MUUS</orgName></hi>
-          <address><addrLine><lb/><app><rdg source="#source_1 #source_3">v. Oldenbarneveltstr.</rdg><rdg source="#source_2">v. Oldenbarneveldstr.</rdg></app> 110-112.</addrLine></address>
+          <address><addrLine><lb/><app><rdg source="#source_1 #source_3">v. Oldenbarneveltstr.</rdg><rdg source="#source_2">v. Oldenbarneveldstr.</rdg><rdg source="#source_4">Van Oldenbarneveltstraat</rdg></app> 110<app><rdg source="#source_1 #source_2 #source_3">-</rdg><rdg source="#source_4">—</rdg></app>112.</addrLine></address>
         </hi></ab>
       </div>
       <div facs="#zone_ref">
-        <ab><hi rendition="#right #smaller"><lb/><app><rdg source="#source_1">Recl. R4027 40</rdg><rdg source="#source_2">45216 40</rdg><rdg source="#source_3">Recl. 45333 40</rdg></app></hi></ab>
+        <ab><hi rendition="#right #smaller"><lb/><app><rdg source="#source_1">Recl. R4027 40</rdg><rdg source="#source_2">45216 40</rdg><rdg source="#source_3">Recl. 45333 40</rdg><rdg source="#source_4">A.40</rdg></app></hi></ab>
       </div>
     </body>
   </text>

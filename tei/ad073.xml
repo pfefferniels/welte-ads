@@ -4,8 +4,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Ad in "Het nieuws van den dag voor Nederlandsch-Indië"</title>
-        <title type="sub">October 1911</title>
+        <title type="main">Ad in "Het nieuws van den dag voor Nederlandsch-Indië" and "Bataviaasch Nieuwsblad"</title>
+        <title type="sub">October 2 to 11, 1911</title>
         <author>
           <orgName key="salzmann">Edmund Salzmann</orgName>
         </author>
@@ -163,6 +163,63 @@
           </msIdentifier>
         </msDesc>
       </sourceDesc>
+      <sourceDesc xml:id="source_6">
+        <bibl>Heden ontpakt: EEN REPRODUCTIONS PIANO Welte Mignon.</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Heden ontpakt: EEN REPRODUCTIONS PIANO Welte Mignon.</title>
+            <author><orgName>Edmund Salzmann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Bataviaasch Nieuwsblad</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/1642911">Batavia</pubPlace>
+            <date type="publication" when="1911-10-07">1911</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Bataviaasch Nieuwsblad</title>
+            <biblScope unit="issue">October 7, 1911, No. 257</biblScope>
+            <biblScope unit="pages">11</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Set anew, with Heden ontpakt: in bold italic, EEN REPRODUCTIONS PIANO in capitals on a line of its own above Welte Mignon in large bold upper and lower case, the text as one paragraph in shorter lines, the firm's name in upper and lower case, Piano- en Muziekhandel in bold italic and the address in capitals.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:011035898:mpeg21:a0049</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_7">
+        <bibl>Heden ontpakt: EEN REPRODUCTIONS PIANO Welte Mignon.</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Heden ontpakt: EEN REPRODUCTIONS PIANO Welte Mignon.</title>
+            <author><orgName>Edmund Salzmann</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Bataviaasch Nieuwsblad</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/1642911">Batavia</pubPlace>
+            <date type="publication" when="1911-10-10">1911</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Bataviaasch Nieuwsblad</title>
+            <biblScope unit="issue">October 10, 1911, No. 259</biblScope>
+            <biblScope unit="pages">11</biblScope>
+          </seriesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:011035900:mpeg21:a0051</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc>
@@ -206,7 +263,12 @@
             <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
             printings were identified as the same advertisement but not
             collated word for word; differences that were noticed are
-            recorded with <gi>app</gi> or in a note.</p>
+            recorded with <gi>app</gi>, whose first <gi>rdg</gi> is that of
+            the transcribed printing, or in a note. A printing that was set
+            anew counts as the same advertisement as long as its words
+            differ only in spelling, punctuation or a few words; its note
+            describes the setting, whose line breaks and type are not
+            recorded.</p>
          <p>The regions and lines of the scans were mostly marked in
             eScriptorium and converted from PAGE XML to TEI. The text was in
             part recognised automatically (HTR) and corrected against the
@@ -279,6 +341,7 @@
       <langUsage><language ident="nl">Dutch</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-20" who="#claude">Merged with the former ad074 (Bataviaasch Nieuwsblad, October 7 and 10, 1911, a new setting of the same text); its printings are further sources, its readings are recorded with app.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -301,26 +364,26 @@
         <head><hi rendition="#b #g"><lb/>Heden ontpakt:</hi></head>
       </div>
       <div facs="#zone_title">
-        <head><hi rendition="#c #in"><lb/>eene reproductions-Piano
-          <lb/><name type="brand">WELTE-MIGNON</name>.</hi></head>
+        <head><hi rendition="#c #in"><lb/><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">eene</rdg><rdg source="#source_6 #source_7">EEN</rdg></app> <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">reproductions-Piano</rdg><rdg source="#source_6 #source_7">REPRODUCTIONS PIANO</rdg></app>
+          <lb/><name type="brand"><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">WELTE-MIGNON</rdg><rdg source="#source_6 #source_7">Welte Mignon</rdg></app></name>.</hi></head>
       </div>
       <div facs="#zone_text">
-        <p><hi rendition="#b #smaller"><lb/>Dit is <seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">het fraaiste, beste en nieuwste instrument</seg> dat tot heden op dat gebied in den
-          <lb/>handel is gebracht en werd nog niet op <placeName>Java</placeName> geïmporteerd.</hi></p>
-        <p><hi rendition="#b #smaller"><lb/>Het eerste exemplaar door mij nu verkocht aan een administrateur in de <placeName>Preanger</placeName>,
+        <p><hi rendition="#b #smaller"><lb/>Dit is <seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">het fraaiste, beste en nieuwste instrument</seg><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5"/><rdg source="#source_6 #source_7">,</rdg></app> dat tot heden op dat gebied in den
+          <lb/>handel <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">is</rdg><rdg source="#source_6 #source_7"/></app> gebracht en <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">werd</rdg><rdg source="#source_6 #source_7"/></app> nog niet op <placeName>Java</placeName> <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">geïmporteerd</rdg><rdg source="#source_6 #source_7">geimporteerd is</rdg></app>.</hi></p>
+        <p><hi rendition="#b #smaller"><lb/>Het eerste exemplaar door mij nu verkocht aan een <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">administrateur</rdg><rdg source="#source_6 #source_7">Administrateur</rdg></app> in de <placeName>Preanger</placeName><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">,</rdg><rdg source="#source_6 #source_7"/></app>
           <lb/>wordt tot en met 15 October voor belangstellenden tentoongesteld bij den alleenvertegen-
-          <lb/>woordiger</hi></p>
+          <lb/>woordiger<app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5"/><rdg source="#source_6 #source_7">.</rdg></app></hi></p>
       </div>
       <div facs="#zone_signature">
-        <ab><hi rendition="#c"><lb/><hi rendition="#in"><orgName>EDMUND SALZMANN</orgName></hi>
+        <ab><hi rendition="#c"><lb/><hi rendition="#in"><orgName>EDMUND SALZMANN</orgName><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5"/><rdg source="#source_6 #source_7">,</rdg></app></hi>
           <lb/><hi rendition="#larger">Piano- en Muziekhandel,</hi>
-          <lb/><hi rendition="#b"><address><addrLine>Noordwijk No. 12, Weltevreden</addrLine></address></hi></hi></ab>
+          <lb/><hi rendition="#b"><address><addrLine>Noordwijk No. 12, Weltevreden<app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5"/><rdg source="#source_6 #source_7">.</rdg></app></addrLine></address></hi></hi></ab>
       </div>
       <div facs="#zone_attest">
         <ab><hi rendition="#b"><lb/>Attesten liggen ter inzage.</hi></ab>
       </div>
       <div facs="#zone_number">
-        <ab><hi rendition="#right #smaller"><lb/>6225</hi></ab>
+        <ab><hi rendition="#right #smaller"><lb/><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">6225</rdg><rdg source="#source_6 #source_7">8986</rdg></app></hi></ab>
       </div>
     </body>
   </text>

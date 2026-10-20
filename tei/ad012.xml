@@ -146,7 +146,12 @@
                  <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
                  printings were identified as the same advertisement but not
                  collated word for word; differences that were noticed are
-                 recorded with <gi>app</gi> or in a note.</p>
+                 recorded with <gi>app</gi>, whose first <gi>rdg</gi> is that of
+                 the transcribed printing, or in a note. A printing that was set
+                 anew counts as the same advertisement as long as its words
+                 differ only in spelling, punctuation or a few words; its note
+                 describes the setting, whose line breaks and type are not
+                 recorded.</p>
               <p>The regions and lines of the scans were mostly marked in
                  eScriptorium and converted from PAGE XML to TEI. The text was in
                  part recognised automatically (HTR) and corrected against the

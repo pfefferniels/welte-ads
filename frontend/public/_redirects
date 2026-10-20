@@ -1,3 +1,29 @@
 # Cloudflare Pages: addresses that the site used before
 /companies /places/ 301
 /companies/ /places/ 301
+
+# advertisements merged into another as further printings (2026-10-20)
+/ad056 /ad055/ 301
+/ad056/ /ad055/ 301
+/tei/ad056.xml /tei/ad055.xml 301
+/ad062 /ad059/ 301
+/ad062/ /ad059/ 301
+/tei/ad062.xml /tei/ad059.xml 301
+/ad074 /ad073/ 301
+/ad074/ /ad073/ 301
+/tei/ad074.xml /tei/ad073.xml 301
+/ad087 /ad086/ 301
+/ad087/ /ad086/ 301
+/tei/ad087.xml /tei/ad086.xml 301
+/ad123 /ad122/ 301
+/ad123/ /ad122/ 301
+/tei/ad123.xml /tei/ad122.xml 301
+/ad124 /ad122/ 301
+/ad124/ /ad122/ 301
+/tei/ad124.xml /tei/ad122.xml 301
+/ad125 /ad122/ 301
+/ad125/ /ad122/ 301
+/tei/ad125.xml /tei/ad122.xml 301
+/ad206 /ad205/ 301
+/ad206/ /ad205/ 301
+/tei/ad206.xml /tei/ad205.xml 301

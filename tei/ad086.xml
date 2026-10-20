@@ -5,7 +5,7 @@
     <fileDesc>
       <titleStmt>
         <title type="main">Ad in "Berlingske Politiske og Avertissementstidende"</title>
-        <title type="sub">April 1 and May 1, 1912</title>
+        <title type="sub">March 30 to May 1, 1912</title>
         <author>
           <orgName key="winther">Chr. Winther</orgName>
         </author>
@@ -85,6 +85,66 @@
           </msIdentifier>
         </msDesc>
       </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>Welte-Pianon Reproduktions-Klaver</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte-Pianon Reproduktions-Klaver</title>
+            <author><orgName>Chr. Winther</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nationaltidende</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2618425">København</pubPlace>
+            <date type="publication" when="1912-04-30">1912</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nationaltidende</title>
+            <biblScope unit="issue">No. 12971, evening edition (Aften), April 30, 1912</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Set anew, with other line breaks in the text, the bold type beginning only at "Verdens" and the pianists' names in bold without letter-spacing.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Mediestream (Royal Danish Library)</repository>
+            <idno>
+              <idno type="URLImages">https://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3A5db162ec-9a9e-4adb-8b56-288222988ed1</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>Welte-Pianon Reproduktions-Klaver</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte-Pianon Reproduktions-Klaver</title>
+            <author><orgName>Chr. Winther</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Nationaltidende</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2618425">København</pubPlace>
+            <date type="publication" when="1912-03-30">1912</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Nationaltidende</title>
+            <biblScope unit="issue">evening edition, March 30, 1912</biblScope>
+            <biblScope unit="pages">2</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The same setting as on April 30, 1912.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Mediestream (Royal Danish Library)</repository>
+            <idno>
+              <idno type="URLImages">https://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3Ad2496afa-55ef-4d89-aeda-66603dc926c4</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc>
@@ -128,7 +188,12 @@
             <gi>text</gi> points to its <gi>sourceDesc</gi>. The further
             printings were identified as the same advertisement but not
             collated word for word; differences that were noticed are
-            recorded with <gi>app</gi> or in a note.</p>
+            recorded with <gi>app</gi>, whose first <gi>rdg</gi> is that of
+            the transcribed printing, or in a note. A printing that was set
+            anew counts as the same advertisement as long as its words
+            differ only in spelling, punctuation or a few words; its note
+            describes the setting, whose line breaks and type are not
+            recorded.</p>
          <p>The regions and lines of the scans were mostly marked in
             eScriptorium and converted from PAGE XML to TEI. The text was in
             part recognised automatically (HTR) and corrected against the
@@ -204,6 +269,7 @@
       <langUsage><language ident="da">Danish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-20" who="#claude">Merged with the former ad087 (Nationaltidende, March 30 and April 30, 1912, a new setting of the same text); its printings are further sources, its readings are recorded with app.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -224,19 +290,19 @@
         <head><hi rendition="#c #b #in"><lb/><name type="brand">Welte-Pianon</name></hi></head>
       </div>
       <div facs="#zone_subhead">
-        <ab><hi rendition="#c"><lb/>Reproduktions-<sic>Klaven</sic>,</hi></ab>
+        <ab><hi rendition="#c"><lb/>Reproduktions-<app><rdg source="#source_1 #source_2"><sic>Klaven</sic></rdg><rdg source="#source_3 #source_4">Klaver</rdg></app><app><rdg source="#source_1 #source_2">,</rdg><rdg source="#source_3 #source_4"/></app></hi></ab>
       </div>
       <div facs="#zone_text">
         <ab><lb/>byder Muligheden <hi rendition="#b">at høre Verdens
-          <lb/>første Pianister <seg xml:id="topic_1" ana="#home" type="topic" resp="#claude">i Ens eget Hjem</seg>.</hi>
-          <lb/><seg xml:id="topic_2" ana="#touch_of_a_button" type="topic" resp="#claude">Et <app><rdg source="#source_1"><sic>Trvk</sic></rdg><rdg source="#source_2">Tryk</rdg></app> paa Knappen</seg>, og der gengives
-          <lb/>en <hi rendition="#b #g"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Albert</persName> <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116429623">Reisenauer</persName></hi> etc.</ab>
+          <lb/>første Pianister <seg xml:id="topic_1" ana="#home" type="topic" resp="#claude">i <app><rdg source="#source_1 #source_2">Ens</rdg><rdg source="#source_3 #source_4">ens</rdg></app> eget Hjem</seg>.</hi>
+          <lb/><seg xml:id="topic_2" ana="#touch_of_a_button" type="topic" resp="#claude">Et <app><rdg source="#source_1"><sic>Trvk</sic></rdg><rdg source="#source_2 #source_3 #source_4">Tryk</rdg></app> paa Knappen</seg><app><rdg source="#source_1 #source_2">,</rdg><rdg source="#source_3 #source_4"/></app> og der gengives
+          <lb/>en <hi rendition="#b #g"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Albert</persName><app><rdg source="#source_1 #source_2"/><rdg source="#source_3 #source_4">,</rdg></app> <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116429623">Reisenauer</persName></hi> etc.</ab>
       </div>
       <div facs="#zone_signature">
-        <ab><hi rendition="#c"><lb/>Eneforhandler for Danmark:
-          <lb/>Piano- og Orgel-Fabrikant
-          <lb/><hi rendition="#b"><orgName>Chr. Winther</orgName>,</hi> <address><addrLine>Frederiksborggade 36,</addrLine>
-          <lb/><addrLine>›Nørrehus‹, Kjøbenhavn.</addrLine></address></hi></ab>
+        <ab><hi rendition="#c"><lb/>Eneforhandler for Danmark<app><rdg source="#source_1 #source_2">:</rdg><rdg source="#source_3 #source_4">,</rdg></app>
+          <lb/>Piano<app><rdg source="#source_1 #source_2">-</rdg><rdg source="#source_3 #source_4"/></app> og <app><rdg source="#source_1 #source_2">Orgel-Fabrikant</rdg><rdg source="#source_3 #source_4">Orgelfabrikant</rdg></app><app><rdg source="#source_1 #source_2"/><rdg source="#source_3 #source_4">,</rdg></app>
+          <lb/><hi rendition="#b"><orgName>Chr. Winther</orgName>,</hi> <address><addrLine><app><rdg source="#source_1 #source_2">Frederiksborggade</rdg><rdg source="#source_3 #source_4">Frederiksborgg.</rdg></app> 36,</addrLine>
+          <lb/><addrLine><app><rdg source="#source_1 #source_2">›</rdg><rdg source="#source_3 #source_4"/></app>Nørrehus<app><rdg source="#source_1 #source_2">‹</rdg><rdg source="#source_3 #source_4"/></app><app><rdg source="#source_1 #source_2">,</rdg><rdg source="#source_3 #source_4">.</rdg></app> <app><rdg source="#source_1 #source_2">Kjøbenhavn</rdg><rdg source="#source_3 #source_4">København</rdg></app>.</addrLine></address></hi></ab>
       </div>
     </body>
   </text>
