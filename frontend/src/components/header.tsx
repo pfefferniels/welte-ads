@@ -9,6 +9,7 @@ import styled from '@emotion/styled'
 interface Links {
   name: string
   link: string
+  also?: string[]
 }
 
 interface Props {

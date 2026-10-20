@@ -3,6 +3,7 @@ import { Container, Typography } from '@mui/material'
 import { getAllMetadata } from "../../lib/tei"
 import { artistTimelines, bandwidth, headOf } from "../../lib/artists"
 import { names } from "../../labels/names"
+import { personLink } from "../../lib/anchors"
 import ArtistsChart from "./ArtistsChart"
 
 export const metadata = {
@@ -48,7 +49,7 @@ export default function ArtistsPage() {
           {others.map((artist, i) => (
             <React.Fragment key={artist.id}>
               {i > 0 && '; '}
-              <a href={artist.id}>{artist.name}</a> ({artist.mentions})
+              <a href={personLink(artist.id)}>{artist.name}</a> ({artist.mentions})
             </React.Fragment>
           ))}.
         </Typography>
