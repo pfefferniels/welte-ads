@@ -52,8 +52,9 @@ zones), and open the page with `?debug` (`npm run dev`, then
 
 The site always shows the current state of `main`. A numbered release fixes a
 state that can be cited: set `version` and `date-released` in `CITATION.cff`,
-commit, and push the tag `v<version>` (e.g. `git tag v1.0.0 && git push origin
-v1.0.0`). The release workflow checks that the tag matches `CITATION.cff` and
-publishes a GitHub release with the TEI files as a zip. The repository is
+commit to `main`, and either run the Release workflow from the Actions tab,
+which tags the commit itself, or push the tag `v<version>` (e.g. `git tag
+v1.0.0 && git push origin v1.0.0`; the workflow then checks that it matches
+`CITATION.cff`). It publishes a GitHub release with the TEI files as a zip. The repository is
 connected to Zenodo, which archives every release and gives it a DOI; the
 metadata of the Zenodo record come from `.zenodo.json`.

@@ -4,6 +4,9 @@ on:
   push:
     tags:
       - 'v*'
+  # a release can also be started from the Actions tab: it then tags the
+  # commit with the version that CITATION.cff names
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -16,20 +19,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Check that CITATION.cff names this version
+      - name: Take the version from CITATION.cff
         run: |
-          version="${GITHUB_REF_NAME#v}"
-          grep -Eq "^version: \"?${version}\"?$" CITATION.cff || {
-            echo "CITATION.cff does not give version ${version}" >&2
+          version=$(sed -n 's/^version: *"\{0,1\}\([^"]*\)"\{0,1\} *$/\1/p' CITATION.cff)
+          [ -n "$version" ] || { echo "CITATION.cff names no version" >&2; exit 1; }
+          if [ "$GITHUB_REF_TYPE" = tag ] && [ "${GITHUB_REF_NAME#v}" != "$version" ]; then
+            echo "CITATION.cff gives version ${version}, not ${GITHUB_REF_NAME#v}" >&2
             exit 1
-          }
+          fi
+          echo "TAG=v${version}" >> "$GITHUB_ENV"
 
       - name: Pack the TEI files
-        run: zip -q -r "welte-ads-tei-${GITHUB_REF_NAME}.zip" tei LICENSE.md CITATION.cff
+        run: zip -q -r "welte-ads-tei-${TAG}.zip" tei LICENSE.md CITATION.cff
 
       - name: Publish the release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "$GITHUB_REF_NAME" "welte-ads-tei-${GITHUB_REF_NAME}.zip" \
-            --title "$GITHUB_REF_NAME" --generate-notes
+          gh release create "$TAG" "welte-ads-tei-${TAG}.zip" \
+            --title "Welte-Mignon Advertisements Collection ${TAG}" \
+            --target "$GITHUB_SHA" \
+            --notes "The TEI files of the Welte-Mignon Advertisements Collection as of ${TAG}, under CC BY 4.0. See https://anz.welte225.org/data/ for how they are encoded and how to cite them."
