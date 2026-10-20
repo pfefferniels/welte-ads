@@ -316,6 +316,20 @@ interface TopicSegment {
   id: string
   topic: string
   text: string
+  // who assigned the topic, e.g. "#claude"
+  resp: string
+}
+
+// whether the editor has checked the ad against the scan
+export type Status = 'checked' | 'unchecked'
+
+// someone named in the title statement and what they did
+interface Contributor {
+  // e.g. "Transcription and encoding"
+  role: string
+  name: string
+  // the xml:id that @resp and @who point to, e.g. "claude"
+  id: string
 }
 
 interface AdMetadata {
@@ -333,6 +347,10 @@ interface AdMetadata {
   fullText: string
   // the links to the digital images of the printing that is transcribed
   imageLinks: string[]
+  // @status on <revisionDesc>
+  status: Status
+  // who transcribed, encoded, edited … the ad
+  contributors: Contributor[]
 }
 
 interface AdData extends AdMetadata {
@@ -344,7 +362,14 @@ interface AdData extends AdMetadata {
   textHtml: string
 }
 
-function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
+// a person's name as written in running text, e.g. "Niels Pfeffer"
+const displayName = (el: Element) => {
+  const part = (name: string) => (el.querySelector(name)?.textContent || '').trim()
+  const full = [part('forename'), part('surname')].filter(Boolean).join(' ')
+  return full || (el.textContent || '').replace(/\s+/g, ' ').trim()
+}
+
+export function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
   const dom = new JSDOM(xmlString, { contentType: 'text/xml' })
   const doc = dom.window.document
 
@@ -380,6 +405,7 @@ function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
         id: id ? `#${id}` : '',
         topic: a,
         text: seg.textContent || '',
+        resp: seg.getAttribute('resp') || '',
       }))
     })
     .flat()
@@ -392,7 +418,22 @@ function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
     .map(idno => (idno.textContent || '').trim())
     .filter(Boolean)
 
-  return { company, title, titleMain, titleSub, dates, newspapers, mentions, topicSegments, fullText: plainText(xmlString), imageLinks }
+  // an ad that does not say counts as unchecked
+  const status: Status = doc.querySelector('revisionDesc')?.getAttribute('status') === 'checked'
+    ? 'checked'
+    : 'unchecked'
+  // who did what, as the title statement names them
+  const contributors = Array.from(doc.querySelectorAll('fileDesc > titleStmt > respStmt')).flatMap(respStmt => {
+    const role = (respStmt.querySelector('resp')?.textContent || '').replace(/\s+/g, ' ').trim()
+    return Array.from(respStmt.children)
+      .filter(child => ['persName', 'name', 'orgName'].includes(child.localName))
+      .map(name => ({ role, name: displayName(name), id: name.getAttribute('xml:id') || '' }))
+  })
+
+  return {
+    company, title, titleMain, titleSub, dates, newspapers, mentions, topicSegments,
+    fullText: plainText(xmlString), imageLinks, status, contributors,
+  }
 }
 
 /**

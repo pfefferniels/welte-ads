@@ -1,9 +1,11 @@
 import React from "react"
+import Link from "next/link"
 import Box from "@mui/material/Box"
 import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
 import { getAllAds, getAdBySlug, getTopics } from "../../lib/tei"
 import { names } from "../../labels/names"
+import { EDITOR } from "../../lib/site"
 import EditionCeteicean from "../../components/tei/EditionCeteicean"
 import Citation from "../../components/citation"
 
@@ -26,6 +28,11 @@ export default async function AdPage({ params }: { params: Promise<{ slug: strin
   const { slug } = await params
   const ad = getAdBySlug(slug)
   const company = names[ad.company.name] || ad.company.name
+  // the editor of the collection edits every ad, though the older files
+  // name him only as their transcriber
+  const contributors = ad.contributors.some(c => c.role === 'Editor')
+    ? ad.contributors
+    : [{ role: 'Editor', name: EDITOR.name }, ...ad.contributors]
 
   return (
     <Container component="main" maxWidth="md">
@@ -36,6 +43,30 @@ export default async function AdPage({ params }: { params: Promise<{ slug: strin
         <Typography variant="subtitle1" component="p" sx={{ lineHeight: 1.4 }}>
           {company} · {ad.titleMain}, {ad.titleSub}
         </Typography>
+        <Typography variant="body2" component="p" sx={{ mt: 1, color: 'text.secondary' }}>
+          {contributors.map((c, i) => (
+            <React.Fragment key={i}>
+              {i > 0 && ' · '}
+              {c.role}: {c.name}
+            </React.Fragment>
+          ))}
+        </Typography>
+        {ad.status === 'unchecked' && (
+          <Box role="note" sx={{
+            mt: 2,
+            px: 2,
+            py: 1,
+            borderLeft: 3,
+            borderColor: 'primary.main',
+            bgcolor: 'secondary.main',
+          }}>
+            <Typography variant="body2" component="p">
+              Transcribed, encoded and annotated by Claude, an AI model. Not
+              yet checked against the scan by the editor
+              (see the <Link href="/guidelines/">guidelines</Link>).
+            </Typography>
+          </Box>
+        )}
       </Box>
       <EditionCeteicean
         name={ad.slug}
@@ -53,6 +84,7 @@ export default async function AdPage({ params }: { params: Promise<{ slug: strin
         company={company}
         date={ad.titleSub}
         path={`/${ad.slug}/`}
+        status={ad.status}
       />
     </Container>
   )
