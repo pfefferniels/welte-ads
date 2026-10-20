@@ -1,5 +1,7 @@
 # Welte-Mignon Advertisements Collection
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23496355.svg)](https://doi.org/10.5281/zenodo.23496355)
+
 A TEI edition of print advertisements for the Welte-Mignon reproducing
 piano, 1905–1930, edited by Niels Pfeffer.
 

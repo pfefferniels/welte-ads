@@ -3,7 +3,7 @@
 import React, { useSyncExternalStore } from "react"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
-import { EDITION, EDITOR, SITE_URL } from "../lib/site"
+import { DOI, EDITION, EDITOR, SITE_URL } from "../lib/site"
 import type { Status } from "../lib/tei"
 
 const subscribe = () => () => {}
@@ -39,7 +39,7 @@ const Citation = ({ title, company, date, path, status }: Props) => {
       </Typography>
       <Typography variant="body2" component="p">
         {EDITOR.name} (ed.): “{bare}” ({company}, {date}){transcription}. In: <i>{EDITION}</i>,{' '}
-        <a href={url}>{url}</a>
+        doi: <a href={`https://doi.org/${DOI}`}>{DOI}</a>, <a href={url}>{url}</a>
         {accessed && ` (accessed ${accessed})`}.
       </Typography>
     </Box>

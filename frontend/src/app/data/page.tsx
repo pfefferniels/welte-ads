@@ -5,6 +5,7 @@ import { getAllMetadata } from "../../lib/tei"
 import { currentRelease, publishedSize } from "../../lib/release"
 import { DATA_ARCHIVE, DATA_LICENCE, datasetJsonLd } from "../../lib/dataset"
 import JsonLd from "../../components/jsonld"
+import { DOI } from "../../lib/site"
 
 export const metadata = {
   title: 'Data',
@@ -43,11 +44,13 @@ export default function DataPage() {
         {version
           ? <>This is version {version}{date && `, released on ${date}`}. </>
           : <>The collection is still growing and has no numbered release yet. </>}
-        Releases are archived in the <a href={`${REPOSITORY}/releases`}>repository
-        on GitHub</a>, where the files and their history are also kept. Each
-        advertisement page suggests how to cite it; the collection as a whole is
-        cited as its <a href={`${REPOSITORY}/blob/main/CITATION.cff`}>citation
-        file</a> says.
+        Every release is archived on Zenodo, which gives it a DOI of its own;
+        the DOI of the collection, <a href={`https://doi.org/${DOI}`}>{DOI}</a>,
+        always leads to the newest version. The releases and the history of
+        the files are also kept in the <a href={`${REPOSITORY}/releases`}>repository
+        on GitHub</a>. Each advertisement page suggests how to cite it; the
+        collection as a whole is cited as
+        its <a href={`${REPOSITORY}/blob/main/CITATION.cff`}>citation file</a> says.
       </Typography>
     </Container>
   )

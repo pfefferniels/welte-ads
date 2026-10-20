@@ -1,4 +1,4 @@
-import { EDITION, EDITOR, SITE_URL } from "./site"
+import { DOI, EDITION, EDITOR, SITE_URL } from "./site"
 import { currentRelease } from "./release"
 
 export const DATA_ARCHIVE = '/tei/welte-ads-tei.zip'
@@ -16,6 +16,7 @@ export function datasetJsonLd(ads: number) {
       + 'originals, descriptions of their printings, persons linked to the GND, '
       + 'and an annotation of recurring motifs.',
     url: SITE_URL,
+    identifier: `https://doi.org/${DOI}`,
     creator: {
       '@type': 'Person',
       name: EDITOR.name,
