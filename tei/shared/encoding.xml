@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schema/welte-ads.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -34,8 +34,9 @@
       </fileDesc>
       <!-- The encoding description shared by all advertisements. Each
            advertisement carries the project description, the editorial
-           principles and those renditions and topics that it uses. After
-           changing this file, run `npm run sync-tei` in frontend/. -->
+           principles, the reference to the project ODD and those renditions
+           and topics that it uses. After changing this file, run
+           `npm run sync-tei` in frontend/. -->
       <encodingDesc>
          <projectDesc>
             <p>The Welte-Mignon Advertisements Collection brings together print
@@ -124,6 +125,7 @@
                   as precisely as they are known.</p>
             </stdVals>
          </editorialDecl>
+         <schemaRef type="projectODD" url="../schema/welte-ads.odd"/>
          <tagsDecl>
             <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
             <rendition xml:id="c" scheme="css">text-align: center;</rendition>

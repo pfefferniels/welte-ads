@@ -6,19 +6,30 @@ Live at https://anz.welte225.org/.
 
 ## Data
 
-Every advertisement is a TEI file in `tei/`, valid against `tei_all`
-(P5 4.12.0, linked from each file). Each file explains its own markup: its
-`<encodingDesc>` holds the project description, the editorial principles,
-and the renditions (`@rendition`) and topics (`@ana`) that it uses. These
-are copied from the shared encoding description in `tei/shared/encoding.xml`,
-which is also where the site reads the topics from. After changing that file,
-or after using a new rendition or topic in an advertisement, run
-`npm run sync-tei` in `frontend/`; `npm test` fails until the files agree.
+Every advertisement is a TEI file in `tei/`. The files follow the project
+schema `tei/schema/welte-ads.rng`, which is generated from the ODD
+`tei/schema/welte-ads.odd`: a customisation of TEI P5 4.12.0 that admits
+only the elements the collection uses, closes the lists of values it uses
+and documents what it means by them. Each file names the schema in its
+`xml-model` processing instruction and the ODD in its `<schemaRef>`; the
+files are also valid against `tei_all` of the same release. Each file
+explains its own markup: its `<encodingDesc>` holds the project description,
+the editorial principles, the reference to the ODD, and the renditions
+(`@rendition`) and topics (`@ana`) that it uses. These are copied from the
+shared encoding description in `tei/shared/encoding.xml`, which is also
+where the site reads the topics from. After changing that file, or after
+using a new rendition or topic in an advertisement, run `npm run sync-tei`
+in `frontend/`; `npm test` fails until the files agree.
 
-`npm run validate-tei` validates all files against their schema with
-`xmllint`. On every push and pull request, GitHub Actions validates the TEI
-and runs the type check, the linter, the tests and knip; `main` is deployed
-only when they pass.
+`npm run validate-tei` validates all files with `xmllint`, against the
+project schema and against `tei_all`. After changing the ODD, run
+`npm run build-schema` to regenerate the schema with the TEI Stylesheets
+(this needs Java; the Stylesheets and Saxon are downloaded into
+`frontend/.cache/`) and commit both; `npm run check-schema` tells whether
+they agree. `npm run survey-tei` lists the elements, attributes and values
+that the files use. On every push and pull request, GitHub Actions validates
+the TEI and runs the type check, the linter, the tests and knip; `main` is
+deployed only when they pass.
 
 ## Layout view
 
