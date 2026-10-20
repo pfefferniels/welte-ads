@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { anchorOf, personAnchor, personLink } from "./anchors"
+import { anchorOf, artistLink, nameAnchor, personAnchor } from "./anchors"
 
 describe("anchorOf", () => {
   it("joins the words in lower case, without accents", () => {
@@ -16,10 +16,10 @@ describe("anchorOf", () => {
 describe("personAnchor", () => {
   it("derives the anchor of a person from the GND number", () => {
     expect(personAnchor("https://d-nb.info/gnd/11918625X")).toBe("gnd-11918625X")
-    expect(personLink("https://d-nb.info/gnd/118986724")).toBe("/persons/#gnd-118986724")
+    expect(artistLink("https://d-nb.info/gnd/118986724")).toBe("/artists/#gnd-118986724")
   })
 
   it("derives the anchor of a name without a GND URI from the name as written", () => {
-    expect(personLink("", "W. C. Heaton, Pres.")).toBe("/persons/#name-w-c-heaton-pres")
+    expect(nameAnchor("W. C. Heaton, Pres.")).toBe("name-w-c-heaton-pres")
   })
 })

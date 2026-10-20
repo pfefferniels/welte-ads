@@ -3,7 +3,7 @@ import { Behavior } from "./Behavior"
 import { TEINodes } from "react-teirouter"
 import { Popover } from "@mui/material"
 import { names } from "../../labels/names"
-import { GND, personLink } from "../../lib/anchors"
+import { GND, artistLink } from "../../lib/anchors"
 
 interface TEIProps {
   teiNode: Node
@@ -14,11 +14,12 @@ const Name = ({ teiNode, availableRoutes }: TEIProps) => {
   const persName = teiNode as Element
   const target = persName.getAttribute("corresp")?.trim() || ""
   const written = (persName.textContent || "").replace(/\s+/g, " ").trim()
-  // every person that the text of an ad names has an entry in the register,
-  // unless only a note of the editor's names them
-  const inRegister = persName.tagName.toLowerCase() === "tei-persname"
+  // the artists that the text of an ad names have an entry on the Artists
+  // page, unless only a note of the editor's names them
+  const isArtist = persName.tagName.toLowerCase() === "tei-persname"
+    && (persName.getAttribute("type") || "").split(/\s+/).includes("artist")
+    && target.startsWith(GND)
     && !!persName.closest("tei-text") && !persName.closest('tei-note[type="editorial"]')
-    && !!(target || written)
 
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
 
@@ -57,9 +58,9 @@ const Name = ({ teiNode, availableRoutes }: TEIProps) => {
             ? <a href={target} style={{ textDecoration: 'none' }}>→ GND</a>
             : <i color='gray'>no GND link</i>
           }
-          {inRegister && (
+          {isArtist && (
             <div>
-              <a href={personLink(target, written)} style={{ textDecoration: 'none' }}>
+              <a href={artistLink(target)} style={{ textDecoration: 'none' }}>
                 → All ads naming {names[target] || written}
               </a>
             </div>

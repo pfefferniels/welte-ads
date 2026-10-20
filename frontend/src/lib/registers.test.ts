@@ -2,7 +2,7 @@ import fs from "fs"
 import path from "path"
 import { describe, expect, it } from "vitest"
 import { JSDOM } from "jsdom"
-import { getPeriodicalRegister, getPersonRegister, namingsIn, periodicalRegister, personRegister, printingsIn } from "./registers"
+import { getArtistRegister, getPeriodicalRegister, namingsIn, periodicalRegister, personRegister, printingsIn } from "./registers"
 import { getAllMetadata } from "./tei"
 
 const GND = "https://d-nb.info/gnd/"
@@ -163,11 +163,11 @@ describe("periodicalRegister", () => {
 
 describe("the registers of the collection", () => {
   const ads = getAllMetadata()
-  const { persons, unlinked } = getPersonRegister()
+  const persons = getArtistRegister()
   const periodicals = getPeriodicalRegister()
 
   it("give every entry an anchor of its own", () => {
-    const ids = [...persons, ...unlinked].map(entry => entry.id)
+    const ids = persons.map(entry => entry.id)
     expect(new Set(ids).size).toBe(ids.length)
     expect(persons.every(person => /^gnd-[0-9X-]+$/.test(person.id))).toBe(true)
     const periodicalIds = periodicals.map(entry => entry.id)

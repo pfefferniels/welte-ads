@@ -5,7 +5,7 @@ import { Box } from "@mui/material"
 import { area, interpolateHcl } from "d3"
 import theme from "../../theme"
 import { runsOf, smoothedMentions, smoothedShare } from "../../lib/artists"
-import { personLink } from "../../lib/anchors"
+import { artistLink } from "../../lib/anchors"
 import type { ArtistTimeline, YearTotal } from "../../lib/artists"
 
 interface Artist extends ArtistTimeline {
@@ -171,7 +171,7 @@ export default function ArtistsChart({ years, artists, h }: Props) {
 
           {rows.map((artist, i) => (
             <g key={artist.id}>
-              <a href={personLink(artist.id)}>
+              <a href={artistLink(artist.id)}>
                 <text x={LABELS - 10} y={y(i)} fontSize={14} textAnchor="end" dominantBaseline="central"
                   fill={theme.palette.text.primary} fontWeight={active?.artist === artist ? 700 : 400}>
                   {artist.name}

@@ -23,10 +23,7 @@ export function nameAnchor(written: string): string {
   return `name-${anchorOf(written)}`
 }
 
-/**
- * The link to a person's entry in the register of persons: by the GND URI,
- * or else by the name as written.
- */
-export function personLink(uri: string, written = ''): string {
-  return `/persons/#${uri ? personAnchor(uri) : nameAnchor(written)}`
+/** The link to an artist's entry on the Artists page, by the GND URI. */
+export function artistLink(uri: string): string {
+  return `/artists/#${personAnchor(uri)}`
 }

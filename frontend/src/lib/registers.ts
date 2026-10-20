@@ -243,6 +243,12 @@ function registerAds(): RegisterAd[] {
   })
 }
 
-export const getPersonRegister = () => personRegister(registerAds())
+// a naming of a person as an artist (@type "artist")
+const asArtist = (naming: Naming) => naming.type.split(/\s+/).includes('artist')
+
+/** The artists that the ads name with a GND URI, each with the ads that
+ * name them as an artist. */
+export const getArtistRegister = () => personRegister(registerAds()
+  .map(ad => ({ ...ad, namings: ad.namings.filter(asArtist) }))).persons
 
 export const getPeriodicalRegister = () => periodicalRegister(registerAds())
