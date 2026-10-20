@@ -27,7 +27,7 @@
                     </persName>
                 </publisher>
                 <pubPlace>Tübingen</pubPlace>
-                <date>2023</date>
+                <date when="2026">2026</date>
                 <availability>
                     <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         <p>
@@ -101,8 +101,8 @@
                   Australia), the newspapers of the Kungliga biblioteket of Sweden,
                   e-newspaperarchives.ch, BAnQ numérique (Bibliothèque et Archives
                   nationales du Québec), the Biblioteca Virtual de Prensa
-                  Histórica, the archive of ABC and ARCA (Biblioteca de
-                  Catalunya).</p>
+                  Histórica, the archive of ABC, ARCA (Biblioteca de Catalunya)
+                  and Polona (National Library of Poland).</p>
             </samplingDecl>
             <editorialDecl>
                <p>Each file transcribes one printing of an advertisement, the one
@@ -185,6 +185,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
+            <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
             <change when="2026-10-16">Transcribed printing marked; link to the digital images added; persons linked to the GND and typed; the page through IIIF added.</change>
             <change when="2026-10-15">Encoding description, schema reference, ISO dates and language codes added.</change>
             <change when="2026-10-15">Stable identifiers for the topic segments added.</change>
