@@ -391,13 +391,14 @@ export function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
   const newspapers = Array.from(doc.querySelectorAll('sourceDesc title[level="j"]')).map(
     title => (title.textContent || '').replace(/\s+/g, ' ').trim()
   )
-  // the recording artists that the ad names
-  const mentions = Array.from(doc.querySelectorAll('persName[corresp][type="artist"]')).map(
-    name => name.getAttribute('corresp') || ''
-  )
+  // the recording artists that the ad names, in the transcribed printing
+  const mentions = Array.from(doc.querySelectorAll('persName[corresp][type="artist"]'))
+    .filter(name => !inOtherReading(name))
+    .map(name => name.getAttribute('corresp') || '')
   // topics are marked on text segments and on figures (what a picture shows)
   tidySpaceBeforePunctuation(doc)
   const topicSegments = Array.from(doc.querySelectorAll('seg[ana], figure[ana]'))
+    .filter(seg => !inOtherReading(seg))
     .flatMap(seg => {
       // without an xml:id, a segment can only be linked as part of its ad
       const id = seg.getAttribute('xml:id')
@@ -450,6 +451,21 @@ export function plainText(xmlString: string): string {
   return lineText(text.documentElement)
 }
 
+// of the readings of an <app>, the one that the text shows: the lemma, or
+// else the first reading, which is that of the transcribed printing
+const shownReading = (app: Element) => {
+  const readings = Array.from(app.children)
+  return readings.find(r => r.localName === 'lem') || readings.find(r => r.localName === 'rdg')
+}
+
+/** Whether an element is part of a reading that the text does not show. */
+export function inOtherReading(el: Element): boolean {
+  for (let reading = el.closest('rdg, lem'); reading; reading = reading.parentElement?.closest('rdg, lem') ?? null) {
+    if (reading.parentElement && shownReading(reading.parentElement) !== reading) return true
+  }
+  return false
+}
+
 /**
  * The words of a passage as they are printed, on one line: of several
  * readings only the one that the facsimile shows (the lemma, or else the
@@ -459,9 +475,7 @@ export function plainText(xmlString: string): string {
 export function passageText(passage: Element): string {
   const copy = passage.cloneNode(true) as Element
   for (const app of Array.from(copy.getElementsByTagName('app'))) {
-    const readings = Array.from(app.children)
-    const shown = readings.find(r => r.localName === 'lem') || readings.find(r => r.localName === 'rdg')
-    app.replaceWith(...Array.from(shown?.childNodes || []))
+    app.replaceWith(...Array.from(shownReading(app)?.childNodes || []))
   }
   copy.querySelectorAll('figure, desc, note').forEach(el => el.remove())
   return lineText(copy)

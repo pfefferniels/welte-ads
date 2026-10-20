@@ -83,6 +83,24 @@ describe.each(ads)("$file", ({ file, xml }) => {
     }
   })
 
+  // the text shows the first reading of each <app>, so it must be that of
+  // the transcribed printing
+  it("gives first the reading of the printing that it transcribes", () => {
+    const sources = Array.from(doc.getElementsByTagName("sourceDesc")).map(source => source.getAttribute("xml:id"))
+    const decls = (doc.getElementsByTagName("text")[0].getAttribute("decls") || "").replace(/^#/, "")
+    const cited = (reading: Element) =>
+      (reading.getAttribute("source") || "").split(/\s+/).filter(Boolean).map(ref => ref.replace(/^#/, ""))
+    for (const app of Array.from(doc.getElementsByTagName("app"))) {
+      const readings = Array.from(app.children).filter(reading => reading.localName === "rdg")
+      for (const reading of readings) {
+        for (const id of cited(reading)) expect(sources, `#${id}`).toContain(id)
+      }
+      if (decls && !app.getElementsByTagName("lem").length) {
+        expect(cited(readings[0]), text(app)).toContain(decls)
+      }
+    }
+  })
+
   it("dates every printing in ISO 8601", () => {
     for (const date of Array.from(doc.querySelectorAll('date[type="publication"]'))) {
       const when = date.getAttribute("when") || ""

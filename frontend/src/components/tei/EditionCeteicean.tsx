@@ -7,6 +7,7 @@ import Div from "./Div"
 import Name from "./Name"
 import Note from "./Note"
 import Seg from "./Seg"
+import App from "./App"
 import Figure from "./Figure"
 import Metadata, { Change, SourceDesc } from "./Metadata"
 import Ref from "./Ref"
@@ -138,6 +139,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, topics, imageLi
     "tei-persname": Name,
     "tei-orgname": Name,
     "tei-seg": Seg,
+    "tei-app": App,
     "tei-figure": Figure,
     "tei-note": Note,
     "tei-ref": Ref,

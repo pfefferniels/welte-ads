@@ -50,6 +50,13 @@ describe("namingsIn", () => {
       { uri: "", type: "", written: "W. C. Heaton" },
     ])
   })
+
+  it("lists a name once though the readings of other printings repeat it", () => {
+    const doc = parsed(tei(source("source_1", "De Maasbode", ["1923"]) + source("source_2", "De Maasbode", ["1923"]), `
+      <p><app><rdg source="#source_1"><persName type="artist" corresp="${PADEREWSKI}">PADEREWSKI</persName></rdg><rdg
+        source="#source_2"><persName type="artist" corresp="${PADEREWSKI}"><sic>Paderewsky</sic></persName></rdg></app></p>`))
+    expect(namingsIn(doc)).toEqual([{ uri: PADEREWSKI, type: "artist", written: "PADEREWSKI" }])
+  })
 })
 
 describe("printingsIn", () => {

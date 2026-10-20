@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { JSDOM } from 'jsdom'
-import { getAllMetadata } from './tei'
+import { getAllMetadata, inOtherReading } from './tei'
 import { names } from '../labels/names'
 import { anchorOf, nameAnchor, personAnchor } from './anchors'
 
@@ -23,12 +23,13 @@ const EDITORIAL_NOTE = 'note[type="editorial"]'
 
 /**
  * The persons that the text of an ad names, in the order of the text,
- * leaving out those that only the editor's notes name.
+ * leaving out those that only the editor's notes or the readings of other
+ * printings name.
  */
 export function namingsIn(doc: Document): Naming[] {
   const text = doc.querySelector('text')
   const persNames = Array.from(text?.querySelectorAll('persName') || [])
-  return persNames.filter(name => !name.closest(EDITORIAL_NOTE)).map(name => ({
+  return persNames.filter(name => !name.closest(EDITORIAL_NOTE) && !inOtherReading(name)).map(name => ({
     uri: (name.getAttribute('corresp') || '').trim(),
     type: name.getAttribute('type') || '',
     written: textOf(name),

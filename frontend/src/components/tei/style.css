@@ -9,6 +9,29 @@
     background-color: rgba(255, 251, 0, 0.1);
 }
 
+/* of several readings, show the one of the transcribed printing (the
+   lemma, or else the first reading); the text view offers the others */
+tei-app > tei-rdg ~ tei-rdg,
+tei-app:has(> tei-lem) > tei-rdg {
+    display: none;
+}
+
+.variant {
+    text-decoration: underline dotted #6b6b6b;
+    text-underline-offset: 0.2em;
+}
+
+.variant-marker {
+    border: none;
+    background: none;
+    padding: 0 0.1em;
+    font-size: 0.7em;
+    vertical-align: super;
+    line-height: 1;
+    color: #6b6b6b;
+    cursor: pointer;
+}
+
 .highlight-target {
     animation: highlight-fade 3s ease-out;
 }
@@ -366,12 +389,6 @@ tei-lb:before {
     content: none;
 }
 
-/* of several readings, show the one the facsimile shows (the lemma, or
-   else the first reading) */
-.layout tei-app > tei-rdg ~ tei-rdg,
-.layout tei-app:has(> tei-lem) > tei-rdg {
-    display: none;
-}
 
 /* a frame around the whole zone, e.g. <div facs="#…" rendition="#framed"> */
 .layout .zone.framed {

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
 import { JSDOM } from "jsdom"
-import { extractMetadata, getAllAds, getAllMetadata, markRedundantLineBreaks, passageText, plainText, staticText, tidySpaceBeforePunctuation } from "./tei"
+import { extractMetadata, getAllAds, getAllMetadata, inOtherReading, markRedundantLineBreaks, passageText, plainText, staticText, tidySpaceBeforePunctuation } from "./tei"
 
 const marked = (body: string) => {
   const xml = `<TEI xmlns="http://www.tei-c.org/ns/1.0"><text>${body}</text></TEI>`
@@ -191,6 +191,22 @@ describe("passageText", () => {
     expect(passage('<seg ana="#x"><figure><desc>A pianist.</desc></figure>phantom hands<note>On hands.</note></seg>'))
       .toBe("phantom hands")
     expect(passage('<figure ana="#x"><desc>A pianist.</desc></figure>')).toBe("")
+  })
+})
+
+describe("inOtherReading", () => {
+  const xml = `<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><p><persName xml:id="a">Liszt</persName>
+    <app><rdg><persName xml:id="b">LISZT</persName></rdg><rdg><persName xml:id="c">LISTZ</persName></rdg></app>
+    <app><rdg>x</rdg><lem><app><rdg><hi xml:id="d">y</hi></rdg><rdg><hi xml:id="e">z</hi></rdg></app></lem></app></p></text></TEI>`
+  const doc = new JSDOM(xml, { contentType: "text/xml" }).window.document
+  const other = (id: string) => inOtherReading(doc.querySelector(`[*|id="${id}"]`)!)
+
+  it("tells the readings that the text does not show", () => {
+    expect([other("a"), other("b"), other("c")]).toEqual([false, false, true])
+  })
+
+  it("prefers the lemma and looks through nested readings", () => {
+    expect([other("d"), other("e")]).toEqual([false, true])
   })
 })
 
