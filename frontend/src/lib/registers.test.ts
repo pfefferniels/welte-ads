@@ -2,8 +2,9 @@ import fs from "fs"
 import path from "path"
 import { describe, expect, it } from "vitest"
 import { JSDOM } from "jsdom"
-import { getPeriodicalRegister, getPersonRegister, namingsIn, periodicalRegister, personRegister, printingsIn } from "./registers"
+import { getPersonRegister, getPlaceRegister, namingsIn, personRegister, placeRegister, printingsIn } from "./registers"
 import { getAllMetadata } from "./tei"
+import { coordinates } from "../labels/coordinates"
 
 const GND = "https://d-nb.info/gnd/"
 const PADEREWSKI = `${GND}118986724`
@@ -128,59 +129,86 @@ describe("personRegister", () => {
   })
 })
 
-describe("periodicalRegister", () => {
-  const printing = (source: string, periodical: string, dates: string[], place = "Perth", transcribed = false) => ({
-    source, periodical, place, placeRef: `https://www.geonames.org/${place}`, dates, issue: "", pages: "", transcribed,
+describe("placeRegister", () => {
+  const PERTH = "https://www.geonames.org/2063523"
+  const printing = (source: string, periodical: string, dates: string[], place = "Perth", placeRef = PERTH, transcribed = false) => ({
+    source, periodical, place, placeRef, dates, issue: "", pages: "", transcribed,
   })
-  const register = periodicalRegister([
+  const register = placeRegister([
     {
-      slug: "ad001", title: "One", date: "1913-03", namings: [],
-      printings: [printing("source_1", "The Daily News", ["1913-11"], "Perth", true), printing("source_2", "The Daily News", ["1913-03"])],
+      slug: "ad001", title: "One", date: "1913-03", company: "nicholson.perth",
+      printings: [
+        printing("source_1", "The West Australian", ["1913-11"], "Perth", PERTH, true),
+        printing("source_2", "The Daily News", ["1913-03"]),
+        printing("source_3", "The West Australian", ["1913-04"]),
+      ],
     },
     {
-      slug: "ad002", title: "Two", date: "1910", namings: [],
-      printings: [printing("source_1", "The Daily News", ["1910"], "London", true), printing("source_2", "Bergens Tidende", ["1911"], "Bergen")],
+      slug: "ad002", title: "Two", date: "1910", company: "steinway",
+      printings: [
+        printing("source_1", "The Daily News", ["1910"], "London", "https://www.geonames.org/2643743", true),
+        printing("source_2", "Daily Telegraph", ["1911"], "Perth (W.A.)"),
+      ],
     },
   ])
+  const perth = register.find(place => place.ref === PERTH)!
 
-  it("tells periodicals of the same title apart by their place", () => {
-    expect(register.map(entry => [entry.id, entry.initial])).toEqual([
-      ["bergens-tidende-bergen", "B"],
-      ["the-daily-news-london", "D"],
-      ["the-daily-news-perth", "D"],
+  it("lists the places by name, anchored by their GeoNames number", () => {
+    expect(register.map(place => [place.id, place.names, place.initial])).toEqual([
+      ["place-2643743", ["London"], "L"],
+      ["place-2063523", ["Perth", "Perth (W.A.)"], "P"],
     ])
+    expect([perth.printings, perth.ads]).toEqual([4, 2])
   })
 
-  it("lists the printings of a periodical in the order of their dates", () => {
-    const perth = register.find(entry => entry.place === "Perth")!
-    expect(perth.printings.map(p => [p.dates[0], p.ad.slug, p.source, p.transcribed])).toEqual([
-      ["1913-03", "ad001", "source_2", false],
-      ["1913-11", "ad001", "source_1", true],
+  it("lists the periodicals of a place, each with its printings in the order of their dates", () => {
+    expect(perth.periodicals.map(periodical => [periodical.title, periodical.printings.map(p => [p.dates[0], p.ad.slug, p.transcribed])])).toEqual([
+      ["The Daily News", [["1913-03", "ad001", false]]],
+      ["Daily Telegraph", [["1911", "ad002", false]]],
+      ["The West Australian", [["1913-04", "ad001", false], ["1913-11", "ad001", true]]],
     ])
-    expect(perth.printings[0].ad).toEqual({ slug: "ad001", title: "One", date: "1913-03" })
+    expect(perth.periodicals[1].printings[0].ad).toEqual({ slug: "ad002", title: "Two", date: "1910" })
+  })
+
+  it("lists the companies whose ads were printed at a place, with those ads", () => {
+    expect(perth.companies).toEqual([
+      { key: "nicholson.perth", name: "Nicholson's Ltd, Perth", printings: 3, ads: [{ slug: "ad001", title: "One", date: "1913-03" }] },
+      { key: "steinway", name: "Steinway & Sons", printings: 1, ads: [{ slug: "ad002", title: "Two", date: "1910" }] },
+    ])
   })
 })
 
 describe("the registers of the collection", () => {
   const ads = getAllMetadata()
   const { persons, unlinked } = getPersonRegister()
-  const periodicals = getPeriodicalRegister()
+  const places = getPlaceRegister()
 
   it("give every entry an anchor of its own", () => {
     const ids = [...persons, ...unlinked].map(entry => entry.id)
     expect(new Set(ids).size).toBe(ids.length)
     expect(persons.every(person => /^gnd-[0-9X-]+$/.test(person.id))).toBe(true)
-    const periodicalIds = periodicals.map(entry => entry.id)
-    expect(new Set(periodicalIds).size).toBe(periodicalIds.length)
-    expect(periodicalIds.every(Boolean)).toBe(true)
+    const placeIds = places.map(place => place.id)
+    expect(new Set(placeIds).size).toBe(placeIds.length)
+    expect(placeIds.every(id => /^place-\d+$/.test(id))).toBe(true)
   })
 
   it("list every printing, one of each ad as the transcribed one", () => {
-    const printings = periodicals.flatMap(entry => entry.printings)
+    const printings = places.flatMap(place => place.periodicals.flatMap(periodical => periodical.printings))
     const sources = ads.map(ad => fs.readFileSync(path.join(process.cwd(), "..", "tei", `${ad.slug}.xml`), "utf-8"))
       .reduce((sum, xml) => sum + (xml.match(/<sourceDesc[\s>]/g) || []).length, 0)
     expect(printings.length).toBe(sources)
     expect(printings.filter(p => p.transcribed).map(p => p.ad.slug).sort()).toEqual(ads.map(ad => ad.slug).sort())
+  })
+
+  it("put every place on the map", () => {
+    const missing = places.filter(place => !coordinates[place.ref]).map(place => `${place.names[0]} ${place.ref}`)
+    expect(missing).toEqual([])
+    expect(places.filter(place => coordinates[place.ref].lat === 0 && coordinates[place.ref].long === 0)).toEqual([])
+  })
+
+  it("count every printing once for its company", () => {
+    const counted = places.flatMap(place => place.companies).reduce((sum, company) => sum + company.printings, 0)
+    expect(counted).toBe(places.reduce((sum, place) => sum + place.printings, 0))
   })
 
   it("list the artists that the ads mention", () => {

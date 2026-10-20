@@ -54,18 +54,20 @@ interface EntryProps {
   children: React.ReactNode
 }
 
+// the style of an entry, which is highlighted when a link leads to it
+export const entryStyle = {
+  mb: 2,
+  mx: -1,
+  px: 1,
+  py: 0.5,
+  borderRadius: 1,
+  scrollMarginTop: '1rem',
+  '&:target': { backgroundColor: 'rgba(139, 94, 60, 0.08)' },
+}
+
 /** An entry of a register: a heading, a line about it and a list. */
 export const Entry = ({ id, heading, about, children }: EntryProps) => (
-  <Box component="li" id={id} sx={{
-    mb: 2,
-    mx: -1,
-    px: 1,
-    py: 0.5,
-    borderRadius: 1,
-    scrollMarginTop: '1rem',
-    // the entry that a link leads to
-    '&:target': { backgroundColor: 'rgba(139, 94, 60, 0.08)' },
-  }}>
+  <Box component="li" id={id} sx={entryStyle}>
     <Typography variant="h6" component="h3" sx={{ lineHeight: 1.3 }}>
       {heading}
     </Typography>
