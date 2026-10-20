@@ -103,10 +103,13 @@
             eScriptorium and converted from PAGE XML to TEI. The text was in
             part recognised automatically (HTR) and corrected against the
             scan, in part transcribed by hand. The advertisements published
-            outside Germany, the United Kingdom and the United States were
-            transcribed from the scans, encoded, given their regions and
-            annotated with topics by Claude, an AI model; their revision
-            history says so.</p>
+            outside Germany, the United Kingdom and the United States, and a
+            few from Germany, were transcribed from the scans, encoded, given
+            their regions and annotated with topics by Claude, an AI model;
+            their revision history says so. Until the editor has checked such
+            an advertisement against the scan, <att>status</att> on its
+            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
+            advertisement is <val>checked</val>.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -180,7 +183,9 @@
     <profileDesc>
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
-    <revisionDesc>
+    <revisionDesc status="unchecked">
+      <change when="2026-10-20">Marked as not yet checked by the editor.</change>
+      <change when="2026-10-20">Topic of the picture attributed to Claude, who annotated it.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
     </revisionDesc>
   </teiHeader>
@@ -199,7 +204,7 @@
   <text decls="#source_1">
     <body>
       <div type="illustration" facs="#zone_picture">
-        <figure xml:id="figure_1" ana="#home"><desc>A family in evening dress gathered round a log fire in a drawing room; at the right a grand piano among palms</desc></figure>
+        <figure xml:id="figure_1" ana="#home" resp="#claude"><desc>A family in evening dress gathered round a log fire in a drawing room; at the right a grand piano among palms</desc></figure>
       </div>
       <div facs="#zone_headline">
         <head><hi rendition="#c"><lb/><hi rendition="#in"><name type="brand">Welte-Mignon</name></hi>

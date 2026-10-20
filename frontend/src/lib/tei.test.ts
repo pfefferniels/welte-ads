@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
 import { JSDOM } from "jsdom"
-import { getAdBySlug, getAllMetadata, markRedundantLineBreaks, plainText, staticText, tidySpaceBeforePunctuation } from "./tei"
+import { extractMetadata, getAdBySlug, getAllMetadata, markRedundantLineBreaks, plainText, staticText, tidySpaceBeforePunctuation } from "./tei"
 
 const marked = (body: string) => {
   const xml = `<TEI xmlns="http://www.tei-c.org/ns/1.0"><text>${body}</text></TEI>`
@@ -50,7 +50,8 @@ describe("tidySpaceBeforePunctuation", () => {
 })
 
 describe("getAllMetadata", () => {
-  const segments = getAllMetadata().flatMap(ad =>
+  const all = getAllMetadata()
+  const segments = all.flatMap(ad =>
     ad.topicSegments.map(segment => ({ slug: ad.slug, ...segment })))
 
   it("gives every topic segment an xml:id to link to", () => {
@@ -59,6 +60,88 @@ describe("getAllMetadata", () => {
 
   it("lists a segment with several topics once per topic", () => {
     expect(segments.filter(segment => /\s/.test(segment.topic))).toEqual([])
+  })
+
+  it("reads who edited and transcribed an ad and whether it is checked", () => {
+    const ads = Object.fromEntries(all.map(ad => [ad.slug, ad]))
+    const claude = { name: "Claude (AI model by Anthropic)", id: "claude" }
+    const editor = { name: "Niels Pfeffer", id: "np" }
+
+    expect(ads.ad150.status).toBe("unchecked")
+    expect(ads.ad150.contributors).toEqual([
+      { role: "Editor", ...editor },
+      { role: "Transcription, encoding and annotation of topics", ...claude },
+    ])
+    expect(ads.ad008.status).toBe("checked")
+    expect(ads.ad008.contributors).toEqual([{ role: "Transcription and encoding", ...editor }])
+    expect(ads.ad037.status).toBe("checked")
+    expect(ads.ad037.contributors).toEqual([
+      { role: "Transcription and encoding", ...editor },
+      { role: "Further printings", ...claude },
+    ])
+  })
+
+  // the ad pages say so of every unchecked ad
+  it("finds every unchecked ad transcribed and annotated by Claude", () => {
+    const unchecked = all.filter(ad => ad.status === "unchecked")
+    expect(unchecked.length).toBeGreaterThan(0)
+    for (const ad of unchecked) {
+      const transcribers = ad.contributors.filter(c => c.role.startsWith("Transcription"))
+      expect(transcribers.map(c => c.id), ad.slug).toEqual(["claude"])
+      expect(ad.topicSegments.filter(segment => segment.resp !== "#claude"), ad.slug).toEqual([])
+    }
+  })
+})
+
+describe("extractMetadata", () => {
+  const tei = (titleStmt: string, revisionDesc: string) => `
+    <TEI xmlns="http://www.tei-c.org/ns/1.0">
+      <teiHeader>
+        <fileDesc>
+          <titleStmt><title type="main">Ad</title>${titleStmt}</titleStmt>
+          <sourceDesc>
+            <biblFull><titleStmt><respStmt><resp>Printing</resp><name>Printer</name></respStmt></titleStmt></biblFull>
+          </sourceDesc>
+        </fileDesc>
+        ${revisionDesc}
+      </teiHeader>
+      <text><body><p><seg xml:id="topic_1" ana="#home #hostess" resp="#claude">im Heim</seg></p></body></text>
+    </TEI>`
+
+  it("names the contributors of the title statement with their roles", () => {
+    const { contributors } = extractMetadata(tei(`
+      <respStmt>
+        <resp>Transcription
+          and encoding</resp>
+        <persName xml:id="np">
+          <surname>Pfeffer</surname>
+          <forename>Niels</forename>
+        </persName>
+      </respStmt>
+      <respStmt><resp>Proofreading</resp><name>Claude</name><persName>Jane Doe</persName></respStmt>`, ""))
+    expect(contributors).toEqual([
+      { role: "Transcription and encoding", name: "Niels Pfeffer", id: "np" },
+      { role: "Proofreading", name: "Claude", id: "" },
+      { role: "Proofreading", name: "Jane Doe", id: "" },
+    ])
+  })
+
+  it("reads the status of the revisions", () => {
+    const status = (revisionDesc: string) => extractMetadata(tei("", revisionDesc)).status
+    expect(status('<revisionDesc status="checked"><change/></revisionDesc>')).toBe("checked")
+    expect(status('<revisionDesc status="unchecked"><change/></revisionDesc>')).toBe("unchecked")
+  })
+
+  it("counts an ad without a status as unchecked", () => {
+    expect(extractMetadata(tei("", "<revisionDesc><change/></revisionDesc>")).status).toBe("unchecked")
+    expect(extractMetadata(tei("", "")).status).toBe("unchecked")
+  })
+
+  it("says who assigned each topic", () => {
+    expect(extractMetadata(tei("", "")).topicSegments).toEqual([
+      { id: "#topic_1", topic: "#home", text: "im Heim", resp: "#claude" },
+      { id: "#topic_1", topic: "#hostess", text: "im Heim", resp: "#claude" },
+    ])
   })
 })
 

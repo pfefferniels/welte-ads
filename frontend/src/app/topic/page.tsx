@@ -1,5 +1,6 @@
 import React from 'react'
 import { getAllMetadata, getTopics } from "../../lib/tei"
+import type { Status } from "../../lib/tei"
 import TopicClient from "./TopicClient"
 
 export const metadata = {
@@ -10,6 +11,8 @@ export interface Segment {
   link: string
   topic: string
   text: string
+  resp: string
+  status: Status
 }
 
 export default function TopicPage() {
@@ -20,6 +23,8 @@ export default function TopicPage() {
       link: `/${meta.slug}${segment.id}`,
       topic: segment.topic,
       text: segment.text,
+      resp: segment.resp,
+      status: meta.status,
     }))
   )
 

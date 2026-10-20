@@ -16,6 +16,7 @@ export default function OverviewPage() {
     dates: meta.dates,
     newspapers: meta.newspapers,
     text: meta.fullText,
+    status: meta.status,
   }))
 
   return (
