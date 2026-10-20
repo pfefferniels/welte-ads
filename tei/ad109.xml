@@ -178,6 +178,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc>
+      <change when="2026-10-20">Topic of the picture attributed to Claude, who annotated it.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
     </revisionDesc>
   </teiHeader>
@@ -196,7 +197,7 @@
   <text decls="#source_1">
     <body>
       <div type="illustration" facs="#zone_picture">
-        <figure xml:id="figure_1" ana="#home"><desc>A grand piano in a room, a curtained leaded window, an armchair and a vase of flowers behind</desc></figure>
+        <figure xml:id="figure_1" ana="#home" resp="#claude"><desc>A grand piano in a room, a curtained leaded window, an armchair and a vase of flowers behind</desc></figure>
       </div>
       <div facs="#zone_headline">
         <head><hi rendition="#c"><lb/><hi rendition="#in"><name type="brand">Welte-Mignon</name></hi>

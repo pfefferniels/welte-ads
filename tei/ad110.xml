@@ -185,6 +185,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc>
+      <change when="2026-10-20">Topic of the picture attributed to Claude, who annotated it.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
     </revisionDesc>
   </teiHeader>
@@ -208,7 +209,7 @@
           <lb/><hi rendition="#b #larger">Reproducing Piano</hi></name></hi></head>
       </div>
       <div type="illustration" facs="#zone_picture">
-        <figure xml:id="figure_1" ana="#home"><desc>A grand piano in a room, a framed portrait of a seventeenth-century gentleman on the wall, a side table with a lamp and a vase</desc></figure>
+        <figure xml:id="figure_1" ana="#home" resp="#claude"><desc>A grand piano in a room, a framed portrait of a seventeenth-century gentleman on the wall, a side table with a lamp and a vase</desc></figure>
       </div>
       <div facs="#zone_text">
         <p><lb/>With the <name type="brand">Heintzman Welte-Mignon</name> in your
