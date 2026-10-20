@@ -5,7 +5,7 @@
     <fileDesc>
       <titleStmt>
         <title type="main">Ad in "Aftenposten"</title>
-        <title type="sub">December 1, 1907</title>
+        <title type="sub">December 1, 1907 to January 10, 1908</title>
         <author>
           <orgName key="grondahl">Grøndahl's Flygel- &amp; Pianolager</orgName>
         </author>
@@ -48,10 +48,10 @@
           <notesStmt>
             <note>The advertisement names the instrument only as “Mignon“; the name
               Welte is not printed. It is identified as the Welte-Mignon by the
-              picture of the cabinet player (the same block as in Grøndahl's
-              "Welte-Mignon Reproduktionsklaver" advertisement in Aftenposten,
-              January 10, 1908) and by the electric drive. A differently worded
-              setting appeared in Morgenbladet on the same day.</note>
+              picture of the cabinet player (the same block as in the printing of
+              January 10, 1908, which is headed "Welte-Mignon") and by the
+              electric drive. A differently worded setting appeared in
+              Morgenbladet on the same day.</note>
           </notesStmt>
         </biblFull>
         <msDesc>
@@ -59,6 +59,43 @@
             <repository>Nasjonalbiblioteket</repository>
             <idno>
               <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_aftenposten_null_null_19071201_48_708_2</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>Welte-Mignon Reproduktionsklaver.</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">Welte-Mignon Reproduktionsklaver.</title>
+            <author><orgName>Grøndahls Flygel- &amp; Pianolager</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Aftenposten</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3143244">Kristiania</pubPlace>
+            <date type="publication" when="1908-01-10">1908</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Aftenposten</title>
+            <biblScope unit="issue">January 10, 1908, No. 18</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Set anew and in part reworded, headed Welte-Mignon in large type
+              above Reproduktionsklaver. in bold, with the words beside the picture
+              and Forespilles daglig Interessenter. in bold, other line breaks in
+              the text, and the address in roman type with the telephone number at
+              the right of its line.</note>
+            <note>Some lowercase f's of the roman type have lost their kern and print
+              like t ("torespillet at" for "forespillet af", "Teleton" for "Telefon");
+              they are transcribed as f.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Nasjonalbiblioteket</repository>
+            <idno>
+              <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_aftenposten_null_null_19080110_49_18_2</idno>
             </idno>
           </msIdentifier>
         </msDesc>
@@ -108,10 +145,10 @@
             collated word for word; differences that were noticed are
             recorded with <gi>app</gi>, whose first <gi>rdg</gi> is that of
             the transcribed printing, or in a note. A printing that was set
-            anew counts as the same advertisement as long as its words
-            differ only in spelling, punctuation or a few words; its note
-            describes the setting, whose line breaks and type are not
-            recorded.</p>
+            anew counts as the same advertisement as long as its text
+            differs only in spelling, punctuation, a few words or a
+            sentence; its note describes the setting, whose line breaks and
+            type are not recorded.</p>
          <p>The regions and lines of the scans were mostly marked in
             eScriptorium and converted from PAGE XML to TEI. The text was in
             part recognised automatically (HTR) and corrected against the
@@ -195,6 +232,7 @@
       <langUsage><language ident="no">Norwegian (Dano-Norwegian)</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-20" who="#claude">Merged with the former ad078 (Aftenposten, January 10, 1908, a new setting of the same text, in part reworded and shortened); its printing is a further source, its readings are recorded with app.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -217,19 +255,19 @@
   <text decls="#source_1">
     <body>
       <div facs="#zone_headline">
-        <head><hi rendition="#c #b"><lb/>Reproduktionsklaveret</hi></head>
+        <head><hi rendition="#c #b"><lb/><app><rdg source="#source_1">Reproduktionsklaveret</rdg><rdg source="#source_2">Reproduktionsklaver</rdg></app><app><rdg source="#source_1"/><rdg source="#source_2">.</rdg></app></hi></head>
       </div>
       <div facs="#zone_brand">
-        <head><hi rendition="#c #b #in"><lb/>“<name type="brand">Mignon</name>“</hi></head>
+        <head><hi rendition="#c #b #in"><lb/><app><rdg source="#source_1">“</rdg><rdg source="#source_2"/></app><name type="brand"><app><rdg source="#source_1">Mignon</rdg><rdg source="#source_2">Welte-Mignon</rdg></app></name><app><rdg source="#source_1">“</rdg><rdg source="#source_2"/></app></hi></head>
       </div>
       <div facs="#zone_left">
-        <ab><hi rendition="#c"><seg xml:id="topic_1" ana="#home" type="topic" resp="#claude"><lb/>Ved sit
-          <lb/>elegante
-          <lb/>Ydre
+        <ab><hi rendition="#c"><seg xml:id="topic_1" ana="#home" type="topic" resp="#claude"><lb/><app><rdg source="#source_1">Ved sit</rdg><rdg source="#source_2"/></app>
+          <lb/><app><rdg source="#source_1">elegante</rdg><rdg source="#source_2">Elegant</rdg></app>
+          <lb/>Ydre<app><rdg source="#source_1">
           <lb/>en Pryd
           <lb/>for
           <lb/>enhver
-          <lb/>Salon.</seg></hi></ab>
+          <lb/>Salon.</rdg><rdg source="#source_2"/></app></seg></hi></ab>
       </div>
       <div type="illustration" facs="#zone_picture">
         <figure><desc>The Welte-Mignon cabinet player (Vorsetzer) in an Art Nouveau case</desc></figure>
@@ -237,25 +275,25 @@
       <div facs="#zone_right">
         <ab><hi rendition="#c"><seg xml:id="topic_2" ana="#technical_invention" type="topic" resp="#claude"><lb/>Drives ved
           <lb/>Elektro-
-          <lb/>motor</seg>,
+          <lb/>motor</seg><app><rdg source="#source_1">,
           <lb/>der kan
           <lb/>tilkobles
           <lb/>enhver
-          <lb/>Lysledning.</hi></ab>
+          <lb/>Lysledning.</rdg><rdg source="#source_2"/></app></hi></ab>
       </div>
       <div facs="#zone_text">
         <p><lb/><seg xml:id="topic_3" ana="#exact_reproduction" type="topic" resp="#claude">Gjengiver direkte Virtuosernes Spil med alle Finheder</seg> og med <seg xml:id="topic_4" ana="#personality" type="topic" resp="#claude">alle in-
-          <lb/>dividuelle Karaktéregenskaber</seg>.
-          <lb/>Klavérstykkerne er forespillet af Verdens første Componister som:
-          <lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/119110016"><sic>Donányi</sic></persName></hi> etc., der alle har <seg xml:id="topic_5" ana="#miracle" type="topic" resp="#claude">udtrykt sin Forbau-
+          <lb/>dividuelle <app><rdg source="#source_1">Karaktéregenskaber</rdg><rdg source="#source_2">Karakteregenskaber</rdg></app></seg>.
+          <lb/><app><rdg source="#source_1">Klavérstykkerne</rdg><rdg source="#source_2">Klaverstykkerne</rdg></app> er forespillet af Verdens første Componister som:
+          <lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/119110016"><app><rdg source="#source_1"><sic>Donányi</sic></rdg><rdg source="#source_2">Dohnanyi</rdg></app></persName></hi> etc., der alle har <seg xml:id="topic_5" ana="#miracle" type="topic" resp="#claude"><app><rdg source="#source_1">udtrykt</rdg><rdg source="#source_2"><sic>ndtrykt</sic></rdg></app> sin Forbau-
           <lb/>selse og Beundring</seg> over <seg xml:id="topic_6" ana="#exact_reproduction" type="topic" resp="#claude">den i mindste Detail nøiagtige Gjengivelse</seg>.</p>
       </div>
       <div facs="#zone_demonstration">
         <ab><hi rendition="#c"><lb/>Forespilles daglig Interessenter.</hi></ab>
       </div>
       <div facs="#zone_signature">
-        <ab><hi rendition="#c"><lb/><hi rendition="#in"><orgName>Grøndahl's Flygel- &amp; Pianolager</orgName>,</hi>
-          <lb/><hi rendition="#b"><address><addrLine>Carl Johs.gd. 17, Telef. 7899.</addrLine></address></hi></hi></ab>
+        <ab><hi rendition="#c"><lb/><hi rendition="#in"><orgName><app><rdg source="#source_1">Grøndahl's</rdg><rdg source="#source_2">Grøndahls</rdg></app> Flygel- &amp; Pianolager</orgName><app><rdg source="#source_1">,</rdg><rdg source="#source_2"/></app></hi>
+          <lb/><hi rendition="#b"><address><addrLine>Carl <app><rdg source="#source_1">Johs.gd.</rdg><rdg source="#source_2">Joh. Gd.</rdg></app> 17<app><rdg source="#source_1">,</rdg><rdg source="#source_2">.</rdg></app> <app><rdg source="#source_1">Telef.</rdg><rdg source="#source_2">Telefon</rdg></app> 7899.</addrLine></address></hi></hi></ab>
       </div>
     </body>
   </text>

@@ -4,8 +4,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Ad in "Provinciale Geldersche en Nijmeegsche Courant"</title>
-        <title type="sub">June 10, 1918</title>
+        <title type="main">Ad in "Provinciale Geldersche en Nijmeegsche Courant", "Algemeen Handelsblad", "Het Vaderland" and "Arnhemsche Courant"</title>
+        <title type="sub">June 10 to July 17, 1918</title>
         <author>
           <orgName key="dupont">Henri C. Dupont &amp; Co.</orgName>
         </author>
@@ -55,6 +55,96 @@
           </msIdentifier>
         </msDesc>
       </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>GELEGENHEIDSKOOP Van een zoo goed als nieuwe Kunstspel-Piano „Welte-Mignon”</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">GELEGENHEIDSKOOP Van een zoo goed als nieuwe Kunstspel-Piano „Welte-Mignon”</title>
+            <author><orgName>Henri C. Dupont &amp; Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Algemeen Handelsblad</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2759794">Amsterdam</pubPlace>
+            <date type="publication" when="1918-06-19">1918</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Algemeen Handelsblad</title>
+            <biblScope unit="issue">June 19, 1918, evening edition, No. 29184</biblScope>
+            <biblScope unit="pages">8</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Set anew, with "Van een zoo goed als nieuwe" in small bold type, Kunstspel-Piano „Welte-Mignon” in large bold upper and lower case, the parenthesis on a line of its own below it, "aan-" set small and raised at the end of the first line of the text, and the number (33054) at the right of the last line.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=ddd:010653292:mpeg21:a0061</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>GELEGENHEIDSKOOP Van een zoo goed als nieuwe Kunstspel-Piano „Welte-Mignon”</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">GELEGENHEIDSKOOP Van een zoo goed als nieuwe Kunstspel-Piano „Welte-Mignon”</title>
+            <author><orgName>Henri C. Dupont &amp; Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Het Vaderland</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2747373">'s-Gravenhage</pubPlace>
+            <date type="publication" when="1918-07-03">1918</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Het Vaderland</title>
+            <biblScope unit="issue">July 3, 1918, No. 182</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Compared with the scan: a setting of its own, with VAN EEN ZOO GOED ALS NIEUWE in capitals and the number 5673 20 at the right of that line, Kunstspel-Piano „Welte-Mignon” in large bold upper and lower case, and the parenthesis run on into the text.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMKB23:001521005:mpeg21:a00172</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_4">
+        <bibl>GELEGENHEIDSKOOP Van een zoo goed als nieuwe Kunstspel-Piano „Welte-Mignon”</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">GELEGENHEIDSKOOP Van een zoo goed als nieuwe Kunstspel-Piano „Welte-Mignon”</title>
+            <author><orgName>Henri C. Dupont &amp; Co.</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Arnhemsche Courant</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/2759661">Arnhem</pubPlace>
+            <date type="publication" when="1918-07-17">1918</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Arnhemsche Courant</title>
+            <biblScope unit="issue">July 17, 1918, No. 9826</biblScope>
+            <biblScope unit="pages">4</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Compared with the scan: a setting of its own, with "van een zoo goed als nieuw" in bold, Kunstspel-Piano „Welte-Mignon” in large upper and lower case, the parenthesis run on into the first paragraph and the offer as a second paragraph; no number.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Delpher (KB, National Library of the Netherlands)</repository>
+            <idno>
+              <idno type="URLImages">https://resolver.kb.nl/resolve?urn=MMKB08:000108057:mpeg21:a0021</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc>
@@ -100,10 +190,10 @@
             collated word for word; differences that were noticed are
             recorded with <gi>app</gi>, whose first <gi>rdg</gi> is that of
             the transcribed printing, or in a note. A printing that was set
-            anew counts as the same advertisement as long as its words
-            differ only in spelling, punctuation or a few words; its note
-            describes the setting, whose line breaks and type are not
-            recorded.</p>
+            anew counts as the same advertisement as long as its text
+            differs only in spelling, punctuation, a few words or a
+            sentence; its note describes the setting, whose line breaks and
+            type are not recorded.</p>
          <p>The regions and lines of the scans were mostly marked in
             eScriptorium and converted from PAGE XML to TEI. The text was in
             part recognised automatically (HTR) and corrected against the
@@ -160,11 +250,21 @@
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
       </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: recurring motifs of the advertisements, in their texts
+             and in their pictures</desc>
+          <category xml:id="technical_invention">
+             <gloss>Technical Invention</gloss>
+          </category>
+        </taxonomy>
+      </classDecl>
     </encodingDesc>
     <profileDesc>
       <langUsage><language ident="nl">Dutch</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-20" who="#claude">Merged with the former ad051 (Algemeen Handelsblad, June 19, Het Vaderland, July 3, and Arnhemsche Courant, July 17, 1918, new settings of the same text); its printings are further sources, compared on the scans, and their readings are recorded with app.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -185,14 +285,15 @@
       </div>
       <div facs="#zone_offer">
         <ab><hi rendition="#c">
-          <hi rendition="#b #smaller"><lb/>van een zoo goed als nieuwe</hi>
-          <hi rendition="#b #larger"><lb/>KUNSTSPEL-PIANO „<name type="brand">WELTE-MIGNON</name>”,</hi>
-          <hi rendition="#b #smaller"><lb/>met Motor, 62 Muziekrollen en Rollenkast.</hi>
+          <hi rendition="#b #smaller"><lb/><app><rdg source="#source_1 #source_4">van</rdg><rdg source="#source_2">Van</rdg><rdg source="#source_3">VAN</rdg></app> een zoo goed als <app><rdg source="#source_1 #source_2">nieuwe</rdg><rdg source="#source_3">NIEUWE</rdg><rdg source="#source_4">nieuw</rdg></app></hi>
+          <hi rendition="#b #larger"><lb/>KUNSTSPEL-PIANO „<name type="brand">WELTE-MIGNON</name>”<app><rdg source="#source_1 #source_3">,</rdg><rdg source="#source_2 #source_4"/></app></hi>
+          <app><rdg source="#source_1"/><rdg source="#source_2 #source_3 #source_4">(speelt door <seg xml:id="topic_1" ana="#technical_invention" type="topic" resp="#claude">electrische beweegkracht</seg>)</rdg></app>
+          <hi rendition="#b #smaller"><lb/>met <app><rdg source="#source_1">Motor</rdg><rdg source="#source_2 #source_3 #source_4">motor</rdg></app>, 62 <app><rdg source="#source_1">Muziekrollen</rdg><rdg source="#source_2 #source_3 #source_4">muziekrollen</rdg></app> en <app><rdg source="#source_1">Rollenkast</rdg><rdg source="#source_2 #source_3 #source_4">rollenkast</rdg></app>.</hi>
         </hi></ab>
       </div>
       <div facs="#zone_text">
-        <ab><lb/>Voor zeer billijken prijs te koop en te bezichtigen bij <orgName>HENRI C.
-          <lb/>DUPONT &amp; Co.</orgName>, Pianohandel, <placeName>Nijmegen</placeName>.</ab>
+        <ab><lb/>Voor <app><rdg source="#source_1">zeer </rdg><rdg source="#source_2 #source_3 #source_4"/></app>billijken prijs <app><rdg source="#source_1">te koop</rdg><rdg source="#source_2 #source_3 #source_4">aangeboden door</rdg></app> en te bezichtigen bij <orgName>HENRI C.
+          <lb/>DUPONT &amp; Co.</orgName>, Pianohandel<app><rdg source="#source_1 #source_3">,</rdg><rdg source="#source_2 #source_4"/></app> <placeName>Nijmegen</placeName>.<app><rdg source="#source_1 #source_4"/><rdg source="#source_2"> (33054)</rdg><rdg source="#source_3"> 5673 20</rdg></app></ab>
       </div>
     </body>
   </text>

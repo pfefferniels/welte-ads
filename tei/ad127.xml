@@ -4,7 +4,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Ad in "Музыка и театр"</title>
+        <title type="main">Ad in "Музыка и театр", "Жизнь искусства" and "Театр"</title>
         <title type="sub">October 23, 1923</title>
         <author>
           <orgName key="m.welte">M. Welte &amp; Söhne</orgName>
@@ -60,6 +60,74 @@
           </msIdentifier>
         </msDesc>
       </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>3 КОНЦЕРТА ВЕЛЬТЕ-МИНЬОН</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">3 КОНЦЕРТА ВЕЛЬТЕ-МИНЬОН</title>
+            <author><orgName>M. Welte &amp; Söhne</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Жизнь искусства</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/498817">Петроград</pubPlace>
+            <date type="publication" when="1923-10-23">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Жизнь искусства</title>
+            <biblScope unit="issue">No. 42 (917), 23 October 1923</biblScope>
+            <biblScope unit="pages">37</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Set anew, without the lines on the piano, the mechanic and the maker, with the venue
+              in plain type, the address in bold, the dates in larger type, the hour not in bold and the
+              ticket notice in italics with «БИЛЕТЫ» in bold. The page is numbered 37; it is page 39 of
+              the library's scan.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>St Petersburg State Theatre Library</repository>
+            <idno>
+              <idno type="URLImages">https://lib.sptl.spb.ru/ru/nodes/2270#mode/inspect/page/39/zoom/4</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_3">
+        <bibl>3 КОНЦЕРТА ВЕЛЬТЕ-МИНЬОН 3 КОНЦЕРТА</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">3 КОНЦЕРТА ВЕЛЬТЕ-МИНЬОН 3 КОНЦЕРТА</title>
+            <author><orgName>M. Welte &amp; Söhne</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Театр</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/498817">Петроград</pubPlace>
+            <date type="publication" when="1923-10-23">1923</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Театр</title>
+            <biblScope unit="issue">No. 4, 23 October 1923</biblScope>
+            <biblScope unit="pages">31</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>Set anew, without the lines on the piano and the mechanic, with the venue in larger
+              letter-spaced type, the address in italics, the numbers of the days in bold, the heading on
+              one line with the brand name between «3 КОНЦЕРТА» in bold on either side, «В ИСПОЛНЕНИИ:»
+              in larger type, the names of the brand and the firm in the maker's line in bold
+              letter-spaced type and the ticket notice in smaller type. The page is numbered 31; it is
+              page 33 of the library's scan.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>St Petersburg State Theatre Library</repository>
+            <idno>
+              <idno type="URLImages">https://lib.sptl.spb.ru/ru/nodes/2841#mode/inspect/page/33/zoom/4</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc>
@@ -105,10 +173,10 @@
             collated word for word; differences that were noticed are
             recorded with <gi>app</gi>, whose first <gi>rdg</gi> is that of
             the transcribed printing, or in a note. A printing that was set
-            anew counts as the same advertisement as long as its words
-            differ only in spelling, punctuation or a few words; its note
-            describes the setting, whose line breaks and type are not
-            recorded.</p>
+            anew counts as the same advertisement as long as its text
+            differs only in spelling, punctuation, a few words or a
+            sentence; its note describes the setting, whose line breaks and
+            type are not recorded.</p>
          <p>The regions and lines of the scans were mostly marked in
             eScriptorium and converted from PAGE XML to TEI. The text was in
             part recognised automatically (HTR) and corrected against the
@@ -180,6 +248,7 @@
       <langUsage><language ident="ru">Russian</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-20" who="#claude">Merged with the former ad128 (Жизнь искусства, October 23, 1923) and ad129 (Театр, October 23, 1923), new settings of the same advertisement; their printings are further sources, their readings are recorded with app.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-17" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -202,36 +271,36 @@
   <text decls="#source_1">
     <body>
       <div facs="#zone_venue">
-        <ab><hi rendition="#c"><lb/><hi rendition="#b #g"><placeName>ЗАЛ ГОСУДАРСТВЕННОЙ АКАДЕМИЧЕСКОЙ КАПЕЛЛЫ</placeName></hi>
+        <ab><hi rendition="#c"><lb/><hi rendition="#b #g"><placeName>ЗАЛ <app><rdg source="#source_1 #source_2">ГОСУДАРСТВЕННОЙ</rdg><rdg source="#source_3">ГОСУД.</rdg></app> <app><rdg source="#source_1 #source_2">АКАДЕМИЧЕСКОЙ</rdg><rdg source="#source_3">АКАД.</rdg></app> КАПЕЛЛЫ</placeName></hi>
           <lb/><hi rendition="#smaller">(<address><addrLine>Мойка, 20</addrLine></address>).</hi></hi></ab>
       </div>
       <div facs="#zone_dates">
-        <ab><hi rendition="#c"><lb/>В Среду, 24-го; в Воскресенье, 28-го и в Среду. <hi rendition="#b">31</hi>-го Октября 1923 г.
-          <lb/><hi rendition="#b">в 8½ час вечера.</hi></hi></ab>
+        <ab><hi rendition="#c"><lb/>В Среду, 24<app><rdg source="#source_1">-го</rdg><rdg source="#source_2 #source_3"/></app><app><rdg source="#source_1">;</rdg><rdg source="#source_2 #source_3">,</rdg></app> в Воскресенье, 28<app><rdg source="#source_1">-го</rdg><rdg source="#source_2 #source_3"/></app> и в Среду<app><rdg source="#source_1">.</rdg><rdg source="#source_2"/><rdg source="#source_3">,</rdg></app> <hi rendition="#b">31</hi><app><rdg source="#source_1">-го</rdg><rdg source="#source_2 #source_3"/></app> Октября<app><rdg source="#source_1 #source_3"> 1923 г.</rdg><rdg source="#source_2"/></app>
+          <lb/><hi rendition="#b">в <app><rdg source="#source_1 #source_3">8½</rdg><rdg source="#source_2">8¹/₂</rdg></app> <app><rdg source="#source_1">час</rdg><rdg source="#source_2">час.</rdg><rdg source="#source_3">часов</rdg></app> вечера.</hi></hi></ab>
       </div>
       <div facs="#zone_headline">
-        <head><hi rendition="#c"><lb/><hi rendition="#b">3</hi> <hi rendition="#g2">КОНЦЕРТА</hi> <hi rendition="#b">3</hi>
-          <lb/><hi rendition="#in #b #g"><name type="brand">Вельте-Миньон</name></hi></hi></head>
+        <head><hi rendition="#c"><lb/><hi rendition="#b">3</hi> <hi rendition="#g2">КОНЦЕРТА</hi><app><rdg source="#source_1 #source_2"> <hi rendition="#b">3</hi></rdg><rdg source="#source_3"/></app>
+          <lb/><hi rendition="#in #b #g"><name type="brand"><app><rdg source="#source_1">Вельте-Миньон</rdg><rdg source="#source_2 #source_3">ВЕЛЬТЕ-МИНЬОН</rdg></app></name></hi><app><rdg source="#source_1 #source_2"/><rdg source="#source_3"> 3 КОНЦЕРТА</rdg></app></hi></head>
       </div>
       <div facs="#zone_artists">
-        <ab><hi rendition="#c"><lb/><seg xml:id="topic_1" ana="#virtual_presence" type="topic" resp="#claude">В ИСПОЛНЕНИИ: <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">ГОФМАНА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118518011">БУЗОНИ</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116584319">ЕСИПОВОЙ</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118501437">д‘АЛЬБЕРА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116977108">ЗАУЭРА</persName>,
-          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118614916">СКРЯБИНА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116429623">РЕЙЗЕНАУЭРА</persName></hi> и <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118986724">ПАДЕРЕВСКОГО</persName></hi></seg><hi rendition="#b">.</hi></hi></ab>
+        <ab><hi rendition="#c"><lb/><seg xml:id="topic_1" ana="#virtual_presence" type="topic" resp="#claude">В ИСПОЛНЕНИИ: <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">ГОФМАНА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118518011">БУЗОНИ</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116584319">ЕСИПОВОЙ</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118501437">д‘АЛЬБЕРА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116977108"><app><rdg source="#source_1">ЗАУЭРА</rdg><rdg source="#source_2"><sic>ЗАУЗРА</sic></rdg><rdg source="#source_3">ЗАУЕР</rdg></app></persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118614916">СКРЯБИНА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116429623"><app><rdg source="#source_1 #source_3">РЕЙЗЕНАУЭРА</rdg><rdg source="#source_2"><sic>РЕЙЗЕНАУЗРА</sic></rdg></app></persName></hi> и <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118986724">ПАДЕРЕВСКОГО</persName></hi></seg><hi rendition="#b">.</hi></hi></ab>
       </div>
       <div facs="#zone_programmes">
-        <ab><hi rendition="#c"><lb/>ПОДРОБНЫЕ ПРОГРАММЫ в ТЕКСТЕ стр. 20.</hi></ab>
+        <ab><hi rendition="#c"><lb/><app><rdg source="#source_1">ПОДРОБНЫЕ ПРОГРАММЫ в ТЕКСТЕ стр. 20</rdg><rdg source="#source_2">ПРОГРАММЫ КОНЦЕРТОВ СМ. В ТЕКСТЕ</rdg><rdg source="#source_3">(ПРОГРАММЫ КОНЦЕРТОВ В ТЕКСТЕ)</rdg></app>.</hi></ab>
       </div>
       <div facs="#zone_piano">
-        <ab><lb/>Рояль <hi rendition="#b"><name type="brand">К. Бехштейн</name>.</hi></ab>
+        <ab><lb/><app><rdg source="#source_1">Рояль <hi rendition="#b"><name type="brand">К. Бехштейн</name>.</hi></rdg><rdg source="#source_2 #source_3"/></app></ab>
       </div>
       <div facs="#zone_mechanic">
-        <ab><lb/>Механик <hi rendition="#b"><persName>Е. Пфейфер</persName></hi> из <placeName>Фрейбурга</placeName>.</ab>
+        <ab><lb/><app><rdg source="#source_1">Механик <hi rendition="#b"><persName>Е. Пфейфер</persName></hi> из <placeName>Фрейбурга</placeName>.</rdg><rdg source="#source_2 #source_3"/></app></ab>
       </div>
       <div facs="#zone_maker">
-        <ab><hi rendition="#c"><lb/>Аппарат <name type="brand">Вельте-Миньон</name> фабрики <orgName>Вельте и с-вья</orgName> в <placeName>Фрейбурге</placeName>.</hi></ab>
+        <ab><hi rendition="#c"><lb/><app><rdg source="#source_1">Аппарат <name type="brand">Вельте-Миньон</name> фабрики <orgName>Вельте и с-вья</orgName> в <placeName>Фрейбурге</placeName>.</rdg><rdg source="#source_2"/><rdg source="#source_3">Аппарат <name type="brand">Вельте-Миньон</name> фабрики <orgName>Вельте и С-вья</orgName> в <placeName>Фрейбурге</placeName>.</rdg></app></hi></ab>
       </div>
       <div facs="#zone_tickets">
-        <ab><hi rendition="#c"><lb/>Билеты продаются в Центральной театральной кассе <address><addrLine>пр. 25 Октября, 23</addrLine></address>, телеф. 133—50 и
-          <lb/>в дни концертов с 7 ч. веч. при входе в зал.</hi></ab>
+        <ab><hi rendition="#c"><lb/><app><rdg source="#source_1">Билеты</rdg><rdg source="#source_2 #source_3">БИЛЕТЫ</rdg></app> продаются в Центральной <app><rdg source="#source_1 #source_3">театральной </rdg><rdg source="#source_2"/></app>кассе<app><rdg source="#source_1"/><rdg source="#source_2">,</rdg><rdg source="#source_3">:</rdg></app> <address><addrLine><app><rdg source="#source_1 #source_3">пр.</rdg><rdg source="#source_2">Пр.</rdg></app> 25 Октября<app><rdg source="#source_1 #source_2">, 23</rdg><rdg source="#source_3"/></app></addrLine></address><app><rdg source="#source_1 #source_3">,</rdg><rdg source="#source_2">.</rdg></app> <app><rdg source="#source_1">телеф.</rdg><rdg source="#source_2 #source_3">тел.</rdg></app> 133<app><rdg source="#source_1">—</rdg><rdg source="#source_2 #source_3">-</rdg></app>50 и
+          <lb/>в дни <app><rdg source="#source_1 #source_2">концертов</rdg><rdg source="#source_3"><sic>конпертов</sic></rdg></app> с 7 <app><rdg source="#source_1 #source_2">ч.</rdg><rdg source="#source_3">час.</rdg></app> веч. при входе в зал.</hi></ab>
       </div>
     </body>
   </text>

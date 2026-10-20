@@ -3,6 +3,9 @@
 /companies/ /places/ 301
 
 # advertisements merged into another as further printings (2026-10-20)
+/ad051 /ad050/ 301
+/ad051/ /ad050/ 301
+/tei/ad051.xml /tei/ad050.xml 301
 /ad056 /ad055/ 301
 /ad056/ /ad055/ 301
 /tei/ad056.xml /tei/ad055.xml 301
@@ -12,9 +15,18 @@
 /ad074 /ad073/ 301
 /ad074/ /ad073/ 301
 /tei/ad074.xml /tei/ad073.xml 301
+/ad078 /ad076/ 301
+/ad078/ /ad076/ 301
+/tei/ad078.xml /tei/ad076.xml 301
+/ad081 /ad080/ 301
+/ad081/ /ad080/ 301
+/tei/ad081.xml /tei/ad080.xml 301
 /ad087 /ad086/ 301
 /ad087/ /ad086/ 301
 /tei/ad087.xml /tei/ad086.xml 301
+/ad095 /ad094/ 301
+/ad095/ /ad094/ 301
+/tei/ad095.xml /tei/ad094.xml 301
 /ad123 /ad122/ 301
 /ad123/ /ad122/ 301
 /tei/ad123.xml /tei/ad122.xml 301
@@ -24,6 +36,12 @@
 /ad125 /ad122/ 301
 /ad125/ /ad122/ 301
 /tei/ad125.xml /tei/ad122.xml 301
+/ad128 /ad127/ 301
+/ad128/ /ad127/ 301
+/tei/ad128.xml /tei/ad127.xml 301
+/ad129 /ad127/ 301
+/ad129/ /ad127/ 301
+/tei/ad129.xml /tei/ad127.xml 301
 /ad206 /ad205/ 301
 /ad206/ /ad205/ 301
 /tei/ad206.xml /tei/ad205.xml 301

@@ -63,7 +63,7 @@ describe("bandwidth", () => {
   it("is a few years for the collection", () => {
     const h = bandwidth(getAllMetadata())
     expect(h).toBeGreaterThanOrEqual(1)
-    expect(h).toBeLessThanOrEqual(3)
+    expect(h).toBeLessThanOrEqual(4)
   })
 })
 

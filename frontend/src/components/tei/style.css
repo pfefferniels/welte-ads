@@ -25,7 +25,8 @@ tei-app:has(> tei-lem) > tei-rdg {
     border: none;
     background: none;
     padding: 0 0.1em;
-    font-size: 0.7em;
+    /* as small in a headline as in the text */
+    font-size: min(0.7em, 0.8rem);
     vertical-align: super;
     line-height: 1;
     color: #6b6b6b;

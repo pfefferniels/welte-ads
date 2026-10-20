@@ -4,8 +4,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Ad in "Morgenbladet"</title>
-        <title type="sub">December 19, 1918</title>
+        <title type="main">Ad in "Morgenbladet" and "Bergens Tidende"</title>
+        <title type="sub">December 19, 1918 to January 26, 1919</title>
         <author>
           <orgName key="grondahl">Grøndahl</orgName>
         </author>
@@ -45,16 +45,44 @@
             <biblScope unit="issue">December 19, 1918, No. 640</biblScope>
             <biblScope unit="pages">5</biblScope>
           </seriesStmt>
-          <notesStmt>
-            <note>The same block, with a re-set signature, appeared in Bergens Tidende
-              on January 26, 1919; it is encoded separately.</note>
-          </notesStmt>
         </biblFull>
         <msDesc>
           <msIdentifier>
             <repository>Nasjonalbiblioteket</repository>
             <idno>
               <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_morgenbladet_null_null_19181219_100_640_1</idno>
+            </idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+      <sourceDesc xml:id="source_2">
+        <bibl>WELTE-MIGNON</bibl>
+        <biblFull>
+          <titleStmt>
+            <title level="m" type="main">WELTE-MIGNON</title>
+            <author><orgName>Grøndahls Flygel &amp; Pianolager A/S</orgName></author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher><orgName>Bergens Tidende</orgName></publisher>
+            <pubPlace ref="https://www.geonames.org/3161732">Bergen</pubPlace>
+            <date type="publication" when="1919-01-26">1919</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title level="j" type="main">Bergens Tidende</title>
+            <biblScope unit="issue">January 26, 1919, No. 25</biblScope>
+            <biblScope unit="pages">3</biblScope>
+          </seriesStmt>
+          <notesStmt>
+            <note>The same block, with the signature re-set for the firm's Bergen
+              branch in two lines, GRØNDAHLS in large bold capitals above
+              FLYGEL &amp; PIANOLAGER A/S; no address is printed.</note>
+          </notesStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Nasjonalbiblioteket</repository>
+            <idno>
+              <idno type="URLImages">https://www.nb.no/items/URN:NBN:no-nb_digavis_bergenstidende_null_null_19190126_52_25_1</idno>
             </idno>
           </msIdentifier>
         </msDesc>
@@ -104,10 +132,10 @@
             collated word for word; differences that were noticed are
             recorded with <gi>app</gi>, whose first <gi>rdg</gi> is that of
             the transcribed printing, or in a note. A printing that was set
-            anew counts as the same advertisement as long as its words
-            differ only in spelling, punctuation or a few words; its note
-            describes the setting, whose line breaks and type are not
-            recorded.</p>
+            anew counts as the same advertisement as long as its text
+            differs only in spelling, punctuation, a few words or a
+            sentence; its note describes the setting, whose line breaks and
+            type are not recorded.</p>
          <p>The regions and lines of the scans were mostly marked in
             eScriptorium and converted from PAGE XML to TEI. The text was in
             part recognised automatically (HTR) and corrected against the
@@ -178,6 +206,7 @@
       <langUsage><language ident="no">Norwegian (Dano-Norwegian)</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-20" who="#claude">Merged with the former ad081 (Bergens Tidende, January 26, 1919, the same block with another signature); its printings are further sources, its readings are recorded with app.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -207,10 +236,10 @@
           <lb/>Eneforhandler</hi></ab>
       </div>
       <div facs="#zone_signature">
-        <ab><hi rendition="#c #in"><lb/><orgName>GRØNDAHL</orgName></hi></ab>
+        <ab><hi rendition="#c #in"><lb/><orgName><app><rdg source="#source_1">GRØNDAHL</rdg><rdg source="#source_2">GRØNDAHLS FLYGEL &amp; PIANOLAGER A/S</rdg></app></orgName></hi></ab>
       </div>
       <div facs="#zone_slogan">
-        <ab><hi rendition="#c #smaller"><lb/><seg type="slogan">LANDETS STØRSTE KLAVERFORRETNING:</seg></hi></ab>
+        <ab><hi rendition="#c #smaller"><lb/><app><rdg source="#source_1"><seg type="slogan">LANDETS STØRSTE KLAVERFORRETNING:</seg></rdg><rdg source="#source_2"/></app></hi></ab>
       </div>
     </body>
   </text>
