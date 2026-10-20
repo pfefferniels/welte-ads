@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { JSDOM } from 'jsdom'
-import { getAllMetadata, inOtherReading } from './tei'
+import { getAllMetadata, repeatsShownReading } from './tei'
 import { names } from '../labels/names'
 import { anchorOf, nameAnchor, personAnchor } from './anchors'
 
@@ -21,15 +21,18 @@ interface Naming {
 // a note of the editor's in the text, which is not part of the ad
 const EDITORIAL_NOTE = 'note[type="editorial"]'
 
+// a person as the register knows them: by the GND, or else as written
+const personKey = (name: Element) => (name.getAttribute('corresp') || '').trim() || textOf(name)
+
 /**
  * The persons that the text of an ad names, in the order of the text,
- * leaving out those that only the editor's notes or the readings of other
- * printings name.
+ * leaving out those that only the editor's notes name and those that the
+ * reading of another printing repeats.
  */
 export function namingsIn(doc: Document): Naming[] {
   const text = doc.querySelector('text')
   const persNames = Array.from(text?.querySelectorAll('persName') || [])
-  return persNames.filter(name => !name.closest(EDITORIAL_NOTE) && !inOtherReading(name)).map(name => ({
+  return persNames.filter(name => !name.closest(EDITORIAL_NOTE) && !repeatsShownReading(name, personKey)).map(name => ({
     uri: (name.getAttribute('corresp') || '').trim(),
     type: name.getAttribute('type') || '',
     written: textOf(name),

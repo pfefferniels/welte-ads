@@ -391,14 +391,16 @@ export function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
   const newspapers = Array.from(doc.querySelectorAll('sourceDesc title[level="j"]')).map(
     title => (title.textContent || '').replace(/\s+/g, ' ').trim()
   )
-  // the recording artists that the ad names, in the transcribed printing
+  // the recording artists that the ad names, each once though the readings
+  // of several printings name them
+  const corresp = (el: Element) => el.getAttribute('corresp') || ''
   const mentions = Array.from(doc.querySelectorAll('persName[corresp][type="artist"]'))
-    .filter(name => !inOtherReading(name))
+    .filter(name => !repeatsShownReading(name, corresp))
     .map(name => name.getAttribute('corresp') || '')
   // topics are marked on text segments and on figures (what a picture shows)
   tidySpaceBeforePunctuation(doc)
   const topicSegments = Array.from(doc.querySelectorAll('seg[ana], figure[ana]'))
-    .filter(seg => !inOtherReading(seg))
+    .filter(seg => !repeatsShownReading(seg, el => el.getAttribute('ana') || ''))
     .flatMap(seg => {
       // without an xml:id, a segment can only be linked as part of its ad
       const id = seg.getAttribute('xml:id')
@@ -458,10 +460,17 @@ const shownReading = (app: Element) => {
   return readings.find(r => r.localName === 'lem') || readings.find(r => r.localName === 'rdg')
 }
 
-/** Whether an element is part of a reading that the text does not show. */
-export function inOtherReading(el: Element): boolean {
+/**
+ * Whether an element, in the reading of another printing, repeats what the
+ * text shows: the shown reading of the same <app> has an element of the same
+ * name and key (e.g. a person with the same @corresp). What only another
+ * printing has repeats nothing.
+ */
+export function repeatsShownReading(el: Element, key: (el: Element) => string): boolean {
   for (let reading = el.closest('rdg, lem'); reading; reading = reading.parentElement?.closest('rdg, lem') ?? null) {
-    if (reading.parentElement && shownReading(reading.parentElement) !== reading) return true
+    const shown = reading.parentElement && shownReading(reading.parentElement)
+    if (!shown || shown === reading) continue
+    if (Array.from(shown.getElementsByTagName(el.localName)).some(other => key(other) === key(el))) return true
   }
   return false
 }

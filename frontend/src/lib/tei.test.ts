@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
 import { JSDOM } from "jsdom"
-import { extractMetadata, getAllAds, getAllMetadata, inOtherReading, markRedundantLineBreaks, passageText, plainText, staticText, tidySpaceBeforePunctuation } from "./tei"
+import { extractMetadata, getAllAds, getAllMetadata, markRedundantLineBreaks, repeatsShownReading, passageText, plainText, staticText, tidySpaceBeforePunctuation } from "./tei"
 
 const marked = (body: string) => {
   const xml = `<TEI xmlns="http://www.tei-c.org/ns/1.0"><text>${body}</text></TEI>`
@@ -194,19 +194,24 @@ describe("passageText", () => {
   })
 })
 
-describe("inOtherReading", () => {
-  const xml = `<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><p><persName xml:id="a">Liszt</persName>
-    <app><rdg><persName xml:id="b">LISZT</persName></rdg><rdg><persName xml:id="c">LISTZ</persName></rdg></app>
-    <app><rdg>x</rdg><lem><app><rdg><hi xml:id="d">y</hi></rdg><rdg><hi xml:id="e">z</hi></rdg></app></lem></app></p></text></TEI>`
+describe("repeatsShownReading", () => {
+  const xml = `<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><p><persName xml:id="a" corresp="liszt">Liszt</persName>
+    <app><rdg><persName xml:id="b" corresp="liszt">LISZT</persName></rdg><rdg><persName xml:id="c" corresp="liszt">LISTZ</persName></rdg></app>
+    <app><rdg/><rdg>played by <persName xml:id="d" corresp="busoni">Busoni</persName></rdg></app>
+    <app><rdg>x</rdg><lem><app><rdg><persName xml:id="e" corresp="ganz">Ganz</persName></rdg><rdg><persName xml:id="f" corresp="ganz">GANZ</persName></rdg></app></lem></app></p></text></TEI>`
   const doc = new JSDOM(xml, { contentType: "text/xml" }).window.document
-  const other = (id: string) => inOtherReading(doc.querySelector(`[*|id="${id}"]`)!)
+  const repeats = (id: string) => repeatsShownReading(doc.querySelector(`[*|id="${id}"]`)!, el => el.getAttribute("corresp") || "")
 
-  it("tells the readings that the text does not show", () => {
-    expect([other("a"), other("b"), other("c")]).toEqual([false, false, true])
+  it("tells what the reading of another printing repeats", () => {
+    expect([repeats("a"), repeats("b"), repeats("c")]).toEqual([false, false, true])
+  })
+
+  it("keeps what only another printing has", () => {
+    expect(repeats("d")).toBe(false)
   })
 
   it("prefers the lemma and looks through nested readings", () => {
-    expect([other("d"), other("e")]).toEqual([false, true])
+    expect([repeats("e"), repeats("f")]).toEqual([false, true])
   })
 })
 

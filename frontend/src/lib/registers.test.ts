@@ -57,6 +57,13 @@ describe("namingsIn", () => {
         source="#source_2"><persName type="artist" corresp="${PADEREWSKI}"><sic>Paderewsky</sic></persName></rdg></app></p>`))
     expect(namingsIn(doc)).toEqual([{ uri: PADEREWSKI, type: "artist", written: "PADEREWSKI" }])
   })
+
+  it("lists a name that only another printing has", () => {
+    const doc = parsed(tei(source("source_1", "Berlingske", ["1923"]) + source("source_2", "Berlingske", ["1923"]), `
+      <p><app><rdg source="#source_1"/><rdg source="#source_2">played by <persName type="artist"
+        corresp="${PADEREWSKI}">Paderewski</persName></rdg></app></p>`))
+    expect(namingsIn(doc)).toEqual([{ uri: PADEREWSKI, type: "artist", written: "Paderewski" }])
+  })
 })
 
 describe("printingsIn", () => {
