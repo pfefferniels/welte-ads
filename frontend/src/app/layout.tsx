@@ -3,21 +3,24 @@ import type { Metadata } from "next"
 import ThemeRegistry from "./ThemeRegistry"
 import Header from "../components/header"
 import Footer from "../components/footer"
+import { EDITION, EDITOR } from "../lib/site"
+
+const DESCRIPTION = `Print advertisements for the Welte-Mignon reproducing piano, 1905–1930, edited in TEI by ${EDITOR.name}.`
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Welte Ads',
-    default: 'Welte-Mignon Advertisements Collection',
+    template: `%s | ${EDITION}`,
+    default: EDITION,
   },
-  description: 'A collection of Welte Advertisements. Edited by Niels Pfeffer.',
+  description: DESCRIPTION,
   openGraph: {
-    title: 'Welte-Mignon Advertisements Collection',
-    description: 'A collection of Welte Advertisements. Edited by Niels Pfeffer.',
+    title: EDITION,
+    description: DESCRIPTION,
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    creator: 'Niels Pfeffer',
+    creator: EDITOR.name,
   },
 }
 
@@ -48,7 +51,7 @@ export default function RootLayout({
           <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
             <Header
               location=""
-              siteTitle="Welte Ads"
+              siteTitle={EDITION}
               menuLinks={menuLinks}
             />
             <div style={{ flex: 1 }}>
