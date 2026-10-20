@@ -5,6 +5,8 @@ import { getMarkdownContent } from "../lib/markdown"
 import { getAllMetadata } from "../lib/tei"
 import { EDITION, EDITOR } from "../lib/site"
 import OrcidLink from "../components/orcid"
+import JsonLd from "../components/jsonld"
+import { datasetJsonLd } from "../lib/dataset"
 
 export const metadata = {
   title: 'Introduction',
@@ -35,6 +37,7 @@ export default function HomePage() {
 
   return (
     <Container component="main" maxWidth="md">
+      <JsonLd data={datasetJsonLd(ads.length)} />
       <Typography variant="h3" component="h2" gutterBottom={false}>
         {EDITION}
       </Typography>

@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check that CITATION.cff names this version
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          grep -Eq "^version: \"?${version}\"?$" CITATION.cff || {
+            echo "CITATION.cff does not give version ${version}" >&2
+            exit 1
+          }
+
+      - name: Pack the TEI files
+        run: zip -q -r "welte-ads-tei-${GITHUB_REF_NAME}.zip" tei LICENSE.md CITATION.cff
+
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" "welte-ads-tei-${GITHUB_REF_NAME}.zip" \
+            --title "$GITHUB_REF_NAME" --generate-notes

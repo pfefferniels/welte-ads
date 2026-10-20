@@ -1,8 +1,11 @@
-# Welte Ads
+# Welte-Mignon Advertisements Collection
 
-A TEI collection of Welte advertisements.
+A TEI edition of print advertisements for the Welte-Mignon reproducing
+piano, 1905–1930, edited by Niels Pfeffer.
 
-Live at https://anz.welte225.org/.
+Live at https://anz.welte225.org/. The TEI files are published with the site
+(https://anz.welte225.org/data/) under CC BY-NC-SA 4.0, the code under the
+MIT License; see `LICENSE.md`.
 
 ## Data
 
@@ -33,3 +36,12 @@ exactly like the `<graphic>` (`width` × `height`, the coordinate system of the
 zones), and open the page with `?debug` (`npm run dev`, then
 `http://localhost:3000/ad009/?debug`). This outlines the zones over the scan;
 `?debug=facs` shows only the scan. `frontend/public` is not committed.
+
+## Releases
+
+The site always shows the current state of `main`. A numbered release fixes a
+state that can be cited: set `version` and `date-released` in `CITATION.cff`,
+commit, and push the tag `v<version>` (e.g. `git tag v1.0.0 && git push origin
+v1.0.0`). The release workflow checks that the tag matches `CITATION.cff` and
+publishes a GitHub release with the TEI files as a zip. If the repository is
+connected to Zenodo, every release also gets a DOI there.

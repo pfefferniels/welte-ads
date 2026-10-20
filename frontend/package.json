@@ -36,6 +36,7 @@
   },
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/export-data.js",
     "build": "next build",
     "deploy": "npm run build",
     "lint": "eslint src/",
