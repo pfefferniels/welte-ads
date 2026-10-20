@@ -1,5 +1,5 @@
 export const names = {
-    "https://d-nb.info/gnd/118518011": "Busoni, Ferrucio",
+    "https://d-nb.info/gnd/118518011": "Busoni, Ferruccio",
     "https://d-nb.info/gnd/118986724": "Paderewski, Ignacy Jan",
     "https://d-nb.info/gnd/118953915": "Carreño, Teresa",
     "https://d-nb.info/gnd/116014490": "Pachmann, Vladimir",
@@ -34,7 +34,7 @@ export const names = {
     "https://d-nb.info/gnd/116060689": "Pauer, Max",
     "https://d-nb.info/gnd/116662166": "Lamond, Frederic",
     "https://d-nb.info/gnd/116977108": "Sauer, Emil von",
-    "https://d-nb.info/gnd/119362112": "Casella, Alfred",
+    "https://d-nb.info/gnd/119362112": "Casella, Alfredo",
     "https://d-nb.info/gnd/116014326": "Ansorge, Conrad",
     "https://d-nb.info/gnd/117223794": "Stavenhagen, Bernhard",
     "https://d-nb.info/gnd/117621641": "Borwick, Leonard",

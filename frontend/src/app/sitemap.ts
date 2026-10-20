@@ -7,7 +7,7 @@ import { SITE_URL } from "../lib/site"
 export const dynamic = 'force-static'
 
 // the pages besides the advertisements
-const PAGES = ['', 'overview', 'companies', 'artists', 'topics', 'topic', 'guidelines', 'data', 'imprint']
+const PAGES = ['', 'overview', 'companies', 'artists', 'persons', 'periodicals', 'topics', 'topic', 'guidelines', 'data', 'imprint']
 
 // the date of an advertisement's newest change, from its revision history
 const lastChange = (slug: string): Date | undefined => {
