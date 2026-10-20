@@ -2,7 +2,8 @@
 
 import React, { useMemo, useState } from "react"
 import Link from "next/link"
-import { Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TableSortLabel, TextField, Typography } from "@mui/material"
+import { Box, Chip, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TableSortLabel, TextField, ToggleButton, ToggleButtonGroup, Tooltip, Typography } from "@mui/material"
+import type { Status } from "../../lib/tei"
 
 interface Row {
   slug: string
@@ -11,9 +12,20 @@ interface Row {
   dates: string[]
   newspapers: string[]
   text: string
+  status: Status
 }
 
 type Column = 'company' | 'title' | 'date'
+
+// which ads the table shows: all, or only the checked or unchecked ones
+type Filter = 'all' | Status
+
+const UNCHECKED = 'Transcribed, encoded and annotated by Claude, an AI model; not yet checked against the scan by the editor'
+
+// the mark of an ad that the editor has not yet checked
+const Unchecked = () => (
+  <Chip component="span" label="unchecked" size="small" variant="outlined" sx={{ height: 20, verticalAlign: 'text-bottom' }} />
+)
 
 // "1913-11-15" → "15 November 1913", "1913-11" → "November 1913"
 const formatDate = (iso: string) => {
@@ -47,6 +59,13 @@ const snippet = (text: string, query: string) => {
 export default function OverviewClient({ rows }: { rows: Row[] }) {
   const [query, setQuery] = useState('')
   const [sort, setSort] = useState<{ by: Column; asc: boolean }>({ by: 'date', asc: true })
+  const [filter, setFilter] = useState<Filter>('all')
+
+  const counts: Record<Filter, number> = {
+    all: rows.length,
+    checked: rows.filter(row => row.status === 'checked').length,
+    unchecked: rows.filter(row => row.status === 'unchecked').length,
+  }
 
   const indexed = useMemo(() => rows.map(row => ({
     row,
@@ -61,6 +80,7 @@ export default function OverviewClient({ rows }: { rows: Row[] }) {
 
   const q = fold(query.trim())
   const shown = indexed
+    .filter(({ row }) => filter === 'all' || row.status === filter)
     .filter(({ about, text }) => !q || about.includes(q) || text.includes(q))
     .sort((a, b) => (sort.asc ? 1 : -1) * value(a).localeCompare(value(b), 'en')
       // within one advertiser or name, earlier ads first
@@ -95,6 +115,25 @@ export default function OverviewClient({ rows }: { rows: Row[] }) {
             : `${shown.length} of ${rows.length} advertisements`}
         </Typography>
       </Box>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 2, mb: 2 }}>
+        <ToggleButtonGroup
+          size="small"
+          exclusive
+          value={filter}
+          onChange={(_, value) => value && setFilter(value as Filter)}
+          aria-label="Show advertisements"
+          sx={{ '& .MuiToggleButton-root': { textTransform: 'none', fontSize: '1rem', py: 0.25 } }}
+        >
+          <ToggleButton value="all">All ({counts.all})</ToggleButton>
+          <ToggleButton value="checked">Checked ({counts.checked})</ToggleButton>
+          <ToggleButton value="unchecked">Unchecked ({counts.unchecked})</ToggleButton>
+        </ToggleButtonGroup>
+        <Typography variant="body2" component="p" sx={{ flex: '1 1 20rem', color: 'text.secondary' }}>
+          Ads marked <Unchecked /> were transcribed, encoded and annotated by
+          Claude, an AI model, and are not yet checked against the scan by the
+          editor (see the <Link href="/guidelines/">guidelines</Link>).
+        </Typography>
+      </Box>
       <TableContainer>
         <Table sx={{ minWidth: 650 }}>
           <TableHead>
@@ -111,6 +150,14 @@ export default function OverviewClient({ rows }: { rows: Row[] }) {
                 <TableCell>{row.company}</TableCell>
                 <TableCell>
                   <Link href={`/${row.slug}`}>{row.title}</Link>
+                  {row.status === 'unchecked' && (
+                    <>
+                      {' '}
+                      <Tooltip title={UNCHECKED}>
+                        <span><Unchecked /></span>
+                      </Tooltip>
+                    </>
+                  )}
                   {q && !about.includes(q) && (
                     <Typography variant="body2" component="div" sx={{ mt: 0.5, color: 'text.secondary' }}>
                       {snippet(row.text, q)}
@@ -118,7 +165,7 @@ export default function OverviewClient({ rows }: { rows: Row[] }) {
                   )}
                 </TableCell>
                 <TableCell>
-                  {row.dates.map((date, j) => <div key={j}>{formatDate(date)}</div>)}
+                  {row.dates.map((date, j) => <Box key={j} sx={{ whiteSpace: 'nowrap' }}>{formatDate(date)}</Box>)}
                 </TableCell>
                 <TableCell>
                   {row.newspapers.map((newspaper, j) => <div key={j}>{newspaper}</div>)}
