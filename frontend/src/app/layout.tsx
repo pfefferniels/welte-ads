@@ -27,10 +27,9 @@ export const metadata: Metadata = {
 const menuLinks = [
   { name: 'Introduction', link: '/' },
   { name: 'Advertisements', link: '/overview' },
-  { name: 'Companies', link: '/companies' },
+  { name: 'Places', link: '/places' },
   { name: 'Artists', link: '/artists' },
   { name: 'Topics', link: '/topics' },
-  { name: 'Periodicals', link: '/periodicals' },
   { name: 'Guidelines', link: '/guidelines' },
 ]
 

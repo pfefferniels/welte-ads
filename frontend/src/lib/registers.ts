@@ -108,18 +108,6 @@ export interface PersonEntry {
   ads: AdEntry[]
 }
 
-export interface PeriodicalEntry {
-  // the anchor of the entry in the register
-  id: string
-  title: string
-  place: string
-  placeRef: string
-  // the letter under which the entry is filed
-  initial: string
-  // the printings in the periodical, earliest first
-  printings: (Printing & { ad: AdEntry })[]
-}
-
 const initialOf = (text: string) => anchorOf(text).charAt(0).toUpperCase()
 
 // in capitals, as many ads set names
@@ -187,47 +175,115 @@ export function personRegister(ads: RegisterAd[]): { persons: PersonEntry[]; unl
 const ARTICLE = /^(the|a|an|der|die|das|de|het|le|la|les|el|los|las)\s+/i
 const filingTitle = (title: string) => title.replace(ARTICLE, '')
 
+// what comes before the first letter of a name ("'s-Gravenhage")
+const LEADING = new RegExp('^[^\\p{L}\\p{N}]+', 'u')
+const filingName = (name: string) => name.replace(LEADING, '')
+
 const firstDate = (printing: Printing) => [...printing.dates].sort()[0] || ''
 
+// the forms given, the most frequent first
+const byFrequency = (forms: string[]) => {
+  const counts = new Map<string, number>()
+  for (const form of forms.filter(Boolean)) counts.set(form, (counts.get(form) ?? 0) + 1)
+  return Array.from(counts).sort(([, m], [, n]) => n - m).map(([form]) => form)
+}
+
+// "place-5128581" for https://www.geonames.org/5128581
+const placeAnchor = (ref: string, name: string) => {
+  const geonames = ref.match(/(\d+)\/?$/)
+  return `place-${geonames ? geonames[1] : anchorOf(name)}`
+}
+
+// a printing with the ad that it is a printing of
+type PlacedPrinting = Printing & { ad: AdEntry }
+
+interface PlaceAd extends AdEntry {
+  // the key of the company that the ad is by (orgName/@key)
+  company: string
+  printings: Printing[]
+}
+
+export interface PlaceEntry {
+  // the anchor of the entry: "place-" and the GeoNames number
+  id: string
+  // the place in GeoNames
+  ref: string
+  // the names that the sources give the place, the most frequent first
+  names: string[]
+  // the letter under which the entry is filed
+  initial: string
+  printings: number
+  ads: number
+  // the periodicals printed there, each with its printings, earliest first
+  periodicals: { title: string; printings: PlacedPrinting[] }[]
+  // the companies whose ads were printed there, each with those ads
+  companies: { key: string; name: string; printings: number; ads: AdEntry[] }[]
+}
+
 /**
- * The periodicals in which the ads were printed, by title (passing over a
- * leading article), each with its printings in the order of their dates.
- * Two periodicals of the same title are told apart by their place.
+ * The places where the ads were printed, by name, each with its
+ * periodicals and their printings in the order of their dates, and the
+ * companies whose ads were printed there. A place is the GeoNames record
+ * of the sources; it may go by several names (С.-Петербургъ, Петроград).
  */
-export function periodicalRegister(ads: RegisterAd[]): PeriodicalEntry[] {
-  const periodicals = new Map<string, PeriodicalEntry>()
+export function placeRegister(ads: PlaceAd[]): PlaceEntry[] {
+  type Place = {
+    ref: string
+    forms: string[]
+    printings: PlacedPrinting[]
+    companies: Map<string, { printings: number; ads: AdEntry[] }>
+  }
+  const places = new Map<string, Place>()
 
   for (const ad of ads) {
+    const entry = { slug: ad.slug, title: ad.title, date: ad.date }
     for (const printing of ad.printings) {
-      if (!printing.periodical) continue
+      const key = printing.placeRef || printing.place
+      if (!key) continue
 
-      const key = `${printing.periodical}\n${printing.placeRef || printing.place}`
-      const entry = periodicals.get(key) ?? {
-        id: anchorOf(`${printing.periodical} ${printing.place}`),
-        title: printing.periodical,
-        place: printing.place,
-        placeRef: printing.placeRef,
-        initial: initialOf(filingTitle(printing.periodical)),
-        printings: [],
-      }
-      entry.printings.push({ ...printing, ad: { slug: ad.slug, title: ad.title, date: ad.date } })
-      periodicals.set(key, entry)
+      const place: Place = places.get(key) ?? { ref: printing.placeRef, forms: [], printings: [], companies: new Map() }
+      place.forms.push(printing.place)
+      place.printings.push({ ...printing, ad: entry })
+      const company = place.companies.get(ad.company) ?? { printings: 0, ads: [] }
+      company.printings += 1
+      if (company.ads[company.ads.length - 1]?.slug !== ad.slug) company.ads.push(entry)
+      place.companies.set(ad.company, company)
+      places.set(key, place)
     }
   }
 
-  return Array.from(periodicals.values())
-    .map(entry => ({
-      ...entry,
-      printings: entry.printings.sort((a, b) =>
-        firstDate(a).localeCompare(firstDate(b)) || a.ad.slug.localeCompare(b.ad.slug)
-        || a.source.localeCompare(b.source, 'en', { numeric: true })),
-    }))
-    .sort((a, b) => filingTitle(a.title).localeCompare(filingTitle(b.title), 'en')
-      || a.place.localeCompare(b.place, 'en'))
+  return Array.from(places.values(), place => {
+    const forms = byFrequency(place.forms)
+    const printings = place.printings.sort((a, b) =>
+      firstDate(a).localeCompare(firstDate(b)) || a.ad.slug.localeCompare(b.ad.slug)
+      || a.source.localeCompare(b.source, 'en', { numeric: true }))
+
+    const periodicals = new Map<string, PlacedPrinting[]>()
+    for (const printing of printings) {
+      periodicals.set(printing.periodical, [...(periodicals.get(printing.periodical) || []), printing])
+    }
+
+    return {
+      id: placeAnchor(place.ref, forms[0]),
+      ref: place.ref,
+      names: forms,
+      initial: initialOf(forms[0]),
+      printings: printings.length,
+      ads: new Set(printings.map(printing => printing.ad.slug)).size,
+      periodicals: Array.from(periodicals, ([title, list]) => ({ title, printings: list }))
+        .sort((a, b) => filingTitle(a.title).localeCompare(filingTitle(b.title), 'en')),
+      companies: Array.from(place.companies, ([key, company]) => ({
+        key,
+        name: names[key] || key,
+        printings: company.printings,
+        ads: company.ads.sort(byDate),
+      })).sort(byName),
+    }
+  }).sort((a, b) => filingName(a.names[0]).localeCompare(filingName(b.names[0]), 'en'))
 }
 
 // the ads of the collection with what the registers need of them
-function registerAds(): RegisterAd[] {
+function registerAds(): (RegisterAd & PlaceAd)[] {
   const teiDir = path.join(process.cwd(), '..', 'tei')
 
   return getAllMetadata().map(meta => {
@@ -237,6 +293,7 @@ function registerAds(): RegisterAd[] {
       slug: meta.slug,
       title: meta.title,
       date: [...meta.dates].sort()[0] || '',
+      company: meta.company.name,
       namings: namingsIn(doc),
       printings: printingsIn(doc),
     }
@@ -251,4 +308,4 @@ const asArtist = (naming: Naming) => naming.type.split(/\s+/).includes('artist')
 export const getArtistRegister = () => personRegister(registerAds()
   .map(ad => ({ ...ad, namings: ad.namings.filter(asArtist) }))).persons
 
-export const getPeriodicalRegister = () => periodicalRegister(registerAds())
+export const getPlaceRegister = () => placeRegister(registerAds())

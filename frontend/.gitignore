@@ -1,4 +1,7 @@
 .DS_Store
 .cache
-public
+# generated before the build (tei/) or kept locally (facs/); only the
+# redirects of old addresses are committed
+public/*
+!public/_redirects
 node_modules
