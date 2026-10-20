@@ -246,8 +246,10 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topic
   return (
     <TopicsContext.Provider value={topics}>
       <Stack direction='column' position='absolute'>
+        {/* one above the other, so that they stay in the margin */}
         <ToggleButtonGroup
           size='small'
+          orientation='vertical'
           value={mode}
           exclusive
           onChange={(_, value) => value && setMode(value as Mode)}

@@ -4,6 +4,7 @@ import { TEINodes } from "react-teirouter"
 import { Popover } from "@mui/material"
 import { TopicsContext } from "./TopicsContext"
 import Link from "next/link"
+import { EDITOR } from "../../lib/site"
 
 interface TEIProps {
   teiNode: Node
@@ -14,7 +15,9 @@ const Seg = ({ teiNode, availableRoutes }: TEIProps) => {
   const seg = teiNode as Element
   // a segment can stand for several topics
   const topics = (seg.getAttribute("ana") || '').split(/\s+/).filter(Boolean)
-  const resp = seg.getAttribute("resp") || 'unknown'
+  // who assigned the topics: the editor or Claude
+  const resp = seg.getAttribute("resp")
+  const annotator = resp === '#claude' ? 'Claude, an AI model' : resp === '#np' ? EDITOR.name : null
   const type = seg.getAttribute('type') || ''
 
   const definitions = useContext(TopicsContext)
@@ -61,7 +64,11 @@ const Seg = ({ teiNode, availableRoutes }: TEIProps) => {
               </Link>
             </React.Fragment>
           ))}
-          <sup>{resp}</sup>
+          {annotator && (
+            <div style={{ color: 'gray', fontSize: '0.85em', marginTop: '0.5rem' }}>
+              Assigned by {annotator}
+            </div>
+          )}
         </div>
       </Popover>
     </Behavior>

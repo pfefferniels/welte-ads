@@ -386,7 +386,8 @@ export function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
   const dates = Array.from(doc.querySelectorAll('date[type="publication"]')).map(
     date => date.getAttribute('when') || date.textContent || ''
   )
-  const newspapers = Array.from(doc.querySelectorAll('title[level="j"]')).map(
+  // the periodicals of the printings; a journal that the text quotes is not one
+  const newspapers = Array.from(doc.querySelectorAll('sourceDesc title[level="j"]')).map(
     title => (title.textContent || '').replace(/\s+/g, ' ').trim()
   )
   // the recording artists that the ad names

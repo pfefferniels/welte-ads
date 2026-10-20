@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
 import { JSDOM } from "jsdom"
-import { extractMetadata, getAdBySlug, getAllMetadata, markRedundantLineBreaks, plainText, staticText, tidySpaceBeforePunctuation } from "./tei"
+import { extractMetadata, getAllAds, getAllMetadata, markRedundantLineBreaks, plainText, staticText, tidySpaceBeforePunctuation } from "./tei"
 
 const marked = (body: string) => {
   const xml = `<TEI xmlns="http://www.tei-c.org/ns/1.0"><text>${body}</text></TEI>`
@@ -169,11 +169,10 @@ describe("staticText", () => {
   })
 
   it("holds the transcription of every ad", () => {
-    for (const { slug } of getAllMetadata()) {
-      const ad = getAdBySlug(slug)
-      const text = new JSDOM(ad.textHtml).window.document.body.textContent || ''
-      expect(text.replace(/\s+/g, ' ').trim().length, slug).toBeGreaterThan(0)
-      expect(ad.textHtml, slug).not.toContain('tei-teiheader')
+    for (const ad of getAllAds()) {
+      const text = ad.textHtml.replace(/<[^>]*>/g, ' ')
+      expect(text.replace(/\s+/g, ' ').trim().length, ad.slug).toBeGreaterThan(0)
+      expect(ad.textHtml, ad.slug).not.toContain('tei-teiheader')
     }
   })
 })

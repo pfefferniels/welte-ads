@@ -180,6 +180,7 @@
             </langUsage>
         </profileDesc>
     <revisionDesc status="checked">
+      <change when="2026-10-20">A stray key removed from the name of Grieg.</change>
       <change when="2026-10-20">Marked as checked by the editor.</change>
       <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
       <change when="2026-10-16">Transcribed printing marked; persons linked to the GND and typed.</change>
@@ -271,7 +272,7 @@
           <lb/>Mignon Autograph Piano</name> for his steam
           <lb/> yacht. Some recent records made by
           <lb/>
-          <persName type="artist" key="grieg" corresp="https://d-nb.info/gnd/118697641">
+          <persName type="artist" corresp="https://d-nb.info/gnd/118697641">
             Edvard Grieg
           </persName>
           were included, which
