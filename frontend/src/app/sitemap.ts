@@ -1,13 +1,14 @@
 import fs from "fs"
 import path from "path"
 import type { MetadataRoute } from "next"
-import { getAllMetadata } from "../lib/tei"
+import { getAllMetadata, getTopics } from "../lib/tei"
 import { SITE_URL } from "../lib/site"
+import { topicPath } from "../helpers/topicPath"
 
 export const dynamic = 'force-static'
 
 // the pages besides the advertisements
-const PAGES = ['', 'overview', 'places', 'artists', 'topics', 'topic', 'guidelines', 'data', 'imprint']
+const PAGES = ['', 'overview', 'places', 'artists', 'topics', 'guidelines', 'data', 'imprint']
 
 // the date of an advertisement's newest change, from its revision history
 const lastChange = (slug: string): Date | undefined => {
@@ -19,6 +20,7 @@ const lastChange = (slug: string): Date | undefined => {
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...PAGES.map(page => ({ url: `${SITE_URL}/${page ? page + '/' : ''}` })),
+    ...Object.keys(getTopics()).map(topic => ({ url: `${SITE_URL}${topicPath(topic)}/` })),
     ...getAllMetadata().map(ad => ({
       url: `${SITE_URL}/${ad.slug}/`,
       lastModified: lastChange(ad.slug),

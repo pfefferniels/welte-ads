@@ -315,7 +315,9 @@ function prefixTei(xmlString: string): { prefixed: string; elements: string[]; c
 interface TopicSegment {
   id: string
   topic: string
+  // the words of the passage, or what the picture shows
   text: string
+  picture: boolean
   // who assigned the topic, e.g. "#claude"
   resp: string
 }
@@ -394,21 +396,20 @@ export function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
     name => name.getAttribute('corresp') || ''
   )
   // topics are marked on text segments and on figures (what a picture shows)
+  tidySpaceBeforePunctuation(doc)
   const topicSegments = Array.from(doc.querySelectorAll('seg[ana], figure[ana]'))
-    .map(seg => {
-      const ana = seg.getAttribute('ana')
-      if (!ana) return []
-
+    .flatMap(seg => {
       // without an xml:id, a segment can only be linked as part of its ad
       const id = seg.getAttribute('xml:id')
-      return ana.split(/\s+/).filter(Boolean).map(a => ({
+      const text = passageText(seg)
+      return (seg.getAttribute('ana') || '').split(/\s+/).filter(Boolean).map(topic => ({
         id: id ? `#${id}` : '',
-        topic: a,
-        text: seg.textContent || '',
+        topic,
+        text: text || pictureDescription(seg),
+        picture: !text,
         resp: seg.getAttribute('resp') || '',
       }))
     })
-    .flat()
 
   // the printing that the text is transcribed from, or else the first
   const decls = (doc.querySelector('text')?.getAttribute('decls') || '').replace(/^#/, '')
@@ -445,14 +446,79 @@ export function plainText(xmlString: string): string {
   const start = xmlString.indexOf('<text')
   const end = xmlString.lastIndexOf('</text>')
   if (start < 0 || end < 0) return ''
-  const body = xmlString.slice(start, end + '</text>'.length)
-    .replace(/-\s*<lb\s*\/>\s*(?=[a-zäöüßàâçéèêëîïôûùÿñæœ])/g, '')
-    // a hyphen before a capital belongs to the word ("Welte-<lb/>Mignon")
-    .replace(/-\s*<lb\s*\/>\s*/g, '-')
-    .replace(/<lb\s*\/>/g, ' ')
-  const doc = new JSDOM(body, { contentType: 'text/xml' }).window.document
-  return (doc.documentElement.textContent || '').replace(/\s+/g, ' ').trim()
+  const text = xmlParser().parseFromString(xmlString.slice(start, end + '</text>'.length), 'text/xml')
+  return lineText(text.documentElement)
 }
+
+/**
+ * The words of a passage as they are printed, on one line: of several
+ * readings only the one that the facsimile shows (the lemma, or else the
+ * first reading), and without notes or descriptions of pictures. A
+ * passage that is only a picture has none.
+ */
+export function passageText(passage: Element): string {
+  const copy = passage.cloneNode(true) as Element
+  for (const app of Array.from(copy.getElementsByTagName('app'))) {
+    const readings = Array.from(app.children)
+    const shown = readings.find(r => r.localName === 'lem') || readings.find(r => r.localName === 'rdg')
+    app.replaceWith(...Array.from(shown?.childNodes || []))
+  }
+  copy.querySelectorAll('figure, desc, note').forEach(el => el.remove())
+  return lineText(copy)
+}
+
+// what a picture shows, in the words of the editor
+const pictureDescription = (figure: Element) =>
+  Array.from(figure.getElementsByTagName('desc'))
+    .map(desc => desc.textContent)
+    .join(' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+
+/**
+ * The text of an element on one line. A hyphen at the end of a line, also
+ * inside an element ("in-</hi><lb/>vention"), breaks a word that goes on
+ * in the next line, unless a capital follows ("Welte-<lb/>Mignon") or the
+ * line begins a new element. A dash after a space stays apart.
+ */
+function lineText(root: Element): string {
+  let text = ''
+  let lineBreak = false
+  let opened = false
+  const walker = root.ownerDocument.createTreeWalker(root, 0x1 | 0x4 /* elements and text */)
+  while (walker.nextNode()) {
+    const node = walker.currentNode
+    if (node.nodeType === 1) {
+      if ((node as Element).localName === 'lb') {
+        lineBreak = true
+        opened = false
+      } else if (lineBreak) {
+        opened = true
+      }
+      continue
+    }
+
+    let data = (node as Text).data
+    if (lineBreak && data.trim()) {
+      lineBreak = false
+      if (/\S-\s*$/.test(text)) {
+        text = text.trimEnd()
+        if (!opened) {
+          data = data.trimStart()
+          if (data[0] !== data[0].toUpperCase()) text = text.slice(0, -1)
+        }
+      } else {
+        text += ' '
+      }
+    }
+    text += data
+  }
+  return text.replace(/\s+/g, ' ').trim()
+}
+
+// one parser for all the ads, as setting up a JSDOM for each is slow
+let parser: DOMParser | undefined
+const xmlParser = () => parser ??= new (new JSDOM().window.DOMParser)()
 
 function getTeiDir(): string {
   return path.join(process.cwd(), '..', 'tei')
@@ -516,15 +582,23 @@ export function getAdBySlug(slug: string): AdData {
   }
 }
 
+// A build asks for the metadata of every ad on many pages, but the TEI
+// files do not change while it runs. In development they may.
+let allMetadata: AdMetadata[] | undefined
+
 export function getAllMetadata(): AdMetadata[] {
+  if (allMetadata) return [...allMetadata]
+
   const teiDir = getTeiDir()
   const files = fs.readdirSync(teiDir).filter(f => f.endsWith('.xml')).sort()
 
-  return files.map(file => {
+  const metadata = files.map(file => {
     const slug = file.replace('.xml', '')
     const xmlString = fs.readFileSync(path.join(teiDir, file), 'utf-8')
     const metadata = extractMetadata(xmlString)
 
     return { slug, ...metadata }
   })
+  if (process.env.NODE_ENV === 'production') allMetadata = metadata
+  return [...metadata]
 }

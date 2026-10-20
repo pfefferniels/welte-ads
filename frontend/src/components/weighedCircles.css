@@ -1,18 +1,35 @@
+.weighed-circles {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+}
+
 .weighted-circle {
     fill-opacity: 0.5
 }
 
-.circle-group:hover {
+.circle-group {
     cursor: pointer;
+    outline: none;
+}
+
+.circle-group:focus-visible .weighted-circle {
+    stroke: black;
+    stroke-width: 2;
 }
 
 .circle-label {
     font-family: 'Crimson Pro';
     font-weight: 400;
     text-anchor: middle;
+}
+
+.circle-label tspan {
     dominant-baseline: central;
 }
 
-.circle-label:hover {
+.circle-group:hover .circle-label,
+.circle-group:focus-visible .circle-label {
     font-weight: bold;
 }

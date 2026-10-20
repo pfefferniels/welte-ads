@@ -5,6 +5,7 @@ import { Popover } from "@mui/material"
 import { TopicsContext } from "./TopicsContext"
 import Link from "next/link"
 import { EDITOR } from "../../lib/site"
+import { topicPath } from "../../helpers/topicPath"
 
 interface TEIProps {
   teiNode: Node
@@ -59,7 +60,7 @@ const Seg = ({ teiNode, availableRoutes }: TEIProps) => {
           {topics.map((topic, i) => (
             <React.Fragment key={topic}>
               {i > 0 && ', '}
-              <Link href={`/topic/${topic}`}>
+              <Link href={topicPath(topic)}>
                 {definitions[topic]?.label || topic}
               </Link>
             </React.Fragment>

@@ -6,6 +6,7 @@ import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material"
 import { getMarkdownContent } from "../../lib/markdown"
 import { getEncodingDescription } from "../../lib/encoding"
 import { getTopics } from "../../lib/tei"
+import { topicPath } from "../../helpers/topicPath"
 import { EDITION } from "../../lib/site"
 
 export const metadata = {
@@ -90,7 +91,7 @@ export default function GuidelinesPage() {
         {topics.map(([key, topic], i) => (
           <React.Fragment key={key}>
             {i > 0 && ', '}
-            <Link href={`/topic/${key}`}>{topic.label}</Link>
+            <Link href={topicPath(key)}>{topic.label}</Link>
           </React.Fragment>
         ))}.
       </Typography>
