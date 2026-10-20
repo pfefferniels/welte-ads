@@ -357,7 +357,6 @@ interface AdData extends AdMetadata {
   prefixed: string
   elements: string[]
   facsimile: Facsimile
-  original: string
   // the text alone, as HTML that the page holds before the edition takes over
   textHtml: string
 }
@@ -496,7 +495,6 @@ export function getAllAds(): AdData[] {
       prefixed,
       elements,
       facsimile,
-      original: xmlString,
       textHtml,
     }
   })
@@ -514,7 +512,6 @@ export function getAdBySlug(slug: string): AdData {
     prefixed,
     elements,
     facsimile,
-    original: xmlString,
     textHtml,
   }
 }

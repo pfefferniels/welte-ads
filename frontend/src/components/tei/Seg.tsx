@@ -65,7 +65,7 @@ const Seg = ({ teiNode, availableRoutes }: TEIProps) => {
             </React.Fragment>
           ))}
           {annotator && (
-            <div style={{ color: 'gray', fontSize: '0.85em', marginTop: '0.5rem' }}>
+            <div style={{ color: '#6b6b6b', fontSize: '0.85em', marginTop: '0.5rem' }}>
               Assigned by {annotator}
             </div>
           )}

@@ -30,7 +30,7 @@ tei-gap::before {
     padding-left: 4px;
     padding-right: 4px;
     margin-right: 1rem;
-    color: gray;
+    color: #6b6b6b;
     content: 'gap';
 }
 
@@ -40,7 +40,7 @@ tei-figure::before {
     padding-left: 4px;
     padding-right: 4px;
     margin-right: 1rem;
-    color: gray;
+    color: #6b6b6b;
     content: 'illustration';
 }
 
@@ -51,7 +51,7 @@ tei-signed::before {
     padding-right: 4px;
     margin-left: 1rem;
     margin-right: 1rem;
-    color: gray;
+    color: #6b6b6b;
     content: 'signature';
 }
 
@@ -88,7 +88,7 @@ tei-sourcedesc::before {
 tei-pb::before {
     display: block;
     content: '[page break]';
-    color: gray;
+    color: #6b6b6b;
     font-size: 0.8rem;
     background-color: white;
     width: fit-content;
@@ -141,7 +141,7 @@ tei-figure {
 
 tei-desc {
     font-style: italic;
-    color: gray;
+    color: #6b6b6b;
 }
 
 tei-head {
@@ -326,7 +326,7 @@ tei-lb:before {
 .layout .zone tei-figure {
     display: block;
     margin: 0;
-    color: gray;
+    color: #6b6b6b;
     font-style: italic;
     text-align: center;
 }
@@ -405,6 +405,6 @@ tei-lb:before {
 }
 
 .static-text tei-note {
-    color: gray;
+    color: #6b6b6b;
     font-size: 0.9em;
 }

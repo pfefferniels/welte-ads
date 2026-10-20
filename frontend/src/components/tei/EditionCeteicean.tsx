@@ -48,7 +48,6 @@ interface Props {
   prefixed: string
   elements: string[]
   facsimile: Facsimile
-  original: string
   topics: Record<string, Topic>
   // the links to the digital images of the transcribed printing
   imageLinks: string[]
@@ -61,7 +60,7 @@ type Mode = 'layout' | 'text' | 'facsimile'
 // the gap between pages side by side in the facsimile view, in image pixels
 const pageGap = 40
 
-const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topics, imageLinks, children }: Props) => {
+const EditionCeteicean = ({ name, prefixed, elements, facsimile, topics, imageLinks, children }: Props) => {
   const [mode, setMode] = useState<Mode>('text')
   const mounted = useSyncExternalStore(
     () => () => {},
@@ -276,14 +275,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, original, topic
 
         <Box mt={2}>
           <Tooltip title="Download TEI/XML" placement="right">
-            <IconButton aria-label="Download TEI/XML" onClick={() => {
-              const a = window.document.createElement('a')
-              a.href = window.URL.createObjectURL(new Blob([original], { type: 'application/xml' }))
-              a.download = `${name}.xml`
-              document.body.appendChild(a)
-              a.click()
-              document.body.removeChild(a)
-            }}>
+            <IconButton aria-label="Download TEI/XML" component="a" href={`/tei/${name}.xml`} download={`${name}.xml`}>
               <Download />
             </IconButton>
           </Tooltip>

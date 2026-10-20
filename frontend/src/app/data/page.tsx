@@ -28,7 +28,10 @@ export default function DataPage() {
         licence and the citation file. Each file also has its own
         address, e.g. <a href="/tei/ad008.xml">/tei/ad008.xml</a>, and can
         be downloaded from its page. How the files are encoded is described in
-        the <Link href="/guidelines/">Guidelines</Link>.
+        the <Link href="/guidelines/">Guidelines</Link>; they are valid against
+        the project&apos;s schema (<a href="/tei/schema/welte-ads.rng">RELAX NG</a>),
+        generated from its <a href="/tei/schema/welte-ads.odd">ODD</a>, and against
+        tei_all.
       </Typography>
       <Typography>
         The data are published under
