@@ -35,8 +35,8 @@ export default function DataPage() {
       </Typography>
       <Typography>
         The data are published under
-        the <a href={DATA_LICENCE}>Creative Commons Attribution-NonCommercial-ShareAlike
-        4.0 International License</a>, the code of the website under the
+        the <a href={DATA_LICENCE}>Creative Commons Attribution 4.0 International
+        License</a>, the code of the website under the
         MIT License.
       </Typography>
       <Typography>

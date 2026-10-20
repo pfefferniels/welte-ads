@@ -2,7 +2,7 @@ import { EDITION, EDITOR, SITE_URL } from "./site"
 import { currentRelease } from "./release"
 
 export const DATA_ARCHIVE = '/tei/welte-ads-tei.zip'
-export const DATA_LICENCE = 'https://creativecommons.org/licenses/by-nc-sa/4.0/'
+export const DATA_LICENCE = 'https://creativecommons.org/licenses/by/4.0/'
 
 /** The collection as a schema.org Dataset. */
 export function datasetJsonLd(ads: number) {

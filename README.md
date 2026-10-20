@@ -4,7 +4,7 @@ A TEI edition of print advertisements for the Welte-Mignon reproducing
 piano, 1905–1930, edited by Niels Pfeffer.
 
 Live at https://anz.welte225.org/. The TEI files are published with the site
-(https://anz.welte225.org/data/) under CC BY-NC-SA 4.0, the code under the
+(https://anz.welte225.org/data/) under CC BY 4.0, the code under the
 MIT License; see `LICENSE.md`.
 
 ## Data
@@ -54,5 +54,6 @@ The site always shows the current state of `main`. A numbered release fixes a
 state that can be cited: set `version` and `date-released` in `CITATION.cff`,
 commit, and push the tag `v<version>` (e.g. `git tag v1.0.0 && git push origin
 v1.0.0`). The release workflow checks that the tag matches `CITATION.cff` and
-publishes a GitHub release with the TEI files as a zip. If the repository is
-connected to Zenodo, every release also gets a DOI there.
+publishes a GitHub release with the TEI files as a zip. The repository is
+connected to Zenodo, which archives every release and gives it a DOI; the
+metadata of the Zenodo record come from `.zenodo.json`.

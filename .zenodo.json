@@ -1,0 +1,29 @@
+{
+  "upload_type": "dataset",
+  "title": "Welte-Mignon Advertisements Collection",
+  "creators": [
+    {
+      "name": "Pfeffer, Niels",
+      "affiliation": "University of Tübingen",
+      "orcid": "0000-0002-6210-7255"
+    }
+  ],
+  "description": "<p>A TEI edition of print advertisements for the Welte-Mignon reproducing piano that appeared between 1905 and 1930: transcriptions with the layout of their originals, descriptions of all known printings, persons linked to the GND, and an annotation of recurring motifs (topics). The edition is published at <a href=\"https://anz.welte225.org\">https://anz.welte225.org</a>.</p><p>The TEI files are in <code>tei/</code>, with the shared encoding description in <code>tei/shared/encoding.xml</code> and the project schema and its ODD in <code>tei/schema/</code>. The source code of the website is in <code>frontend/</code>.</p>",
+  "notes": "The advertisements published outside Germany, the United Kingdom and the United States, and a few from Germany, were transcribed, encoded and annotated by Claude, an AI model by Anthropic. Until the editor has checked such an advertisement against its scan, its revisionDesc has status=\"unchecked\". The TEI data are published under CC BY 4.0; the source code of the website under the MIT License.",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Welte-Mignon",
+    "reproducing piano",
+    "advertising",
+    "TEI",
+    "digital edition"
+  ],
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "https://anz.welte225.org/",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ]
+}

@@ -33,9 +33,9 @@
                 <pubPlace>Tübingen</pubPlace>
                 <date when="2026">2026</date>
                 <availability>
-                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">
                         <p>
-                            Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+                            Creative Commons Attribution 4.0 International
                             License
                         </p>
                     </licence>
@@ -526,6 +526,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
             <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
             <change when="2026-10-18" who="#claude">Nine further printings in Sport im Bild 1921–1922 added as further sources by Claude.</change>

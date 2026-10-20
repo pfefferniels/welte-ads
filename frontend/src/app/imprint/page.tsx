@@ -34,9 +34,8 @@ export default function ImprintPage() {
       </Typography>
       <Typography variant="body1" component="p">
         The TEI encodings of the advertisements are published under
-        the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
-        Commons Attribution-NonCommercial-ShareAlike 4.0 International
-        License</a>. The source code of the website is published under
+        the <a href="https://creativecommons.org/licenses/by/4.0/">Creative
+        Commons Attribution 4.0 International License</a>. The source code of the website is published under
         the MIT License. Both are available
         on <a href="https://github.com/pfefferniels/welte-ads">GitHub</a>.
       </Typography>
