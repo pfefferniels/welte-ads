@@ -43,6 +43,7 @@
     "test:watch": "vitest",
     "knip": "knip",
     "sync-tei": "node scripts/sync-tei.js",
+    "survey-tei": "node scripts/survey-tei.js",
     "validate-tei": "sh scripts/validate-tei.sh"
   }
 }
