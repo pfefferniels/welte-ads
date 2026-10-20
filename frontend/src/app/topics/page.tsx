@@ -33,7 +33,7 @@ export default function TopicsPage() {
 
   return (
     <Container component="main" maxWidth="md">
-      <h2>Topics</h2>
+      <h1>Topics</h1>
       <Typography>
         Topics are understood as recurring motifs,
         such as the illustration of a half-transparent &quot;ghost&quot;

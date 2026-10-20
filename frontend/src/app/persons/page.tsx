@@ -4,7 +4,7 @@ import { Container, Typography } from '@mui/material'
 import { getPersonRegister, PersonEntry } from "../../lib/registers"
 import { GND } from "../../lib/anchors"
 import { formatDate } from "../../lib/dates"
-import { Entry, Initials, Letter, RegisterNav, byInitial, count } from "../../components/register"
+import { Entry, Initials, Letter, byInitial, count } from "../../components/register"
 
 export const metadata = {
   title: 'Persons',
@@ -36,22 +36,10 @@ const Person = ({ person }: { person: PersonEntry }) => (
 
 export default function PersonsPage() {
   const { persons, unlinked } = getPersonRegister()
-  const ads = new Set(persons.flatMap(person => person.ads.map(ad => ad.slug))).size
 
   return (
     <Container component="main" maxWidth="md">
-      <RegisterNav current="/persons" />
-      <h2>Persons</h2>
-      <Typography>
-        The persons named in the advertisements, with the ads that name
-        them, linked to the GND, the authority file of the German National
-        Library.
-      </Typography>
-      <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
-        {persons.length} persons, named in {ads} ads. Each ad is listed with
-        the date of its first printing. Names that are not linked to the GND
-        follow <a href="#unlinked">at the end</a>, as written.
-      </Typography>
+      <h1>Persons</h1>
 
       <Initials initials={byInitial(persons).map(([initial]) => initial)}>
         <a href="#unlinked">Others</a>
@@ -64,7 +52,7 @@ export default function PersonsPage() {
       ))}
 
       <section>
-        <Typography variant="h5" component="h3" id="unlinked"
+        <Typography variant="h5" component="h2" id="unlinked"
           sx={{ mt: 4, mb: 1, borderBottom: '1px solid #e8e4e0' }}>
           Names not linked to the GND
         </Typography>

@@ -20,7 +20,7 @@ export default function DataPage() {
   return (
     <Container component="main" maxWidth="md">
       <JsonLd data={datasetJsonLd(ads.length)} />
-      <h2>Data</h2>
+      <h1>Data</h1>
       <Typography>
         Every advertisement is a TEI P5 file, which describes its own
         markup and sources. <a href={DATA_ARCHIVE} download>Download all {ads.length} files</a>{' '}

@@ -34,10 +34,10 @@ export default function GuidelinesPage() {
 
   return (
     <Container component="main" maxWidth="md">
-      <Typography variant="h3" component="h2" gutterBottom={false}>
+      <Typography variant="h3" component="p" gutterBottom={false}>
         {EDITION}
       </Typography>
-      <Typography variant="h4" component="h3" gutterBottom>
+      <Typography variant="h4" component="h1" gutterBottom>
         Guidelines
       </Typography>
       <Typography variant="body1" component="p">
@@ -45,17 +45,17 @@ export default function GuidelinesPage() {
         states in its <code>&lt;encodingDesc&gt;</code>.
       </Typography>
 
-      <Typography variant="h5" component="h3">Selection</Typography>
+      <Typography variant="h5" component="h2">Selection</Typography>
       <Paragraphs paragraphs={selection} />
 
       {principles.map(section => (
         <React.Fragment key={section.heading}>
-          <Typography variant="h5" component="h3">{section.heading}</Typography>
+          <Typography variant="h5" component="h2">{section.heading}</Typography>
           <Paragraphs paragraphs={section.paragraphs} />
         </React.Fragment>
       ))}
 
-      <Typography variant="h5" component="h3">Typography</Typography>
+      <Typography variant="h5" component="h2">Typography</Typography>
       <Typography variant="body1" component="p">
         The values of <code>@rendition</code> are defined in CSS:
       </Typography>
@@ -76,7 +76,7 @@ export default function GuidelinesPage() {
         </TableBody>
       </Table>
 
-      <Typography variant="h5" component="h3">Topics</Typography>
+      <Typography variant="h5" component="h2">Topics</Typography>
       <Typography variant="body1" component="p">
         The topics are:{' '}
         {topics.map(([key, topic], i) => (

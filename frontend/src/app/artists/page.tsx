@@ -27,7 +27,7 @@ export default function ArtistsPage() {
 
   return (
     <Container component="main" maxWidth="md">
-      <h2>Mentioned Artists</h2>
+      <h1>Mentioned Artists</h1>
       <Typography>
         How much of the advertising each artist received over time.
       </Typography>

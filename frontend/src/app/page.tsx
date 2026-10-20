@@ -38,10 +38,10 @@ export default function HomePage() {
   return (
     <Container component="main" maxWidth="md">
       <JsonLd data={datasetJsonLd(ads.length)} />
-      <Typography variant="h3" component="h2" gutterBottom={false}>
+      <Typography variant="h3" component="h1" gutterBottom={false}>
         {EDITION}
       </Typography>
-      <Typography variant="h5" component="h4" gutterBottom={false}>
+      <Typography variant="h5" component="p" gutterBottom={false}>
         Edited by {EDITOR.name}, {EDITOR.affiliation}
         <OrcidLink id={EDITOR.orcid} />
       </Typography>

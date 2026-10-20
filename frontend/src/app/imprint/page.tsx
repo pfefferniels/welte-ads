@@ -11,14 +11,14 @@ export const metadata = {
 export default function ImprintPage() {
   return (
     <Container component="main" maxWidth="md">
-      <Typography variant="h3" component="h2" gutterBottom={false}>
+      <Typography variant="h3" component="p" gutterBottom={false}>
         {EDITION}
       </Typography>
-      <Typography variant="h4" component="h3" gutterBottom>
+      <Typography variant="h4" component="h1" gutterBottom>
         Imprint
       </Typography>
 
-      <Typography variant="h6" component="h4">
+      <Typography variant="h6" component="h2">
         Editor and contact
       </Typography>
       <Typography variant="body1" component="p">
@@ -29,7 +29,7 @@ export default function ImprintPage() {
         ORCID:<OrcidLink id={EDITOR.orcid} showId />
       </Typography>
 
-      <Typography variant="h6" component="h4">
+      <Typography variant="h6" component="h2">
         Licences
       </Typography>
       <Typography variant="body1" component="p">

@@ -44,9 +44,9 @@ export default function TopicClient({ segments, topics }: Props) {
 
   return (
     <Container component="main" maxWidth="md">
-      <h2>
+      <h1>
         Topic &quot;{topics[topic]?.label || topic}&quot;
-      </h2>
+      </h1>
       <div>
         <Typography>
           {topics[topic]?.description || 'no description available'}

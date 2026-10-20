@@ -40,7 +40,7 @@ export default function CompaniesPage() {
 
   return (
     <Container component="main" maxWidth="md">
-      <h2>Companies</h2>
+      <h1>Companies</h1>
       <Typography>
         Different companies advertised for the Welte-Mignon all
         over the world. Each circle stands for a company in one

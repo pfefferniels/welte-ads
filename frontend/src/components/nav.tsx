@@ -12,8 +12,6 @@ import theme from "../theme"
 interface Links {
   name: string
   link: string
-  // further pages that the entry stands for
-  also?: string[]
 }
 
 interface Props {
@@ -50,8 +48,8 @@ const Nav = ({ menuLinks }: Props) => {
     <Container maxWidth="md" sx={styles.nav}>
       <Grid container={true} component="nav">
         {menuLinks.map(link => {
-          const isActive = [link.link, ...(link.also || [])]
-            .some(path => pathname === path || pathname === path + '/')
+          const isActive = pathname === link.link || pathname === link.link + '/'
+            || (link.link === '/' && pathname === '/')
 
           const active = isActive ? {
             backgroundColor: theme.palette.primary.main + "18",

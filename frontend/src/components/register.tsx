@@ -1,11 +1,5 @@
 import React from "react"
-import Link from "next/link"
 import { Box, Typography } from "@mui/material"
-
-const REGISTERS = [
-  { name: 'Persons', link: '/persons' },
-  { name: 'Periodicals', link: '/periodicals' },
-]
 
 // "1 ad", "2 ads"
 export const count = (n: number, noun: string) => `${n} ${noun}${n === 1 ? '' : 's'}`
@@ -20,37 +14,6 @@ export function byInitial<T extends { initial: string }>(entries: T[]): [string,
   }
   return Array.from(groups)
 }
-
-/** The switch between the registers, above each of them. */
-export const RegisterNav = ({ current }: { current: string }) => (
-  <Box component="nav" aria-label="Registers" sx={{
-    display: 'flex',
-    gap: 3,
-    borderBottom: '1px solid #e8e4e0',
-    '& a, & a:visited': {
-      color: 'default.main',
-      textDecoration: 'none',
-      textTransform: 'uppercase',
-      letterSpacing: '0.08em',
-      fontSize: '0.85rem',
-      py: 1,
-      borderBottom: '2px solid transparent',
-      marginBottom: '-1px',
-    },
-    '& a[aria-current="page"]': {
-      color: 'primary.main',
-      borderBottomColor: 'primary.main',
-      fontWeight: 600,
-    },
-  }}>
-    {REGISTERS.map(register => (
-      <Link key={register.link} href={register.link}
-        aria-current={register.link === current ? 'page' : undefined}>
-        {register.name}
-      </Link>
-    ))}
-  </Box>
-)
 
 /** Links to the initials under which the entries are filed. */
 export const Initials = ({ initials, children }: { initials: string[]; children?: React.ReactNode }) => (
@@ -71,7 +34,7 @@ export const Initials = ({ initials, children }: { initials: string[]; children?
 /** The entries filed under one initial. */
 export const Letter = ({ initial, children }: { initial: string; children: React.ReactNode }) => (
   <section>
-    <Typography variant="h5" component="h3" id={letterAnchor(initial)}
+    <Typography variant="h5" component="h2" id={letterAnchor(initial)}
       sx={{ mt: 3, mb: 1, borderBottom: '1px solid #e8e4e0' }}>
       {initial}
     </Typography>
@@ -103,7 +66,7 @@ export const Entry = ({ id, heading, about, children }: EntryProps) => (
     // the entry that a link leads to
     '&:target': { backgroundColor: 'rgba(139, 94, 60, 0.08)' },
   }}>
-    <Typography variant="h6" component="h4" sx={{ lineHeight: 1.3 }}>
+    <Typography variant="h6" component="h3" sx={{ lineHeight: 1.3 }}>
       {heading}
     </Typography>
     <Typography variant="body2" component="p" sx={{ color: 'text.secondary' }}>

@@ -60,6 +60,11 @@ const theme = createTheme({
         "h1, h2, h3, h4, h5, h6": {
           color: "#2c2220",
         },
+        // a page's title is its only h1, set like the former h2 titles
+        "h1": {
+          fontSize: "1.5em",
+          margin: "0.83em 0",
+        },
         "tei-choice tei-abbr + tei-expan:before, tei-choice tei-expan + tei-abbr:before, tei-choice tei-sic + tei-corr:before, tei-choice tei-corr + tei-sic:before, tei-choice tei-orig + tei-reg:before, tei-choice tei-reg + tei-orig:before": {
           content: `" ("`
         },

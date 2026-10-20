@@ -1,9 +1,9 @@
 import React from "react"
 import Link from "next/link"
-import { Container, Typography } from '@mui/material'
+import { Container } from '@mui/material'
 import { getPeriodicalRegister, PeriodicalEntry } from "../../lib/registers"
 import { formatDate } from "../../lib/dates"
-import { Entry, Initials, Letter, RegisterNav, byInitial, count } from "../../components/register"
+import { Entry, Initials, Letter, byInitial, count } from "../../components/register"
 
 export const metadata = {
   title: 'Periodicals',
@@ -41,23 +41,10 @@ const Periodical = ({ periodical }: { periodical: PeriodicalEntry }) => (
 
 export default function PeriodicalsPage() {
   const periodicals = getPeriodicalRegister()
-  const printings = periodicals.reduce((sum, periodical) => sum + periodical.printings.length, 0)
-  const ads = new Set(periodicals.flatMap(periodical => periodical.printings.map(p => p.ad.slug))).size
 
   return (
     <Container component="main" maxWidth="md">
-      <RegisterNav current="/periodicals" />
-      <h2>Periodicals</h2>
-      <Typography>
-        The newspapers and magazines in which the advertisements were
-        printed, with each printing in the order of its date. An ad printed
-        more than once is listed under each printing; the one its text is
-        transcribed from is marked <em>transcribed</em>.
-      </Typography>
-      <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
-        {periodicals.length} periodicals, {printings} printings of {ads} ads.
-        The titles are in alphabetical order, passing over a leading article.
-      </Typography>
+      <h1>Periodicals</h1>
 
       <Initials initials={byInitial(periodicals).map(([initial]) => initial)} />
 

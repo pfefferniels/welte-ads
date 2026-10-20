@@ -30,7 +30,8 @@ const menuLinks = [
   { name: 'Companies', link: '/companies' },
   { name: 'Artists', link: '/artists' },
   { name: 'Topics', link: '/topics' },
-  { name: 'Registers', link: '/persons', also: ['/periodicals'] },
+  { name: 'Persons', link: '/persons' },
+  { name: 'Periodicals', link: '/periodicals' },
   { name: 'Guidelines', link: '/guidelines' },
 ]
 
