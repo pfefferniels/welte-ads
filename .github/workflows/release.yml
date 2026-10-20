@@ -7,6 +7,11 @@ on:
   # a release can also be started from the Actions tab: it then tags the
   # commit with the version that CITATION.cff names
   workflow_dispatch:
+    inputs:
+      republish:
+        description: 'If this version is already released, publish it again (e.g. so that Zenodo archives it)'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -31,6 +36,15 @@ jobs:
 
       - name: Pack the TEI files
         run: zip -q -r "welte-ads-tei-${TAG}.zip" tei LICENSE.md CITATION.cff
+
+      - name: Remove the earlier release of this version, if asked to
+        if: ${{ inputs.republish }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release delete "$TAG" --yes
+          fi
 
       - name: Publish the release
         env:
