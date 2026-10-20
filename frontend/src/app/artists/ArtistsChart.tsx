@@ -29,7 +29,7 @@ const STEP = 0.1 // of the curves, in years
 const STOPS = 5 // a colour every fifth step, every half year
 
 const GRID = '#e4e4e4'
-const MUTED = '#8a7f78'
+const MUTED = '#736962'
 
 // a band's colour tells how often the artist is mentioned per year around a
 // time: blue where seldom, turning red, and darker, the more often; the
@@ -184,7 +184,7 @@ export default function ArtistsChart({ years, artists, h }: Props) {
                 const f = facts(artist, year)
                 return (
                   <rect key={year} x={x(year - 0.5)} y={y(i) - ROW / 2} width={x(1) - x(0)} height={ROW}
-                    fill="transparent" tabIndex={0} style={{ outline: 'none' }}
+                    fill="transparent" role="img" tabIndex={0} style={{ outline: 'none' }}
                     aria-label={`${artist.name}, ${year}: ${f.year}; ${f.around}`}
                     onMouseEnter={() => setActive({ artist, year })} onMouseLeave={() => setActive(null)}
                     onFocus={() => setActive({ artist, year })} onBlur={() => setActive(null)} />
