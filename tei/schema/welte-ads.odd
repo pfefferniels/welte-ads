@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>The TEI customisation of the Welte-Mignon Advertisements Collection</title>
+            <respStmt>
+               <resp>Encoding</resp>
+               <persName xml:id="np">
+                  <surname>Pfeffer</surname>
+                  <forename>Niels</forename>
+               </persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <persName>
+                  <surname>Pfeffer</surname>
+                  <forename>Niels</forename>
+               </persName>
+            </publisher>
+            <pubPlace>Tübingen</pubPlace>
+            <date when="2026">2026</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <p>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Born digital.</p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2026-10-20">Written from a survey of the markup of the
+            advertisements.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <head>The TEI customisation of the Welte-Mignon Advertisements Collection</head>
+         <div>
+            <head>What this customisation is for</head>
+            <p>The Welte-Mignon Advertisements Collection encodes print
+               advertisements for the Welte-Mignon reproducing piano in TEI P5,
+               one advertisement to a file (<ident>tei/ad*.xml</ident>); the
+               encoding description that the files share is kept in
+               <ident>tei/shared/encoding.xml</ident>. This ODD documents that
+               encoding as a customisation of TEI P5, release 4.12.0. It admits
+               only the elements that the edition uses, says what the edition
+               means by an element or attribute where it gives it a meaning of
+               its own, and closes the lists of values where the edition uses a
+               closed set.</p>
+            <p>The customisation only restricts TEI: a file that is valid
+               against it is valid against <ident>tei_all</ident>. Besides
+               leaving out elements and closing lists of values, it requires
+               that a person be linked to the GND and a place of publication to
+               GeoNames by their URIs. Elements and values that a new
+               advertisement needs are added here first; <code>npm run
+               survey-tei</code> lists the elements, attributes and values that
+               the files use.</p>
+            <p>The RELAX NG schema <ident>tei/schema/welte-ads.rng</ident> is
+               generated from this ODD with the TEI Stylesheets of the same
+               release (<code>npm run build-schema</code> in
+               <ident>frontend/</ident>, see
+               <ident>frontend/scripts/build-schema.sh</ident>). Every TEI file
+               of the collection names that schema in its
+               <code>xml-model</code> processing instruction and this ODD in
+               the <gi>schemaRef</gi> of its <gi>encodingDesc</gi>.
+               <code>npm run validate-tei</code> validates every file against
+               the schema and, to make sure that the files remain conformant
+               TEI, against <ident>tei_all</ident> of release 4.12.0. After
+               changing this ODD, regenerate the schema and commit both;
+               <code>npm run check-schema</code> tells whether they agree.</p>
+         </div>
+         <div>
+            <head>The schema</head>
+            <p>The schema takes its declarations from the TEI P5 source of
+               release 4.12.0 (<code>tei:4.12.0</code>, that is
+               <ident>https://www.tei-c.org/Vault/P5/4.12.0/xml/tei/odd/p5subset.xml</ident>).
+               It includes the elements that the advertisements and the shared
+               encoding description use, module by module, and documents the
+               edition's use of elements and attributes where it is its own.</p>
+            <schemaSpec ident="welte-ads" start="TEI" source="tei:4.12.0" docLang="en">
+               <!-- the modules and those of their elements that the edition uses -->
+               <moduleRef key="tei"/>
+               <moduleRef key="core" include="addrLine address author bibl biblScope cb date del desc foreign gap gloss graphic head hi item l lb lg list measure name note num p pb pubPlace publisher q quote ref resp respStmt sic title unclear"/>
+               <moduleRef key="header" include="availability biblFull category change classDecl correction editorialDecl encodingDesc fileDesc hyphenation idno interpretation langUsage language licence normalization notesStmt profileDesc projectDesc publicationStmt rendition revisionDesc samplingDecl schemaRef segmentation seriesStmt sourceDesc stdVals tagsDecl taxonomy teiHeader titleStmt"/>
+               <moduleRef key="textstructure" include="TEI body div signed text"/>
+               <moduleRef key="transcr" include="facsimile space surface zone"/>
+               <moduleRef key="msdescription" include="msDesc msIdentifier repository"/>
+               <moduleRef key="namesdates" include="forename orgName persName placeName roleName surname"/>
+               <moduleRef key="figures" include="figure"/>
+               <moduleRef key="linking" include="ab seg"/>
+               <moduleRef key="textcrit" include="app rdg"/>
+               <moduleRef key="tagdocs" include="att gi val"/>
+               <!-- @ana, from the analysis module, none of whose elements the edition uses -->
+               <classRef key="att.global.analytic"/>
+
+               <!-- attributes that the edition uses throughout -->
+               <classSpec ident="att.global.analytic" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="ana" mode="change">
+                        <desc>points to one or more topics, the categories of the
+                           taxonomy <val>#topics</val> in the <gi>classDecl</gi>:
+                           the recurring motifs of the advertisements that the
+                           passage (<gi>seg</gi>) or the picture
+                           (<gi>figure</gi>) shows.</desc>
+                     </attDef>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.global.rendition" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="rendition" mode="change">
+                        <desc>points to one or more renditions declared in the
+                           <gi>tagsDecl</gi>, each a CSS declaration of the
+                           typography of the original, e.g. <val>#c</val>
+                           (centred) or <val>#uc</val> (set in capitals).</desc>
+                     </attDef>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.global.responsibility" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="resp" mode="change">
+                        <desc>points to whoever is responsible for a topic, a
+                           description or a note: the editor (<val>#np</val>) or
+                           Claude, an AI model (<val>#claude</val>), as the
+                           <gi>titleStmt</gi> declares them.</desc>
+                     </attDef>
+                  </attList>
+               </classSpec>
+
+               <!-- the header -->
+               <elementSpec ident="title" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="change">
+                        <valList type="closed" mode="replace">
+                           <valItem ident="main">
+                              <desc>the main title: of the file, or of the
+                                 advertisement or the periodical in a source</desc>
+                           </valItem>
+                           <valItem ident="sub">
+                              <desc>the subtitle of the file: when the
+                                 advertisement appeared</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
+                     <attDef ident="level" mode="change">
+                        <valList type="closed" mode="replace">
+                           <valItem ident="m">
+                              <desc>the title of the advertisement, in a
+                                 source</desc>
+                           </valItem>
+                           <valItem ident="j">
+                              <desc>the title of the periodical in which it
+                                 appeared</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="orgName" mode="change">
+                  <attList>
+                     <attDef ident="key" mode="change">
+                        <desc>a short key for the firm; on the <gi>author</gi> in
+                           the <gi>titleStmt</gi>, the firm that placed the
+                           advertisement, by which the site groups the
+                           advertisements.</desc>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="sourceDesc" mode="change">
+                  <desc>describes one printing of the advertisement: its title
+                     (<gi>bibl</gi>), the periodical and the issue in which it
+                     appeared (<gi>biblFull</gi>) and the scan of the page
+                     (<gi>msDesc</gi>). A file has a <gi>sourceDesc</gi> for
+                     every printing found; <att>decls</att> on <gi>text</gi>
+                     points to the one that it transcribes.</desc>
+               </elementSpec>
+               <elementSpec ident="msDesc" mode="change">
+                  <desc>identifies the scan of a printing: the digital
+                     collection that holds it (<gi>repository</gi>) and the URL
+                     at which it shows the page (<gi>idno</gi>).</desc>
+               </elementSpec>
+               <elementSpec ident="pubPlace" mode="change">
+                  <attList>
+                     <attDef ident="ref" mode="change">
+                        <desc>the GeoNames URI of the place where the periodical
+                           appeared, e.g.
+                           <val>https://www.geonames.org/2643743</val>
+                           (London).</desc>
+                        <datatype>
+                           <dataRef name="anyURI" restriction="https://www\.geonames\.org/[0-9]+"/>
+                        </datatype>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="date" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="change">
+                        <valList type="closed" mode="replace">
+                           <valItem ident="publication">
+                              <desc>the date of the issue in which the printing
+                                 appeared, as precisely as it is known</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="biblScope" mode="change">
+                  <attList>
+                     <attDef ident="unit" mode="change">
+                        <valList type="closed" mode="replace">
+                           <valItem ident="issue">
+                              <desc>the issue of the periodical, as it names
+                                 itself</desc>
+                           </valItem>
+                           <valItem ident="pages">
+                              <desc>the page or pages of the issue on which the
+                                 advertisement appeared</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="idno" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="change">
+                        <valList type="closed" mode="replace">
+                           <valItem ident="URLImages">
+                              <desc>the URL at which the digital collection shows
+                                 the scan of the page</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="rendition" mode="change">
+                  <attList>
+                     <attDef ident="scheme" mode="change">
+                        <valList type="closed" mode="replace">
+                           <valItem ident="css">
+                              <desc>every rendition is a CSS declaration</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="revisionDesc" mode="change">
+                  <attList>
+                     <attDef ident="status" mode="replace" usage="opt">
+                        <desc>says whether the editor has checked the
+                           transcription and the encoding against the
+                           scan.</desc>
+                        <datatype>
+                           <dataRef key="teidata.enumerated"/>
+                        </datatype>
+                        <valList type="closed">
+                           <valItem ident="checked">
+                              <desc>checked by the editor</desc>
+                           </valItem>
+                           <valItem ident="unchecked">
+                              <desc>not yet checked by the editor, e.g. an
+                                 advertisement transcribed and encoded by
+                                 Claude</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+
+               <!-- the facsimile -->
+               <elementSpec ident="graphic" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="change">
+                        <valList type="closed" mode="replace">
+                           <valItem ident="IIIF">
+                              <desc>the page as the holding library serves it
+                                 through IIIF; the first <gi>graphic</gi> of a
+                                 <gi>surface</gi>, which has no type, is the scan
+                                 on which the zones were drawn</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+
+               <!-- the text -->
+               <elementSpec ident="text" mode="change">
+                  <attList>
+                     <attDef ident="decls" mode="change">
+                        <desc>points to the <gi>sourceDesc</gi> of the printing
+                           that the file transcribes, the one on whose scan the
+                           zones of the <gi>facsimile</gi> were drawn.</desc>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="div" mode="change">
+                  <desc>a region of the original page, which points to its
+                     <gi>zone</gi> in the <gi>facsimile</gi> with
+                     <att>facs</att>.</desc>
+                  <attList>
+                     <attDef ident="type" mode="change">
+                        <valList type="closed" mode="replace">
+                           <valItem ident="illustration">
+                              <desc>a picture, described in a
+                                 <gi>figure</gi></desc>
+                           </valItem>
+                           <valItem ident="frame">
+                              <desc>a part of a frame around the
+                                 advertisement</desc>
+                           </valItem>
+                           <valItem ident="footer">
+                              <desc>a block at the foot of the
+                                 advertisement</desc>
+                           </valItem>
+                           <valItem ident="brand-elements">
+                              <desc>the brand name or a slogan, set off as a
+                                 block of its own</desc>
+                           </valItem>
+                           <valItem ident="panel">
+                              <desc>a panel that tells a story within the
+                                 advertisement</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="gap" mode="change">
+                  <desc>marks a part of the advertisement that is not
+                     transcribed: one that concerns other products than the
+                     Welte-Mignon, which a <gi>desc</gi> describes briefly, or
+                     one that cannot be read.</desc>
+                  <attList>
+                     <attDef ident="reason" mode="change">
+                        <valList type="closed" mode="replace">
+                           <valItem ident="irrelevant">
+                              <desc>concerns other products than the
+                                 Welte-Mignon</desc>
+                           </valItem>
+                           <valItem ident="illegible">
+                              <desc>cannot be read on the scan</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="seg" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="change">
+                        <valList type="closed" mode="replace">
+                           <valItem ident="topic">
+                              <desc>a passage that shows one or more topics, to
+                                 which <att>ana</att> points</desc>
+                           </valItem>
+                           <valItem ident="slogan">
+                              <desc>a slogan of the brand, e.g. <q>The Master's
+                                 Fingers on Your Piano</q></desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="figure" mode="change">
+                  <desc>an illustration of the advertisement, which a
+                     <gi>desc</gi> describes; <att>ana</att> points to the topics
+                     that it shows.</desc>
+               </elementSpec>
+               <elementSpec ident="name" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="change">
+                        <valList type="closed" mode="replace">
+                           <valItem ident="brand">
+                              <desc>a brand name, e.g.
+                                 <q>Welte-Mignon</q></desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="persName" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="change">
+                        <valList type="closed" mode="replace">
+                           <valItem ident="artist">
+                              <desc>a performer, mostly a pianist, named as
+                                 playing for the Welte-Mignon</desc>
+                           </valItem>
+                           <valItem ident="composer">
+                              <desc>a composer, named for a work that the
+                                 Welte-Mignon plays</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
+                     <attDef ident="corresp" mode="change">
+                        <desc>the URI of the person in the Integrated Authority
+                           File (GND) of the German National Library, e.g.
+                           <val>https://d-nb.info/gnd/118697641</val> (Edvard
+                           Grieg).</desc>
+                        <datatype>
+                           <dataRef name="anyURI" restriction="https://d-nb\.info/gnd/[0-9X\-]+"/>
+                        </datatype>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="quote" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="change">
+                        <valList type="closed" mode="replace">
+                           <valItem ident="testimonial">
+                              <desc>a testimonial of an artist or of another
+                                 witness</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="rdg" mode="change">
+                  <attList>
+                     <attDef ident="source" mode="change">
+                        <desc>points to the <gi>sourceDesc</gi> of each printing
+                           that reads so.</desc>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+            </schemaSpec>
+         </div>
+      </body>
+   </text>
+</TEI>

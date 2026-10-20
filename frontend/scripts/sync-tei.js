@@ -1,8 +1,11 @@
 // Copies the shared encoding description (tei/shared/encoding.xml) into the
 // <encodingDesc> of every advertisement: the project description, the
-// principles of selection and transcription, and those renditions and topics
-// that the advertisement uses, so that each file explains its own markup. Also
-// points every advertisement to the TEI schema.
+// principles of selection and transcription, the reference to the project ODD
+// (<schemaRef>), and those renditions and topics that the advertisement uses,
+// so that each file explains its own markup. Also points every advertisement
+// to the project schema, as the shared file does, in its xml-model processing
+// instruction. Paths in these are relative to the file, so they are adjusted
+// from tei/shared/ to tei/.
 //
 // Run it after changing tei/shared/encoding.xml, or after using a new
 // rendition or topic in an advertisement: npm run sync-tei
@@ -11,9 +14,18 @@ const fs = require('fs')
 const path = require('path')
 
 const teiDir = path.join(__dirname, '..', '..', 'tei')
-const shared = fs.readFileSync(path.join(teiDir, 'shared', 'encoding.xml'), 'utf-8')
+const sharedDir = path.join(teiDir, 'shared')
+const shared = fs.readFileSync(path.join(sharedDir, 'encoding.xml'), 'utf-8')
 
-const schema = shared.match(/<\?xml-model[^>]*\?>/)[0]
+// a reference relative to the shared file, made relative to the advertisements
+const relocate = reference => /^[a-z][a-z0-9+.-]*:/i.test(reference)
+  ? reference
+  : path.relative(teiDir, path.resolve(sharedDir, reference)).split(path.sep).join('/')
+
+const relocateAttribute = (text, attribute) =>
+  text.replace(new RegExp(`\\b${attribute}="([^"]*)"`), (_, value) => `${attribute}="${relocate(value)}"`)
+
+const schema = relocateAttribute(shared.match(/<\?xml-model[^>]*\?>/)[0], 'href')
 
 // an element of the shared file with the indentation of its first line
 const block = name => {
@@ -33,6 +45,11 @@ const declarations = pattern => {
 const projectDesc = block('projectDesc')
 const samplingDecl = block('samplingDecl')
 const editorialDecl = block('editorialDecl')
+const schemaRef = (() => {
+  const match = shared.match(/^([ \t]*)(<schemaRef\b[^>]*\/>|<schemaRef\b[\s\S]*?<\/schemaRef>)/m)
+  if (!match) throw new Error('no <schemaRef> in the shared encoding description')
+  return { indent: match[1], text: match[1] + relocateAttribute(match[2], 'url') }
+})()
 const taxonomyDesc = shared.match(/<taxonomy[^>]*>\s*\n([ \t]*)(<desc>[\s\S]*?<\/desc>)/)
 const renditions = declarations(/^([ \t]*)<rendition xml:id="([^"]+)"[\s\S]*?<\/rendition>/gm)
 const categories = declarations(/^([ \t]*)<category xml:id="([^"]+)">[\s\S]*?<\/category>/gm)
@@ -75,6 +92,7 @@ const encodingDesc = (xml, file) => {
     reindent(projectDesc, at(1)),
     reindent(samplingDecl, at(1)),
     reindent(editorialDecl, at(1)),
+    reindent(schemaRef, at(1)),
   ]
 
   const usedRenditions = used(renditions, pointers(xml, 'rendition'), file, 'renditions')
@@ -106,9 +124,9 @@ for (const file of files) {
   const original = fs.readFileSync(filePath, 'utf-8')
 
   let xml = original.replace(/^[ \t]*<encodingDesc>[\s\S]*?<\/encodingDesc>\n/m, '')
-  if (!xml.includes('<?xml-model')) {
-    xml = xml.replace(/^(<\?xml[^>]*\?>\n)?/, `$1${schema}\n`)
-  }
+  xml = xml.includes('<?xml-model')
+    ? xml.replace(/<\?xml-model[^>]*\?>/, () => schema)
+    : xml.replace(/^(<\?xml[^>]*\?>\n)?/, `$1${schema}\n`)
 
   const end = xml.match(/^[ \t]*<\/fileDesc>\n/m)
   const at = end.index + end[0].length

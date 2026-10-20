@@ -44,6 +44,9 @@
     "test:watch": "vitest",
     "knip": "knip",
     "sync-tei": "node scripts/sync-tei.js",
-    "validate-tei": "sh scripts/validate-tei.sh"
+    "survey-tei": "node scripts/survey-tei.js",
+    "validate-tei": "sh scripts/validate-tei.sh",
+    "build-schema": "sh scripts/build-schema.sh",
+    "check-schema": "sh scripts/build-schema.sh --check"
   }
 }

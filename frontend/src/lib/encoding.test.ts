@@ -15,7 +15,14 @@ const text = (el: Element | null | undefined) => el?.textContent?.replace(/\s+/g
 
 const sharedXml = fs.readFileSync(path.join(teiDir, "shared", "encoding.xml"), "utf-8")
 const shared = parse(sharedXml)
-const schema = sharedXml.match(/<\?xml-model[^>]*\?>/)?.[0]
+// the shared file and the advertisements refer to the same files, each by
+// its path relative to itself
+const fromShared = (reference: string | null | undefined) =>
+  reference ? path.posix.join("shared", reference) : ""
+const model = sharedXml.match(/<\?xml-model href="([^"]*)"[^>]*\?>/)
+const schema = fromShared(model?.[1])
+const schemaRef = shared.getElementsByTagName("schemaRef")[0]
+const odd = fromShared(schemaRef?.getAttribute("url"))
 
 const declarations = (doc: Document, element: string) => new Map(
   Array.from(doc.getElementsByTagName(element)).map(el => [el.getAttribute("xml:id"), text(el)]))
@@ -40,9 +47,16 @@ describe.each(ads)("$file", ({ file, xml }) => {
     expect(sources).toContain(decls)
   })
 
-  it("points to the TEI schema", () => {
-    expect(schema).toBeDefined()
-    expect(xml).toContain(schema)
+  it("points to the project schema and ODD", () => {
+    expect(schema).toMatch(/\.rng$/)
+    expect(odd).toMatch(/\.odd$/)
+    expect(fs.existsSync(path.join(teiDir, schema))).toBe(true)
+    expect(xml).toContain(model?.[0].replace(`href="${model[1]}"`, `href="${schema}"`))
+
+    expect(fs.existsSync(path.join(teiDir, odd))).toBe(true)
+    const ref = doc.getElementsByTagName("schemaRef")[0]
+    expect(ref?.getAttribute("url")).toBe(odd)
+    expect(ref?.getAttribute("type")).toBe(schemaRef.getAttribute("type"))
   })
 
   it("carries the shared project description and editorial principles", () => {

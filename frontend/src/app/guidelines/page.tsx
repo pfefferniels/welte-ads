@@ -44,6 +44,14 @@ export default function GuidelinesPage() {
         The principles below are those that every TEI file of the collection
         states in its <code>&lt;encodingDesc&gt;</code>.
       </Typography>
+      <Typography variant="body1" component="p" sx={contentStyles}>
+        The files follow the project schema, <code>tei/schema/welte-ads.rng</code>,
+        which is generated from the ODD{' '}
+        <a href="https://github.com/pfefferniels/welte-ads/blob/main/tei/schema/welte-ads.odd"><code>tei/schema/welte-ads.odd</code></a>:
+        a customisation of TEI P5 4.12.0 that admits only the elements the
+        collection uses and documents how it uses them. The files are also
+        valid against <code>tei_all</code>.
+      </Typography>
 
       <Typography variant="h5" component="h2">Selection</Typography>
       <Paragraphs paragraphs={selection} />
