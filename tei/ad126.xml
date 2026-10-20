@@ -190,7 +190,8 @@
     <profileDesc>
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
-    <revisionDesc status="unchecked">
+    <revisionDesc status="checked">
+      <change when="2026-10-20" who="#np">Checked against the scan by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-17" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
