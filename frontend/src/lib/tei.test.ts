@@ -126,6 +126,27 @@ describe("extractMetadata", () => {
     ])
   })
 
+  it("groups the printings by periodical", () => {
+    const source = (id: string, periodical: string, ...dates: string[]) => `
+      <sourceDesc xml:id="${id}"><biblFull>
+        <publicationStmt>${dates.map(when => `<date type="publication" when="${when}"/>`).join('')}</publicationStmt>
+        <seriesStmt><title level="j">${periodical}</title></seriesStmt>
+      </biblFull></sourceDesc>`
+    const { periodicals } = extractMetadata(`
+      <TEI xmlns="http://www.tei-c.org/ns/1.0">
+        <teiHeader><fileDesc>
+          ${source("source_1", "Vogue", "1926-04-01")}
+          ${source("source_2", "The Century", "1926-05")}
+          ${source("source_3", "Vogue", "1926-04-15", "1926-05-01")}
+        </fileDesc></teiHeader>
+        <text><body><p>As <title level="j">The Times</title> says</p></body></text>
+      </TEI>`)
+    expect(periodicals).toEqual([
+      { title: "Vogue", dates: ["1926-04-01", "1926-04-15", "1926-05-01"] },
+      { title: "The Century", dates: ["1926-05"] },
+    ])
+  })
+
   it("reads the status of the revisions", () => {
     const status = (revisionDesc: string) => extractMetadata(tei("", revisionDesc)).status
     expect(status('<revisionDesc status="checked"><change/></revisionDesc>')).toBe("checked")

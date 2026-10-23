@@ -342,7 +342,8 @@ interface AdMetadata {
   titleMain: string
   titleSub: string
   dates: string[]
-  newspapers: string[]
+  // the periodicals that printed the ad, each with the dates of its printings
+  periodicals: { title: string; dates: string[] }[]
   mentions: string[]
   topicSegments: TopicSegment[]
   // the transcription as plain text, for searching
@@ -384,13 +385,20 @@ export function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
   const titleMain = text('fileDesc > titleStmt > title[type="main"]')
   const titleSub = text('fileDesc > titleStmt > title[type="sub"]')
   // as precise as known, in ISO 8601 (1913, 1913-11 or 1913-11-15)
-  const dates = Array.from(doc.querySelectorAll('date[type="publication"]')).map(
+  const datesIn = (el: Document | Element) => Array.from(el.querySelectorAll('date[type="publication"]')).map(
     date => date.getAttribute('when') || date.textContent || ''
   )
-  // the periodicals of the printings; a journal that the text quotes is not one
-  const newspapers = Array.from(doc.querySelectorAll('sourceDesc title[level="j"]')).map(
-    title => (title.textContent || '').replace(/\s+/g, ' ').trim()
-  )
+  const dates = datesIn(doc)
+  const sources = Array.from(doc.querySelectorAll('sourceDesc'))
+  // the periodicals of the printings, in the order of the sources, each once
+  // though it printed the ad on many days; a journal that the text quotes is
+  // not one
+  const byPeriodical = new Map<string, string[]>()
+  for (const source of sources) {
+    const periodical = (source.querySelector('title[level="j"]')?.textContent || '').replace(/\s+/g, ' ').trim()
+    byPeriodical.set(periodical, [...(byPeriodical.get(periodical) || []), ...datesIn(source)])
+  }
+  const periodicals = Array.from(byPeriodical, ([title, list]) => ({ title, dates: list }))
   // the recording artists that the ad names, each once though the readings
   // of several printings name them
   const corresp = (el: Element) => el.getAttribute('corresp') || ''
@@ -416,7 +424,6 @@ export function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
 
   // the printing that the text is transcribed from, or else the first
   const decls = (doc.querySelector('text')?.getAttribute('decls') || '').replace(/^#/, '')
-  const sources = Array.from(doc.querySelectorAll('sourceDesc'))
   const transcribed = sources.find(source => source.getAttribute('xml:id') === decls) || sources[0]
   const imageLinks = Array.from(transcribed?.querySelectorAll('idno[type="URLImages"]') || [])
     .map(idno => (idno.textContent || '').trim())
@@ -435,7 +442,7 @@ export function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
   })
 
   return {
-    company, title, titleMain, titleSub, dates, newspapers, mentions, topicSegments,
+    company, title, titleMain, titleSub, dates, periodicals, mentions, topicSegments,
     fullText: plainText(xmlString), imageLinks, status, contributors,
   }
 }

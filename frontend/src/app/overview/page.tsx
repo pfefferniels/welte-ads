@@ -13,8 +13,7 @@ export default function OverviewPage() {
     slug: meta.slug,
     company: names[meta.company.name] || meta.company.name,
     title: meta.title,
-    dates: meta.dates,
-    newspapers: meta.newspapers,
+    periodicals: meta.periodicals,
     text: meta.fullText,
     status: meta.status,
   }))

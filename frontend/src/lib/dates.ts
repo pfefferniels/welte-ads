@@ -21,15 +21,29 @@ const formatRun = (from: string, to: string) => {
 }
 
 /**
- * Dates as a list in which days in a row make one range, e.g.
- * "28 January – 1 February 1908, 3–22 February 1908".
+ * Dates as the items of a list in which days in a row make one range, and
+ * a month or year is written once for the items that share it, e.g.
+ * ["28 January – 1 February", "3–22", "26 February 1908"].
  */
-export const formatDates = (dates: string[]) => {
+export const dateList = (dates: string[]) => {
   const runs: [string, string][] = []
   for (const date of Array.from(new Set(dates)).sort()) {
     const last = runs[runs.length - 1]
     if (last && dayOf(date) - dayOf(last[1]) === DAY) last[1] = date
     else runs.push([date, date])
   }
-  return runs.map(([from, to]) => formatRun(from, to)).join(', ')
+  return runs.map(([from, to], i) => {
+    const next = runs[i + 1]?.[0]
+    // the year, or the month and year, that the next item gives as well
+    const shared = !next || next.length !== from.length || next.slice(0, 4) !== from.slice(0, 4) ? 0
+      : from.length === 10 && next.slice(0, 7) === from.slice(0, 7) ? 2
+      : 1
+    const words = formatRun(from, to).split(' ')
+    return words.slice(0, words.length - shared).join(' ')
+  })
 }
+
+/**
+ * Dates as a list, e.g. "28 January – 1 February, 3–22, 26 February 1908".
+ */
+export const formatDates = (dates: string[]) => dateList(dates).join(', ')

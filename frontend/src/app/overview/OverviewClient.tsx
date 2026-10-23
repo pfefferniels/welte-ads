@@ -3,15 +3,14 @@
 import React, { useMemo, useState } from "react"
 import Link from "next/link"
 import { Box, Chip, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TableSortLabel, TextField, ToggleButton, ToggleButtonGroup, Tooltip, Typography } from "@mui/material"
-import { formatDate } from "../../lib/dates"
+import { dateList } from "../../lib/dates"
 import type { Status } from "../../lib/tei"
 
 interface Row {
   slug: string
   company: string
   title: string
-  dates: string[]
-  newspapers: string[]
+  periodicals: { title: string; dates: string[] }[]
   text: string
   status: Status
 }
@@ -59,13 +58,16 @@ export default function OverviewClient({ rows }: { rows: Row[] }) {
     unchecked: rows.filter(row => row.status === 'unchecked').length,
   }
 
-  const indexed = useMemo(() => rows.map(row => ({
-    row,
-    // the earliest printing decides the place of an ad in time
-    first: [...row.dates].sort()[0] || '',
-    about: fold([row.company, row.title, ...row.newspapers, ...row.dates].join(' ')),
-    text: fold(row.text),
-  })), [rows])
+  const indexed = useMemo(() => rows.map(row => {
+    const dates = row.periodicals.flatMap(periodical => periodical.dates)
+    return {
+      row,
+      // the earliest printing decides the place of an ad in time
+      first: [...dates].sort()[0] || '',
+      about: fold([row.company, row.title, ...row.periodicals.map(periodical => periodical.title), ...dates].join(' ')),
+      text: fold(row.text),
+    }
+  }), [rows])
 
   const value = (entry: typeof indexed[number]) =>
     sort.by === 'date' ? entry.first : sort.by === 'company' ? entry.row.company : entry.row.title
@@ -137,33 +139,50 @@ export default function OverviewClient({ rows }: { rows: Row[] }) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {shown.map(({ row, about }) => (
-              <TableRow key={row.slug}>
-                <TableCell>{row.company}</TableCell>
-                <TableCell>
-                  <Link href={`/${row.slug}`}>{row.title}</Link>
-                  {row.status === 'unchecked' && (
+            {shown.map(({ row, about }) => row.periodicals.map((periodical, j) => {
+              // each periodical has a row of its own, so that its dates stay
+              // beside it; the company and name of the ad span them all
+              const last = j === row.periodicals.length - 1
+              const printing = {
+                ...(j > 0 && { pt: 0.5 }),
+                ...(!last && { pb: 0.5, borderBottom: 'none' }),
+              }
+              return (
+                <TableRow key={`${row.slug}-${j}`}>
+                  {j === 0 && (
                     <>
-                      {' '}
-                      <Tooltip title={UNCHECKED}>
-                        <span><Unchecked /></span>
-                      </Tooltip>
+                      <TableCell rowSpan={row.periodicals.length}>{row.company}</TableCell>
+                      <TableCell rowSpan={row.periodicals.length}>
+                        <Link href={`/${row.slug}`}>{row.title}</Link>
+                        {row.status === 'unchecked' && (
+                          <>
+                            {' '}
+                            <Tooltip title={UNCHECKED}>
+                              <span><Unchecked /></span>
+                            </Tooltip>
+                          </>
+                        )}
+                        {q && !about.includes(q) && (
+                          <Typography variant="body2" component="div" sx={{ mt: 0.5, color: 'text.secondary' }}>
+                            {snippet(row.text, q)}
+                          </Typography>
+                        )}
+                      </TableCell>
                     </>
                   )}
-                  {q && !about.includes(q) && (
-                    <Typography variant="body2" component="div" sx={{ mt: 0.5, color: 'text.secondary' }}>
-                      {snippet(row.text, q)}
-                    </Typography>
-                  )}
-                </TableCell>
-                <TableCell>
-                  {row.dates.map((date, j) => <Box key={j} sx={{ whiteSpace: 'nowrap' }}>{formatDate(date)}</Box>)}
-                </TableCell>
-                <TableCell>
-                  {row.newspapers.map((newspaper, j) => <div key={j}>{newspaper}</div>)}
-                </TableCell>
-              </TableRow>
-            ))}
+                  <TableCell sx={printing}>
+                    {/* the line breaks between the items, not within one */}
+                    {dateList(periodical.dates).map((item, k) => (
+                      <React.Fragment key={k}>
+                        {k > 0 && ', '}
+                        <Box component="span" sx={{ whiteSpace: 'nowrap' }}>{item}</Box>
+                      </React.Fragment>
+                    ))}
+                  </TableCell>
+                  <TableCell sx={printing}>{periodical.title}</TableCell>
+                </TableRow>
+              )
+            }))}
           </TableBody>
         </Table>
       </TableContainer>
