@@ -182,8 +182,9 @@ tei-ab {
     margin: 0;
 }
 
+/* unitless, so that the lines of a larger headline do not overlap */
 tei-text {
-    line-height: 1.5rem;
+    line-height: 1.2;
 }
 
 .b {

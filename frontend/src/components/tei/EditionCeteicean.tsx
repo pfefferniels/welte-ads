@@ -62,7 +62,8 @@ type Mode = 'layout' | 'text' | 'facsimile'
 const pageGap = 40
 
 const EditionCeteicean = ({ name, prefixed, elements, facsimile, topics, imageLinks, children }: Props) => {
-  const [mode, setMode] = useState<Mode>('text')
+  // the view the reader picked; until then, the layout
+  const [chosenMode, setMode] = useState<Mode>()
   const mounted = useSyncExternalStore(
     () => () => {},
     () => true,
@@ -90,6 +91,10 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, topics, imageLi
 
   const layout = useMemo(() => computeLayout(facsimile), [facsimile])
   const hasLayout = Object.keys(layout.zones).length > 0
+  // a link to a passage, e.g. from a topic, opens the text, where the passage
+  // can be scrolled to
+  const linksPassage = mounted && window.location.hash !== ''
+  const mode: Mode = chosenMode || (hasLayout && !linksPassage ? 'layout' : 'text')
 
   // the pages that their libraries serve through IIIF, side by side
   const pages = useMemo(() => {
