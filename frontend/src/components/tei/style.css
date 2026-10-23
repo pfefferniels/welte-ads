@@ -6,7 +6,7 @@
 
 .seg {
     cursor: pointer;
-    background-color: rgba(255, 251, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* of several readings, show the one of the transcribed printing (the
@@ -38,7 +38,7 @@ tei-app:has(> tei-lem) > tei-rdg {
 }
 
 @keyframes highlight-fade {
-    0% { background-color: rgba(255, 200, 0, 0.5); }
+    0% { background-color: rgba(0, 0, 0, 0.15); }
     100% { background-color: transparent; }
 }
 

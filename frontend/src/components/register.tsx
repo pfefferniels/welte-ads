@@ -35,7 +35,7 @@ export const Initials = ({ initials, children }: { initials: string[]; children?
 export const Letter = ({ initial, children }: { initial: string; children: React.ReactNode }) => (
   <section>
     <Typography variant="h5" component="h2" id={letterAnchor(initial)}
-      sx={{ mt: 3, mb: 1, borderBottom: '1px solid #e8e4e0' }}>
+      sx={{ mt: 3, mb: 1, borderBottom: 1, borderColor: 'divider' }}>
       {initial}
     </Typography>
     <Box component="ul" sx={{ p: 0, m: 0, listStyle: 'none' }}>
@@ -62,7 +62,7 @@ export const entryStyle = {
   py: 0.5,
   borderRadius: 1,
   scrollMarginTop: '1rem',
-  '&:target': { backgroundColor: 'rgba(139, 94, 60, 0.08)' },
+  '&:target': { bgcolor: 'action.selected' },
 }
 
 /** An entry of a register: a heading, a line about it and a list. */

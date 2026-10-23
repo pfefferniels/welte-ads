@@ -19,8 +19,9 @@ declare module '@mui/material/Button' {
   }
 }
 
-const mainColor = "#8b5e3c"
-const secondaryColor = "#faf8f6"
+// black on white; gray only where something must recede
+const mainColor = "#000"
+const secondaryColor = "#fff"
 
 // A custom theme for CETEIcean
 // It is not intended to be comprehensive; add further rules as needed.
@@ -56,9 +57,6 @@ const theme = createTheme({
         },
         "a, a:visited, a:hover, a:active": {
           color: mainColor,
-        },
-        "h1, h2, h3, h4, h5, h6": {
-          color: "#2c2220",
         },
         // a page's title is its only h1, set like the former h2 titles
         "h1": {
@@ -102,14 +100,15 @@ const theme = createTheme({
   },
   palette: {
     default: {
-      main: "#5c524a",
+      main: mainColor,
     },
     text: {
-      primary: "#3d3533",
+      primary: mainColor,
+      secondary: "#6b6b6b",
     },
     primary: {
       main: mainColor,
-    },    
+    },
     secondary: {
       main: secondaryColor,
     },

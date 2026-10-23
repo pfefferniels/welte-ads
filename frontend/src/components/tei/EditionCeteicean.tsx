@@ -341,7 +341,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, topics, imageLi
                           key={zone.id}
                           points={zone.points.map(point => point.join(',')).join(' ')}
                           fill="none"
-                          stroke="#8b5e3c"
+                          stroke="#000"
                           strokeOpacity={0.7}
                           strokeWidth={Math.max(2, page.image.width / 600)} />
                       ))}

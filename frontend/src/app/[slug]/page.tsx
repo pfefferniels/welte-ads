@@ -58,7 +58,6 @@ export default async function AdPage({ params }: { params: Promise<{ slug: strin
             py: 1,
             borderLeft: 3,
             borderColor: 'primary.main',
-            bgcolor: 'secondary.main',
           }}>
             <Typography variant="body2" component="p">
               Transcribed, encoded and annotated by Claude, an AI model. Not

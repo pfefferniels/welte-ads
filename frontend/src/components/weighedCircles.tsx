@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { stringToColour } from '../helpers/stringToColour'
 import { topicPath } from '../helpers/topicPath'
 import { layoutBubbles, WeighedTerm } from '../lib/bubbles'
 import "./weighedCircles.css"
@@ -22,10 +21,7 @@ export const WeighedCircles = ({ data }: TopicsCircleProps) => {
                         <title>
                             {`${bubble.label}: ${bubble.weight} ${bubble.weight === 1 ? 'occurrence' : 'occurrences'}`}
                         </title>
-                        <circle
-                            className="weighted-circle"
-                            r={bubble.r}
-                            fill={stringToColour(bubble.topic)} />
+                        <circle className="weighted-circle" r={bubble.r} />
                         <text className="circle-label" fontSize={bubble.fontSize}>
                             {bubble.lines.map((line, i) => (
                                 <tspan key={i} x={0} y={`${(i - (bubble.lines.length - 1) / 2) * 1.1}em`}>

@@ -6,7 +6,9 @@
 }
 
 .weighted-circle {
-    fill-opacity: 0.5
+    fill: white;
+    stroke: black;
+    stroke-width: 1;
 }
 
 .circle-group {
@@ -14,8 +16,12 @@
     outline: none;
 }
 
+.circle-group:hover .weighted-circle,
 .circle-group:focus-visible .weighted-circle {
-    stroke: black;
+    fill: #eee;
+}
+
+.circle-group:focus-visible .weighted-circle {
     stroke-width: 2;
 }
 

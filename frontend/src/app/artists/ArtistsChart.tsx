@@ -2,7 +2,7 @@
 
 import React, { useMemo, useState } from "react"
 import { Box } from "@mui/material"
-import { area, interpolateHcl } from "d3"
+import { area, interpolateLab } from "d3"
 import theme from "../../theme"
 import { runsOf, smoothedMentions, smoothedShare } from "../../lib/artists"
 import { artistLink } from "../../lib/anchors"
@@ -30,12 +30,12 @@ const STEP = 0.1 // of the curves, in years
 const STOPS = 5 // a colour every fifth step, every half year
 
 const GRID = '#e4e4e4'
-const MUTED = '#736962'
+const MUTED = '#6b6b6b'
 
 // a band's colour tells how often the artist is mentioned per year around a
-// time: blue where seldom, turning red, and darker, the more often; the
-// colour changes slowly at first, so that blue is the rule and red stands out
-const RAMP = interpolateHcl('#3987e5', '#c62f2b')
+// time: light gray where seldom, turning black the more often; the colour
+// changes slowly at first, so that gray is the rule and black stands out
+const RAMP = interpolateLab('#c4c4c4', '#000')
 const EASE = 1.5
 
 // a point of a band: the time, the share and the mentions per year

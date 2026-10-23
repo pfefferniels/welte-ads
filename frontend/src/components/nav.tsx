@@ -35,7 +35,7 @@ const styles = {
     transition: "all 0.3s ease",
     backgroundColor: "transparent",
     "&:hover, &:focus": {
-      backgroundColor: theme.palette.primary.main + "12",
+      backgroundColor: theme.palette.action.hover,
       color: theme.palette.primary.main,
     },
   },
@@ -52,7 +52,7 @@ const Nav = ({ menuLinks }: Props) => {
             || (link.link === '/' && pathname === '/')
 
           const active = isActive ? {
-            backgroundColor: theme.palette.primary.main + "18",
+            backgroundColor: theme.palette.action.selected,
             color: theme.palette.primary.main,
             fontWeight: 600,
           } : {}

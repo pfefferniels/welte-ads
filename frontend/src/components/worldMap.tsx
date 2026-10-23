@@ -205,14 +205,14 @@ export const WorldMap = ({ markers, unit }: WorldMapProps) => {
             // the label of a marker must not widen the page
             overflow: 'hidden',
             '& a circle': {
-                fill: '#8b5e3c',
-                fillOpacity: 0.35,
-                stroke: '#5c3d24',
+                fill: '#000',
+                fillOpacity: 0.15,
+                stroke: '#000',
                 strokeWidth: 0.75,
                 cursor: 'pointer',
             },
             '& a:hover circle, & a:focus circle': {
-                fillOpacity: 0.7,
+                fillOpacity: 0.45,
             },
         }}>
             <svg
@@ -231,7 +231,8 @@ export const WorldMap = ({ markers, unit }: WorldMapProps) => {
                     transform: `translate(${active.x < width / 3 ? '-12px' : active.x > 2 * width / 3 ? 'calc(-100% + 12px)' : '-50%'}, calc(-100% - 6px))`,
                     pointerEvents: 'none',
                     backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                    border: '1px solid #e8e4e0',
+                    border: 1,
+                    borderColor: 'divider',
                     borderRadius: 1,
                     boxShadow: 1,
                     px: 1,

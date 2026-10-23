@@ -21,7 +21,7 @@ const Wrapper = styled.header(() => ({
   background: theme.palette.secondary.main,
   marginBottom: "1.45rem",
   padding: "0.5rem 0",
-  borderBottom: "1px solid #e8e4e0",
+  borderBottom: `1px solid ${theme.palette.divider}`,
 }))
 
 const Header = ({ menuLinks }: Props) => (
