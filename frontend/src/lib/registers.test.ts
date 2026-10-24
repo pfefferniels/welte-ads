@@ -184,6 +184,10 @@ describe("placeRegister", () => {
     expect(perth.periodicals[1].printings[0].ad).toEqual({ slug: "ad002", title: "Two", date: "1910" })
   })
 
+  it("counts the printings of a place per year", () => {
+    expect(perth.years).toEqual([{ year: 1911, printings: 1 }, { year: 1913, printings: 3 }])
+  })
+
   it("lists the companies whose ads were printed at a place, with those ads", () => {
     expect(perth.companies).toEqual([
       { key: "nicholson.perth", name: "Nicholson's Ltd, Perth", printings: 3, ads: [{ slug: "ad001", title: "One", date: "1913-03" }] },
@@ -218,6 +222,10 @@ describe("the registers of the collection", () => {
     const missing = places.filter(place => !coordinates[place.ref]).map(place => `${place.names[0]} ${place.ref}`)
     expect(missing).toEqual([])
     expect(places.filter(place => coordinates[place.ref].lat === 0 && coordinates[place.ref].long === 0)).toEqual([])
+  })
+
+  it("date every printing to a year", () => {
+    expect(places.filter(place => place.years.reduce((sum, year) => sum + year.printings, 0) !== place.printings)).toEqual([])
   })
 
   it("count every printing once for its company", () => {

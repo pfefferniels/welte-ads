@@ -84,17 +84,31 @@ export default function PlacesPage() {
     label: place.names.join(' / '),
     count: place.printings,
     about: `${printingsOf(place.printings, place.ads)} in ${count(place.periodicals.length, 'periodical')}`,
+    years: place.years.map(({ year, printings }) => ({ year, count: printings, about: `${count(printings, 'printing')} in ${year}` })),
   }] : [])
+  // every year from the first printing to the last, those without any too
+  const years = places.flatMap(place => place.years.map(({ year }) => year))
+  const first = Math.min(...years)
+  const timeline = Array.from({ length: Math.max(...years) - first + 1 }, (_, i) => {
+    const inYear = places.flatMap(place => place.years.filter(({ year }) => year === first + i))
+    const printings = inYear.reduce((sum, year) => sum + year.printings, 0)
+    return {
+      year: first + i,
+      about: printings ? `${count(printings, 'printing')} in ${count(inYear.length, 'place')}` : 'no printings in the collection',
+    }
+  })
 
   return (
     <Container component="main" maxWidth="md">
       <h1>Places</h1>
 
       <Box id="map" sx={{ scrollMarginTop: '1rem' }}>
-        <WorldMap markers={markers} unit="Printings" />
+        <WorldMap markers={markers} unit="Printings" timeline={timeline} />
       </Box>
       <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1, mb: 2 }}>
         A circle&apos;s size shows how many printings appeared in a place; click it for the place below.
+        Play the years to see where the ads were printed year by year; a small ring marks a place
+        whose printings all lie in earlier years.
       </Typography>
 
       <Initials initials={byInitial(places).map(([initial]) => initial)} />

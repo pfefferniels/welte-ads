@@ -218,6 +218,8 @@ export interface PlaceEntry {
   initial: string
   printings: number
   ads: number
+  // the printings of each year that had any, by the first date of a printing
+  years: { year: number; printings: number }[]
   // the periodicals printed there, each with its printings, earliest first
   periodicals: { title: string; printings: PlacedPrinting[] }[]
   // the companies whose ads were printed there, each with those ads
@@ -266,6 +268,10 @@ export function placeRegister(ads: PlaceAd[]): PlaceEntry[] {
     for (const printing of printings) {
       periodicals.set(printing.periodical, [...(periodicals.get(printing.periodical) || []), printing])
     }
+    const years = new Map<number, number>()
+    for (const year of printings.map(printing => Number(firstDate(printing).slice(0, 4))).filter(Boolean)) {
+      years.set(year, (years.get(year) ?? 0) + 1)
+    }
 
     return {
       id: placeAnchor(place.ref, forms[0]),
@@ -274,6 +280,7 @@ export function placeRegister(ads: PlaceAd[]): PlaceEntry[] {
       initial: initialOf(forms[0]),
       printings: printings.length,
       ads: new Set(printings.map(printing => printing.ad.slug)).size,
+      years: Array.from(years, ([year, printings]) => ({ year, printings })).sort((a, b) => a.year - b.year),
       periodicals: Array.from(periodicals, ([title, list]) => ({ title, printings: list }))
         .sort((a, b) => filingTitle(a.title).localeCompare(filingTitle(b.title), 'en')),
       companies: Array.from(place.companies, ([key, company]) => ({
