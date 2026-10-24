@@ -201,8 +201,8 @@ const VIEWS = [
     legend: [['solid', 'your topic, ads now'], ['ring', 'with accepted candidates'], ['newdash', 'candidate new topic']] },
   { id: 'llm', name: 'LLM, blind', sub: 'TopicGPT-style',
     caption: 'An LLM read all 195 ads without seeing your taxonomy, proposed its own topics with coding rules, and coded every ad; only then were the two lists compared. Circles count ads.',
-    finding: 'Of its 40 topics, 6 match yours, 17 reshape yours (broader, merged, split or cut differently), and 17 have no counterpart. One run, by the same model family that set most of your existing marks, so agreement is not independent.',
-    legend: [['solid', 'same as one of yours'], ['soft', 'reshapes one or more of yours'], ['newdash', 'no counterpart in your taxonomy']] },
+    finding: 'Of its 40 topics, 6 match yours, 17 reshape yours (broader, merged or cut differently), and 17 are proposed as new; by the pilot’s overlap count, 14 of those have no counterpart at all. One run, by the same model family that set most of your existing marks, so agreement is not independent.',
+    legend: [['solid', 'same as one of yours'], ['soft', 'reshapes one or more of yours'], ['newdash', 'proposed as a new topic']] },
 ];
 
 const state = { view: 'current', timeSet: 'topics', clusterSet: 'all', selected: null };
@@ -329,7 +329,7 @@ function belowNote() {
   if (state.view === 'llm') return 'Your topics it did not produce as separate topics: Revelled Listening, Sitting Woman (noticed but judged pictorial), Secret and Repeatability (absorbed), Ideal Instrument and Invisibility (inside broader topics), and the rare ones Atmosphere, Analysis, Jazz, Analogy to Phonograph, Artistic Accompaniment and Hostess, which a frequency-based method drops by design.';
   if (state.view === 'seeded') return 'Candidates were found by similarity search and read by hand: 23 of the top 50 hits were plausible, 10 of them one repeated slogan. Retrieval worked for topics with distinctive wording (Technical Invention, Superiority) and failed for Home and Touch of a Button.';
   if (state.view === 'clusters') return 'On a rerun with other seeds the functional and picture groups come back almost identically; several rhetorical groups do not, because the rhetorical middle of the corpus is a continuum that the algorithm cuts differently each time.';
-  if (state.view === 'time' && state.timeSet === 'clusters') return 'Only the 19 rhetorical clusters are shown. Clusters 45 and 46 (praise for the inventors, invention of our age) exist only before the war; the roll library, the slogan and “In any piano” only after it.';
+  if (state.view === 'time' && state.timeSet === 'clusters') return 'Only the 19 rhetorical clusters are shown. Clusters 45 and 46 (praise for the inventors, invention of our age) exist only before the war; the roll library and “The Master’s Fingers” slogan only after it.';
   return '';
 }
 
@@ -356,7 +356,7 @@ function renderPanel() {
   const chip = (text, cls = '') => el('span', { class: 'chip ' + cls }, text);
   const kindChip = {
     hand: chip('Your topic'), R: chip('Rhetorical cluster'), F: chip('Functional cluster', 'dot'), FIG: chip('Picture descriptions'), MIX: chip('Mixed cluster', 'dash'),
-    new: chip(state.view === 'llm' ? 'No counterpart' : 'Candidate new topic', 'dash'), same: chip('Same as yours'), reshaped: chip('Reshapes yours'),
+    new: chip(state.view === 'llm' ? 'Proposed as new' : 'Candidate new topic', 'dash'), same: chip('Same as yours'), reshaped: chip('Reshapes yours'),
   }[b.kind];
   p.append(kindChip, el('h2', {}, (b.code ? b.code + ' ' : '') + b.label));
 

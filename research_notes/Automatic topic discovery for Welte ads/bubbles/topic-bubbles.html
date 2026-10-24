@@ -201,8 +201,8 @@ const VIEWS = [
     legend: [['solid', 'your topic, ads now'], ['ring', 'with accepted candidates'], ['newdash', 'candidate new topic']] },
   { id: 'llm', name: 'LLM, blind', sub: 'TopicGPT-style',
     caption: 'An LLM read all 195 ads without seeing your taxonomy, proposed its own topics with coding rules, and coded every ad; only then were the two lists compared. Circles count ads.',
-    finding: 'Of its 40 topics, 6 match yours, 17 reshape yours (broader, merged, split or cut differently), and 17 have no counterpart. One run, by the same model family that set most of your existing marks, so agreement is not independent.',
-    legend: [['solid', 'same as one of yours'], ['soft', 'reshapes one or more of yours'], ['newdash', 'no counterpart in your taxonomy']] },
+    finding: 'Of its 40 topics, 6 match yours, 17 reshape yours (broader, merged or cut differently), and 17 are proposed as new; by the pilot’s overlap count, 14 of those have no counterpart at all. One run, by the same model family that set most of your existing marks, so agreement is not independent.',
+    legend: [['solid', 'same as one of yours'], ['soft', 'reshapes one or more of yours'], ['newdash', 'proposed as a new topic']] },
 ];
 
 const state = { view: 'current', timeSet: 'topics', clusterSet: 'all', selected: null };
@@ -356,7 +356,7 @@ function renderPanel() {
   const chip = (text, cls = '') => el('span', { class: 'chip ' + cls }, text);
   const kindChip = {
     hand: chip('Your topic'), R: chip('Rhetorical cluster'), F: chip('Functional cluster', 'dot'), FIG: chip('Picture descriptions'), MIX: chip('Mixed cluster', 'dash'),
-    new: chip(state.view === 'llm' ? 'No counterpart' : 'Candidate new topic', 'dash'), same: chip('Same as yours'), reshaped: chip('Reshapes yours'),
+    new: chip(state.view === 'llm' ? 'Proposed as new' : 'Candidate new topic', 'dash'), same: chip('Same as yours'), reshaped: chip('Reshapes yours'),
   }[b.kind];
   p.append(kindChip, el('h2', {}, (b.code ? b.code + ' ' : '') + b.label));
 

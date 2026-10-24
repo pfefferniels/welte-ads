@@ -1,6 +1,6 @@
 # Pilot: LLM-based inductive topic discovery — Stage 1 (blind generation)
 
-*Pilot run on 24 Oct 2026. The "LLM" is Claude (Opus), working by hand, without an API pipeline. Stage 1 was written **blind**: before this file was saved I had not opened the project's taxonomy (`tei/shared/encoding.xml`), the annotated spans (`segs.json`), `ads.json` or any other project file that names topics.*
+*Pilot run on 24 Oct 2026. The "LLM" is Claude, working by hand, without an API pipeline. Stage 1 was written **blind**: before this file was saved I had not opened the project's taxonomy (`tei/shared/encoding.xml`), the annotated spans (`segs.json`), `ads.json` or any other project file that names topics.*
 
 ## 1. Set-up and procedure
 
