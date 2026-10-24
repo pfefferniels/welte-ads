@@ -39,6 +39,55 @@ for t in top10:
                             nearest_cos=round(float(S[o].max()), 3)))
         lines.append(f'  {top3[o]:.3f} [{u["uid"]} {u["lang"]} {u["year"]}] {u["text"][:230]}')
         lines.append(f'         nearest span {spans[j]["sid"]} ({S[o].max():.3f}): {spans[j]["text"][:120]}')
+# variant B (contrastive): top-3 mean similarity to the topic's spans minus top-3 mean similarity to the spans
+# of all OTHER topics -> suppresses generic sentences that are close to everything ("hubs")
+lines.append('\n\n================ CONTRASTIVE SCORE (topic minus other topics) ================')
+retr_c = {}
+for t in top10:
+    sidx = [j for j, s in enumerate(spans) if t in s['ana']]
+    oidx = [j for j, s in enumerate(spans) if t not in s['ana']]
+    S = XU[cand] @ XS[sidx].T
+    O = XU[cand] @ XS[oidx].T
+    sc = np.sort(S, 1)[:, -3:].mean(1) - np.sort(O, 1)[:, -3:].mean(1)
+    order = np.argsort(-sc)[:8]
+    lines.append(f'##### {t}')
+    retr_c[t] = []
+    for o in order:
+        i = cand[o]
+        j = sidx[int(np.argmax(S[o]))]
+        u = units[i]
+        retr_c[t].append(dict(uid=u['uid'], score=round(float(sc[o]), 3), text=u['text'], nearest_span=spans[j]['sid'],
+                              nearest_text=spans[j]['text'], nearest_cos=round(float(S[o].max()), 3)))
+        lines.append(f'  {sc[o]:+.3f} [{u["uid"]} {u["lang"]} {u["year"]}] {u["text"][:230]}')
+        lines.append(f'         nearest span {spans[j]["sid"]} ({S[o].max():.3f}): {spans[j]["text"][:120]}')
+json.dump(retr_c, open(f'{OUT}/retrieval_contrastive_{model}.json', 'w'), ensure_ascii=False, indent=1)
+
+# near-duplicate units with different annotation: unit A carries topic t, unit B (other ad, cos >= 0.95) does not
+ti = [i for i, u in enumerate(units) if u['kind'] == 'text']
+E = XU[ti]
+Sim = E @ E.T
+dups = []
+for a in range(len(ti)):
+    for b in range(a + 1, len(ti)):
+        if Sim[a, b] >= 0.95:
+            ua, ub = units[ti[a]], units[ti[b]]
+            if ua['ad'] == ub['ad'] or ua['nwords'] < 5:
+                continue
+            A, B = set(ua['topics']), set(ub['topics'])
+            dups.append(dict(a=ua['uid'], b=ub['uid'], cos=round(float(Sim[a, b]), 3), ta=sorted(A), tb=sorted(B),
+                             text_a=ua['text'], text_b=ub['text'], same=A == B))
+diff = [d for d in dups if not d['same']]
+one_empty = [d for d in diff if not d['ta'] or not d['tb']]
+out['near_dup_pairs_cos095'] = len(dups)
+out['near_dup_pairs_with_topic_on_at_least_one_side'] = sum(1 for d in dups if d['ta'] or d['tb'])
+out['near_dup_pairs_same_topics_nonempty'] = sum(1 for d in dups if d['same'] and d['ta'])
+out['near_dup_pairs_different_topics'] = len(diff)
+out['near_dup_pairs_one_side_unannotated'] = len(one_empty)
+json.dump(dups, open(f'{OUT}/near_duplicates_{model}.json', 'w'), ensure_ascii=False, indent=1)
+lines.append('\n\n================ NEAR-DUPLICATE UNITS (cos>=0.95, different ads) WITH DIFFERENT TOPICS ================')
+for d in sorted(diff, key=lambda d: -d['cos']):
+    lines.append(f"  {d['cos']:.3f} {d['a']} {d['ta']} | {d['b']} {d['tb']} :: {d['text_a'][:110]} || {d['text_b'][:110]}")
+print('near-dup pairs', {k: v for k, v in out.items() if k.startswith('near_dup')})
 open(f'{OUT}/retrieval_{model}.txt', 'w').write('\n'.join(lines))
 json.dump(retr, open(f'{OUT}/retrieval_{model}.json', 'w'), ensure_ascii=False, indent=1)
 out['n_candidates_unannotated_text_units'] = len(cand)
@@ -129,6 +178,20 @@ cross = {}
 for q, r in (('claude', 'np'), ('np', 'claude'), ('np', 'np'), ('claude', 'claude')):
     res = knn_eval(XS, strict=True, ref_mask=(resp == r), query_mask=(resp == q))
     cross[f'query={q} ref={r}'] = (round(float(np.mean([x['ok'] for x in res])), 3), len(res))
+# size-matched: draw reference sets of equal size (= number of np spans minus 1) from each group
+nref = int((resp == 'np').sum()) - 1
+rs = np.random.default_rng(0)
+for q in ('np', 'claude'):
+    for r in ('np', 'claude'):
+        accs = []
+        for rep in range(20):
+            pool = np.where(resp == r)[0]
+            pick = rs.choice(pool, size=min(nref, len(pool)), replace=False)
+            m = np.zeros(len(spans), bool)
+            m[pick] = True
+            res = knn_eval(XS, strict=True, ref_mask=m, query_mask=(resp == q))
+            accs.append(np.mean([x['ok'] for x in res]))
+        cross[f'size-matched({nref}) query={q} ref={r}'] = (round(float(np.mean(accs)), 3), round(float(np.std(accs)), 3))
 print('cross-group (span_text, strict):', cross)
 out['cross_resp'] = cross
 # topic usage by group

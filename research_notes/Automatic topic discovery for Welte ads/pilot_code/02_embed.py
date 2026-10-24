@@ -16,6 +16,7 @@ MODELS = {
     'mpnet': ('sentence-transformers/paraphrase-multilingual-mpnet-base-v2', ''),
     'e5': ('intfloat/multilingual-e5-base', 'query: '),   # symmetric use: "query: " on both sides
     'bgem3': ('BAAI/bge-m3', ''),                          # dense vectors only
+    'labse': ('sentence-transformers/LaBSE', ''),          # bitext-mining model, used only for step 6
 }
 
 
