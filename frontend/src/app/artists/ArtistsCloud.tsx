@@ -7,7 +7,7 @@ import type { CloudName } from "../../lib/cloud"
 import type { YearTotal } from "../../lib/artists"
 import { artistLink } from "../../lib/anchors"
 import { Timeline, usePlayback } from "../../components/timeline"
-import { Chapter, StoryCard, StoryChips, chapterAt } from "../../components/narrative"
+import { Chapter, ShowStory, StoryCard, chapterAt } from "../../components/narrative"
 
 interface Props {
   names: CloudName[]
@@ -110,8 +110,7 @@ export default function ArtistsCloud({ names, height, years, chapters }: Props) 
         )}
       </Box>
       <Timeline playback={playback} about={about} />
-      <StoryChips chapters={chapters} current={chapter} story={story} onStory={setStory}
-        onPick={picked => { setStory(true); playback.show(picked.from) }} />
+      {chapters.length > 0 && !story && <ShowStory onShow={() => setStory(true)} />}
     </Box>
   )
 }

@@ -5,7 +5,7 @@ import * as d3 from 'd3'
 import { Box, IconButton, Stack, Tooltip } from "@mui/material"
 import { Add, CenterFocusStrong, Remove } from "@mui/icons-material"
 import { Timeline, usePlayback } from "./timeline"
-import { Chapter, StoryCard, StoryChips, chapterAt } from "./narrative"
+import { Chapter, ShowStory, StoryCard, chapterAt } from "./narrative"
 
 export interface Coordinate {
     lat: number
@@ -370,9 +370,6 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS }: Wo
         {timeline && (
             <Timeline playback={playback} about={timeline.find(entry => entry.year === playback.year)?.about} />
         )}
-        {chapters.length > 0 && (
-            <StoryChips chapters={chapters} current={chapter} story={story} onStory={setStory}
-                onPick={picked => { setStory(true); playback.show(picked.from) }} />
-        )}
+        {chapters.length > 0 && !story && <ShowStory onShow={() => setStory(true)} />}
     </>)
 }

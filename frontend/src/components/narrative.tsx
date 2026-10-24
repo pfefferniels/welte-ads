@@ -2,7 +2,7 @@
 
 import React, { useState } from "react"
 import Link from "next/link"
-import { Box, Chip, FormControlLabel, IconButton, Switch, Typography } from "@mui/material"
+import { Box, Button, IconButton, Typography } from "@mui/material"
 import { Close } from "@mui/icons-material"
 
 /** A chapter of the story, as a timeline shows it. */
@@ -127,27 +127,9 @@ export const StoryCard = ({ chapter, playing, side = 'left', onHide }: StoryCard
   )
 }
 
-interface StoryChipsProps {
-  chapters: Chapter[]
-  current?: Chapter
-  onPick: (chapter: Chapter) => void
-  // whether the timeline tells the story: stops at each chapter and shows its card
-  story: boolean
-  onStory: (story: boolean) => void
-}
-
-/** A switch for the story, and the chapters to jump to. */
-export const StoryChips = ({ chapters, current, onPick, story, onStory }: StoryChipsProps) => (
-  <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 0.75, mt: 0.5 }}>
-    <FormControlLabel label="Story" sx={{ mr: 0.5 }}
-      control={<Switch size="small" checked={story} onChange={event => onStory(event.target.checked)} />} />
-    {chapters.map(chapter => (
-      <Chip key={chapter.id} size="small" clickable
-        label={`${chapter.from} · ${chapter.title}`}
-        variant={chapter === current ? 'filled' : 'outlined'}
-        onClick={() => onPick(chapter)} />
-    ))}
-  </Box>
+/** Brings the story back once the reader has hidden it. */
+export const ShowStory = ({ onShow }: { onShow: () => void }) => (
+  <Button size="small" onClick={onShow} sx={{ mt: 0.5 }}>Show the story</Button>
 )
 
 /** All chapters as text, for reading, citing and finding without the timeline. */
