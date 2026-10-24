@@ -110,11 +110,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -142,10 +143,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -161,28 +167,62 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="affordability">
-             <gloss>Affordability</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <category xml:id="illusion_of_presence">
+             <gloss>Illusion of presence</gloss>
+             <desc>The listener feels that the artist is present or seated at the
+                instrument ("as if he sat at your piano", "close your eyes"), or
+                cannot tell the reproduction from the live artist.</desc>
           </category>
-          <category xml:id="listening">
-             <gloss>Revelled Listening</gloss>
+          <category xml:id="entertaining_guests">
+             <gloss>Entertaining guests</gloss>
+             <desc>The instrument serves sociability: the hostess, guests, dinners,
+                dancing, social functions; pictures of company gathered around it.</desc>
           </category>
-          <category xml:id="sitting_woman">
-             <gloss>Sitting Woman</gloss>
+          <category xml:id="refinement">
+             <gloss>Culture, refinement and distinction</gloss>
+             <desc>Owning the instrument marks culture, refinement or social standing
+                ("vornehmes Heim", "a visible token of culture"), or the picture
+                places it in an elegant upper-class setting.</desc>
           </category>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
           </category>
-          <category xml:id="virtual_presence">
-             <gloss>Virtual Presence</gloss>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
+          </category>
+          <category xml:id="how_it_works">
+             <gloss>How it works</gloss>
+             <desc>The ad explains or shows the technology: the recording process, the
+                pneumatic or electric mechanism, the roll, the drive from a light
+                socket, or it likens the recording to photography or the
+                phonograph. A product label such as "electric reproducing piano"
+                alone does not count.</desc>
+          </category>
+          <category xml:id="still_a_piano">
+             <gloss>Still a normal piano</gloss>
+             <desc>The instrument remains an ordinary piano: it can be played by hand,
+                the mechanism is invisible and leaves its look unchanged, it can be
+                fitted to many makes of piano.</desc>
+          </category>
+          <category xml:id="quality">
+             <gloss>Quality and durability</gloss>
+             <desc>The instrument is reliable, well built and lasting, proven in use
+                and in every climate, guaranteed.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -191,6 +231,7 @@
       <langUsage><language ident="da">Danish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -215,7 +256,7 @@
   <text decls="#source_1">
     <body>
       <div type="illustration" facs="#zone_picture">
-        <figure xml:id="figure_1" ana="#sitting_woman #listening" resp="#claude"><desc>A woman in evening dress playing a grand piano; a man in an armchair at left and a man seated on a stool at right listen</desc></figure>
+        <figure xml:id="figure_1" ana="#entertaining_guests #refinement" resp="#claude"><desc>A woman in evening dress playing a grand piano; a man in an armchair at left and a man seated on a stool at right listen</desc></figure>
       </div>
       <div facs="#zone_headline">
         <head><hi rendition="#b #in"><lb/><name type="brand">Welte
@@ -226,13 +267,13 @@
         <ab><gap reason="irrelevant"><desc resp="#claude">name of the other product (Ducanola.)</desc></gap></ab>
       </div>
       <div facs="#zone_intro">
-        <ab><hi rendition="#c"><lb/><seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">De to ypperste Kunstspilinstrumenter, der findes</seg>, kendt Verden
-          <lb/>over beundret og anbefalet af alle de største Musiknavne.</hi></ab>
+        <ab><hi rendition="#c"><lb/><seg xml:id="topic_1" ana="#superlatives" type="topic" resp="#claude">De to ypperste Kunstspilinstrumenter, der findes</seg>, <seg xml:id="topic_5" ana="#world_renown" type="topic" resp="#claude">kendt Verden
+          <lb/>over beundret og anbefalet af alle de største Musiknavne</seg>.</hi></ab>
       </div>
       <div facs="#zone_welte">
-        <p><hi rendition="#b #in"><lb/><name type="brand">Welte Mignon</name></hi> indbygget <name type="brand">Steinway</name> Flygler og Pianoer, drives ved Elektricitet, men kan og
-          <lb/>saa benyttes til Haandspil. Dets <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">Gengivelse af Kunstnerens Spil er saa nøj-
-          <lb/>agtigt og fuldendt</seg>, <seg xml:id="topic_3" ana="#virtual_presence" type="topic" resp="#claude">som sad han selv foran Instrumentet</seg></p>
+        <p><hi rendition="#b #in"><lb/><name type="brand">Welte Mignon</name></hi> indbygget <name type="brand">Steinway</name> Flygler og Pianoer, <seg xml:id="topic_6" ana="#how_it_works" type="topic" resp="#claude">drives ved Elektricitet</seg>, <seg xml:id="topic_7" ana="#still_a_piano" type="topic" resp="#claude">men kan og
+          <lb/>saa benyttes til Haandspil</seg>. Dets <seg xml:id="topic_2" ana="#faithful_reproduction" type="topic" resp="#claude">Gengivelse af Kunstnerens Spil er saa nøj-
+          <lb/>agtigt og fuldendt</seg>, <seg xml:id="topic_3" ana="#illusion_of_presence" type="topic" resp="#claude">som sad han selv foran Instrumentet</seg></p>
       </div>
       <div facs="#zone_other2">
         <ab><gap reason="irrelevant"><desc resp="#claude">3-line paragraph on the other product (Ducanola)</desc></gap></ab>
@@ -243,8 +284,8 @@
           <lb/><hi rendition="#b">Vi indbygger</hi> Spilleapparat i Deres Piano eller Flygel.</p>
       </div>
       <div facs="#zone_priser">
-        <p><hi rendition="#b #in"><lb/>Vore Priser</hi> <seg xml:id="topic_4" ana="#affordability" type="topic" resp="#claude">er de billigste, vore Betalingsvilkaar yderst kulante</seg> og vor Garanti den mest
-          <lb/>betryggende</p>
+        <p><hi rendition="#b #in"><lb/>Vore Priser</hi> er de billigste, vore Betalingsvilkaar yderst kulante og <seg xml:id="topic_8" ana="#quality" type="topic" resp="#claude">vor Garanti den mest
+          <lb/>betryggende</seg></p>
       </div>
       <div facs="#zone_bytte">
         <ab><hi rendition="#c #b"><lb/>Brugte Flygler og Pianoer tages i Bytte.</hi></ab>

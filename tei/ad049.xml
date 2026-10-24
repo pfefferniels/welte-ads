@@ -140,11 +140,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -172,10 +173,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -191,34 +197,55 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <category xml:id="illusion_of_presence">
+             <gloss>Illusion of presence</gloss>
+             <desc>The listener feels that the artist is present or seated at the
+                instrument ("as if he sat at your piano", "close your eyes"), or
+                cannot tell the reproduction from the live artist.</desc>
           </category>
-          <category xml:id="suit_every_mood">
-             <gloss>Suit every Mood</gloss>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
           </category>
-          <category xml:id="technical_invention">
-             <gloss>Technical Invention</gloss>
+          <category xml:id="effortless">
+             <gloss>Effortless: no skill needed</gloss>
+             <desc>The instrument needs no skill or effort: a button or a key starts
+                it, it plays by itself, it is for those who cannot play.</desc>
           </category>
-          <category xml:id="touch_of_a_button">
-             <gloss>Touch of a Button</gloss>
-             <desc>The Welte-Mignon is permanently available and "objectified"
-                for the entertainment of the owner – on the touch of a
-                button.</desc>
+          <category xml:id="testimonials">
+             <gloss>Testimonials of famous musicians</gloss>
+             <desc>A named musician or other notable person is quoted or paraphrased
+                in praise of the instrument.</desc>
           </category>
-          <category xml:id="unreached_ideal">
-             <gloss>Ideal Instrument</gloss>
+          <category xml:id="epoch_making_invention">
+             <gloss>Epoch-making invention</gloss>
+             <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                the greatest of the age, a sensation, the newest thing.</desc>
           </category>
-          <category xml:id="virtual_presence">
-             <gloss>Virtual Presence</gloss>
+          <category xml:id="how_it_works">
+             <gloss>How it works</gloss>
+             <desc>The ad explains or shows the technology: the recording process, the
+                pneumatic or electric mechanism, the roll, the drive from a light
+                socket, or it likens the recording to photography or the
+                phonograph. A product label such as "electric reproducing piano"
+                alone does not count.</desc>
+          </category>
+          <category xml:id="still_a_piano">
+             <gloss>Still a normal piano</gloss>
+             <desc>The instrument remains an ordinary piano: it can be played by hand,
+                the mechanism is invisible and leaves its look unchanged, it can be
+                fitted to many makes of piano.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -227,6 +254,7 @@
       <langUsage><language ident="nl">Dutch</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -255,25 +283,25 @@
         <gap reason="irrelevant"><desc resp="#claude">four paragraphs on the Angelus player piano, from "De ANGELUS, de ingebouwde pianobespeler bij uitnemendheid, …" to "… Marshall, Knabe - Emerson - Brinsmead."</desc></gap>
       </div>
       <div facs="#zone_lead">
-        <p><hi rendition="#i"><lb/>Voor diegenen welke gaarne <seg xml:id="topic_1" ana="#home" type="topic" resp="#claude">goede muziek in hun woning hooren</seg>, zonder zelf
-          <lb/>uitvoerder te zijn, is</hi></p>
+        <p><hi rendition="#i"><lb/><seg xml:id="topic_8" ana="#effortless" type="topic" resp="#claude">Voor diegenen welke gaarne goede muziek in hun woning hooren, zonder zelf
+          <lb/>uitvoerder te zijn</seg>, is</hi></p>
       </div>
       <div facs="#zone_display">
         <ab><hi rendition="#i #in"><lb/>de Reproductie Piano <name type="brand">Mignon</name></hi></ab>
       </div>
       <div facs="#zone_text">
-        <p><hi rendition="#i"><lb/><seg xml:id="topic_2" ana="#unreached_ideal" type="topic" resp="#claude">het ideaal</seg>.</hi></p>
-        <p><hi rendition="#i"><lb/><hi rendition="#b"><name type="brand">MIGNON</name></hi> <seg xml:id="topic_3" ana="#technical_invention" type="topic" resp="#claude">de geniale vinding</seg> van de firma <hi rendition="#b"><orgName>Welte &amp; Söhne</orgName></hi>, reproduceert het Spel van
-          <lb/>de grootste pianisten; aangesloten aan eene electrische lichtleiding of werkende op Accu-
-          <lb/>mulatoren <seg xml:id="topic_4" ana="#touch_of_a_button" type="topic" resp="#claude">is één druk op het contact voldoende</seg> om het spel van de groote meesters
-          <lb/><seg xml:id="topic_5" ana="#exact_reproduction" type="topic" resp="#claude">geheel natuurgetrouw</seg> in uwe woning te hooren.</hi></p>
+        <p><hi rendition="#i"><lb/>het ideaal.</hi></p>
+        <p><hi rendition="#i"><lb/><hi rendition="#b"><name type="brand">MIGNON</name></hi> <seg xml:id="topic_3" ana="#epoch_making_invention" type="topic" resp="#claude">de geniale vinding</seg> van de firma <hi rendition="#b"><orgName>Welte &amp; Söhne</orgName></hi>, reproduceert het Spel van
+          <lb/>de grootste pianisten; <seg xml:id="topic_9" ana="#how_it_works" type="topic" resp="#claude">aangesloten aan eene electrische lichtleiding of werkende op Accu-
+          <lb/>mulatoren</seg> <seg xml:id="topic_4" ana="#effortless" type="topic" resp="#claude">is één druk op het contact voldoende</seg> <seg xml:id="topic_10" ana="#masters_at_home #faithful_reproduction" type="topic" resp="#claude">om het spel van de groote meesters
+          <lb/>geheel natuurgetrouw in uwe woning te hooren</seg>.</hi></p>
         <p><hi rendition="#i"><lb/>Het is een onbetwistbaar genot het Spel van een <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreno</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116210419">Kleeberg</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116014490">Pach-
-          <lb/>mann</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/117110450">Scharwenka</persName></hi> of van welk groot Pianist men slechts wenscht, <seg xml:id="topic_6" ana="#suit_every_mood" type="topic" resp="#claude">dan te kunnen hooren,
+          <lb/>mann</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/117110450">Scharwenka</persName></hi> of van welk groot Pianist men slechts wenscht, <seg xml:id="topic_6" ana="#masters_at_home" type="topic" resp="#claude">dan te kunnen hooren,
           <lb/>wanneer men daartoe gedisponeerd is</seg>.</hi></p>
         <p><hi rendition="#i"><lb/><hi rendition="#b"><name type="brand">MIGNON</name></hi>, gebouwd in eene Piano van <hi rendition="#b"><name type="brand">Steinway &amp; Sons</name></hi> of <hi rendition="#b"><name type="brand">Julius Feurich</name></hi>,
-          <lb/>instrumenten met de handen of door middel van Mignonrollen bespeelbaar, hebben
-          <lb/>dezelfde uitmonstering en afmetingen als elke gewone Piano.</hi></p>
-        <p><hi rendition="#i"><lb/><app><rdg source="#source_1"><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/116688203">DAN. DE LANGE</persName></hi></rdg><rdg source="#source_2">„<hi rendition="#b"><persName corresp="https://d-nb.info/gnd/116688203">DAN. DE LANGE</persName></hi>”</rdg></app> schreef o. m.: <quote type="testimonial"><app><rdg source="#source_1">„</rdg><rdg source="#source_2"/></app>Inderdaad de illusie is volkomen, <seg xml:id="topic_7" ana="#virtual_presence" type="topic" resp="#claude">sluit men de
+          <lb/><seg xml:id="topic_11" ana="#still_a_piano" type="topic" resp="#claude">instrumenten met de handen of door middel van Mignonrollen bespeelbaar, hebben
+          <lb/>dezelfde uitmonstering en afmetingen als elke gewone Piano.</seg></hi></p>
+        <p><hi rendition="#i"><lb/><app><rdg source="#source_1"><seg xml:id="topic_12" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/116688203">DAN. DE LANGE</persName></hi></seg></rdg><rdg source="#source_2">„<hi rendition="#b"><persName corresp="https://d-nb.info/gnd/116688203">DAN. DE LANGE</persName></hi>”</rdg></app> schreef o. m.: <quote type="testimonial"><app><rdg source="#source_1">„</rdg><rdg source="#source_2"/></app>Inderdaad de illusie is volkomen, <seg xml:id="topic_7" ana="#illusion_of_presence" type="topic" resp="#claude">sluit men de
           <lb/>oogen dan is het of men de Personen zelf hoort</seg><app><rdg source="#source_1">”<unclear>,</unclear></rdg><rdg source="#source_2"/></app></quote></hi></p>
         <p><hi rendition="#i"><lb/>Belangstellenden worden beleefdelijk uitgenoodigd.</hi></p>
       </div>

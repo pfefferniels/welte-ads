@@ -182,11 +182,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -214,10 +215,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -234,22 +240,37 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="entertainment">
-             <gloss>Entertainment</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <category xml:id="phantom_hands">
+             <gloss>Phantom hands</gloss>
+             <desc>The absent performer appears as a phantom or spirit: ghostly or
+                semi-transparent hands and figures, keys moving with no one seated,
+                the artist summoned at will ("zitieren", "summon").</desc>
           </category>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
           </category>
-          <category xml:id="listening">
-             <gloss>Revelled Listening</gloss>
+          <category xml:id="entertaining_guests">
+             <gloss>Entertaining guests</gloss>
+             <desc>The instrument serves sociability: the hostess, guests, dinners,
+                dancing, social functions; pictures of company gathered around it.</desc>
+          </category>
+          <category xml:id="refinement">
+             <gloss>Culture, refinement and distinction</gloss>
+             <desc>Owning the instrument marks culture, refinement or social standing
+                ("vornehmes Heim", "a visible token of culture"), or the picture
+                places it in an elegant upper-class setting.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -258,6 +279,7 @@
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-20">Topic of the picture attributed to Claude, who annotated it.</change>
@@ -276,18 +298,18 @@
   <text decls="#source_1">
     <body>
       <div type="illustration" facs="#zone_picture">
-        <figure xml:id="figure_1" ana="#listening" resp="#claude"><desc>Guests in evening dress, some seated in armchairs, listening to a grand piano that plays by itself, its fallboard lettered "WELTE-MIGNON"; an illegible artist's signature at the lower left</desc></figure>
+        <figure xml:id="figure_1" ana="#entertaining_guests #phantom_hands #refinement" resp="#claude"><desc>Guests in evening dress, some seated in armchairs, listening to a grand piano that plays by itself, its fallboard lettered "WELTE-MIGNON"; an illegible artist's signature at the lower left</desc></figure>
       </div>
       <div facs="#zone_headline">
-        <head><hi rendition="#i #in"><lb/><seg xml:id="topic_1" ana="#entertainment" type="topic" resp="#claude">Ihre Gäste
+        <head><hi rendition="#i #in"><lb/><seg xml:id="topic_1" ana="#entertaining_guests" type="topic" resp="#claude">Ihre Gäste
           <lb/>sind ganz entzückt</seg></hi></head>
       </div>
       <div facs="#zone_text">
         <p><hi rendition="#c"><lb/>wenn das
           <lb/><hi rendition="#b #in"><name type="brand">WELTE-MIGNON</name></hi></hi>
-          <lb/><hi rendition="#g"><seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">ton- und klanggetreu das
+          <lb/><hi rendition="#g"><seg xml:id="topic_2" ana="#faithful_reproduction #masters_at_home" type="topic" resp="#claude">ton- und klanggetreu das
           <lb/>Meister-Spiel der ersten Klavier-
-          <lb/>künstler</seg> <seg xml:id="topic_3" ana="#home" type="topic" resp="#claude">in Ihrem Heim</seg> erklingen läßt.</hi></p>
+          <lb/>künstler</seg> <seg xml:id="topic_3" ana="#masters_at_home" type="topic" resp="#claude">in Ihrem Heim</seg> erklingen läßt.</hi></p>
       </div>
       <div facs="#zone_signature">
         <ab><lb/><hi rendition="#b"><orgName>M. Welte &amp; Söhne</orgName>, <placeName>Freiburg i. B.</placeName></hi>

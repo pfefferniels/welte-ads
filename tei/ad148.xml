@@ -174,11 +174,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -206,10 +207,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -225,27 +231,71 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="distinction_from_mechanical">
-             <gloss>Distinction from Mechanical</gloss>
-             <desc>Often, the adverts try to distinguish reproducing piano rolls
-                from mere mechanical methods (such as the player piano).</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <category xml:id="touch_and_individuality">
+             <gloss>Touch, nuance and individuality</gloss>
+             <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                pedalling, dynamics, tempo, shading, tone colour, or the
+                individuality and characteristic style of each pianist.</desc>
           </category>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <category xml:id="not_mechanical">
+             <gloss>Art, not mechanism</gloss>
+             <desc>The instrument is set apart from mechanical, automatic or player-
+                piano playing: it is human, artistic, "not a surrogate", or the
+                prejudice that it is mechanical is refuted.</desc>
           </category>
-          <category xml:id="miracle">
-             <gloss>Miracle</gloss>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
           </category>
-          <category xml:id="personality">
-             <gloss>Personality</gloss>
+          <category xml:id="effortless">
+             <gloss>Effortless: no skill needed</gloss>
+             <desc>The instrument needs no skill or effort: a button or a key starts
+                it, it plays by itself, it is for those who cannot play.</desc>
+          </category>
+          <category xml:id="testimonials">
+             <gloss>Testimonials of famous musicians</gloss>
+             <desc>A named musician or other notable person is quoted or paraphrased
+                in praise of the instrument.</desc>
+          </category>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+          </category>
+          <category xml:id="epoch_making_invention">
+             <gloss>Epoch-making invention</gloss>
+             <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                the greatest of the age, a sensation, the newest thing.</desc>
+          </category>
+          <category xml:id="unique_and_superior">
+             <gloss>Unique and superior to rivals</gloss>
+             <desc>The instrument is "the only one", the standard for all others, it
+                surpasses its rivals or has nothing in common with them, or the
+                reader is warned against cheap or unknown makes.</desc>
+          </category>
+          <category xml:id="beyond_the_home">
+             <gloss>Uses beyond the home</gloss>
+             <desc>Uses outside private listening: accompanying singers or
+                instrumentalists, the stage or ballet, hotels, restaurants,
+                hospitals, sanatoria, clubs.</desc>
+          </category>
+          <category xml:id="repertoire">
+             <gloss>Breadth of repertoire</gloss>
+             <desc>The range of music available: classics and dance music, jazz and
+                opera, music for every mood and occasion, a library of thousands of
+                rolls by hundreds of artists.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -254,6 +304,7 @@
       <langUsage><language ident="sv">Swedish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -276,25 +327,25 @@
         <figure><desc>A lyre between laurel branches above a fringed drapery with two horns and a rolled sheet of music; the drapery hangs down on both sides of the text below</desc></figure>
       </div>
       <div facs="#zone_text">
-        <head><hi rendition="#in"><lb/>Nytt!</hi></head>
+        <head><hi rendition="#in"><lb/><seg xml:id="topic_7" ana="#epoch_making_invention" type="topic" resp="#claude">Nytt!</seg></hi></head>
         <p><lb/>Reproduktions-
-          <lb/>Pianinot <hi rendition="#in">”<name type="brand">Mignon</name>”</hi> står <seg xml:id="topic_1" ana="#distinction_from_mechanical" type="topic" resp="#claude"><hi rendition="#b">högt över</hi>
+          <lb/>Pianinot <hi rendition="#in">”<name type="brand">Mignon</name>”</hi> står <seg xml:id="topic_1" ana="#not_mechanical #unique_and_superior" type="topic" resp="#claude"><hi rendition="#b">högt över</hi>
           <lb/>de mekaniska
-          <lb/>instrument, som hittills funnits</seg>. Herr <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/121861600">Wilh.
-          <lb/>Stenhammars</persName></hi> omdöme lyder: <quote type="testimonial">»Instrumentet
-          <lb/>uttrycker sitt eget lov i högsta tonart. <seg xml:id="topic_2" ana="#miracle" type="topic" resp="#claude">Den som hört det, står stum
-          <lb/>inför detta under</seg> — —»</quote>. Herr <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">E. d'Alberts</persName>:</hi> <quote type="testimonial">»<seg xml:id="topic_3" ana="#exact_reproduction" type="topic" resp="#claude">Genom noggrann
-          <lb/>reproduktion av uppfattning och föredragssätt</seg> äger detta instru-
-          <lb/>ment konstnärligt värde»</quote>. Liknande omdömen kunna företes från
-          <lb/><hi rendition="#b">alla,</hi> nu levande pianister med världsrykte. Pianisterna <persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>,
-          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreno</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116429623">Reisenauer</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/121861600">Stenhammar</persName> m. fl. hava inspe-
-          <lb/>lat cirka 400 kompositioner för »<name type="brand">Mignon</name>», som <seg xml:id="topic_4" ana="#personality" type="topic" resp="#claude">återgiver det
+          <lb/>instrument, som hittills funnits</seg>. Herr <seg xml:id="topic_8" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/121861600">Wilh.
+          <lb/>Stenhammars</persName></hi></seg> omdöme lyder: <quote type="testimonial">»Instrumentet
+          <lb/>uttrycker sitt eget lov i högsta tonart. <seg xml:id="topic_2" ana="#wonder" type="topic" resp="#claude">Den som hört det, står stum
+          <lb/>inför detta under</seg> — —»</quote>. Herr <seg xml:id="topic_9" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">E. d'Alberts</persName>:</hi></seg> <quote type="testimonial">»<seg xml:id="topic_3" ana="#faithful_reproduction #touch_and_individuality" type="topic" resp="#claude">Genom noggrann
+          <lb/>reproduktion av uppfattning och föredragssätt</seg> <seg xml:id="topic_10" ana="#not_mechanical" type="topic" resp="#claude">äger detta instru-
+          <lb/>ment konstnärligt värde</seg>»</quote>. <seg xml:id="topic_11" ana="#world_renown" type="topic" resp="#claude">Liknande omdömen kunna företes från
+          <lb/><hi rendition="#b">alla,</hi> nu levande pianister med världsrykte</seg>. Pianisterna <persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreno</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116429623">Reisenauer</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/121861600">Stenhammar</persName> m. fl. <seg xml:id="topic_12" ana="#repertoire" type="topic" resp="#claude">hava inspe-
+          <lb/>lat cirka 400 kompositioner för »<name type="brand">Mignon</name>»</seg>, som <seg xml:id="topic_4" ana="#touch_and_individuality" type="topic" resp="#claude">återgiver det
           <lb/><hi rendition="#b">personliga</hi> i föredraget</seg> och skänker <hi rendition="#b">verkliga konstnjutningar.</hi></p>
       </div>
       <div facs="#zone_text2">
-        <p><lb/><seg xml:id="topic_5" ana="#exact_reproduction" type="topic" resp="#claude">Pedalisering, temporering, nyansering, melodiens klara framhävande, allt kommer
+        <p><lb/><seg xml:id="topic_5" ana="#touch_and_individuality #effortless" type="topic" resp="#claude">Pedalisering, temporering, nyansering, melodiens klara framhävande, allt kommer
           <lb/>fram hos ”<name type="brand">Mignon</name>” utan mänsklig hjälp</seg>. För intresserade spelas <hi rendition="#b">tisdag och fredag
-          <lb/>kl. 7—8.</hi> För <seg xml:id="topic_6" ana="#home" type="topic" resp="#claude">musikaliska hem</seg> och konsertsalonger blir ”<name type="brand">Mignon</name>” till ovärderlig glädje.</p>
+          <lb/>kl. 7—8.</hi> <seg xml:id="topic_13" ana="#beyond_the_home" type="topic" resp="#claude">För musikaliska hem och konsertsalonger blir ”<name type="brand">Mignon</name>” till ovärderlig glädje</seg>.</p>
       </div>
       <div facs="#zone_gap">
         <ab><gap reason="irrelevant"><desc resp="#claude">8 lines on the other stock: grands and uprights by Rud. Ibach Sohn, organs by C. A. V. Lundholm and uprights by John Pettersson, Ljungkvist-Ström, Scheel and Bogs-Voigt ("FLYGLAR och PIANINON från kejserl. och kungl. hovleverantör RUD. IBACH SOHN …"), with a testimonial of the pianist Gustaf Heintze on John Pettersson's uprights</desc></gap></ab>

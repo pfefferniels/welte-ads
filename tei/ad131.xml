@@ -114,11 +114,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -146,10 +147,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -166,33 +172,83 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="analogy_to_photography">
-             <gloss>Analogy to Photography</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <category xml:id="touch_and_individuality">
+             <gloss>Touch, nuance and individuality</gloss>
+             <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                pedalling, dynamics, tempo, shading, tone colour, or the
+                individuality and characteristic style of each pianist.</desc>
+          </category>
+          <category xml:id="not_mechanical">
+             <gloss>Art, not mechanism</gloss>
+             <desc>The instrument is set apart from mechanical, automatic or player-
+                piano playing: it is human, artistic, "not a surrogate", or the
+                prejudice that it is mechanical is refuted.</desc>
           </category>
           <category xml:id="immortality">
-             <gloss>Immortality</gloss>
-             <desc>This topic emphasizes the perdurance of the reproductions and
-                how thus the recording artists become immortal.</desc>
+             <gloss>Immortality and posterity</gloss>
+             <desc>The playing is preserved for ever or for future generations; the
+                artists become immortal, and dead artists still play.</desc>
           </category>
-          <category xml:id="technical_invention">
-             <gloss>Technical Invention</gloss>
+          <category xml:id="if_only_earlier">
+             <gloss>If only it had existed earlier</gloss>
+             <desc>The ad regrets that the invention did not exist earlier, so that we
+                could still hear Liszt, Chopin, Beethoven or Rubinstein. Nearly
+                always voiced by a quoted musician.</desc>
           </category>
-          <category xml:id="touch_of_a_button">
-             <gloss>Touch of a Button</gloss>
-             <desc>The Welte-Mignon is permanently available and "objectified"
-                for the entertainment of the owner – on the touch of a
-                button.</desc>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
           </category>
-          <category xml:id="unreached_ideal">
-             <gloss>Ideal Instrument</gloss>
+          <category xml:id="effortless">
+             <gloss>Effortless: no skill needed</gloss>
+             <desc>The instrument needs no skill or effort: a button or a key starts
+                it, it plays by itself, it is for those who cannot play.</desc>
+          </category>
+          <category xml:id="testimonials">
+             <gloss>Testimonials of famous musicians</gloss>
+             <desc>A named musician or other notable person is quoted or paraphrased
+                in praise of the instrument.</desc>
+          </category>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+          </category>
+          <category xml:id="epoch_making_invention">
+             <gloss>Epoch-making invention</gloss>
+             <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                the greatest of the age, a sensation, the newest thing.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
+          </category>
+          <category xml:id="how_it_works">
+             <gloss>How it works</gloss>
+             <desc>The ad explains or shows the technology: the recording process, the
+                pneumatic or electric mechanism, the roll, the drive from a light
+                socket, or it likens the recording to photography or the
+                phonograph. A product label such as "electric reproducing piano"
+                alone does not count.</desc>
+          </category>
+          <category xml:id="still_a_piano">
+             <gloss>Still a normal piano</gloss>
+             <desc>The instrument remains an ordinary piano: it can be played by hand,
+                the mechanism is invisible and leaves its look unchanged, it can be
+                fitted to many makes of piano.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -201,6 +257,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -223,43 +280,43 @@
   <text decls="#source_1">
     <body>
       <div facs="#zone_headline">
-        <head><hi rendition="#c"><lb/><hi rendition="#in">A GREAT MUSICAL INVENTION.</hi>
+        <head><hi rendition="#c"><lb/><hi rendition="#in"><seg xml:id="topic_9" ana="#epoch_making_invention" type="topic" resp="#claude">A GREAT MUSICAL INVENTION.</seg></hi>
           <lb/><hi rendition="#b #in #framed">ARTISTIC “<name type="brand">WELTE</name>” PLAYER.</hi></hi></head>
       </div>
       <div facs="#zone_perfect">
-        <head><hi rendition="#c #b"><lb/>After many inventions and many failures—<seg xml:id="topic_1" ana="#unreached_ideal" type="topic" resp="#claude">A PERFECT INSTRUMENT.</seg></hi></head>
+        <head><hi rendition="#c #b"><lb/><seg xml:id="topic_10" ana="#superlatives" type="topic" resp="#claude">After many inventions and many failures</seg>—<seg xml:id="topic_1" ana="#superlatives" type="topic" resp="#claude">A PERFECT INSTRUMENT.</seg></hi></head>
       </div>
       <div facs="#zone_text">
-        <p><lb/><hi rendition="#b">AN INSTRUMENT OF REPRODUCTION.</hi> <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">Exact and individual renderings</seg> of Classical Music played by the
+        <p><lb/><hi rendition="#b">AN INSTRUMENT OF REPRODUCTION.</hi> <seg xml:id="topic_2" ana="#faithful_reproduction #touch_and_individuality" type="topic" resp="#claude">Exact and individual renderings</seg> of Classical Music played by the
           <lb/>World's greatest Pianists.</p>
-        <p><lb/><hi rendition="#b">“<name type="brand">WELTE</name>” PLAYER</hi> can be attached to any ordinary Upright or Horizontal Piano, and is actuated by electricity
-          <lb/>instead of foot power. This attachment <seg xml:id="topic_3" ana="#technical_invention" type="topic" resp="#claude">represents the highest possible development of the pneumatic piano-player</seg>, inasmuch
-          <lb/>as it furnishes a reproduction of the actual interpretation placed upon the written score of a great composer by the great modern
-          <lb/>executant. In the words of a well-known musician, <seg xml:id="topic_4" ana="#analogy_to_photography" type="topic" resp="#claude">“It is a photograph.”</seg></p>
+        <p><lb/><hi rendition="#b">“<name type="brand">WELTE</name>” PLAYER</hi> <seg xml:id="topic_11" ana="#still_a_piano" type="topic" resp="#claude">can be attached to any ordinary Upright or Horizontal Piano</seg>, and <seg xml:id="topic_12" ana="#how_it_works" type="topic" resp="#claude">is actuated by electricity
+          <lb/>instead of foot power</seg>. This attachment <seg xml:id="topic_3" ana="#superlatives" type="topic" resp="#claude">represents the highest possible development of the pneumatic piano-player</seg>, inasmuch
+          <lb/>as it furnishes <seg xml:id="topic_13" ana="#faithful_reproduction" type="topic" resp="#claude">a reproduction of the actual interpretation</seg> placed upon the written score of a great composer by the great modern
+          <lb/>executant. In the words of a well-known musician, <seg xml:id="topic_4" ana="#how_it_works" type="topic" resp="#claude">“It is a photograph.”</seg></p>
       </div>
       <div facs="#zone_text2">
-        <p><lb/><hi rendition="#b">OPERATION.</hi>—After the insertion of the perforated roll, a <seg xml:id="topic_5" ana="#touch_of_a_button" type="topic" resp="#claude">button is pressed which starts the motor</seg>; the tempo lever
+        <p><lb/><hi rendition="#b">OPERATION.</hi>—After the insertion of the perforated roll, a <seg xml:id="topic_5" ana="#effortless #how_it_works" type="topic" resp="#claude">button is pressed which starts the motor</seg>; the tempo lever
           <lb/>is set to the mark which represents the exact time at which the artist played.</p>
         <p><lb/>Every piece rendered with distinction, for over 100 artists of renown have played for this instrument.</p>
-        <p><lb/><seg xml:id="topic_6" ana="#immortality" type="topic" resp="#claude">It immortalises a single performance so that the touch of a pianist who has even now passed away, may be handed
+        <p><lb/><seg xml:id="topic_6" ana="#immortality #touch_and_individuality" type="topic" resp="#claude">It immortalises a single performance so that the touch of a pianist who has even now passed away, may be handed
           <lb/>down to remote posterity</seg>.</p>
-        <p><lb/>The regret of musicians must ever be that this great invention was not brought out in 1809 instead of 1909.</p>
+        <p><lb/><seg xml:id="topic_14" ana="#if_only_earlier #epoch_making_invention" type="topic" resp="#claude">The regret of musicians must ever be that this great invention was not brought out in 1809 instead of 1909</seg>.</p>
       </div>
       <div facs="#zone_opinions">
-        <head><hi rendition="#c #b"><lb/>OPINIONS OF THE WORLD'S FAMOUS MUSICIANS:</hi></head>
+        <head><hi rendition="#c #b"><lb/><seg xml:id="topic_15" ana="#testimonials" type="topic" resp="#claude">OPINIONS OF THE WORLD'S FAMOUS MUSICIANS:</seg></hi></head>
       </div>
       <div facs="#zone_carreno">
-        <p><quote type="testimonial"><lb/>“My ADMIRATION of the greatest invention which bears the name of
-          <lb/>‘<name type="brand">WELTE</name>’ is unlimited. In my opinion it is <seg xml:id="topic_7" ana="#technical_invention" type="topic" resp="#claude">the most amazing of all inven-
-          <lb/>tions which have hitherto been made in the field of musical instruments</seg>, and its
+        <p><quote type="testimonial"><lb/>“My ADMIRATION of <seg xml:id="topic_16" ana="#epoch_making_invention" type="topic" resp="#claude">the greatest invention</seg> which bears the name of
+          <lb/>‘<name type="brand">WELTE</name>’ is unlimited. In my opinion it is <seg xml:id="topic_7" ana="#epoch_making_invention #wonder" type="topic" resp="#claude">the most amazing of all inven-
+          <lb/>tions which have hitherto been made in the field of musical instruments</seg>, and <seg xml:id="topic_17" ana="#world_renown #epoch_making_invention" type="topic" resp="#claude">its
           <lb/>name will become known and create the greatest sensation throughout the
-          <lb/>world.”</quote> <hi rendition="#right"><persName type="artist" corresp="https://d-nb.info/gnd/118953915">TERESA <sic>CARRENNO</sic></persName>.</hi></p>
+          <lb/>world</seg>.”</quote> <hi rendition="#right"><persName type="artist" corresp="https://d-nb.info/gnd/118953915">TERESA <sic>CARRENNO</sic></persName>.</hi></p>
       </div>
       <div facs="#zone_hambourg">
         <p><quote type="testimonial"><lb/>“I had heard a great deal about the ‘<name type="brand">WELTE</name>,’ and am more than de-
-          <lb/>lighted after having heard it played. What I found most astonishing was <seg xml:id="topic_8" ana="#exact_reproduction" type="topic" resp="#claude">the
-          <lb/>perfect reproduction of touch, even to the finest shadings</seg>. In short, the
-          <lb/>‘<name type="brand">WELTE</name>’ is not only human, but superhuman.”</quote> <hi rendition="#right"><persName type="artist" corresp="https://d-nb.info/gnd/116422319">MARK <sic>HAMBURG</sic></persName>.</hi></p>
+          <lb/>lighted after having heard it played. <seg xml:id="topic_18" ana="#wonder" type="topic" resp="#claude">What I found most astonishing</seg> was <seg xml:id="topic_8" ana="#faithful_reproduction #touch_and_individuality" type="topic" resp="#claude">the
+          <lb/>perfect reproduction of touch, even to the finest shadings</seg>. In short, <seg xml:id="topic_19" ana="#not_mechanical" type="topic" resp="#claude">the
+          <lb/>‘<name type="brand">WELTE</name>’ is not only human, but superhuman</seg>.”</quote> <hi rendition="#right"><persName type="artist" corresp="https://d-nb.info/gnd/116422319">MARK <sic>HAMBURG</sic></persName>.</hi></p>
       </div>
       <div facs="#zone_text3">
         <p><hi rendition="#c"><lb/>Testimonies by other famous musicians may be seen on application.</hi></p>

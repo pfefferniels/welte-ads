@@ -269,11 +269,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -301,10 +302,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -321,25 +327,59 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <category xml:id="touch_and_individuality">
+             <gloss>Touch, nuance and individuality</gloss>
+             <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                pedalling, dynamics, tempo, shading, tone colour, or the
+                individuality and characteristic style of each pianist.</desc>
           </category>
-          <category xml:id="hostess">
-             <gloss>Hostess</gloss>
+          <category xml:id="illusion_of_presence">
+             <gloss>Illusion of presence</gloss>
+             <desc>The listener feels that the artist is present or seated at the
+                instrument ("as if he sat at your piano", "close your eyes"), or
+                cannot tell the reproduction from the live artist.</desc>
           </category>
-          <category xml:id="unreached_ideal">
-             <gloss>Ideal Instrument</gloss>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
           </category>
-          <category xml:id="virtual_presence">
-             <gloss>Virtual Presence</gloss>
+          <category xml:id="entertaining_guests">
+             <gloss>Entertaining guests</gloss>
+             <desc>The instrument serves sociability: the hostess, guests, dinners,
+                dancing, social functions; pictures of company gathered around it.</desc>
+          </category>
+          <category xml:id="refinement">
+             <gloss>Culture, refinement and distinction</gloss>
+             <desc>Owning the instrument marks culture, refinement or social standing
+                ("vornehmes Heim", "a visible token of culture"), or the picture
+                places it in an elegant upper-class setting.</desc>
+          </category>
+          <category xml:id="furniture">
+             <gloss>Furniture and ornament</gloss>
+             <desc>The case, its design or period style; the instrument as an ornament
+                of the room.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
+          </category>
+          <category xml:id="still_a_piano">
+             <gloss>Still a normal piano</gloss>
+             <desc>The instrument remains an ordinary piano: it can be played by hand,
+                the mechanism is invisible and leaves its look unchanged, it can be
+                fitted to many makes of piano.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -348,6 +388,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -373,7 +414,7 @@
         <figure><desc>Photograph of a grand piano with its lid raised and the pedal lyre showing</desc></figure>
       </div>
       <div facs="#zone_caption">
-        <ab><hi rendition="#i #b"><lb/><seg xml:id="topic_1" ana="#unreached_ideal" type="topic" resp="#claude">The Perfect
+        <ab><hi rendition="#i #b"><lb/><seg xml:id="topic_1" ana="#superlatives" type="topic" resp="#claude">The Perfect
           <lb/>Reproducing
           <lb/>Player Piano</seg></hi></ab>
       </div>
@@ -384,31 +425,31 @@
       </div>
       <div facs="#zone_side">
         <p><hi rendition="#i #smaller"><lb/>The <name type="brand">Behning</name>
-          <lb/>can be played
+          <lb/><seg xml:id="topic_6" ana="#still_a_piano" type="topic" resp="#claude">can be played
           <lb/>by hand in the
           <lb/>ordinary way
-          <lb/>if desired.</hi></p>
+          <lb/>if desired</seg>.</hi></p>
       </div>
       <div facs="#zone_text">
-        <p><hi rendition="#b"><lb/>This beautiful instrument <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">reproduces
+        <p><hi rendition="#b"><lb/>This beautiful instrument <seg xml:id="topic_2" ana="#faithful_reproduction #touch_and_individuality" type="topic" resp="#claude">reproduces
           <lb/>with marvellous fidelity the actual
           <lb/>personal playing of the great Master
-          <lb/>Pianists</seg>. <seg xml:id="topic_3" ana="#home" type="topic" resp="#claude">Right in your home</seg>, the
-          <lb/><name type="brand">WELTE</name> at your bidding will re-create
+          <lb/>Pianists</seg>. <seg xml:id="topic_7" ana="#masters_at_home" type="topic" resp="#claude">Right in your home, the
+          <lb/><name type="brand">WELTE</name> at your bidding will re-create</seg>
           <lb/>in its perfection and beauty the playing
-          <lb/>of the genius <seg xml:id="topic_4" ana="#virtual_presence" type="topic" resp="#claude">just as perfectly as if the
+          <lb/>of the genius <seg xml:id="topic_4" ana="#illusion_of_presence" type="topic" resp="#claude">just as perfectly as if the
           <lb/>Artist seated himself anew and played
           <lb/>again for you alone</seg>.</hi></p>
       </div>
       <div facs="#zone_text2">
-        <p><hi rendition="#b"><lb/>An ideal Instrument for homes where
+        <p><hi rendition="#b"><lb/><seg xml:id="topic_8" ana="#entertaining_guests" type="topic" resp="#claude">An ideal Instrument for homes where
           <lb/>frequent social functions demand much
-          <lb/>entertaining, the <name type="brand">WELTE</name> will <seg xml:id="topic_5" ana="#hostess" type="topic" resp="#claude">interest
+          <lb/>entertaining</seg>, the <name type="brand">WELTE</name> will <seg xml:id="topic_5" ana="#entertaining_guests" type="topic" resp="#claude">interest
           <lb/>your guests and relieve the strain of
           <lb/>hospitality</seg>.</hi></p>
-        <p><hi rendition="#b"><lb/>A visible token of culture, its graceful
+        <p><hi rendition="#b"><lb/><seg xml:id="topic_9" ana="#refinement" type="topic" resp="#claude">A visible token of culture</seg>, <seg xml:id="topic_10" ana="#furniture #refinement" type="topic" resp="#claude">its graceful
           <lb/>lines and artistic appearance will add
-          <lb/>charm and dignity to the finest home.</hi></p>
+          <lb/>charm and dignity to the finest home</seg>.</hi></p>
       </div>
       <div facs="#zone_text3">
         <p><hi rendition="#b"><lb/>May we have the pleasure of demon-

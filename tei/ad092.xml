@@ -191,11 +191,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -223,10 +224,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -241,16 +247,30 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="dance">
-             <gloss>Dance</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
           </category>
-          <category xml:id="popular">
-             <gloss>Popular</gloss>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
           </category>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <category xml:id="repertoire">
+             <gloss>Breadth of repertoire</gloss>
+             <desc>The range of music available: classics and dance music, jazz and
+                opera, music for every mood and occasion, a library of thousands of
+                rolls by hundreds of artists.</desc>
+          </category>
+          <category xml:id="quality">
+             <gloss>Quality and durability</gloss>
+             <desc>The instrument is reliable, well built and lasting, proven in use
+                and in every climate, guaranteed.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -259,6 +279,7 @@
       <langUsage><language ident="da">Danish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -283,21 +304,21 @@
       <div facs="#zone_side">
         <ab><hi rendition="#c"><hi rendition="#b"><lb/><name type="brand">Steinway</name>
           <lb/>Salon</hi>
-          <lb/><seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">Verdens fineste
+          <lb/><seg xml:id="topic_1" ana="#superlatives" type="topic" resp="#claude">Verdens fineste
           <lb/>Kunstspilapparat</seg>
-          <lb/><hi rendition="#b">anbefalet af
-          <lb/>alle</hi> Nutidens</hi></ab>
+          <lb/><seg xml:id="topic_4" ana="#world_renown" type="topic" resp="#claude"><hi rendition="#b">anbefalet af
+          <lb/>alle</hi> Nutidens</seg></hi></ab>
       </div>
       <div facs="#zone_text">
         <p><lb/>største Musiknavne, haves paa Lager
-          <lb/>og sælges med <hi rendition="#b">fuldtud betryg-
-          <lb/>gende Garanti.</hi> Instrumentet er
-          <lb/>fuldstændig som nyt, og der kan er-
+          <lb/>og <seg xml:id="topic_5" ana="#quality" type="topic" resp="#claude">sælges med <hi rendition="#b">fuldtud betryg-
+          <lb/>gende Garanti.</hi></seg> Instrumentet er
+          <lb/>fuldstændig som nyt, og <seg xml:id="topic_6" ana="#repertoire" type="topic" resp="#claude">der kan er-
           <lb/>holdes et Repertoire omfattende saa-
           <lb/>vel alle Klassikerne indspillet af
-          <lb/>Verdens betydeligste Virtuoser, som
-          <lb/><seg xml:id="topic_2" ana="#popular" type="topic" resp="#claude">Øjeblikkets kendte og populære
-          <lb/><seg xml:id="topic_3" ana="#dance" type="topic" resp="#claude">Danse</seg></seg>.</p>
+          <lb/>Verdens betydeligste Virtuoser</seg>, som
+          <lb/><seg xml:id="topic_2" ana="#repertoire" type="topic" resp="#claude">Øjeblikkets kendte og populære
+          <lb/>Danse</seg>.</p>
       </div>
       <div facs="#zone_text2">
         <p><lb/>Instrumentet demonstreres og fore-

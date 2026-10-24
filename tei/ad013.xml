@@ -18,6 +18,10 @@
                     <forename>Niels</forename>
                  </persName>
               </respStmt>
+              <respStmt>
+                 <resp>Annotation of topics</resp>
+                 <name xml:id="claude">Claude (AI model by Anthropic)</name>
+              </respStmt>
            </titleStmt>
            <publicationStmt>
               <publisher>
@@ -128,11 +132,12 @@
                  scan, in part transcribed by hand. The advertisements published
                  outside Germany, the United Kingdom and the United States, and a
                  few from Germany, were transcribed from the scans, encoded, given
-                 their regions and annotated with topics by Claude, an AI model;
-                 their revision history says so. Until the editor has checked such
-                 an advertisement against the scan, <att>status</att> on its
-                 <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-                 advertisement is <val>checked</val>.</p>
+                 their regions by Claude, an AI model; their revision history says
+                 so. Until the editor has checked such an advertisement against the
+                 scan, <att>status</att> on its <gi>revisionDesc</gi> is
+                 <val>unchecked</val>; that of every other advertisement is
+                 <val>checked</val>. The topics of all advertisements were assigned
+                 by Claude.</p>
               <correction>
                  <p>Errors of the original are not corrected but marked with
                     <gi>sic</gi>.</p>
@@ -160,10 +165,15 @@
                     Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                     which describes them in a <gi>desc</gi>. Illustrations are
                     described in <gi>figure</gi>. Persons are linked to the GND with
-                    <att>corresp</att>. Recurring motifs are marked as topics with
-                    <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                    the taxonomy of topics; these are an interpretation, by whom
-                    <att>resp</att> says.</p>
+                    <att>corresp</att>. Recurring arguments and motifs are marked as
+                    topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                    pointing to the taxonomy of topics. The taxonomy was induced by
+                    Claude in four blind readings of all advertisements, each in a
+                    different order and without knowledge of the editor's earlier
+                    taxonomy, which it replaced in October 2026; it keeps the topics
+                    that at least three of the readings found. The topics are an
+                    interpretation, assigned by whom <att>resp</att> says, so far
+                    all by Claude; the editor has not yet checked them.</p>
               </interpretation>
               <stdVals>
                  <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -180,27 +190,60 @@
            </tagsDecl>
            <classDecl>
               <taxonomy xml:id="topics">
-                 <desc>Topics: recurring motifs of the advertisements, in their texts
-                    and in their pictures</desc>
-                 <category xml:id="analogy_to_phonograph">
-                    <gloss>Analogy to Phonograph</gloss>
+                 <desc>Topics: the recurring arguments and motifs of the advertisements,
+                    in their texts and in their pictures</desc>
+                 <category xml:id="faithful_reproduction">
+                    <gloss>Faithful reproduction</gloss>
+                    <desc>The ad claims that the playing of the artist is reproduced exactly,
+                       faithfully, naturally or completely, as "the actual playing" of the
+                       pianist. A bare "reproduces the playing of …" without such a
+                       qualifier does not count.</desc>
                  </category>
-                 <category xml:id="exact_reproduction">
-                    <gloss>Exact Reproduction</gloss>
-                    <desc>In virtually all promotional materials between 1905 and 1926,
-                       the claim of exact and faithful reproduction, of absolute
-                       accurateness is consistently emphasized.</desc>
-                 </category>
-                 <category xml:id="home">
-                    <gloss>Home</gloss>
+                 <category xml:id="touch_and_individuality">
+                    <gloss>Touch, nuance and individuality</gloss>
+                    <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                       pedalling, dynamics, tempo, shading, tone colour, or the
+                       individuality and characteristic style of each pianist.</desc>
                  </category>
                  <category xml:id="immortality">
-                    <gloss>Immortality</gloss>
-                    <desc>This topic emphasizes the perdurance of the reproductions and
-                       how thus the recording artists become immortal.</desc>
+                    <gloss>Immortality and posterity</gloss>
+                    <desc>The playing is preserved for ever or for future generations; the
+                       artists become immortal, and dead artists still play.</desc>
                  </category>
-                 <category xml:id="technical_invention">
-                    <gloss>Technical Invention</gloss>
+                 <category xml:id="masters_at_home">
+                    <gloss>The great pianists in your home</gloss>
+                    <desc>The famous pianists can be heard in your own home or on your own
+                       piano, at any time, as often as you wish, at your command ("The
+                       Master's Fingers on Your Piano", concerts at home).</desc>
+                 </category>
+                 <category xml:id="furniture">
+                    <gloss>Furniture and ornament</gloss>
+                    <desc>The case, its design or period style; the instrument as an ornament
+                       of the room.</desc>
+                 </category>
+                 <category xml:id="epoch_making_invention">
+                    <gloss>Epoch-making invention</gloss>
+                    <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                       the greatest of the age, a sensation, the newest thing.</desc>
+                 </category>
+                 <category xml:id="superlatives">
+                    <gloss>Superlative perfection</gloss>
+                    <desc>The instrument is called perfect, the best, the finest, supreme or
+                       unsurpassed, or the culmination of a line of progress.</desc>
+                 </category>
+                 <category xml:id="how_it_works">
+                    <gloss>How it works</gloss>
+                    <desc>The ad explains or shows the technology: the recording process, the
+                       pneumatic or electric mechanism, the roll, the drive from a light
+                       socket, or it likens the recording to photography or the
+                       phonograph. A product label such as "electric reproducing piano"
+                       alone does not count.</desc>
+                 </category>
+                 <category xml:id="still_a_piano">
+                    <gloss>Still a normal piano</gloss>
+                    <desc>The instrument remains an ordinary piano: it can be played by hand,
+                       the mechanism is invisible and leaves its look unchanged, it can be
+                       fitted to many makes of piano.</desc>
                  </category>
               </taxonomy>
            </classDecl>
@@ -211,6 +254,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+           <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
            <change when="2026-10-20">Marked as checked by the editor.</change>
            <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
@@ -244,15 +288,15 @@
     <text decls="#source_1">
         <body>
         <div facs="#eSc_textblock_b620cf2e" type="illustration">
-            <figure>
+            <figure xml:id="figure_1" ana="#furniture" resp="#claude">
                 <desc resp="#np">
                     Illustration of a Welte-Mignon.
                 </desc>
             </figure>
         </div>
         <div facs="#zone_caption">
-            <ab><lb /><hi rendition="#c">DESIGN
-            OF OAK CASE</hi></ab>
+            <ab><lb /><hi rendition="#c"><seg xml:id="topic_6" ana="#furniture" type="topic" resp="#claude">DESIGN
+            OF OAK CASE</seg></hi></ab>
         </div>
 
             <div facs="#eSc_textblock_f1d73028">
@@ -264,10 +308,10 @@
                 </head>
                 <ab><hi rendition="#b">
                 <lb />
-                <seg xml:id="topic_1" ana="#home" resp="#np" type="topic">
+                <seg xml:id="topic_1" ana="#masters_at_home" resp="#claude" type="topic">
                     Brings to your home
-                </seg> the actual living perform-
-                <lb />ances of
+                </seg> <seg xml:id="topic_7" ana="#faithful_reproduction" type="topic" resp="#claude">the actual living perform-
+                <lb />ances</seg> of
                 <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName>,
                 <persName type="artist" corresp="https://d-nb.info/gnd/124379923">Lhevinne</persName>,
                 <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
@@ -284,7 +328,7 @@
             
             <div facs="#eSc_textblock_b2073d40">
                 <p>
-                    <seg xml:id="topic_2" ana="#technical_invention" resp="#np" type="topic">
+                    <seg xml:id="topic_2" ana="#epoch_making_invention #superlatives" resp="#claude" type="topic">
                         <lb />The science of musical reproduction has progressed
                         <lb />through the various stages–experiment, medioc-
                         <lb />rity, excellence–but until the introduction of the
@@ -301,7 +345,7 @@
                     music-lover <lb />the actual performances of every great living pian-
                     <lb />ist.
                     
-                    <seg xml:id="topic_3" ana="#immortality">
+                    <seg xml:id="topic_3" ana="#immortality" type="topic" resp="#claude">
                         It perpetuates these performances so that fu-
                         <lb />ture generations will enjoy the music of our
                         <lb />present-day virtuosos when their personalities are
@@ -309,18 +353,18 @@
                     </seg>
                 </p>
                 <p>
-                    <seg xml:id="topic_4" ana="#analogy_to_phonograph" resp="#np" type="topic">
+                    <seg xml:id="topic_4" ana="#how_it_works" resp="#claude" type="topic">
                         <lb />What the <name type="brand">Victor</name> is doing for the famous singers
                         <lb />of the world the <name type="brand">Welte-Mignon</name> is
                         accomplishing <lb />for the pianists.
                     </seg>
-                    But with this difference: The
+                    <seg xml:id="topic_8" ana="#how_it_works" type="topic" resp="#claude">But with this difference: The
                     <lb /><name type="brand">Victor</name> registers the voice vibrations on the disc,
                     <lb />whereas the sensitive reproducing devices of the
                     <lb /><name type="brand">Welte-Mignon</name> are of such nature that every dupli-
                     <lb />cate performance IS MADE DIRECTLY ON THE
-                    <lb />PIANO,
-                    <seg xml:id="topic_5" ana="#exact_reproduction">
+                    <lb />PIANO</seg>,
+                    <seg xml:id="topic_5" ana="#faithful_reproduction #touch_and_individuality" type="topic" resp="#claude">
                         thereby reproducing in every detail of
                         <lb />touch, tone and technique the actual
                         renditions of <lb />the pianists, in every sense their original per-
@@ -333,8 +377,8 @@
                     <lb />above; the <name type="brand">Steinway-Welte</name>, an upright
                     <name type="brand">Steinway</name>
                     <lb />piano combined with the <name type="brand">Welte-Mignon</name>, and the
-                    <lb /><name type="brand">Cabinet-Welte</name>, which may be attached to any grand
-                    <lb />or upright piano of any make.
+                    <lb /><seg xml:id="topic_9" ana="#still_a_piano" type="topic" resp="#claude"><name type="brand">Cabinet-Welte</name>, which may be attached to any grand
+                    <lb />or upright piano of any make.</seg>
                 </p>
             </div>
             <div facs="#zone_call">

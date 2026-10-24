@@ -18,6 +18,10 @@
                   <forename>Niels</forename>
                </persName>
             </respStmt>
+            <respStmt>
+               <resp>Annotation of topics</resp>
+               <name xml:id="claude">Claude (AI model by Anthropic)</name>
+            </respStmt>
          </titleStmt>
          <publicationStmt>
             <publisher>
@@ -185,11 +189,12 @@
                scan, in part transcribed by hand. The advertisements published
                outside Germany, the United Kingdom and the United States, and a
                few from Germany, were transcribed from the scans, encoded, given
-               their regions and annotated with topics by Claude, an AI model;
-               their revision history says so. Until the editor has checked such
-               an advertisement against the scan, <att>status</att> on its
-               <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-               advertisement is <val>checked</val>.</p>
+               their regions by Claude, an AI model; their revision history says
+               so. Until the editor has checked such an advertisement against the
+               scan, <att>status</att> on its <gi>revisionDesc</gi> is
+               <val>unchecked</val>; that of every other advertisement is
+               <val>checked</val>. The topics of all advertisements were assigned
+               by Claude.</p>
             <correction>
                <p>Errors of the original are not corrected but marked with
                   <gi>sic</gi>.</p>
@@ -217,10 +222,15 @@
                   Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                   which describes them in a <gi>desc</gi>. Illustrations are
                   described in <gi>figure</gi>. Persons are linked to the GND with
-                  <att>corresp</att>. Recurring motifs are marked as topics with
-                  <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                  the taxonomy of topics; these are an interpretation, by whom
-                  <att>resp</att> says.</p>
+                  <att>corresp</att>. Recurring arguments and motifs are marked as
+                  topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                  pointing to the taxonomy of topics. The taxonomy was induced by
+                  Claude in four blind readings of all advertisements, each in a
+                  different order and without knowledge of the editor's earlier
+                  taxonomy, which it replaced in October 2026; it keeps the topics
+                  that at least three of the readings found. The topics are an
+                  interpretation, assigned by whom <att>resp</att> says, so far
+                  all by Claude; the editor has not yet checked them.</p>
             </interpretation>
             <stdVals>
                <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -239,16 +249,30 @@
          </tagsDecl>
          <classDecl>
             <taxonomy xml:id="topics">
-               <desc>Topics: recurring motifs of the advertisements, in their texts
-                  and in their pictures</desc>
-               <category xml:id="exact_reproduction">
-                  <gloss>Exact Reproduction</gloss>
-                  <desc>In virtually all promotional materials between 1905 and 1926,
-                     the claim of exact and faithful reproduction, of absolute
-                     accurateness is consistently emphasized.</desc>
+               <desc>Topics: the recurring arguments and motifs of the advertisements,
+                  in their texts and in their pictures</desc>
+               <category xml:id="faithful_reproduction">
+                  <gloss>Faithful reproduction</gloss>
+                  <desc>The ad claims that the playing of the artist is reproduced exactly,
+                     faithfully, naturally or completely, as "the actual playing" of the
+                     pianist. A bare "reproduces the playing of …" without such a
+                     qualifier does not count.</desc>
                </category>
-               <category xml:id="technical_invention">
-                  <gloss>Technical Invention</gloss>
+               <category xml:id="touch_and_individuality">
+                  <gloss>Touch, nuance and individuality</gloss>
+                  <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                     pedalling, dynamics, tempo, shading, tone colour, or the
+                     individuality and characteristic style of each pianist.</desc>
+               </category>
+               <category xml:id="epoch_making_invention">
+                  <gloss>Epoch-making invention</gloss>
+                  <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                     the greatest of the age, a sensation, the newest thing.</desc>
+               </category>
+               <category xml:id="superlatives">
+                  <gloss>Superlative perfection</gloss>
+                  <desc>The instrument is called perfect, the best, the finest, supreme or
+                     unsurpassed, or the culmination of a line of progress.</desc>
                </category>
             </taxonomy>
          </classDecl>
@@ -259,6 +283,7 @@
          </langUsage>
       </profileDesc>
       <revisionDesc status="checked">
+         <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
          <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
          <change when="2026-10-20">Marked as checked by the editor.</change>
          <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
@@ -314,7 +339,7 @@
       <div facs="#eSc_textblock_f7822bda">
          <ab><hi rendition="#c #uc">
             <lb />
-               <seg xml:id="topic_1" type="topic" resp="#np" ana="#technical_invention">
+               <seg xml:id="topic_1" type="topic" resp="#claude" ana="#epoch_making_invention #superlatives">
                   After many inventions
                   <lb /><hi rendition="#g">and many failures</hi>
                   <lb />the perfect instrument 
@@ -325,7 +350,7 @@
          <ab><hi rendition="#c">
             <hi rendition="#i">
                <lb />The <name type="brand">Welte-Mignon</name>
-               <seg xml:id="topic_2" resp="#np" type="topic" ana="#exact_reproduction">
+               <seg xml:id="topic_2" resp="#claude" type="topic" ana="#faithful_reproduction #touch_and_individuality">
                   faithfully reproduces the
                   <lb />individual interpretation of the
                   <lb />greatest Pianists

@@ -18,6 +18,10 @@
                     <forename>Niels</forename>
                  </persName>
               </respStmt>
+              <respStmt>
+                 <resp>Annotation of topics</resp>
+                 <name xml:id="claude">Claude (AI model by Anthropic)</name>
+              </respStmt>
            </titleStmt>
            <publicationStmt>
               <publisher>
@@ -123,11 +127,12 @@
                  scan, in part transcribed by hand. The advertisements published
                  outside Germany, the United Kingdom and the United States, and a
                  few from Germany, were transcribed from the scans, encoded, given
-                 their regions and annotated with topics by Claude, an AI model;
-                 their revision history says so. Until the editor has checked such
-                 an advertisement against the scan, <att>status</att> on its
-                 <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-                 advertisement is <val>checked</val>.</p>
+                 their regions by Claude, an AI model; their revision history says
+                 so. Until the editor has checked such an advertisement against the
+                 scan, <att>status</att> on its <gi>revisionDesc</gi> is
+                 <val>unchecked</val>; that of every other advertisement is
+                 <val>checked</val>. The topics of all advertisements were assigned
+                 by Claude.</p>
               <correction>
                  <p>Errors of the original are not corrected but marked with
                     <gi>sic</gi>.</p>
@@ -155,10 +160,15 @@
                     Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                     which describes them in a <gi>desc</gi>. Illustrations are
                     described in <gi>figure</gi>. Persons are linked to the GND with
-                    <att>corresp</att>. Recurring motifs are marked as topics with
-                    <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                    the taxonomy of topics; these are an interpretation, by whom
-                    <att>resp</att> says.</p>
+                    <att>corresp</att>. Recurring arguments and motifs are marked as
+                    topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                    pointing to the taxonomy of topics. The taxonomy was induced by
+                    Claude in four blind readings of all advertisements, each in a
+                    different order and without knowledge of the editor's earlier
+                    taxonomy, which it replaced in October 2026; it keeps the topics
+                    that at least three of the readings found. The topics are an
+                    interpretation, assigned by whom <att>resp</att> says, so far
+                    all by Claude; the editor has not yet checked them.</p>
               </interpretation>
               <stdVals>
                  <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -174,25 +184,49 @@
            </tagsDecl>
            <classDecl>
               <taxonomy xml:id="topics">
-                 <desc>Topics: recurring motifs of the advertisements, in their texts
-                    and in their pictures</desc>
-                 <category xml:id="educational_use">
-                    <gloss>Educational Use</gloss>
+                 <desc>Topics: the recurring arguments and motifs of the advertisements,
+                    in their texts and in their pictures</desc>
+                 <category xml:id="faithful_reproduction">
+                    <gloss>Faithful reproduction</gloss>
+                    <desc>The ad claims that the playing of the artist is reproduced exactly,
+                       faithfully, naturally or completely, as "the actual playing" of the
+                       pianist. A bare "reproduces the playing of …" without such a
+                       qualifier does not count.</desc>
                  </category>
-                 <category xml:id="invisibility">
-                    <gloss>Invisibility</gloss>
+                 <category xml:id="touch_and_individuality">
+                    <gloss>Touch, nuance and individuality</gloss>
+                    <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                       pedalling, dynamics, tempo, shading, tone colour, or the
+                       individuality and characteristic style of each pianist.</desc>
                  </category>
-                 <category xml:id="personality">
-                    <gloss>Personality</gloss>
+                 <category xml:id="masters_at_home">
+                    <gloss>The great pianists in your home</gloss>
+                    <desc>The famous pianists can be heard in your own home or on your own
+                       piano, at any time, as often as you wish, at your command ("The
+                       Master's Fingers on Your Piano", concerts at home).</desc>
                  </category>
-                 <category xml:id="repeatability">
-                    <gloss>Repeatability</gloss>
+                 <category xml:id="education">
+                    <gloss>Education and study</gloss>
+                    <desc>The instrument serves learning and teaching: conservatories,
+                       students, studying an interpretation by repeating it.</desc>
                  </category>
-                 <category xml:id="touch_of_a_button">
-                    <gloss>Touch of a Button</gloss>
-                    <desc>The Welte-Mignon is permanently available and "objectified"
-                       for the entertainment of the owner – on the touch of a
-                       button.</desc>
+                 <category xml:id="beyond_the_home">
+                    <gloss>Uses beyond the home</gloss>
+                    <desc>Uses outside private listening: accompanying singers or
+                       instrumentalists, the stage or ballet, hotels, restaurants,
+                       hospitals, sanatoria, clubs.</desc>
+                 </category>
+                 <category xml:id="still_a_piano">
+                    <gloss>Still a normal piano</gloss>
+                    <desc>The instrument remains an ordinary piano: it can be played by hand,
+                       the mechanism is invisible and leaves its look unchanged, it can be
+                       fitted to many makes of piano.</desc>
+                 </category>
+                 <category xml:id="repertoire">
+                    <gloss>Breadth of repertoire</gloss>
+                    <desc>The range of music available: classics and dance music, jazz and
+                       opera, music for every mood and occasion, a library of thousands of
+                       rolls by hundreds of artists.</desc>
                  </category>
               </taxonomy>
            </classDecl>
@@ -203,6 +237,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+           <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
            <change when="2026-10-20">Marked as checked by the editor.</change>
            <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
@@ -341,9 +376,9 @@
 
         <div facs="#eSc_textblock_d1d1e37f">
             <ab><hi rendition="#larger #c">
-                <lb />In the home, in the studio, or on the stage-
+                <lb /><seg xml:id="topic_7" ana="#beyond_the_home" type="topic" resp="#claude">In the home, in the studio, or on the stage-</seg>
                 <lb />
-                <seg xml:id="topic_1" ana="#touch_of_a_button">
+                <seg xml:id="topic_1" ana="#masters_at_home" type="topic" resp="#claude">
                     the art of the greatest pianists
                     is available for all occasions
                 </seg>
@@ -352,7 +387,7 @@
 
         <div>
             <div facs="#eSc_textblock_b10cf83c">
-                <ab><lb />A few more of over 200 artists</ab>
+                <ab><lb /><seg xml:id="topic_8" ana="#repertoire" type="topic" resp="#claude">A few more of over 200 artists</seg></ab>
             </div>
             <div facs="#eSc_textblock_a2bbf779">
                 <ab><lb /><persName type="artist" corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>
@@ -394,33 +429,33 @@
 
         <div facs="#eSc_textblock_ca98bd36">
             <ab><lb />When the piano
-            <seg corresp="#home" resp="#np" type="topic">
+            <seg xml:id="topic_6" ana="#masters_at_home" type="topic" resp="#claude">
                 in your home or studio
             </seg>
-            <seg xml:id="topic_2" ana="#invisibility" resp="#np" type="topic">
+            <seg xml:id="topic_2" ana="#still_a_piano" resp="#claude" type="topic">
                 contains unseen
                 <lb />the <name type="brand">Welte-Mignon Licensee Reproducing Action</name>,
             </seg>
             it will
-            <lb />play, to the finest degree of perfection,
-            <seg xml:id="topic_3" ana="#personality" resp="#np" type="topic">
+            <lb />play, <seg xml:id="topic_9" ana="#faithful_reproduction" type="topic" resp="#claude">to the finest degree of perfection</seg>,
+            <seg xml:id="topic_3" ana="#touch_and_individuality" resp="#claude" type="topic">
                 with the personal
                 <lb />touch of any of the great pianists
             </seg>
             of the last score or more
             <lb />years. The value of the <name type="brand">Welte-
-            <lb />Mignon Licensee</name> in making im-
+            <lb />Mignon Licensee</name> in <seg xml:id="topic_10" ana="#masters_at_home" type="topic" resp="#claude">making im-
             <lb />mediately available in your own
             <lb />piano the interpretations of the
-            <lb />world's foremost pianists is ap-
+            <lb />world's foremost pianists</seg> is ap-
             <lb />parent to any musician.
-            <seg xml:id="topic_4" ana="#educational_use">
+            <seg xml:id="topic_4" ana="#education" type="topic" resp="#claude">
                 To
                 <lb />study in close detail,
-                <seg xml:id="topic_5" ana="#repeatability">
+                
                     by fre-
                     <lb />quent repetition,
-                </seg>the playing of
+                the playing of
                 <lb />such artists
             </seg>
             as <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName>,</ab>
@@ -431,25 +466,25 @@
             <persName type="artist" corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName> and
             <persName type="artist" corresp="https://d-nb.info/gnd/119362112">Ca-<lb />sella</persName>, possible through
-            the authentic recordings of <name type="brand">Welte-
+            <seg xml:id="topic_11" ana="#faithful_reproduction #education" type="topic" resp="#claude">the authentic recordings of <name type="brand">Welte-
             <lb />Mignon Licensee</name>, is an invaluable aid to master or stu-
-            <lb />dent.
-            <lb />Its recordings by notable accompanists afford
+            <lb />dent.</seg>
+            <lb /><seg xml:id="topic_12" ana="#beyond_the_home" type="topic" resp="#claude">Its recordings by notable accompanists afford
             <lb />competent support for singing
-            <lb />at any time. On the stage, the
+            <lb />at any time.</seg> <seg xml:id="topic_13" ana="#beyond_the_home" type="topic" resp="#claude">On the stage, the
             <lb />ballets of the Chicago Opera
             <lb />and the San Carlo Opera have
             <lb />both given public interpreta-
-            <lb />tions to its sole accompaniment.
+            <lb />tions to its sole accompaniment.</seg>
             
-            <lb />The Action is obtainable in 115
-            <lb />makes of pianos. Write for the
+            <lb /><seg xml:id="topic_14" ana="#still_a_piano" type="topic" resp="#claude">The Action is obtainable in 115
+            <lb />makes of pianos.</seg> Write for the
             <lb />beautiful brochure.</ab>
         </div>
 
         <div facs="#eSc_textblock_c343b605">
             <ab><hi rendition="#c"><lb /><name type="brand"><hi rendition="#in #larger"><hi rendition="#in #larger">Welte-Mignon</hi></hi></name>
-            <lb /><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg></hi></ab>
+            <lb /><seg xml:id="topic_15" ana="#masters_at_home" type="topic" resp="#claude"><seg type="slogan">THE MASTER'S FINGERS ON YOUR PIANO</seg></seg></hi></ab>
         </div>
         <div facs="#eSc_textblock_0e3a9da6">
             <ab><hi rendition="#c"><lb /><orgName>The Auto Pneumatic Action Company</orgName>–

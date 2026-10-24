@@ -18,6 +18,10 @@
             <forename>Niels</forename>
           </persName>
         </respStmt>
+        <respStmt>
+          <resp>Annotation of topics</resp>
+          <name xml:id="claude">Claude (AI model by Anthropic)</name>
+        </respStmt>
       </titleStmt>
             <publicationStmt>
                 <publisher>
@@ -125,11 +129,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -157,10 +162,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -179,6 +189,65 @@
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
         <rendition xml:id="uc" scheme="css">text-transform: uppercase;</rendition>
       </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
+          </category>
+          <category xml:id="touch_and_individuality">
+             <gloss>Touch, nuance and individuality</gloss>
+             <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                pedalling, dynamics, tempo, shading, tone colour, or the
+                individuality and characteristic style of each pianist.</desc>
+          </category>
+          <category xml:id="the_artists_soul">
+             <gloss>The artist's soul</gloss>
+             <desc>The instrument is said to capture the soul, spirit, feeling or
+                inner life of the performer, a spiritual register beyond the
+                technical one of touch and nuance ("the living soul of the artist",
+                "Musikseele").</desc>
+          </category>
+          <category xml:id="artists_hear_themselves">
+             <gloss>Artists hear themselves</gloss>
+             <desc>The artists vouch for their own recordings: they hear or recognise
+                their own playing, are deceived by it, sign the rolls as
+                autographs, or a demonstration proves that each pianist can be
+                recognised.</desc>
+          </category>
+          <category xml:id="immortality">
+             <gloss>Immortality and posterity</gloss>
+             <desc>The playing is preserved for ever or for future generations; the
+                artists become immortal, and dead artists still play.</desc>
+          </category>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
+          </category>
+          <category xml:id="testimonials">
+             <gloss>Testimonials of famous musicians</gloss>
+             <desc>A named musician or other notable person is quoted or paraphrased
+                in praise of the instrument.</desc>
+          </category>
+          <category xml:id="royal_patronage">
+             <gloss>Royal and aristocratic patronage</gloss>
+             <desc>Royalty, the nobility or the court appear as listeners, owners or
+                patrons, including titles of purveyor to the court
+                ("Hoflieferant").</desc>
+          </category>
+          <category xml:id="epoch_making_invention">
+             <gloss>Epoch-making invention</gloss>
+             <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                the greatest of the age, a sensation, the newest thing.</desc>
+          </category>
+        </taxonomy>
+      </classDecl>
     </encodingDesc>
         <profileDesc>
             <langUsage>
@@ -186,6 +255,7 @@
             </langUsage>
         </profileDesc>
     <revisionDesc status="checked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">A stray key removed from the name of Grieg.</change>
       <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -244,8 +314,8 @@
             <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/116204400">Bloomfield-<lb/>Zeisler</persName>,
             and others––
-            is reproduced with
-            <lb/>every subtle nuance of shade and expres-<lb/>sion by</ab>
+            <seg xml:id="topic_1" ana="#touch_and_individuality #faithful_reproduction" type="topic" resp="#claude">is reproduced with
+            <lb/>every subtle nuance of shade and expres-<lb/>sion</seg> by</ab>
       </div>
       <div facs="#zone_brand">
         <ab><hi rendition="#c">
@@ -267,17 +337,17 @@
       </div>
 
       <div type="panel" facs="#zone_story">
-        <ab><hi rendition="#b"><lb/>How <persName type="artist" corresp="https://d-nb.info/gnd/118697641">
+        <ab><seg xml:id="topic_2" ana="#royal_patronage #artists_hear_themselves" type="topic" resp="#claude"><hi rendition="#b"><lb/>How <persName type="artist" corresp="https://d-nb.info/gnd/118697641">
           EDVARD GRIEG
         </persName> was</hi>
         <hi rendition="#b #right"><lb/>Surprised by <persName corresp="https://d-nb.info/gnd/118632892">
           Kaiser Wilhelm II
-        </persName></hi></ab>
+        </persName></hi></seg></ab>
         <p>
-          <lb />When starting on a trip to Norway, the
+          <lb /><seg xml:id="topic_3" ana="#royal_patronage" type="topic" resp="#claude">When starting on a trip to Norway, the
           <lb />German Emperor ordered a <name type="brand">Welte-
           <lb/>Mignon Autograph Piano</name> for his steam
-          <lb/> yacht. Some recent records made by
+          <lb/> yacht.</seg> Some recent records made by
           <lb/>
           <persName type="artist" corresp="https://d-nb.info/gnd/118697641">
             Edvard Grieg
@@ -294,15 +364,15 @@
           <lb />Grieg records on the <name type="brand">Welte-Mignon</name>.
         </p>
         <p>
-          <lb /><lb />To the delight of the Kaiser, the
+          <lb /><lb />To the delight of the Kaiser, <seg xml:id="topic_4" ana="#artists_hear_themselves #touch_and_individuality" type="topic" resp="#claude">the
           <lb />maestro instantly recognized his own
-          <lb />touch, and after the
+          <lb />touch</seg>, and after the
           <lb />jest was explained,
-          <lb />he had the exquisite
+          <lb /><seg xml:id="topic_5" ana="#the_artists_soul #artists_hear_themselves" type="topic" resp="#claude">he had the exquisite
           <lb />pleasure of hearing,
           <lb />for the first time, the
           <lb />outpouring of his
-          <lb />own artistic soul.
+          <lb />own artistic soul.</seg>
         </p>
       </div>
 
@@ -310,17 +380,17 @@
       <div facs="#zone_damrosch">
         <ab><quote type="testimonial">
           <q>
-            <lb />I should not have thought it possible.
-            <lb />The Welte-Mignon is, without
+            <lb /><seg xml:id="topic_6" ana="#wonder" type="topic" resp="#claude">I should not have thought it possible.</seg>
+            <lb /><seg xml:id="topic_7" ana="#epoch_making_invention" type="topic" resp="#claude">The Welte-Mignon is, without
             <lb />doubt, the most remarkable
-            musical <lb />invention of our age.
+            musical <lb />invention of our age.</seg>
           </q>
         </quote>
         <hi rendition="#right">
         <lb/>
-        <persName type="artist" corresp="https://d-nb.info/gnd/116020776">
+        <seg xml:id="topic_8" ana="#testimonials" type="topic" resp="#claude"><persName type="artist" corresp="https://d-nb.info/gnd/116020776">
           WALTER DAMROSCH
-        </persName>,
+        </persName></seg>,
         </hi>
         <hi rendition="#right #smaller"><lb/><roleName>Conductor, New York Symphony Orchestra</roleName></hi></ab>
       </div>
@@ -329,18 +399,18 @@
       <div facs="#zone_hertz">
         <ab><quote type="testimonial">
           <q>
-            <lb />The Welte-Mignon is indeed a rescuing
+            <lb /><seg xml:id="topic_9" ana="#immortality" type="topic" resp="#claude">The Welte-Mignon is indeed a rescuing
             <lb />invention that renders the great piano
             <lb />virtuoso immortal and his art imper-
             <lb />ishable like the great compositions
-            <lb />which he interprets.
+            <lb />which he interprets.</seg>
           </q>
         </quote>
         <hi rendition="#right">
         <lb/>
-        <persName type="artist" corresp="https://d-nb.info/gnd/116753722">
+        <seg xml:id="topic_10" ana="#testimonials" type="topic" resp="#claude"><persName type="artist" corresp="https://d-nb.info/gnd/116753722">
           ALFRED HERTZ
-        </persName>,
+        </persName></seg>,
         </hi>
         <hi rendition="#right #smaller"><lb/><roleName>Conductor, Metropolitan Opera House Orchestra</roleName></hi></ab>
       </div>
@@ -356,7 +426,7 @@
         <lb/></ab>
     </div>
       <div type="illustration" facs="#zone_picture">
-        <figure>
+        <figure xml:id="figure_1" ana="#royal_patronage" resp="#claude">
           <desc>
             Grieg and Wilhelm II. discussing about it.
           </desc>

@@ -18,6 +18,10 @@
                         <forename>Niels</forename>
                     </persName>
                 </respStmt>
+                <respStmt>
+                    <resp>Annotation of topics</resp>
+                    <name xml:id="claude">Claude (AI model by Anthropic)</name>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>
@@ -122,11 +126,12 @@
                   scan, in part transcribed by hand. The advertisements published
                   outside Germany, the United Kingdom and the United States, and a
                   few from Germany, were transcribed from the scans, encoded, given
-                  their regions and annotated with topics by Claude, an AI model;
-                  their revision history says so. Until the editor has checked such
-                  an advertisement against the scan, <att>status</att> on its
-                  <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-                  advertisement is <val>checked</val>.</p>
+                  their regions by Claude, an AI model; their revision history says
+                  so. Until the editor has checked such an advertisement against the
+                  scan, <att>status</att> on its <gi>revisionDesc</gi> is
+                  <val>unchecked</val>; that of every other advertisement is
+                  <val>checked</val>. The topics of all advertisements were assigned
+                  by Claude.</p>
                <correction>
                   <p>Errors of the original are not corrected but marked with
                      <gi>sic</gi>.</p>
@@ -154,10 +159,15 @@
                      Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                      which describes them in a <gi>desc</gi>. Illustrations are
                      described in <gi>figure</gi>. Persons are linked to the GND with
-                     <att>corresp</att>. Recurring motifs are marked as topics with
-                     <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                     the taxonomy of topics; these are an interpretation, by whom
-                     <att>resp</att> says.</p>
+                     <att>corresp</att>. Recurring arguments and motifs are marked as
+                     topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                     pointing to the taxonomy of topics. The taxonomy was induced by
+                     Claude in four blind readings of all advertisements, each in a
+                     different order and without knowledge of the editor's earlier
+                     taxonomy, which it replaced in October 2026; it keeps the topics
+                     that at least three of the readings found. The topics are an
+                     interpretation, assigned by whom <att>resp</att> says, so far
+                     all by Claude; the editor has not yet checked them.</p>
                </interpretation>
                <stdVals>
                   <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -174,16 +184,37 @@
             </tagsDecl>
             <classDecl>
                 <taxonomy xml:id="topics">
-                    <desc>Topics: recurring motifs of the advertisements, in their texts
-                       and in their pictures</desc>
-                    <category xml:id="home">
-                       <gloss>Home</gloss>
+                    <desc>Topics: the recurring arguments and motifs of the advertisements,
+                       in their texts and in their pictures</desc>
+                    <category xml:id="faithful_reproduction">
+                       <gloss>Faithful reproduction</gloss>
+                       <desc>The ad claims that the playing of the artist is reproduced exactly,
+                          faithfully, naturally or completely, as "the actual playing" of the
+                          pianist. A bare "reproduces the playing of …" without such a
+                          qualifier does not count.</desc>
                     </category>
-                    <category xml:id="touch_of_a_button">
-                       <gloss>Touch of a Button</gloss>
-                       <desc>The Welte-Mignon is permanently available and "objectified"
-                          for the entertainment of the owner – on the touch of a
-                          button.</desc>
+                    <category xml:id="phantom_hands">
+                       <gloss>Phantom hands</gloss>
+                       <desc>The absent performer appears as a phantom or spirit: ghostly or
+                          semi-transparent hands and figures, keys moving with no one seated,
+                          the artist summoned at will ("zitieren", "summon").</desc>
+                    </category>
+                    <category xml:id="masters_at_home">
+                       <gloss>The great pianists in your home</gloss>
+                       <desc>The famous pianists can be heard in your own home or on your own
+                          piano, at any time, as often as you wish, at your command ("The
+                          Master's Fingers on Your Piano", concerts at home).</desc>
+                    </category>
+                    <category xml:id="effortless">
+                       <gloss>Effortless: no skill needed</gloss>
+                       <desc>The instrument needs no skill or effort: a button or a key starts
+                          it, it plays by itself, it is for those who cannot play.</desc>
+                    </category>
+                    <category xml:id="royal_patronage">
+                       <gloss>Royal and aristocratic patronage</gloss>
+                       <desc>Royalty, the nobility or the court appear as listeners, owners or
+                          patrons, including titles of purveyor to the court
+                          ("Hoflieferant").</desc>
                     </category>
                 </taxonomy>
             </classDecl>
@@ -194,6 +225,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
             <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
@@ -240,16 +272,16 @@
             <head><hi rendition="#c #b"> Welte- <lb />Mignon </hi></head>
         </div>
         <div facs="#eSc_textblock_8235fd10"><ab><hi rendition="#c">
-            <lb />bietet die Möglichkeit, das <hi rendition="#b">Originalspiel der</hi>
-            <lb /><hi rendition="#b">ersten Pianisten der Welt</hi>
-            <seg xml:id="topic_1" ana="#home" resp="#np" type="topic">
+            <lb />bietet die Möglichkeit, <seg xml:id="topic_3" ana="#faithful_reproduction" type="topic" resp="#claude">das <hi rendition="#b">Originalspiel der</hi>
+            <lb /><hi rendition="#b">ersten Pianisten der Welt</hi></seg>
+            <seg xml:id="topic_1" ana="#masters_at_home" resp="#claude" type="topic">
                 <hi rendition="#b">im eigenen</hi>
                 <lb /><hi rendition="#b">Heim</hi> zu hören.
             </seg></hi></ab>
         </div>
         <div facs="#eSc_textblock_77dbd8b9"><ab><hi rendition="#c">
             <lb />
-            <seg xml:id="topic_2" ana="#touch_of_a_button" resp="#np" type="topic">
+            <seg xml:id="topic_2" ana="#phantom_hands #masters_at_home #effortless" resp="#claude" type="topic">
                 Ein Druck auf den Knopf genügt, um einen 
                 <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>,
                 <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>,
@@ -259,8 +291,8 @@
             </seg></hi></ab>
         </div>
         <div facs="#eSc_textblock_5dbfb787">
-            <ab><lb /><hi rendition="#c #b"><hi rendition="#in"><hi rendition="#in"><hi rendition="#in"><orgName>M. Welte &amp; Söhne</orgName></hi></hi></hi></hi>
-            <lb /><hi rendition="#c">Hoflieferanten</hi>
+            <ab><lb /><seg xml:id="topic_4" ana="#royal_patronage" type="topic" resp="#claude"><hi rendition="#c #b"><hi rendition="#in"><hi rendition="#in"><hi rendition="#in"><orgName>M. Welte &amp; Söhne</orgName></hi></hi></hi></hi>
+            <lb /><hi rendition="#c">Hoflieferanten</hi></seg>
             <lb /><hi rendition="#c #b"><hi rendition="#in"><hi rendition="#larger">Freiburg i. Baden.</hi></hi></hi></ab>
         </div>
         <div facs="#eSc_textblock_8679924f">

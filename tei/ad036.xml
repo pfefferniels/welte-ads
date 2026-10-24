@@ -17,6 +17,10 @@
                         <forename>Niels</forename>
                     </persName>
                 </respStmt>
+                <respStmt>
+                    <resp>Annotation of topics</resp>
+                    <name xml:id="claude">Claude (AI model by Anthropic)</name>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>
@@ -122,11 +126,12 @@
                   scan, in part transcribed by hand. The advertisements published
                   outside Germany, the United Kingdom and the United States, and a
                   few from Germany, were transcribed from the scans, encoded, given
-                  their regions and annotated with topics by Claude, an AI model;
-                  their revision history says so. Until the editor has checked such
-                  an advertisement against the scan, <att>status</att> on its
-                  <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-                  advertisement is <val>checked</val>.</p>
+                  their regions by Claude, an AI model; their revision history says
+                  so. Until the editor has checked such an advertisement against the
+                  scan, <att>status</att> on its <gi>revisionDesc</gi> is
+                  <val>unchecked</val>; that of every other advertisement is
+                  <val>checked</val>. The topics of all advertisements were assigned
+                  by Claude.</p>
                <correction>
                   <p>Errors of the original are not corrected but marked with
                      <gi>sic</gi>.</p>
@@ -154,10 +159,15 @@
                      Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                      which describes them in a <gi>desc</gi>. Illustrations are
                      described in <gi>figure</gi>. Persons are linked to the GND with
-                     <att>corresp</att>. Recurring motifs are marked as topics with
-                     <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                     the taxonomy of topics; these are an interpretation, by whom
-                     <att>resp</att> says.</p>
+                     <att>corresp</att>. Recurring arguments and motifs are marked as
+                     topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                     pointing to the taxonomy of topics. The taxonomy was induced by
+                     Claude in four blind readings of all advertisements, each in a
+                     different order and without knowledge of the editor's earlier
+                     taxonomy, which it replaced in October 2026; it keeps the topics
+                     that at least three of the readings found. The topics are an
+                     interpretation, assigned by whom <att>resp</att> says, so far
+                     all by Claude; the editor has not yet checked them.</p>
                </interpretation>
                <stdVals>
                   <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -177,10 +187,29 @@
             </tagsDecl>
             <classDecl>
                 <taxonomy xml:id="topics">
-                    <desc>Topics: recurring motifs of the advertisements, in their texts
-                       and in their pictures</desc>
-                    <category xml:id="educational_use">
-                       <gloss>Educational Use</gloss>
+                    <desc>Topics: the recurring arguments and motifs of the advertisements,
+                       in their texts and in their pictures</desc>
+                    <category xml:id="superlatives">
+                       <gloss>Superlative perfection</gloss>
+                       <desc>The instrument is called perfect, the best, the finest, supreme or
+                          unsurpassed, or the culmination of a line of progress.</desc>
+                    </category>
+                    <category xml:id="education">
+                       <gloss>Education and study</gloss>
+                       <desc>The instrument serves learning and teaching: conservatories,
+                          students, studying an interpretation by repeating it.</desc>
+                    </category>
+                    <category xml:id="repertoire">
+                       <gloss>Breadth of repertoire</gloss>
+                       <desc>The range of music available: classics and dance music, jazz and
+                          opera, music for every mood and occasion, a library of thousands of
+                          rolls by hundreds of artists.</desc>
+                    </category>
+                    <category xml:id="within_reach">
+                       <gloss>Within everyone's reach</gloss>
+                       <desc>The instrument, or the music it plays, is accessible to all, its
+                          value exceeds its price. Prices and terms of payment themselves are
+                          not a topic.</desc>
                     </category>
                 </taxonomy>
             </classDecl>
@@ -191,6 +220,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
             <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
@@ -224,44 +254,44 @@
         <div facs="#eSc_textblock_4699b149">
             <ab><lb />
             <hi rendition="#c #b">
-                <hi rendition="#in"><hi rendition="#in">The <name type="brand">Welte-Mignon</name>
+                <seg xml:id="topic_2" ana="#education" type="topic" resp="#claude"><hi rendition="#in"><hi rendition="#in">The <name type="brand">Welte-Mignon</name>
                 <lb />Has a Faculty</hi></hi>
                 <lb />of
                 <num type="cardinal" subtype="artist-count" value="156">
                     One Hundred and Fifty-Six
                 </num>
-                <lb />Instructors in Piano Playing
+                <lb />Instructors in Piano Playing</seg>
             </hi></ab>
         </div>
         <div facs="#eSc_textblock_4402ea80">
-            <ab><seg xml:id="topic_1" ana="#educational_use" resp="#np" type="topic">
-                <lb />The <hi rendition="#uc"><name type="brand">Welte-Mignon</name></hi> can be likened to a college for teaching
-                <lb />the art of playing the piano.
+            <ab>
+                <lb /><seg xml:id="topic_3" ana="#education" type="topic" resp="#claude">The <hi rendition="#uc"><name type="brand">Welte-Mignon</name></hi> can be likened to a college for teaching
+                <lb />the art of playing the piano.</seg>
                 <lb />This college has a faculty of one hundred fifty-six instructors—the
                 <lb />leading pianists of this generation.
-                <lb />These master pianists have interpreted over five thousand different
-                <lb />pieces of the best musical literature of all ages of which each inter-
+                <lb /><seg xml:id="topic_4" ana="#repertoire" type="topic" resp="#claude">These master pianists have interpreted over five thousand different
+                <lb />pieces of the best musical literature of all ages</seg> <seg xml:id="topic_5" ana="#education" type="topic" resp="#claude">of which each inter-
                 <lb />pretation is an authoritative instruction in
                 <lb />the playing of that particular composition
                 <lb />—a final lesson in the art of finished piano
-                <lb />playing.
-                <lb />The <hi rendition="#uc"><name type="brand">Welte-Mignon</name></hi> is the means
+                <lb />playing.</seg>
+                <lb /><seg xml:id="topic_6" ana="#within_reach #education" type="topic" resp="#claude">The <hi rendition="#uc"><name type="brand">Welte-Mignon</name></hi> is the means
                 <lb />through which this great storehouse of cor-
                 <lb />rect and artistic piano playing is given to
-                <lb />the public—the student and layman, alike.
-                <lb />All of the great musical conservatories of
+                <lb />the public—the student and layman, alike.</seg>
+                <lb /><seg xml:id="topic_7" ana="#superlatives" type="topic" resp="#claude">All of the great musical conservatories of
                 <lb />the world, if taken together, could not com-
                 <lb />mand a faculty of such combined power
                 <lb />and genius as the faculty of piano inter-
                 <lb />pretation employed by the <hi rendition="#uc"><name type="brand">Welte-
-                <lb />Mignon</name></hi>.
+                <lb />Mignon</name></hi>.</seg>
                 <hi rendition="#smaller">
                 <lb />Nor can all the combined musical schools find it within
                 <lb />their means to render the great masterpieces of musical
                 <lb />literature with such authority as can the <hi rendition="#uc"><name type="brand">Welte-
                 <lb />Mignon</name></hi>.
                 </hi>
-            </seg></ab>
+            </ab>
         </div>
         <div facs="#eSc_textblock_eb8a51dd">
             <ab><hi rendition="#b">

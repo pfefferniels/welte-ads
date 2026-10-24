@@ -233,11 +233,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -265,10 +266,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -285,16 +291,44 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <category xml:id="the_artists_soul">
+             <gloss>The artist's soul</gloss>
+             <desc>The instrument is said to capture the soul, spirit, feeling or
+                inner life of the performer, a spiritual register beyond the
+                technical one of touch and nuance ("the living soul of the artist",
+                "Musikseele").</desc>
+          </category>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+          </category>
+          <category xml:id="epoch_making_invention">
+             <gloss>Epoch-making invention</gloss>
+             <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                the greatest of the age, a sensation, the newest thing.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
+          </category>
+          <category xml:id="repertoire">
+             <gloss>Breadth of repertoire</gloss>
+             <desc>The range of music available: classics and dance music, jazz and
+                opera, music for every mood and occasion, a library of thousands of
+                rolls by hundreds of artists.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -303,6 +337,7 @@
       <langUsage><language ident="es">Spanish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -329,20 +364,20 @@
   <text decls="#source_1">
     <body>
       <div facs="#zone_headline">
-        <head><hi rendition="#b #in"><lb/>Ya llegó el día de tener Música</hi></head>
+        <head><hi rendition="#b #in"><lb/><seg xml:id="topic_3" ana="#epoch_making_invention" type="topic" resp="#claude">Ya llegó el día de tener Música</seg></hi></head>
       </div>
       <div facs="#zone_headline2">
-        <head><hi rendition="#b #in #right"><lb/>eléctrica perfecta</hi></head>
+        <head><hi rendition="#b #in #right"><lb/><seg xml:id="topic_4" ana="#superlatives" type="topic" resp="#claude">eléctrica perfecta</seg></hi></head>
       </div>
       <div type="illustration" facs="#zone_portrait1">
         <figure><desc>Halftone portrait photograph of Ignacy Jan Paderewski; his name, barely legible, in the lower right corner</desc></figure>
       </div>
       <div facs="#zone_text1">
-        <p><lb/>En el mundo musical se ha re-
+        <p><lb/><seg xml:id="topic_5" ana="#world_renown #superlatives" type="topic" resp="#claude">En el mundo musical se ha re-
           <lb/>movido una gran admiración acer-
           <lb/>ca de la perfección que han ob-
           <lb/>tenido los fabricantes de los pia-
-          <lb/>nos eléctricos</p>
+          <lb/>nos eléctricos</seg></p>
       </div>
       <div facs="#zone_text2">
         <ab><hi rendition="#b #larger #u"><lb/><orgName>R. S. Howard</orgName>
@@ -352,7 +387,7 @@
         <ab><hi rendition="#b #in #u"><lb/><name type="brand">Auto de Luxe</name>
           <lb/><name type="brand">Welte Mignon</name></hi></ab>
         <p><lb/>que constituye una verdadera obra
-          <lb/>artística porque <seg xml:id="topic_1" ana="#exact_reproduction" type="topic" resp="#claude">interpreta, con la
+          <lb/>artística porque <seg xml:id="topic_1" ana="#faithful_reproduction #the_artists_soul" type="topic" resp="#claude">interpreta, con la
           <lb/>mayor exactitud y alma, la músi-
           <lb/>ca de los grandes pianistas</seg>, tales</p>
       </div>
@@ -365,13 +400,13 @@
       <div facs="#zone_text4">
         <p><lb/><persName type="artist" corresp="https://d-nb.info/gnd/116327642">Gabrilowitsch</persName> y otros, por lo que
           <lb/>queda comprobado que actual-
-          <lb/>mente tenemos <seg xml:id="topic_2" ana="#superiority" type="topic" resp="#claude">la música eléctri-
+          <lb/>mente tenemos <seg xml:id="topic_2" ana="#superlatives" type="topic" resp="#claude">la música eléctri-
           <lb/>ca más perfecta del mundo</seg>.</p>
-        <p><lb/>Todas las revistas musicales de
+        <p><lb/><seg xml:id="topic_6" ana="#world_renown #superlatives" type="topic" resp="#claude">Todas las revistas musicales de
           <lb/>los Estados Unidos han dedicado
           <lb/>extensas páginas que tratan sobre
           <lb/>la perfección de estos instrumen-
-          <lb/>tos.</p>
+          <lb/>tos.</seg></p>
         <p><lb/>Queda el lector invitado a ha-
           <lb/>cer una visita a la exhibición de
           <lb/>los mismos, donde será merecida-</p>
@@ -394,9 +429,9 @@
         <p><lb/>Y en cuanto al archivo, no hay</p>
       </div>
       <div facs="#zone_text6">
-        <p><lb/>para qué decir que es extensísi
+        <p><lb/><seg xml:id="topic_7" ana="#repertoire" type="topic" resp="#claude">para qué decir que es extensísi
           <lb/>mo. Todo lo mejor que se ha es
-          <lb/>crito en música, aquí se encuentra</p>
+          <lb/>crito en música, aquí se encuentra</seg></p>
       </div>
       <div type="illustration" facs="#zone_portrait4">
         <figure><desc>Portrait drawing of a young man with dark wavy hair, not named; monogram "S" in the lower right corner</desc></figure>

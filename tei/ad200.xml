@@ -114,11 +114,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -146,10 +147,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -165,10 +171,40 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
+          </category>
+          <category xml:id="effortless">
+             <gloss>Effortless: no skill needed</gloss>
+             <desc>The instrument needs no skill or effort: a button or a key starts
+                it, it plays by itself, it is for those who cannot play.</desc>
+          </category>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+          </category>
+          <category xml:id="composers_own_works">
+             <gloss>Composers play their own works</gloss>
+             <desc>The ad stresses that composers themselves recorded, or are heard
+                playing, their own compositions.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
+          </category>
+          <category xml:id="unique_and_superior">
+             <gloss>Unique and superior to rivals</gloss>
+             <desc>The instrument is "the only one", the standard for all others, it
+                surpasses its rivals or has nothing in common with them, or the
+                reader is warned against cheap or unknown makes.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -177,6 +213,7 @@
       <langUsage><language ident="ca">Catalan</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -202,16 +239,16 @@
       </div>
       <div facs="#zone_intro">
         <p><lb/>Audició extraordinaria per avui, divendres,
-          <lb/>3 d'abril, a les sis de la tarde, amb els meravello-
-          <lb/>sos aparells d'aquesta casa, <seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">únics considera<unclear>ts</unclear>
+          <lb/>3 d'abril, a les sis de la tarde, amb <seg xml:id="topic_2" ana="#wonder" type="topic" resp="#claude">els meravello-
+          <lb/>sos aparells d'aquesta casa</seg>, <seg xml:id="topic_1" ana="#superlatives #unique_and_superior #world_renown" type="topic" resp="#claude">únics considera<unclear>ts</unclear>
           <lb/>universalment els millors del món</seg>.</p>
       </div>
       <div facs="#zone_programme_mignon">
         <head><hi rendition="#c #b"><lb/>PROGRAMA
           <lb/><name type="brand">Welte Mignon</name></hi></head>
-        <p><lb/>Executant, completament automàtic, les com-
+        <p><lb/><seg xml:id="topic_3" ana="#effortless" type="topic" resp="#claude">Executant, completament automàtic,</seg> <seg xml:id="topic_4" ana="#composers_own_works" type="topic" resp="#claude">les com-
           <lb/>posicions impressionades pels autors i pianist<unclear>es</unclear>
-          <lb/>més cèlebr<unclear>e</unclear>s.</p>
+          <lb/>més cèlebr<unclear>e</unclear>s.</seg></p>
         <list>
           <item><lb/>«Evocación» (Iberia). . . . . . . . <hi rendition="#b"><persName type="composer" corresp="https://d-nb.info/gnd/119183366">ALBENIZ</persName></hi></item>
           <item><lb/>«La vega» (Alhambra). . . . . . . . . »</item>
@@ -241,7 +278,7 @@
             </list>
           </item>
         </list>
-        <p><hi rendition="#c"><lb/>(Executat per son autor)</hi></p>
+        <p><hi rendition="#c"><lb/>(<seg xml:id="topic_5" ana="#composers_own_works" type="topic" resp="#claude">Executat per son autor</seg>)</hi></p>
       </div>
       <div facs="#zone_entry">
         <p><lb/>Entrada per invitació rigurosa.</p>

@@ -114,11 +114,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -146,10 +147,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -168,44 +174,86 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="analogy_to_photography">
-             <gloss>Analogy to Photography</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <category xml:id="touch_and_individuality">
+             <gloss>Touch, nuance and individuality</gloss>
+             <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                pedalling, dynamics, tempo, shading, tone colour, or the
+                individuality and characteristic style of each pianist.</desc>
           </category>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <category xml:id="illusion_of_presence">
+             <gloss>Illusion of presence</gloss>
+             <desc>The listener feels that the artist is present or seated at the
+                instrument ("as if he sat at your piano", "close your eyes"), or
+                cannot tell the reproduction from the live artist.</desc>
           </category>
-          <category xml:id="immediate_recognizability">
-             <gloss>Immediate Recognizability</gloss>
+          <category xml:id="artists_hear_themselves">
+             <gloss>Artists hear themselves</gloss>
+             <desc>The artists vouch for their own recordings: they hear or recognise
+                their own playing, are deceived by it, sign the rolls as
+                autographs, or a demonstration proves that each pianist can be
+                recognised.</desc>
           </category>
           <category xml:id="immortality">
-             <gloss>Immortality</gloss>
-             <desc>This topic emphasizes the perdurance of the reproductions and
-                how thus the recording artists become immortal.</desc>
+             <gloss>Immortality and posterity</gloss>
+             <desc>The playing is preserved for ever or for future generations; the
+                artists become immortal, and dead artists still play.</desc>
           </category>
-          <category xml:id="phantom_body">
-             <gloss>Phantom Body</gloss>
+          <category xml:id="phantom_hands">
+             <gloss>Phantom hands</gloss>
+             <desc>The absent performer appears as a phantom or spirit: ghostly or
+                semi-transparent hands and figures, keys moving with no one seated,
+                the artist summoned at will ("zitieren", "summon").</desc>
           </category>
-          <category xml:id="secret">
-             <gloss>Secret</gloss>
-             <desc>Perfect reproduction and its manufacturing is a secret
-                possessed only by the Welte-Mignon company.</desc>
+          <category xml:id="hearing_is_believing">
+             <gloss>Hearing is believing</gloss>
+             <desc>The reader is challenged to verify the claims by listening,
+                comparing or testing ("must be heard to be believed", "hear it in
+                comparison"). A bare invitation to a demonstration does not count.</desc>
           </category>
-          <category xml:id="touch_of_a_button">
-             <gloss>Touch of a Button</gloss>
-             <desc>The Welte-Mignon is permanently available and "objectified"
-                for the entertainment of the owner – on the touch of a
-                button.</desc>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
           </category>
-          <category xml:id="virtual_presence">
-             <gloss>Virtual Presence</gloss>
+          <category xml:id="domestic_comfort">
+             <gloss>Domestic comfort and intimacy</gloss>
+             <desc>A private, comfortable scene: the fireside, an armchair, lamplight,
+                the family gathered, a quiet evening, in the text or in the
+                picture.</desc>
+          </category>
+          <category xml:id="entertaining_guests">
+             <gloss>Entertaining guests</gloss>
+             <desc>The instrument serves sociability: the hostess, guests, dinners,
+                dancing, social functions; pictures of company gathered around it.</desc>
+          </category>
+          <category xml:id="testimonials">
+             <gloss>Testimonials of famous musicians</gloss>
+             <desc>A named musician or other notable person is quoted or paraphrased
+                in praise of the instrument.</desc>
+          </category>
+          <category xml:id="unique_and_superior">
+             <gloss>Unique and superior to rivals</gloss>
+             <desc>The instrument is "the only one", the standard for all others, it
+                surpasses its rivals or has nothing in common with them, or the
+                reader is warned against cheap or unknown makes.</desc>
+          </category>
+          <category xml:id="how_it_works">
+             <gloss>How it works</gloss>
+             <desc>The ad explains or shows the technology: the recording process, the
+                pneumatic or electric mechanism, the roll, the drive from a light
+                socket, or it likens the recording to photography or the
+                phonograph. A product label such as "electric reproducing piano"
+                alone does not count.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -214,6 +262,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -236,16 +285,16 @@
   <text decls="#source_1">
     <body>
       <div type="illustration" facs="#zone_picture">
-        <figure><desc>Drawing of a drawing room: a grand piano with a lamp on it, and two women and a man listening from a sofa</desc></figure>
+        <figure xml:id="figure_1" ana="#domestic_comfort #entertaining_guests" resp="#claude"><desc>Drawing of a drawing room: a grand piano with a lamp on it, and two women and a man listening from a sofa</desc></figure>
       </div>
       <div facs="#zone_headline">
-        <head><hi rendition="#b #in"><lb/><seg xml:id="topic_1" ana="#virtual_presence" type="topic" resp="#claude">A Concert
+        <head><hi rendition="#b #in"><lb/><seg xml:id="topic_1" ana="#masters_at_home" type="topic" resp="#claude">A Concert
           <lb/>By Living Pianists
           <lb/>In Your Home</seg></hi></head>
       </div>
       <div facs="#zone_text">
-        <p><hi rendition="#larger"><lb/><seg xml:id="topic_2" ana="#home" type="topic" resp="#claude">In the privacy and comfort of your home with your
-          <lb/>intimate friends around</seg>, <seg xml:id="topic_3" ana="#touch_of_a_button" type="topic" resp="#claude">you can summon in an in-
+        <p><hi rendition="#larger"><lb/><seg xml:id="topic_2" ana="#domestic_comfort #entertaining_guests" type="topic" resp="#claude">In the privacy and comfort of your home with your
+          <lb/>intimate friends around</seg>, <seg xml:id="topic_3" ana="#phantom_hands #masters_at_home" type="topic" resp="#claude">you can summon in an in-
           <lb/>stant the Master Pianists of the World</seg> to reveal for
           <lb/>you and your guests the grandeur and beauty of the
           <lb/>music of the Great Composers.</hi></p>
@@ -257,26 +306,26 @@
       </div>
       <div facs="#zone_text2">
         <p><lb/>The <name type="brand">LAFFARGUE Welte</name> Reproducer
-          <lb/>will give you <seg xml:id="topic_4" ana="#exact_reproduction" type="topic" resp="#claude">flawless reproductions of
+          <lb/>will give you <seg xml:id="topic_4" ana="#faithful_reproduction #touch_and_individuality" type="topic" resp="#claude">flawless reproductions of
           <lb/>the playing of the greatest pianoforte
           <lb/>geniuses—not an approximately cor-
           <lb/>rect interpretation, but a faultless
-          <lb/>personal performance</seg>, <seg xml:id="topic_5" ana="#immediate_recognizability" type="topic" resp="#claude">so vivid, so real,
+          <lb/>personal performance</seg>, <seg xml:id="topic_5" ana="#artists_hear_themselves #illusion_of_presence" type="topic" resp="#claude">so vivid, so real,
           <lb/>that it deceives even the great artists
           <lb/>themselves</seg>.</p>
       </div>
       <div facs="#zone_text3">
-        <p><lb/>The original playing is <seg xml:id="topic_6" ana="#analogy_to_photography" type="topic" resp="#claude">recorded by a
-          <lb/>special Photographic process</seg>, <seg xml:id="topic_7" ana="#secret" type="topic" resp="#claude">which
+        <p><lb/>The original playing is <seg xml:id="topic_6" ana="#how_it_works" type="topic" resp="#claude">recorded by a
+          <lb/>special Photographic process</seg>, <seg xml:id="topic_7" ana="#unique_and_superior" type="topic" resp="#claude">which
           <lb/>only the <name type="brand">Welte</name> possesses—there is no
           <lb/>other Reproducer like it</seg>.</p>
-        <p><lb/>Once you hear this glorious instrument
-          <lb/>you will understand what the great <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De
-          <lb/>Pachmann</persName> meant when he said,
+        <p><lb/><seg xml:id="topic_10" ana="#hearing_is_believing" type="topic" resp="#claude">Once you hear this glorious instrument
+          <lb/>you will understand</seg> what <seg xml:id="topic_11" ana="#testimonials" type="topic" resp="#claude">the great <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De
+          <lb/>Pachmann</persName></seg> meant when he said,
           <lb/><quote type="testimonial">“<seg xml:id="topic_8" ana="#immortality" type="topic" resp="#claude">Through you I live for ever.</seg>”</quote></p>
       </div>
       <div facs="#zone_fingers">
-        <ab><hi rendition="#b #in"><lb/><seg xml:id="topic_9" ana="#phantom_body" type="topic" resp="#claude">The
+        <ab><hi rendition="#b #in"><lb/><seg xml:id="topic_9" ana="#masters_at_home" type="topic" resp="#claude">The
           <lb/>Master's
           <lb/>Fingers
           <lb/>On

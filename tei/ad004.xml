@@ -18,6 +18,10 @@
                         <forename>Niels</forename>
                     </persName>
                 </respStmt>
+                <respStmt>
+                    <resp>Annotation of topics</resp>
+                    <name xml:id="claude">Claude (AI model by Anthropic)</name>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>
@@ -123,11 +127,12 @@
                   scan, in part transcribed by hand. The advertisements published
                   outside Germany, the United Kingdom and the United States, and a
                   few from Germany, were transcribed from the scans, encoded, given
-                  their regions and annotated with topics by Claude, an AI model;
-                  their revision history says so. Until the editor has checked such
-                  an advertisement against the scan, <att>status</att> on its
-                  <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-                  advertisement is <val>checked</val>.</p>
+                  their regions by Claude, an AI model; their revision history says
+                  so. Until the editor has checked such an advertisement against the
+                  scan, <att>status</att> on its <gi>revisionDesc</gi> is
+                  <val>unchecked</val>; that of every other advertisement is
+                  <val>checked</val>. The topics of all advertisements were assigned
+                  by Claude.</p>
                <correction>
                   <p>Errors of the original are not corrected but marked with
                      <gi>sic</gi>.</p>
@@ -155,10 +160,15 @@
                      Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                      which describes them in a <gi>desc</gi>. Illustrations are
                      described in <gi>figure</gi>. Persons are linked to the GND with
-                     <att>corresp</att>. Recurring motifs are marked as topics with
-                     <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                     the taxonomy of topics; these are an interpretation, by whom
-                     <att>resp</att> says.</p>
+                     <att>corresp</att>. Recurring arguments and motifs are marked as
+                     topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                     pointing to the taxonomy of topics. The taxonomy was induced by
+                     Claude in four blind readings of all advertisements, each in a
+                     different order and without knowledge of the editor's earlier
+                     taxonomy, which it replaced in October 2026; it keeps the topics
+                     that at least three of the readings found. The topics are an
+                     interpretation, assigned by whom <att>resp</att> says, so far
+                     all by Claude; the editor has not yet checked them.</p>
                </interpretation>
                <stdVals>
                   <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -174,13 +184,43 @@
             </tagsDecl>
             <classDecl>
                 <taxonomy xml:id="topics">
-                    <desc>Topics: recurring motifs of the advertisements, in their texts
-                       and in their pictures</desc>
-                    <category xml:id="exact_reproduction">
-                       <gloss>Exact Reproduction</gloss>
-                       <desc>In virtually all promotional materials between 1905 and 1926,
-                          the claim of exact and faithful reproduction, of absolute
-                          accurateness is consistently emphasized.</desc>
+                    <desc>Topics: the recurring arguments and motifs of the advertisements,
+                       in their texts and in their pictures</desc>
+                    <category xml:id="faithful_reproduction">
+                       <gloss>Faithful reproduction</gloss>
+                       <desc>The ad claims that the playing of the artist is reproduced exactly,
+                          faithfully, naturally or completely, as "the actual playing" of the
+                          pianist. A bare "reproduces the playing of …" without such a
+                          qualifier does not count.</desc>
+                    </category>
+                    <category xml:id="touch_and_individuality">
+                       <gloss>Touch, nuance and individuality</gloss>
+                       <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                          pedalling, dynamics, tempo, shading, tone colour, or the
+                          individuality and characteristic style of each pianist.</desc>
+                    </category>
+                    <category xml:id="immortality">
+                       <gloss>Immortality and posterity</gloss>
+                       <desc>The playing is preserved for ever or for future generations; the
+                          artists become immortal, and dead artists still play.</desc>
+                    </category>
+                    <category xml:id="world_renown">
+                       <gloss>World renown and recognition</gloss>
+                       <desc>The instrument is famous and admired throughout the world,
+                          acclaimed by all great artists, critics or the press, adopted by
+                          conservatories and other institutions, or decorated with medals and
+                          prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+                    </category>
+                    <category xml:id="the_original">
+                       <gloss>The original</gloss>
+                       <desc>The Welte-Mignon is the original or the first reproducing piano,
+                          protected by the original patents; the history of the Welte firm
+                          and its founders guarantees it.</desc>
+                    </category>
+                    <category xml:id="quality">
+                       <gloss>Quality and durability</gloss>
+                       <desc>The instrument is reliable, well built and lasting, proven in use
+                          and in every climate, guaranteed.</desc>
                     </category>
                 </taxonomy>
             </classDecl>
@@ -191,6 +231,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
             <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
@@ -253,7 +294,7 @@
         </div>
         <div facs="#zone_caption_reisenauer">
             <ab><lb />
-            <persName type="artist" corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName> †</ab>
+            <seg xml:id="topic_2" ana="#immortality" type="topic" resp="#claude"><persName type="artist" corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName> †</seg></ab>
         </div>
         <div facs="#eSc_textblock_851a1f28"><head><hi rendition="#c">
             <lb />
@@ -263,19 +304,19 @@
             </hi></head>
             <ab><hi rendition="#c"><lb /><hi rendition="#b"><hi rendition="#larger">REPRODUKTIONS-PIANO
             und -FLÜGEL</hi></hi> <lb />
-            <seg xml:id="topic_1" ana="#exact_reproduction" resp="#np" type="topic">
+            <seg xml:id="topic_1" ana="#faithful_reproduction" resp="#claude" type="topic">
                 Getreue Wiedergabe des Spiels berühmter Klavier-Virtuosen.
             </seg></hi></ab>
         </div>
         <div facs="#eSc_textblock_5f4c4dd1"><ab><hi rendition="#c">
-            <lb /><hi rendition="#in"><hi rendition="#in"><hi rendition="#larger">Welte-Philharmonie-Orgel</hi></hi></hi><lb /><hi rendition="#b">für Privat-Salons,<lb />das individuelle Spiel
-            erster Orgel-Virtuosen wiedergebend.</hi></hi></ab>
+            <lb /><hi rendition="#in"><hi rendition="#in"><hi rendition="#larger">Welte-Philharmonie-Orgel</hi></hi></hi><lb /><hi rendition="#b">für Privat-Salons,<lb /><seg xml:id="topic_3" ana="#touch_and_individuality" type="topic" resp="#claude">das individuelle Spiel
+            erster Orgel-Virtuosen wiedergebend.</seg></hi></hi></ab>
         </div>
         <div facs="#eSc_textblock_1a33dd7c"><ab><hi rendition="#c">
             <lb /><hi rendition="#b"><hi rendition="#in"><hi rendition="#in"><hi rendition="#in"><orgName>M. Welte &amp; Söhne G.m.b.H.</orgName></hi></hi></hi></hi>
-            <lb />Gegründet 1832.<lb /><hi rendition="#in"><hi rendition="#in">Freiburg in Baden.</hi></hi>
-            <lb />Vertreten an allen grösseren Plätzen der Welt. Erprobt in jedem Klima.
-            <lb />Höchste Auszeichnungen auf allen Weltausstellungen.
+            <lb /><seg xml:id="topic_4" ana="#the_original" type="topic" resp="#claude">Gegründet 1832.</seg><lb /><hi rendition="#in"><hi rendition="#in">Freiburg in Baden.</hi></hi>
+            <lb />Vertreten an allen grösseren Plätzen der Welt. <seg xml:id="topic_5" ana="#quality" type="topic" resp="#claude">Erprobt in jedem Klima.</seg>
+            <lb /><seg xml:id="topic_6" ana="#world_renown" type="topic" resp="#claude">Höchste Auszeichnungen auf allen Weltausstellungen.</seg>
             <lb /><hi rendition="#in"><hi rendition="#larger">Ausstellung zur Messe</hi></hi> bei <hi rendition="#b"><hi rendition="#in"><hi rendition="#larger"><orgName>Hug &amp; Co.</orgName>,</hi></hi></hi>
             <hi rendition="#larger">Markgrafenstr.10.</hi></hi></ab>
         </div>

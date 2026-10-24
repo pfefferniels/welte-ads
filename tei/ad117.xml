@@ -110,11 +110,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -142,10 +143,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -160,28 +166,79 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <category xml:id="touch_and_individuality">
+             <gloss>Touch, nuance and individuality</gloss>
+             <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                pedalling, dynamics, tempo, shading, tone colour, or the
+                individuality and characteristic style of each pianist.</desc>
           </category>
-          <category xml:id="immediate_recognizability">
-             <gloss>Immediate Recognizability</gloss>
+          <category xml:id="illusion_of_presence">
+             <gloss>Illusion of presence</gloss>
+             <desc>The listener feels that the artist is present or seated at the
+                instrument ("as if he sat at your piano", "close your eyes"), or
+                cannot tell the reproduction from the live artist.</desc>
           </category>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <category xml:id="artists_hear_themselves">
+             <gloss>Artists hear themselves</gloss>
+             <desc>The artists vouch for their own recordings: they hear or recognise
+                their own playing, are deceived by it, sign the rolls as
+                autographs, or a demonstration proves that each pianist can be
+                recognised.</desc>
           </category>
-          <category xml:id="technical_invention">
-             <gloss>Technical Invention</gloss>
+          <category xml:id="hearing_is_believing">
+             <gloss>Hearing is believing</gloss>
+             <desc>The reader is challenged to verify the claims by listening,
+                comparing or testing ("must be heard to be believed", "hear it in
+                comparison"). A bare invitation to a demonstration does not count.</desc>
           </category>
-          <category xml:id="virtual_presence">
-             <gloss>Virtual Presence</gloss>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
+          </category>
+          <category xml:id="testimonials">
+             <gloss>Testimonials of famous musicians</gloss>
+             <desc>A named musician or other notable person is quoted or paraphrased
+                in praise of the instrument.</desc>
+          </category>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+          </category>
+          <category xml:id="satisfied_owners">
+             <gloss>Satisfied owners</gloss>
+             <desc>Ordinary owners, named or anonymous, or the number of owners vouch
+                for the instrument.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
+          </category>
+          <category xml:id="the_original">
+             <gloss>The original</gloss>
+             <desc>The Welte-Mignon is the original or the first reproducing piano,
+                protected by the original patents; the history of the Welte firm
+                and its founders guarantees it.</desc>
+          </category>
+          <category xml:id="within_reach">
+             <gloss>Within everyone's reach</gloss>
+             <desc>The instrument, or the music it plays, is accessible to all, its
+                value exceeds its price. Prices and terms of payment themselves are
+                not a topic.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -190,6 +247,7 @@
       <langUsage><language ident="es">Spanish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -218,75 +276,75 @@
     <body>
       <div facs="#zone_headline">
         <head><hi rendition="#c #in"><lb/>El por qué los pianos reproductores “<name type="brand">WELTE MIGNON</name>”
-          <lb/>han sido, son y serán los preferidos por todos los amantes
-          <lb/>del gran arte</hi></head>
+          <lb/><seg xml:id="topic_8" ana="#world_renown" type="topic" resp="#claude">han sido, son y serán los preferidos por todos los amantes
+          <lb/>del gran arte</seg></hi></head>
       </div>
       <div type="illustration" facs="#zone_medal_left">
-        <figure><desc>Medal with a seated female harpist; the legend (a German exhibition medal, "…INSTRUMENTEN…") is illegible</desc></figure>
+        <figure xml:id="figure_1" ana="#world_renown" resp="#claude"><desc>Medal with a seated female harpist; the legend (a German exhibition medal, "…INSTRUMENTEN…") is illegible</desc></figure>
       </div>
       <div type="illustration" facs="#zone_carreno">
-        <figure><desc>Portrait drawing of Teresa Carreño</desc></figure>
+        <figure xml:id="figure_2" ana="#testimonials" resp="#claude"><desc>Portrait drawing of Teresa Carreño</desc></figure>
         <ab><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreño</persName></ab>
       </div>
       <div type="illustration" facs="#zone_hofmann">
-        <figure><desc>Portrait drawing of Josef Hofmann</desc></figure>
+        <figure xml:id="figure_3" ana="#testimonials" resp="#claude"><desc>Portrait drawing of Josef Hofmann</desc></figure>
         <ab><lb/><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName></ab>
       </div>
       <div type="illustration" facs="#zone_leoncavallo">
-        <figure><desc>Portrait drawing of Ruggero Leoncavallo</desc></figure>
+        <figure xml:id="figure_4" ana="#testimonials" resp="#claude"><desc>Portrait drawing of Ruggero Leoncavallo</desc></figure>
         <ab><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118779559">Leoncavallo</persName></ab>
       </div>
       <div facs="#zone_text">
-        <p><lb/>La <orgName>WELTE MIGNON CO.</orgName> fué la primera fábrica en el
+        <p><lb/>La <orgName>WELTE MIGNON CO.</orgName> <seg xml:id="topic_9" ana="#the_original" type="topic" resp="#claude">fué la primera fábrica en el
           <lb/>mundo que construyó y construye pianos REPRODUCTO-
-          <lb/>RES, por cuya razón <seg xml:id="topic_1" ana="#technical_invention" type="topic" resp="#claude">conserva en su poder las patentes de
+          <lb/>RES</seg>, por cuya razón <seg xml:id="topic_1" ana="#the_original" type="topic" resp="#claude">conserva en su poder las patentes de
           <lb/>registros de expresión en los pianos Reproductores</seg>.</p>
-        <p><lb/>La <orgName>WELTE MIGNON CO.</orgName> <seg xml:id="topic_2" ana="#superiority" type="topic" resp="#claude">ha sido premiada en todas
+        <p><lb/>La <orgName>WELTE MIGNON CO.</orgName> <seg xml:id="topic_2" ana="#world_renown #superlatives" type="topic" resp="#claude">ha sido premiada en todas
           <lb/>las Exposiciones Internacionales con Medallas de Oro, y ha
           <lb/>obtenido la más alta calificación entre distintos fabricantes
           <lb/>de pianos</seg>.</p>
-        <p><lb/>Los más competentes Críticos, los más notables Artistas,
-          <lb/>reconocen en el piano REPRODUCTOR “<name type="brand">WELTE MIGNON</name>”
-          <lb/><seg xml:id="topic_3" ana="#exact_reproduction" type="topic" resp="#claude">el más fiel y exacto intérprete</seg>, como lo demuestran las decla-
+        <p><lb/><seg xml:id="topic_10" ana="#world_renown" type="topic" resp="#claude">Los más competentes Críticos, los más notables Artistas,
+          <lb/>reconocen en el piano REPRODUCTOR “<name type="brand">WELTE MIGNON</name>”</seg>
+          <lb/><seg xml:id="topic_3" ana="#faithful_reproduction #superlatives" type="topic" resp="#claude">el más fiel y exacto intérprete</seg>, como lo demuestran las decla-
           <lb/>raciones hechas a la <orgName>WELTE MIGNON CO</orgName>, por conocidos y
-          <lb/>notables Pianistas, entre ellos el célebre <persName type="artist" corresp="https://d-nb.info/gnd/116308621">RAOUL PUGNO</persName>, de
-          <lb/>cuyo testimonio insertamos parte a continuación:</p>
+          <lb/>notables Pianistas, entre ellos <seg xml:id="topic_11" ana="#testimonials" type="topic" resp="#claude">el célebre <persName type="artist" corresp="https://d-nb.info/gnd/116308621">RAOUL PUGNO</persName>, de
+          <lb/>cuyo testimonio insertamos parte a continuación:</seg></p>
       </div>
       <div facs="#zone_testimonial">
         <p><quote type="testimonial"><lb/>“Me siento <sic>impedido</sic> a escribir a ustedes cuán deleitado
           <lb/>estaba yo con el “<name type="brand">WELTE MIGNON</name>” al oir reproducir el
           <lb/>“NOCTURNO” de <persName type="composer" corresp="https://d-nb.info/gnd/118520539">CHOPIN</persName> y su “POLONAISE Op. 23”. Es
-          <lb/>ciertamente la primera vez que <seg xml:id="topic_4" ana="#immediate_recognizability" type="topic" resp="#claude">puedo decir que me he oído a mí
+          <lb/>ciertamente la primera vez que <seg xml:id="topic_4" ana="#artists_hear_themselves" type="topic" resp="#claude">puedo decir que me he oído a mí
           <lb/>mismo, pues sentí que todo emanaba de mí</seg>”.</quote></p>
       </div>
       <div facs="#zone_text2">
-        <p><lb/>A igual que la opinión del gran <persName type="artist" corresp="https://d-nb.info/gnd/116308621">PUGNO</persName> es la de otros cé-
-          <lb/>lebres Artistas cuyos nombres aparecen al margen.</p>
+        <p><lb/>A igual que la opinión del gran <persName type="artist" corresp="https://d-nb.info/gnd/116308621">PUGNO</persName> <seg xml:id="topic_12" ana="#testimonials #world_renown" type="topic" resp="#claude">es la de otros cé-
+          <lb/>lebres Artistas cuyos nombres aparecen al margen</seg>.</p>
         <p><lb/>El piano Reproductor “<name type="brand">WELTE MIGNON</name>” ha hecho
-          <lb/>posible <seg xml:id="topic_5" ana="#home" type="topic" resp="#claude">llevar a todos los hogares</seg> y en cualquier país, <seg xml:id="topic_6" ana="#exact_reproduction" type="topic" resp="#claude">el exac-
-          <lb/>to modo de tocar de los más célebres Artistas</seg>; usted los oirá
+          <lb/>posible <seg xml:id="topic_5" ana="#masters_at_home #within_reach" type="topic" resp="#claude">llevar a todos los hogares</seg> y en cualquier país, <seg xml:id="topic_6" ana="#faithful_reproduction" type="topic" resp="#claude">el exac-
+          <lb/>to modo de tocar de los más célebres Artistas</seg>; <seg xml:id="topic_13" ana="#touch_and_individuality" type="topic" resp="#claude">usted los oirá
           <lb/>tocar con todos sus detalles y escuchará cada una de sus fra-
-          <lb/>ses; su propia nota, <seg xml:id="topic_7" ana="#virtual_presence" type="topic" resp="#claude">tal como si él estuviese presente, ejecutan-
+          <lb/>ses; su propia nota</seg>, <seg xml:id="topic_7" ana="#illusion_of_presence" type="topic" resp="#claude">tal como si él estuviese presente, ejecutan-
           <lb/>do su poderío para usted</seg>.</p>
         <p><lb/>Usted puede comprarlo, en su próxima salida, visite el
           <lb/>QUINTO PISO del “Edificio Stowers” en SAN RAFAEL No.
-          <lb/>29, Habana, y después de oir el Reproductor “<name type="brand">WELTE MIG-
+          <lb/>29, Habana, y <seg xml:id="topic_14" ana="#hearing_is_believing #satisfied_owners" type="topic" resp="#claude">después de oir el Reproductor “<name type="brand">WELTE MIG-
           <lb/>NON</name>”, su opinión será igual que las de millares de personas
-          <lb/>que los poseen y han oído.</p>
+          <lb/>que los poseen y han oído</seg>.</p>
       </div>
       <div type="illustration" facs="#zone_medal_right">
-        <figure><desc>Medal inscribed "EXPOSITION UNIVERSELLE DE MDCCCLXVII A PARIS" (partly legible), "WELTE &amp; FILS", "RECOMPENSES"</desc></figure>
+        <figure xml:id="figure_5" ana="#world_renown" resp="#claude"><desc>Medal inscribed "EXPOSITION UNIVERSELLE DE MDCCCLXVII A PARIS" (partly legible), "WELTE &amp; FILS", "RECOMPENSES"</desc></figure>
       </div>
       <div type="illustration" facs="#zone_liszt">
-        <figure><desc>Portrait drawing of Franz Liszt</desc></figure>
+        <figure xml:id="figure_6" ana="#testimonials" resp="#claude"><desc>Portrait drawing of Franz Liszt</desc></figure>
         <ab><lb/><persName corresp="https://d-nb.info/gnd/118573527">Liszt</persName></ab>
       </div>
       <div type="illustration" facs="#zone_gabrilowitsch">
-        <figure><desc>Portrait drawing of Ossip Gabrilowitsch</desc></figure>
+        <figure xml:id="figure_7" ana="#testimonials" resp="#claude"><desc>Portrait drawing of Ossip Gabrilowitsch</desc></figure>
         <ab><lb/><persName type="artist" corresp="https://d-nb.info/gnd/116327642">Gabrilowitsch</persName></ab>
       </div>
       <div type="illustration" facs="#zone_busoni">
-        <figure><desc>Portrait drawing of Ferruccio Busoni</desc></figure>
+        <figure xml:id="figure_8" ana="#testimonials" resp="#claude"><desc>Portrait drawing of Ferruccio Busoni</desc></figure>
         <ab><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName></ab>
       </div>
       <div facs="#zone_signature">

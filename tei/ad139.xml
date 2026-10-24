@@ -239,11 +239,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -271,10 +272,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -290,22 +296,46 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="educational_use">
-             <gloss>Educational Use</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="the_artists_soul">
+             <gloss>The artist's soul</gloss>
+             <desc>The instrument is said to capture the soul, spirit, feeling or
+                inner life of the performer, a spiritual register beyond the
+                technical one of touch and nuance ("the living soul of the artist",
+                "Musikseele").</desc>
           </category>
-          <category xml:id="immediate_recognizability">
-             <gloss>Immediate Recognizability</gloss>
+          <category xml:id="illusion_of_presence">
+             <gloss>Illusion of presence</gloss>
+             <desc>The listener feels that the artist is present or seated at the
+                instrument ("as if he sat at your piano", "close your eyes"), or
+                cannot tell the reproduction from the live artist.</desc>
           </category>
-          <category xml:id="miracle">
-             <gloss>Miracle</gloss>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
           </category>
-          <category xml:id="soulfulness">
-             <gloss>Soulfulness</gloss>
+          <category xml:id="phantom_hands">
+             <gloss>Phantom hands</gloss>
+             <desc>The absent performer appears as a phantom or spirit: ghostly or
+                semi-transparent hands and figures, keys moving with no one seated,
+                the artist summoned at will ("zitieren", "summon").</desc>
           </category>
-          <category xml:id="technical_invention">
-             <gloss>Technical Invention</gloss>
+          <category xml:id="testimonials">
+             <gloss>Testimonials of famous musicians</gloss>
+             <desc>A named musician or other notable person is quoted or paraphrased
+                in praise of the instrument.</desc>
+          </category>
+          <category xml:id="epoch_making_invention">
+             <gloss>Epoch-making invention</gloss>
+             <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                the greatest of the age, a sensation, the newest thing.</desc>
+          </category>
+          <category xml:id="education">
+             <gloss>Education and study</gloss>
+             <desc>The instrument serves learning and teaching: conservatories,
+                students, studying an interpretation by repeating it.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -314,6 +344,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -348,24 +379,24 @@
           <lb/><hi rendition="#larger">REPRODUCING PIANO</hi></hi></head>
       </div>
       <div facs="#zone_text">
-        <p><lb/>A new musical instrument <seg xml:id="topic_1" ana="#technical_invention" type="topic" resp="#claude">embracing the Pianoforte and the
-          <lb/>art of the Pianist</seg> with bewildering effect.</p>
+        <p><lb/><seg xml:id="topic_6" ana="#epoch_making_invention #wonder" type="topic" resp="#claude">A new musical instrument embracing the Pianoforte and the
+          <lb/>art of the Pianist with bewildering effect</seg>.</p>
       </div>
       <div facs="#zone_backhaus">
-        <p><lb/><persName type="artist" corresp="https://d-nb.info/gnd/116029579">William Backhaus</persName>, the celebrated Pianist, writes:—<quote type="testimonial">“For me
-          <lb/>this is <seg xml:id="topic_2" ana="#miracle" type="topic" resp="#claude">one of the wonders of <sic>hte</sic> world</seg>.”</quote></p>
+        <p><lb/><seg xml:id="topic_7" ana="#testimonials" type="topic" resp="#claude"><persName type="artist" corresp="https://d-nb.info/gnd/116029579">William Backhaus</persName>, the celebrated Pianist, writes</seg>:—<quote type="testimonial">“For me
+          <lb/>this is <seg xml:id="topic_2" ana="#wonder" type="topic" resp="#claude">one of the wonders of <sic>hte</sic> world</seg>.”</quote></p>
       </div>
       <div facs="#zone_pachmann">
-        <p><lb/><persName type="artist" corresp="https://d-nb.info/gnd/116014490"><sic>Vladimar</sic> de Pachmann</persName>:—<quote type="testimonial">“The <name type="brand">Welte</name> <seg xml:id="topic_3" ana="#soulfulness" type="topic" resp="#claude">reproduces the living
+        <p><lb/><seg xml:id="topic_8" ana="#testimonials" type="topic" resp="#claude"><persName type="artist" corresp="https://d-nb.info/gnd/116014490"><sic>Vladimar</sic> de Pachmann</persName></seg>:—<quote type="testimonial">“The <name type="brand">Welte</name> <seg xml:id="topic_3" ana="#the_artists_soul" type="topic" resp="#claude">reproduces the living
           <lb/>soul of the artist</seg>.”</quote></p>
       </div>
       <div facs="#zone_leoncavallo">
-        <p><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118779559">R. Leoncavallo</persName>:—<quote type="testimonial">“Something like a sensation of fear comes
-          <lb/>over the listener when <seg xml:id="topic_4" ana="#immediate_recognizability" type="topic" resp="#claude">he hears the execution of an artist, who
+        <p><lb/><seg xml:id="topic_9" ana="#testimonials" type="topic" resp="#claude"><persName type="artist" corresp="https://d-nb.info/gnd/118779559">R. Leoncavallo</persName></seg>:—<quote type="testimonial">“<seg xml:id="topic_11" ana="#phantom_hands" type="topic" resp="#claude">Something like a sensation of fear comes
+          <lb/>over the listener</seg> when <seg xml:id="topic_4" ana="#illusion_of_presence" type="topic" resp="#claude">he hears the execution of an artist, who
           <lb/>is well known to him, reproduced</seg>.</quote></p>
       </div>
       <div facs="#zone_wood">
-        <p><lb/><persName corresp="https://d-nb.info/gnd/118807854">Sir Henry Wood</persName>:—<quote type="testimonial">“I cannot imagine anything <seg xml:id="topic_5" ana="#educational_use" type="topic" resp="#claude">more instruc-
+        <p><lb/><seg xml:id="topic_10" ana="#testimonials" type="topic" resp="#claude"><persName corresp="https://d-nb.info/gnd/118807854">Sir Henry Wood</persName></seg>:—<quote type="testimonial">“I cannot imagine anything <seg xml:id="topic_5" ana="#education" type="topic" resp="#claude">more instruc-
           <lb/>tive than to listen, with the music in the hand, to the classical
           <lb/>masterpieces, interpreted by our greatest living pianists</seg>.”</quote></p>
       </div>

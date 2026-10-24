@@ -155,11 +155,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -187,10 +188,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -207,18 +213,51 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
           <category xml:id="immortality">
-             <gloss>Immortality</gloss>
-             <desc>This topic emphasizes the perdurance of the reproductions and
-                how thus the recording artists become immortal.</desc>
+             <gloss>Immortality and posterity</gloss>
+             <desc>The playing is preserved for ever or for future generations; the
+                artists become immortal, and dead artists still play.</desc>
           </category>
-          <category xml:id="miracle">
-             <gloss>Miracle</gloss>
+          <category xml:id="if_only_earlier">
+             <gloss>If only it had existed earlier</gloss>
+             <desc>The ad regrets that the invention did not exist earlier, so that we
+                could still hear Liszt, Chopin, Beethoven or Rubinstein. Nearly
+                always voiced by a quoted musician.</desc>
           </category>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
+          </category>
+          <category xml:id="testimonials">
+             <gloss>Testimonials of famous musicians</gloss>
+             <desc>A named musician or other notable person is quoted or paraphrased
+                in praise of the instrument.</desc>
+          </category>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+          </category>
+          <category xml:id="epoch_making_invention">
+             <gloss>Epoch-making invention</gloss>
+             <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                the greatest of the age, a sensation, the newest thing.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
+          </category>
+          <category xml:id="the_original">
+             <gloss>The original</gloss>
+             <desc>The Welte-Mignon is the original or the first reproducing piano,
+                protected by the original patents; the history of the Welte firm
+                and its founders guarantees it.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -227,6 +266,7 @@
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -253,34 +293,34 @@
           <lb/><hi rendition="#in">„<name type="brand">MIGNON</name>“</hi></hi></head>
       </div>
       <div facs="#zone_maker">
-        <p><lb/>ist von einer <app><rdg source="#source_1">speciell</rdg><rdg source="#source_2">speziell</rdg></app> in der Konstruktion der elektro-
+        <p><lb/>ist <seg xml:id="topic_5" ana="#the_original" type="topic" resp="#claude">von einer <app><rdg source="#source_1">speciell</rdg><rdg source="#source_2">speziell</rdg></app> in der Konstruktion der elektro-
           <lb/>pneumatischen Werke seit vielen Jahren berühmten
           <lb/>Fabrik — <hi rendition="#b"><orgName>M. WELTE &amp; SÖHNE</orgName></hi> in <placeName>Freiburg</placeName> und
-          <lb/><placeName>New-York</placeName>, gebaut.</p>
+          <lb/><placeName>New-York</placeName></seg>, gebaut.</p>
       </div>
       <div facs="#zone_wonder">
-        <ab><hi rendition="#c #b #larger"><lb/><seg xml:id="topic_1" ana="#miracle" type="topic" resp="#claude">Es ist ein wahres Wunder der Welt</seg><app><rdg source="#source_1"/><rdg source="#source_2">.</rdg></app></hi></ab>
+        <ab><hi rendition="#c #b #larger"><lb/><seg xml:id="topic_1" ana="#wonder" type="topic" resp="#claude">Es ist ein wahres Wunder der Welt</seg><app><rdg source="#source_1"/><rdg source="#source_2">.</rdg></app></hi></ab>
       </div>
       <div facs="#zone_artists">
-        <p><lb/>Künstler von Weltruf, die <hi rendition="#b"><name type="brand">MIGNON</name></hi> gehört und
+        <p><lb/><seg xml:id="topic_6" ana="#world_renown" type="topic" resp="#claude">Künstler von Weltruf, die <hi rendition="#b"><name type="brand">MIGNON</name></hi> gehört und
           <lb/>die auch selbst eine grosse Anzahl Piècen für den
           <lb/>Apparat gespielt haben, spenden demselben ihr höchstes
-          <lb/>Lob und <seg xml:id="topic_2" ana="#superiority" type="topic" resp="#claude">bezeichnen ihn als das <hi rendition="#b">Vollendetste,</hi> was
+          <lb/>Lob</seg> und <seg xml:id="topic_2" ana="#superlatives" type="topic" resp="#claude">bezeichnen ihn als das <hi rendition="#b">Vollendetste,</hi> was
           <lb/>bisher existiert</seg>.</p>
       </div>
       <div facs="#zone_testimonial_head">
-        <ab><lb/>Herr <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/116662166">Frédéric Lamond</persName></hi> schreibt über <app><rdg source="#source_1"><name type="brand">Mignon</name></rdg><rdg source="#source_2">„<name type="brand">MIGNON</name>“</rdg></app>:</ab>
+        <ab><lb/><seg xml:id="topic_7" ana="#testimonials" type="topic" resp="#claude">Herr <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/116662166">Frédéric Lamond</persName></hi> schreibt über <app><rdg source="#source_1"><name type="brand">Mignon</name></rdg><rdg source="#source_2">„<name type="brand">MIGNON</name>“</rdg></app>:</seg></ab>
       </div>
       <div facs="#zone_testimonial">
         <quote type="testimonial">
-          <p><lb/>Ich sehe den „<app><rdg source="#source_1"><name type="brand">MIGNON</name></rdg><rdg source="#source_2"><hi rendition="#b"><name type="brand">Mignon</name></hi></rdg></app>“-Apparat <seg xml:id="topic_3" ana="#miracle" type="topic" resp="#claude">als das grösste Wunder
-            <lb/>der Jetztzeit</seg> an. Er ist in jeder Hinsicht über alles Lob
-            <lb/>erhaben und <seg xml:id="topic_4" ana="#immortality" type="topic" resp="#claude">es ist nur zu bedauern, dass diese Erfindung
+          <p><lb/>Ich sehe den „<app><rdg source="#source_1"><name type="brand">MIGNON</name></rdg><rdg source="#source_2"><hi rendition="#b"><name type="brand">Mignon</name></hi></rdg></app>“-Apparat <seg xml:id="topic_3" ana="#wonder #epoch_making_invention" type="topic" resp="#claude">als das grösste Wunder
+            <lb/>der Jetztzeit</seg> an. <seg xml:id="topic_8" ana="#superlatives" type="topic" resp="#claude">Er ist in jeder Hinsicht über alles Lob
+            <lb/>erhaben</seg> und <seg xml:id="topic_4" ana="#if_only_earlier" type="topic" resp="#claude">es ist nur zu bedauern, dass diese Erfindung
             <lb/>nicht siebzig Jahre früher gemacht wurde, als die beiden
             <lb/>grossen Klaviermeister <persName type="composer" corresp="https://d-nb.info/gnd/118520539">Chopin</persName> und <persName type="composer" corresp="https://d-nb.info/gnd/118573527">Liszt</persName> auf der Höhe
-            <lb/>ihrer Kunst waren</seg>. Der „<app><rdg source="#source_1"><name type="brand">MIGNON</name></rdg><rdg source="#source_2"><hi rendition="#b"><name type="brand">Mignon</name></hi></rdg></app>“-Apparat erweckt die
+            <lb/>ihrer Kunst waren</seg>. Der „<app><rdg source="#source_1"><name type="brand">MIGNON</name></rdg><rdg source="#source_2"><hi rendition="#b"><name type="brand">Mignon</name></hi></rdg></app>“-Apparat <seg xml:id="topic_9" ana="#immortality" type="topic" resp="#claude">erweckt die
             <lb/>kühnsten Hoffnungen für die künftigen Generationen
-            <lb/>sowie für <app><rdg source="#source_1">den</rdg><rdg source="#source_2">die</rdg></app> Pianisten der Zukunft.</p>
+            <lb/>sowie für <app><rdg source="#source_1">den</rdg><rdg source="#source_2">die</rdg></app> Pianisten der Zukunft</seg>.</p>
         </quote>
       </div>
       <div facs="#zone_signature">

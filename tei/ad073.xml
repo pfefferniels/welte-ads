@@ -275,11 +275,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -307,10 +308,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -329,10 +335,22 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="satisfied_owners">
+             <gloss>Satisfied owners</gloss>
+             <desc>Ordinary owners, named or anonymous, or the number of owners vouch
+                for the instrument.</desc>
+          </category>
+          <category xml:id="epoch_making_invention">
+             <gloss>Epoch-making invention</gloss>
+             <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                the greatest of the age, a sensation, the newest thing.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -341,6 +359,7 @@
       <langUsage><language ident="nl">Dutch</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20" who="#claude">Merged with the former ad074 (Bataviaasch Nieuwsblad, October 7 and 10, 1911, a new setting of the same text); its printings are further sources, its readings are recorded with app.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -368,9 +387,9 @@
           <lb/><name type="brand"><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">WELTE-MIGNON</rdg><rdg source="#source_6 #source_7">Welte Mignon</rdg></app></name>.</hi></head>
       </div>
       <div facs="#zone_text">
-        <p><hi rendition="#b #smaller"><lb/>Dit is <seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">het fraaiste, beste en nieuwste instrument</seg><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5"/><rdg source="#source_6 #source_7">,</rdg></app> dat tot heden op dat gebied in den
+        <p><hi rendition="#b #smaller"><lb/>Dit is <seg xml:id="topic_1" ana="#superlatives #epoch_making_invention" type="topic" resp="#claude">het fraaiste, beste en nieuwste instrument</seg><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5"/><rdg source="#source_6 #source_7">,</rdg></app> dat tot heden op dat gebied in den
           <lb/>handel <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">is</rdg><rdg source="#source_6 #source_7"/></app> gebracht en <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">werd</rdg><rdg source="#source_6 #source_7"/></app> nog niet op <placeName>Java</placeName> <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">geïmporteerd</rdg><rdg source="#source_6 #source_7">geimporteerd is</rdg></app>.</hi></p>
-        <p><hi rendition="#b #smaller"><lb/>Het eerste exemplaar door mij nu verkocht aan een <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">administrateur</rdg><rdg source="#source_6 #source_7">Administrateur</rdg></app> in de <placeName>Preanger</placeName><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">,</rdg><rdg source="#source_6 #source_7"/></app>
+        <p><hi rendition="#b #smaller"><lb/><seg xml:id="topic_2" ana="#satisfied_owners" type="topic" resp="#claude">Het eerste exemplaar door mij nu verkocht aan een <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">administrateur</rdg><rdg source="#source_6 #source_7">Administrateur</rdg></app> in de <placeName>Preanger</placeName></seg><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">,</rdg><rdg source="#source_6 #source_7"/></app>
           <lb/>wordt tot en met 15 October voor belangstellenden tentoongesteld bij den alleenvertegen-
           <lb/>woordiger<app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5"/><rdg source="#source_6 #source_7">.</rdg></app></hi></p>
       </div>
@@ -380,7 +399,7 @@
           <lb/><hi rendition="#b"><address><addrLine>Noordwijk No. 12, Weltevreden<app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5"/><rdg source="#source_6 #source_7">.</rdg></app></addrLine></address></hi></hi></ab>
       </div>
       <div facs="#zone_attest">
-        <ab><hi rendition="#b"><lb/>Attesten liggen ter inzage.</hi></ab>
+        <ab><hi rendition="#b"><lb/><seg xml:id="topic_3" ana="#satisfied_owners" type="topic" resp="#claude">Attesten liggen ter inzage.</seg></hi></ab>
       </div>
       <div facs="#zone_number">
         <ab><hi rendition="#right #smaller"><lb/><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">6225</rdg><rdg source="#source_6 #source_7">8986</rdg></app></hi></ab>

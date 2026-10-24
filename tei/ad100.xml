@@ -251,11 +251,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -283,10 +284,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -303,50 +309,115 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="analogy_to_photography">
-             <gloss>Analogy to Photography</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="analysis">
-             <gloss>Analysis</gloss>
+          <category xml:id="touch_and_individuality">
+             <gloss>Touch, nuance and individuality</gloss>
+             <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                pedalling, dynamics, tempo, shading, tone colour, or the
+                individuality and characteristic style of each pianist.</desc>
           </category>
-          <category xml:id="distinction_from_mechanical">
-             <gloss>Distinction from Mechanical</gloss>
-             <desc>Often, the adverts try to distinguish reproducing piano rolls
-                from mere mechanical methods (such as the player piano).</desc>
+          <category xml:id="the_artists_soul">
+             <gloss>The artist's soul</gloss>
+             <desc>The instrument is said to capture the soul, spirit, feeling or
+                inner life of the performer, a spiritual register beyond the
+                technical one of touch and nuance ("the living soul of the artist",
+                "Musikseele").</desc>
           </category>
-          <category xml:id="educational_use">
-             <gloss>Educational Use</gloss>
+          <category xml:id="not_mechanical">
+             <gloss>Art, not mechanism</gloss>
+             <desc>The instrument is set apart from mechanical, automatic or player-
+                piano playing: it is human, artistic, "not a surrogate", or the
+                prejudice that it is mechanical is refuted.</desc>
           </category>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <category xml:id="artists_hear_themselves">
+             <gloss>Artists hear themselves</gloss>
+             <desc>The artists vouch for their own recordings: they hear or recognise
+                their own playing, are deceived by it, sign the rolls as
+                autographs, or a demonstration proves that each pianist can be
+                recognised.</desc>
           </category>
           <category xml:id="immortality">
-             <gloss>Immortality</gloss>
-             <desc>This topic emphasizes the perdurance of the reproductions and
-                how thus the recording artists become immortal.</desc>
+             <gloss>Immortality and posterity</gloss>
+             <desc>The playing is preserved for ever or for future generations; the
+                artists become immortal, and dead artists still play.</desc>
           </category>
-          <category xml:id="miracle">
-             <gloss>Miracle</gloss>
+          <category xml:id="if_only_earlier">
+             <gloss>If only it had existed earlier</gloss>
+             <desc>The ad regrets that the invention did not exist earlier, so that we
+                could still hear Liszt, Chopin, Beethoven or Rubinstein. Nearly
+                always voiced by a quoted musician.</desc>
           </category>
-          <category xml:id="personality">
-             <gloss>Personality</gloss>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
           </category>
-          <category xml:id="popular">
-             <gloss>Popular</gloss>
+          <category xml:id="phantom_hands">
+             <gloss>Phantom hands</gloss>
+             <desc>The absent performer appears as a phantom or spirit: ghostly or
+                semi-transparent hands and figures, keys moving with no one seated,
+                the artist summoned at will ("zitieren", "summon").</desc>
           </category>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
           </category>
-          <category xml:id="technical_invention">
-             <gloss>Technical Invention</gloss>
+          <category xml:id="testimonials">
+             <gloss>Testimonials of famous musicians</gloss>
+             <desc>A named musician or other notable person is quoted or paraphrased
+                in praise of the instrument.</desc>
           </category>
-          <category xml:id="virtual_presence">
-             <gloss>Virtual Presence</gloss>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+          </category>
+          <category xml:id="epoch_making_invention">
+             <gloss>Epoch-making invention</gloss>
+             <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                the greatest of the age, a sensation, the newest thing.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
+          </category>
+          <category xml:id="the_original">
+             <gloss>The original</gloss>
+             <desc>The Welte-Mignon is the original or the first reproducing piano,
+                protected by the original patents; the history of the Welte firm
+                and its founders guarantees it.</desc>
+          </category>
+          <category xml:id="how_it_works">
+             <gloss>How it works</gloss>
+             <desc>The ad explains or shows the technology: the recording process, the
+                pneumatic or electric mechanism, the roll, the drive from a light
+                socket, or it likens the recording to photography or the
+                phonograph. A product label such as "electric reproducing piano"
+                alone does not count.</desc>
+          </category>
+          <category xml:id="education">
+             <gloss>Education and study</gloss>
+             <desc>The instrument serves learning and teaching: conservatories,
+                students, studying an interpretation by repeating it.</desc>
+          </category>
+          <category xml:id="within_reach">
+             <gloss>Within everyone's reach</gloss>
+             <desc>The instrument, or the music it plays, is accessible to all, its
+                value exceeds its price. Prices and terms of payment themselves are
+                not a topic.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -358,6 +429,7 @@
       </langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -399,48 +471,48 @@
           <lb/><hi rendition="#in">„<name type="brand">MIGNON</name>“</hi></hi></head>
       </div>
       <div facs="#zone_maker">
-        <p><lb/>ist von einer speciell in der Konstruktion der elektro-
+        <p><lb/>ist <seg xml:id="topic_22" ana="#the_original" type="topic" resp="#claude">von einer speciell in der Konstruktion der elektro-
           <lb/>pneumatischen Werke seit vielen Jahren berühmten
           <lb/>Fabrik — <hi rendition="#b"><orgName>M. WELTE &amp; SÖHNE</orgName></hi> in <placeName>Freiburg</placeName> und
-          <lb/><sic>und</sic> <placeName>New-York</placeName>, gebaut.</p>
+          <lb/><sic>und</sic> <placeName>New-York</placeName></seg>, gebaut.</p>
       </div>
       <div facs="#zone_wonder">
-        <ab><hi rendition="#c #b #larger"><lb/><seg xml:id="topic_1" ana="#miracle" type="topic" resp="#claude">Es ist ein wahres Wunder der Welt.</seg></hi></ab>
+        <ab><hi rendition="#c #b #larger"><lb/><seg xml:id="topic_1" ana="#wonder" type="topic" resp="#claude">Es ist ein wahres Wunder der Welt.</seg></hi></ab>
       </div>
       <div facs="#zone_artists">
-        <p><lb/>Künstler von Weltruf, die <hi rendition="#b"><name type="brand">MIGNON</name></hi> gehört und
+        <p><lb/><seg xml:id="topic_23" ana="#world_renown" type="topic" resp="#claude">Künstler von Weltruf, die <hi rendition="#b"><name type="brand">MIGNON</name></hi> gehört und
           <lb/>die auch selbst eine grosse Anzahl Piècen für den
           <lb/>Apparat gespielt haben, spenden demselben ihr höchstes
-          <lb/>Lob und <seg xml:id="topic_2" ana="#superiority" type="topic" resp="#claude">bezeichnen ihn als das <hi rendition="#b">Vollendetste</hi>, was
+          <lb/>Lob</seg> und <seg xml:id="topic_2" ana="#superlatives" type="topic" resp="#claude">bezeichnen ihn als das <hi rendition="#b">Vollendetste</hi>, was
           <lb/>bisher existiert</seg>.</p>
       </div>
       <div facs="#zone_autographs">
-        <head><hi rendition="#c #larger"><lb/>Aus <name type="brand">MIGNON</name>'s Autographenmappe:</hi></head>
+        <head><hi rendition="#c #larger"><lb/><seg xml:id="topic_24" ana="#testimonials" type="topic" resp="#claude">Aus <name type="brand">MIGNON</name>'s Autographenmappe:</seg></hi></head>
       </div>
       <div facs="#zone_saint_saens">
         <p><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Camille Saint-Saëns</persName>:</hi>
           <quote type="testimonial">Kennst du das Land?
-          <lb/><foreign xml:lang="fr">Connais-tu le pays ou fleurit la merveille?</foreign> Das
-          <lb/>Wunder, das ist <hi rendition="#b">„<name type="brand">Mignon</name>“</hi>, ein bescheidener Name
-          <lb/>einer bewunderungswürdigen Sache. Man kann
+          <lb/><foreign xml:lang="fr">Connais-tu le pays ou fleurit la merveille?</foreign> <seg xml:id="topic_25" ana="#wonder" type="topic" resp="#claude">Das
+          <lb/>Wunder, das ist <hi rendition="#b">„<name type="brand">Mignon</name>“</hi></seg>, ein bescheidener Name
+          <lb/>einer bewunderungswürdigen Sache. <seg xml:id="topic_26" ana="#if_only_earlier" type="topic" resp="#claude">Man kann
           <lb/>nur bedauern, dass diese Erfindung nicht schon früher
-          <lb/>gemacht wurde, <seg xml:id="topic_3" ana="#immortality" type="topic" resp="#claude">denn dann könnten wir noch heute
+          <lb/>gemacht wurde</seg>, <seg xml:id="topic_3" ana="#if_only_earlier" type="topic" resp="#claude">denn dann könnten wir noch heute
           <lb/><persName type="composer" corresp="https://d-nb.info/gnd/118508288">Beethoven</persName>, <persName type="composer" corresp="https://d-nb.info/gnd/118584596">Mozart</persName> und <persName type="composer" corresp="https://d-nb.info/gnd/118520539">Chopin</persName> selbst spielen hören</seg>.</quote></p>
       </div>
       <div facs="#zone_leschetitzky">
         <p><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/120890143">Theodor Leschetitzky</persName>:</hi>
-          <quote type="testimonial">Ich muss diese
+          <quote type="testimonial"><seg xml:id="topic_27" ana="#wonder" type="topic" resp="#claude">Ich muss diese
           <lb/>Erfindung, die sich so ganz einfach <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> nennt,
-          <lb/>als ein wahres Wunder bezeichnen, und muss es nur
+          <lb/>als ein wahres Wunder bezeichnen</seg>, und <seg xml:id="topic_28" ana="#if_only_earlier" type="topic" resp="#claude">muss es nur
           <lb/>bedauern, dass dieses Wunder nicht seit 100 Jahren
-          <lb/>geschehen ist. <seg xml:id="topic_4" ana="#educational_use" type="topic" resp="#claude">Wie viel hätte „alt und jung“ daraus
+          <lb/>geschehen ist</seg>. <seg xml:id="topic_4" ana="#education" type="topic" resp="#claude">Wie viel hätte „alt und jung“ daraus
           <lb/>lernen können</seg>. Wie gern möchte man jung sein
           <lb/>und bleiben, um aus diesem Wunderbaren ohne
           <lb/>Ende schöpfen zu können.</quote></p>
       </div>
       <div facs="#zone_reisenauer">
         <p><lb/>Prof. <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>:</hi>
-          <quote type="testimonial">Dass <seg xml:id="topic_5" ana="#analysis" type="topic" resp="#claude">das alt-
+          <quote type="testimonial">Dass <seg xml:id="topic_5" ana="#artists_hear_themselves #education" type="topic" resp="#claude">das alt-
           <lb/>griechische Sprichwort „Erkenne dich selbst“ im
           <lb/>vollsten Umfange zu betätigen nun auch dem Pia-
           <lb/>nisten möglich wurde</seg>, ist das Verdienst Ihrer wun-
@@ -448,9 +520,9 @@
           <lb/>wird ihm durch diesen auch möglich, andere zu
           <lb/>erkennen und gerecht zu beurteilen, ohne die, sei
           <lb/>es sym- oder antipathisch beeinflussende Anwesen-
-          <lb/>heit der „Person“. Hier ist zugleich ein technisches
+          <lb/>heit der „Person“. Hier ist zugleich <seg xml:id="topic_29" ana="#superlatives" type="topic" resp="#claude">ein technisches
           <lb/>und ein philosophisches Problem in vollendetster
-          <lb/>Form gelöst.</quote></p>
+          <lb/>Form gelöst</seg>.</quote></p>
         <lg>
           <l><lb/>Die falschen Noten, die man spielt,</l>
           <l><lb/>Will oft man nicht erkennen,</l>
@@ -459,22 +531,22 @@
           <l><lb/>Doch, sind sie „festgenagelt“ nun<app><rdg source="#source_1 #source_5">;</rdg><rdg source="#source_3 #source_4">,</rdg></app></l>
           <l><lb/>So muss man zu- sie -geben,</l>
           <l><lb/>Drum sei der „<name type="brand">Mignon</name>apparat“</l>
-          <l><lb/><seg xml:id="topic_6" ana="#educational_use" type="topic" resp="#claude">Ein Lehrer euch fürs Leben</seg>.</l>
+          <l><lb/><seg xml:id="topic_6" ana="#education" type="topic" resp="#claude">Ein Lehrer euch fürs Leben</seg>.</l>
         </lg>
       </div>
       <div facs="#zone_auer">
         <p><lb/>Prof. <hi rendition="#b"><persName corresp="https://d-nb.info/gnd/118995022">L. Auer</persName>:</hi>
           <quote type="testimonial">Nach meiner Meinung sollten
           <lb/>die Konservatorien, Musikschulen diesen Wunder-
-          <lb/>Apparat <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> genannt, <seg xml:id="topic_7" ana="#educational_use" type="topic" resp="#claude">zu pädagogischen
+          <lb/>Apparat <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> genannt, <seg xml:id="topic_7" ana="#education" type="topic" resp="#claude">zu pädagogischen
           <lb/>Zwecken, für die lernende Jugend anwenden</seg>. Warum
           <lb/>giebt es kein Violin-<name type="brand">Mignon</name>?</quote></p>
       </div>
       <div facs="#zone_schmidt">
         <p><lb/><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/117506338">Hans Schmidt</persName>:</hi>
-          <quote type="testimonial">So braucht auf diesem
+          <quote type="testimonial"><seg xml:id="topic_30" ana="#immortality" type="topic" resp="#claude">So braucht auf diesem
           <lb/>Gebiete reproduktiver Kunst das Schöne nicht mehr
-          <lb/>zu sterben! Die flüchtigsten aller Kunstgenüsse
+          <lb/>zu sterben!</seg> Die flüchtigsten aller Kunstgenüsse
           <lb/>sind zum Bleiben und damit wohl die schönsten
           <lb/>aller Augenblicke zum Verweilen gebracht. <seg xml:id="topic_8" ana="#immortality" type="topic" resp="#claude">Eine
           <lb/>Stunde nie geahnter noch gehoffter, nun erreichter
@@ -484,9 +556,9 @@
         <p><lb/>Prof. <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/119388472">Karl Reinecke</persName>:</hi>
           <quote type="testimonial">Ich kann nicht umhin,
           <lb/>meine aufrichtige Bewunderung auszusprechen über
-          <lb/><seg xml:id="topic_9" ana="#exact_reproduction" type="topic" resp="#claude">den hohen Grad von Treue und Genauigkeit, mit
+          <lb/><seg xml:id="topic_9" ana="#faithful_reproduction" type="topic" resp="#claude">den hohen Grad von Treue und Genauigkeit, mit
           <lb/>welchem der Apparat <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> das Spiel des
-          <lb/>Künstlers wiedergibt</seg>. <seg xml:id="topic_10" ana="#distinction_from_mechanical" type="topic" resp="#claude">Es ist ein gewaltiger Schritt
+          <lb/>Künstlers wiedergibt</seg>. <seg xml:id="topic_10" ana="#not_mechanical #superlatives" type="topic" resp="#claude">Es ist ein gewaltiger Schritt
           <lb/>getan von dem dereinstigen elektrischen Klavier
           <lb/>bis zu diesem Apparat</seg>.</quote></p>
       </div>
@@ -496,26 +568,26 @@
           <lb/>Bedürfnis, meiner uneingeschränkten Bewunderung
           <lb/>für den mir heute vorgeführten neuen selbsttätigen
           <lb/>Klavierspielapparat <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> Ausdruck zu geben.
-          <lb/>Ich gestehe gern, dass ich geradezu verblüfft war,
-          <lb/>als ich mit eigenen Ohren hörte, <seg xml:id="topic_11" ana="#exact_reproduction" type="topic" resp="#claude">in welcher vorzüg-
+          <lb/><seg xml:id="topic_31" ana="#wonder" type="topic" resp="#claude">Ich gestehe gern, dass ich geradezu verblüfft war,
+          <lb/>als ich mit eigenen Ohren hörte</seg>, <seg xml:id="topic_11" ana="#faithful_reproduction" type="topic" resp="#claude">in welcher vorzüg-
           <lb/>lichen und exakten Weise derselbe die von Künst-
           <lb/>lerhand gespielten Musikstücke wiedergibt</seg>. Da
           <lb/>die Wiedergabe nicht nur die Auffassung, sondern
-          <lb/><seg xml:id="topic_12" ana="#personality" type="topic" resp="#claude">auch die kleinsten charakteristischen Eigenheiten
+          <lb/><seg xml:id="topic_12" ana="#touch_and_individuality" type="topic" resp="#claude">auch die kleinsten charakteristischen Eigenheiten
           <lb/>des Spielers deutlich erkennen lässt</seg>, halte ich
-          <lb/><hi rendition="#b">„<name type="brand">Mignon</name>“</hi> ganz besonders dazu geeignet, <seg xml:id="topic_13" ana="#popular" type="topic" resp="#claude">vollendet
+          <lb/><hi rendition="#b">„<name type="brand">Mignon</name>“</hi> ganz besonders dazu geeignet, <seg xml:id="topic_13" ana="#within_reach" type="topic" resp="#claude">vollendet
           <lb/>künstlerische Musik in den weitesten Kreisen
           <lb/>populär zu machen</seg>.</quote></p>
       </div>
       <div facs="#zone_slivinski">
         <p><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/1080980598">Joseph Slivinski</persName>:</hi>
-          <quote type="testimonial">Es ist bis jetzt der
+          <quote type="testimonial"><seg xml:id="topic_32" ana="#artists_hear_themselves" type="topic" resp="#claude">Es ist bis jetzt der
           <lb/>sehnlichste Wunsch eines jeden Pianisten gewesen,
-          <lb/>sich selbst hören zu können. Dank der genialen
-          <lb/>Erfindung des Reproduktionsklaviers <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> ist
+          <lb/>sich selbst hören zu können</seg>. Dank <seg xml:id="topic_33" ana="#epoch_making_invention" type="topic" resp="#claude">der genialen
+          <lb/>Erfindung des Reproduktionsklaviers <hi rendition="#b">„<name type="brand">Mignon</name>“</hi></seg> ist
           <lb/>der Wunsch erfüllt worden, und zwar in einer so
-          <lb/>vollendeten Weise, <seg xml:id="topic_14" ana="#analogy_to_photography" type="topic" resp="#claude">die nur mit der Photographie
-          <lb/>zu vergleichen ist</seg>. <seg xml:id="topic_15" ana="#exact_reproduction" type="topic" resp="#claude">Nichts wird verloren — jede
+          <lb/>vollendeten Weise, <seg xml:id="topic_14" ana="#how_it_works" type="topic" resp="#claude">die nur mit der Photographie
+          <lb/>zu vergleichen ist</seg>. <seg xml:id="topic_15" ana="#faithful_reproduction #touch_and_individuality" type="topic" resp="#claude">Nichts wird verloren — jede
           <lb/>kleinste Nüance wird aufs genaueste wiedergegeben</seg>.
           <lb/>Man kann nicht umhin — jeder, der es hört, muss
           <lb/>begeistert sein und ich bin glücklich, hiermit meine
@@ -523,27 +595,27 @@
       </div>
       <div facs="#zone_nikisch">
         <p><lb/>Prof. <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>:</hi>
-          <quote type="testimonial">Ich habe mich gestern
+          <quote type="testimonial"><seg xml:id="topic_34" ana="#artists_hear_themselves" type="topic" resp="#claude">Ich habe mich gestern
           <lb/>durch Vermittelung des <name type="brand">Mignon</name>-Apparates selbst
-          <lb/>Klavier spielen hören. Das war für mich eine
+          <lb/>Klavier spielen hören</seg>. Das war für mich eine
           <lb/>Sensation eigener Art. Die Vollkommenheit, mit
-          <lb/>welcher <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> <seg xml:id="topic_16" ana="#personality" type="topic" resp="#claude">die künstlerische Eigenart des
+          <lb/>welcher <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> <seg xml:id="topic_16" ana="#touch_and_individuality" type="topic" resp="#claude">die künstlerische Eigenart des
           <lb/>Spielenden mit allen Schwächen und Vorzügen
           <lb/>wiedergiebt</seg>, ist ganz wunderbar, und ich wiederhole,
           <lb/>was ich seinerzeit, als ich das Instrument zum
-          <lb/>erstenmale hörte sagte: <seg xml:id="topic_17" ana="#technical_invention" type="topic" resp="#claude">„Es ist eine epochemachende
+          <lb/>erstenmale hörte sagte: <seg xml:id="topic_17" ana="#epoch_making_invention" type="topic" resp="#claude">„Es ist eine epochemachende
           <lb/>Erfindung!“</seg></quote></p>
       </div>
       <div facs="#zone_himmelstjerna">
         <p><lb/><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/1212078756">Guido Samson v. Himmelstierna</persName>:</hi>
           <quote type="testimonial">Eine
-          <lb/>äusserst <sic>interesante</sic> Erfindung — <seg xml:id="topic_18" ana="#immortality" type="topic" resp="#claude">schade dass es
+          <lb/>äusserst <sic>interesante</sic> Erfindung — <seg xml:id="topic_18" ana="#if_only_earlier" type="topic" resp="#claude">schade dass es
           <lb/>zu Lebzeiten unserer verstorbenen grossen Meister
           <lb/>kein derartiges Instrument gegeben hat</seg>.</quote></p>
       </div>
       <div facs="#zone_waack">
         <p><lb/><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/1140502735">Carl Waack</persName>:</hi>
-          <quote type="testimonial">Ein fast lebendiger Mechanismus,
+          <quote type="testimonial"><seg xml:id="topic_35" ana="#not_mechanical" type="topic" resp="#claude">Ein fast lebendiger Mechanismus</seg>,
           <lb/>wie ich ihn vordem nie gehört noch gesehen....</quote></p>
       </div>
       <div facs="#zone_zoellner">
@@ -551,17 +623,17 @@
         <quote type="testimonial">
           <lg>
             <l><lb/><hi rendition="#b">„<name type="brand">Mignon</name>“</hi>, du Fabel-Zauberwesen!</l>
-            <l><lb/>Nun sag mir eins! <seg xml:id="topic_19" ana="#miracle" type="topic" resp="#claude">Man soll kein Wunder glauben!</seg></l>
-            <l><lb/>Du bannst die Seelen, bringst es fertig,</l>
+            <l><lb/>Nun sag mir eins! <seg xml:id="topic_19" ana="#wonder" type="topic" resp="#claude">Man soll kein Wunder glauben!</seg></l>
+            <l><lb/><seg xml:id="topic_36" ana="#the_artists_soul" type="topic" resp="#claude">Du bannst die Seelen</seg>, bringst es fertig,</l>
             <l><lb/>Dem Raum, der Zeit die Macht zu rauben!</l>
             <l><lb/>Durch deine Kraft — so wunderbar wie tückisch —</l>
-            <l><lb/><seg xml:id="topic_20" ana="#virtual_presence" type="topic" resp="#claude">Gelingt's, die Besten der Kollegen zu zitieren</seg>.</l>
+            <l><lb/><seg xml:id="topic_20" ana="#phantom_hands" type="topic" resp="#claude">Gelingt's, die Besten der Kollegen zu zitieren</seg>.</l>
             <l><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118501437">D'Albert</persName>, <sic><persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-Saëns</persName><persName type="artist" corresp="https://d-nb.info/gnd/116796170">Friedheim</persName></sic>, <persName type="artist" corresp="https://d-nb.info/gnd/11863027X">Weingartner</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118786253">Nikisch</persName>,</l>
-            <l><lb/>Sie mussten nolens volens alle mir klavieren!</l>
-            <l><lb/>Begreiflich ist, dass jeder Meister</l>
-            <l><lb/>Der Tonkunst hoch dich lobt und preist;</l>
-            <l><lb/>Denn du zitierst nicht bloss die Geister,</l>
-            <l><lb/><seg xml:id="topic_21" ana="#immortality" type="topic" resp="#claude">In dir lebt fort des Künstlers Geist!</seg></l>
+            <l><lb/><seg xml:id="topic_37" ana="#masters_at_home" type="topic" resp="#claude">Sie mussten nolens volens alle mir klavieren!</seg></l>
+            <l><lb/>Begreiflich ist, <seg xml:id="topic_38" ana="#world_renown" type="topic" resp="#claude">dass jeder Meister</seg></l>
+            <l><lb/><seg xml:id="topic_39" ana="#world_renown" type="topic" resp="#claude">Der Tonkunst hoch dich lobt und preist</seg>;</l>
+            <l><lb/><seg xml:id="topic_40" ana="#phantom_hands" type="topic" resp="#claude">Denn du zitierst nicht bloss die Geister</seg>,</l>
+            <l><lb/><seg xml:id="topic_21" ana="#immortality #the_artists_soul" type="topic" resp="#claude">In dir lebt fort des Künstlers Geist!</seg></l>
           </lg>
         </quote>
       </div>

@@ -110,11 +110,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -142,10 +143,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -163,16 +169,25 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="entertainment">
-             <gloss>Entertainment</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="illusion_of_presence">
+             <gloss>Illusion of presence</gloss>
+             <desc>The listener feels that the artist is present or seated at the
+                instrument ("as if he sat at your piano", "close your eyes"), or
+                cannot tell the reproduction from the live artist.</desc>
           </category>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <category xml:id="hearing_is_believing">
+             <gloss>Hearing is believing</gloss>
+             <desc>The reader is challenged to verify the claims by listening,
+                comparing or testing ("must be heard to be believed", "hear it in
+                comparison"). A bare invitation to a demonstration does not count.</desc>
+          </category>
+          <category xml:id="refinement">
+             <gloss>Culture, refinement and distinction</gloss>
+             <desc>Owning the instrument marks culture, refinement or social standing
+                ("vornehmes Heim", "a visible token of culture"), or the picture
+                places it in an elegant upper-class setting.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -181,6 +196,7 @@
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -199,7 +215,7 @@
   <text decls="#source_1">
     <body>
       <div type="illustration" facs="#zone_picture">
-        <figure xml:id="figure_1" ana="#entertainment" resp="#claude"><desc>A gentleman in tails and top hat and a lady in an evening dress, who points to a grand piano with its lid raised</desc></figure>
+        <figure xml:id="figure_1" ana="#refinement" resp="#claude"><desc>A gentleman in tails and top hat and a lady in an evening dress, who points to a grand piano with its lid raised</desc></figure>
       </div>
       <div facs="#zone_headline">
         <head><lb/><hi rendition="#in">Bessere</hi>
@@ -209,14 +225,14 @@
         <p><hi rendition="#b"><lb/>Ein Vergnügen ist je nach seiner Art
           <lb/>von gutem oder minder gutem Einfluss
           <lb/>auf den Menschen.</hi></p>
-        <p><hi rendition="#b"><lb/>Musikalische Unterhaltung edelster Art
-          <lb/>bringt <name type="brand">Welte-Mignon</name>. <seg xml:id="topic_1" ana="#exact_reproduction" type="topic" resp="#claude">Sie werden das
+        <p><hi rendition="#b"><lb/><seg xml:id="topic_2" ana="#refinement" type="topic" resp="#claude">Musikalische Unterhaltung edelster Art
+          <lb/>bringt <name type="brand">Welte-Mignon</name>.</seg> <seg xml:id="topic_1" ana="#illusion_of_presence" type="topic" resp="#claude">Sie werden das
           <lb/>Spiel dieses Reproduktions-Klaviers
           <lb/>wohl kaum von demjenigen eines Künst-
           <lb/>lers unterscheiden können</seg>.</hi></p>
-        <p><hi rendition="#b"><lb/>Interessiert Sie der Versuch? — Dann
+        <p><hi rendition="#b"><lb/><seg xml:id="topic_3" ana="#hearing_is_believing" type="topic" resp="#claude">Interessiert Sie der Versuch? — Dann
           <lb/>kommen Sie bitte zu einer freien Vor-
-          <lb/>führung. Aufklärungsschriften senden
+          <lb/>führung.</seg> Aufklärungsschriften senden
           <lb/>wir Ihnen sofort gratis, wenn Sie uns
           <lb/>Ihren Namen mitteilen.</hi> <hi rendition="#smaller">à 14</hi></p>
       </div>
