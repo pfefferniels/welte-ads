@@ -1,0 +1,416 @@
+<title>Welte-Mignon Topic Bubbles</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: the site's Topics page, widened into chart + reading panel, with a row of views above. Black and white like the edition. */
+:root {
+  --bg: #ffffff;
+  --fg: #141414;
+  --muted: #666464;
+  --rule: #d8d6d3;
+  --hover: #eeeeee;
+  --soft: #ececea;
+  --serif: 'Crimson Pro', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #131313; --fg: #ebe9e6; --muted: #a09d99; --rule: #3a3936; --hover: #262625; --soft: #2a2928; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #131313; --fg: #ebe9e6; --muted: #a09d99; --rule: #3a3936; --hover: #262625; --soft: #2a2928; color-scheme: dark; }
+
+body { background: var(--bg); color: var(--fg); font-family: var(--serif); font-size: 1.15rem; line-height: 1.45; }
+.page { max-width: 1120px; margin: 0 auto; padding-block: 2rem 3rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 1.5rem; }
+h1 { font-weight: 500; font-size: 2.4rem; line-height: 1.1; margin: 0; text-wrap: balance; }
+.lede { margin: 0.5rem 0 0; max-width: 62ch; color: var(--fg); }
+.lede small { color: var(--muted); font-size: 0.95rem; display: block; margin-top: 0.4rem; }
+
+.views { display: flex; flex-wrap: wrap; gap: 0; border-bottom: 1px solid var(--fg); }
+.views button { font: inherit; font-size: 1.05rem; background: none; color: var(--muted); border: 0; border-bottom: 3px solid transparent; padding: 0.45rem 0.9rem 0.35rem; cursor: pointer; display: grid; text-align: left; gap: 0; margin-bottom: -1px; }
+.views button span { font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+.views button[aria-pressed="true"] { color: var(--fg); border-bottom-color: var(--fg); }
+.views button:hover { color: var(--fg); }
+.views button:focus-visible, .seg button:focus-visible, .bubble:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem 2rem; align-items: end; }
+.intro p { margin: 0; max-width: 70ch; }
+.intro .finding { margin-top: 0.5rem; font-style: italic; }
+.controls { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: flex-end; }
+.seg { display: inline-flex; border: 1px solid var(--fg); }
+.seg button { font: inherit; font-size: 0.95rem; background: var(--bg); color: var(--fg); border: 0; padding: 0.2rem 0.7rem; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--fg); }
+.seg button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; font-size: 0.95rem; color: var(--muted); margin: 0; padding: 0; list-style: none; }
+.legend li { display: inline-flex; align-items: center; gap: 0.4rem; }
+.legend svg { flex: none; }
+
+.stage { display: grid; grid-template-columns: minmax(0, 1fr) 20rem; gap: 2rem; align-items: start; }
+.charts { display: grid; gap: 1rem; min-width: 0; }
+.charts.two { grid-template-columns: 1fr 1fr; }
+.chart { min-width: 0; }
+.chart h3 { font-weight: 500; font-size: 1.15rem; margin: 0 0 0.25rem; text-align: center; }
+.chart h3 small { display: block; font-weight: 400; color: var(--muted); font-size: 0.9rem; }
+svg.bubbles { display: block; width: 100%; height: auto; }
+.note { font-size: 0.95rem; color: var(--muted); margin: 0; max-width: 75ch; }
+
+/* circles, as on the site */
+.bubble { cursor: pointer; outline: none; }
+.bubble circle { fill: var(--bg); stroke: var(--fg); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.bubble text { font-family: var(--serif); text-anchor: middle; fill: var(--fg); }
+.bubble text tspan { dominant-baseline: central; }
+.bubble:hover circle.main, .bubble.selected circle.main { fill: var(--hover); }
+.bubble:hover text, .bubble.selected text { font-weight: 600; }
+.bubble.selected circle.main { stroke-width: 2.5; }
+.k-F circle.main { stroke: var(--muted); stroke-dasharray: 1.5 3; }
+.k-F text { fill: var(--muted); }
+.k-FIG circle.main { fill: var(--soft); }
+.k-MIX circle.main { stroke-dasharray: 6 3; }
+.k-reshaped circle.main { fill: var(--soft); }
+.k-new circle.main { stroke-dasharray: 6 4; stroke-width: 1.5; }
+.k-new text { font-style: italic; }
+circle.ring { fill: none !important; stroke: var(--fg); stroke-dasharray: 3 3; }
+
+/* reading panel */
+.panel { border-left: 1px solid var(--rule); padding-left: 1.5rem; display: grid; gap: 0.7rem; min-width: 0; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 1rem); }
+.panel .chip { justify-self: start; font-size: 0.78rem; letter-spacing: 0.05em; text-transform: uppercase; border: 1px solid var(--fg); padding: 0.05rem 0.45rem; }
+.panel .chip.dash { border-style: dashed; }
+.panel .chip.dot { border-style: dotted; color: var(--muted); border-color: var(--muted); }
+.panel h2 { font-size: 1.6rem; font-weight: 500; line-height: 1.15; margin: 0; text-wrap: balance; }
+.panel .stats { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 1rem; margin: 0; }
+.panel p { margin: 0; }
+.panel h4 { margin: 0.4rem 0 0; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+.panel blockquote { margin: 0; padding-left: 0.8rem; border-left: 2px solid var(--rule); }
+.panel blockquote p { font-style: italic; }
+.panel blockquote footer { font-size: 0.9rem; color: var(--muted); }
+.panel blockquote .gloss { font-style: normal; color: var(--muted); font-size: 0.95rem; }
+.panel a { color: var(--fg); text-underline-offset: 2px; }
+.panel ul.topics { margin: 0; padding: 0; list-style: none; font-size: 1rem; font-variant-numeric: tabular-nums; }
+.panel ul.topics li { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px dotted var(--rule); }
+.panel details summary { cursor: pointer; color: var(--muted); font-size: 0.95rem; }
+.panel .adlist { font-size: 0.95rem; line-height: 1.6; word-spacing: 0.15em; }
+.panel .callout { font-size: 0.98rem; border: 1px dashed var(--fg); padding: 0.5rem 0.7rem; }
+
+.foot { border-top: 1px solid var(--rule); padding-top: 1rem; font-size: 0.95rem; color: var(--muted); display: grid; gap: 0.4rem; }
+.foot p { margin: 0; max-width: 85ch; }
+
+@media (max-width: 860px) {
+  .stage { grid-template-columns: minmax(0, 1fr); }
+  .panel { border-left: 0; border-top: 1px solid var(--rule); padding-left: 0; padding-top: 1rem; position: static; }
+  .intro { grid-template-columns: minmax(0, 1fr); }
+  .controls { justify-content: flex-start; }
+}
+@media (max-width: 560px) {
+  .charts.two { grid-template-columns: minmax(0, 1fr); }
+  h1 { font-size: 1.9rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .bubble circle { transition: fill 120ms; }
+}
+</style>
+
+<div class="page">
+  <header>
+    <h1>Topics, five ways</h1>
+    <p class="lede">How the Topics page of the Welte-Mignon Advertisements Collection would look if its topics came from different methods. Every view uses the edition's own circle layout and is built from pilot runs on the 195 advertisements. Click a circle to read what it contains.
+      <small>Circle sizes compare within one view only. “Your topics” counts marked passages, as the site does; the other views count advertisements.</small></p>
+  </header>
+
+  <nav class="views" aria-label="Views" id="views"></nav>
+
+  <section class="intro">
+    <div>
+      <p id="caption"></p>
+      <p class="finding" id="finding"></p>
+    </div>
+    <div class="controls" id="controls"></div>
+  </section>
+
+  <ul class="legend" id="legend"></ul>
+
+  <section class="stage">
+    <div>
+      <div class="charts" id="charts"></div>
+      <p class="note" id="belowNote"></p>
+    </div>
+    <aside class="panel" id="panel" aria-live="polite"></aside>
+  </section>
+
+  <footer class="foot">
+    <p>Clusters: 1,677 sentences and picture descriptions embedded with paraphrase-multilingual-mpnet-base-v2 and grouped with BERTopic (UMAP + HDBSCAN, seed 0, minimum cluster size 10). Seeded candidates: unmarked sentences most similar to your marked passages, read and judged by hand, plus sentences repeated verbatim elsewhere with a topic. LLM view: one blind TopicGPT-style reading of all ads by Claude, coded per ad, compared with your taxonomy afterwards.</p>
+    <p>All numbers come from single exploratory runs, not settled results. The research notes and scripts are in the repository under <code>research_notes/</code>. Ad links open the edition at anz.welte225.org.</p>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script>
+const DATA = /*DATA*/null;
+const SITE = 'https://anz.welte225.org/';
+const LANG = { en: 'English', de: 'German', nl: 'Dutch', es: 'Spanish', sv: 'Swedish', da: 'Danish', fr: 'French', no: 'Norwegian', pl: 'Polish', pt: 'Portuguese', ru: 'Russian', ca: 'Catalan' };
+
+/* ---- the site's layout (frontend/src/lib/bubbles.ts), ported unchanged ---- */
+const maxRadius = 150, margin = 4;
+const textWidth = text => 0.45 * text.length + 0.7;
+function fitLabel(label, r) {
+  const fit = lines => ({ lines, fontSize: Math.min(r / 4, 1.8 * r / Math.max(...lines.map(textWidth))) });
+  const words = label.split(' ');
+  const oneLine = fit([label]);
+  const twoLines = words.slice(1)
+    .map((_, i) => fit([words.slice(0, i + 1).join(' '), words.slice(i + 1).join(' ')]))
+    .reduce((best, l) => l.fontSize > best.fontSize ? l : best, oneLine);
+  return twoLines.fontSize > 1.25 * oneLine.fontSize ? twoLines : oneLine;
+}
+// maxWeight lets two charts share one scale (the site always uses its own maximum)
+function layoutBubbles(terms, maxWeight) {
+  const radius = d3.scaleSqrt().domain([0, maxWeight ?? d3.max(terms, t => t.weight) ?? 0]).range([0, maxRadius]);
+  const nodes = terms.map(t => ({ ...t, r: radius(t.weight), r0: t.now != null ? radius(t.now) : null }))
+    .sort((a, b) => b.weight - a.weight || a.label.localeCompare(b.label));
+  const sim = d3.forceSimulation(nodes)
+    .force('charge', d3.forceManyBody().strength(7))
+    .force('collide', d3.forceCollide(d => d.r + 1))
+    .force('center', d3.forceCenter())
+    .force('radial', d3.forceRadial(d => d.r))
+    .stop();
+  sim.tick(Math.ceil(Math.log(sim.alphaMin()) / Math.log(1 - sim.alphaDecay())));
+  const bubbles = nodes.map(n => ({ ...n, ...fitLabel(n.label, n.r0 ?? n.r) }));
+  if (!bubbles.length) return { bubbles, viewBox: [0, 0, 0, 0] };
+  const left = d3.min(bubbles, b => b.x - b.r) - margin, top = d3.min(bubbles, b => b.y - b.r) - margin;
+  const right = d3.max(bubbles, b => b.x + b.r) + margin, bottom = d3.max(bubbles, b => b.y + b.r) + margin;
+  return { bubbles, viewBox: [left, top, right - left, bottom - top] };
+}
+
+/* ---- views ---- */
+const L = DATA.labels;
+const P = DATA.adsPerPeriod;
+const fmt = n => n.toLocaleString('en');
+const VIEWS = [
+  { id: 'current', name: 'Your topics', sub: 'today',
+    caption: `This is the Topics page as it stands: your ${DATA.views.current.length} topics, each circle sized by the number of passages and pictures marked with it (${fmt(d3.sum(DATA.views.current, d => d.weight))} marks in all).`,
+    finding: 'Only 5 of the 32 topics carry a written definition, and 436 of the 647 marks were set by Claude from the labels alone.',
+    legend: [['solid', 'one of your topics']] },
+  { id: 'time', name: 'Over time', sub: 'dynamic',
+    caption: `The same topics split at the First World War: ${P.early} ads from 1905–1914 and ${P.late} from 1917–1929. Each circle is the share of that period's ads that use the topic, on one shared scale, so equal circles mean equal shares. A dynamic topic model or a period covariate (STM, keyATM) would estimate the same thing statistically.`,
+    finding: 'Affordability grows from 1% to 18% of ads and Phantom Body from 0% to 12%; Technical Invention falls from 30% to 14%. Single advertisers’ series inflate some of this.',
+    legend: [['solid', 'topic, sized by % of ads in the period']] },
+  { id: 'clusters', name: 'Clusters', sub: 'unsupervised',
+    caption: `Topics found with no taxonomy at all. ${fmt(DATA.nunits)} sentences and picture descriptions were embedded with a multilingual language model and grouped by meaning (BERTopic). Each of the 50 groups is sized by the number of ads it occurs in; ${DATA.noise} sentences fit no group. The labels were written after reading each group.`,
+    finding: 'The biggest groups are firm names, product lines and addresses, not motifs. Only 19 groups are rhetorical, and your large topics are each spread over 12–17 of them.',
+    legend: [['solid', 'rhetorical'], ['dot', 'functional (addresses, firms, prices)'], ['soft', 'picture descriptions'], ['dash6', 'mixed']] },
+  { id: 'seeded', name: 'Seeded', sub: 'your topics + new',
+    caption: 'Your taxonomy kept and used as seeds. The computer looks for unmarked sentences that resemble your marked passages, and the groups that match none of your topics become candidates. Circles count ads. A dashed ring shows how far a topic would grow if its candidates were accepted. Dashed circles are candidate new topics.',
+    finding: 'This is the hybrid the literature recommends for a corpus this small (zero-shot BERTopic, keyATM, seeded LDA). It keeps your categories and points at gaps.',
+    legend: [['solid', 'your topic, ads now'], ['ring', 'with accepted candidates'], ['newdash', 'candidate new topic']] },
+  { id: 'llm', name: 'LLM, blind', sub: 'TopicGPT-style',
+    caption: 'An LLM read all 195 ads without seeing your taxonomy, proposed its own topics with coding rules, and coded every ad; only then were the two lists compared. Circles count ads.',
+    finding: 'Of its 40 topics, 6 match yours, 17 reshape yours (broader, merged, split or cut differently), and 17 have no counterpart. One run, by the same model family that set most of your existing marks, so agreement is not independent.',
+    legend: [['solid', 'same as one of yours'], ['soft', 'reshapes one or more of yours'], ['newdash', 'no counterpart in your taxonomy']] },
+];
+
+const state = { view: 'current', timeSet: 'topics', clusterSet: 'all', selected: null };
+try { const s = localStorage.getItem('wtb-view'); if (s && VIEWS.some(v => v.id === s)) state.view = s; } catch (e) {}
+const h = location.hash.replace('#', '');
+if (VIEWS.some(v => v.id === h)) state.view = h;
+
+const $ = id => document.getElementById(id);
+const el = (tag, attrs = {}, ...kids) => {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) { if (k === 'class') e.className = v; else if (k === 'html') e.innerHTML = v; else e.setAttribute(k, v); }
+  for (const k of kids) if (k != null) e.append(k);
+  return e;
+};
+const NS = 'http://www.w3.org/2000/svg';
+const sv = (tag, attrs = {}) => { const e = document.createElementNS(NS, tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); return e; };
+
+function legendIcon(kind) {
+  const s = sv('svg', { width: 22, height: 22, viewBox: '-11 -11 22 22', 'aria-hidden': 'true' });
+  const c = (r, style) => { const ci = sv('circle', { r }); ci.setAttribute('style', style); s.append(ci); };
+  const base = 'fill:var(--bg);stroke:var(--fg);stroke-width:1;';
+  if (kind === 'solid') c(9, base);
+  if (kind === 'dot') c(9, 'fill:var(--bg);stroke:var(--muted);stroke-dasharray:1.5 2.5;');
+  if (kind === 'soft') c(9, 'fill:var(--soft);stroke:var(--fg);');
+  if (kind === 'dash6') c(9, base + 'stroke-dasharray:4 2;');
+  if (kind === 'newdash') c(9, base + 'stroke-dasharray:4 3;stroke-width:1.5;');
+  if (kind === 'ring') { c(10, 'fill:none;stroke:var(--fg);stroke-dasharray:2 2;'); c(6, base); }
+  return s;
+}
+
+function renderNav() {
+  const nav = $('views'); nav.replaceChildren();
+  for (const v of VIEWS) {
+    const b = el('button', { type: 'button', id: 'view-' + v.id, 'aria-pressed': String(state.view === v.id) }, v.name, el('span', {}, v.sub));
+    b.addEventListener('click', () => { state.view = v.id; state.selected = null; try { localStorage.setItem('wtb-view', v.id); } catch (e) {} history.replaceState(null, '', '#' + v.id); render(); });
+    nav.append(b);
+  }
+}
+
+function segControl(id, options, value, onChange, label) {
+  const g = el('div', { class: 'seg', role: 'group', 'aria-label': label });
+  for (const [val, text] of options) {
+    const b = el('button', { type: 'button', id: id + '-' + val, 'aria-pressed': String(value === val) }, text);
+    b.addEventListener('click', () => { onChange(val); state.selected = null; render(); });
+    g.append(b);
+  }
+  return g;
+}
+
+function chartSvg(items, maxWeight, ariaLabel) {
+  const { bubbles, viewBox } = layoutBubbles(items, maxWeight);
+  const svg = sv('svg', { class: 'bubbles', viewBox: viewBox.join(' '), role: 'list', 'aria-label': ariaLabel });
+  for (const b of bubbles) {
+    const g = sv('g', { class: `bubble k-${b.kind}`, transform: `translate(${b.x}, ${b.y})`, role: 'listitem', tabindex: 0, 'data-id': b.id });
+    if (state.selected && state.selected.id === b.id) g.classList.add('selected');
+    const t = sv('title'); t.textContent = titleFor(b); g.append(t);
+    if (b.r0 != null && b.r0 < b.r - 0.5) g.append(sv('circle', { class: 'ring', r: b.r }));
+    g.append(sv('circle', { class: 'main', r: b.r0 ?? b.r }));
+    const text = sv('text', { 'font-size': b.fontSize });
+    b.lines.forEach((line, i) => { const ts = sv('tspan', { x: 0, y: `${(i - (b.lines.length - 1) / 2) * 1.1}em` }); ts.textContent = line; text.append(ts); });
+    g.append(text);
+    const pick = () => { state.selected = b; renderPanel(); document.querySelectorAll('.bubble').forEach(n => n.classList.toggle('selected', n.dataset.id === b.id)); };
+    g.addEventListener('click', pick);
+    g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); } });
+    svg.append(g);
+  }
+  return svg;
+}
+
+function titleFor(b) {
+  if (state.view === 'current') return `${b.label}: ${b.weight} ${b.weight === 1 ? 'mark' : 'marks'}`;
+  if (state.view === 'time') return `${b.label}: ${b.weight}% of ads (${b.count})`;
+  if (state.view === 'seeded' && b.kind === 'hand') return `${b.label}: ${b.now} ads${b.candidates.length ? ` + ${b.candidates.length} candidates` : ''}`;
+  return `${b.label}: ${b.weight} ads`;
+}
+
+function currentItems() {
+  const v = DATA.views;
+  if (state.view === 'current') return [{ items: v.current }];
+  if (state.view === 'time') {
+    const src = state.timeSet === 'topics' ? v.time : v.timeClusters;
+    const max = d3.max([...src.early, ...src.late], d => d.weight);
+    return [
+      { items: src.early, max, title: '1905–1914', sub: `${P.early} ads` },
+      { items: src.late, max, title: '1917–1929', sub: `${P.late} ads` },
+    ];
+  }
+  if (state.view === 'clusters') return [{ items: state.clusterSet === 'all' ? v.clusters : v.clusters.filter(c => c.kind === 'R') }];
+  if (state.view === 'seeded') return [{ items: v.seeded }];
+  if (state.view === 'llm') return [{ items: v.llm }];
+}
+
+function render() {
+  renderNav();
+  const view = VIEWS.find(v => v.id === state.view);
+  $('caption').textContent = view.caption;
+  $('finding').textContent = view.finding;
+  const controls = $('controls'); controls.replaceChildren();
+  if (state.view === 'time') controls.append(segControl('timeset', [['topics', 'Your topics'], ['clusters', 'Discovered clusters']], state.timeSet, v => state.timeSet = v, 'Show'));
+  if (state.view === 'clusters') controls.append(segControl('clusterset', [['all', 'All 50'], ['R', 'Rhetorical only']], state.clusterSet, v => state.clusterSet = v, 'Show'));
+  const legend = $('legend'); legend.replaceChildren();
+  for (const [k, t] of view.legend) legend.append(el('li', {}, legendIcon(k), t));
+
+  const charts = $('charts'); charts.replaceChildren();
+  const sets = currentItems();
+  charts.className = 'charts' + (sets.length === 2 ? ' two' : '');
+  for (const s of sets) {
+    const wrap = el('div', { class: 'chart' });
+    if (s.title) wrap.append(el('h3', {}, s.title, el('small', {}, s.sub)));
+    wrap.append(chartSvg(s.items, s.max, `${view.name}${s.title ? ', ' + s.title : ''}`));
+    charts.append(wrap);
+  }
+  if (!state.selected) {
+    const all = sets.flatMap(s => s.items);
+    const first = [...all].sort((a, b) => b.weight - a.weight)[0];
+    state.selected = state.view === 'seeded' ? all.find(d => d.id === 'n_endorse') : state.view === 'llm' ? all.find(d => d.id === 'G5') : state.view === 'clusters' ? all.find(d => d.id === 'c34') : first;
+    document.querySelectorAll('.bubble').forEach(n => n.classList.toggle('selected', n.dataset.id === state.selected.id));
+  }
+  $('belowNote').textContent = belowNote();
+  renderPanel();
+}
+
+function belowNote() {
+  if (state.view === 'llm') return 'Your topics it did not produce as separate topics: Revelled Listening, Sitting Woman (noticed but judged pictorial), Secret and Repeatability (absorbed), Ideal Instrument and Invisibility (inside broader topics), and the rare ones Atmosphere, Analysis, Jazz, Analogy to Phonograph, Artistic Accompaniment and Hostess, which a frequency-based method drops by design.';
+  if (state.view === 'seeded') return 'Candidates were found by similarity search and read by hand: 23 of the top 50 hits were plausible, 10 of them one repeated slogan. Retrieval worked for topics with distinctive wording (Technical Invention, Superiority) and failed for Home and Touch of a Button.';
+  if (state.view === 'clusters') return 'On a rerun with other seeds the functional and picture groups come back almost identically; several rhetorical groups do not, because the rhetorical middle of the corpus is a continuum that the algorithm cuts differently each time.';
+  if (state.view === 'time' && state.timeSet === 'clusters') return 'Only the 19 rhetorical clusters are shown. Clusters 45 and 46 (praise for the inventors, invention of our age) exist only before the war; the roll library, the slogan and “In any piano” only after it.';
+  return '';
+}
+
+const adLink = id => el('a', { href: SITE + id + '/', target: '_blank', rel: 'noopener' }, id);
+function adList(ids) {
+  const span = el('div', { class: 'adlist' });
+  ids.forEach((id, i) => { if (i) span.append(' '); span.append(adLink(id)); });
+  return span;
+}
+function quotes(examples) {
+  const frag = document.createDocumentFragment();
+  for (const ex of (examples || []).slice(0, 3)) {
+    const bq = el('blockquote', {}, el('p', {}, '“' + ex.text.replace(/^[“"]|[”"]$/g, '') + '”'));
+    if (ex.gloss) bq.append(el('p', { class: 'gloss' }, ex.gloss));
+    bq.append(el('footer', {}, adLink(ex.ad), ` · ${LANG[ex.lang] || ex.lang}`));
+    frag.append(bq);
+  }
+  return frag;
+}
+
+function renderPanel() {
+  const p = $('panel'); p.replaceChildren();
+  const b = state.selected; if (!b) return;
+  const chip = (text, cls = '') => el('span', { class: 'chip ' + cls }, text);
+  const kindChip = {
+    hand: chip('Your topic'), R: chip('Rhetorical cluster'), F: chip('Functional cluster', 'dot'), FIG: chip('Picture descriptions'), MIX: chip('Mixed cluster', 'dash'),
+    new: chip(state.view === 'llm' ? 'No counterpart' : 'Candidate new topic', 'dash'), same: chip('Same as yours'), reshaped: chip('Reshapes yours'),
+  }[b.kind];
+  p.append(kindChip, el('h2', {}, (b.code ? b.code + ' ' : '') + b.label));
+
+  if (state.view === 'current') {
+    p.append(el('p', { class: 'stats' }, `${b.passages} marks in ${b.nads} ads · by the editor ${b.resp.np || 0}, by Claude ${b.resp.claude || 0}${b.resp.none ? `, unsigned ${b.resp.none}` : ''}`));
+    p.append(b.desc ? el('p', {}, b.desc) : el('p', { class: 'stats' }, 'No written definition yet.'));
+    p.append(el('h4', {}, 'Marked passages'), quotes(b.examples));
+  } else if (state.view === 'time') {
+    if (b.kind === 'hand') {
+      const e = DATA.views.time.early.find(d => d.id === b.id), l = DATA.views.time.late.find(d => d.id === b.id);
+      p.append(el('p', { class: 'stats' }, `1905–1914: ${e ? `${e.weight}% (${e.count} ads)` : '0%'} · 1917–1929: ${l ? `${l.weight}% (${l.count} ads)` : '0%'}`));
+      if (b.desc) p.append(el('p', {}, b.desc));
+      p.append(el('h4', {}, 'Marked passages'), quotes(b.examples));
+    } else {
+      const e = DATA.views.timeClusters.early.find(d => d.id === b.id), l = DATA.views.timeClusters.late.find(d => d.id === b.id);
+      p.append(el('p', { class: 'stats' }, `1905–1914: ${e ? `${e.weight}% (${e.count} ads)` : '0%'} · 1917–1929: ${l ? `${l.weight}% (${l.count} ads)` : '0%'}`));
+      p.append(el('p', {}, b.long));
+      p.append(el('h4', {}, 'Sentences in this group'), quotes(b.examples));
+    }
+  } else if (state.view === 'clusters') {
+    p.append(el('p', { class: 'stats' }, `${b.units} sentences in ${b.nads} ads · ${b.withTopic} inside one of your marks · ${b.early} early / ${b.late} late ads`));
+    p.append(el('p', {}, b.long));
+    if (b.topics.length) {
+      const ul = el('ul', { class: 'topics' });
+      for (const [t, n] of b.topics) ul.append(el('li', {}, el('span', {}, L[t] || t), el('span', {}, String(n))));
+      p.append(el('h4', {}, 'Your topics inside'), ul);
+    } else p.append(el('p', { class: 'callout' }, 'None of your topics occurs in this group.'));
+    p.append(el('h4', {}, 'Sentences closest to its centre'), quotes(b.examples));
+  } else if (state.view === 'seeded') {
+    if (b.kind === 'hand') {
+      p.append(el('p', { class: 'stats' }, `${b.now} ads now${b.candidates.length ? ` · +${b.candidates.length} candidate ads → ${b.weight}` : ' · no candidates found'}`));
+      if (b.desc) p.append(el('p', {}, b.desc));
+      if (b.candidates.length) p.append(el('h4', {}, 'Candidate ads to check'), adList(b.candidates));
+      if (b.candnote) p.append(el('p', { class: 'callout' }, b.candnote));
+      p.append(el('h4', {}, 'Your marked passages'), quotes(b.examples));
+    } else {
+      p.append(el('p', { class: 'stats' }, `${b.nads} ads`));
+      p.append(el('p', {}, b.desc), el('p', { class: 'stats' }, b.source));
+      p.append(el('h4', {}, 'Examples'), quotes(b.examples));
+      p.append(el('details', {}, el('summary', {}, `All ${b.nads} ads`), adList(b.ads)));
+    }
+  } else if (state.view === 'llm') {
+    p.append(el('p', { class: 'stats' }, `${b.nads} ads` + (b.mapping ? ` · ${b.kind === 'new' ? '' : 'yours: '}${b.mapping}` : '')));
+    if (b.rule) p.append(el('p', {}, el('strong', {}, 'Coding rule: '), b.rule));
+    p.append(el('h4', {}, 'Quoted by the LLM'), quotes(b.examples));
+    p.append(el('details', {}, el('summary', {}, `All ${b.nads} ads`), adList(b.ads)));
+  }
+  if (state.view === 'current' || state.view === 'time' && b.kind === 'hand') {
+    p.append(el('details', {}, el('summary', {}, `All ${b.nads} ads`), adList(b.ads)));
+  } else if (state.view === 'clusters' || state.view === 'time') {
+    p.append(el('details', {}, el('summary', {}, `All ${b.nads} ads`), adList(b.ads)));
+  }
+}
+
+render();
+window.addEventListener('hashchange', () => { const id = location.hash.replace('#', ''); if (VIEWS.some(v => v.id === id) && id !== state.view) { state.view = id; state.selected = null; render(); } });
+</script>
