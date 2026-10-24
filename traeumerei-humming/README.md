@@ -1,0 +1,57 @@
+# Träumerei, hummed
+
+The melody of Alfred Grünfeld's 1905 Welte-Mignon recording of Schumann's *Träumerei*
+(roll 225), sung back by the voice synthesisers available in 2026. Every version takes its
+onsets, note ends and dynamics from the MPM reconstruction published at
+<https://welte225.org/mpm/>; what differs is only the voice. The research question behind
+it — can any AI model imitate human humming or singing perfectly when told exactly when which
+pitch should sound? — is answered in `report/`.
+
+Listening page (all versions, with the pitch of each drawn over Grünfeld's notes):
+<https://claude.ai/artifact/MXu7DCSHuaA8r5Z8MibiRC> (private until shared from its Share menu).
+
+## Contents
+
+| Path | What it is |
+|---|---|
+| `report/AI humming synthesis from scores.md` | the research report |
+| `report/notes/` | the notes it was written from: four literature surveys and the experiment record |
+| `scripts/` | everything that produced the renderings, in the order below |
+| `data/melody.json` | the 162 melody notes as Grünfeld plays them, the MPM dynamics curve and the sustain pedal |
+| `data/analysis.json` | per version: pitch accuracy, onset arrival, dynamics correlation |
+| `data/versions.json` | per version: how it was made and what it takes from the roll |
+
+The audio (one MP3 per version) is on the listening page; the scripts regenerate it.
+
+## Pipeline
+
+1. `scripts/render.mjs`, `scripts/render_curve.mjs` (Node, espressivo 0.11): render
+   `performance.mpm` over `transcription.mei` to per-note data (ms onsets/offsets, velocities)
+   and the dynamics map to a continuous curve.
+2. `scripts/extract_melody.py`: the melody is staff 1, layer 1, top note of chords (162 notes,
+   2:41 with the repeat). Sounding ends follow the key release or, while the pedal is down, the
+   pedal release, never past the next melody onset.
+3. `scripts/voicemodel.py`: the shared voice model. Breaths at phrase starts and where Grünfeld
+   lifts (≥ 120 ms after a note of ≥ 0.5 s, at most one per 3 s); a pitch contour after Saitou
+   et al. (2007), overshoot (ω = 0.0348 rad/ms, ζ = 0.5422) forwards and preparation
+   (ω = 0.0292 rad/ms, ζ = 0.6681) backwards, vibrato 5.6 Hz rising 10 %, drift and fine
+   fluctuation; loudness from the MPM dynamics curve plus each note's velocity offset,
+   40·log₁₀(v/127).
+4. Renderers, one per family:
+   - `synth_dsp.py` — sine tones, additive hum, LF glottal source through a Klatt cascade
+   - `render_vtl.py` — VocalTractLab 2.4 (an octave lower; its glottis stops at 600 Hz)
+   - `pinktrombone_render.mjs` — Pink Trombone's glottis and waveguide tract, offline
+   - `render_diffsinger.py` — DiffSinger ONNX (Kiritan voicebank + NSF-HiFiGAN), our f0
+   - `render_espnet.py` — ESPnet VISinger / VISinger2, durations forced, own f0
+   - `render_sinsy.py` — Sinsy HMM with the NIT SONG070 F001 voice, MusicXML at 1 ms
+   - `render_ddsp.py` — Magenta DDSP violin and flute on our f0 and loudness
+   - Seed-VC (`inference.py` of the Seed-VC repository) for the voice-conversion excerpt
+   - `render_piano.py` — Salamander Grand samples, with the roll's pedalling
+5. `master.py`: one level and one small hall for all; for the neural singers without a
+   loudness input, note levels are moved to the MPM levels (at most 18 dB down, 9 dB up).
+6. `analysis.py`: WORLD Harvest pitch tracking of every version against the notes.
+7. `export_data.py`, `build_page.py`, `page_template.html`: the listening page.
+
+Each renderer needs its own Python environment (TensorFlow 2.11 for DDSP, PyTorch ≥ 2.6 for
+ESPnet, onnxruntime for DiffSinger, pysinsy for Sinsy, vocaltractlab for VTL); the model
+downloads are named in the scripts' docstrings and on the page.
