@@ -120,6 +120,9 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, topics, imageLi
   const facsOnly = debugParam === 'facs'
 
   const [zoom, setZoom] = useState(1)
+  // the height of the layout or facsimile view, once the advertisement is
+  // fitted into it
+  const [viewHeight, setViewHeight] = useState<number | null>(null)
   const [pos, setPos] = useState({ x: 0, y: 0 })
   const mouseStateRef = useRef({ down: false, lastPos: { x: 0, y: 0 } })
 
@@ -236,11 +239,15 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, topics, imageLi
       : mode === 'facsimile' ? [pagesWidth, pagesHeight] : [0, 0]
     if (!div || width === 0 || height === 0) return
 
+    // as large as the width of the view allows, but no higher than most of
+    // the window; the view is then only as high as the advertisement, so
+    // that a wide one leaves no space below it
     const padding = 10
     const fitted = Math.min(
       (div.clientWidth - 2 * padding) / width,
-      (div.clientHeight - 2 * padding) / height)
+      (0.9 * window.innerHeight - 2 * padding) / height)
     setZoom(fitted)
+    setViewHeight(height * fitted + 2 * padding)
     setPos({
       x: (div.clientWidth - width * fitted) / 2,
       y: padding,
@@ -309,7 +316,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, topics, imageLi
             ref={divRef}
             className='container'
             sx={{ ml: 7 }}
-            style={{ height: '90vh', overflow: 'hidden' }}>
+            style={{ height: viewHeight ?? '90vh', overflow: 'hidden' }}>
             <div
               style={{
                 position: 'relative',
@@ -372,7 +379,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, topics, imageLi
             className='container'
             sx={{ ml: 7 }}
             style={{
-              height: '90vh',
+              height: viewHeight ?? '90vh',
               overflow: 'hidden'
             }}>
             <div
