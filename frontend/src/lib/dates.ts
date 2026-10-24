@@ -47,3 +47,17 @@ export const dateList = (dates: string[]) => {
  * Dates as a list, e.g. "28 January – 1 February, 3–22, 26 February 1908".
  */
 export const formatDates = (dates: string[]) => dateList(dates).join(', ')
+
+/**
+ * A date as a point in time, in years: a full date at its day, a month in
+ * its middle, a year alone in its middle ("1908-01-01" → 1908.001,
+ * "1926-03" → 1926.21, "1921" → 1921.5).
+ */
+export const yearFraction = (iso: string) => {
+  const [year, month, day] = iso.split('-').map(Number)
+  if (!month) return year + 0.5
+  const start = Date.UTC(year, 0, 1)
+  const length = Date.UTC(year + 1, 0, 1) - start
+  const at = day ? Date.UTC(year, month - 1, day) + DAY / 2 : (Date.UTC(year, month - 1, 1) + Date.UTC(year, month, 1)) / 2
+  return year + (at - start) / length
+}

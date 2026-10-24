@@ -4,7 +4,7 @@ import { Box, Container, Typography } from '@mui/material'
 import { getPlaceRegister, PlaceEntry } from "../../lib/registers"
 import { coordinates } from "../../labels/coordinates"
 import { languages } from "../../labels/languages"
-import { formatDate } from "../../lib/dates"
+import { formatDate, yearFraction } from "../../lib/dates"
 import { Marker, WorldMap } from "../../components/worldMap"
 import { Initials, Letter, byInitial, count, entryStyle } from "../../components/register"
 import { Chapter, StoryList } from "../../components/narrative"
@@ -108,6 +108,8 @@ export default function PlacesPage() {
     count: place.printings,
     about: `${printingsOf(place.printings, place.ads)} in ${count(place.periodicals.length, 'periodical')}, ${inLanguages(place.languages)}`,
     group: groupOf(place.languages),
+    times: place.periodicals.flatMap(periodical => periodical.printings)
+      .map(printing => yearFraction([...printing.dates].sort()[0])),
     years: place.years.map(({ year, printings, languages }) => ({
       year,
       count: printings,

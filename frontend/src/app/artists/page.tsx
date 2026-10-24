@@ -85,7 +85,7 @@ export default function ArtistsPage() {
         </>}
       </Typography>
 
-      <ArtistsCloud names={cloud.names} height={cloud.height} years={years} chapters={chapters} />
+      <ArtistsCloud names={cloud.names} height={cloud.height} years={years} h={h} chapters={chapters} />
 
       <StoryList chapters={chapters} />
 

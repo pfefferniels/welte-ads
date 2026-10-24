@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { dateList, formatDate, formatDates } from "./dates"
+import { dateList, formatDate, formatDates, yearFraction } from "./dates"
 
 describe("formatDate", () => {
   it("gives a date as precisely as it is known", () => {
@@ -38,5 +38,14 @@ describe("formatDates", () => {
 
   it("keeps a month or a year alone", () => {
     expect(formatDates(["1911-10", "1911-10-01", "1911"])).toBe("1911, October 1911, 1 October 1911")
+  })
+})
+
+describe("yearFraction", () => {
+  it("places a date in its year, a month or a year alone in its middle", () => {
+    expect(yearFraction("1908-01-01")).toBeCloseTo(1908 + 0.5 / 366, 5)
+    expect(yearFraction("1926-03")).toBeCloseTo(1926 + (31 + 28 + 15.5) / 365, 5)
+    expect(yearFraction("1921")).toBe(1921.5)
+    expect(yearFraction("1930-07-03")).toBeGreaterThan(1930.5)
   })
 })

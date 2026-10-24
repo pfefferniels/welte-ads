@@ -2,7 +2,7 @@
 
 import React, { useMemo, useState } from "react"
 import { Box } from "@mui/material"
-import { CLOUD_WIDTH, fontSize } from "../../lib/cloud"
+import { CLOUD_WIDTH, fontSize, namedAround, rateAt } from "../../lib/cloud"
 import type { CloudName } from "../../lib/cloud"
 import type { YearTotal } from "../../lib/artists"
 import { artistLink } from "../../lib/anchors"
@@ -14,27 +14,31 @@ interface Props {
   // the height of the cloud, in its units
   height: number
   years: YearTotal[]
+  // the width of the kernel that smooths the mentions, in years
+  h: number
   chapters: Chapter[]
 }
 
-const PLAY = 1000 // how long a year is shown while playing, in milliseconds
-const MUTED = '#8a8a8a'
+const SPEED = 1 // how fast the timeline plays, in years per second
+// the grey of a name that no ad around the time names (138 of 255)
+const MUTED = 138
 
 const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? '' : 's'}`
 const rateOf = (rate: number) => rate.toLocaleString('en-GB', { maximumFractionDigits: 1 })
 
 /**
  * The names of the artists, each in its place, as large as the ads named
- * the artist around the year shown, or in all years together; black where
- * an ad of the year names the artist, grey where only the years around do.
+ * the artist around the time shown, or in all years together; black where
+ * an ad of the year names the artist, grey where only the years around do,
+ * and in between as the time comes near such a year or leaves it.
  */
-export default function ArtistsCloud({ names, height, years, chapters }: Props) {
+export default function ArtistsCloud({ names, height, years, h, chapters }: Props) {
   const first = years[0].year
   const last = years[years.length - 1].year
   const [story, setStory] = useState(true)
   const stops = useMemo(() => story ? chapters.map(chapter => chapter.from) : [], [story, chapters])
-  const playback = usePlayback(first, last, PLAY, stops)
-  const year = playback.year
+  const playback = usePlayback(first, last, SPEED, stops)
+  const { time, year } = playback
   const chapter = story ? chapterAt(chapters, year) : undefined
   const focus = new Set(chapter?.focus)
 
@@ -50,19 +54,21 @@ export default function ArtistsCloud({ names, height, years, chapters }: Props) 
   const side = under(true) <= under(false) ? 'left' : 'right'
 
   const shown = (name: CloudName) => {
-    const rate = year === null ? name.all : name.rates[year - first]
-    const named = year === null || name.named.includes(year)
-    const dead = name.died !== null && name.died < (year ?? last + 1)
+    const rate = time === null ? name.all : rateAt(name, h, time)
+    const shade = Math.round(MUTED * (1 - (time === null ? 1 : namedAround(name, time))))
+    const named = year !== null && name.years.some(y => y.year === year)
+    const dead = name.died !== null && (time ?? last + 1) >= name.died + 1
     const about = year === null
       ? `named ${plural(name.mentions, 'time')} in ${plural(name.ads, 'ad')}`
       : `${rateOf(rate)} mentions a year around ${year}${named ? `, named in an ad of ${year}` : ''}`
-    return { rate, named, dead, about: `${name.name}: ${about}${dead ? `, died ${name.died}` : ''}` }
+    return { rate, shade, dead, about: `${name.name}: ${about}${dead ? `, died ${name.died}` : ''}` }
   }
 
   return (
     <Box sx={{
       my: 2,
-      '& text': { transition: 'font-size 0.6s ease, fill 0.6s ease, opacity 0.6s ease' },
+      // while the timeline plays, the names follow it frame by frame
+      '& text': { transition: playback.playing ? 'none' : 'font-size 0.6s ease, fill 0.6s ease, opacity 0.6s ease' },
       '& a:hover text, & a:focus text': { textDecoration: 'underline' },
       '@media (prefers-reduced-motion: reduce)': { '& text': { transition: 'none' } },
     }}>
@@ -72,13 +78,13 @@ export default function ArtistsCloud({ names, height, years, chapters }: Props) 
             <svg viewBox={`0 0 ${CLOUD_WIDTH} ${height}`} width="100%" role="group"
               aria-label="The artists that the ads name" style={{ display: 'block', fontFamily: 'inherit' }}>
               {names.map(name => {
-                const { rate, named, dead, about } = shown(name)
+                const { rate, shade, dead, about } = shown(name)
                 return (
                   <a key={name.id} href={artistLink(name.id)} aria-label={about}>
                     <text x={name.x} y={name.y} textAnchor="middle" dominantBaseline="central"
                       style={{
                         fontSize: fontSize(rate),
-                        fill: named ? '#000' : MUTED,
+                        fill: `rgb(${shade}, ${shade}, ${shade})`,
                         opacity: focus.size && !focus.has(name.id) ? 0.3 : 1,
                       }}>
                       <title>{about}</title>

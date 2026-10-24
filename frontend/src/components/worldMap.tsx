@@ -26,6 +26,9 @@ export interface Marker {
     // the counts of the years that had any, each with a line about it and
     // the group of that year
     years?: { year: number; count: number; about: string; group?: string }[]
+    // when the things counted happened, in years (1908.5 is mid-1908): in
+    // a timeline, the circle grows and shrinks with them
+    times?: number[]
 }
 
 interface WorldMapProps {
@@ -45,9 +48,13 @@ interface WorldMapProps {
 const width = 900
 const height = 500
 
-// how long a circle takes to change its size, and how long a year is shown
+// how long a circle takes to change its size between all years and a time,
+// how fast the timeline plays (in years per second), and over how much time
+// around it a circle gathers its counts (the width of a Gaussian kernel, in
+// years)
 const RESIZE = 400
-const YEAR = 1200
+const SPEED = 1 / 1.2
+const SPREAD = 0.3
 
 // the values that the legend shows: 1, the largest round number up to the
 // largest count, and one halfway between them on the logarithmic scale
@@ -70,12 +77,18 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS, grou
     const [active, setActive] = useState<{ label: string; about: string; x: number; y: number; r: number } | null>(null)
     // told, the story stops the timeline at the start of each chapter
     const [story, setStory] = useState(true)
-    const stops = useMemo(() => story ? chapters.map(chapter => chapter.from) : [], [story, chapters])
-    const playback = usePlayback(timeline?.[0]?.year ?? 0, timeline?.[timeline.length - 1]?.year ?? 0, YEAR, stops)
+    const first = timeline?.[0]?.year ?? 0
+    // playing starts at the first thing counted, so that the map is not empty
+    const start = useMemo(() => {
+        const times = markers.flatMap(marker => marker.times ?? [])
+        return times.length ? Math.max(first, Math.min(...times)) : first
+    }, [first, markers])
+    const stops = useMemo(() => story ? chapters.map(chapter => Math.max(chapter.from, start)) : [], [story, chapters, start])
+    const playback = usePlayback(first, timeline?.[timeline.length - 1]?.year ?? 0, SPEED, stops, start)
     const chapter = story ? chapterAt(chapters, playback.year) : undefined
-    // sizes the circles for a year, or for all years, once the map is drawn
-    const showYearRef = useRef<(year: number | null, animate: boolean) => void>(null)
-    const yearRef = useRef<number | null>(null)
+    // sizes the circles for a time, or for all years, once the map is drawn
+    const showTimeRef = useRef<(time: number | null) => void>(null)
+    const timeRef = useRef<number | null>(null)
     // outlines the markers that the chapter is about, once the map is drawn
     const showFocusRef = useRef<(focus: Set<string>) => void>(null)
     const focusRef = useRef(new Set<string>())
@@ -103,13 +116,18 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS, grou
 
             // Scales for bubble size: logarithmic, so that the few markers
             // with large counts do not bury the many with only one or two.
-            // A year has a scale of its own, the same for every year.
+            // A time has a scale of its own, the same for every time: what
+            // a marker counts around it, each count the less the further
+            // from it, so that a circle grows and shrinks as time goes by.
             const scale = (max: number) => d3.scaleLog()
                 .domain([1, Math.max(max, 2)])
                 .range([3, 24])
+            const around = (times: number[] = [], time: number) =>
+                times.reduce((sum, at) => sum + Math.exp(-0.5 * ((time - at) / SPREAD) ** 2), 0)
             const maxCount = d3.max(markers, marker => marker.count) ?? 1
-            const maxInYear = d3.max(markers, marker => d3.max(marker.years ?? [], year => year.count)) ?? 1
-            const sizes = { all: scale(maxCount), year: scale(maxInYear) }
+            // the most a marker counts around any time, which is about one of its own
+            const maxAround = d3.max(markers, marker => d3.max(marker.times ?? [], at => around(marker.times, at))) ?? 1
+            const sizes = { all: scale(maxCount), time: scale(maxAround) }
 
             // Draw the map
             const map = svg.append("g")
@@ -203,18 +221,28 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS, grou
                     .attr("fill-opacity", .8)
             }
 
-            // Size and colour the circles for a year, or for all years; a
-            // marker without a count in the year is hidden. The smaller
-            // circles lie on top.
+            // Size and colour the circles for a time, or for all years. A
+            // marker that counts less than one around the time shrinks
+            // towards nothing and is hidden below a trace; the line about it
+            // and its colour are those of the year nearest to the time. The
+            // smaller circles lie on top.
             const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches
             const colourOf = (group?: string) => groups.find(g => g.key === group)?.color ?? '#000'
-            const showYear = (year: number | null, animate: boolean) => {
-                const size = year === null ? sizes.all : sizes.year
+            let shown: 'all' | 'time' | null = null
+            const showTime = (time: number | null) => {
+                const size = time === null ? sizes.all : sizes.time
                 for (const point of points) {
-                    const now = point.years?.find(y => y.year === year)
-                    point.r = year === null ? size(point.count) : now ? size(now.count) : 0
-                    point.now = year === null ? point.about : now?.about ?? ''
-                    point.colour = colourOf(year === null ? point.group : now?.group)
+                    if (time === null) {
+                        point.r = size(point.count)
+                        point.now = point.about
+                        point.colour = colourOf(point.group)
+                        continue
+                    }
+                    const count = around(point.times, time)
+                    const near = d3.least(point.years ?? [], y => Math.abs(time - y.year - 0.5))
+                    point.r = count >= 1 ? size(count) : count >= 0.03 ? size(1) * count : 0
+                    point.now = near?.about ?? ''
+                    point.colour = colourOf(near?.group ?? point.group)
                 }
                 links
                     .sort((a, b) => b.r - a.r)
@@ -223,13 +251,17 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS, grou
                 circles
                     .attr("fill", d => d.colour)
                     .attr("stroke", d => d.colour)
-                if (animate && !still) circles.transition().duration(RESIZE).attr("r", d => d.r)
+                // from a time to all years the circles change in a moment;
+                // in a timeline they follow the time frame by frame
+                if (time === null && shown === 'time' && !still) circles.transition().duration(RESIZE).attr("r", d => d.r)
                 else circles.interrupt().attr("r", d => d.r)
-                drawLegend(size, year === null ? maxCount : maxInYear, year === null ? unit : `${unit} in a year`)
+                const mode = time === null ? 'all' : 'time'
+                if (mode !== shown) drawLegend(size, time === null ? maxCount : maxAround, time === null ? unit : `${unit} around the time`)
+                shown = mode
                 setActive(null)
             }
-            showYear(yearRef.current, false)
-            showYearRef.current = showYear
+            showTime(timeRef.current)
+            showTimeRef.current = showTime
             const showFocus = (focus: Set<string>) => links.classed("focus", d => focus.has(d.href))
             showFocus(focusRef.current)
             showFocusRef.current = showFocus
@@ -256,15 +288,15 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS, grou
             cancelled = true
             svg.on(".zoom", null)
             zoomRef.current = null
-            showYearRef.current = null
+            showTimeRef.current = null
             showFocusRef.current = null
         }
     }, [markers, unit, groups])
 
     useEffect(() => {
-        yearRef.current = playback.year
-        showYearRef.current?.(playback.year, true)
-    }, [playback.year])
+        timeRef.current = playback.time
+        showTimeRef.current?.(playback.time)
+    }, [playback.time])
 
     useEffect(() => {
         focusRef.current = new Set(chapter?.focus)

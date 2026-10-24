@@ -77,28 +77,39 @@ export function layoutCloud(items: CloudItem[]): { places: Map<string, { x: numb
   return { places, height: Math.ceil(Math.max(...placed.map(box => box.y + box.h / 2))) + MARGIN }
 }
 
-/** A name in the cloud, with what it shows in every year. */
-export interface CloudName {
-  id: string
+/** A name in the cloud, with what it shows at any time. */
+export interface CloudName extends ArtistTimeline {
   label: string
   // the name as the register gives it, e.g. "Paderewski, Ignacy Jan"
   name: string
   x: number
   y: number
-  // the smoothed mentions per year, from the first year of the timeline on
-  rates: number[]
   // the rate at which the name is shown for all years at once: the share
   // of its mentions, scaled so that the most named artist is shown as large
-  // as any name in any year
+  // as any name at any time
   all: number
-  // the years in which ads named the artist
-  named: number[]
   died: number | null
-  mentions: number
   ads: number
 }
 
-/** The names of the artists in the cloud, placed, with their rates in every year of the timeline. */
+/**
+ * The mentions per year around a time, in years (1908.5 is mid-1908): the
+ * mentions of an ad count in the middle of the year of its first printing.
+ */
+export const rateAt = (artist: ArtistTimeline, h: number, time: number) => smoothedMentions(artist, h, time - 0.5)
+
+/**
+ * How near a time is to a year in which an ad named the artist: 1 in the
+ * middle of such a year, fading to 0 within half a year or so.
+ */
+export const namedAround = (artist: ArtistTimeline, time: number) =>
+  Math.max(0, ...artist.years.map(y => Math.exp(-0.5 * ((time - y.year - 0.5) / 0.3) ** 2)))
+
+/** The highest rate of an artist at any time of a timeline, looked at four times a year. */
+export const peakRate = (artist: ArtistTimeline, h: number, first: number, last: number) =>
+  Math.max(...Array.from({ length: 4 * (last - first + 1) + 1 }, (_, i) => rateAt(artist, h, first + i / 4)))
+
+/** The names of the artists in the cloud, placed, with what they need to show any time of the timeline. */
 export function artistCloud(
   artists: (ArtistTimeline & { name: string })[],
   years: YearTotal[],
@@ -106,23 +117,19 @@ export function artistCloud(
   deaths: Record<string, number>,
 ): { names: CloudName[]; height: number } {
   const first = years[0].year
-  const span = Array.from({ length: years[years.length - 1].year - first + 1 }, (_, i) => first + i)
-  const rated = artists.map(artist => ({
-    artist,
-    rates: span.map(year => Math.round(100 * smoothedMentions(artist, h, year)) / 100),
-  }))
-  const top = Math.max(...rated.flatMap(({ rates }) => rates))
+  const last = years[years.length - 1].year
+  const peaks = artists.map(artist => peakRate(artist, h, first, last))
+  const top = Math.max(...peaks)
   const most = Math.max(...artists.map(artist => artist.mentions))
 
-  const names = rated.map(({ artist, rates }) => ({
+  const names = artists.map(artist => ({
     id: artist.id,
+    mentions: artist.mentions,
+    years: artist.years,
     label: surnameOf(artist.name),
     name: artist.name,
-    rates,
     all: Math.round(100 * top * artist.mentions / most) / 100,
-    named: artist.years.map(y => y.year),
     died: deaths[artist.id] ?? null,
-    mentions: artist.mentions,
     ads: artist.years.reduce((sum, y) => sum + y.ads, 0),
   }))
   const meanYear = (artist: ArtistTimeline) =>
@@ -131,8 +138,8 @@ export function artistCloud(
     id: name.id,
     label: name.label,
     meanYear: meanYear(artists[i]),
-    maxRate: Math.max(name.all, ...name.rates),
-    dagger: name.died !== null && name.died < span[span.length - 1],
+    maxRate: Math.max(name.all, peaks[i]),
+    dagger: name.died !== null && name.died < last,
   })))
   return { names: names.map(name => ({ ...name, ...places.get(name.id)! })), height }
 }
