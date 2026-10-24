@@ -9,3 +9,6 @@ frontend/tsconfig.tsbuildinfo
 
 # downloaded schemas
 frontend/.cache/
+
+# Python
+__pycache__/
