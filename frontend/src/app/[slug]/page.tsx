@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography"
 import { getAllAds, getAdBySlug, getTopics } from "../../lib/tei"
 import { names } from "../../labels/names"
 import { EDITOR } from "../../lib/site"
+import { currentRelease } from "../../lib/release"
 import EditionCeteicean from "../../components/tei/EditionCeteicean"
 import Citation from "../../components/citation"
 
@@ -78,11 +79,12 @@ export default async function AdPage({ params }: { params: Promise<{ slug: strin
         <div dangerouslySetInnerHTML={{ __html: ad.textHtml }} />
       </EditionCeteicean>
       <Citation
+        slug={ad.slug}
         title={ad.title}
         company={company}
         date={ad.titleSub}
-        path={`/${ad.slug}/`}
         status={ad.status}
+        year={currentRelease().date?.slice(0, 4) || null}
       />
     </Container>
   )

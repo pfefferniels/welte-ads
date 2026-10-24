@@ -48,7 +48,8 @@ export default function DataPage() {
         the DOI of the collection, <a href={`https://doi.org/${DOI}`}>{DOI}</a>,
         always leads to the newest version. The releases and the history of
         the files are also kept in the <a href={`${REPOSITORY}/releases`}>repository
-        on GitHub</a>. Each advertisement page suggests how to cite it; the
+        on GitHub</a>. Each advertisement page suggests how to cite it, in the
+        styles of Chicago, MLA and APA, in German style and as BibTeX; the
         collection as a whole is cited as
         its <a href={`${REPOSITORY}/blob/main/CITATION.cff`}>citation file</a> says.
       </Typography>
