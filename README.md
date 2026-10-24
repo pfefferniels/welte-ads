@@ -50,6 +50,19 @@ zones), and open the page with `?debug` (`npm run dev`, then
 `http://localhost:3000/ad009/?debug`). This outlines the zones over the scan;
 `?debug=facs` shows only the scan. `frontend/public` is not committed.
 
+## Narratives
+
+The timelines of the places map and of the artists cloud tell a story in
+chapters. Each chapter is a Markdown file in
+`frontend/src/narratives/places/` or `frontend/src/narratives/artists/`,
+named after its first year (e.g. `1915-the-war.md`). Its front matter gives
+the years it covers (`from`, `to`), its `title`, its `focus` (the places by
+their GeoNames URI, the artists by their GND URI), the `ads` that show it
+(by slug) and, where the text explains, its `sources` (`title` and `url`).
+The figures under a chapter are computed. `npm test` fails when chapters
+overlap, lie outside the timeline, or name an ad, place or artist that the
+collection does not have.
+
 ## Releases
 
 The site always shows the current state of `main`. A numbered release fixes a

@@ -64,7 +64,7 @@ export function artistTimelines(ads: Ad[]): { years: YearTotal[]; artists: Artis
 }
 
 // the weight of a year at a distance d, for a Gaussian kernel of width h
-export const kernel = (d: number, h: number) => Math.exp(-0.5 * (d / h) ** 2)
+const kernel = (d: number, h: number) => Math.exp(-0.5 * (d / h) ** 2)
 
 /**
  * An artist's share of all mentions of artists around a year: the mentions

@@ -4,12 +4,15 @@ import React, { useEffect, useState } from "react"
 import { Box, Button, IconButton, Slider, Tooltip } from "@mui/material"
 import { Pause, PlayArrow } from "@mui/icons-material"
 
+const NO_STOPS: number[] = []
+
 /**
  * The year that a chart shows, or null for all years at once. Playing
  * steps through the years from the first to the last, one every interval
- * (in milliseconds), and stops at the last.
+ * (in milliseconds), and stops at the last; it also waits at each of the
+ * stops (memoize them, or the timer starts anew with every render).
  */
-export function usePlayback(first: number, last: number, interval: number) {
+export function usePlayback(first: number, last: number, interval: number, stops: number[] = NO_STOPS) {
   const [year, setYear] = useState<number | null>(null)
   const [playing, setPlaying] = useState(false)
 
@@ -17,20 +20,24 @@ export function usePlayback(first: number, last: number, interval: number) {
     if (!playing || year === null) return
     const timer = setTimeout(() => {
       if (year < last) setYear(year + 1)
-      else setPlaying(false)
+      // at the last year, and where a stop begins, the timeline waits
+      if (year + 1 >= last || stops.includes(year + 1)) setPlaying(false)
     }, interval)
     return () => clearTimeout(timer)
-  }, [playing, year, last, interval])
+  }, [playing, year, last, interval, stops])
 
   return {
     first,
     last,
     year,
     playing,
-    // from where it was paused, or else from the first year
+    // from where it was paused, or else from the first year, which may be
+    // a stop itself
     play: () => {
-      if (year === null || year >= last) setYear(first)
-      setPlaying(true)
+      if (year === null || year >= last) {
+        setYear(first)
+        setPlaying(!stops.includes(first))
+      } else setPlaying(true)
     },
     pause: () => setPlaying(false),
     // a year, or null for all years
@@ -53,14 +60,15 @@ interface TimelineProps {
  * show all years again. */
 export const Timeline = ({ playback, about }: TimelineProps) => {
   const { first, last, year, playing } = playback
+  const action = playing ? 'Pause' : year !== null && year < last ? 'Continue' : 'Play the years'
   const marks = Array.from({ length: last - first + 1 }, (_, i) => first + i)
     .filter(year => year % 5 === 0)
     .map(year => ({ value: year, label: String(year) }))
 
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', columnGap: 2, py: 0.5 }}>
-      <Tooltip title={playing ? 'Pause' : 'Play the years'}>
-        <IconButton aria-label={playing ? 'Pause' : 'Play the years'}
+      <Tooltip title={action}>
+        <IconButton aria-label={action}
           onClick={playing ? playback.pause : playback.play}>
           {playing ? <Pause /> : <PlayArrow />}
         </IconButton>

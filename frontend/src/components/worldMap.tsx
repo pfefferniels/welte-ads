@@ -1,10 +1,11 @@
 "use client"
 
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useMemo, useRef, useState } from "react"
 import * as d3 from 'd3'
 import { Box, IconButton, Stack, Tooltip } from "@mui/material"
 import { Add, CenterFocusStrong, Remove } from "@mui/icons-material"
 import { Timeline, usePlayback } from "./timeline"
+import { Chapter, StoryCard, StoryChips, chapterAt } from "./narrative"
 
 export interface Coordinate {
     lat: number
@@ -31,6 +32,8 @@ interface WorldMapProps {
     // the years to play, each with a line about it; without them, the map
     // shows all years at once only
     timeline?: { year: number; about: string }[]
+    // the story that the timeline tells, its focus by the markers' hrefs
+    chapters?: Chapter[]
 }
 
 const width = 900
@@ -53,15 +56,24 @@ const legendValues = (max: number) => {
     return Array.from(new Set([1, middle, top]))
 }
 
-export const WorldMap = ({ markers, unit, timeline }: WorldMapProps) => {
+const NO_CHAPTERS: Chapter[] = []
+
+export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS }: WorldMapProps) => {
     const svgRef = useRef<SVGSVGElement>(null)
     const zoomRef = useRef<d3.ZoomBehavior<SVGSVGElement, unknown>>(null)
     // the marker pointed at, what it shows and where it is on the map
     const [active, setActive] = useState<{ label: string; about: string; x: number; y: number; r: number } | null>(null)
-    const playback = usePlayback(timeline?.[0]?.year ?? 0, timeline?.[timeline.length - 1]?.year ?? 0, YEAR)
+    // told, the story stops the timeline at the start of each chapter
+    const [story, setStory] = useState(true)
+    const stops = useMemo(() => story ? chapters.map(chapter => chapter.from) : [], [story, chapters])
+    const playback = usePlayback(timeline?.[0]?.year ?? 0, timeline?.[timeline.length - 1]?.year ?? 0, YEAR, stops)
+    const chapter = story ? chapterAt(chapters, playback.year) : undefined
     // sizes the circles for a year, or for all years, once the map is drawn
     const showYearRef = useRef<(year: number | null, animate: boolean) => void>(null)
     const yearRef = useRef<number | null>(null)
+    // outlines the markers that the chapter is about, once the map is drawn
+    const showFocusRef = useRef<(focus: Set<string>) => void>(null)
+    const focusRef = useRef(new Set<string>())
 
     useEffect(() => {
         if (!svgRef.current) return
@@ -211,6 +223,9 @@ export const WorldMap = ({ markers, unit, timeline }: WorldMapProps) => {
             }
             showYear(yearRef.current, false)
             showYearRef.current = showYear
+            const showFocus = (focus: Set<string>) => links.classed("focus", d => focus.has(d.href))
+            showFocus(focusRef.current)
+            showFocusRef.current = showFocus
 
             // Zoom with the wheel, by pinching or with the buttons; pan by dragging
             const zoom = d3.zoom<SVGSVGElement, unknown>()
@@ -235,6 +250,7 @@ export const WorldMap = ({ markers, unit, timeline }: WorldMapProps) => {
             svg.on(".zoom", null)
             zoomRef.current = null
             showYearRef.current = null
+            showFocusRef.current = null
         }
     }, [markers, unit])
 
@@ -242,6 +258,11 @@ export const WorldMap = ({ markers, unit, timeline }: WorldMapProps) => {
         yearRef.current = playback.year
         showYearRef.current?.(playback.year, true)
     }, [playback.year])
+
+    useEffect(() => {
+        focusRef.current = new Set(chapter?.focus)
+        showFocusRef.current?.(focusRef.current)
+    }, [chapter])
 
     const zoomBy = (factor: number) => {
         if (!svgRef.current || !zoomRef.current) return
@@ -254,90 +275,104 @@ export const WorldMap = ({ markers, unit, timeline }: WorldMapProps) => {
     }
 
     return (<>
-        <Box sx={{
-            position: 'relative',
-            // the label of a marker must not widen the page
-            overflow: 'hidden',
-            '& a circle': {
-                fill: '#000',
-                fillOpacity: 0.15,
-                stroke: '#000',
-                strokeWidth: 0.75,
-                cursor: 'pointer',
-            },
-            '& a:hover circle, & a:focus circle': {
-                fillOpacity: 0.45,
-            },
-            '& a.trace circle': {
-                fill: 'none',
-                stroke: '#8a8a8a',
-            },
-        }}>
-            <svg
-                ref={svgRef}
-                width={width}
-                height={height}
-                viewBox={`0 0 ${width} ${height}`}
-                style={{ display: 'block', maxWidth: '100%', height: 'auto', cursor: 'grab' }}
-            />
-            {active && (
-                <Box role="status" sx={{
-                    position: 'absolute',
-                    left: `${100 * active.x / width}%`,
-                    top: `${100 * (active.y - active.r) / height}%`,
-                    // near an edge, the label extends away from it
-                    transform: `translate(${active.x < width / 3 ? '-12px' : active.x > 2 * width / 3 ? 'calc(-100% + 12px)' : '-50%'}, calc(-100% - 6px))`,
-                    pointerEvents: 'none',
-                    backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                    border: 1,
-                    borderColor: 'divider',
-                    borderRadius: 1,
-                    boxShadow: 1,
-                    px: 1,
-                    py: 0.5,
-                    fontSize: '0.9rem',
-                    lineHeight: 1.3,
-                    whiteSpace: 'nowrap',
-                }}>
-                    <strong>{active.label}</strong>
-                    <br />
-                    {active.about}
-                </Box>
+        <Box sx={{ position: 'relative' }}>
+            <Box sx={{
+                position: 'relative',
+                // the label of a marker must not widen the page
+                overflow: 'hidden',
+                '& a circle': {
+                    fill: '#000',
+                    fillOpacity: 0.15,
+                    stroke: '#000',
+                    strokeWidth: 0.75,
+                    cursor: 'pointer',
+                },
+                '& a:hover circle, & a:focus circle': {
+                    fillOpacity: 0.45,
+                },
+                '& a.trace circle': {
+                    fill: 'none',
+                    stroke: '#8a8a8a',
+                },
+                '& a.focus circle': {
+                    stroke: '#000',
+                    strokeWidth: 2,
+                },
+            }}>
+                <svg
+                    ref={svgRef}
+                    width={width}
+                    height={height}
+                    viewBox={`0 0 ${width} ${height}`}
+                    style={{ display: 'block', maxWidth: '100%', height: 'auto', cursor: 'grab' }}
+                />
+                {active && (
+                    <Box role="status" sx={{
+                        position: 'absolute',
+                        left: `${100 * active.x / width}%`,
+                        top: `${100 * (active.y - active.r) / height}%`,
+                        // near an edge, the label extends away from it
+                        transform: `translate(${active.x < width / 3 ? '-12px' : active.x > 2 * width / 3 ? 'calc(-100% + 12px)' : '-50%'}, calc(-100% - 6px))`,
+                        pointerEvents: 'none',
+                        backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                        border: 1,
+                        borderColor: 'divider',
+                        borderRadius: 1,
+                        boxShadow: 1,
+                        px: 1,
+                        py: 0.5,
+                        fontSize: '0.9rem',
+                        lineHeight: 1.3,
+                        whiteSpace: 'nowrap',
+                    }}>
+                        <strong>{active.label}</strong>
+                        <br />
+                        {active.about}
+                    </Box>
+                )}
+                {playback.year !== null && (
+                    <Box aria-hidden="true" sx={{
+                        position: 'absolute',
+                        left: 12,
+                        top: 4,
+                        pointerEvents: 'none',
+                        fontSize: 'clamp(1.5rem, 6vw, 3rem)',
+                        fontWeight: 600,
+                        fontVariantNumeric: 'tabular-nums',
+                        lineHeight: 1,
+                    }}>
+                        {playback.year}
+                    </Box>
+                )}
+                <Stack sx={{ position: 'absolute', top: 8, right: 8 }}>
+                    <Tooltip title="Zoom in" placement="left">
+                        <IconButton size="small" aria-label="Zoom in" onClick={() => zoomBy(2)}>
+                            <Add fontSize="small" />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="Zoom out" placement="left">
+                        <IconButton size="small" aria-label="Zoom out" onClick={() => zoomBy(0.5)}>
+                            <Remove fontSize="small" />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="Show the whole world" placement="left">
+                        <IconButton size="small" aria-label="Show the whole world" onClick={resetZoom}>
+                            <CenterFocusStrong fontSize="small" />
+                        </IconButton>
+                    </Tooltip>
+                </Stack>
+            </Box>
+            {chapter && (
+                <StoryCard key={`${chapter.id}-${playback.playing}`} chapter={chapter} playing={playback.playing}
+                    onHide={() => setStory(false)} />
             )}
-            {playback.year !== null && (
-                <Box aria-hidden="true" sx={{
-                    position: 'absolute',
-                    left: 12,
-                    top: 4,
-                    pointerEvents: 'none',
-                    fontSize: 'clamp(1.5rem, 6vw, 3rem)',
-                    fontWeight: 600,
-                    fontVariantNumeric: 'tabular-nums',
-                    lineHeight: 1,
-                }}>
-                    {playback.year}
-                </Box>
-            )}
-            <Stack sx={{ position: 'absolute', top: 8, right: 8 }}>
-                <Tooltip title="Zoom in" placement="left">
-                    <IconButton size="small" aria-label="Zoom in" onClick={() => zoomBy(2)}>
-                        <Add fontSize="small" />
-                    </IconButton>
-                </Tooltip>
-                <Tooltip title="Zoom out" placement="left">
-                    <IconButton size="small" aria-label="Zoom out" onClick={() => zoomBy(0.5)}>
-                        <Remove fontSize="small" />
-                    </IconButton>
-                </Tooltip>
-                <Tooltip title="Show the whole world" placement="left">
-                    <IconButton size="small" aria-label="Show the whole world" onClick={resetZoom}>
-                        <CenterFocusStrong fontSize="small" />
-                    </IconButton>
-                </Tooltip>
-            </Stack>
         </Box>
         {timeline && (
             <Timeline playback={playback} about={timeline.find(entry => entry.year === playback.year)?.about} />
+        )}
+        {chapters.length > 0 && (
+            <StoryChips chapters={chapters} current={chapter} story={story} onStory={setStory}
+                onPick={picked => { setStory(true); playback.show(picked.from) }} />
         )}
     </>)
 }

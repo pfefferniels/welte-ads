@@ -6,6 +6,9 @@ import { coordinates } from "../../labels/coordinates"
 import { formatDate } from "../../lib/dates"
 import { Marker, WorldMap } from "../../components/worldMap"
 import { Initials, Letter, byInitial, count, entryStyle } from "../../components/register"
+import { Chapter, StoryList } from "../../components/narrative"
+import { adsOf, getChapters, placeFigures } from "../../lib/narratives"
+import { getAllMetadata } from "../../lib/tei"
 
 export const metadata = {
   title: 'Places',
@@ -97,19 +100,37 @@ export default function PlacesPage() {
       about: printings ? `${count(printings, 'printing')} in ${count(inYear.length, 'place')}` : 'no printings in the collection',
     }
   })
+  // the story, with the places it is about as the map links them
+  const idOf = new Map(places.map(place => [place.ref, place.id]))
+  const ads = getAllMetadata()
+  const chapters: Chapter[] = getChapters('places').map(chapter => {
+    const figures = placeFigures(places, chapter.from, chapter.to)
+    return {
+      ...chapter,
+      focus: chapter.focus.map(ref => `#${idOf.get(ref)}`),
+      figures: figures.printings
+        ? `${printingsOf(figures.printings, figures.ads)} in ${count(figures.places, 'place')}`
+        : 'no printings in the collection',
+      ads: adsOf(chapter.ads, ads),
+    }
+  })
 
   return (
     <Container component="main" maxWidth="md">
       <h1>Places</h1>
 
       <Box id="map" sx={{ scrollMarginTop: '1rem' }}>
-        <WorldMap markers={markers} unit="Printings" timeline={timeline} />
+        <WorldMap markers={markers} unit="Printings" timeline={timeline} chapters={chapters} />
       </Box>
       <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1, mb: 2 }}>
         A circle&apos;s size shows how many printings appeared in a place; click it for the place below.
         Play the years to see where the ads were printed year by year; a small ring marks a place
-        whose printings all lie in earlier years.
+        whose printings all lie in earlier years. With the story on, the timeline stops at each
+        chapter and tells what the map shows. The map shows where this collection found ads, and that
+        depends on what is digitised: many Australian, Dutch and Swedish papers are, few German ones.
       </Typography>
+
+      <StoryList chapters={chapters} />
 
       <Initials initials={byInitial(places).map(([initial]) => initial)} />
 

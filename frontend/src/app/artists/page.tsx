@@ -7,8 +7,12 @@ import { getArtistRegister, PersonEntry } from "../../lib/registers"
 import { GND } from "../../lib/anchors"
 import { formatDate } from "../../lib/dates"
 import { names } from "../../labels/names"
-import { Entry, Initials, Letter, byInitial } from "../../components/register"
-import ArtistsChart from "./ArtistsChart"
+import { Entry, Initials, Letter, byInitial, count } from "../../components/register"
+import { Chapter, StoryList } from "../../components/narrative"
+import { artistCloud } from "../../lib/cloud"
+import { adsOf, getChapters } from "../../lib/narratives"
+import { deaths } from "../../labels/deaths"
+import ArtistsCloud from "./ArtistsCloud"
 
 export const metadata = {
   title: 'Artists',
@@ -50,7 +54,17 @@ export default function ArtistsPage() {
   // the distribution has no small head
   const head = headOf(named.map(artist => artist.mentions))
   const shown = head ? named.filter(artist => head.isHead(artist.mentions)) : named
+  const cloud = artistCloud(shown, years, h, deaths)
   const register = byInitial(getArtistRegister())
+  const chapters: Chapter[] = getChapters('artists').map(chapter => {
+    const inYears = years.filter(year => chapter.from <= year.year && year.year <= chapter.to)
+    const sum = (key: 'ads' | 'mentions') => inYears.reduce((total, year) => total + year[key], 0)
+    return {
+      ...chapter,
+      figures: `${count(sum('ads'), 'ad')}, ${count(sum('mentions'), 'mention')} of artists`,
+      ads: adsOf(chapter.ads, ads),
+    }
+  })
 
   return (
     <Container component="main" maxWidth="md">
@@ -59,19 +73,21 @@ export default function ArtistsPage() {
         How much of the advertising each artist received over time.
       </Typography>
       <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-        Smoothed over neighbouring years (Gaussian kernel, σ = {h.toLocaleString('en-GB')} years,
-        chosen by cross-validation).
+        A name&apos;s size shows how often the ads named the artist around the year shown, smoothed
+        over neighbouring years (Gaussian kernel, σ = {h.toLocaleString('en-GB')} years, chosen by
+        cross-validation), or in all years together. A name is black when an ad of the year names
+        the artist and grey when only the years around it do; † marks an artist who had died.
+        Artists named early stand on the left, those named late on the right.
         {head && <>
           {' '}Shown are the {shown.length} of {named.length} artists mentioned more often
           than average ({format(head.mean)} times;{' '}
           <a href="https://doi.org/10.1080/00330124.2012.700499">head/tail breaks</a>).
         </>}
-        {' '}Play the years to see the mentions behind the bands come in: a dot is an artist&apos;s
-        mentions in one year, and the bell under the moving line shows how much the years around it
-        count in the smoothing.
       </Typography>
 
-      <ArtistsChart years={years} artists={shown} h={h} />
+      <ArtistsCloud names={cloud.names} height={cloud.height} years={years} chapters={chapters} />
+
+      <StoryList chapters={chapters} />
 
       <Typography variant="h5" component="h2" sx={{ mt: 5, mb: 1 }}>
         All artists
