@@ -66,6 +66,9 @@ export default function ArtistsPage() {
           than average ({format(head.mean)} times;{' '}
           <a href="https://doi.org/10.1080/00330124.2012.700499">head/tail breaks</a>).
         </>}
+        {' '}Play the years to see the mentions behind the bands come in: a dot is an artist&apos;s
+        mentions in one year, and the bell under the moving line shows how much the years around it
+        count in the smoothing.
       </Typography>
 
       <ArtistsChart years={years} artists={shown} h={h} />

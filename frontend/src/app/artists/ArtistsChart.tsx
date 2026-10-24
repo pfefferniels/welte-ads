@@ -1,11 +1,12 @@
 "use client"
 
-import React, { useMemo, useState } from "react"
+import React, { useEffect, useMemo, useRef, useState } from "react"
 import { Box } from "@mui/material"
 import { area, interpolateLab } from "d3"
 import theme from "../../theme"
-import { runsOf, smoothedMentions, smoothedShare } from "../../lib/artists"
+import { kernel, runsOf, smoothedMentions, smoothedShare } from "../../lib/artists"
 import { artistLink } from "../../lib/anchors"
+import { Timeline, usePlayback } from "../../components/timeline"
 import type { ArtistTimeline, YearTotal } from "../../lib/artists"
 
 interface Artist extends ArtistTimeline {
@@ -28,6 +29,8 @@ const MAX_THICKNESS = ROW - 4
 const BOTTOM = 72 // the axis and the counts of the years
 const STEP = 0.1 // of the curves, in years
 const STOPS = 5 // a colour every fifth step, every half year
+const PLAY = 1000 // how long a year is shown while playing, in milliseconds
+const BELL = 10 // the height of the kernel, above the axis
 
 const GRID = '#e4e4e4'
 const MUTED = '#6b6b6b'
@@ -52,6 +55,11 @@ const meanYear = (artist: Artist) =>
 
 export default function ArtistsChart({ years, artists, h }: Props) {
   const [active, setActive] = useState<{ artist: Artist; year: number } | null>(null)
+  const playback = usePlayback(years[0].year, years[years.length - 1].year, PLAY)
+  // the year played
+  const at = playback.year
+  // the chart, which scrolls sideways where it is wider than the screen
+  const scrollerRef = useRef<HTMLDivElement>(null)
 
   const runs = useMemo(() => runsOf(years), [years])
   const totalOf = new Map(years.map(y => [y.year, y]))
@@ -112,117 +120,171 @@ export default function ArtistsChart({ years, artists, h }: Props) {
   const activeRow = active ? rows.indexOf(active.artist) : -1
   const activeFacts = active && facts(active.artist, active.year)
 
-  return (
-    <Box sx={{ overflowX: 'auto', my: 2 }}>
-      <Box sx={{ position: 'relative', minWidth: 720 }}>
-        <svg viewBox={`0 0 ${WIDTH} ${height}`} width="100%" role="group"
-          aria-label="Share of the mentions of artists over time" style={{ display: 'block', fontFamily: 'inherit' }}>
-          {/* the gaps between the spans of years with ads */}
-          {runs.slice(1).map(([from], r) => (
-            <Gap key={from} from={runs[r][1] + 1} to={from - 1}
-              left={x(runs[r][1] + 0.5)} right={x(from - 0.5)} top={TOP} bottom={axis} />
-          ))}
-          <text x={WIDTH - 4} y={TOP - 8} fontSize={11} fill={MUTED} textAnchor="end">all</text>
+  // the weights of the years around the year played, from three widths of
+  // the kernel before it to three after it
+  const yearWidth = x(1) - x(0)
+  const bell = area<number>()
+    .x(d => d * yearWidth)
+    .y0(axis)
+    .y1(d => axis - BELL * kernel(d, h))(Array.from({ length: 61 }, (_, i) => (i / 10 - 3) * h))!
+  const playedTotal = at === null ? undefined : totalOf.get(at)
+  const played = at === null ? undefined
+    : playedTotal ? `${plural(playedTotal.ads, 'ad')}, ${plural(playedTotal.mentions, 'mention')}` : 'no ads'
+  const namedIn = (artist: Artist, year: number | null) => artist.years.some(y => y.year === year)
 
-          {/* the axis */}
-          <line x1={left} x2={right} y1={axis} y2={axis} stroke={MUTED} />
-          {ticks.map(year => (
-            <g key={year}>
-              <line x1={x(year)} x2={x(year)} y1={axis} y2={axis + 4} stroke={MUTED} />
-              {year % 5 === 0 && (
-                <text x={x(year)} y={axis + 16} fontSize={11} textAnchor="middle" fill={MUTED}>{year}</text>
-              )}
-            </g>
-          ))}
-          <g fontSize={11} fill={MUTED} textAnchor="middle">
-            <text x={LABELS - 10} y={axis + 38} textAnchor="end">ads</text>
-            <text x={LABELS - 10} y={axis + 54} textAnchor="end">mentions</text>
-            {years.map(year => (
-              <g key={year.year}>
-                <text x={x(year.year)} y={axis + 38}>{year.ads}</text>
-                <text x={x(year.year)} y={axis + 54}>{year.mentions}</text>
+  // where the chart scrolls sideways, the year played stays in view
+  const playedAt = at === null ? null : x(at) / WIDTH
+  useEffect(() => {
+    const scroller = scrollerRef.current
+    if (!scroller || playedAt === null || scroller.scrollWidth <= scroller.clientWidth) return
+    scroller.scrollTo({ left: playedAt * scroller.scrollWidth - scroller.clientWidth / 2, behavior: 'smooth' })
+  }, [playedAt])
+
+  return (
+    <Box sx={{
+      my: 2,
+      '& .playhead': { transition: 'transform 0.3s ease-out' },
+      '@media (prefers-reduced-motion: reduce)': { '& .playhead': { transition: 'none' } },
+    }}>
+      {/* the timeline stays in view while the rows are scrolled through */}
+      <Box sx={{ position: 'sticky', top: 0, zIndex: 2, bgcolor: 'background.default' }}>
+        <Timeline playback={playback} about={played} />
+      </Box>
+      <Box ref={scrollerRef} sx={{ overflowX: 'auto' }}>
+        <Box sx={{ position: 'relative', minWidth: 720 }}>
+          <svg viewBox={`0 0 ${WIDTH} ${height}`} width="100%" role="group"
+            aria-label="Share of the mentions of artists over time" style={{ display: 'block', fontFamily: 'inherit' }}>
+            {/* the gaps between the spans of years with ads */}
+            {runs.slice(1).map(([from], r) => (
+              <Gap key={from} from={runs[r][1] + 1} to={from - 1}
+                left={x(runs[r][1] + 0.5)} right={x(from - 0.5)} top={TOP} bottom={axis} />
+            ))}
+            <text x={WIDTH - 4} y={TOP - 8} fontSize={11} fill={MUTED} textAnchor="end">all</text>
+
+            {/* the axis */}
+            <line x1={left} x2={right} y1={axis} y2={axis} stroke={MUTED} />
+            {ticks.map(year => (
+              <g key={year}>
+                <line x1={x(year)} x2={x(year)} y1={axis} y2={axis + 4} stroke={MUTED} />
+                {year % 5 === 0 && (
+                  <text x={x(year)} y={axis + 16} fontSize={11} textAnchor="middle" fill={MUTED}>{year}</text>
+                )}
               </g>
             ))}
-          </g>
-
-          {/* the lines of the rows, interrupted where no ads appeared */}
-          {rows.map((artist, i) => runs.map(([from, to]) => (
-            <line key={`${artist.id}-${from}`} y1={y(i)} y2={y(i)} stroke={GRID} strokeWidth={0.75}
-              x1={x(from - 0.5)} x2={x(to + 0.5)} />
-          )))}
-          {active && (
-            <rect x={x(active.year - 0.5)} y={y(activeRow) - ROW / 2} width={x(1) - x(0)} height={ROW}
-              fill="#000" fillOpacity={0.05} />
-          )}
-
-          {/* the colour changes along a band; the band pointed at is outlined */}
-          {rows.map((artist, i) => bands(artist, i).map((band, r) => band && (
-            <g key={`${artist.id}-${r}`}>
-              <linearGradient id={`band-${i}-${r}`} gradientUnits="userSpaceOnUse"
-                x1={x(band.from)} x2={x(band.to)} y1={0} y2={0}>
-                {band.stops.map(([t, , rate]) => (
-                  <stop key={t.toFixed(1)} offset={(t - band.from) / (band.to - band.from)} stopColor={colour(rate)} />
-                ))}
-              </linearGradient>
-              <path d={band.d} fill={`url(#band-${i}-${r})`}
-                stroke={active?.artist === artist ? theme.palette.text.primary : 'none'} strokeWidth={1.25} />
+            <g fontSize={11} fill={MUTED} textAnchor="middle">
+              <text x={LABELS - 10} y={axis + 38} textAnchor="end">ads</text>
+              <text x={LABELS - 10} y={axis + 54} textAnchor="end">mentions</text>
+              {years.map(year => (
+                <g key={year.year}>
+                  <text x={x(year.year)} y={axis + 38}>{year.ads}</text>
+                  <text x={x(year.year)} y={axis + 54}>{year.mentions}</text>
+                </g>
+              ))}
             </g>
-          )))}
 
-          {rows.map((artist, i) => (
-            <g key={artist.id}>
-              <a href={artistLink(artist.id)}>
-                <text x={LABELS - 10} y={y(i)} fontSize={14} textAnchor="end" dominantBaseline="central"
-                  fill={theme.palette.text.primary} fontWeight={active?.artist === artist ? 700 : 400}>
-                  {artist.name}
+            {/* the lines of the rows, interrupted where no ads appeared */}
+            {rows.map((artist, i) => runs.map(([from, to]) => (
+              <line key={`${artist.id}-${from}`} y1={y(i)} y2={y(i)} stroke={GRID} strokeWidth={0.75}
+                x1={x(from - 0.5)} x2={x(to + 0.5)} />
+            )))}
+            {active && (
+              <rect x={x(active.year - 0.5)} y={y(activeRow) - ROW / 2} width={x(1) - x(0)} height={ROW}
+                fill="#000" fillOpacity={0.05} />
+            )}
+
+            {/* the colour changes along a band; the band pointed at is outlined */}
+            {rows.map((artist, i) => bands(artist, i).map((band, r) => band && (
+              <g key={`${artist.id}-${r}`}>
+                <linearGradient id={`band-${i}-${r}`} gradientUnits="userSpaceOnUse"
+                  x1={x(band.from)} x2={x(band.to)} y1={0} y2={0}>
+                  {band.stops.map(([t, , rate]) => (
+                    <stop key={t.toFixed(1)} offset={(t - band.from) / (band.to - band.from)} stopColor={colour(rate)} />
+                  ))}
+                </linearGradient>
+                <path d={band.d} fill={`url(#band-${i}-${r})`}
+                  stroke={active?.artist === artist ? theme.palette.text.primary : 'none'} strokeWidth={1.25} />
+              </g>
+            )))}
+
+            {/* the year played: the later years are veiled, the bell shows how
+                much the years around it count, and a dot is an artist's
+                mentions in one year up to it, the larger the more */}
+            {at !== null && (
+              <>
+                <clipPath id="played">
+                  <rect x={left} y={0} width={right - left} height={axis + 1} />
+                </clipPath>
+                <g clipPath="url(#played)">
+                  <g className="playhead" style={{ transform: `translateX(${x(at)}px)` }}>
+                    <rect x={yearWidth / 2} y={TOP - 4} width={right - left} height={axis - TOP + 4}
+                      fill="#fff" fillOpacity={0.75} />
+                    <path d={bell} fill="#000" fillOpacity={0.12} stroke={MUTED} />
+                    <line x1={0} x2={0} y1={TOP - 4} y2={axis} stroke="#000" />
+                    <text x={0} y={TOP - 8} fontSize={11} fontWeight={700} textAnchor="middle">{at}</text>
+                  </g>
+                </g>
+                {rows.map((artist, i) => artist.years.filter(year => year.year <= at).map(year => (
+                  <circle key={`${artist.id}-${year.year}`} cx={x(year.year)} cy={y(i)}
+                    r={1.5 + 1.25 * Math.sqrt(year.mentions)} fill="#fff" stroke="#000" />
+                )))}
+              </>
+            )}
+
+            {rows.map((artist, i) => (
+              <g key={artist.id}>
+                <a href={artistLink(artist.id)}>
+                  <text x={LABELS - 10} y={y(i)} fontSize={14} textAnchor="end" dominantBaseline="central"
+                    fill={theme.palette.text.primary} fontWeight={active?.artist === artist || namedIn(artist, at) ? 700 : 400}>
+                    {artist.name}
+                  </text>
+                </a>
+                <text x={WIDTH - 4} y={y(i)} fontSize={12} textAnchor="end" dominantBaseline="central"
+                  fill={MUTED} style={{ fontVariantNumeric: 'tabular-nums' }}>
+                  {artist.mentions}
                 </text>
-              </a>
-              <text x={WIDTH - 4} y={y(i)} fontSize={12} textAnchor="end" dominantBaseline="central"
-                fill={MUTED} style={{ fontVariantNumeric: 'tabular-nums' }}>
-                {artist.mentions}
-              </text>
-              {years.map(({ year }) => {
-                const f = facts(artist, year)
-                return (
-                  <rect key={year} x={x(year - 0.5)} y={y(i) - ROW / 2} width={x(1) - x(0)} height={ROW}
-                    fill="transparent" role="img" tabIndex={0} style={{ outline: 'none' }}
-                    aria-label={`${artist.name}, ${year}: ${f.year}; ${f.around}`}
-                    onMouseEnter={() => setActive({ artist, year })} onMouseLeave={() => setActive(null)}
-                    onFocus={() => setActive({ artist, year })} onBlur={() => setActive(null)} />
-                )
-              })}
-            </g>
-          ))}
-        </svg>
+                {years.map(({ year }) => {
+                  const f = facts(artist, year)
+                  return (
+                    <rect key={year} x={x(year - 0.5)} y={y(i) - ROW / 2} width={x(1) - x(0)} height={ROW}
+                      fill="transparent" role="img" tabIndex={0} style={{ outline: 'none' }}
+                      aria-label={`${artist.name}, ${year}: ${f.year}; ${f.around}`}
+                      onMouseEnter={() => setActive({ artist, year })} onMouseLeave={() => setActive(null)}
+                      onFocus={() => setActive({ artist, year })} onBlur={() => setActive(null)} />
+                  )
+                })}
+              </g>
+            ))}
+          </svg>
 
-        {active && activeFacts && (
-          <Box role="status" sx={{
-            position: 'absolute',
-            left: `${100 * x(active.year) / WIDTH}%`,
-            top: `${100 * (y(activeRow) - ROW / 2) / height}%`,
-            // towards the right edge, the tooltip opens inwards
-            transform: `translate(${x(active.year) > 0.7 * WIDTH ? 'calc(-100% + 24px)' : '-50%'}, calc(-100% - 6px))`,
-            pointerEvents: 'none',
-            background: '#fff',
-            border: `1px solid ${GRID}`,
-            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.12)',
-            borderRadius: 1,
-            px: 1.5, py: 0.75,
-            fontSize: '0.95rem',
-            lineHeight: 1.35,
-            whiteSpace: 'nowrap',
-            zIndex: 1,
-          }}>
-            <strong>{active.artist.name}</strong>, {active.year}
-            <br />
-            {activeFacts.year}
-            <br />
-            <Box component="span" sx={{ color: 'text.secondary' }}>{activeFacts.around}</Box>
-          </Box>
-        )}
+          {active && activeFacts && (
+            <Box role="status" sx={{
+              position: 'absolute',
+              left: `${100 * x(active.year) / WIDTH}%`,
+              top: `${100 * (y(activeRow) - ROW / 2) / height}%`,
+              // towards the right edge, the tooltip opens inwards
+              transform: `translate(${x(active.year) > 0.7 * WIDTH ? 'calc(-100% + 24px)' : '-50%'}, calc(-100% - 6px))`,
+              pointerEvents: 'none',
+              background: '#fff',
+              border: `1px solid ${GRID}`,
+              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.12)',
+              borderRadius: 1,
+              px: 1.5, py: 0.75,
+              fontSize: '0.95rem',
+              lineHeight: 1.35,
+              whiteSpace: 'nowrap',
+              zIndex: 1,
+            }}>
+              <strong>{active.artist.name}</strong>, {active.year}
+              <br />
+              {activeFacts.year}
+              <br />
+              <Box component="span" sx={{ color: 'text.secondary' }}>{activeFacts.around}</Box>
+            </Box>
+          )}
+        </Box>
+
+        <Legend max={max} half={half} most={most} colour={colour} />
       </Box>
-
-      <Legend max={max} half={half} most={most} colour={colour} />
     </Box>
   )
 }
