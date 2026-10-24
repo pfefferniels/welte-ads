@@ -198,12 +198,14 @@ const placeAnchor = (ref: string, name: string) => {
   return `place-${geonames ? geonames[1] : anchorOf(name)}`
 }
 
-// a printing with the ad that it is a printing of
-type PlacedPrinting = Printing & { ad: AdEntry }
+// a printing with the ad that it is a printing of, and the ad's language
+type PlacedPrinting = Printing & { ad: AdEntry; language: string }
 
 interface PlaceAd extends AdEntry {
   // the key of the company that the ad is by (orgName/@key)
   company: string
+  // the language of the ad: the first that its langUsage names, e.g. "de"
+  language: string
   printings: Printing[]
 }
 
@@ -218,8 +220,11 @@ export interface PlaceEntry {
   initial: string
   printings: number
   ads: number
-  // the printings of each year that had any, by the first date of a printing
-  years: { year: number; printings: number }[]
+  // the languages of the printings there, the most frequent first
+  languages: string[]
+  // the printings of each year that had any, by the first date of a
+  // printing, and their languages, the most frequent first
+  years: { year: number; printings: number; languages: string[] }[]
   // the periodicals printed there, each with its printings, earliest first
   periodicals: { title: string; printings: PlacedPrinting[] }[]
   // the companies whose ads were printed there, each with those ads
@@ -249,7 +254,7 @@ export function placeRegister(ads: PlaceAd[]): PlaceEntry[] {
 
       const place: Place = places.get(key) ?? { ref: printing.placeRef, forms: [], printings: [], companies: new Map() }
       place.forms.push(printing.place)
-      place.printings.push({ ...printing, ad: entry })
+      place.printings.push({ ...printing, ad: entry, language: ad.language })
       const company = place.companies.get(ad.company) ?? { printings: 0, ads: [] }
       company.printings += 1
       if (company.ads[company.ads.length - 1]?.slug !== ad.slug) company.ads.push(entry)
@@ -268,9 +273,10 @@ export function placeRegister(ads: PlaceAd[]): PlaceEntry[] {
     for (const printing of printings) {
       periodicals.set(printing.periodical, [...(periodicals.get(printing.periodical) || []), printing])
     }
-    const years = new Map<number, number>()
-    for (const year of printings.map(printing => Number(firstDate(printing).slice(0, 4))).filter(Boolean)) {
-      years.set(year, (years.get(year) ?? 0) + 1)
+    const years = new Map<number, PlacedPrinting[]>()
+    for (const printing of printings) {
+      const year = Number(firstDate(printing).slice(0, 4))
+      if (year) years.set(year, [...(years.get(year) ?? []), printing])
     }
 
     return {
@@ -280,7 +286,12 @@ export function placeRegister(ads: PlaceAd[]): PlaceEntry[] {
       initial: initialOf(forms[0]),
       printings: printings.length,
       ads: new Set(printings.map(printing => printing.ad.slug)).size,
-      years: Array.from(years, ([year, printings]) => ({ year, printings })).sort((a, b) => a.year - b.year),
+      languages: byFrequency(printings.map(printing => printing.language)),
+      years: Array.from(years, ([year, list]) => ({
+        year,
+        printings: list.length,
+        languages: byFrequency(list.map(printing => printing.language)),
+      })).sort((a, b) => a.year - b.year),
       periodicals: Array.from(periodicals, ([title, list]) => ({ title, printings: list }))
         .sort((a, b) => filingTitle(a.title).localeCompare(filingTitle(b.title), 'en')),
       companies: Array.from(place.companies, ([key, company]) => ({
@@ -305,6 +316,7 @@ function registerAds(): (RegisterAd & PlaceAd)[] {
       title: meta.title,
       date: [...meta.dates].sort()[0] || '',
       company: meta.company.name,
+      language: doc.querySelector('langUsage > language')?.getAttribute('ident') || '',
       namings: namingsIn(doc),
       printings: printingsIn(doc),
     }

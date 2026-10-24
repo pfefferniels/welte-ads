@@ -21,8 +21,11 @@ export interface Marker {
     count: number
     // a line about the marker, shown when pointing at it
     about: string
-    // the counts of the years that had any, each with a line about it
-    years?: { year: number; count: number; about: string }[]
+    // the group that colours the circle, e.g. a language
+    group?: string
+    // the counts of the years that had any, each with a line about it and
+    // the group of that year
+    years?: { year: number; count: number; about: string; group?: string }[]
 }
 
 interface WorldMapProps {
@@ -34,13 +37,14 @@ interface WorldMapProps {
     timeline?: { year: number; about: string }[]
     // the story that the timeline tells, its focus by the markers' hrefs
     chapters?: Chapter[]
+    // the groups that colour the circles, each with its name for the legend;
+    // a circle of no group is black
+    groups?: { key: string; label: string; color: string }[]
 }
 
 const width = 900
 const height = 500
 
-// the radius of a marker whose counts all lie in earlier years
-const TRACE = 2
 // how long a circle takes to change its size, and how long a year is shown
 const RESIZE = 400
 const YEAR = 1200
@@ -57,8 +61,9 @@ const legendValues = (max: number) => {
 }
 
 const NO_CHAPTERS: Chapter[] = []
+const NO_GROUPS: NonNullable<WorldMapProps['groups']> = []
 
-export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS }: WorldMapProps) => {
+export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS, groups = NO_GROUPS }: WorldMapProps) => {
     const svgRef = useRef<SVGSVGElement>(null)
     const zoomRef = useRef<d3.ZoomBehavior<SVGSVGElement, unknown>>(null)
     // the marker pointed at, what it shows and where it is on the map
@@ -123,7 +128,7 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS }: Wo
             // line about them depend on the year shown.
             const points = markers.map(marker => {
                 const [x, y] = projection([marker.coordinate.long, marker.coordinate.lat])!
-                return { ...marker, x, y, r: 0, now: marker.about, trace: false }
+                return { ...marker, x, y, r: 0, now: marker.about, colour: '' }
             })
             const show = (d: typeof points[number]) =>
                 setActive({ label: d.label, about: d.now, x: transform.applyX(d.x), y: transform.applyY(d.y), r: d.r })
@@ -198,24 +203,26 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS }: Wo
                     .attr("fill-opacity", .8)
             }
 
-            // Size the circles for a year, or for all years. A marker whose
-            // counts all lie in earlier years is a trace, one whose counts all
-            // lie in later years is hidden; the smaller circles lie on top.
+            // Size and colour the circles for a year, or for all years; a
+            // marker without a count in the year is hidden. The smaller
+            // circles lie on top.
             const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+            const colourOf = (group?: string) => groups.find(g => g.key === group)?.color ?? '#000'
             const showYear = (year: number | null, animate: boolean) => {
                 const size = year === null ? sizes.all : sizes.year
                 for (const point of points) {
                     const now = point.years?.find(y => y.year === year)
-                    const before = point.years?.filter(y => year !== null && y.year < year).pop()
-                    point.r = year === null ? size(point.count) : now ? size(now.count) : before ? TRACE : 0
-                    point.now = year === null ? point.about : (now ?? before)?.about ?? ''
-                    point.trace = year !== null && !now && !!before
+                    point.r = year === null ? size(point.count) : now ? size(now.count) : 0
+                    point.now = year === null ? point.about : now?.about ?? ''
+                    point.colour = colourOf(year === null ? point.group : now?.group)
                 }
                 links
                     .sort((a, b) => b.r - a.r)
-                    .classed("trace", d => d.trace)
                     .attr("visibility", d => d.r ? null : "hidden")
                     .attr("aria-label", d => `${d.label}: ${d.now}`)
+                circles
+                    .attr("fill", d => d.colour)
+                    .attr("stroke", d => d.colour)
                 if (animate && !still) circles.transition().duration(RESIZE).attr("r", d => d.r)
                 else circles.interrupt().attr("r", d => d.r)
                 drawLegend(size, year === null ? maxCount : maxInYear, year === null ? unit : `${unit} in a year`)
@@ -252,7 +259,7 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS }: Wo
             showYearRef.current = null
             showFocusRef.current = null
         }
-    }, [markers, unit])
+    }, [markers, unit, groups])
 
     useEffect(() => {
         yearRef.current = playback.year
@@ -281,18 +288,12 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS }: Wo
                 // the label of a marker must not widen the page
                 overflow: 'hidden',
                 '& a circle': {
-                    fill: '#000',
-                    fillOpacity: 0.15,
-                    stroke: '#000',
-                    strokeWidth: 0.75,
+                    fillOpacity: 0.45,
+                    strokeWidth: 1,
                     cursor: 'pointer',
                 },
                 '& a:hover circle, & a:focus circle': {
-                    fillOpacity: 0.45,
-                },
-                '& a.trace circle': {
-                    fill: 'none',
-                    stroke: '#8a8a8a',
+                    fillOpacity: 0.8,
                 },
                 '& a.focus circle': {
                     stroke: '#000',
@@ -367,6 +368,22 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS }: Wo
                     onHide={() => setStory(false)} />
             )}
         </Box>
+        {groups.length > 0 && (
+            <Box component="ul" aria-label="Colours of the circles" sx={{
+                display: 'flex', flexWrap: 'wrap', gap: '0.25rem 1rem',
+                listStyle: 'none', p: 0, m: 0, mt: 0.5, fontSize: '0.95rem',
+            }}>
+                {groups.map(group => (
+                    <Box component="li" key={group.key} sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                        <Box component="span" aria-hidden="true" sx={{
+                            width: 12, height: 12, borderRadius: '50%', border: 1,
+                            borderColor: group.color, backgroundColor: group.color, opacity: 0.75,
+                        }} />
+                        {group.label}
+                    </Box>
+                ))}
+            </Box>
+        )}
         {timeline && (
             <Timeline playback={playback} about={timeline.find(entry => entry.year === playback.year)?.about} />
         )}

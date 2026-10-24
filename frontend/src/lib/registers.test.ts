@@ -5,6 +5,7 @@ import { JSDOM } from "jsdom"
 import { getArtistRegister, getPlaceRegister, namingsIn, personRegister, placeRegister, printingsIn } from "./registers"
 import { getAllMetadata } from "./tei"
 import { coordinates } from "../labels/coordinates"
+import { languages } from "../labels/languages"
 
 const GND = "https://d-nb.info/gnd/"
 const PADEREWSKI = `${GND}118986724`
@@ -150,7 +151,7 @@ describe("placeRegister", () => {
   })
   const register = placeRegister([
     {
-      slug: "ad001", title: "One", date: "1913-03", company: "nicholson.perth",
+      slug: "ad001", title: "One", date: "1913-03", company: "nicholson.perth", language: "en",
       printings: [
         printing("source_1", "The West Australian", ["1913-11"], "Perth", PERTH, true),
         printing("source_2", "The Daily News", ["1913-03"]),
@@ -158,7 +159,7 @@ describe("placeRegister", () => {
       ],
     },
     {
-      slug: "ad002", title: "Two", date: "1910", company: "steinway",
+      slug: "ad002", title: "Two", date: "1910", company: "steinway", language: "de",
       printings: [
         printing("source_1", "The Daily News", ["1910"], "London", "https://www.geonames.org/2643743", true),
         printing("source_2", "Daily Telegraph", ["1911"], "Perth (W.A.)"),
@@ -184,8 +185,12 @@ describe("placeRegister", () => {
     expect(perth.periodicals[1].printings[0].ad).toEqual({ slug: "ad002", title: "Two", date: "1910" })
   })
 
-  it("counts the printings of a place per year", () => {
-    expect(perth.years).toEqual([{ year: 1911, printings: 1 }, { year: 1913, printings: 3 }])
+  it("counts the printings of a place per year, with their languages", () => {
+    expect(perth.years).toEqual([
+      { year: 1911, printings: 1, languages: ["de"] },
+      { year: 1913, printings: 3, languages: ["en"] },
+    ])
+    expect(perth.languages).toEqual(["en", "de"])
   })
 
   it("lists the companies whose ads were printed at a place, with those ads", () => {
@@ -226,6 +231,11 @@ describe("the registers of the collection", () => {
 
   it("date every printing to a year", () => {
     expect(places.filter(place => place.years.reduce((sum, year) => sum + year.printings, 0) !== place.printings)).toEqual([])
+  })
+
+  it("know and name the language of every printing", () => {
+    expect(places.filter(place => !place.languages.length || place.languages.some(code => !languages[code]))
+      .map(place => `${place.names[0]}: ${place.languages}`)).toEqual([])
   })
 
   it("count every printing once for its company", () => {
