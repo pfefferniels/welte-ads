@@ -1,4 +1,4 @@
-import { DOI, EDITION, EDITION_PLACE, EDITOR, SITE_URL } from "./site"
+import { DOI, EDITION, EDITOR, SITE_URL } from "./site"
 import type { Status } from "./tei"
 
 /** A run of a citation: text, a title in italics or a link. */
@@ -157,17 +157,16 @@ function apa(cited: Cited, accessed: string | null): Form[] {
 
 // Gardner/Springfeld, as the MWA_csl style for Zotero writes a part of a book
 // (https://github.com/digimuwi/MWA_csl): the advertiser is the author, so the
-// editor follows the collection and a note says what the bibliography says;
-// the ad is described after its title, and the DOI of the collection precedes
-// the page
+// editor follows the collection and a note says what the bibliography says.
+// Like an article in an online lexicon, the ad has no place and year; it is
+// described after its title, and the DOI of the collection precedes the page
 function gardnerSpringfeld(cited: Cited, accessed: string | null): Form[] {
-  const published = [EDITION_PLACE, cited.year].filter(Boolean).join(' ')
   return [{
     label: 'Footnote and bibliography',
     parts: parts(
       `${cited.company}, »${bare(cited.title, '„', '“')}«, Anzeige, ${germanDate(cited.date)}`,
       cited.status === 'unchecked' && `, ${UNCHECKED.de}`,
-      ', in: ', { italic: EDITION }, `, hrsg. von ${EDITOR.name}, ${published}, `,
+      ', in: ', { italic: EDITION }, `, hrsg. von ${EDITOR.name}, `,
       link(DOI_URL), ', ', link(pageUrl(cited)),
       !!accessed && `, abgerufen am ${germanDay(accessed)}`,
       '.',

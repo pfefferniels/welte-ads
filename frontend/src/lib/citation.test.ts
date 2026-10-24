@@ -84,11 +84,10 @@ describe("STYLES", () => {
     // its title and the DOI of the collection added
     expect(cite('gardner-springfeld')).toEqual([
       'Alfred Schmid Nachf., »Mit dem Welte Mignon ist ...«, Anzeige, 15. November 1910, '
-        + 'in: Welte-Mignon Advertisements Collection, hrsg. von Niels Pfeffer, Tübingen 2026, '
+        + 'in: Welte-Mignon Advertisements Collection, hrsg. von Niels Pfeffer, '
         + 'https://doi.org/10.5281/zenodo.23496355, https://anz.welte225.org/ad008/, abgerufen am 4.10.2026.',
     ])
-    expect(cite('gardner-springfeld', { year: null }, null)[0])
-      .toMatch(/hrsg\. von Niels Pfeffer, Tübingen, https:.*, https:\/\/anz\.welte225\.org\/ad008\/\.$/)
+    expect(cite('gardner-springfeld', {}, null)[0]).toMatch(/, https:\/\/anz\.welte225\.org\/ad008\/\.$/)
   })
 
   it("gives an ad as a BibTeX entry, with what TeX would read as commands escaped", () => {
