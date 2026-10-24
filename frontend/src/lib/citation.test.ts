@@ -9,7 +9,6 @@ const ad: Cited = {
   date: 'November 15, 1910',
   status: 'checked',
   year: '2026',
-  modified: '2026-10-20',
 }
 
 const cite = (style: Style, cited: Partial<Cited> = {}, accessed: string | null = '2026-10-04') =>
@@ -80,18 +79,16 @@ describe("STYLES", () => {
     expect(cite('apa', { year: null })[0]).toMatch(/^Pfeffer, N\. \(Ed\.\)\. \(n\.d\.\)\./)
   })
 
-  it("cites an ad after Gardner/Springfeld as the MWA_csl style writes a web page", () => {
-    // what is left of citeproc-js's rendering with that style is that the
-    // DOI of the collection and the description of the ad are added
-    const rest = '»Mit dem Welte Mignon ist ...«, Anzeige von Alfred Schmid Nachf., 15. November 1910, '
-      + 'Welte-Mignon Advertisements Collection, https://doi.org/10.5281/zenodo.23496355, '
-      + 'https://anz.welte225.org/ad008/, letzte Änderung 20.10.2026, abgerufen am 4.10.2026.'
+  it("cites an ad after Gardner/Springfeld as the MWA_csl style writes a part of a book", () => {
+    // what citeproc-js renders with that style, with the ad described after
+    // its title and the DOI of the collection added
     expect(cite('gardner-springfeld')).toEqual([
-      `Niels Pfeffer (Hrsg.), ${rest}`,
-      `Pfeffer, Niels (Hrsg.), ${rest}`,
+      'Alfred Schmid Nachf., »Mit dem Welte Mignon ist ...«, Anzeige, 15. November 1910, '
+        + 'in: Welte-Mignon Advertisements Collection, hrsg. von Niels Pfeffer, Tübingen 2026, '
+        + 'https://doi.org/10.5281/zenodo.23496355, https://anz.welte225.org/ad008/, abgerufen am 4.10.2026.',
     ])
-    expect(cite('gardner-springfeld', { modified: '' }, null)[0])
-      .toMatch(/, https:\/\/anz\.welte225\.org\/ad008\/\.$/)
+    expect(cite('gardner-springfeld', { year: null }, null)[0])
+      .toMatch(/hrsg\. von Niels Pfeffer, Tübingen, https:.*, https:\/\/anz\.welte225\.org\/ad008\/\.$/)
   })
 
   it("gives an ad as a BibTeX entry, with what TeX would read as commands escaped", () => {

@@ -1,4 +1,4 @@
-import { DOI, EDITION, EDITOR, SITE_URL } from "./site"
+import { DOI, EDITION, EDITION_PLACE, EDITOR, SITE_URL } from "./site"
 import type { Status } from "./tei"
 
 /** A run of a citation: text, a title in italics or a link. */
@@ -17,8 +17,6 @@ export interface Cited {
   status: Status
   // the year of the edition's current release, if it has one
   year: string | null
-  // the day of the latest change to its file, e.g. "2026-10-20", if it has one
-  modified: string
 }
 
 /** A citation as a style writes it in one place, e.g. in a note. */
@@ -157,22 +155,24 @@ function apa(cited: Cited, accessed: string | null): Form[] {
   }]
 }
 
-// Gardner/Springfeld, as the MWA_csl style for Zotero writes a web page
-// (https://github.com/digimuwi/MWA_csl), with the editor as a note or a
-// bibliography names them; the DOI of the collection precedes the page
+// Gardner/Springfeld, as the MWA_csl style for Zotero writes a part of a book
+// (https://github.com/digimuwi/MWA_csl): the advertiser is the author, so the
+// editor follows the collection and a note says what the bibliography says;
+// the ad is described after its title, and the DOI of the collection precedes
+// the page
 function gardnerSpringfeld(cited: Cited, accessed: string | null): Form[] {
-  const rest = parts(
-    ` »${bare(cited.title, '„', '“')}«, Anzeige von ${cited.company}, ${germanDate(cited.date)}`,
-    cited.status === 'unchecked' && `, ${UNCHECKED.de}`,
-    ', ', { italic: EDITION }, ', ', link(DOI_URL), ', ', link(pageUrl(cited)),
-    !!cited.modified && `, letzte Änderung ${germanDay(cited.modified)}`,
-    !!accessed && `, abgerufen am ${germanDay(accessed)}`,
-    '.',
-  )
-  return [
-    { label: 'Footnote', parts: [`${EDITOR.name} (Hrsg.),`, ...rest] },
-    { label: 'Bibliography', parts: [`${EDITOR.surname}, ${EDITOR.forename} (Hrsg.),`, ...rest] },
-  ]
+  const published = [EDITION_PLACE, cited.year].filter(Boolean).join(' ')
+  return [{
+    label: 'Footnote and bibliography',
+    parts: parts(
+      `${cited.company}, »${bare(cited.title, '„', '“')}«, Anzeige, ${germanDate(cited.date)}`,
+      cited.status === 'unchecked' && `, ${UNCHECKED.de}`,
+      ', in: ', { italic: EDITION }, `, hrsg. von ${EDITOR.name}, ${published}, `,
+      link(DOI_URL), ', ', link(pageUrl(cited)),
+      !!accessed && `, abgerufen am ${germanDay(accessed)}`,
+      '.',
+    ),
+  }]
 }
 
 // what TeX reads as commands, escaped

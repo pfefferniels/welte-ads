@@ -153,13 +153,6 @@ describe("extractMetadata", () => {
     expect(status('<revisionDesc status="unchecked"><change/></revisionDesc>')).toBe("unchecked")
   })
 
-  it("reads the day of the latest change", () => {
-    const modified = (revisionDesc: string) => extractMetadata(tei("", revisionDesc)).modified
-    expect(modified('<revisionDesc><change when="2026-10-16"/><change when="2026-10-20"/><change when="2026-10-15"/></revisionDesc>'))
-      .toBe("2026-10-20")
-    expect(modified('<revisionDesc><change/></revisionDesc>')).toBe("")
-  })
-
   it("counts an ad without a status as unchecked", () => {
     expect(extractMetadata(tei("", "<revisionDesc><change/></revisionDesc>")).status).toBe("unchecked")
     expect(extractMetadata(tei("", "")).status).toBe("unchecked")

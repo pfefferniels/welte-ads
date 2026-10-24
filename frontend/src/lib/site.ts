@@ -1,5 +1,7 @@
 export const EDITION = "Welte-Mignon Advertisements Collection"
 export const SITE_URL = "https://anz.welte225.org"
+// where the edition is published, as the <pubPlace> of its files says
+export const EDITION_PLACE = "Tübingen"
 // the DOI of the collection on Zenodo, for all its versions: it leads to the newest
 export const DOI = "10.5281/zenodo.23496355"
 
