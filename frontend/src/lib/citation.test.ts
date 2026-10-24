@@ -9,6 +9,7 @@ const ad: Cited = {
   date: 'November 15, 1910',
   status: 'checked',
   year: '2026',
+  modified: '2026-10-20',
 }
 
 const cite = (style: Style, cited: Partial<Cited> = {}, accessed: string | null = '2026-10-04') =>
@@ -79,16 +80,18 @@ describe("STYLES", () => {
     expect(cite('apa', { year: null })[0]).toMatch(/^Pfeffer, N\. \(Ed\.\)\. \(n\.d\.\)\./)
   })
 
-  it("cites an ad in the German style with footnotes and with author and year", () => {
-    const rest = '„Mit dem Welte Mignon ist ...“, Anzeige von Alfred Schmid Nachf., 15. November 1910, '
-      + 'in: Welte-Mignon Advertisements Collection, https://doi.org/10.5281/zenodo.23496355, '
-      + 'https://anz.welte225.org/ad008/ (Zugriff am 04.10.2026).'
-    expect(cite('german-notes')).toEqual([
+  it("cites an ad after Gardner/Springfeld as the MWA_csl style writes a web page", () => {
+    // what is left of citeproc-js's rendering with that style is that the
+    // DOI of the collection and the description of the ad are added
+    const rest = '»Mit dem Welte Mignon ist ...«, Anzeige von Alfred Schmid Nachf., 15. November 1910, '
+      + 'Welte-Mignon Advertisements Collection, https://doi.org/10.5281/zenodo.23496355, '
+      + 'https://anz.welte225.org/ad008/, letzte Änderung 20.10.2026, abgerufen am 4.10.2026.'
+    expect(cite('gardner-springfeld')).toEqual([
       `Niels Pfeffer (Hrsg.), ${rest}`,
       `Pfeffer, Niels (Hrsg.), ${rest}`,
     ])
-    expect(cite('german-author-date')).toEqual([`Pfeffer, Niels (Hrsg.) (2026): ${rest}`])
-    expect(cite('german-author-date', { year: null })[0]).toMatch(/^Pfeffer, Niels \(Hrsg\.\) \(o\. J\.\):/)
+    expect(cite('gardner-springfeld', { modified: '' }, null)[0])
+      .toMatch(/, https:\/\/anz\.welte225\.org\/ad008\/\.$/)
   })
 
   it("gives an ad as a BibTeX entry, with what TeX would read as commands escaped", () => {
@@ -121,7 +124,7 @@ describe("STYLES", () => {
   it("leaves out the day of access until it is known", () => {
     for (const style of Object.keys(STYLES) as Style[]) {
       for (const form of cite(style, {}, null)) {
-        expect(form, style).not.toMatch(/ccessed|Retrieved|Zugriff|urldate/)
+        expect(form, style).not.toMatch(/ccessed|Retrieved|abgerufen|urldate/)
       }
     }
     expect(cite('chicago', {}, null)[0]).toMatch(/zenodo\.23496355, https:\/\/anz\.welte225\.org\/ad008\/\.$/)
@@ -136,7 +139,7 @@ describe("STYLES", () => {
   it("sets the quotations in a title in the inner quotation marks of the style", () => {
     const title = 'A Great Musical Invention. Artistic "Welte" Player.'
     expect(cite('chicago', { title })[1]).toContain('“A Great Musical Invention. Artistic ‘Welte’ Player.” Advertisement')
-    expect(cite('german-notes', { title })[0]).toContain('„A Great Musical Invention. Artistic ‚Welte‘ Player.“, Anzeige')
+    expect(cite('gardner-springfeld', { title })[0]).toContain('»A Great Musical Invention. Artistic „Welte“ Player.«, Anzeige')
     // a title that is a quotation is set in the outer ones
     expect(cite('mla', { title: '"Special Announcement"' })[0]).toContain('editor. “Special Announcement.” Advertisement')
   })

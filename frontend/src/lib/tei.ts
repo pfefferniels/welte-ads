@@ -352,6 +352,8 @@ interface AdMetadata {
   imageLinks: string[]
   // @status on <revisionDesc>
   status: Status
+  // the day of the latest change to the file, e.g. "2026-10-20", if it has one
+  modified: string
   // who transcribed, encoded, edited … the ad
   contributors: Contributor[]
 }
@@ -433,6 +435,11 @@ export function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
   const status: Status = doc.querySelector('revisionDesc')?.getAttribute('status') === 'checked'
     ? 'checked'
     : 'unchecked'
+  // the change dates are ISO days, so the last in order is the latest
+  const modified = Array.from(doc.querySelectorAll('revisionDesc > change[when]'))
+    .map(change => change.getAttribute('when') || '')
+    .sort()
+    .pop() || ''
   // who did what, as the title statement names them
   const contributors = Array.from(doc.querySelectorAll('fileDesc > titleStmt > respStmt')).flatMap(respStmt => {
     const role = (respStmt.querySelector('resp')?.textContent || '').replace(/\s+/g, ' ').trim()
@@ -443,7 +450,7 @@ export function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
 
   return {
     company, title, titleMain, titleSub, dates, periodicals, mentions, topicSegments,
-    fullText: plainText(xmlString), imageLinks, status, contributors,
+    fullText: plainText(xmlString), imageLinks, status, modified, contributors,
   }
 }
 

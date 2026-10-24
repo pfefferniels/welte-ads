@@ -17,6 +17,8 @@ export interface Cited {
   status: Status
   // the year of the edition's current release, if it has one
   year: string | null
+  // the day of the latest change to its file, e.g. "2026-10-20", if it has one
+  modified: string
 }
 
 /** A citation as a style writes it in one place, e.g. in a note. */
@@ -61,7 +63,11 @@ const mlaDate = (iso: string) => {
   const [year, month, day] = iso.split('-')
   return `${Number(day)} ${MLA_MONTHS[Number(month) - 1]} ${year}`
 }
-const germanDay = (iso: string) => iso.split('-').reverse().join('.')
+// as the MWA_csl style writes days, e.g. "4.10.2026"
+const germanDay = (iso: string) => {
+  const [year, month, day] = iso.split('-')
+  return `${Number(day)}.${Number(month)}.${year}`
+}
 
 const GERMAN_MONTHS: Record<string, string> = {
   January: 'Januar', February: 'Februar', March: 'März', April: 'April', May: 'Mai', June: 'Juni',
@@ -151,28 +157,22 @@ function apa(cited: Cited, accessed: string | null): Form[] {
   }]
 }
 
-// the German humanities style, after the editor's name as a note or a
-// bibliography gives it
-function german(cited: Cited, accessed: string | null, editor: string): Part[] {
-  return parts(
-    `${editor} „${bare(cited.title, '‚', '‘')}“, Anzeige von ${cited.company}, ${germanDate(cited.date)}`,
+// Gardner/Springfeld, as the MWA_csl style for Zotero writes a web page
+// (https://github.com/digimuwi/MWA_csl), with the editor as a note or a
+// bibliography names them; the DOI of the collection precedes the page
+function gardnerSpringfeld(cited: Cited, accessed: string | null): Form[] {
+  const rest = parts(
+    ` »${bare(cited.title, '„', '“')}«, Anzeige von ${cited.company}, ${germanDate(cited.date)}`,
     cited.status === 'unchecked' && `, ${UNCHECKED.de}`,
-    ', in: ', { italic: EDITION }, ', ', link(DOI_URL), ', ', link(pageUrl(cited)),
-    !!accessed && ` (Zugriff am ${germanDay(accessed)})`, '.',
+    ', ', { italic: EDITION }, ', ', link(DOI_URL), ', ', link(pageUrl(cited)),
+    !!cited.modified && `, letzte Änderung ${germanDay(cited.modified)}`,
+    !!accessed && `, abgerufen am ${germanDay(accessed)}`,
+    '.',
   )
-}
-
-function germanNotes(cited: Cited, accessed: string | null): Form[] {
   return [
-    { label: 'Footnote', parts: german(cited, accessed, `${EDITOR.name} (Hrsg.),`) },
-    { label: 'Bibliography', parts: german(cited, accessed, `${EDITOR.surname}, ${EDITOR.forename} (Hrsg.),`) },
+    { label: 'Footnote', parts: [`${EDITOR.name} (Hrsg.),`, ...rest] },
+    { label: 'Bibliography', parts: [`${EDITOR.surname}, ${EDITOR.forename} (Hrsg.),`, ...rest] },
   ]
-}
-
-// the author–date system names the year of the edition after the editor
-function germanAuthorDate(cited: Cited, accessed: string | null): Form[] {
-  const editor = `${EDITOR.surname}, ${EDITOR.forename} (Hrsg.) (${cited.year || 'o. J.'}):`
-  return [{ label: 'Bibliography', parts: german(cited, accessed, editor) }]
 }
 
 // what TeX reads as commands, escaped
@@ -210,8 +210,7 @@ export const STYLES = {
   chicago: { label: 'Chicago', cite: chicago },
   mla: { label: 'MLA', cite: mla },
   apa: { label: 'APA', cite: apa },
-  'german-notes': { label: 'German, footnotes', cite: germanNotes },
-  'german-author-date': { label: 'German, author–date', cite: germanAuthorDate },
+  'gardner-springfeld': { label: 'Gardner/Springfeld', cite: gardnerSpringfeld },
   bibtex: { label: 'BibTeX', cite: bibtex },
 } satisfies Record<string, { label: string; cite: Cite }>
 

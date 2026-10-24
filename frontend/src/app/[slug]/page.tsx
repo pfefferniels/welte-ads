@@ -85,6 +85,7 @@ export default async function AdPage({ params }: { params: Promise<{ slug: strin
         date={ad.titleSub}
         status={ad.status}
         year={currentRelease().date?.slice(0, 4) || null}
+        modified={ad.modified}
       />
     </Container>
   )
