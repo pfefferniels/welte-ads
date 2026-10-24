@@ -173,11 +173,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -205,10 +206,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -227,21 +233,29 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="immortality">
-             <gloss>Immortality</gloss>
-             <desc>This topic emphasizes the perdurance of the reproductions and
-                how thus the recording artists become immortal.</desc>
+          <category xml:id="furniture">
+             <gloss>Furniture and ornament</gloss>
+             <desc>The case, its design or period style; the instrument as an ornament
+                of the room.</desc>
           </category>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <category xml:id="testimonials">
+             <gloss>Testimonials of famous musicians</gloss>
+             <desc>A named musician or other notable person is quoted or paraphrased
+                in praise of the instrument.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -250,6 +264,7 @@
       <langUsage><language ident="es">Spanish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -272,22 +287,22 @@
   <text decls="#source_1">
     <body>
       <div facs="#zone_headline">
-        <head><hi rendition="#b #in"><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118986724">PADEREWSKI</persName>, “El Coloso”</hi></head>
+        <head><hi rendition="#b #in"><lb/><seg xml:id="topic_4" ana="#testimonials" type="topic" resp="#claude"><persName type="artist" corresp="https://d-nb.info/gnd/118986724">PADEREWSKI</persName>, “El Coloso”</seg></hi></head>
       </div>
       <div facs="#zone_headline2">
         <head><hi rendition="#b #in"><lb/>Y LA “<name type="brand">WELTE-MIGNON</name>”</hi></head>
       </div>
       <div type="illustration" facs="#zone_portrait">
-        <figure><desc>Engraved portrait of Ignacy Jan Paderewski, chin resting on his hand, in a frame with leaf ornaments in the upper corners</desc></figure>
+        <figure xml:id="figure_1" ana="#testimonials" resp="#claude"><desc>Engraved portrait of Ignacy Jan Paderewski, chin resting on his hand, in a frame with leaf ornaments in the upper corners</desc></figure>
       </div>
       <div facs="#zone_quote">
-        <p><hi rendition="#i"><quote type="testimonial"><lb/>”<seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">La <name type="brand">Welte-Mignon</name> está simplemente fuera
+        <p><hi rendition="#i"><quote type="testimonial"><lb/>”<seg xml:id="topic_1" ana="#superlatives" type="topic" resp="#claude">La <name type="brand">Welte-Mignon</name> está simplemente fuera
           <lb/>” de toda crítica</seg>, pero debemos de encontrar
           <lb/>” un nombre que adecuadamente exprese
           <lb/>” su significado y alcance colosal”.</quote></hi></p>
       </div>
       <div type="illustration" facs="#zone_signature">
-        <figure><desc>Facsimile of Paderewski's signature</desc></figure>
+        <figure xml:id="figure_2" ana="#testimonials" resp="#claude"><desc>Facsimile of Paderewski's signature</desc></figure>
       </div>
       <div type="illustration" facs="#zone_roll">
         <figure><desc>Drawing of a perforated music roll hanging from its spool, with a ring at the lower end; the text beside is printed on it</desc></figure>
@@ -297,14 +312,14 @@
           <lb/>a <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> en la ci-
           <lb/>ma, en cualquier dis-
           <lb/>cusión sobre triunfos
-          <lb/>musicales, <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">encuentra
+          <lb/>musicales, <seg xml:id="topic_2" ana="#faithful_reproduction" type="topic" resp="#claude">encuentra
           <lb/>su completa reflexión
           <lb/>en los rollos tocados
           <lb/>por él para la <name type="brand">Welte-
           <lb/>Mignon</name></seg>. Catorce de
           <lb/>estos rollos incompa-
-          <lb/>rables, <seg xml:id="topic_3" ana="#immortality" type="topic" resp="#claude">hechos por es-
-          <lb/>te inmortal artista</seg>, se
+          <lb/>rables, hechos por es-
+          <lb/>te inmortal artista, se
           <lb/>encuentran a la venta.
           <lb/>De la vigorosa pluma
           <lb/>de <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, tene-
@@ -313,7 +328,7 @@
           <lb/><name type="brand">Welte-Mignon</name>.</p>
       </div>
       <div type="illustration" facs="#zone_piano">
-        <figure><desc>Drawing of a grand piano in Louis XVI style with fluted legs, the lid open and a music roll visible above the keyboard</desc></figure>
+        <figure xml:id="figure_3" ana="#furniture" resp="#claude"><desc>Drawing of a grand piano in Louis XVI style with fluted legs, the lid open and a music roll visible above the keyboard</desc></figure>
         <ab><hi rendition="#larger"><lb/><name type="brand">WELTE-MIGNON</name></hi>
           <lb/><hi rendition="#g">(REPRODUCTOR)</hi></ab>
         <ab><hi rendition="#right #g"><lb/>Modelo

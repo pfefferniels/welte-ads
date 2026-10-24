@@ -18,6 +18,10 @@
                         <forename>Niels</forename>
                     </persName>
                 </respStmt>
+                <respStmt>
+                    <resp>Annotation of topics</resp>
+                    <name xml:id="claude">Claude (AI model by Anthropic)</name>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>
@@ -128,11 +132,12 @@
                   scan, in part transcribed by hand. The advertisements published
                   outside Germany, the United Kingdom and the United States, and a
                   few from Germany, were transcribed from the scans, encoded, given
-                  their regions and annotated with topics by Claude, an AI model;
-                  their revision history says so. Until the editor has checked such
-                  an advertisement against the scan, <att>status</att> on its
-                  <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-                  advertisement is <val>checked</val>.</p>
+                  their regions by Claude, an AI model; their revision history says
+                  so. Until the editor has checked such an advertisement against the
+                  scan, <att>status</att> on its <gi>revisionDesc</gi> is
+                  <val>unchecked</val>; that of every other advertisement is
+                  <val>checked</val>. The topics of all advertisements were assigned
+                  by Claude.</p>
                <correction>
                   <p>Errors of the original are not corrected but marked with
                      <gi>sic</gi>.</p>
@@ -160,10 +165,15 @@
                      Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                      which describes them in a <gi>desc</gi>. Illustrations are
                      described in <gi>figure</gi>. Persons are linked to the GND with
-                     <att>corresp</att>. Recurring motifs are marked as topics with
-                     <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                     the taxonomy of topics; these are an interpretation, by whom
-                     <att>resp</att> says.</p>
+                     <att>corresp</att>. Recurring arguments and motifs are marked as
+                     topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                     pointing to the taxonomy of topics. The taxonomy was induced by
+                     Claude in four blind readings of all advertisements, each in a
+                     different order and without knowledge of the editor's earlier
+                     taxonomy, which it replaced in October 2026; it keeps the topics
+                     that at least three of the readings found. The topics are an
+                     interpretation, assigned by whom <att>resp</att> says, so far
+                     all by Claude; the editor has not yet checked them.</p>
                </interpretation>
                <stdVals>
                   <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -181,38 +191,80 @@
             </tagsDecl>
             <classDecl>
                 <taxonomy xml:id="topics">
-                    <desc>Topics: recurring motifs of the advertisements, in their texts
-                       and in their pictures</desc>
-                    <category xml:id="distinction_from_mechanical">
-                       <gloss>Distinction from Mechanical</gloss>
-                       <desc>Often, the adverts try to distinguish reproducing piano rolls
-                          from mere mechanical methods (such as the player piano).</desc>
+                    <desc>Topics: the recurring arguments and motifs of the advertisements,
+                       in their texts and in their pictures</desc>
+                    <category xml:id="touch_and_individuality">
+                       <gloss>Touch, nuance and individuality</gloss>
+                       <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                          pedalling, dynamics, tempo, shading, tone colour, or the
+                          individuality and characteristic style of each pianist.</desc>
                     </category>
-                    <category xml:id="educational_use">
-                       <gloss>Educational Use</gloss>
+                    <category xml:id="not_mechanical">
+                       <gloss>Art, not mechanism</gloss>
+                       <desc>The instrument is set apart from mechanical, automatic or player-
+                          piano playing: it is human, artistic, "not a surrogate", or the
+                          prejudice that it is mechanical is refuted.</desc>
+                    </category>
+                    <category xml:id="illusion_of_presence">
+                       <gloss>Illusion of presence</gloss>
+                       <desc>The listener feels that the artist is present or seated at the
+                          instrument ("as if he sat at your piano", "close your eyes"), or
+                          cannot tell the reproduction from the live artist.</desc>
                     </category>
                     <category xml:id="immortality">
-                       <gloss>Immortality</gloss>
-                       <desc>This topic emphasizes the perdurance of the reproductions and
-                          how thus the recording artists become immortal.</desc>
+                       <gloss>Immortality and posterity</gloss>
+                       <desc>The playing is preserved for ever or for future generations; the
+                          artists become immortal, and dead artists still play.</desc>
                     </category>
-                    <category xml:id="miracle">
-                       <gloss>Miracle</gloss>
+                    <category xml:id="wonder">
+                       <gloss>Wonder, miracle and magic</gloss>
+                       <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                          causes astonishment, disbelief or speechlessness.</desc>
                     </category>
-                    <category xml:id="technical_invention">
-                       <gloss>Technical Invention</gloss>
+                    <category xml:id="hearing_is_believing">
+                       <gloss>Hearing is believing</gloss>
+                       <desc>The reader is challenged to verify the claims by listening,
+                          comparing or testing ("must be heard to be believed", "hear it in
+                          comparison"). A bare invitation to a demonstration does not count.</desc>
                     </category>
-                    <category xml:id="touch_of_a_button">
-                       <gloss>Touch of a Button</gloss>
-                       <desc>The Welte-Mignon is permanently available and "objectified"
-                          for the entertainment of the owner – on the touch of a
-                          button.</desc>
+                    <category xml:id="masters_at_home">
+                       <gloss>The great pianists in your home</gloss>
+                       <desc>The famous pianists can be heard in your own home or on your own
+                          piano, at any time, as often as you wish, at your command ("The
+                          Master's Fingers on Your Piano", concerts at home).</desc>
                     </category>
-                    <category xml:id="unreached_ideal">
-                       <gloss>Ideal Instrument</gloss>
+                    <category xml:id="testimonials">
+                       <gloss>Testimonials of famous musicians</gloss>
+                       <desc>A named musician or other notable person is quoted or paraphrased
+                          in praise of the instrument.</desc>
                     </category>
-                    <category xml:id="virtual_presence">
-                       <gloss>Virtual Presence</gloss>
+                    <category xml:id="world_renown">
+                       <gloss>World renown and recognition</gloss>
+                       <desc>The instrument is famous and admired throughout the world,
+                          acclaimed by all great artists, critics or the press, adopted by
+                          conservatories and other institutions, or decorated with medals and
+                          prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+                    </category>
+                    <category xml:id="epoch_making_invention">
+                       <gloss>Epoch-making invention</gloss>
+                       <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                          the greatest of the age, a sensation, the newest thing.</desc>
+                    </category>
+                    <category xml:id="superlatives">
+                       <gloss>Superlative perfection</gloss>
+                       <desc>The instrument is called perfect, the best, the finest, supreme or
+                          unsurpassed, or the culmination of a line of progress.</desc>
+                    </category>
+                    <category xml:id="unique_and_superior">
+                       <gloss>Unique and superior to rivals</gloss>
+                       <desc>The instrument is "the only one", the standard for all others, it
+                          surpasses its rivals or has nothing in common with them, or the
+                          reader is warned against cheap or unknown makes.</desc>
+                    </category>
+                    <category xml:id="education">
+                       <gloss>Education and study</gloss>
+                       <desc>The instrument serves learning and teaching: conservatories,
+                          students, studying an interpretation by repeating it.</desc>
                     </category>
                 </taxonomy>
             </classDecl>
@@ -223,6 +275,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
             <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
@@ -287,58 +340,58 @@
         </div>
         <div facs="#eSc_textblock_bbaf7988">
             <ab><lb />Das Welte Mignon ist das
-            <seg xml:id="topic_1" ana="#miracle" resp="#np" type="topic">Wunder der Wunder</seg>.
-            <lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreno</persName>.</hi></ab></div>
+            <seg xml:id="topic_1" ana="#wonder" resp="#claude" type="topic">Wunder der Wunder</seg>.
+            <lb /><seg xml:id="topic_10" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreno</persName>.</hi></seg></ab></div>
         <div facs="#eSc_textblock_0ace7367">
-            <ab><lb />Eine unbedingt <seg xml:id="topic_2" ana="#technical_invention" type="topic" resp="#np">geniale Erfindung</seg> von hohem <lb />künstlerischen Wert.<lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/116942037">Mottl</persName>.</hi></ab></div>
+            <ab><lb />Eine unbedingt <seg xml:id="topic_2" ana="#epoch_making_invention" type="topic" resp="#claude">geniale Erfindung</seg> von hohem <lb />künstlerischen Wert.<lb /><seg xml:id="topic_11" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/116942037">Mottl</persName>.</hi></seg></ab></div>
         <div facs="#eSc_textblock_910008bc">
-            <ab><lb /><seg xml:id="topic_3" ana="#virtual_presence" type="topic" resp="#np">Man meint den betreffenden Künstler in Person<lb />vor sich zu haben und ihn
-            spielen zu hören.</seg><lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Nickisch</persName>.</hi></ab></div>
+            <ab><lb /><seg xml:id="topic_3" ana="#illusion_of_presence" type="topic" resp="#claude">Man meint den betreffenden Künstler in Person<lb />vor sich zu haben und ihn
+            spielen zu hören.</seg><lb /><seg xml:id="topic_12" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Nickisch</persName>.</hi></seg></ab></div>
         <div facs="#eSc_textblock_9c944536">
             <ab><quote>
                 <lb />Was ich Mignon vorzuwerfen habe; ist sein
-                <lb />Name, weil es weder der gewaltigen Wirkung dieses
-                <lb />Instruments noch seiner kolossalen Bedeutung ent-
+                <lb />Name, weil es weder <seg xml:id="topic_18" ana="#epoch_making_invention" type="topic" resp="#claude">der gewaltigen Wirkung dieses
+                <lb />Instruments noch seiner kolossalen Bedeutung</seg> ent-
                 <lb />spricht.
             </quote>
-            <lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>.</hi></ab>
+            <lb /><seg xml:id="topic_13" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/118986724">J. J. Paderewski</persName>.</hi></seg></ab>
         </div>
         <div facs="#eSc_textblock_d5bad035">
             <ab><quote>
                 <lb />
-                <seg xml:id="topic_4" ana="#miracle" resp="#np" type="topic">
+                <seg xml:id="topic_4" ana="#wonder #hearing_is_believing" resp="#claude" type="topic">
                     Man muss das Wunder gehört haben, um es<lb />zu glauben.
                 </seg>
             </quote>
             <lb />
-            <hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName>.</hi></ab>
+            <seg xml:id="topic_14" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/116060689">Max Pauer</persName>.</hi></seg></ab>
         </div>
         <div facs="#eSc_textblock_c91feaa0">
             <ab><quote>
-                <lb />Welte Mignon ist für mich das <seg xml:id="topic_5" ana="#unreached_ideal" resp="#np" type="topic">unerreichte Ideal<lb />aller Musikinstrumente</seg>.
+                <lb />Welte Mignon ist für mich das <seg xml:id="topic_5" ana="#superlatives" resp="#claude" type="topic">unerreichte Ideal<lb />aller Musikinstrumente</seg>.
             </quote>
-            <lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>.</hi></ab>
+            <lb /><seg xml:id="topic_15" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/118598988">Max Reger</persName>.</hi></seg></ab>
         </div>
         <div facs="#eSc_textblock_031c0fe4">
             <ab><quote>
-                <lb />Der <hi rendition="#g">einzige</hi> Apparat der auf künstlerische<lb />Bedeutung Anspruch machen kann.
+                <lb /><seg xml:id="topic_19" ana="#not_mechanical #unique_and_superior" type="topic" resp="#claude">Der <hi rendition="#g">einzige</hi> Apparat der auf künstlerische<lb />Bedeutung Anspruch machen kann.</seg>
             </quote>
-            <lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>.</hi></ab>
+            <lb /><seg xml:id="topic_16" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>.</hi></seg></ab>
         </div>
         <div facs="#eSc_textblock_fce1a771">
-            <ab><lb />Mit dem Welte Mignon ist, wie die berühmtesten Künstler anerkennen, ein
-            phantastisch scheinender<lb />Gedanke verwirklicht, nämlich das Klavierspiel eines
+            <ab><lb />Mit dem Welte Mignon ist, <seg xml:id="topic_20" ana="#world_renown" type="topic" resp="#claude">wie die berühmtesten Künstler anerkennen</seg>, ein
+            phantastisch scheinender<lb />Gedanke verwirklicht, nämlich <seg xml:id="topic_21" ana="#touch_and_individuality" type="topic" resp="#claude">das Klavierspiel eines
             Künstlers mit all' seinen persönlichen Eigenschaften –<lb />des Anschlags, der
-            Phrasierung, des Pedalgebrauchs etc.
-            <seg xml:id="topic_6" ana="#immortality" resp="#np" type="topic">zu verewigen</seg>.
-            <seg xml:id="topic_7" ana="#distinction_from_mechanical" type="topic" resp="#np">
+            Phrasierung, des Pedalgebrauchs etc.</seg>
+            <seg xml:id="topic_6" ana="#immortality" resp="#claude" type="topic">zu verewigen</seg>.
+            <seg xml:id="topic_7" ana="#not_mechanical" type="topic" resp="#claude">
                 Die Wiedergaben des Mignon haben
                 <lb />jeden Rest des mechanischen verloren.
             </seg>
-            Dass es sich um eine Erfindung von ausserordentlicher künstlerischer
-            <lb />Bedeutung handelt, <seg xml:id="topic_8" ana="#educational_use" type="topic" resp="#np">beweist ihr Gebrauch im <orgName>K. K. Konservatorium in
+            <seg xml:id="topic_22" ana="#epoch_making_invention" type="topic" resp="#claude">Dass es sich um eine Erfindung von ausserordentlicher künstlerischer
+            <lb />Bedeutung handelt</seg>, <seg xml:id="topic_8" ana="#world_renown #education" type="topic" resp="#claude">beweist ihr Gebrauch im <orgName>K. K. Konservatorium in
             Wien</orgName> zu Studienzwecken.</seg>
-            <seg xml:id="topic_9" ana="#touch_of_a_button" type="topic" resp="#np">
+            <seg xml:id="topic_9" ana="#masters_at_home" type="topic" resp="#claude">
                 Der Besitzer<lb />eines Welte Mignon kann sich jederzeit von den
                 berühmtesten Musikern, wie
                 <persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Albert</persName>,
@@ -363,9 +416,9 @@
             <lb /><hi rendition="#c">Donnerstag Nachmittag ab 3 1/2 Uhr auch am Saaleingang.</hi></ab>
         </div>
         <div facs="#eSc_textblock_c8ece5c3">
-            <ab><lb />Diese Erfindung ist das unglaublichste an Vol-
-            <lb />lendung, das man sich denken kann.
-            <lb /><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>.</hi></ab></div>
+            <ab><lb /><seg xml:id="topic_23" ana="#wonder #superlatives" type="topic" resp="#claude">Diese Erfindung ist das unglaublichste an Vol-
+            <lb />lendung, das man sich denken kann.</seg>
+            <lb /><seg xml:id="topic_17" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/11863027X">Felix Weingartner</persName>.</hi></seg></ab></div>
         </body>
     </text>
 </TEI>

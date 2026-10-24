@@ -1,0 +1,1080 @@
+{
+ "N": {
+  "early": 70,
+  "late": 125
+ },
+ "words": {
+  "early": 8084,
+  "late": 13820
+ },
+ "clusters": [
+  {
+   "group": "4",
+   "early": 25,
+   "late": 9,
+   "early_share": 0.357,
+   "late_share": 0.072,
+   "p": 1.0216607419789724e-06,
+   "q": 5.108303709894862e-05
+  },
+  {
+   "group": "45",
+   "early": 9,
+   "late": 0,
+   "early_share": 0.129,
+   "late_share": 0.0,
+   "p": 6.981636671119803e-05,
+   "q": 0.0017454091677799506
+  },
+  {
+   "group": "12",
+   "early": 1,
+   "late": 24,
+   "early_share": 0.014,
+   "late_share": 0.192,
+   "p": 0.000198611160606115,
+   "q": 0.0026321896320552485
+  },
+  {
+   "group": "46",
+   "early": 8,
+   "late": 0,
+   "early_share": 0.114,
+   "late_share": 0.0,
+   "p": 0.00021057517056441988,
+   "q": 0.0026321896320552485
+  },
+  {
+   "group": "23",
+   "early": 0,
+   "late": 17,
+   "early_share": 0.0,
+   "late_share": 0.136,
+   "p": 0.0003995035455553774,
+   "q": 0.0039950354555537745
+  },
+  {
+   "group": "3",
+   "early": 7,
+   "late": 39,
+   "early_share": 0.1,
+   "late_share": 0.312,
+   "p": 0.0007451102527193128,
+   "q": 0.006209252105994273
+  },
+  {
+   "group": "38",
+   "early": 0,
+   "late": 13,
+   "early_share": 0.0,
+   "late_share": 0.104,
+   "p": 0.004727268493489865,
+   "q": 0.026262602741610363
+  },
+  {
+   "group": "26",
+   "early": 0,
+   "late": 13,
+   "early_share": 0.0,
+   "late_share": 0.104,
+   "p": 0.004727268493489865,
+   "q": 0.026262602741610363
+  },
+  {
+   "group": "48",
+   "early": 8,
+   "late": 2,
+   "early_share": 0.114,
+   "late_share": 0.016,
+   "p": 0.00471485689386752,
+   "q": 0.026262602741610363
+  },
+  {
+   "group": "2",
+   "early": 25,
+   "late": 22,
+   "early_share": 0.357,
+   "late_share": 0.176,
+   "p": 0.005502217070133313,
+   "q": 0.027511085350666563
+  },
+  {
+   "group": "40",
+   "early": 0,
+   "late": 11,
+   "early_share": 0.0,
+   "late_share": 0.088,
+   "p": 0.008270937223218785,
+   "q": 0.03759516919644902
+  },
+  {
+   "group": "1",
+   "early": 13,
+   "late": 44,
+   "early_share": 0.186,
+   "late_share": 0.352,
+   "p": 0.014533449865866683,
+   "q": 0.044899111949820596
+  },
+  {
+   "group": "0",
+   "early": 38,
+   "late": 45,
+   "early_share": 0.543,
+   "late_share": 0.36,
+   "p": 0.015877699436365304,
+   "q": 0.044899111949820596
+  },
+  {
+   "group": "11",
+   "early": 13,
+   "late": 8,
+   "early_share": 0.186,
+   "late_share": 0.064,
+   "p": 0.014345383590263753,
+   "q": 0.044899111949820596
+  },
+  {
+   "group": "10",
+   "early": 15,
+   "late": 11,
+   "early_share": 0.214,
+   "late_share": 0.088,
+   "p": 0.016163680301935414,
+   "q": 0.044899111949820596
+  },
+  {
+   "group": "34",
+   "early": 0,
+   "late": 10,
+   "early_share": 0.0,
+   "late_share": 0.08,
+   "p": 0.014952029477766412,
+   "q": 0.044899111949820596
+  },
+  {
+   "group": "32",
+   "early": 1,
+   "late": 14,
+   "early_share": 0.014,
+   "late_share": 0.112,
+   "p": 0.012117901511878758,
+   "q": 0.044899111949820596
+  },
+  {
+   "group": "42",
+   "early": 0,
+   "late": 10,
+   "early_share": 0.0,
+   "late_share": 0.08,
+   "p": 0.014952029477766412,
+   "q": 0.044899111949820596
+  },
+  {
+   "group": "33",
+   "early": 1,
+   "late": 13,
+   "early_share": 0.014,
+   "late_share": 0.104,
+   "p": 0.020258719822708778,
+   "q": 0.053312420586075736
+  },
+  {
+   "group": "8",
+   "early": 6,
+   "late": 26,
+   "early_share": 0.086,
+   "late_share": 0.208,
+   "p": 0.027860061542440993,
+   "q": 0.06965015385610249
+  },
+  {
+   "group": "24",
+   "early": 1,
+   "late": 12,
+   "early_share": 0.014,
+   "late_share": 0.096,
+   "p": 0.034353909883305236,
+   "q": 0.07807706791660281
+  },
+  {
+   "group": "18",
+   "early": 2,
+   "late": 15,
+   "early_share": 0.029,
+   "late_share": 0.12,
+   "p": 0.03407694983159207,
+   "q": 0.07807706791660281
+  },
+  {
+   "group": "43",
+   "early": 7,
+   "late": 3,
+   "early_share": 0.1,
+   "late_share": 0.024,
+   "p": 0.03693721407960296,
+   "q": 0.08029829147739774
+  },
+  {
+   "group": "47",
+   "early": 0,
+   "late": 7,
+   "early_share": 0.0,
+   "late_share": 0.056,
+   "p": 0.05101862249200164,
+   "q": 0.10628879685833675
+  },
+  {
+   "group": "16",
+   "early": 2,
+   "late": 14,
+   "early_share": 0.029,
+   "late_share": 0.112,
+   "p": 0.05534738660227313,
+   "q": 0.11069477320454628
+  },
+  {
+   "group": "20",
+   "early": 1,
+   "late": 11,
+   "early_share": 0.014,
+   "late_share": 0.088,
+   "p": 0.05884712241739147,
+   "q": 0.11316754311036822
+  },
+  {
+   "group": "30",
+   "early": 8,
+   "late": 5,
+   "early_share": 0.114,
+   "late_share": 0.04,
+   "p": 0.06955633041419743,
+   "q": 0.1288080192855508
+  },
+  {
+   "group": "41",
+   "early": 6,
+   "late": 3,
+   "early_share": 0.086,
+   "late_share": 0.024,
+   "p": 0.07245129892813486,
+   "q": 0.12937731951452652
+  },
+  {
+   "group": "9",
+   "early": 2,
+   "late": 13,
+   "early_share": 0.029,
+   "late_share": 0.104,
+   "p": 0.08994742621463744,
+   "q": 0.15157273175943675
+  },
+  {
+   "group": "36",
+   "early": 2,
+   "late": 12,
+   "early_share": 0.029,
+   "late_share": 0.096,
+   "p": 0.09094363905566205,
+   "q": 0.15157273175943675
+  },
+  {
+   "group": "35",
+   "early": 1,
+   "late": 8,
+   "early_share": 0.014,
+   "late_share": 0.064,
+   "p": 0.16083855824004709,
+   "q": 0.2594170294194308
+  },
+  {
+   "group": "25",
+   "early": 8,
+   "late": 7,
+   "early_share": 0.114,
+   "late_share": 0.056,
+   "p": 0.16624676523187087,
+   "q": 0.25976057067479824
+  },
+  {
+   "group": "28",
+   "early": 6,
+   "late": 5,
+   "early_share": 0.086,
+   "late_share": 0.04,
+   "p": 0.20657659585862018,
+   "q": 0.3037891115567944
+  },
+  {
+   "group": "29",
+   "early": 6,
+   "late": 5,
+   "early_share": 0.086,
+   "late_share": 0.04,
+   "p": 0.20657659585862018,
+   "q": 0.3037891115567944
+  },
+  {
+   "group": "27",
+   "early": 2,
+   "late": 10,
+   "early_share": 0.029,
+   "late_share": 0.08,
+   "p": 0.21764279879531576,
+   "q": 0.31091828399330823
+  },
+  {
+   "group": "31",
+   "early": 3,
+   "late": 12,
+   "early_share": 0.043,
+   "late_share": 0.096,
+   "p": 0.2639838886344149,
+   "q": 0.34734722188738804
+  },
+  {
+   "group": "14",
+   "early": 7,
+   "late": 7,
+   "early_share": 0.1,
+   "late_share": 0.056,
+   "p": 0.26201278888832497,
+   "q": 0.34734722188738804
+  },
+  {
+   "group": "21",
+   "early": 3,
+   "late": 12,
+   "early_share": 0.043,
+   "late_share": 0.096,
+   "p": 0.2639838886344149,
+   "q": 0.34734722188738804
+  },
+  {
+   "group": "6",
+   "early": 13,
+   "late": 16,
+   "early_share": 0.186,
+   "late_share": 0.128,
+   "p": 0.2988939525862,
+   "q": 0.3782211490146877
+  },
+  {
+   "group": "13",
+   "early": 4,
+   "late": 14,
+   "early_share": 0.057,
+   "late_share": 0.112,
+   "p": 0.3025769192117501,
+   "q": 0.3782211490146877
+  },
+  {
+   "group": "37",
+   "early": 3,
+   "late": 10,
+   "early_share": 0.043,
+   "late_share": 0.08,
+   "p": 0.3845286201410745,
+   "q": 0.45777216683461247
+  },
+  {
+   "group": "17",
+   "early": 3,
+   "late": 10,
+   "early_share": 0.043,
+   "late_share": 0.08,
+   "p": 0.3845286201410745,
+   "q": 0.45777216683461247
+  },
+  {
+   "group": "39",
+   "early": 5,
+   "late": 6,
+   "early_share": 0.071,
+   "late_share": 0.048,
+   "p": 0.5281293485844444,
+   "q": 0.6106865642948117
+  },
+  {
+   "group": "49",
+   "early": 0,
+   "late": 2,
+   "early_share": 0.0,
+   "late_share": 0.016,
+   "p": 0.5374041765794343,
+   "q": 0.6106865642948117
+  },
+  {
+   "group": "15",
+   "early": 7,
+   "late": 10,
+   "early_share": 0.1,
+   "late_share": 0.08,
+   "p": 0.6095399205946543,
+   "q": 0.6772665784385048
+  },
+  {
+   "group": "44",
+   "early": 3,
+   "late": 8,
+   "early_share": 0.043,
+   "late_share": 0.064,
+   "p": 0.7490846536123632,
+   "q": 0.8142224495786557
+  },
+  {
+   "group": "22",
+   "early": 5,
+   "late": 12,
+   "early_share": 0.071,
+   "late_share": 0.096,
+   "p": 0.7919679904807586,
+   "q": 0.8425191388093176
+  },
+  {
+   "group": "5",
+   "early": 14,
+   "late": 23,
+   "early_share": 0.2,
+   "late_share": 0.184,
+   "p": 0.8496220322498849,
+   "q": 0.8850229502602968
+  },
+  {
+   "group": "7",
+   "early": 12,
+   "late": 23,
+   "early_share": 0.171,
+   "late_share": 0.184,
+   "p": 1.0,
+   "q": 1.0
+  },
+  {
+   "group": "19",
+   "early": 6,
+   "late": 11,
+   "early_share": 0.086,
+   "late_share": 0.088,
+   "p": 1.0,
+   "q": 1.0
+  }
+ ],
+ "topics": [
+  {
+   "group": "affordability",
+   "early": 1,
+   "late": 23,
+   "early_share": 0.014,
+   "late_share": 0.184,
+   "p": 0.00020432834561177025,
+   "q": 0.006538507059576648
+  },
+  {
+   "group": "phantom_body",
+   "early": 0,
+   "late": 15,
+   "early_share": 0.0,
+   "late_share": 0.12,
+   "p": 0.001301224351846301,
+   "q": 0.020819589629540815
+  },
+  {
+   "group": "distinction_from_mechanical",
+   "early": 12,
+   "late": 5,
+   "early_share": 0.171,
+   "late_share": 0.04,
+   "p": 0.0029280894039926298,
+   "q": 0.03123295364258805
+  },
+  {
+   "group": "technical_invention",
+   "early": 21,
+   "late": 16,
+   "early_share": 0.3,
+   "late_share": 0.128,
+   "p": 0.004334860548410891,
+   "q": 0.034678884387287126
+  },
+  {
+   "group": "listening",
+   "early": 1,
+   "late": 11,
+   "early_share": 0.014,
+   "late_share": 0.088,
+   "p": 0.05884712241739147,
+   "q": 0.2690154167652182
+  },
+  {
+   "group": "sitting_woman",
+   "early": 0,
+   "late": 8,
+   "early_share": 0.0,
+   "late_share": 0.064,
+   "p": 0.052454698902106495,
+   "q": 0.2690154167652182
+  },
+  {
+   "group": "entertainment",
+   "early": 0,
+   "late": 8,
+   "early_share": 0.0,
+   "late_share": 0.064,
+   "p": 0.052454698902106495,
+   "q": 0.2690154167652182
+  },
+  {
+   "group": "secret",
+   "early": 0,
+   "late": 6,
+   "early_share": 0.0,
+   "late_share": 0.048,
+   "p": 0.08965429418115997,
+   "q": 0.2868937413797119
+  },
+  {
+   "group": "dance",
+   "early": 0,
+   "late": 6,
+   "early_share": 0.0,
+   "late_share": 0.048,
+   "p": 0.08965429418115997,
+   "q": 0.2868937413797119
+  },
+  {
+   "group": "invisibility",
+   "early": 0,
+   "late": 6,
+   "early_share": 0.0,
+   "late_share": 0.048,
+   "p": 0.08965429418115997,
+   "q": 0.2868937413797119
+  },
+  {
+   "group": "miracle",
+   "early": 12,
+   "late": 11,
+   "early_share": 0.171,
+   "late_share": 0.088,
+   "p": 0.10533980870771886,
+   "q": 0.3064430798770003
+  },
+  {
+   "group": "home",
+   "early": 16,
+   "late": 40,
+   "early_share": 0.229,
+   "late_share": 0.32,
+   "p": 0.19083389365709966,
+   "q": 0.5088903830855991
+  },
+  {
+   "group": "immortality",
+   "early": 15,
+   "late": 22,
+   "early_share": 0.214,
+   "late_share": 0.176,
+   "p": 0.5693926239847655,
+   "q": 0.7591901653130207
+  },
+  {
+   "group": "virtual_presence",
+   "early": 18,
+   "late": 26,
+   "early_share": 0.257,
+   "late_share": 0.208,
+   "p": 0.47672705996684117,
+   "q": 0.7591901653130207
+  },
+  {
+   "group": "unreached_ideal",
+   "early": 5,
+   "late": 6,
+   "early_share": 0.071,
+   "late_share": 0.048,
+   "p": 0.5281293485844444,
+   "q": 0.7591901653130207
+  },
+  {
+   "group": "educational_use",
+   "early": 8,
+   "late": 9,
+   "early_share": 0.114,
+   "late_share": 0.072,
+   "p": 0.4276088215865226,
+   "q": 0.7591901653130207
+  },
+  {
+   "group": "repeatability",
+   "early": 1,
+   "late": 5,
+   "early_share": 0.014,
+   "late_share": 0.04,
+   "p": 0.4225787318347175,
+   "q": 0.7591901653130207
+  },
+  {
+   "group": "analogy_to_photography",
+   "early": 4,
+   "late": 4,
+   "early_share": 0.057,
+   "late_share": 0.032,
+   "p": 0.460954236241626,
+   "q": 0.7591901653130207
+  },
+  {
+   "group": "artistic_accompaniment",
+   "early": 1,
+   "late": 0,
+   "early_share": 0.014,
+   "late_share": 0.0,
+   "p": 0.358974358974359,
+   "q": 0.7591901653130207
+  },
+  {
+   "group": "analogy_to_phonograph",
+   "early": 1,
+   "late": 0,
+   "early_share": 0.014,
+   "late_share": 0.0,
+   "p": 0.358974358974359,
+   "q": 0.7591901653130207
+  },
+  {
+   "group": "suit_every_mood",
+   "early": 1,
+   "late": 5,
+   "early_share": 0.014,
+   "late_share": 0.04,
+   "p": 0.4225787318347175,
+   "q": 0.7591901653130207
+  },
+  {
+   "group": "popular",
+   "early": 1,
+   "late": 5,
+   "early_share": 0.014,
+   "late_share": 0.04,
+   "p": 0.4225787318347175,
+   "q": 0.7591901653130207
+  },
+  {
+   "group": "hostess",
+   "early": 0,
+   "late": 3,
+   "early_share": 0.0,
+   "late_share": 0.024,
+   "p": 0.5541822634392477,
+   "q": 0.7591901653130207
+  },
+  {
+   "group": "atmosphere",
+   "early": 0,
+   "late": 3,
+   "early_share": 0.0,
+   "late_share": 0.024,
+   "p": 0.5541822634392477,
+   "q": 0.7591901653130207
+  },
+  {
+   "group": "personality",
+   "early": 9,
+   "late": 13,
+   "early_share": 0.129,
+   "late_share": 0.104,
+   "p": 0.6407913018997581,
+   "q": 0.8202128664316903
+  },
+  {
+   "group": "superiority",
+   "early": 18,
+   "late": 36,
+   "early_share": 0.257,
+   "late_share": 0.288,
+   "p": 0.7393031946605799,
+   "q": 0.9099116241976368
+  },
+  {
+   "group": "touch_of_a_button",
+   "early": 10,
+   "late": 16,
+   "early_share": 0.143,
+   "late_share": 0.128,
+   "p": 0.827384329575394,
+   "q": 0.9806036498671337
+  },
+  {
+   "group": "exact_reproduction",
+   "early": 33,
+   "late": 61,
+   "early_share": 0.471,
+   "late_share": 0.488,
+   "p": 0.8816798266813659,
+   "q": 1.0
+  },
+  {
+   "group": "soulfulness",
+   "early": 3,
+   "late": 6,
+   "early_share": 0.043,
+   "late_share": 0.048,
+   "p": 1.0,
+   "q": 1.0
+  },
+  {
+   "group": "immediate_recognizability",
+   "early": 3,
+   "late": 6,
+   "early_share": 0.043,
+   "late_share": 0.048,
+   "p": 1.0,
+   "q": 1.0
+  },
+  {
+   "group": "analysis",
+   "early": 1,
+   "late": 1,
+   "early_share": 0.014,
+   "late_share": 0.008,
+   "p": 1.0,
+   "q": 1.0
+  },
+  {
+   "group": "jazz",
+   "early": 0,
+   "late": 1,
+   "early_share": 0.0,
+   "late_share": 0.008,
+   "p": 1.0,
+   "q": 1.0
+  }
+ ],
+ "spans_per_1000_words": {
+  "technical_invention": [
+   3.22,
+   1.3
+  ],
+  "exact_reproduction": [
+   5.69,
+   4.7
+  ],
+  "immortality": [
+   2.35,
+   1.95
+  ],
+  "distinction_from_mechanical": [
+   1.48,
+   0.36
+  ],
+  "home": [
+   1.98,
+   3.4
+  ],
+  "touch_of_a_button": [
+   1.24,
+   1.3
+  ],
+  "miracle": [
+   2.35,
+   0.87
+  ],
+  "virtual_presence": [
+   2.35,
+   1.95
+  ],
+  "unreached_ideal": [
+   0.62,
+   0.51
+  ],
+  "educational_use": [
+   1.48,
+   0.65
+  ],
+  "soulfulness": [
+   0.37,
+   0.58
+  ],
+  "listening": [
+   0.12,
+   0.8
+  ],
+  "repeatability": [
+   0.12,
+   0.36
+  ],
+  "personality": [
+   1.24,
+   0.94
+  ],
+  "affordability": [
+   0.12,
+   1.66
+  ],
+  "analogy_to_photography": [
+   0.49,
+   0.36
+  ],
+  "immediate_recognizability": [
+   0.37,
+   0.43
+  ],
+  "artistic_accompaniment": [
+   0.12,
+   0.0
+  ],
+  "phantom_body": [
+   0.0,
+   1.88
+  ],
+  "sitting_woman": [
+   0.0,
+   0.65
+  ],
+  "analogy_to_phonograph": [
+   0.12,
+   0.0
+  ],
+  "secret": [
+   0.0,
+   0.51
+  ],
+  "suit_every_mood": [
+   0.12,
+   0.43
+  ],
+  "popular": [
+   0.12,
+   0.36
+  ],
+  "dance": [
+   0.0,
+   0.58
+  ],
+  "invisibility": [
+   0.0,
+   0.43
+  ],
+  "superiority": [
+   2.23,
+   2.75
+  ],
+  "analysis": [
+   0.12,
+   0.07
+  ],
+  "entertainment": [
+   0.0,
+   0.72
+  ],
+  "hostess": [
+   0.0,
+   0.22
+  ],
+  "atmosphere": [
+   0.0,
+   0.29
+  ],
+  "jazz": [
+   0.0,
+   0.07
+  ]
+ },
+ "composition": {
+  "lang": {
+   "early": [
+    [
+     "de",
+     28
+    ],
+    [
+     "en",
+     14
+    ],
+    [
+     "sv",
+     7
+    ],
+    [
+     "nl",
+     4
+    ],
+    [
+     "no",
+     4
+    ],
+    [
+     "pl",
+     4
+    ],
+    [
+     "fr",
+     3
+    ],
+    [
+     "pt",
+     2
+    ],
+    [
+     "da",
+     1
+    ],
+    [
+     "ru",
+     1
+    ],
+    [
+     "es",
+     1
+    ],
+    [
+     "ca",
+     1
+    ]
+   ],
+   "late": [
+    [
+     "en",
+     52
+    ],
+    [
+     "nl",
+     18
+    ],
+    [
+     "es",
+     13
+    ],
+    [
+     "da",
+     11
+    ],
+    [
+     "de",
+     10
+    ],
+    [
+     "fr",
+     8
+    ],
+    [
+     "sv",
+     7
+    ],
+    [
+     "no",
+     5
+    ],
+    [
+     "ru",
+     1
+    ]
+   ]
+  },
+  "status": {
+   "early": [
+    [
+     "unchecked",
+     56
+    ],
+    [
+     "checked",
+     14
+    ]
+   ],
+   "late": [
+    [
+     "unchecked",
+     94
+    ],
+    [
+     "checked",
+     31
+    ]
+   ]
+  },
+  "span_resp": {
+   "early": [
+    [
+     "claude",
+     172
+    ],
+    [
+     "np",
+     53
+    ],
+    [
+     "none",
+     3
+    ]
+   ],
+   "late": [
+    [
+     "claude",
+     263
+    ],
+    [
+     "np",
+     130
+    ],
+    [
+     "none",
+     25
+    ]
+   ]
+  },
+  "firm_top": {
+   "early": [
+    [
+     "R. Reutemann",
+     9
+    ],
+    [
+     "Dahlströms Orgel- & Pianomagas",
+     7
+    ],
+    [
+     "Hug & Co.",
+     6
+    ],
+    [
+     "Jul. Heinr. Zimmermann",
+     5
+    ],
+    [
+     "Alfred Schmid Nachf.",
+     2
+    ],
+    [
+     "Pianohaus Alfred Schmid Nachf.",
+     2
+    ]
+   ],
+   "late": [
+    [
+     "Auto Pneumatic Action Co.",
+     15
+    ],
+    [
+     "A/S Chr. Winther",
+     8
+    ],
+    [
+     "Heintzman & Co.",
+     8
+    ],
+    [
+     "John L. Stowers",
+     6
+    ],
+    [
+     "Waidele",
+     5
+    ],
+    [
+     "Hug & Co.",
+     5
+    ]
+   ]
+  }
+ }
+}

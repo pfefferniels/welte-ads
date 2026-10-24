@@ -18,6 +18,10 @@
                         <forename>Niels</forename>
                     </persName>
                 </respStmt>
+                <respStmt>
+                    <resp>Annotation of topics</resp>
+                    <name xml:id="claude">Claude (AI model by Anthropic)</name>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>
@@ -127,11 +131,12 @@
                   scan, in part transcribed by hand. The advertisements published
                   outside Germany, the United Kingdom and the United States, and a
                   few from Germany, were transcribed from the scans, encoded, given
-                  their regions and annotated with topics by Claude, an AI model;
-                  their revision history says so. Until the editor has checked such
-                  an advertisement against the scan, <att>status</att> on its
-                  <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-                  advertisement is <val>checked</val>.</p>
+                  their regions by Claude, an AI model; their revision history says
+                  so. Until the editor has checked such an advertisement against the
+                  scan, <att>status</att> on its <gi>revisionDesc</gi> is
+                  <val>unchecked</val>; that of every other advertisement is
+                  <val>checked</val>. The topics of all advertisements were assigned
+                  by Claude.</p>
                <correction>
                   <p>Errors of the original are not corrected but marked with
                      <gi>sic</gi>.</p>
@@ -159,10 +164,15 @@
                      Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                      which describes them in a <gi>desc</gi>. Illustrations are
                      described in <gi>figure</gi>. Persons are linked to the GND with
-                     <att>corresp</att>. Recurring motifs are marked as topics with
-                     <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                     the taxonomy of topics; these are an interpretation, by whom
-                     <att>resp</att> says.</p>
+                     <att>corresp</att>. Recurring arguments and motifs are marked as
+                     topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                     pointing to the taxonomy of topics. The taxonomy was induced by
+                     Claude in four blind readings of all advertisements, each in a
+                     different order and without knowledge of the editor's earlier
+                     taxonomy, which it replaced in October 2026; it keeps the topics
+                     that at least three of the readings found. The topics are an
+                     interpretation, assigned by whom <att>resp</att> says, so far
+                     all by Claude; the editor has not yet checked them.</p>
                </interpretation>
                <stdVals>
                   <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -178,24 +188,88 @@
             </tagsDecl>
             <classDecl>
                 <taxonomy xml:id="topics">
-                    <desc>Topics: recurring motifs of the advertisements, in their texts
-                       and in their pictures</desc>
-                    <category xml:id="educational_use">
-                       <gloss>Educational Use</gloss>
+                    <desc>Topics: the recurring arguments and motifs of the advertisements,
+                       in their texts and in their pictures</desc>
+                    <category xml:id="faithful_reproduction">
+                       <gloss>Faithful reproduction</gloss>
+                       <desc>The ad claims that the playing of the artist is reproduced exactly,
+                          faithfully, naturally or completely, as "the actual playing" of the
+                          pianist. A bare "reproduces the playing of …" without such a
+                          qualifier does not count.</desc>
                     </category>
-                    <category xml:id="exact_reproduction">
-                       <gloss>Exact Reproduction</gloss>
-                       <desc>In virtually all promotional materials between 1905 and 1926,
-                          the claim of exact and faithful reproduction, of absolute
-                          accurateness is consistently emphasized.</desc>
+                    <category xml:id="touch_and_individuality">
+                       <gloss>Touch, nuance and individuality</gloss>
+                       <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                          pedalling, dynamics, tempo, shading, tone colour, or the
+                          individuality and characteristic style of each pianist.</desc>
                     </category>
-                    <category xml:id="immediate_recognizability">
-                       <gloss>Immediate Recognizability</gloss>
+                    <category xml:id="not_mechanical">
+                       <gloss>Art, not mechanism</gloss>
+                       <desc>The instrument is set apart from mechanical, automatic or player-
+                          piano playing: it is human, artistic, "not a surrogate", or the
+                          prejudice that it is mechanical is refuted.</desc>
+                    </category>
+                    <category xml:id="illusion_of_presence">
+                       <gloss>Illusion of presence</gloss>
+                       <desc>The listener feels that the artist is present or seated at the
+                          instrument ("as if he sat at your piano", "close your eyes"), or
+                          cannot tell the reproduction from the live artist.</desc>
+                    </category>
+                    <category xml:id="artists_hear_themselves">
+                       <gloss>Artists hear themselves</gloss>
+                       <desc>The artists vouch for their own recordings: they hear or recognise
+                          their own playing, are deceived by it, sign the rolls as
+                          autographs, or a demonstration proves that each pianist can be
+                          recognised.</desc>
                     </category>
                     <category xml:id="immortality">
-                       <gloss>Immortality</gloss>
-                       <desc>This topic emphasizes the perdurance of the reproductions and
-                          how thus the recording artists become immortal.</desc>
+                       <gloss>Immortality and posterity</gloss>
+                       <desc>The playing is preserved for ever or for future generations; the
+                          artists become immortal, and dead artists still play.</desc>
+                    </category>
+                    <category xml:id="if_only_earlier">
+                       <gloss>If only it had existed earlier</gloss>
+                       <desc>The ad regrets that the invention did not exist earlier, so that we
+                          could still hear Liszt, Chopin, Beethoven or Rubinstein. Nearly
+                          always voiced by a quoted musician.</desc>
+                    </category>
+                    <category xml:id="wonder">
+                       <gloss>Wonder, miracle and magic</gloss>
+                       <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                          causes astonishment, disbelief or speechlessness.</desc>
+                    </category>
+                    <category xml:id="testimonials">
+                       <gloss>Testimonials of famous musicians</gloss>
+                       <desc>A named musician or other notable person is quoted or paraphrased
+                          in praise of the instrument.</desc>
+                    </category>
+                    <category xml:id="world_renown">
+                       <gloss>World renown and recognition</gloss>
+                       <desc>The instrument is famous and admired throughout the world,
+                          acclaimed by all great artists, critics or the press, adopted by
+                          conservatories and other institutions, or decorated with medals and
+                          prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+                    </category>
+                    <category xml:id="royal_patronage">
+                       <gloss>Royal and aristocratic patronage</gloss>
+                       <desc>Royalty, the nobility or the court appear as listeners, owners or
+                          patrons, including titles of purveyor to the court
+                          ("Hoflieferant").</desc>
+                    </category>
+                    <category xml:id="epoch_making_invention">
+                       <gloss>Epoch-making invention</gloss>
+                       <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                          the greatest of the age, a sensation, the newest thing.</desc>
+                    </category>
+                    <category xml:id="superlatives">
+                       <gloss>Superlative perfection</gloss>
+                       <desc>The instrument is called perfect, the best, the finest, supreme or
+                          unsurpassed, or the culmination of a line of progress.</desc>
+                    </category>
+                    <category xml:id="education">
+                       <gloss>Education and study</gloss>
+                       <desc>The instrument serves learning and teaching: conservatories,
+                          students, studying an interpretation by repeating it.</desc>
                     </category>
                 </taxonomy>
             </classDecl>
@@ -206,6 +280,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
             <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
@@ -240,16 +315,16 @@
         <div facs="#eSc_textblock_fedea684">
             <ab><lb />gibt das Spiel der berühmten Meister des Klaviers selbst-
             <lb />tätig und
-            <seg xml:id="topic_1" ana="#exact_reproduction" resp="#np" type="topic">
+            <seg xml:id="topic_1" ana="#faithful_reproduction" resp="#claude" type="topic">
                 völlig getreu wieder
-            </seg>, sodass die Unterscheidung
+            </seg>, sodass <seg xml:id="topic_6" ana="#illusion_of_presence" type="topic" resp="#claude">die Unterscheidung
             <lb />zwischen dem Spiel des Künstlers und der Wiedergabe auf
-            <lb />dem Reproduktionsklavier überhaupt aufhört. Ueber die
-            <lb />blosse Fingerfertigkeit vermag dieses Wunderklavier alles, was an der Leistung
+            <lb />dem Reproduktionsklavier überhaupt aufhört</seg>. Ueber die
+            <lb />blosse Fingerfertigkeit vermag <seg xml:id="topic_7" ana="#wonder #touch_and_individuality" type="topic" resp="#claude">dieses Wunderklavier alles, was an der Leistung
             <lb />eines Künstlers das Persönliche und Charakteristische ausmacht, zur Geltung zu
-            <lb />bringen; es handelt sich also nicht um ein Surrogat, sondern um eine vollwertige
-            <lb />Vertretung.
-            <seg xml:id="topic_2" ana="#immediate_recognizability" type="topic" resp="#np">
+            <lb />bringen</seg>; <seg xml:id="topic_8" ana="#not_mechanical" type="topic" resp="#claude">es handelt sich also nicht um ein Surrogat, sondern um eine vollwertige
+            <lb />Vertretung.</seg>
+            <seg xml:id="topic_2" ana="#touch_and_individuality #artists_hear_themselves" type="topic" resp="#claude">
                 Wer mit der Spielweise
                 <persName type="artist" corresp="https://d-nb.info/gnd/118501437">d'Alberts</persName>,
                 <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busonis</persName>,
@@ -257,9 +332,9 @@
                 <persName type="artist" corresp="https://d-nb.info/gnd/117223794">Stavenhagens</persName> etc.
                 <lb />vertraut ist, wird bei der Wiedergabe sofort erkennen, welcher dieser Künstler spielt.
             </seg> Es ist deshalb
-            <lb />nur eines zu bedauern, dass diese wundervolle Erfindung nicht schon vor 50 und mehr Jahren
-            <lb />gemacht worden ist. Dann wäre es möglich, auch
-            <seg xml:id="topic_3" ana="#educational_use" resp="#np" type="topic">
+            <lb /><seg xml:id="topic_9" ana="#if_only_earlier" type="topic" resp="#claude">nur eines zu bedauern, dass diese wundervolle Erfindung nicht schon vor 50 und mehr Jahren
+            <lb />gemacht worden ist.</seg> Dann wäre es möglich, auch
+            <seg xml:id="topic_3" ana="#if_only_earlier #education" resp="#claude" type="topic">
                 heute noch sich an dem Spiel der grossen
                 <lb />Meister wie <persName type="composer" corresp="https://d-nb.info/gnd/118520539">Chopin</persName>,
                 <persName type="composer" corresp="https://d-nb.info/gnd/118573527">Liszt</persName>, <persName type="composer" corresp="https://d-nb.info/gnd/118926802">Rubinstein</persName>,
@@ -267,29 +342,29 @@
             </seg>.
             Von fast
             <lb />allen Grossen der Gegenwart, seien es Pianisten, Komponisten oder Dirigenten,
-            <seg xml:id="topic_4" ana="#immortality" resp="#np" type="topic">
+            <seg xml:id="topic_4" ana="#immortality" resp="#claude" type="topic">
                 ist das Klavier-
                 <lb />spiel nun für die Nachwelt festgehalten.
             </seg>
-            <lb />Aus den zahlreichen begeisterten Kundgebungen der massgebendsten Künstler sei nur die
-            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11863027X">Felix Weingartners</persName> nachstehend angeführt:
+            <lb /><seg xml:id="topic_10" ana="#testimonials #world_renown" type="topic" resp="#claude">Aus den zahlreichen begeisterten Kundgebungen der massgebendsten Künstler sei nur die
+            <lb /><persName type="artist" corresp="https://d-nb.info/gnd/11863027X">Felix Weingartners</persName> nachstehend angeführt:</seg>
             <lb />
             <quote type="testimonial">
-                "Das Reproduktionsklavier ist das unglaublichste an Vollendung, was man sich denken kann.
+                <seg xml:id="topic_11" ana="#wonder #superlatives" type="topic" resp="#claude">"Das Reproduktionsklavier ist das unglaublichste an Vollendung, was man sich denken kann.</seg>
                 <lb />
-                <seg xml:id="topic_5" ana="#immortality" resp="#np" type="topic">
+                <seg xml:id="topic_5" ana="#immortality" resp="#claude" type="topic">
                     Was grosse Meister unserer Tage leisten, kann nun nicht mehr untergehen
                 </seg>
-                und spätere Generationen
-                <lb />werden die Früchte dieser genialen Erfindung geniessen."
+                und <seg xml:id="topic_12" ana="#immortality #epoch_making_invention" type="topic" resp="#claude">spätere Generationen
+                <lb />werden die Früchte dieser genialen Erfindung geniessen.</seg>"
             </quote>
             <lb />Die nächste Vorführung des Reproduktionsklaviers findet Sonntag den 15. Dezember nach-
             <lb />mittags 5 Uhr statt, wozu Musikfreunde höflichst eingeladen sind.
             <lb />
             <hi rendition="#c"><hi rendition="#in"><hi rendition="#larger"><orgName>Pianohaus Alfred Schmid Nachf.</orgName></hi></hi></hi>
-            <lb /><hi rendition="#c">Kgl. Bayer. Hofmusikalienhandlung,
+            <lb /><hi rendition="#c"><seg xml:id="topic_13" ana="#royal_patronage" type="topic" resp="#claude">Kgl. Bayer. Hofmusikalienhandlung,
             Hoflieferant Sr. Kgl. Hoheit des Prinzen
-            Rupprecht von Bayern.</hi><lb /><hi rendition="#c"><hi rendition="#larger"><address><addrLine>34 Theatinerstrasse 34</addrLine></address></hi></hi></ab>
+            Rupprecht von Bayern.</seg></hi><lb /><hi rendition="#c"><hi rendition="#larger"><address><addrLine>34 Theatinerstrasse 34</addrLine></address></hi></hi></ab>
         </div>
         </body>
     </text>

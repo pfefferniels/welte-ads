@@ -561,7 +561,7 @@ export interface Topic {
 
 /**
  * The topics as the shared encoding description defines them, keyed by
- * the pointer that @ana uses (e.g. "#exact_reproduction").
+ * the pointer that @ana uses (e.g. "#faithful_reproduction").
  */
 export function getTopics(): Record<string, Topic> {
   const xml = fs.readFileSync(path.join(getTeiDir(), 'shared', 'encoding.xml'), 'utf-8')

@@ -19,7 +19,7 @@
                     </persName>
                 </respStmt>
                 <respStmt>
-                    <resp>Further printings</resp>
+                    <resp>Further printings and annotation of topics</resp>
                     <name xml:id="claude">Claude (AI model by Anthropic)</name>
                 </respStmt>
             </titleStmt>
@@ -443,11 +443,12 @@
                   scan, in part transcribed by hand. The advertisements published
                   outside Germany, the United Kingdom and the United States, and a
                   few from Germany, were transcribed from the scans, encoded, given
-                  their regions and annotated with topics by Claude, an AI model;
-                  their revision history says so. Until the editor has checked such
-                  an advertisement against the scan, <att>status</att> on its
-                  <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-                  advertisement is <val>checked</val>.</p>
+                  their regions by Claude, an AI model; their revision history says
+                  so. Until the editor has checked such an advertisement against the
+                  scan, <att>status</att> on its <gi>revisionDesc</gi> is
+                  <val>unchecked</val>; that of every other advertisement is
+                  <val>checked</val>. The topics of all advertisements were assigned
+                  by Claude.</p>
                <correction>
                   <p>Errors of the original are not corrected but marked with
                      <gi>sic</gi>.</p>
@@ -475,10 +476,15 @@
                      Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                      which describes them in a <gi>desc</gi>. Illustrations are
                      described in <gi>figure</gi>. Persons are linked to the GND with
-                     <att>corresp</att>. Recurring motifs are marked as topics with
-                     <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                     the taxonomy of topics; these are an interpretation, by whom
-                     <att>resp</att> says.</p>
+                     <att>corresp</att>. Recurring arguments and motifs are marked as
+                     topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                     pointing to the taxonomy of topics. The taxonomy was induced by
+                     Claude in four blind readings of all advertisements, each in a
+                     different order and without knowledge of the editor's earlier
+                     taxonomy, which it replaced in October 2026; it keeps the topics
+                     that at least three of the readings found. The topics are an
+                     interpretation, assigned by whom <att>resp</att> says, so far
+                     all by Claude; the editor has not yet checked them.</p>
                </interpretation>
                <stdVals>
                   <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -491,36 +497,100 @@
             </tagsDecl>
             <classDecl>
                 <taxonomy xml:id="topics">
-                    <desc>Topics: recurring motifs of the advertisements, in their texts
-                       and in their pictures</desc>
-                    <category xml:id="educational_use">
-                       <gloss>Educational Use</gloss>
+                    <desc>Topics: the recurring arguments and motifs of the advertisements,
+                       in their texts and in their pictures</desc>
+                    <category xml:id="faithful_reproduction">
+                       <gloss>Faithful reproduction</gloss>
+                       <desc>The ad claims that the playing of the artist is reproduced exactly,
+                          faithfully, naturally or completely, as "the actual playing" of the
+                          pianist. A bare "reproduces the playing of …" without such a
+                          qualifier does not count.</desc>
                     </category>
-                    <category xml:id="exact_reproduction">
-                       <gloss>Exact Reproduction</gloss>
-                       <desc>In virtually all promotional materials between 1905 and 1926,
-                          the claim of exact and faithful reproduction, of absolute
-                          accurateness is consistently emphasized.</desc>
+                    <category xml:id="touch_and_individuality">
+                       <gloss>Touch, nuance and individuality</gloss>
+                       <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                          pedalling, dynamics, tempo, shading, tone colour, or the
+                          individuality and characteristic style of each pianist.</desc>
                     </category>
-                    <category xml:id="home">
-                       <gloss>Home</gloss>
+                    <category xml:id="the_artists_soul">
+                       <gloss>The artist's soul</gloss>
+                       <desc>The instrument is said to capture the soul, spirit, feeling or
+                          inner life of the performer, a spiritual register beyond the
+                          technical one of touch and nuance ("the living soul of the artist",
+                          "Musikseele").</desc>
+                    </category>
+                    <category xml:id="illusion_of_presence">
+                       <gloss>Illusion of presence</gloss>
+                       <desc>The listener feels that the artist is present or seated at the
+                          instrument ("as if he sat at your piano", "close your eyes"), or
+                          cannot tell the reproduction from the live artist.</desc>
+                    </category>
+                    <category xml:id="artists_hear_themselves">
+                       <gloss>Artists hear themselves</gloss>
+                       <desc>The artists vouch for their own recordings: they hear or recognise
+                          their own playing, are deceived by it, sign the rolls as
+                          autographs, or a demonstration proves that each pianist can be
+                          recognised.</desc>
                     </category>
                     <category xml:id="immortality">
-                       <gloss>Immortality</gloss>
-                       <desc>This topic emphasizes the perdurance of the reproductions and
-                          how thus the recording artists become immortal.</desc>
+                       <gloss>Immortality and posterity</gloss>
+                       <desc>The playing is preserved for ever or for future generations; the
+                          artists become immortal, and dead artists still play.</desc>
                     </category>
-                    <category xml:id="technical_invention">
-                       <gloss>Technical Invention</gloss>
+                    <category xml:id="wonder">
+                       <gloss>Wonder, miracle and magic</gloss>
+                       <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                          causes astonishment, disbelief or speechlessness.</desc>
                     </category>
-                    <category xml:id="touch_of_a_button">
-                       <gloss>Touch of a Button</gloss>
-                       <desc>The Welte-Mignon is permanently available and "objectified"
-                          for the entertainment of the owner – on the touch of a
-                          button.</desc>
+                    <category xml:id="phantom_hands">
+                       <gloss>Phantom hands</gloss>
+                       <desc>The absent performer appears as a phantom or spirit: ghostly or
+                          semi-transparent hands and figures, keys moving with no one seated,
+                          the artist summoned at will ("zitieren", "summon").</desc>
                     </category>
-                    <category xml:id="virtual_presence">
-                       <gloss>Virtual Presence</gloss>
+                    <category xml:id="masters_at_home">
+                       <gloss>The great pianists in your home</gloss>
+                       <desc>The famous pianists can be heard in your own home or on your own
+                          piano, at any time, as often as you wish, at your command ("The
+                          Master's Fingers on Your Piano", concerts at home).</desc>
+                    </category>
+                    <category xml:id="refinement">
+                       <gloss>Culture, refinement and distinction</gloss>
+                       <desc>Owning the instrument marks culture, refinement or social standing
+                          ("vornehmes Heim", "a visible token of culture"), or the picture
+                          places it in an elegant upper-class setting.</desc>
+                    </category>
+                    <category xml:id="testimonials">
+                       <gloss>Testimonials of famous musicians</gloss>
+                       <desc>A named musician or other notable person is quoted or paraphrased
+                          in praise of the instrument.</desc>
+                    </category>
+                    <category xml:id="epoch_making_invention">
+                       <gloss>Epoch-making invention</gloss>
+                       <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                          the greatest of the age, a sensation, the newest thing.</desc>
+                    </category>
+                    <category xml:id="superlatives">
+                       <gloss>Superlative perfection</gloss>
+                       <desc>The instrument is called perfect, the best, the finest, supreme or
+                          unsurpassed, or the culmination of a line of progress.</desc>
+                    </category>
+                    <category xml:id="the_original">
+                       <gloss>The original</gloss>
+                       <desc>The Welte-Mignon is the original or the first reproducing piano,
+                          protected by the original patents; the history of the Welte firm
+                          and its founders guarantees it.</desc>
+                    </category>
+                    <category xml:id="education">
+                       <gloss>Education and study</gloss>
+                       <desc>The instrument serves learning and teaching: conservatories,
+                          students, studying an interpretation by repeating it.</desc>
+                    </category>
+                    <category xml:id="still_a_piano">
+                       <gloss>Still a normal piano</gloss>
+                       <desc>The instrument remains an ordinary piano: it can be played by hand,
+                          the mechanism is invisible and leaves its look unchanged, it can be
+                          fitted to many makes of piano.</desc>
                     </category>
                 </taxonomy>
             </classDecl>
@@ -531,6 +601,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
             <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
@@ -580,30 +651,30 @@
         <div facs="#eSc_textblock_40330f98">
             <ab><lb /><name type="brand">Welte-Mignon
             <lb />Reproduktions-Piano</name> * Reproduktions-Flügel
-            <lb /><seg type="slogan">Getreue Wiedergabe des Spiels berühmter KLAVIER-Virtuosen</seg></ab>
+            <lb /><seg type="slogan"><seg xml:id="topic_8" ana="#faithful_reproduction" type="topic" resp="#claude">Getreue Wiedergabe des Spiels berühmter KLAVIER-Virtuosen</seg></seg></ab>
         </div>
         <div facs="#eSc_textblock_01f2d6ec">
-            <ab><lb /><name type="brand">Welte-Mignon</name>
+            <ab><lb /><seg xml:id="topic_9" ana="#still_a_piano" type="topic" resp="#claude"><name type="brand">Welte-Mignon</name>
             <lb />wird eingebaut in
             <lb />Pianos und Flügel
-            <lb />der Marken:</ab>
+            <lb />der Marken:</seg></ab>
         </div>
         <div facs="#eSc_textblock_87ee5dfc">
-            <ab><lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Professor Eugen d'Albert</persName> schreibt:
+            <ab><lb /><seg xml:id="topic_10" ana="#testimonials" type="topic" resp="#claude"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Professor Eugen d'Albert</persName></seg> schreibt:
             <quote type="testimonial">
-                <lb />"Wie erstaunlich und tief ergreifend ist es, sein vor
+                <lb />"<seg xml:id="topic_11" ana="#artists_hear_themselves #wonder" type="topic" resp="#claude">Wie erstaunlich und tief ergreifend ist es, sein vor
                 <lb />Jahren aufgenommenes Spiel in größter Vollendung durch
-                <lb /><name type="brand">"Welte-Mignon"</name> wiedergegeben zu hören! Der Ruf der
+                <lb /><name type="brand">"Welte-Mignon"</name> wiedergegeben zu hören!</seg> <seg xml:id="topic_12" ana="#superlatives" type="topic" resp="#claude">Der Ruf der
                 <lb /><name type="brand">"Welte-Mignon-Pianos"</name>, das Vollendetste zu sein auf
-                <lb />diesem Gebiete, ist fest begründet in dieser
-                <seg xml:id="topic_1" ana="#exact_reproduction" resp="#np" type="topic">
+                <lb />diesem Gebiete, ist fest begründet</seg> in dieser
+                <seg xml:id="topic_1" ana="#faithful_reproduction #touch_and_individuality" resp="#claude" type="topic">
                     getreuen
                     <lb />Wiedergabe des individuellen Spiels
                 </seg>, und es ist mir eine
                 <lb />künstlerische Befriedigung und eine Freude, heute dem
                 <lb /><name type="brand">"Welte-Mignon"</name> ein reiches vielseitiges Programm
                 <lb />anvertraut zu haben, das
-                <seg xml:id="topic_2" ana="#immortality" resp="#np" type="topic">
+                <seg xml:id="topic_2" ana="#immortality" resp="#claude" type="topic">
                     meine Kunst der Nachwelt
                     <lb />überträgt.
                 </seg>"
@@ -613,31 +684,31 @@
             <ab><lb /><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Professor d'Albert</persName> für "Welte-Mignon" spielend.</ab>
         </div>
         <div facs="#eSc_textblock_d6a5ecdd">
-            <ab><lb /><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Professor Artur Nikisch</persName> schreibt:
+            <ab><lb /><seg xml:id="topic_13" ana="#testimonials" type="topic" resp="#claude"><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Professor Artur Nikisch</persName></seg> schreibt:
             <quote type="testimonial">
                 <lb />"Den Reproduktionsapparat <name type="brand">"Welte-Mignon"</name> halte ich
                 <lb />für
-                <seg xml:id="topic_3" ana="#technical_invention" resp="#np" type="topic">
+                <seg xml:id="topic_3" ana="#epoch_making_invention" resp="#claude" type="topic">
                     eine epochemachende Erfindung.
                 </seg>
-                Die Wiedergabe
+                <seg xml:id="topic_14" ana="#faithful_reproduction #wonder #the_artists_soul" type="topic" resp="#claude">Die Wiedergabe
                 <lb />der von einem Künstler in den Apparat gespielten Ton-
                 <lb />stücke ist nach jeder Richtung, sowohl was das rein tech-
                 <lb />nisch-virtuose, wie auch was das musikalisch-poetische
-                <lb />Element betrifft, eine so verblüffend natürlich,
-                <seg xml:id="topic_4" ana="#virtual_presence" resp="#np" type="topic">
+                <lb />Element betrifft, eine so verblüffend natürlich,</seg>
+                <seg xml:id="topic_4" ana="#illusion_of_presence" resp="#claude" type="topic">
                     daß man
                     <lb />wirklich meint, den betr. Künstler in Person vor sich zu
                     <lb />haben und ihn spielen zu hören.
                 </seg>
                 Der Wert der Erfindung
                 <lb />besteht demnach nicht nur in dem
-                <seg xml:id="topic_5" ana="#educational_use" resp="#np" type="topic">
+                <seg xml:id="topic_5" ana="#education" resp="#claude" type="topic">
                     eminent pädagogischen
                     <lb />Einfluß auf den Lernenden
                 </seg>, sondern in ganz hervorragen-
                 <lb />der Weise auch
-                <seg xml:id="topic_6" ana="#touch_of_a_button" resp="#np" type="topic">
+                <seg xml:id="topic_6" ana="#phantom_hands #masters_at_home" resp="#claude" type="topic">
                     für denjenigen, welcher, um eine Stunde
                     <lb />künstlerischen Genusses bequem sich zu verschaffen,
                     <lb />irgendeinen hervorragenden Künstler "zitieren" will.
@@ -655,7 +726,7 @@
             <lb />Philharmonie-Orgel</ab>
         </div>
         <div facs="#eSc_textblock_2e01c03a">
-            <ab><seg xml:id="topic_7" ana="#home" type="topic" resp="#np">
+            <ab><seg xml:id="topic_7" ana="#refinement" type="topic" resp="#claude">
                 <lb />für das
                 <lb />vornehme
                 <lb />Privat-Haus
@@ -666,17 +737,17 @@
             <lb /><orgName>M. Welte &amp; Söhne</orgName>
             <lb />Fabrik pneumatischer Musikwerke
             <lb />Freiburg i. Br.
-            <lb />Gegründet 1832
+            <lb /><seg xml:id="topic_15" ana="#the_original" type="topic" resp="#claude">Gegründet 1832</seg>
             </hi></ab>
         </div>
         <div facs="#eSc_textblock_00775c4e">
-            <ab><lb />Individuelle
+            <ab><lb /><seg xml:id="topic_16" ana="#touch_and_individuality" type="topic" resp="#claude">Individuelle
             <lb />Spiel erster
             <lb />Orgel-Virtuosen
-            <lb />wiedergebend</ab>
+            <lb />wiedergebend</seg></ab>
         </div>
         <div facs="#eSc_textblock_243b00c3" type="illustration">
-            <figure><desc>Photograph of Professor d'Albert playing for the Welte-Mignon</desc></figure>
+            <figure xml:id="figure_1" ana="#testimonials" resp="#claude"><desc>Photograph of Professor d'Albert playing for the Welte-Mignon</desc></figure>
         </div>
         <div facs="#eSc_textblock_9a0baa4d" type="illustration" />
         </body>

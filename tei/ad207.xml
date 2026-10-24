@@ -203,11 +203,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -235,10 +236,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -254,16 +260,21 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -272,6 +283,7 @@
       <langUsage><language ident="es">Spanish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -298,23 +310,23 @@
   <text decls="#source_1">
     <body>
       <div type="illustration" facs="#zone_decoration_left">
-        <figure><desc>Star-shaped order decoration with a crescent and a star, hanging from a ribbon</desc></figure>
+        <figure xml:id="figure_1" ana="#world_renown" resp="#claude"><desc>Star-shaped order decoration with a crescent and a star, hanging from a ribbon</desc></figure>
       </div>
       <div type="illustration" facs="#zone_medal_top">
-        <figure><desc>Medal with a standing draped figure; the legend is not legible</desc></figure>
+        <figure xml:id="figure_2" ana="#world_renown" resp="#claude"><desc>Medal with a standing draped figure; the legend is not legible</desc></figure>
       </div>
       <div type="illustration" facs="#zone_decoration_right">
-        <figure><desc>Cross-shaped order decoration hanging from a ribbon; the inscription on the central medallion is not legible</desc></figure>
+        <figure xml:id="figure_3" ana="#world_renown" resp="#claude"><desc>Cross-shaped order decoration hanging from a ribbon; the inscription on the central medallion is not legible</desc></figure>
       </div>
       <div facs="#zone_headline">
-        <head><hi rendition="#c #b #in"><lb/><seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">MEDALLAS DE ORO</seg></hi></head>
+        <head><hi rendition="#c #b #in"><lb/><seg xml:id="topic_1" ana="#world_renown" type="topic" resp="#claude">MEDALLAS DE ORO</seg></hi></head>
       </div>
       <div facs="#zone_text">
-        <p><hi rendition="#c #larger"><lb/>con que han sido premiados en
+        <p><hi rendition="#c #larger"><lb/><seg xml:id="topic_3" ana="#world_renown" type="topic" resp="#claude">con que han sido premiados en
           <lb/>las distintas Exposiciones los famo-
-          <lb/>sos pianos</hi></p>
+          <lb/>sos pianos</seg></hi></p>
         <ab><hi rendition="#c #b #in"><lb/>“<name type="brand">WELTE MIGNON</name>”</hi></ab>
-        <p><hi rendition="#c #larger"><lb/><seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">Fieles intérpretes de los grandes
+        <p><hi rendition="#c #larger"><lb/><seg xml:id="topic_2" ana="#faithful_reproduction" type="topic" resp="#claude">Fieles intérpretes de los grandes
           <lb/>genios del Arte Musical</seg>.</hi></p>
         <p><hi rendition="#c #larger"><lb/>Pase a verlos y oirlos,
           <lb/>Exposición en Cuba.</hi></p>
@@ -327,25 +339,25 @@
           <address><addrLine><lb/><hi rendition="#larger">SAN RAFAEL, NUM. 29.</hi></addrLine></address></hi></ab>
       </div>
       <div type="illustration" facs="#zone_medal_left2">
-        <figure><desc>Medal with a standing female figure, inscribed "PREIS FÜR VERDIENSTVOLLE ARBEIT"</desc></figure>
+        <figure xml:id="figure_4" ana="#world_renown" resp="#claude"><desc>Medal with a standing female figure, inscribed "PREIS FÜR VERDIENSTVOLLE ARBEIT"</desc></figure>
       </div>
       <div type="illustration" facs="#zone_medal_right2">
-        <figure><desc>Medal of the American Institute, New York, with a seated female figure ("THE AMERICAN INSTITUTE", "NEW YORK")</desc></figure>
+        <figure xml:id="figure_5" ana="#world_renown" resp="#claude"><desc>Medal of the American Institute, New York, with a seated female figure ("THE AMERICAN INSTITUTE", "NEW YORK")</desc></figure>
       </div>
       <div type="illustration" facs="#zone_medal_left3">
-        <figure><desc>Medal inscribed "CALCUTTA INTERNATIONAL EXHIBITION 1883–84", with a crowned female head in profile</desc></figure>
+        <figure xml:id="figure_6" ana="#world_renown" resp="#claude"><desc>Medal inscribed "CALCUTTA INTERNATIONAL EXHIBITION 1883–84", with a crowned female head in profile</desc></figure>
       </div>
       <div type="illustration" facs="#zone_medal_right3">
-        <figure><desc>Medal with a female head in profile; the legend ("…FRANÇAISE") is only partly legible</desc></figure>
+        <figure xml:id="figure_7" ana="#world_renown" resp="#claude"><desc>Medal with a female head in profile; the legend ("…FRANÇAISE") is only partly legible</desc></figure>
       </div>
       <div type="illustration" facs="#zone_medal_bottom_left">
-        <figure><desc>Medal inscribed "EXPOSITION UNIVERSELLE INTERNATIONALE 1900", with a winged figure</desc></figure>
+        <figure xml:id="figure_8" ana="#world_renown" resp="#claude"><desc>Medal inscribed "EXPOSITION UNIVERSELLE INTERNATIONALE 1900", with a winged figure</desc></figure>
       </div>
       <div type="illustration" facs="#zone_medal_bottom">
-        <figure><desc>Medal of the World's Columbian Exposition, inscribed in commemoration of the four hundredth anniversary of the landing of Columbus (partly legible)</desc></figure>
+        <figure xml:id="figure_9" ana="#world_renown" resp="#claude"><desc>Medal of the World's Columbian Exposition, inscribed in commemoration of the four hundredth anniversary of the landing of Columbus (partly legible)</desc></figure>
       </div>
       <div type="illustration" facs="#zone_medal_bottom_right">
-        <figure><desc>Medal inscribed "MUSIKFACH AUSSTELLUNG PHILHARMONIE BERLIN MAI 190…" (the last digit is not legible)</desc></figure>
+        <figure xml:id="figure_10" ana="#world_renown" resp="#claude"><desc>Medal inscribed "MUSIKFACH AUSSTELLUNG PHILHARMONIE BERLIN MAI 190…" (the last digit is not legible)</desc></figure>
       </div>
     </body>
   </text>

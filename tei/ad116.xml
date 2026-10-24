@@ -110,11 +110,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -142,10 +143,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -162,22 +168,55 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="educational_use">
-             <gloss>Educational Use</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <category xml:id="touch_and_individuality">
+             <gloss>Touch, nuance and individuality</gloss>
+             <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                pedalling, dynamics, tempo, shading, tone colour, or the
+                individuality and characteristic style of each pianist.</desc>
           </category>
-          <category xml:id="miracle">
-             <gloss>Miracle</gloss>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
           </category>
-          <category xml:id="personality">
-             <gloss>Personality</gloss>
+          <category xml:id="testimonials">
+             <gloss>Testimonials of famous musicians</gloss>
+             <desc>A named musician or other notable person is quoted or paraphrased
+                in praise of the instrument.</desc>
+          </category>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
+          </category>
+          <category xml:id="how_it_works">
+             <gloss>How it works</gloss>
+             <desc>The ad explains or shows the technology: the recording process, the
+                pneumatic or electric mechanism, the roll, the drive from a light
+                socket, or it likens the recording to photography or the
+                phonograph. A product label such as "electric reproducing piano"
+                alone does not count.</desc>
+          </category>
+          <category xml:id="education">
+             <gloss>Education and study</gloss>
+             <desc>The instrument serves learning and teaching: conservatories,
+                students, studying an interpretation by repeating it.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -186,6 +225,7 @@
       <langUsage><language ident="es">Spanish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -206,7 +246,7 @@
   <text decls="#source_1">
     <body>
       <div type="illustration" facs="#zone_picture">
-        <figure><desc>Photograph: Josef Hofmann seated at a grand piano fitted for recording, a woman and three men standing or seated beside him, organ pipes behind</desc></figure>
+        <figure xml:id="figure_1" ana="#how_it_works" resp="#claude"><desc>Photograph: Josef Hofmann seated at a grand piano fitted for recording, a woman and three men standing or seated beside him, organ pipes behind</desc></figure>
       </div>
       <div facs="#zone_caption">
         <ab><hi rendition="#c #i"><lb/><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Josef Hofmann</persName> impresionando en la <name type="brand"><sic>WELT-MIGNON</sic></name>
@@ -215,16 +255,16 @@
           <lb/>sentido poético.</hi></ab>
       </div>
       <div facs="#zone_text">
-        <p><lb/><hi rendition="#dropcap">L</hi>A MARAVILLOSA <seg xml:id="topic_1" ana="#exact_reproduction" type="topic" resp="#claude">fidelidad con que la <name type="brand"><sic>WELT-MIGNON</sic></name> recoge todos los detalles de la eje-
-          <lb/>cución en el piano de los grandes artistas, y la exactitud con que los reproduce</seg>—tanto en los
-          <lb/>arranques heroicos de bravura como en los más dulces y alados matices—han hecho que este
-          <lb/>instrumento incomparable <seg xml:id="topic_2" ana="#educational_use" type="topic" resp="#claude">figure actualmente en los grandes conservatorios del mundo, para que
-          <lb/>discípulos y profesores se den cabal cuenta de <seg xml:id="topic_3" ana="#personality" type="topic" resp="#claude">la manera individual de interpretar de cada uno de
-          <lb/>los grandes “virtuosi”</seg></seg> de la época.</p>
+        <p><lb/><hi rendition="#dropcap">L</hi>A MARAVILLOSA <seg xml:id="topic_1" ana="#faithful_reproduction" type="topic" resp="#claude">fidelidad con que la <name type="brand"><sic>WELT-MIGNON</sic></name> recoge todos los detalles de la eje-
+          <lb/>cución en el piano de los grandes artistas, y la exactitud con que los reproduce</seg>—<seg xml:id="topic_6" ana="#touch_and_individuality" type="topic" resp="#claude">tanto en los
+          <lb/>arranques heroicos de bravura como en los más dulces y alados matices</seg>—han hecho que <seg xml:id="topic_7" ana="#superlatives" type="topic" resp="#claude">este
+          <lb/>instrumento incomparable</seg> <seg xml:id="topic_5" ana="#education #world_renown" type="topic" resp="#claude">figure actualmente en los grandes conservatorios del mundo, para que
+          <lb/>discípulos y profesores se den cabal cuenta de</seg> <seg xml:id="topic_3" ana="#touch_and_individuality" type="topic" resp="#claude">la manera individual de interpretar de cada uno de
+          <lb/>los grandes “virtuosi”</seg> de la época.</p>
       </div>
       <div facs="#zone_visit">
         <ab><hi rendition="#c"><lb/>Visite nuestro estudio y podrá usted oir este instrumento, del
-          <lb/>que decía el gran <persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-Saens</persName> que era <seg xml:id="topic_4" ana="#miracle" type="topic" resp="#claude">“la maravilla de las
+          <lb/>que <seg xml:id="topic_8" ana="#testimonials" type="topic" resp="#claude">decía el gran <persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-Saens</persName></seg> que era <seg xml:id="topic_4" ana="#wonder" type="topic" resp="#claude">“la maravilla de las
           <lb/>maravillas”</seg>.</hi></ab>
       </div>
       <div facs="#zone_signature">

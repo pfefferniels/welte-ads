@@ -143,11 +143,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -175,10 +176,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -196,19 +202,47 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="listening">
-             <gloss>Revelled Listening</gloss>
+          <category xml:id="touch_and_individuality">
+             <gloss>Touch, nuance and individuality</gloss>
+             <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                pedalling, dynamics, tempo, shading, tone colour, or the
+                individuality and characteristic style of each pianist.</desc>
           </category>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
+          </category>
+          <category xml:id="entertaining_guests">
+             <gloss>Entertaining guests</gloss>
+             <desc>The instrument serves sociability: the hostess, guests, dinners,
+                dancing, social functions; pictures of company gathered around it.</desc>
+          </category>
+          <category xml:id="refinement">
+             <gloss>Culture, refinement and distinction</gloss>
+             <desc>Owning the instrument marks culture, refinement or social standing
+                ("vornehmes Heim", "a visible token of culture"), or the picture
+                places it in an elegant upper-class setting.</desc>
+          </category>
+          <category xml:id="royal_patronage">
+             <gloss>Royal and aristocratic patronage</gloss>
+             <desc>Royalty, the nobility or the court appear as listeners, owners or
+                patrons, including titles of purveyor to the court
+                ("Hoflieferant").</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -217,6 +251,7 @@
       <langUsage><language ident="es">Spanish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -234,19 +269,19 @@
   <text decls="#source_1">
     <body>
       <div facs="#zone_headline">
-        <head><hi rendition="#larger"><lb/>De cómo <seg xml:id="topic_1" ana="#listening" type="topic" resp="#claude">se reúnen en las mansiones aristocráticas de
+        <head><hi rendition="#larger"><lb/>De cómo <seg xml:id="topic_1" ana="#royal_patronage #refinement #entertaining_guests" type="topic" resp="#claude">se reúnen en las mansiones aristocráticas de
           <lb/><placeName>Europa</placeName>, sólo para oír la maravillosa e impecable ejecu-
           <lb/>ción de obras musicales en la “<name type="brand">WELTE-MIGNON</name>”</seg></hi></head>
       </div>
       <div type="illustration" facs="#zone_picture">
-        <figure><desc>Drawing of a salon with fluted columns, a crystal chandelier and a tall mirror; on the left an upright player piano with a music roll in the spool box above the keyboard, its fallboard lettered "WELTE-MIGNON"; on the right ladies and gentlemen in eighteenth-century dress sit and stand listening</desc></figure>
+        <figure xml:id="figure_1" ana="#refinement #entertaining_guests" resp="#claude"><desc>Drawing of a salon with fluted columns, a crystal chandelier and a tall mirror; on the left an upright player piano with a music roll in the spool box above the keyboard, its fallboard lettered "WELTE-MIGNON"; on the right ladies and gentlemen in eighteenth-century dress sit and stand listening</desc></figure>
         <ab><lb/><name type="brand">WELTE-MIGNON</name></ab>
       </div>
       <div facs="#zone_text">
         <p><hi rendition="#larger"><lb/>La “<name type="brand">WELTE-MIGNON</name>”
           <lb/>(ya sea vertical o de cola) es
-          <lb/><seg xml:id="topic_2" ana="#superiority" type="topic" resp="#claude">el instrumento más perfecto en
-          <lb/>su clase</seg>, que <seg xml:id="topic_3" ana="#exact_reproduction" type="topic" resp="#claude">reproduce, con fidelidad asombrosa e inigualable, el fra<unclear>-</unclear>
+          <lb/><seg xml:id="topic_2" ana="#superlatives" type="topic" resp="#claude">el instrumento más perfecto en
+          <lb/>su clase</seg>, que <seg xml:id="topic_3" ana="#faithful_reproduction #touch_and_individuality #wonder" type="topic" resp="#claude">reproduce, con fidelidad asombrosa e inigualable, el fra<unclear>-</unclear>
           <lb/>seo que dieran los grandes artistas a<unclear>l</unclear> hacer la <hi rendition="#u">impresión</hi> para rollos</seg>.</hi></p>
       </div>
       <div facs="#zone_footer">

@@ -73,11 +73,14 @@ describe("getAllMetadata", () => {
       { role: "Transcription, encoding and annotation of topics", ...claude },
     ])
     expect(ads.ad008.status).toBe("checked")
-    expect(ads.ad008.contributors).toEqual([{ role: "Transcription and encoding", ...editor }])
+    expect(ads.ad008.contributors).toEqual([
+      { role: "Transcription and encoding", ...editor },
+      { role: "Annotation of topics", ...claude },
+    ])
     expect(ads.ad037.status).toBe("checked")
     expect(ads.ad037.contributors).toEqual([
       { role: "Transcription and encoding", ...editor },
-      { role: "Further printings", ...claude },
+      { role: "Further printings and annotation of topics", ...claude },
     ])
   })
 

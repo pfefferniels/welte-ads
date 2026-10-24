@@ -1,0 +1,372 @@
+##### exact_reproduction  (annotated spans: 111)
+  0.857 [ad058.0 nl 1924] Als Reproductie Piano is de
+         nearest span ad052#1 (0.912): reproduceert tot in de fijnste schakeeringen het pianospel
+  0.849 [ad176.0 de 1912] Das persönliche Klavierspiel der grossen Meister, wie PADEREWSKI BUSONI D’ALBERT und vieler anderer wird auf dem Reproduktions-Piano WELTE-MIGNON
+         nearest span ad210#0 (0.853): Fortepian ten oddaje najdokładniej grę pierwszorzędnych pianistów
+  0.843 [ad136.2 en 1927] An Extraordinary Exhibition of Piano Technique
+         nearest span ad210#0 (0.859): Fortepian ten oddaje najdokładniej grę pierwszorzędnych pianistów
+  0.843 [ad137.2 en 1927] An Extraordinary Exhibition of Piano Technique
+         nearest span ad210#0 (0.859): Fortepian ten oddaje najdokładniej grę pierwszorzędnych pianistów
+  0.841 [ad160.1 sv 1908] 2:dra Konserten Tolf pianister
+         nearest span ad210#0 (0.867): Fortepian ten oddaje najdokładniej grę pierwszorzędnych pianistów
+  0.833 [ad031.3 en 1913] the greatest living pianists
+         nearest span ad201#0 (0.841): interpreta, con la mayor exactitud y alma, la música de los grandes pianistas
+  0.833 [ad169.12 de 1909] Zur Wiedergabe des Künstlerspieles bedarf es eines erstklassigen Klavieres oder Flügels.
+         nearest span ad210#0 (0.841): Fortepian ten oddaje najdokładniej grę pierwszorzędnych pianistów
+  0.830 [ad055.7 nl 1923] De beroemdste Pianisten der Wereld spelen voor
+         nearest span ad210#0 (0.836): Fortepian ten oddaje najdokładniej grę pierwszorzędnych pianistów
+##### home  (annotated spans: 63)
+  0.800 [ad120.4 pt 1913] CASA A’ RABECA DE OURO
+         nearest span ad198#3 (0.833): im vornehmen Heim
+  0.736 [ad115.2 es 1924] CAMBIE USTED SU PIANO por un magnífico Reproductor eléctrico “BALDWIN-WELTE MIGNON” Venga Ud. a oír a los grandes pianistas de fama mundial el día que guste a nuestro salón de exposición.
+         nearest span ad032#3 (0.796): you can have the most distinguished pianists do this same thing in your home – with the Welte-Mignon!
+  0.706 [ad176.0 de 1912] Das persönliche Klavierspiel der grossen Meister, wie PADEREWSKI BUSONI D’ALBERT und vieler anderer wird auf dem Reproduktions-Piano WELTE-MIGNON
+         nearest span ad112#2 (0.724): the genius of Paderewski, De Pachmann, and hundreds of others of the musically great, is transported to your home
+  0.701 [ad136.2 en 1927] An Extraordinary Exhibition of Piano Technique
+         nearest span ad112#0 (0.710): A grand piano in a room, a framed portrait of a seventeenth-century gentleman on the wall, a side table with a lamp
+  0.701 [ad137.2 en 1927] An Extraordinary Exhibition of Piano Technique
+         nearest span ad112#0 (0.710): A grand piano in a room, a framed portrait of a seventeenth-century gentleman on the wall, a side table with a lamp
+  0.698 [ad039.3 en 1913] You can hear these masters of the piano whenever you may wish to enjoy a delightful experience, at the Studio of M. Welte & Sons ,
+         nearest span ad032#3 (0.776): you can have the most distinguished pianists do this same thing in your home – with the Welte-Mignon!
+  0.694 [ad175.13 de 1912] Unverbindliche Vorführung des Instrumentes zu jeder Zeit in unserem Pianola- und Mignon-Salon.
+         nearest span ad032#3 (0.749): you can have the most distinguished pianists do this same thing in your home – with the Welte-Mignon!
+  0.687 [ad021.11 en 1926] The Master's Fingers On Your Piano
+         nearest span ad029#1 (0.711): "It brings the world's greatest pianists into my home
+##### superiority  (annotated spans: 56)
+  0.896 [ad093.2 da 1922] Eneforhandling af det verdenskendte Kunstspilleapparat
+         nearest span ad088#0 (0.896): Verdens fineste Kunstspilapparat
+  0.863 [ad172.6 de 1911] Nach meiner Ansicht übertrifft er alle anderen Erfindungen auf diesem Gebiete.
+         nearest span ad170#1 (0.993): Nach meiner Ansicht übertrifft er alle anderen Erfindungen auf diesem Gebiete
+  0.807 [ad106.0 en 1926] Welte-Mignon (Licensee) The Greatest Reproducing Piano
+         nearest span ad112#3 (0.814): Welte Mignon was the first reproducing piano pronounced perfect by great artists—it is still so regarded
+  0.803 [ad038.8 en 1923] World's Largest Makers of High Grade Pianos Exclusively
+         nearest span ad155#0 (0.818): världens förnämsta reproduktionspiano
+  0.803 [ad153.5 sv 1922] Waidele Pianomagasin för utsökta Kvalitetsinstrument.
+         nearest span ad213#0 (0.820): Najlepszy fortepian artystyczny w świecie!
+  0.799 [ad033.48 en 1926] In this respect the Welte-Mignon Reproducing Piano stands supreme.
+         nearest span ad024#4 (0.845): The superiority of any reproducing piano is assured if it contains the Welte-Mignon LICENSEE reproducing action
+  0.795 [ad169.7 de 1909] Das Welte-Mignon ist das vollkommenste Klavier.
+         nearest span ad213#0 (0.830): Najlepszy fortepian artystyczny w świecie!
+  0.779 [ad195.1 de 1913] zählt der neue, künstlerisch vollkommene Klavierspielapparat „Welte-Mignon“
+         nearest span ad213#0 (0.787): Najlepszy fortepian artystyczny w świecie!
+##### immortality  (annotated spans: 46)
+  0.861 [ad031.3 en 1913] the greatest living pianists
+         nearest span ad104#10 (0.862): immortal pianists, their genius preserved forever
+  0.805 [ad027.1 en 1924] These are the Phantom Hands of a thousand immortal pianists; their glorious genius preserved forever, through the miracle of Welte-Mignon* reproduction.
+         nearest span ad028#1 (0.822): a thousand immortal pianists; their glorious genius preserved forever
+  0.800 [ad212.2 pl 1907] Najsławniejsi pianiści współcześni wydali o cudownym instrumencie nadzwyczaj pochlebny sąd: 8515
+         nearest span ad026#2 (0.831): of a thousandimmortal pianists;
+  0.798 [ad055.7 nl 1923] De beroemdste Pianisten der Wereld spelen voor
+         nearest span ad026#2 (0.816): of a thousandimmortal pianists;
+  0.773 [ad027.6 en 1924] the renditions of the scores of master musicians who have played upon it.
+         nearest span ad019#12 (0.813): The New Instrument That Immortalizes the Playing of the Masters
+  0.769 [ad032.3 en 1924] The original instrument which astonished the musical world, and for which scores and scores of famous pianists and composers have played their supreme efforts.
+         nearest span ad104#10 (0.770): immortal pianists, their genius preserved forever
+  0.766 [ad176.0 de 1912] Das persönliche Klavierspiel der grossen Meister, wie PADEREWSKI BUSONI D’ALBERT und vieler anderer wird auf dem Reproduktions-Piano WELTE-MIGNON
+         nearest span ad026#2 (0.771): of a thousandimmortal pianists;
+  0.748 [ad160.1 sv 1908] 2:dra Konserten Tolf pianister
+         nearest span ad212#3 (0.781): nie zaginie i dla przyszłych pokoleń gra wielkich naszych współczesnych pianistów
+##### virtual_presence  (annotated spans: 46)
+  0.926 [ad021.11 en 1926] The Master's Fingers On Your Piano
+         nearest span ad020#0 (1.000): The Master's Fingers On your Piano
+  0.926 [ad040.10 en 1927] The Master's Fingers on Your Piano
+         nearest span ad014#0 (1.000): The Master's Fingers on Your Piano
+  0.917 [ad024.0 en 1926] THE MASTER'S FINGERS ON YOUR PIANO
+         nearest span ad014#0 (0.987): The Master's Fingers on Your Piano
+  0.917 [ad016.0 en 1926] THE MASTER'S FINGERS ON YOUR PIANO
+         nearest span ad014#0 (0.987): The Master's Fingers on Your Piano
+  0.849 [ad022.21 en 1926] Welte-Mignon THE MASTER'S FINGERS ON YOUR PIANO
+         nearest span ad014#0 (0.886): The Master's Fingers on Your Piano
+  0.849 [ad023.18 en 1926] Welte-Mignon THE MASTER'S FINGERS ON YOUR PIANO
+         nearest span ad014#0 (0.886): The Master's Fingers on Your Piano
+  0.845 [ad015.10 en 1926] Welte Mignon THE MASTER'S FINGERS ON YOUR PIANO
+         nearest span ad014#0 (0.883): The Master's Fingers on Your Piano
+  0.807 [ad055.7 nl 1923] De beroemdste Pianisten der Wereld spelen voor
+         nearest span ad110#1 (0.844): you can have the companionship of the world’s greatest pianists
+##### technical_invention  (annotated spans: 44)
+  0.879 [ad130.0 en 1909] A GREAT MUSICAL INVENTION.
+         nearest span ad035#2 (0.918): most remarkable musical invention of our age.
+  0.879 [ad131.0 en 1909] A GREAT MUSICAL INVENTION.
+         nearest span ad035#2 (0.918): most remarkable musical invention of our age.
+  0.869 [ad005.26 de 1910] Diese Erfindung ist das unglaublichste an Vollendung, das man sich denken kann.
+         nearest span ad192#1 (0.880): incontestablement la plus grande invention du siècle
+  0.812 [ad130.15 en 1909] “My ADMIRATION of the greatest invention, which bears the name of ‘STEINWAY-WELTE,’ is unlimited.
+         nearest span ad009#14 (0.878): Meine Bewunderung für die grossartige Erfindung kennt keine Grenzen.
+  0.798 [ad041.11 en 1913] The Welte-Mignon is, without doubt, the most remarkable musical invention of our age.
+         nearest span ad035#2 (0.835): most remarkable musical invention of our age.
+  0.798 [ad131.13 en 1909] “My ADMIRATION of the greatest invention which bears the name of ‘WELTE’ is unlimited.
+         nearest span ad009#14 (0.872): Meine Bewunderung für die grossartige Erfindung kennt keine Grenzen.
+  0.792 [ad137.2 en 1927] An Extraordinary Exhibition of Piano Technique
+         nearest span ad139#0 (0.827): embracing the Pianoforte and the art of the Pianist
+  0.792 [ad136.2 en 1927] An Extraordinary Exhibition of Piano Technique
+         nearest span ad139#0 (0.827): embracing the Pianoforte and the art of the Pianist
+##### miracle  (annotated spans: 31)
+  0.839 [ad205.18 es 1919] “Es una cosa magnífica.”
+         nearest span ad154#0 (0.856): underbara
+  0.775 [ad100.7 de 1908] Das Wunder, das ist „Mignon“, ein bescheidener Name einer bewunderungswürdigen Sache.
+         nearest span ad009#17 (0.819): Ich sehe den Mignon-Apparat als dasgrösste Wunder der Jetztzeit an
+  0.746 [ad082.8 no 1919] The Welte-Mignon faaes i følgende utførelser:
+         nearest span ad028#2 (0.774): through themiracle of Welte-Mignon* reproduction.
+  0.742 [ad195.1 de 1913] zählt der neue, künstlerisch vollkommene Klavierspielapparat „Welte-Mignon“
+         nearest span ad009#5 (0.818): Wunderklavier
+  0.739 [ad171.2 de 1910] Den „Mignon“-Apparat finde ich herrlich.
+         nearest span ad009#17 (0.787): Ich sehe den Mignon-Apparat als dasgrösste Wunder der Jetztzeit an
+  0.734 [ad145.1 en 1928] The BEHNING Welte Reproducer
+         nearest span ad028#2 (0.734): through themiracle of Welte-Mignon* reproduction.
+  0.733 [ad111.0 en 1928] The HEINTZMAN Welte-Mignon Reproducing Piano
+         nearest span ad011#0 (0.882): Thanks to the wizardry of Hardman Welte-Mignon(licensee) Reproducing Pianos
+  0.732 [ad153.5 sv 1922] Waidele Pianomagasin för utsökta Kvalitetsinstrument.
+         nearest span ad011#0 (0.793): Thanks to the wizardry of Hardman Welte-Mignon(licensee) Reproducing Pianos
+##### touch_of_a_button  (annotated spans: 28)
+  0.802 [ad212.2 pl 1907] Najsławniejsi pianiści współcześni wydali o cudownym instrumencie nadzwyczaj pochlebny sąd: 8515
+         nearest span ad112#1 (0.827): The famous compositions of the ages played by internationally famous pianists are at your command
+  0.795 [ad031.3 en 1913] the greatest living pianists
+         nearest span ad112#1 (0.816): The famous compositions of the ages played by internationally famous pianists are at your command
+  0.793 [ad055.7 nl 1923] De beroemdste Pianisten der Wereld spelen voor
+         nearest span ad112#1 (0.834): The famous compositions of the ages played by internationally famous pianists are at your command
+  0.770 [ad176.0 de 1912] Das persönliche Klavierspiel der grossen Meister, wie PADEREWSKI BUSONI D’ALBERT und vieler anderer wird auf dem Reproduktions-Piano WELTE-MIGNON
+         nearest span ad112#1 (0.818): The famous compositions of the ages played by internationally famous pianists are at your command
+  0.765 [ad023.9 en 1926] The masterpieces of the world's most famous pianists are presented through the extensive Welte-Mignon (Licensee) Library of Music.
+         nearest span ad105#3 (0.777): The famous compositions of the ages, played by internationally known pianists, are at your disposal
+  0.743 [ad032.3 en 1924] The original instrument which astonished the musical world, and for which scores and scores of famous pianists and composers have played their supreme efforts.
+         nearest span ad112#1 (0.751): The famous compositions of the ages played by internationally famous pianists are at your command
+  0.739 [ad028.4 en 1924] Why should you be satisfied with any but the greatest of reproducing instruments with its hundreds of world-famous pianists?
+         nearest span ad112#1 (0.750): The famous compositions of the ages played by internationally famous pianists are at your command
+  0.738 [ad207.1 es 1923] con que han sido premiados en las distintas Exposiciones los famosos pianos
+         nearest span ad105#3 (0.751): The famous compositions of the ages, played by internationally known pianists, are at your disposal
+##### phantom_body  (annotated spans: 26)
+  0.890 [ad016.0 en 1926] THE MASTER'S FINGERS ON YOUR PIANO
+         nearest span ad143#8 (0.987): The Master's Fingers On Your Piano
+  0.890 [ad024.0 en 1926] THE MASTER'S FINGERS ON YOUR PIANO
+         nearest span ad143#8 (0.987): The Master's Fingers On Your Piano
+  0.887 [ad040.10 en 1927] The Master's Fingers on Your Piano
+         nearest span ad143#8 (1.000): The Master's Fingers On Your Piano
+  0.886 [ad021.11 en 1926] The Master's Fingers On Your Piano
+         nearest span ad143#8 (1.000): The Master's Fingers On Your Piano
+  0.798 [ad022.21 en 1926] Welte-Mignon THE MASTER'S FINGERS ON YOUR PIANO
+         nearest span ad143#8 (0.884): The Master's Fingers On Your Piano
+  0.798 [ad023.18 en 1926] Welte-Mignon THE MASTER'S FINGERS ON YOUR PIANO
+         nearest span ad143#8 (0.884): The Master's Fingers On Your Piano
+  0.798 [ad015.10 en 1926] Welte Mignon THE MASTER'S FINGERS ON YOUR PIANO
+         nearest span ad143#8 (0.881): The Master's Fingers On Your Piano
+  0.773 [ad029.10 en 1927] Welte-Mignon Licensee Reproducing Piano The Master's Fingers on your Piano
+         nearest span ad143#8 (0.810): The Master's Fingers On Your Piano
+##### affordability  (annotated spans: 24)
+  0.784 [ad006.20 en 1920] Pianos and Player-Pianos at the Prices You Expect to Pay
+         nearest span ad134#3 (0.928): at the price of an ordinary Player Piano
+  0.762 [ad006.10 en 1920] This is what the WELTE MIGNON Reproducing Piano will do for you.
+         nearest span ad115#0 (0.795): Ventas en condiciones Fáciles. Admitimos su piano en cuenta.
+  0.751 [ad130.21 en 1909] The “STEINWAY-WELTE” may also be used as an ordinary piano at immediate notice.
+         nearest span ad115#0 (0.775): Ventas en condiciones Fáciles. Admitimos su piano en cuenta.
+  0.744 [ad021.6 en 1926] The famous Welte-Mignon Licensee Reproducing Action can be installed in your own grand piano.
+         nearest span ad012#3 (0.759): And consider that the Welte-Mignon Reproducing Piano is within everyone's means, for it may be bought on your terms, wit
+  0.744 [ad024.9 en 1926] The famous Welte-Mignon Licensee Reproducing Action can be installed in your own grand piano.
+         nearest span ad012#3 (0.759): And consider that the Welte-Mignon Reproducing Piano is within everyone's means, for it may be bought on your terms, wit
+  0.736 [ad058.0 nl 1924] Als Reproductie Piano is de
+         nearest span ad115#0 (0.792): Ventas en condiciones Fáciles. Admitimos su piano en cuenta.
+  0.727 [ad026.9 en 1924] It is obtainable in practically every good make of piano, either grand or upright.
+         nearest span ad108#3 (0.761): you can easily have one of these pianos in your home
+  0.727 [ad023.17 en 1926] You can have this famous action installed in your own piano without messing the appearance or hindering manual playing.
+         nearest span ad108#3 (0.781): you can easily have one of these pianos in your home
+
+
+================ CONTRASTIVE SCORE (topic minus other topics) ================
+##### exact_reproduction
+  +0.089 [ad009.7 de 1905] Von den Grossen der Gegenwart ist das Spiel aber nun für die Nachwelt festgehalten; schon jetzt sind zur Reproduktion aufgenommen:
+         nearest span ad037#0 (0.711): getreuen Wiedergabe des individuellen Spiels
+  +0.082 [ad012.4 en 1920] You instinctively know that your continued patronage is sought and, therefore, that everything will be made to bend toward giving you thorough and complete satisfaction.
+         nearest span ad151#3 (0.636): återgivandet är så noggrant
+  +0.070 [ad014.9 en 1926] You have my unqualified endorsement.
+         nearest span ad009#3 (0.471): völlig getreu wiedergibt.
+  +0.069 [ad169.12 de 1909] Zur Wiedergabe des Künstlerspieles bedarf es eines erstklassigen Klavieres oder Flügels.
+         nearest span ad210#0 (0.841): Fortepian ten oddaje najdokładniej grę pierwszorzędnych pianistów
+  +0.068 [ad019.3 en 1928] The Amazing New WELTE-MIGNON Musicalle makes possible for the first time an hour of uninterrupted music by the great pianists of the world .
+         nearest span ad169#1 (0.778): Es gibt das Spiel erster Pianisten in unübertroffen korrekter Weise wieder
+  +0.067 [ad077.8 no 1907] Samtlige spillet af Edv.
+         nearest span ad075#2 (0.444): Gjengiver direkte Virtuosernes Spil med alle Finheder
+  +0.066 [ad046.3 fr 1927] KNEIFEL-BÉROUD Magasin de Pianos,
+         nearest span ad197#2 (0.850): ton- und klanggetreu das Meister-Spiel der ersten Klavierkünstler
+  +0.065 [ad192.2 fr 1927] OSSIP GABRILOWITSCH PIANISTE - VIRTUOSE ET DIRECTEUR DE LA SYMPHONIE DE DETROIT
+         nearest span ad083#0 (0.820): EN ABSOLUT TRO GJENGIVELSE AV VERDENSBERØMTE PIANISTER'S
+##### home
+  +0.182 [ad135.0 en 1926] The Man who Buys a Jerry-Built House
+         nearest span ad009#8 (0.524): in seinem Heim
+  +0.159 [ad135.2 en 1926] THE jerry-built house may look all right.
+         nearest span ad037#6 (0.588): für das vornehme Privat-Haus
+  +0.133 [ad035.7 en 1912] 273 Fifth Avenue, Opposite the Holland House
+         nearest span ad170#0 (0.495): ausschliesslich für das Privathaus bestimmt
+  +0.101 [ad039.4 en 1913] 273 Fifth Avenue, between Twentyninth and Thirtieth Streets (opposite Holland House) New York.
+         nearest span ad037#6 (0.392): für das vornehme Privat-Haus
+  +0.101 [ad120.4 pt 1913] CASA A’ RABECA DE OURO
+         nearest span ad198#3 (0.833): im vornehmen Heim
+  +0.080 [ad145.6 en 1928] A visible token of culture, its graceful lines and artistic appearance will add charm and dignity to the finest home.
+         nearest span ad172#0 (0.687): Eine Quelle des schönsten Kunstgenusses und eine Zierde für jeden Salon
+  +0.067 [ad038.4 en 1923] Really, with a Welte-Mignon at home, one has no desire and certainly no need to search elsewhere for a satisfactory place in which to entertain one's guests.
+         nearest span ad038#0 (0.594): Entertaining at home in the summertime is a very easy and a very enjoyable matter for the hostess who has a Bush & Lane 
+  +0.054 [ad190.8 en 1926] 512 West 394 East St. Catherine Street, Montreal.
+         nearest span ad076#0 (0.327): Ved sit elegante Ydre en Pryd for enhver Salon.
+##### superiority
+  +0.221 [ad004.10 de 1919] Höchste Auszeichnungen auf allen Weltausstellungen.
+         nearest span ad150#0 (0.748): världens erkändt bästa
+  +0.198 [ad153.0 sv 1922] Två av världens förnämsta fabriker
+         nearest span ad156#0 (0.943): Världens två förnämsta fabrikat
+  +0.164 [ad130.3 en 1909] An Instrument of Reproduction.
+         nearest span ad069#3 (0.768): eenige reproductie-instrument
+  +0.134 [ad172.6 de 1911] Nach meiner Ansicht übertrifft er alle anderen Erfindungen auf diesem Gebiete.
+         nearest span ad170#1 (0.993): Nach meiner Ansicht übertrifft er alle anderen Erfindungen auf diesem Gebiete
+  +0.132 [ad093.2 da 1922] Eneforhandling af det verdenskendte Kunstspilleapparat
+         nearest span ad088#0 (0.896): Verdens fineste Kunstspilapparat
+  +0.105 [ad038.8 en 1923] World's Largest Makers of High Grade Pianos Exclusively
+         nearest span ad155#0 (0.818): världens förnämsta reproduktionspiano
+  +0.104 [ad093.9 da 1922] Største og førende Forretning i pneumat.
+         nearest span ad156#0 (0.641): Världens två förnämsta fabrikat
+  +0.075 [ad135.15 en 1926] Its excellent worth and long-lasting quality are universally appreciated.
+         nearest span ad135#0 (0.617): World Famed for Quality
+##### immortality
+  +0.097 [ad027.1 en 1924] These are the Phantom Hands of a thousand immortal pianists; their glorious genius preserved forever, through the miracle of Welte-Mignon* reproduction.
+         nearest span ad028#1 (0.822): a thousand immortal pianists; their glorious genius preserved forever
+  +0.032 [ad144.8 en 1928] May we expect you, or shall we send you our Art Catalogue?
+         nearest span ad177#2 (0.569): das meine Kunst der Nachwelt überträgt
+  +0.027 [ad175.12 de 1912] Wie gerne möchte man jung sein und bleiben, um aus diesem Wunderborn ohne Ende schöpfen zu können.
+         nearest span ad014#4 (0.560): Thru you I live forever."
+  +0.025 [ad130.13 en 1909] The regret of Musicians must ever be that this great invention was not brought out in 1809 instead of 1909.
+         nearest span ad100#17 (0.646): schade dass es zu Lebzeiten unserer verstorbenen grossen Meister kein derartiges Instrument gegeben hat
+  +0.025 [ad131.11 en 1909] The regret of musicians must ever be that this great invention was not brought out in 1809 instead of 1909.
+         nearest span ad100#17 (0.647): schade dass es zu Lebzeiten unserer verstorbenen grossen Meister kein derartiges Instrument gegeben hat
+  +0.019 [ad024.11 en 1926] Send for a copy of our beautiful booklet containing portraits of the great artists.
+         nearest span ad198#2 (0.630): Ihre Kunst verewigt
+  +0.015 [ad014.16 en 1926] Send for the beautiful art brochure
+         nearest span ad198#2 (0.659): Ihre Kunst verewigt
+  +0.014 [ad100.19 de 1908] Hans Schmidt: So braucht auf diesem Gebiete reproduktiver Kunst das Schöne nicht mehr zu sterben!
+         nearest span ad198#2 (0.664): Ihre Kunst verewigt
+##### virtual_presence
+  +0.097 [ad122.1 ru 1908] Рейзенауэра, Грига, Лешетицкаго, Грюнфельда,
+         nearest span ad127#0 (0.881): В ИСПОЛНЕНИИ: ГОФМАНА, БУЗОНИ, ЕСИПОВОЙ, д‘АЛЬБЕРА, ЗАУЭРА, СКРЯБИНА, РЕЙЗЕНАУЭРА и ПАДЕРЕВСКОГО
+  +0.075 [ad048.3 nl 1910] OLGA SAMAROFF, J. J. PADEREWSKI, W. SAPELLNIKOFF, TERÈSE CARRÉNO,
+         nearest span ad127#0 (0.680): В ИСПОЛНЕНИИ: ГОФМАНА, БУЗОНИ, ЕСИПОВОЙ, д‘АЛЬБЕРА, ЗАУЭРА, СКРЯБИНА, РЕЙЗЕНАУЭРА и ПАДЕРЕВСКОГО
+  +0.070 [ad032.7 en 1924] We quote the following:
+         nearest span ad100#19 (0.738): Gelingt's, die Besten der Kollegen zu zitieren
+  +0.065 [ad047.0 nl 1908] INVITATIE Mignon-Concert DINSDAG 27 OCT. des avonds 8 u. IN DE KLEINE ZAAL VAN HET CONCERTGEBOUW.
+         nearest span ad159#1 (0.705): konsertera medelst ”Mignon-Apparat” å flygel
+  +0.058 [ad180.5 de 1918] :-: Er selbst könnte nicht anders spielen.
+         nearest span ad180#4 (0.616): als ob der Meister da wäre
+  +0.047 [ad041.7 en 1913] On arriving at Drontheim, Grieg was invited on board to meet the Kaiser.
+         nearest span ad167#0 (0.563): am Flügel Alfred Grünfeld
+  +0.045 [ad133.10 en 1911] Miss ELIZABETH BRUCE, Mezzo-Soprano.
+         nearest span ad168#0 (0.543): Gespielt von Ella Rafaelsohn
+  +0.045 [ad127.7 ru 1923] ПОДРОБНЫЕ ПРОГРАММЫ в ТЕКСТЕ стр.
+         nearest span ad127#0 (0.758): В ИСПОЛНЕНИИ: ГОФМАНА, БУЗОНИ, ЕСИПОВОЙ, д‘АЛЬБЕРА, ЗАУЭРА, СКРЯБИНА, РЕЙЗЕНАУЭРА и ПАДЕРЕВСКОГО
+##### technical_invention
+  +0.157 [ad170.7 de 1909] Annette Essipow: Ich gratuliere von Herzen den Erfindern, die der Menschheit diese schöne Erfindung geschenkt.
+         nearest span ad008#0 (0.695): unbedingt geniale Erfindung
+  +0.133 [ad130.0 en 1909] A GREAT MUSICAL INVENTION.
+         nearest span ad035#2 (0.918): most remarkable musical invention of our age.
+  +0.133 [ad131.0 en 1909] A GREAT MUSICAL INVENTION.
+         nearest span ad035#2 (0.918): most remarkable musical invention of our age.
+  +0.127 [ad005.26 de 1910] Diese Erfindung ist das unglaublichste an Vollendung, das man sich denken kann.
+         nearest span ad192#1 (0.880): incontestablement la plus grande invention du siècle
+  +0.124 [ad008.7 de 1910] Den Erfindern meine aufrichtige Bewunderung.
+         nearest span ad005#1 (0.769): geniale Erfindung
+  +0.122 [ad121.5 es 1922] ULTIMAS NOVEDADES PIANOS ELECTRICOS DE REPRODUCCION WELTE - MIGNON
+         nearest span ad119#0 (0.750): por meio da electricidade
+  +0.120 [ad130.15 en 1909] “My ADMIRATION of the greatest invention, which bears the name of ‘STEINWAY-WELTE,’ is unlimited.
+         nearest span ad009#14 (0.878): Meine Bewunderung für die grossartige Erfindung kennt keine Grenzen.
+  +0.119 [ad131.13 en 1909] “My ADMIRATION of the greatest invention which bears the name of ‘WELTE’ is unlimited.
+         nearest span ad009#14 (0.872): Meine Bewunderung für die grossartige Erfindung kennt keine Grenzen.
+##### miracle
+  +0.204 [ad100.7 de 1908] Das Wunder, das ist „Mignon“, ein bescheidener Name einer bewunderungswürdigen Sache.
+         nearest span ad009#17 (0.819): Ich sehe den Mignon-Apparat als dasgrösste Wunder der Jetztzeit an
+  +0.157 [ad205.18 es 1919] “Es una cosa magnífica.”
+         nearest span ad154#0 (0.856): underbara
+  +0.150 [ad171.2 de 1910] Den „Mignon“-Apparat finde ich herrlich.
+         nearest span ad009#17 (0.787): Ich sehe den Mignon-Apparat als dasgrösste Wunder der Jetztzeit an
+  +0.115 [ad171.8 de 1910] Es gereicht mir zum Vergnügen, Ihnen sagen zu können, dass ich mit dem von Ihnen bezogenen „Welte-Mignon“ vollkommen zufrieden bin, und dass mir diese Erfindung von unsagbarem Werte ist.
+         nearest span ad009#17 (0.737): Ich sehe den Mignon-Apparat als dasgrösste Wunder der Jetztzeit an
+  +0.108 [ad172.5 de 1911] Herr Volkmar Andreæ schreibt über das Welte-Mignon: Den „Mignon“-Apparat finde ich herrlich.
+         nearest span ad009#17 (0.737): Ich sehe den Mignon-Apparat als dasgrösste Wunder der Jetztzeit an
+  +0.108 [ad170.11 de 1909] Herr W. St., Horgen: Es gereicht mir zum Vergnügen, Ihnen sagen zu können, dass ich mit dem gelieferten „Welte-Mignon“ vollkommen zufrieden bin und dass mir diese Erfindung von unsagbarem Werte ist.
+         nearest span ad009#17 (0.707): Ich sehe den Mignon-Apparat als dasgrösste Wunder der Jetztzeit an
+  +0.087 [ad100.6 de 1908] Connais-tu le pays ou fleurit la merveille?
+         nearest span ad140#1 (0.645): one of the wonders of the world
+  +0.050 [ad008.6 de 1910] Das Welte Mignon ist eine ganz ausserordentliche Erfindung, von allen derartigen Mechanismen der Einzige, der auf künstlerische Bedeutung Anspruch machen kann.
+         nearest span ad009#15 (0.816): Mignon ist sicher eine der wunderbarsten Erfindungen, die dem menschlichen Geiste gelungen sind.
+##### touch_of_a_button
+  +0.165 [ad012.14 en 1920] Please feel free to ask for your favorite selections.
+         nearest span ad181#2 (0.614): auf Wunsch jederzeit geniessen
+  +0.114 [ad032.20 en 1924] You are cordially invited to a demonstration at any time.
+         nearest span ad026#6 (0.548): whenever you wish.
+  +0.104 [ad142.8 en 1928] We Are Happy to Demonstrate the Bechstein at any time.
+         nearest span ad026#6 (0.514): whenever you wish.
+  +0.078 [ad172.11 de 1911] Die Welte-Mignon-Instrumente werden Interessenten und Musikfreunden jederzeit unverbindlich vorgeführt.
+         nearest span ad008#6 (0.618): Der Besitzer eines Welte Mignon kann sich jederzeit von den berühmtesten Musikern, wie d'Albert Carreno, Lamond, Mottl, 
+  +0.032 [ad006.29 en 1920] Can you drop in at once?
+         nearest span ad049#3 (0.442): is één druk op het contact voldoende
+  +0.026 [ad006.6 en 1920] We shall gladly play your favorite selections.
+         nearest span ad181#2 (0.584): auf Wunsch jederzeit geniessen
+  +0.025 [ad023.9 en 1926] The masterpieces of the world's most famous pianists are presented through the extensive Welte-Mignon (Licensee) Library of Music.
+         nearest span ad105#3 (0.777): The famous compositions of the ages, played by internationally known pianists, are at your disposal
+  +0.021 [ad045.6 fr 1927] , qui enverra des invitations à toutes personnes qui en feront la demande.
+         nearest span ad026#6 (0.550): whenever you wish.
+##### phantom_body
+  +0.010 [ad039.0 en 1913] When Paderewski listens to his own Playing
+         nearest span ad011#5 (0.718): In the background: newspapers with headlines such as "Paderewski here, will play no more", "Paderewski says his piano pl
+  +0.000 [ad097.1 da 1924] Deres Piano staar ubenyttet hen.
+         nearest span ad104#2 (0.762): the keys of your piano moving, though no one sits before it!
+  -0.025 [ad028.0 en 1924] Rhythmic beat of a Gaucho dance -when Phantom Fingers play
+         nearest span ad104#1 (0.651): Phantom Fingers Play
+  -0.030 [ad136.1 en 1927] WELTE MIGNON ELECTRIC REPRODUCING PLAYER PIANO.
+         nearest span ad026#12 (0.778): Phantom hands at a piano.
+  -0.033 [ad016.0 en 1926] THE MASTER'S FINGERS ON YOUR PIANO
+         nearest span ad143#8 (0.987): The Master's Fingers On Your Piano
+  -0.033 [ad024.0 en 1926] THE MASTER'S FINGERS ON YOUR PIANO
+         nearest span ad143#8 (0.987): The Master's Fingers On Your Piano
+  -0.038 [ad014.8 en 1926] You are my undying 'alter ego'–thru you my own invisible hands render the spell of my Chopin, my Liszt.
+         nearest span ad143#8 (0.707): The Master's Fingers On Your Piano
+  -0.046 [ad040.10 en 1927] The Master's Fingers on Your Piano
+         nearest span ad143#8 (1.000): The Master's Fingers On Your Piano
+##### affordability
+  +0.219 [ad038.5 en 1923] Conventional Models Consistently Priced at $1075 to $4100
+         nearest span ad190#5 (0.505): Prices and Terms within the Reach of All
+  +0.216 [ad006.18 en 1920] We sell all grades (except "cheap").
+         nearest span ad156#1 (0.532): synnerl. låga priser
+  +0.186 [ad143.9 en 1928] Catalogue and particulars of our Easy Terms on request.
+         nearest span ad011#4 (0.674): Convenient Terms
+  +0.174 [ad054.3 nl 1922] Prijs à contant f 2000, 33113.50
+         nearest span ad093#1 (0.547): Lempelige Betalingsvilkaar
+  +0.170 [ad167.12 de 1909] Eintrittskarten werden auf schriftliche oder telephonische Bestellung (Nr. 4500) zugesandt oder können Freiestr.
+         nearest span ad142#0 (0.509): £575 (not £1150)
+  +0.092 [ad006.19 en 1920] You can buy from us a really good instrument as low as $450 , on a series of monthly payments–terms, your own within reason.
+         nearest span ad106#7 (0.646): These instruments may be purchased on your own terms in reason.
+  +0.080 [ad012.5 en 1920] There is a wide range of instruments from which to choose, at prices and on terms thoroughly in accord with your own idea of what is equitable.
+         nearest span ad106#7 (0.719): These instruments may be purchased on your own terms in reason.
+  +0.069 [ad006.20 en 1920] Pianos and Player-Pianos at the Prices You Expect to Pay
+         nearest span ad134#3 (0.928): at the price of an ordinary Player Piano
+
+
+================ NEAR-DUPLICATE UNITS (cos>=0.95, different ads) WITH DIFFERENT TOPICS ================
+  1.000 ad009.4 ['miracle'] | ad010.2 [] :: Ueber die blosse Fingerfertigkeit vermag dieses Wunderklavier alles, was an der Leistung eines Künstlers das P || Ueber die blosse Fingerfertigkeit vermag dieses Wunderklavier alles, was an der Leistung eines Künstlers das P
+  1.000 ad014.1 ['virtual_presence'] | ad021.11 [] :: The Master's Fingers on Your Piano || The Master's Fingers On Your Piano
+  1.000 ad014.1 ['virtual_presence'] | ad040.10 [] :: The Master's Fingers on Your Piano || The Master's Fingers on Your Piano
+  1.000 ad014.1 ['virtual_presence'] | ad143.6 ['phantom_body'] :: The Master's Fingers on Your Piano || The Master's Fingers On Your Piano
+  1.000 ad020.0 ['virtual_presence'] | ad021.11 [] :: The Master's Fingers On your Piano || The Master's Fingers On Your Piano
+  1.000 ad020.0 ['virtual_presence'] | ad040.10 [] :: The Master's Fingers On your Piano || The Master's Fingers on Your Piano
+  1.000 ad020.0 ['virtual_presence'] | ad143.6 ['phantom_body'] :: The Master's Fingers On your Piano || The Master's Fingers On Your Piano
+  1.000 ad021.11 [] | ad143.6 ['phantom_body'] :: The Master's Fingers On Your Piano || The Master's Fingers On Your Piano
+  1.000 ad026.1 ['immortality', 'miracle', 'phantom_body'] | ad027.1 [] :: These are the Phantom Hands of a thousand immortal pianists; their glorious genius preserved forever, through  || These are the Phantom Hands of a thousand immortal pianists; their glorious genius preserved forever, through 
+  1.000 ad027.1 [] | ad028.1 ['immortality', 'miracle', 'phantom_body'] :: These are the Phantom Hands of a thousand immortal pianists; their glorious genius preserved forever, through  || These are the Phantom Hands of a thousand immortal pianists; their glorious genius preserved forever , through
+  1.000 ad040.10 [] | ad143.6 ['phantom_body'] :: The Master's Fingers on Your Piano || The Master's Fingers On Your Piano
+  1.000 ad170.6 ['superiority'] | ad172.6 [] :: Nach meiner Ansicht übertrifft er alle anderen Erfindungen auf diesem Gebiete. || Nach meiner Ansicht übertrifft er alle anderen Erfindungen auf diesem Gebiete.
+  0.999 ad171.3 ['superiority'] | ad172.6 [] :: Nach meiner Ansicht übertrifft er alle andern Erfindungen auf diesem Gebiete. || Nach meiner Ansicht übertrifft er alle anderen Erfindungen auf diesem Gebiete.
+  0.998 ad027.1 [] | ad104.10 ['immortality', 'miracle', 'phantom_body'] :: These are the Phantom Hands of a thousand immortal pianists; their glorious genius preserved forever, through  || These are the Phantom Hands of a thousand immortal pianists, their genius preserved forever through the miracl
+  0.998 ad027.1 [] | ad105.12 ['immortality', 'miracle', 'phantom_body'] :: These are the Phantom Hands of a thousand immortal pianists; their glorious genius preserved forever, through  || These are the Phantom Hands of a thousand immortal pianists, their genius preserved forever through the miracl
+  0.996 ad100.10 ['educational_use'] | ad175.11 [] :: Wie viel hätte „alt und jung“ daraus lernen können. || Wieviel hätte „Alt und Jung“ daraus lernen können.
+  0.995 ad028.0 [] | ad104.0 ['phantom_body'] :: Rhythmic beat of a Gaucho dance -when Phantom Fingers play || Rhythmic Beat of a Gaucho Dance —When Phantom Fingers Play
+  0.992 ad100.9 [] | ad175.10 ['miracle'] :: Theodor Leschetitzky: Ich muss diese Erfindung, die sich so ganz einfach „Mignon“ nennt, als ein wahres Wunder || Theodor Leschetizky: Ich muss diese Erfindung, die sich so ganz einfach „Welte-Mignon“, nennt, als ein wahres 
+  0.987 ad014.1 ['virtual_presence'] | ad016.0 [] :: The Master's Fingers on Your Piano || THE MASTER'S FINGERS ON YOUR PIANO
+  0.987 ad014.1 ['virtual_presence'] | ad024.0 [] :: The Master's Fingers on Your Piano || THE MASTER'S FINGERS ON YOUR PIANO
+  0.987 ad016.0 [] | ad143.6 ['phantom_body'] :: THE MASTER'S FINGERS ON YOUR PIANO || The Master's Fingers On Your Piano
+  0.987 ad024.0 [] | ad143.6 ['phantom_body'] :: THE MASTER'S FINGERS ON YOUR PIANO || The Master's Fingers On Your Piano
+  0.986 ad016.0 [] | ad020.0 ['virtual_presence'] :: THE MASTER'S FINGERS ON YOUR PIANO || The Master's Fingers On your Piano
+  0.986 ad020.0 ['virtual_presence'] | ad024.0 [] :: The Master's Fingers On your Piano || THE MASTER'S FINGERS ON YOUR PIANO
+  0.962 ad003.3 ['touch_of_a_button'] | ad103.3 ['touch_of_a_button', 'virtual_presence'] :: Ein Druck auf den Knopf genügt, um einen d'Albert, Busoni, Paderewski, Reisenauer etc. zu zitieren. || Ein Druck auf den Knopf genügt, um einen d'Albert, Busoni, Paderewski, Reisenauer, Slivinsky etc. zu zitieren.
+  0.954 ad108.4 ['affordability'] | ad191.4 ['home'] :: Yes, but you can easily have one of these pianos in your home. || Oui, mais il vous est très facile d’avoir un de ces pianos chez vous.

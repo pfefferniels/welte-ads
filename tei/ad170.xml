@@ -110,11 +110,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -142,10 +143,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -163,19 +169,66 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="the_artists_soul">
+             <gloss>The artist's soul</gloss>
+             <desc>The instrument is said to capture the soul, spirit, feeling or
+                inner life of the performer, a spiritual register beyond the
+                technical one of touch and nuance ("the living soul of the artist",
+                "Musikseele").</desc>
           </category>
-          <category xml:id="immediate_recognizability">
-             <gloss>Immediate Recognizability</gloss>
+          <category xml:id="not_mechanical">
+             <gloss>Art, not mechanism</gloss>
+             <desc>The instrument is set apart from mechanical, automatic or player-
+                piano playing: it is human, artistic, "not a surrogate", or the
+                prejudice that it is mechanical is refuted.</desc>
           </category>
-          <category xml:id="soulfulness">
-             <gloss>Soulfulness</gloss>
+          <category xml:id="artists_hear_themselves">
+             <gloss>Artists hear themselves</gloss>
+             <desc>The artists vouch for their own recordings: they hear or recognise
+                their own playing, are deceived by it, sign the rolls as
+                autographs, or a demonstration proves that each pianist can be
+                recognised.</desc>
           </category>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <category xml:id="refinement">
+             <gloss>Culture, refinement and distinction</gloss>
+             <desc>Owning the instrument marks culture, refinement or social standing
+                ("vornehmes Heim", "a visible token of culture"), or the picture
+                places it in an elegant upper-class setting.</desc>
+          </category>
+          <category xml:id="testimonials">
+             <gloss>Testimonials of famous musicians</gloss>
+             <desc>A named musician or other notable person is quoted or paraphrased
+                in praise of the instrument.</desc>
+          </category>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+          </category>
+          <category xml:id="satisfied_owners">
+             <gloss>Satisfied owners</gloss>
+             <desc>Ordinary owners, named or anonymous, or the number of owners vouch
+                for the instrument.</desc>
+          </category>
+          <category xml:id="epoch_making_invention">
+             <gloss>Epoch-making invention</gloss>
+             <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                the greatest of the age, a sensation, the newest thing.</desc>
+          </category>
+          <category xml:id="unique_and_superior">
+             <gloss>Unique and superior to rivals</gloss>
+             <desc>The instrument is "the only one", the standard for all others, it
+                surpasses its rivals or has nothing in common with them, or the
+                reader is warned against cheap or unknown makes.</desc>
+          </category>
+          <category xml:id="gifts">
+             <gloss>Seasonal occasions and gifts</gloss>
+             <desc>The ad ties the instrument to Christmas, the New Year, a holiday or
+                a season, or offers it as a gift.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -184,6 +237,7 @@
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -202,47 +256,47 @@
     <body>
       <div facs="#zone_private">
         <p><hi rendition="#b"><lb/>Das <name type="brand">Welte-Mignon</name> ist
-          <lb/><seg xml:id="topic_1" ana="#home" type="topic" resp="#claude">ausschliesslich für das
-          <lb/>Privathaus bestimmt</seg>. — Die
+          <lb/>ausschliesslich für das
+          <lb/>Privathaus bestimmt. — <seg xml:id="topic_5" ana="#world_renown #not_mechanical" type="topic" resp="#claude">Die
           <lb/>künstlerische Bedeutung des
           <lb/>Instrumentes ist von mass-
           <lb/>gebenden Seiten anerkannt
-          <lb/><hi rendition="#c">worden.</hi></hi></p>
+          <lb/><hi rendition="#c">worden.</hi></seg></hi></p>
         <p><lb/><hi rendition="#c #b #i">Kataloge gratis.</hi></p>
       </div>
       <div facs="#zone_headline">
         <head><hi rendition="#c"><lb/><hi rendition="#larger">Reproduktions-Piano</hi>
           <lb/><hi rendition="#in #b"><name type="brand">WELTE-MIGNON</name></hi>
           <lb/><hi rendition="#larger">in 3 verschiedenen Typen</hi>
-          <lb/><hi rendition="#larger #b">das denkbar vornehmste Weihnachtsgeschenk!</hi></hi></head>
+          <lb/><hi rendition="#larger #b"><seg xml:id="topic_6" ana="#gifts #refinement" type="topic" resp="#claude">das denkbar vornehmste Weihnachtsgeschenk!</seg></hi></hi></head>
       </div>
       <div facs="#zone_judgements">
-        <head><lb/><hi rendition="#c #g">URTEILE.</hi></head>
+        <head><lb/><hi rendition="#c #g"><seg xml:id="topic_7" ana="#testimonials" type="topic" resp="#claude">URTEILE.</seg></hi></head>
         <p><lb/><hi rendition="#c"><hi rendition="#b"><persName type="composer" corresp="https://d-nb.info/gnd/118847503">Volkmar Andreae</persName>, <placeName>Zürich</placeName>:</hi></hi>
           <quote type="testimonial"><lb/>Den „<name type="brand">Mignon</name> Apparat“ finde ich herr-
-          <lb/>lich. <seg xml:id="topic_2" ana="#superiority" type="topic" resp="#claude">Nach meiner Ansicht übertrifft er
+          <lb/>lich. <seg xml:id="topic_2" ana="#unique_and_superior" type="topic" resp="#claude">Nach meiner Ansicht übertrifft er
           <lb/>alle anderen Erfindungen auf diesem
           <lb/>Ge<unclear>b</unclear>iete</seg>.</quote></p>
         <p><lb/><hi rendition="#c #b"><persName type="artist" corresp="https://d-nb.info/gnd/116584319">Annette Essipow</persName>:</hi>
-          <quote type="testimonial"><lb/>Ich gratuliere von Herzen den Er-
+          <quote type="testimonial"><lb/><seg xml:id="topic_8" ana="#epoch_making_invention" type="topic" resp="#claude">Ich gratuliere von Herzen den Er-
           <lb/>findern, die der Menschheit diese schöne
-          <lb/>Erfindung geschenkt.</quote></p>
+          <lb/>Erfindung geschenkt</seg>.</quote></p>
         <p><lb/><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/1222462222">Karl Koehl</persName>,</hi> Musikdirektor, <placeName>Chur</placeName>:
-          <quote type="testimonial"><lb/>„<name type="brand">Welte-Mignon</name>“ ist mir, sowie vielen
+          <quote type="testimonial"><lb/><seg xml:id="topic_9" ana="#satisfied_owners" type="topic" resp="#claude">„<name type="brand">Welte-Mignon</name>“ ist mir, sowie vielen
           <lb/>anderen zu einer Quelle des schönsten
-          <lb/>Kunstgenusses geworden.</quote></p>
+          <lb/>Kunstgenusses geworden</seg>.</quote></p>
         <p><lb/><hi rendition="#c #b"><persName type="artist" corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>:</hi>
-          <quote type="testimonial"><lb/><seg xml:id="topic_3" ana="#immediate_recognizability" type="topic" resp="#claude">Es ist das erste Mal, dass ich mich
+          <quote type="testimonial"><lb/><seg xml:id="topic_3" ana="#artists_hear_themselves" type="topic" resp="#claude">Es ist das erste Mal, dass ich mich
           <lb/>selbst gehört habe. Ich habe mein Spiel
           <lb/>genau wiedererkannt</seg>.</quote></p>
         <p><lb/><hi rendition="#c">Herr <hi rendition="#b">W. St.,</hi> <placeName>Horgen</placeName>:</hi>
           <quote type="testimonial"><lb/>Es gereicht mir zum Vergnügen, Ihnen
-          <lb/>sagen zu können, dass ich mit dem ge-
+          <lb/>sagen zu können, <seg xml:id="topic_10" ana="#satisfied_owners" type="topic" resp="#claude">dass ich mit dem ge-
           <lb/>lieferten „<name type="brand">Welte-Mignon</name>“ vollkommen
-          <lb/>zufrieden bin und dass mir diese Er-
+          <lb/>zufrieden bin</seg> und dass mir diese Er-
           <lb/>findung von unsagbarem Werte ist.</quote></p>
         <p><lb/><hi rendition="#c #b"><persName type="artist" corresp="https://d-nb.info/gnd/116210419">Clotilde Kleeberg</persName>:</hi>
-          <quote type="testimonial"><lb/>Es scheint mir, als ob Sie den <seg xml:id="topic_4" ana="#soulfulness" type="topic" resp="#claude">Spiegel
+          <quote type="testimonial"><lb/>Es scheint mir, als ob Sie den <seg xml:id="topic_4" ana="#the_artists_soul" type="topic" resp="#claude">Spiegel
           <lb/>der Musikseele</seg> gefunden hätten.</quote></p>
       </div>
       <div facs="#zone_signature">

@@ -18,6 +18,10 @@
                     <forename>Niels</forename>
                  </persName>
               </respStmt>
+              <respStmt>
+                 <resp>Annotation of topics</resp>
+                 <name xml:id="claude">Claude (AI model by Anthropic)</name>
+              </respStmt>
            </titleStmt>
            <publicationStmt>
               <publisher>
@@ -123,11 +127,12 @@
                  scan, in part transcribed by hand. The advertisements published
                  outside Germany, the United Kingdom and the United States, and a
                  few from Germany, were transcribed from the scans, encoded, given
-                 their regions and annotated with topics by Claude, an AI model;
-                 their revision history says so. Until the editor has checked such
-                 an advertisement against the scan, <att>status</att> on its
-                 <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-                 advertisement is <val>checked</val>.</p>
+                 their regions by Claude, an AI model; their revision history says
+                 so. Until the editor has checked such an advertisement against the
+                 scan, <att>status</att> on its <gi>revisionDesc</gi> is
+                 <val>unchecked</val>; that of every other advertisement is
+                 <val>checked</val>. The topics of all advertisements were assigned
+                 by Claude.</p>
               <correction>
                  <p>Errors of the original are not corrected but marked with
                     <gi>sic</gi>.</p>
@@ -155,10 +160,15 @@
                     Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                     which describes them in a <gi>desc</gi>. Illustrations are
                     described in <gi>figure</gi>. Persons are linked to the GND with
-                    <att>corresp</att>. Recurring motifs are marked as topics with
-                    <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                    the taxonomy of topics; these are an interpretation, by whom
-                    <att>resp</att> says.</p>
+                    <att>corresp</att>. Recurring arguments and motifs are marked as
+                    topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                    pointing to the taxonomy of topics. The taxonomy was induced by
+                    Claude in four blind readings of all advertisements, each in a
+                    different order and without knowledge of the editor's earlier
+                    taxonomy, which it replaced in October 2026; it keeps the topics
+                    that at least three of the readings found. The topics are an
+                    interpretation, assigned by whom <att>resp</att> says, so far
+                    all by Claude; the editor has not yet checked them.</p>
               </interpretation>
               <stdVals>
                  <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -176,13 +186,42 @@
            </tagsDecl>
            <classDecl>
               <taxonomy xml:id="topics">
-                 <desc>Topics: recurring motifs of the advertisements, in their texts
-                    and in their pictures</desc>
-                 <category xml:id="touch_of_a_button">
-                    <gloss>Touch of a Button</gloss>
-                    <desc>The Welte-Mignon is permanently available and "objectified"
-                       for the entertainment of the owner – on the touch of a
-                       button.</desc>
+                 <desc>Topics: the recurring arguments and motifs of the advertisements,
+                    in their texts and in their pictures</desc>
+                 <category xml:id="effortless">
+                    <gloss>Effortless: no skill needed</gloss>
+                    <desc>The instrument needs no skill or effort: a button or a key starts
+                       it, it plays by itself, it is for those who cannot play.</desc>
+                 </category>
+                 <category xml:id="furniture">
+                    <gloss>Furniture and ornament</gloss>
+                    <desc>The case, its design or period style; the instrument as an ornament
+                       of the room.</desc>
+                 </category>
+                 <category xml:id="epoch_making_invention">
+                    <gloss>Epoch-making invention</gloss>
+                    <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                       the greatest of the age, a sensation, the newest thing.</desc>
+                 </category>
+                 <category xml:id="the_original">
+                    <gloss>The original</gloss>
+                    <desc>The Welte-Mignon is the original or the first reproducing piano,
+                       protected by the original patents; the history of the Welte firm
+                       and its founders guarantees it.</desc>
+                 </category>
+                 <category xml:id="how_it_works">
+                    <gloss>How it works</gloss>
+                    <desc>The ad explains or shows the technology: the recording process, the
+                       pneumatic or electric mechanism, the roll, the drive from a light
+                       socket, or it likens the recording to photography or the
+                       phonograph. A product label such as "electric reproducing piano"
+                       alone does not count.</desc>
+                 </category>
+                 <category xml:id="still_a_piano">
+                    <gloss>Still a normal piano</gloss>
+                    <desc>The instrument remains an ordinary piano: it can be played by hand,
+                       the mechanism is invisible and leaves its look unchanged, it can be
+                       fitted to many makes of piano.</desc>
                  </category>
               </taxonomy>
            </classDecl>
@@ -193,6 +232,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+           <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
            <change when="2026-10-20">Marked as checked by the editor.</change>
            <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
@@ -232,26 +272,26 @@
 
         <div facs="#eSc_textblock_4903c438">
             <ab><hi rendition="#c">
-            <lb /><hi rendition="#in #i">Be Sure and See the First Showing</hi>
+            <lb /><seg xml:id="topic_2" ana="#epoch_making_invention" type="topic" resp="#claude"><hi rendition="#in #i">Be Sure and See the First Showing</hi>
             <lb /><hi rendition="#i">of the new</hi>
             <lb />
-            <lb /><hi rendition="#in"><hi rendition="#in"><hi rendition="#in">Welte Straight Grand</hi></hi></hi>
-            <lb /><hi rendition="#in"><hi rendition="#larger"><hi rendition="#i">the</hi> <name type="brand">Original Welte Mignon
-            <lb /><hi rendition="#uc">Reproducing Grand</hi></name></hi></hi>
-            <lb /><hi rendition="#smaller #i">with Reproducing Action Invisibly Installed</hi>
+            <lb /><hi rendition="#in"><hi rendition="#in"><hi rendition="#in">Welte Straight Grand</hi></hi></hi></seg>
+            <lb /><seg xml:id="topic_3" ana="#the_original" type="topic" resp="#claude"><hi rendition="#in"><hi rendition="#larger"><hi rendition="#i">the</hi> <name type="brand">Original Welte Mignon
+            <lb /><hi rendition="#uc">Reproducing Grand</hi></name></hi></hi></seg>
+            <lb /><hi rendition="#smaller #i"><seg xml:id="topic_4" ana="#still_a_piano" type="topic" resp="#claude">with Reproducing Action Invisibly Installed</seg></hi>
             <lb /><hi rendition="#i">and the</hi> <hi rendition="#larger"><name type="brand">Welte-Mignon Musicale</name></hi>
             <lb />
-            <lb />an electrically operated attachment to
+            <lb /><seg xml:id="topic_5" ana="#how_it_works" type="topic" resp="#claude">an electrically operated attachment to
             the original <name type="brand">Welte-
-            <lb />Mignon</name> piano which will enable one
-            <seg xml:id="topic_1" ana="#touch_of_a_button" resp="#np" type="topic">
+            <lb />Mignon</name> piano</seg> which will enable one
+            <seg xml:id="topic_1" ana="#effortless" resp="#claude" type="topic">
                 merely by pressing
                 <lb />a button
             </seg>
             to hear any of ten compositions from a repertoire
             <lb />of one's own selections.
             <lb />
-            <lb /><hi rendition="#i">in the following period models</hi>
+            <lb /><hi rendition="#i"><seg xml:id="topic_6" ana="#furniture" type="topic" resp="#claude">in the following period models</seg></hi>
             </hi>
             <lb /><hi rendition="#c #smaller"><name type="brand">FLORENTINE GRAND</name><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><name type="brand">GEORGIAN WELTE-MIGNON</name></hi>
             <lb /><hi rendition="#c #smaller"><name type="brand">LOUIS XVI GRAND</name><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><space dim="horizontal"/><name type="brand">LOUIS XV WELTE-MIGNON</name></hi>

@@ -110,11 +110,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -142,10 +143,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -163,25 +169,53 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="affordability">
-             <gloss>Affordability</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <category xml:id="touch_and_individuality">
+             <gloss>Touch, nuance and individuality</gloss>
+             <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                pedalling, dynamics, tempo, shading, tone colour, or the
+                individuality and characteristic style of each pianist.</desc>
           </category>
-          <category xml:id="suit_every_mood">
-             <gloss>Suit every Mood</gloss>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
           </category>
-          <category xml:id="touch_of_a_button">
-             <gloss>Touch of a Button</gloss>
-             <desc>The Welte-Mignon is permanently available and "objectified"
-                for the entertainment of the owner – on the touch of a
-                button.</desc>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
+          </category>
+          <category xml:id="effortless">
+             <gloss>Effortless: no skill needed</gloss>
+             <desc>The instrument needs no skill or effort: a button or a key starts
+                it, it plays by itself, it is for those who cannot play.</desc>
+          </category>
+          <category xml:id="repertoire">
+             <gloss>Breadth of repertoire</gloss>
+             <desc>The range of music available: classics and dance music, jazz and
+                opera, music for every mood and occasion, a library of thousands of
+                rolls by hundreds of artists.</desc>
+          </category>
+          <category xml:id="evocative_scenes">
+             <gloss>Evocative scenes and moods</gloss>
+             <desc>The copy or the picture paints what the music conjures up: a storm
+                at sea, the Valkyries, a gaucho dance, a garden of long ago.</desc>
+          </category>
+          <category xml:id="within_reach">
+             <gloss>Within everyone's reach</gloss>
+             <desc>The instrument, or the music it plays, is accessible to all, its
+                value exceeds its price. Prices and terms of payment themselves are
+                not a topic.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -190,6 +224,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -217,18 +252,18 @@
           <lb/><hi rendition="#b #larger">Reproducing Pianos</hi></hi></head>
       </div>
       <div facs="#zone_text">
-        <p><lb/><seg xml:id="topic_1" ana="#suit_every_mood" type="topic" resp="#claude">The wild rhythm of a mazurka, the lure
+        <p><lb/><seg xml:id="topic_1" ana="#evocative_scenes #repertoire" type="topic" resp="#claude">The wild rhythm of a mazurka, the lure
           <lb/>of a Venetian love lyric, the poignant
           <lb/>charm of a simple plantation melody</seg>,
           <lb/>assume a new beauty when formed
           <lb/>under the hands of a master.</p>
-        <p><lb/><seg xml:id="topic_2" ana="#touch_of_a_button" type="topic" resp="#claude">At a touch of a key</seg> the <name type="brand">Heintzman &amp;
+        <p><lb/><seg xml:id="topic_2" ana="#effortless" type="topic" resp="#claude">At a touch of a key</seg> the <name type="brand">Heintzman &amp;
           <lb/>Co. Welte-Mignon Reproducing Piano</name>
-          <lb/>will shower forth the glorious music of
+          <lb/><seg xml:id="topic_5" ana="#masters_at_home" type="topic" resp="#claude">will shower forth the glorious music of
           <lb/>a <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> or a <persName type="artist" corresp="https://d-nb.info/gnd/118641832">Rachmaninoff</persName> or a
-          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName> — <seg xml:id="topic_3" ana="#exact_reproduction" type="topic" resp="#claude">their actual playing,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName></seg> — <seg xml:id="topic_3" ana="#faithful_reproduction #touch_and_individuality" type="topic" resp="#claude">their actual playing,
           <lb/>their technique, tone color and tempo</seg>.</p>
-        <p><lb/>Marvellous! Yes, but <seg xml:id="topic_4" ana="#affordability" type="topic" resp="#claude">you can easily
+        <p><lb/><seg xml:id="topic_6" ana="#wonder" type="topic" resp="#claude">Marvellous!</seg> Yes, but <seg xml:id="topic_4" ana="#within_reach" type="topic" resp="#claude">you can easily
           <lb/>have one of these pianos in your home</seg>.</p>
       </div>
       <div facs="#zone_invitation">

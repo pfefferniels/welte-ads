@@ -113,11 +113,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -145,10 +146,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -166,15 +172,23 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="home">
-             <gloss>Home</gloss>
-          </category>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
           <category xml:id="immortality">
-             <gloss>Immortality</gloss>
-             <desc>This topic emphasizes the perdurance of the reproductions and
-                how thus the recording artists become immortal.</desc>
+             <gloss>Immortality and posterity</gloss>
+             <desc>The playing is preserved for ever or for future generations; the
+                artists become immortal, and dead artists still play.</desc>
+          </category>
+          <category xml:id="refinement">
+             <gloss>Culture, refinement and distinction</gloss>
+             <desc>Owning the instrument marks culture, refinement or social standing
+                ("vornehmes Heim", "a visible token of culture"), or the picture
+                places it in an elegant upper-class setting.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -183,6 +197,7 @@
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -203,16 +218,16 @@
       <div facs="#zone_headline">
         <head><hi rendition="#c"><lb/><hi rendition="#larger #uc"><name type="brand">Welte-Mignon-Piano</name> &amp;</hi>
           <lb/><hi rendition="#larger #uc"><name type="brand">Welte-Philharmonie-Orgel</name></hi>
-          <lb/><hi rendition="#uc"><seg xml:id="topic_1" ana="#home" type="topic" resp="#claude">Die Instrumente des vornehmen Heims</seg></hi></hi></head>
+          <lb/><hi rendition="#uc"><seg xml:id="topic_1" ana="#refinement" type="topic" resp="#claude">Die Instrumente des vornehmen Heims</seg></hi></hi></head>
       </div>
       <div type="illustration" facs="#zone_picture">
-        <figure xml:id="figure_1" ana="#home" resp="#claude"><desc>Drawing of a rococo music room with panelled walls, a chandelier and a lamp: on the left the console and pipes of a house organ, on the right a grand piano; no one is playing</desc></figure>
+        <figure xml:id="figure_1" ana="#refinement" resp="#claude"><desc>Drawing of a rococo music room with panelled walls, a chandelier and a lamp: on the left the console and pipes of a house organ, on the right a grand piano; no one is playing</desc></figure>
       </div>
       <div facs="#zone_immortals">
         <ab><hi rendition="#c #uc"><lb/><seg xml:id="topic_2" ana="#immortality" type="topic" resp="#claude">Die Kunst der Unsterblichen</seg>
           <lb/><persName type="composer" corresp="https://d-nb.info/gnd/118598988">Reger</persName> - <persName type="composer" corresp="https://d-nb.info/gnd/118697641">Grieg</persName> - <persName type="artist" corresp="https://d-nb.info/gnd/118786253">Nikisch</persName> - <persName type="composer" corresp="https://d-nb.info/gnd/11875081X">Saint-Saëns</persName> - <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreño</persName>
           <lb/><persName type="artist" corresp="https://d-nb.info/gnd/120890143">Leschetizky</persName> - <persName type="artist" corresp="https://d-nb.info/gnd/116429623">Reisenauer</persName> - <persName type="composer" corresp="https://d-nb.info/gnd/118576291">Mahler</persName> - <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>
-          <lb/>verewigt in höchster Vollendung.</hi></ab>
+          <lb/><seg xml:id="topic_3" ana="#immortality #superlatives" type="topic" resp="#claude">verewigt in höchster Vollendung</seg>.</hi></ab>
       </div>
       <div facs="#zone_invitation">
         <p><hi rendition="#c #i"><lb/>Höfliche Einladung zur Besichtigung

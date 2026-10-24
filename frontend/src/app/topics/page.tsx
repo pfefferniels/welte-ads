@@ -27,10 +27,12 @@ export default function TopicsPage() {
     <Container component="main" maxWidth="md">
       <h1>Topics</h1>
       <Typography>
-        Topics are understood as recurring motifs,
-        such as the illustration of a half-transparent &quot;ghost&quot;
-        sitting at the piano. The area of each circle grows with
-        the number of passages and pictures marked with its topic.
+        Topics are the recurring arguments and motifs of the advertisements,
+        such as the promise that the great pianists play in your own home,
+        or the phantom hands at the keyboard. Claude, an AI model, found
+        them in four blind readings of all advertisements and assigned
+        them; the editor has not yet checked them. The area of each circle
+        grows with the number of passages and pictures marked with its topic.
       </Typography>
 
       <WeighedCircles data={weighedTopics} />

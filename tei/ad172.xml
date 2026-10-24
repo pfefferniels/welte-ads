@@ -113,11 +113,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -145,10 +146,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -167,24 +173,64 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="distinction_from_mechanical">
-             <gloss>Distinction from Mechanical</gloss>
-             <desc>Often, the adverts try to distinguish reproducing piano rolls
-                from mere mechanical methods (such as the player piano).</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <category xml:id="not_mechanical">
+             <gloss>Art, not mechanism</gloss>
+             <desc>The instrument is set apart from mechanical, automatic or player-
+                piano playing: it is human, artistic, "not a surrogate", or the
+                prejudice that it is mechanical is refuted.</desc>
           </category>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <category xml:id="illusion_of_presence">
+             <gloss>Illusion of presence</gloss>
+             <desc>The listener feels that the artist is present or seated at the
+                instrument ("as if he sat at your piano", "close your eyes"), or
+                cannot tell the reproduction from the live artist.</desc>
           </category>
-          <category xml:id="virtual_presence">
-             <gloss>Virtual Presence</gloss>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
+          </category>
+          <category xml:id="furniture">
+             <gloss>Furniture and ornament</gloss>
+             <desc>The case, its design or period style; the instrument as an ornament
+                of the room.</desc>
+          </category>
+          <category xml:id="testimonials">
+             <gloss>Testimonials of famous musicians</gloss>
+             <desc>A named musician or other notable person is quoted or paraphrased
+                in praise of the instrument.</desc>
+          </category>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+          </category>
+          <category xml:id="satisfied_owners">
+             <gloss>Satisfied owners</gloss>
+             <desc>Ordinary owners, named or anonymous, or the number of owners vouch
+                for the instrument.</desc>
+          </category>
+          <category xml:id="unique_and_superior">
+             <gloss>Unique and superior to rivals</gloss>
+             <desc>The instrument is "the only one", the standard for all others, it
+                surpasses its rivals or has nothing in common with them, or the
+                reader is warned against cheap or unknown makes.</desc>
+          </category>
+          <category xml:id="quality">
+             <gloss>Quality and durability</gloss>
+             <desc>The instrument is reliable, well built and lasting, proven in use
+                and in every climate, guaranteed.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -193,6 +239,7 @@
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -213,7 +260,7 @@
   <text decls="#source_1">
     <body>
       <div facs="#zone_headline">
-        <head><hi rendition="#c"><lb/><seg xml:id="topic_1" ana="#home" type="topic" resp="#claude">Eine Quelle des schönsten Kunstgenusses und eine Zierde für jeden Salon</seg> ist das
+        <head><hi rendition="#c"><lb/>Eine Quelle des schönsten Kunstgenusses und <seg xml:id="topic_5" ana="#furniture" type="topic" resp="#claude">eine Zierde für jeden Salon</seg> ist das
           <lb/><hi rendition="#larger">REPRODUKTIONS-PIANO</hi>
           <lb/><hi rendition="#in"><name type="brand">WELTE-MIGNON</name></hi></hi></head>
       </div>
@@ -227,18 +274,18 @@
           <lb/>strumente gespielten Stücke ist nach jeder Richtung, sowohl
           <lb/>was das rein technisch virtuose, wie auch was das
           <lb/><hi rendition="#c #larger">musikalisch-poetische</hi>
-          <lb/>Element betrifft eine <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">so verblüffend natürliche</seg>, dass man
-          <lb/><seg xml:id="topic_3" ana="#virtual_presence" type="topic" resp="#claude">wirklich meint, den betreffenden Künstler vor sich zu haben</seg>.</quote>
-          <lb/><hi rendition="#c #smaller">(Nach dem Ausspruch des Herrn Prof. <persName type="artist" corresp="https://d-nb.info/gnd/118786253">Arthur Nikisch</persName>.)</hi></p>
+          <lb/>Element betrifft eine <seg xml:id="topic_2" ana="#faithful_reproduction #wonder" type="topic" resp="#claude">so verblüffend natürliche</seg>, dass man
+          <lb/><seg xml:id="topic_3" ana="#illusion_of_presence" type="topic" resp="#claude">wirklich meint, den betreffenden Künstler vor sich zu haben</seg>.</quote>
+          <lb/><seg xml:id="topic_6" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#c #smaller">(Nach dem Ausspruch des Herrn Prof. <persName type="artist" corresp="https://d-nb.info/gnd/118786253">Arthur Nikisch</persName>.)</hi></seg></p>
       </div>
       <div facs="#zone_andreae">
-        <p><lb/>Herr <hi rendition="#b"><persName type="composer" corresp="https://d-nb.info/gnd/118847503">Volkmar Andreæ</persName></hi> schreibt über das <name type="brand">Welte-Mignon</name>:
-          <quote type="testimonial"><lb/><hi rendition="#et">Den „<name type="brand">Mignon</name>“-Apparat finde ich herrlich. Nach meiner Ansicht übertrifft er alle anderen Er-</hi>
-          <lb/><hi rendition="#et">findungen auf diesem Gebiete. <seg xml:id="topic_4" ana="#distinction_from_mechanical" type="topic" resp="#claude">Man vergisst beim Anhören das Mechanische des Instrumentes</seg></hi>
+        <p><lb/>Herr <seg xml:id="topic_7" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#b"><persName type="composer" corresp="https://d-nb.info/gnd/118847503">Volkmar Andreæ</persName></hi></seg> schreibt über das <name type="brand">Welte-Mignon</name>:
+          <quote type="testimonial"><lb/><hi rendition="#et">Den „<name type="brand">Mignon</name>“-Apparat finde ich herrlich. <seg xml:id="topic_8" ana="#unique_and_superior" type="topic" resp="#claude">Nach meiner Ansicht übertrifft er alle anderen Er-</seg></hi>
+          <lb/><hi rendition="#et">findungen auf diesem Gebiete. <seg xml:id="topic_4" ana="#not_mechanical" type="topic" resp="#claude">Man vergisst beim Anhören das Mechanische des Instrumentes</seg></hi>
           <lb/><hi rendition="#et">ganz <hi rendition="#b">und erhält wirklich künstlerische Eindrücke.</hi></hi></quote></p>
       </div>
       <div facs="#zone_artists">
-        <p><lb/>Mehr als hundert erste Künstler der Welt haben für <name type="brand">Welte-Mignon</name> gespielt und sich in gleich aner-
+        <p><lb/><seg xml:id="topic_9" ana="#world_renown" type="topic" resp="#claude">Mehr als hundert erste Künstler der Welt haben für <name type="brand">Welte-Mignon</name> gespielt</seg> und sich in gleich aner-
           <lb/><hi rendition="#et">kennender Weise über die Erfindung ausgedrückt, darunter: <persName type="artist" corresp="https://d-nb.info/gnd/118501437">d’ALBERT</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118518011">BUSONI</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Frau CARRENO</persName>,</hi>
           <lb/><hi rendition="#et"><persName type="artist" corresp="https://d-nb.info/gnd/116327642">GABRILOWITSCH</persName>, <persName type="artist">CALSTON</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118697641">GRIEG</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116888652">GRÜNFELD</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116422319">HAMBOURG</persName>, <persName type="artist">Paula HEGNER</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">HOFMANN</persName>,</hi>
           <lb/><hi rendition="#et"><persName type="artist" corresp="https://d-nb.info/gnd/11855476X"><sic>HUMPERDINK</sic></persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116210419">Clotilde KLEEBERG</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116653221">LAMBRINO</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116662166">LAMOND</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116942037">MOTTL</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118786253">NIKISCH</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">PADE-</persName></hi>
@@ -246,10 +293,10 @@
       </div>
       <div facs="#zone_demonstration">
         <p><hi rendition="#larger"><lb/>Die <name type="brand">Welte-Mignon</name>-Instrumente werden Interessenten und Musikfreunden jederzeit
-          <lb/>unverbindlich vorgeführt. Von der unterzeichneten Vertretung sind bis jetzt über
+          <lb/>unverbindlich vorgeführt. Von der unterzeichneten Vertretung sind bis jetzt <seg xml:id="topic_10" ana="#satisfied_owners #quality" type="topic" resp="#claude">über
           <lb/>50 dieser Instrumente speziell in Privatkreisen plaziert worden, die sämtlich zur
-          <lb/>vollsten Zufriedenheit ihrer Besitzer funktionieren. Eine grosse Anzahl diesbezüg-
-          <lb/>licher Anerkennungen stehen zur Verfügung.</hi> <hi rendition="#smaller">348</hi></p>
+          <lb/>vollsten Zufriedenheit ihrer Besitzer funktionieren</seg>. <seg xml:id="topic_11" ana="#satisfied_owners" type="topic" resp="#claude">Eine grosse Anzahl diesbezüg-
+          <lb/>licher Anerkennungen stehen zur Verfügung</seg>.</hi> <hi rendition="#smaller">348</hi></p>
       </div>
       <div facs="#zone_signature">
         <ab><lb/><hi rendition="#in"><orgName>R. REUTEMANN</orgName>,</hi> <hi rendition="#larger #c"><name type="brand">WELTE-MIGNON</name>-

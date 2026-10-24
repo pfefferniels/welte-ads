@@ -18,6 +18,10 @@
                     <forename>Niels</forename>
                  </persName>
               </respStmt>
+              <respStmt>
+                 <resp>Annotation of topics</resp>
+                 <name xml:id="claude">Claude (AI model by Anthropic)</name>
+              </respStmt>
            </titleStmt>
            <publicationStmt>
               <publisher>
@@ -123,11 +127,12 @@
                  scan, in part transcribed by hand. The advertisements published
                  outside Germany, the United Kingdom and the United States, and a
                  few from Germany, were transcribed from the scans, encoded, given
-                 their regions and annotated with topics by Claude, an AI model;
-                 their revision history says so. Until the editor has checked such
-                 an advertisement against the scan, <att>status</att> on its
-                 <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-                 advertisement is <val>checked</val>.</p>
+                 their regions by Claude, an AI model; their revision history says
+                 so. Until the editor has checked such an advertisement against the
+                 scan, <att>status</att> on its <gi>revisionDesc</gi> is
+                 <val>unchecked</val>; that of every other advertisement is
+                 <val>checked</val>. The topics of all advertisements were assigned
+                 by Claude.</p>
               <correction>
                  <p>Errors of the original are not corrected but marked with
                     <gi>sic</gi>.</p>
@@ -155,10 +160,15 @@
                     Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                     which describes them in a <gi>desc</gi>. Illustrations are
                     described in <gi>figure</gi>. Persons are linked to the GND with
-                    <att>corresp</att>. Recurring motifs are marked as topics with
-                    <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                    the taxonomy of topics; these are an interpretation, by whom
-                    <att>resp</att> says.</p>
+                    <att>corresp</att>. Recurring arguments and motifs are marked as
+                    topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                    pointing to the taxonomy of topics. The taxonomy was induced by
+                    Claude in four blind readings of all advertisements, each in a
+                    different order and without knowledge of the editor's earlier
+                    taxonomy, which it replaced in October 2026; it keeps the topics
+                    that at least three of the readings found. The topics are an
+                    interpretation, assigned by whom <att>resp</att> says, so far
+                    all by Claude; the editor has not yet checked them.</p>
               </interpretation>
               <stdVals>
                  <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -178,45 +188,77 @@
            </tagsDecl>
            <classDecl>
               <taxonomy xml:id="topics">
-                 <desc>Topics: recurring motifs of the advertisements, in their texts
-                    and in their pictures</desc>
-                 <category xml:id="dance">
-                    <gloss>Dance</gloss>
-                 </category>
-                 <category xml:id="exact_reproduction">
-                    <gloss>Exact Reproduction</gloss>
-                    <desc>In virtually all promotional materials between 1905 and 1926,
-                       the claim of exact and faithful reproduction, of absolute
-                       accurateness is consistently emphasized.</desc>
+                 <desc>Topics: the recurring arguments and motifs of the advertisements,
+                    in their texts and in their pictures</desc>
+                 <category xml:id="faithful_reproduction">
+                    <gloss>Faithful reproduction</gloss>
+                    <desc>The ad claims that the playing of the artist is reproduced exactly,
+                       faithfully, naturally or completely, as "the actual playing" of the
+                       pianist. A bare "reproduces the playing of …" without such a
+                       qualifier does not count.</desc>
                  </category>
                  <category xml:id="immortality">
-                    <gloss>Immortality</gloss>
-                    <desc>This topic emphasizes the perdurance of the reproductions and
-                       how thus the recording artists become immortal.</desc>
+                    <gloss>Immortality and posterity</gloss>
+                    <desc>The playing is preserved for ever or for future generations; the
+                       artists become immortal, and dead artists still play.</desc>
                  </category>
-                 <category xml:id="invisibility">
-                    <gloss>Invisibility</gloss>
+                 <category xml:id="wonder">
+                    <gloss>Wonder, miracle and magic</gloss>
+                    <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                       causes astonishment, disbelief or speechlessness.</desc>
                  </category>
-                 <category xml:id="listening">
-                    <gloss>Revelled Listening</gloss>
+                 <category xml:id="masters_at_home">
+                    <gloss>The great pianists in your home</gloss>
+                    <desc>The famous pianists can be heard in your own home or on your own
+                       piano, at any time, as often as you wish, at your command ("The
+                       Master's Fingers on Your Piano", concerts at home).</desc>
                  </category>
-                 <category xml:id="popular">
-                    <gloss>Popular</gloss>
+                 <category xml:id="effortless">
+                    <gloss>Effortless: no skill needed</gloss>
+                    <desc>The instrument needs no skill or effort: a button or a key starts
+                       it, it plays by itself, it is for those who cannot play.</desc>
                  </category>
-                 <category xml:id="sitting_woman">
-                    <gloss>Sitting Woman</gloss>
+                 <category xml:id="domestic_comfort">
+                    <gloss>Domestic comfort and intimacy</gloss>
+                    <desc>A private, comfortable scene: the fireside, an armchair, lamplight,
+                       the family gathered, a quiet evening, in the text or in the
+                       picture.</desc>
                  </category>
-                 <category xml:id="suit_every_mood">
-                    <gloss>Suit every Mood</gloss>
+                 <category xml:id="epoch_making_invention">
+                    <gloss>Epoch-making invention</gloss>
+                    <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                       the greatest of the age, a sensation, the newest thing.</desc>
                  </category>
-                 <category xml:id="technical_invention">
-                    <gloss>Technical Invention</gloss>
+                 <category xml:id="superlatives">
+                    <gloss>Superlative perfection</gloss>
+                    <desc>The instrument is called perfect, the best, the finest, supreme or
+                       unsurpassed, or the culmination of a line of progress.</desc>
                  </category>
-                 <category xml:id="touch_of_a_button">
-                    <gloss>Touch of a Button</gloss>
-                    <desc>The Welte-Mignon is permanently available and "objectified"
-                       for the entertainment of the owner – on the touch of a
-                       button.</desc>
+                 <category xml:id="the_original">
+                    <gloss>The original</gloss>
+                    <desc>The Welte-Mignon is the original or the first reproducing piano,
+                       protected by the original patents; the history of the Welte firm
+                       and its founders guarantees it.</desc>
+                 </category>
+                 <category xml:id="how_it_works">
+                    <gloss>How it works</gloss>
+                    <desc>The ad explains or shows the technology: the recording process, the
+                       pneumatic or electric mechanism, the roll, the drive from a light
+                       socket, or it likens the recording to photography or the
+                       phonograph. A product label such as "electric reproducing piano"
+                       alone does not count.</desc>
+                 </category>
+                 <category xml:id="still_a_piano">
+                    <gloss>Still a normal piano</gloss>
+                    <desc>The instrument remains an ordinary piano: it can be played by hand,
+                       the mechanism is invisible and leaves its look unchanged, it can be
+                       fitted to many makes of piano.</desc>
+                 </category>
+                 <category xml:id="repertoire">
+                    <gloss>Breadth of repertoire</gloss>
+                    <desc>The range of music available: classics and dance music, jazz and
+                       opera, music for every mood and occasion, a library of thousands of
+                       rolls by hundreds of artists.</desc>
                  </category>
               </taxonomy>
            </classDecl>
@@ -227,6 +269,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+           <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
            <change when="2026-10-20">Marked as checked by the editor.</change>
            <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
@@ -278,7 +321,7 @@
         </div>
 
         <div facs="#eSc_textblock_ffd3c78d" type="illustration">
-            <figure xml:id="topic_1" ana="#sitting_woman" resp="#np">
+            <figure xml:id="topic_1" ana="#effortless #domestic_comfort" resp="#claude">
                 <desc resp="#np">
                     
                         Woman sitting
@@ -293,61 +336,61 @@
             <ab><lb /><hi rendition="#k">Remember</hi> <hi rendition="#i">that you can
             <lb />select unlimited pro-
             <lb />gram groups for the
-            <lb /><name type="brand">Musicalle</name> from the in-
+            <lb /><name type="brand">Musicalle</name> from <seg xml:id="topic_14" ana="#superlatives #repertoire" type="topic" resp="#claude">the in-
             <lb />comparable <name type="brand">WELTE-
             <lb />MIGNON Library</name> of over
             <lb />three thousand Master
-            <lb />Recordings . . .
-            <seg xml:id="topic_2" ana="#suit_every_mood" resp="#np" type="topic">
+            <lb />Recordings</seg> . . .
+            <seg xml:id="topic_2" ana="#repertoire" resp="#claude" type="topic">
                 clas-
                 <lb />sical music,
-                <seg xml:id="topic_3" ana="#popular" resp="#np" type="topic">
+                
                     modern
                     <lb />music
-                </seg>, orchestral music,
+                , orchestral music,
                 <lb />
-                <seg xml:id="topic_4" ana="#dance" resp="#np" type="topic">
+                
                     ballets and dance ...
-                </seg>
+                
                 <lb />a program to suit every
                 <lb />mood and occasion.
             </seg></hi></ab>
         </div>
         <div facs="#eSc_textblock_4411276c">
-            <ab><lb /><hi rendition="#right #in"><hi rendition="#in">The Amazing New</hi></hi>
-            <lb /><hi rendition="#right #in"><hi rendition="#in"><name type="brand">WELTE-MIGNON Musicalle</name></hi></hi>
-            <lb />makes possible <hi rendition="#i">for the first time</hi> an hour of <hi rendition="#i">uninter-
-            <lb />rupted music</hi> by the great pianists of the world . .</ab>
+            <ab><lb /><seg xml:id="topic_15" ana="#wonder #epoch_making_invention" type="topic" resp="#claude"><hi rendition="#right #in"><hi rendition="#in">The Amazing New</hi></hi>
+            <lb /><hi rendition="#right #in"><hi rendition="#in"><name type="brand">WELTE-MIGNON Musicalle</name></hi></hi></seg>
+            <lb /><seg xml:id="topic_16" ana="#epoch_making_invention" type="topic" resp="#claude">makes possible <hi rendition="#i">for the first time</hi> an hour of <hi rendition="#i">uninter-
+            <lb />rupted music</hi> by the great pianists of the world</seg> . .</ab>
         </div>
         <div facs="#eSc_textblock_8b4f9efa">
             <ab><lb />
-            <seg xml:id="topic_5" ana="#touch_of_a_button" type="topic" resp="#np">
+            <seg xml:id="topic_5" ana="#effortless #domestic_comfort" type="topic" resp="#claude">
                 <hi rendition="#i">At the touch of a button . . .
                 <lb />without moving from your chair . .</hi>
             </seg></ab>
         </div>
         <div facs="#eSc_textblock_b142b74c">
-            <ab><lb /><hi rendition="#dropcap">T</hi>URN BACK the calendar twenty-four
+            <ab><lb /><seg xml:id="topic_17" ana="#the_original" type="topic" resp="#claude"><hi rendition="#dropcap">T</hi>URN BACK the calendar twenty-four
             <lb />years . . . From the <orgName>House of Welte</orgName>
             <lb />came the announcement in 1904 of an
-            <lb />instrument which
-            <seg xml:id="topic_6" ana="#exact_reproduction">
+            <lb />instrument</seg> which
+            <seg xml:id="topic_6" ana="#faithful_reproduction" type="topic" resp="#claude">
                 exactly reproduced the play-
                 <lb />ing of the master pianists. . . .
             </seg>
             <lb />Today—twenty-four years later—the <orgName>WELTE-
             <lb />MIGNON Corporation</orgName> announces
-            <seg xml:id="topic_7" ana="#technical_invention">
+            <seg xml:id="topic_7" ana="#epoch_making_invention" type="topic" resp="#claude">
                 the second
                 <lb />truly great and significant step in the progress
                 <lb />of musical reproduction . . . the <name type="brand">WELTE-
                 <lb />MIGNON Musicalle</name>.
             </seg>
-            <seg xml:id="topic_8" ana="#sitting_woman">
+            <seg xml:id="topic_8" ana="#domestic_comfort" type="topic" resp="#claude">
                 <lb /><hi rendition="#i">. . . A woman relaxes in the soft depths of
                 <lb />her favorite chair . . .</hi>
             </seg>
-            <seg xml:id="topic_9" ana="#touch_of_a_button">
+            <seg xml:id="topic_9" ana="#masters_at_home #effortless" type="topic" resp="#claude">
                 <hi rendition="#i">On the table by her
                 <lb />side rests a small tablet with eight ivory but-
                 <lb />tons . . . She presses one . . . From her
@@ -360,12 +403,12 @@
                 <persName type="composer" corresp="https://d-nb.info/gnd/118580779">Mendels-
                 <lb />sohn's</persName> "Rondo Capriccioso."</hi>
             </seg>
-            <seg xml:id="topic_10" ana="#suit_every_mood" resp="#np" type="topic">
+            <seg xml:id="topic_10" ana="#repertoire" resp="#claude" type="topic">
                 <hi rendition="#i">In modern mood
                 <lb />she turns to <persName type="composer" corresp="https://d-nb.info/gnd/118639226">Gershwin</persName> . . . "The Rhap-
                 <lb />sody in Blue" . . .</hi>
             </seg>
-            <seg xml:id="topic_11" ana="#listening" resp="#np" type="topic">
+            <seg xml:id="topic_11" ana="#effortless #domestic_comfort" resp="#claude" type="topic">
                 <hi rendition="#i">For an hour or more, she
                 <lb />revels in the world's great piano music . . .
                 <lb />never moving from her chair . . .</hi>
@@ -374,9 +417,9 @@
             <lb />Musicalle</name> . . . . . . .</ab>
         </div>
         <div facs="#eSc_textblock_2aef91d9">
-            <ab><lb />Such simplicity of operation has never before
-            <lb />been achieved in musical reproduction.
-            <seg xml:id="topic_12" ana="#invisibility" resp="#np" type="topic">
+            <ab><lb /><seg xml:id="topic_18" ana="#effortless #epoch_making_invention" type="topic" resp="#claude">Such simplicity of operation has never before
+            <lb />been achieved in musical reproduction.</seg>
+            <seg xml:id="topic_12" ana="#effortless #how_it_works" resp="#claude" type="topic">
                 Every
                 <lb />annoying interruption is banished . . . no
                 <lb />dials to turn . . . no rerolling . . .
@@ -384,22 +427,22 @@
                 <lb />The <name type="brand">Musicalle</name> is a cabinet containing eight
                 <lb />records and the silent mechanism for control-
                 <lb />ling them.
-            </seg> It is connected with the piano by
+            </seg> <seg xml:id="topic_19" ana="#how_it_works" type="topic" resp="#claude">It is connected with the piano by
             <lb />a small, easily concealed cable. A tablet,
             <lb />scarcely larger than a small book of verse,
-            <lb />operates the <name type="brand">Musicalle</name>—resting inconspicuously
+            <lb />operates the <name type="brand">Musicalle</name></seg>—resting inconspicuously
             <lb />on a table or stand in your library . . .
             <lb />your music room . . . your dining room
             <lb />. . . wherever you wish.
-            <lb />Of course, there will be times when you
+            <lb /><seg xml:id="topic_20" ana="#still_a_piano" type="topic" resp="#claude">Of course, there will be times when you
             <lb />yourself desire to play. Remember that the
             <lb /><name type="brand">Musicalle</name> leaves your piano wholly at your
             <lb />disposal—unaffected in appearance, action or
-            <lb />tone.
+            <lb />tone.</seg>
             <lb />
-            <lb /><hi rendition="#i">The <name type="brand">Musicalle</name> together with <name type="brand">Welte-Mignon
+            <lb /><hi rendition="#i"><seg xml:id="topic_21" ana="#still_a_piano" type="topic" resp="#claude">The <name type="brand">Musicalle</name> together with <name type="brand">Welte-Mignon
             <lb />Reproducing Mechanism</name> installed in other
-            <lb />makes of Grand Pianos. Prices on request.</hi></ab>
+            <lb />makes of Grand Pianos.</seg> Prices on request.</hi></ab>
         </div>
         <div facs="#eSc_textblock_eb5ad774" type="illustration">
             <figure>
@@ -410,7 +453,7 @@
         </div>
         <div facs="#eSc_textblock_7d6330b8">
             <ab><lb />
-            <seg xml:id="topic_13" ana="#immortality" resp="#np" type="topic">
+            <seg xml:id="topic_13" ana="#immortality #epoch_making_invention" resp="#claude" type="topic">
                 <hi rendition="#c #i #b">The New Instrument That Immortalizes the Playing of the Masters</hi>
             </seg>
             <hi rendition="#c">

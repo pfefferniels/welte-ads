@@ -110,11 +110,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -142,10 +143,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -163,22 +169,54 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="dance">
-             <gloss>Dance</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
           </category>
-          <category xml:id="entertainment">
-             <gloss>Entertainment</gloss>
+          <category xml:id="domestic_comfort">
+             <gloss>Domestic comfort and intimacy</gloss>
+             <desc>A private, comfortable scene: the fireside, an armchair, lamplight,
+                the family gathered, a quiet evening, in the text or in the
+                picture.</desc>
           </category>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <category xml:id="entertaining_guests">
+             <gloss>Entertaining guests</gloss>
+             <desc>The instrument serves sociability: the hostess, guests, dinners,
+                dancing, social functions; pictures of company gathered around it.</desc>
           </category>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
           </category>
-          <category xml:id="unreached_ideal">
-             <gloss>Ideal Instrument</gloss>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
+          </category>
+          <category xml:id="unique_and_superior">
+             <gloss>Unique and superior to rivals</gloss>
+             <desc>The instrument is "the only one", the standard for all others, it
+                surpasses its rivals or has nothing in common with them, or the
+                reader is warned against cheap or unknown makes.</desc>
+          </category>
+          <category xml:id="the_original">
+             <gloss>The original</gloss>
+             <desc>The Welte-Mignon is the original or the first reproducing piano,
+                protected by the original patents; the history of the Welte firm
+                and its founders guarantees it.</desc>
+          </category>
+          <category xml:id="repertoire">
+             <gloss>Breadth of repertoire</gloss>
+             <desc>The range of music available: classics and dance music, jazz and
+                opera, music for every mood and occasion, a library of thousands of
+                rolls by hundreds of artists.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -187,6 +225,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-20">Topic of the picture attributed to Claude, who annotated it.</change>
@@ -208,7 +247,7 @@
   <text decls="#source_1">
     <body>
       <div type="illustration" facs="#zone_picture">
-        <figure xml:id="figure_1" ana="#home" resp="#claude"><desc>A grand piano in a room, a curtained leaded window, an armchair and a vase of flowers behind</desc></figure>
+        <figure xml:id="figure_1" ana="#domestic_comfort" resp="#claude"><desc>A grand piano in a room, a curtained leaded window, an armchair and a vase of flowers behind</desc></figure>
       </div>
       <div facs="#zone_headline">
         <head><hi rendition="#c"><lb/><hi rendition="#in"><name type="brand">Welte-Mignon</name></hi>
@@ -216,23 +255,23 @@
           <lb/><hi rendition="#b #larger">Reproducing Pianos</hi></hi></head>
       </div>
       <div facs="#zone_subhead">
-        <head><hi rendition="#c #b #i #larger"><lb/><seg xml:id="topic_1" ana="#unreached_ideal" type="topic" resp="#claude">The Perfect Piano</seg>
-          <lb/><seg xml:id="topic_2" ana="#entertainment" type="topic" resp="#claude">for Home Entertainment</seg></hi></head>
+        <head><hi rendition="#c #b #i #larger"><lb/><seg xml:id="topic_1" ana="#superlatives" type="topic" resp="#claude">The Perfect Piano</seg>
+          <lb/><seg xml:id="topic_2" ana="#entertaining_guests" type="topic" resp="#claude">for Home Entertainment</seg></hi></head>
       </div>
       <div facs="#zone_text">
         <p><lb/>The <name type="brand">Welte-Mignon Reproducing Piano</name>
-          <lb/><seg xml:id="topic_3" ana="#entertainment" type="topic" resp="#claude">makes a simple problem of home enter-
-          <lb/>taining</seg>. A program by the great <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pach-
+          <lb/><seg xml:id="topic_3" ana="#entertaining_guests" type="topic" resp="#claude">makes a simple problem of home enter-
+          <lb/>taining</seg>. <seg xml:id="topic_7" ana="#masters_at_home" type="topic" resp="#claude">A program by the great <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pach-
           <lb/>mann</persName>—an evening with the incomparable
-          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>—or perhaps <seg xml:id="topic_4" ana="#dance" type="topic" resp="#claude">a delightful im-
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName></seg>—or perhaps <seg xml:id="topic_4" ana="#entertaining_guests #repertoire" type="topic" resp="#claude">a delightful im-
           <lb/>promptu dance, with the <name type="brand">Welte-Mignon</name> to
           <lb/>furnish the music</seg>.</p>
         <p><lb/>With the famous <name type="brand">Welte-Mignon</name> in your
-          <lb/>home you will possess <seg xml:id="topic_5" ana="#unreached_ideal" type="topic" resp="#claude">the supreme instru-
+          <lb/>home you will possess <seg xml:id="topic_5" ana="#superlatives" type="topic" resp="#claude">the supreme instru-
           <lb/>ment of its kind</seg>. The <name type="brand">Welte-Mignon</name> was
-          <lb/>the first reproducing mechanism pro-
-          <lb/>nounced perfection by the greatest artists.
-          <lb/><seg xml:id="topic_6" ana="#superiority" type="topic" resp="#claude">Today the <name type="brand">Welte-Mignon</name> provides the
+          <lb/><seg xml:id="topic_8" ana="#the_original #superlatives #world_renown" type="topic" resp="#claude">the first reproducing mechanism pro-
+          <lb/>nounced perfection by the greatest artists</seg>.
+          <lb/><seg xml:id="topic_6" ana="#unique_and_superior" type="topic" resp="#claude">Today the <name type="brand">Welte-Mignon</name> provides the
           <lb/>standard for all other reproducing actions</seg>.</p>
       </div>
       <div facs="#zone_invitation">

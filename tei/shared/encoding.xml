@@ -91,11 +91,12 @@
                scan, in part transcribed by hand. The advertisements published
                outside Germany, the United Kingdom and the United States, and a
                few from Germany, were transcribed from the scans, encoded, given
-               their regions and annotated with topics by Claude, an AI model;
-               their revision history says so. Until the editor has checked such
-               an advertisement against the scan, <att>status</att> on its
-               <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-               advertisement is <val>checked</val>.</p>
+               their regions by Claude, an AI model; their revision history says
+               so. Until the editor has checked such an advertisement against the
+               scan, <att>status</att> on its <gi>revisionDesc</gi> is
+               <val>unchecked</val>; that of every other advertisement is
+               <val>checked</val>. The topics of all advertisements were assigned
+               by Claude.</p>
             <correction>
                <p>Errors of the original are not corrected but marked with
                   <gi>sic</gi>.</p>
@@ -123,10 +124,15 @@
                   Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                   which describes them in a <gi>desc</gi>. Illustrations are
                   described in <gi>figure</gi>. Persons are linked to the GND with
-                  <att>corresp</att>. Recurring motifs are marked as topics with
-                  <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                  the taxonomy of topics; these are an interpretation, by whom
-                  <att>resp</att> says.</p>
+                  <att>corresp</att>. Recurring arguments and motifs are marked as
+                  topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                  pointing to the taxonomy of topics. The taxonomy was induced by
+                  Claude in four blind readings of all advertisements, each in a
+                  different order and without knowledge of the editor's earlier
+                  taxonomy, which it replaced in October 2026; it keeps the topics
+                  that at least three of the readings found. The topics are an
+                  interpretation, assigned by whom <att>resp</att> says, so far
+                  all by Claude; the editor has not yet checked them.</p>
             </interpretation>
             <stdVals>
                <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -156,115 +162,214 @@
          </tagsDecl>
          <classDecl>
             <taxonomy xml:id="topics">
-               <desc>Topics: recurring motifs of the advertisements, in their texts
-                  and in their pictures</desc>
-               <category xml:id="affordability">
-                  <gloss>Affordability</gloss>
+               <desc>Topics: the recurring arguments and motifs of the advertisements,
+                  in their texts and in their pictures</desc>
+               <category xml:id="faithful_reproduction">
+                  <gloss>Faithful reproduction</gloss>
+                  <desc>The ad claims that the playing of the artist is reproduced exactly,
+                     faithfully, naturally or completely, as "the actual playing" of the
+                     pianist. A bare "reproduces the playing of …" without such a
+                     qualifier does not count.</desc>
                </category>
-               <category xml:id="analogy_to_phonograph">
-                  <gloss>Analogy to Phonograph</gloss>
+               <category xml:id="touch_and_individuality">
+                  <gloss>Touch, nuance and individuality</gloss>
+                  <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                     pedalling, dynamics, tempo, shading, tone colour, or the
+                     individuality and characteristic style of each pianist.</desc>
                </category>
-               <category xml:id="analogy_to_photography">
-                  <gloss>Analogy to Photography</gloss>
+               <category xml:id="the_artists_soul">
+                  <gloss>The artist's soul</gloss>
+                  <desc>The instrument is said to capture the soul, spirit, feeling or
+                     inner life of the performer, a spiritual register beyond the
+                     technical one of touch and nuance ("the living soul of the artist",
+                     "Musikseele").</desc>
                </category>
-               <category xml:id="analysis">
-                  <gloss>Analysis</gloss>
+               <category xml:id="not_mechanical">
+                  <gloss>Art, not mechanism</gloss>
+                  <desc>The instrument is set apart from mechanical, automatic or player-
+                     piano playing: it is human, artistic, "not a surrogate", or the
+                     prejudice that it is mechanical is refuted.</desc>
                </category>
-               <category xml:id="artistic_accompaniment">
-                  <gloss>Artistic Accompaniment</gloss>
+               <category xml:id="illusion_of_presence">
+                  <gloss>Illusion of presence</gloss>
+                  <desc>The listener feels that the artist is present or seated at the
+                     instrument ("as if he sat at your piano", "close your eyes"), or
+                     cannot tell the reproduction from the live artist.</desc>
                </category>
-               <category xml:id="atmosphere">
-                  <gloss>Atmosphere</gloss>
-               </category>
-               <category xml:id="dance">
-                  <gloss>Dance</gloss>
-               </category>
-               <category xml:id="distinction_from_mechanical">
-                  <gloss>Distinction from Mechanical</gloss>
-                  <desc>Often, the adverts try to distinguish reproducing piano rolls
-                     from mere mechanical methods (such as the player piano).</desc>
-               </category>
-               <category xml:id="educational_use">
-                  <gloss>Educational Use</gloss>
-               </category>
-               <category xml:id="entertainment">
-                  <gloss>Entertainment</gloss>
-               </category>
-               <category xml:id="exact_reproduction">
-                  <gloss>Exact Reproduction</gloss>
-                  <desc>In virtually all promotional materials between 1905 and 1926,
-                     the claim of exact and faithful reproduction, of absolute
-                     accurateness is consistently emphasized.</desc>
-               </category>
-               <category xml:id="home">
-                  <gloss>Home</gloss>
-               </category>
-               <category xml:id="hostess">
-                  <gloss>Hostess</gloss>
-               </category>
-               <category xml:id="immediate_recognizability">
-                  <gloss>Immediate Recognizability</gloss>
+               <category xml:id="artists_hear_themselves">
+                  <gloss>Artists hear themselves</gloss>
+                  <desc>The artists vouch for their own recordings: they hear or recognise
+                     their own playing, are deceived by it, sign the rolls as
+                     autographs, or a demonstration proves that each pianist can be
+                     recognised.</desc>
                </category>
                <category xml:id="immortality">
-                  <gloss>Immortality</gloss>
-                  <desc>This topic emphasizes the perdurance of the reproductions and
-                     how thus the recording artists become immortal.</desc>
+                  <gloss>Immortality and posterity</gloss>
+                  <desc>The playing is preserved for ever or for future generations; the
+                     artists become immortal, and dead artists still play.</desc>
                </category>
-               <category xml:id="invisibility">
-                  <gloss>Invisibility</gloss>
+               <category xml:id="if_only_earlier">
+                  <gloss>If only it had existed earlier</gloss>
+                  <desc>The ad regrets that the invention did not exist earlier, so that we
+                     could still hear Liszt, Chopin, Beethoven or Rubinstein. Nearly
+                     always voiced by a quoted musician.</desc>
                </category>
-               <category xml:id="jazz">
-                  <gloss>Jazz</gloss>
+               <category xml:id="wonder">
+                  <gloss>Wonder, miracle and magic</gloss>
+                  <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                     causes astonishment, disbelief or speechlessness.</desc>
                </category>
-               <category xml:id="listening">
-                  <gloss>Revelled Listening</gloss>
+               <category xml:id="phantom_hands">
+                  <gloss>Phantom hands</gloss>
+                  <desc>The absent performer appears as a phantom or spirit: ghostly or
+                     semi-transparent hands and figures, keys moving with no one seated,
+                     the artist summoned at will ("zitieren", "summon").</desc>
                </category>
-               <category xml:id="miracle">
-                  <gloss>Miracle</gloss>
+               <category xml:id="hearing_is_believing">
+                  <gloss>Hearing is believing</gloss>
+                  <desc>The reader is challenged to verify the claims by listening,
+                     comparing or testing ("must be heard to be believed", "hear it in
+                     comparison"). A bare invitation to a demonstration does not count.</desc>
                </category>
-               <category xml:id="personality">
-                  <gloss>Personality</gloss>
+               <category xml:id="masters_at_home">
+                  <gloss>The great pianists in your home</gloss>
+                  <desc>The famous pianists can be heard in your own home or on your own
+                     piano, at any time, as often as you wish, at your command ("The
+                     Master's Fingers on Your Piano", concerts at home).</desc>
                </category>
-               <category xml:id="phantom_body">
-                  <gloss>Phantom Body</gloss>
+               <category xml:id="effortless">
+                  <gloss>Effortless: no skill needed</gloss>
+                  <desc>The instrument needs no skill or effort: a button or a key starts
+                     it, it plays by itself, it is for those who cannot play.</desc>
                </category>
-               <category xml:id="popular">
-                  <gloss>Popular</gloss>
+               <category xml:id="domestic_comfort">
+                  <gloss>Domestic comfort and intimacy</gloss>
+                  <desc>A private, comfortable scene: the fireside, an armchair, lamplight,
+                     the family gathered, a quiet evening, in the text or in the
+                     picture.</desc>
                </category>
-               <category xml:id="repeatability">
-                  <gloss>Repeatability</gloss>
+               <category xml:id="entertaining_guests">
+                  <gloss>Entertaining guests</gloss>
+                  <desc>The instrument serves sociability: the hostess, guests, dinners,
+                     dancing, social functions; pictures of company gathered around it.</desc>
                </category>
-               <category xml:id="secret">
-                  <gloss>Secret</gloss>
-                  <desc>Perfect reproduction and its manufacturing is a secret
-                     possessed only by the Welte-Mignon company.</desc>
+               <category xml:id="refinement">
+                  <gloss>Culture, refinement and distinction</gloss>
+                  <desc>Owning the instrument marks culture, refinement or social standing
+                     ("vornehmes Heim", "a visible token of culture"), or the picture
+                     places it in an elegant upper-class setting.</desc>
                </category>
-               <category xml:id="sitting_woman">
-                  <gloss>Sitting Woman</gloss>
+               <category xml:id="furniture">
+                  <gloss>Furniture and ornament</gloss>
+                  <desc>The case, its design or period style; the instrument as an ornament
+                     of the room.</desc>
                </category>
-               <category xml:id="soulfulness">
-                  <gloss>Soulfulness</gloss>
+               <category xml:id="testimonials">
+                  <gloss>Testimonials of famous musicians</gloss>
+                  <desc>A named musician or other notable person is quoted or paraphrased
+                     in praise of the instrument.</desc>
                </category>
-               <category xml:id="suit_every_mood">
-                  <gloss>Suit every Mood</gloss>
+               <category xml:id="world_renown">
+                  <gloss>World renown and recognition</gloss>
+                  <desc>The instrument is famous and admired throughout the world,
+                     acclaimed by all great artists, critics or the press, adopted by
+                     conservatories and other institutions, or decorated with medals and
+                     prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
                </category>
-               <category xml:id="superiority">
-                  <gloss>Superiority</gloss>
+               <category xml:id="royal_patronage">
+                  <gloss>Royal and aristocratic patronage</gloss>
+                  <desc>Royalty, the nobility or the court appear as listeners, owners or
+                     patrons, including titles of purveyor to the court
+                     ("Hoflieferant").</desc>
                </category>
-               <category xml:id="technical_invention">
-                  <gloss>Technical Invention</gloss>
+               <category xml:id="satisfied_owners">
+                  <gloss>Satisfied owners</gloss>
+                  <desc>Ordinary owners, named or anonymous, or the number of owners vouch
+                     for the instrument.</desc>
                </category>
-               <category xml:id="touch_of_a_button">
-                  <gloss>Touch of a Button</gloss>
-                  <desc>The Welte-Mignon is permanently available and "objectified"
-                     for the entertainment of the owner – on the touch of a
-                     button.</desc>
+               <category xml:id="composers_own_works">
+                  <gloss>Composers play their own works</gloss>
+                  <desc>The ad stresses that composers themselves recorded, or are heard
+                     playing, their own compositions.</desc>
                </category>
-               <category xml:id="unreached_ideal">
-                  <gloss>Ideal Instrument</gloss>
+               <category xml:id="epoch_making_invention">
+                  <gloss>Epoch-making invention</gloss>
+                  <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                     the greatest of the age, a sensation, the newest thing.</desc>
                </category>
-               <category xml:id="virtual_presence">
-                  <gloss>Virtual Presence</gloss>
+               <category xml:id="superlatives">
+                  <gloss>Superlative perfection</gloss>
+                  <desc>The instrument is called perfect, the best, the finest, supreme or
+                     unsurpassed, or the culmination of a line of progress.</desc>
+               </category>
+               <category xml:id="unique_and_superior">
+                  <gloss>Unique and superior to rivals</gloss>
+                  <desc>The instrument is "the only one", the standard for all others, it
+                     surpasses its rivals or has nothing in common with them, or the
+                     reader is warned against cheap or unknown makes.</desc>
+               </category>
+               <category xml:id="the_original">
+                  <gloss>The original</gloss>
+                  <desc>The Welte-Mignon is the original or the first reproducing piano,
+                     protected by the original patents; the history of the Welte firm
+                     and its founders guarantees it.</desc>
+               </category>
+               <category xml:id="how_it_works">
+                  <gloss>How it works</gloss>
+                  <desc>The ad explains or shows the technology: the recording process, the
+                     pneumatic or electric mechanism, the roll, the drive from a light
+                     socket, or it likens the recording to photography or the
+                     phonograph. A product label such as "electric reproducing piano"
+                     alone does not count.</desc>
+               </category>
+               <category xml:id="education">
+                  <gloss>Education and study</gloss>
+                  <desc>The instrument serves learning and teaching: conservatories,
+                     students, studying an interpretation by repeating it.</desc>
+               </category>
+               <category xml:id="beyond_the_home">
+                  <gloss>Uses beyond the home</gloss>
+                  <desc>Uses outside private listening: accompanying singers or
+                     instrumentalists, the stage or ballet, hotels, restaurants,
+                     hospitals, sanatoria, clubs.</desc>
+               </category>
+               <category xml:id="still_a_piano">
+                  <gloss>Still a normal piano</gloss>
+                  <desc>The instrument remains an ordinary piano: it can be played by hand,
+                     the mechanism is invisible and leaves its look unchanged, it can be
+                     fitted to many makes of piano.</desc>
+               </category>
+               <category xml:id="repertoire">
+                  <gloss>Breadth of repertoire</gloss>
+                  <desc>The range of music available: classics and dance music, jazz and
+                     opera, music for every mood and occasion, a library of thousands of
+                     rolls by hundreds of artists.</desc>
+               </category>
+               <category xml:id="evocative_scenes">
+                  <gloss>Evocative scenes and moods</gloss>
+                  <desc>The copy or the picture paints what the music conjures up: a storm
+                     at sea, the Valkyries, a gaucho dance, a garden of long ago.</desc>
+               </category>
+               <category xml:id="within_reach">
+                  <gloss>Within everyone's reach</gloss>
+                  <desc>The instrument, or the music it plays, is accessible to all, its
+                     value exceeds its price. Prices and terms of payment themselves are
+                     not a topic.</desc>
+               </category>
+               <category xml:id="quality">
+                  <gloss>Quality and durability</gloss>
+                  <desc>The instrument is reliable, well built and lasting, proven in use
+                     and in every climate, guaranteed.</desc>
+               </category>
+               <category xml:id="gifts">
+                  <gloss>Seasonal occasions and gifts</gloss>
+                  <desc>The ad ties the instrument to Christmas, the New Year, a holiday or
+                     a season, or offers it as a gift.</desc>
+               </category>
+               <category xml:id="national_pride">
+                  <gloss>National and local pride</gloss>
+                  <desc>An appeal to national or local identity: domestic industry or
+                     inventive genius, national honour, national artists and composers.</desc>
                </category>
             </taxonomy>
          </classDecl>
