@@ -20,7 +20,7 @@
             </respStmt>
             <respStmt>
                <resp>Annotation of topics</resp>
-               <name xml:id="claude">Claude (AI model by Anthropic)</name>
+               <name xml:id="claude">Large language model</name>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -188,13 +188,14 @@
                part recognised automatically (HTR) and corrected against the
                scan, in part transcribed by hand. The advertisements published
                outside Germany, the United Kingdom and the United States, and a
-               few from Germany, were transcribed from the scans, encoded, given
-               their regions by Claude, an AI model; their revision history says
-               so. Until the editor has checked such an advertisement against the
-               scan, <att>status</att> on its <gi>revisionDesc</gi> is
+               few from Germany, were transcribed from the scans, encoded and
+               given their regions by a large language model (Claude, by
+               Anthropic); their revision history says so. Until the editor has
+               checked such an advertisement against the scan,
+               <att>status</att> on its <gi>revisionDesc</gi> is
                <val>unchecked</val>; that of every other advertisement is
                <val>checked</val>. The topics of all advertisements were assigned
-               by Claude.</p>
+               by the same model.</p>
             <correction>
                <p>Errors of the original are not corrected but marked with
                   <gi>sic</gi>.</p>
@@ -225,12 +226,13 @@
                   <att>corresp</att>. Recurring arguments and motifs are marked as
                   topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
                   pointing to the taxonomy of topics. The taxonomy was induced by
-                  Claude in four blind readings of all advertisements, each in a
-                  different order and without knowledge of the editor's earlier
-                  taxonomy, which it replaced in October 2026; it keeps the topics
-                  that at least three of the readings found. The topics are an
-                  interpretation, assigned by whom <att>resp</att> says, so far
-                  all by Claude; the editor has not yet checked them.</p>
+                  the language model in four blind readings of all
+                  advertisements, each in a different order and without
+                  knowledge of the editor's earlier taxonomy, which it replaced
+                  in October 2026; it keeps the topics that at least three of the
+                  readings found. The topics are an interpretation, assigned by
+                  whom <att>resp</att> says, so far all by the language model;
+                  the editor has not yet checked them.</p>
             </interpretation>
             <stdVals>
                <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -284,7 +286,7 @@
       </profileDesc>
       <revisionDesc status="checked">
          <change when="2026-10-25">Steinway &amp; Sons linked to the GND.</change>
-         <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
+         <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
          <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
          <change when="2026-10-20">Marked as checked by the editor.</change>
          <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>

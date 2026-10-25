@@ -20,11 +20,11 @@ export interface Passage {
   status: Status
 }
 
-// the mark of a passage that Claude assigned to the topic
-const ByClaude = ({ status }: { status: Status }) => (
+// the mark of a passage that the language model assigned to the topic
+const ByModel = ({ status }: { status: Status }) => (
   <Tooltip title={status === 'unchecked'
-    ? 'Annotated by Claude, an AI model; not yet checked by the editor'
-    : 'Annotated by Claude, an AI model'}>
+    ? 'Annotated by an AI model; not yet checked by the editor'
+    : 'Annotated by an AI model'}>
     <Chip component="span" label="AI" size="small" variant="outlined" sx={{ ml: 1, height: 20 }} />
   </Tooltip>
 )
@@ -48,7 +48,7 @@ export default function TopicPassages({ passages }: { passages: Passage[] }) {
               : <span>… <i>{passage.text}</i> …</span>}
             <Typography variant="body2" color="text.secondary">
               {passage.ad}
-              {passage.resp === '#claude' && <ByClaude status={passage.status} />}
+              {passage.resp === '#claude' && <ByModel status={passage.status} />}
             </Typography>
           </div>
         </ListItem>

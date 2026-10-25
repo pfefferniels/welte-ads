@@ -125,7 +125,7 @@
                      <attDef ident="resp" mode="change">
                         <desc>points to whoever is responsible for a topic, a
                            description or a note: the editor (<val>#np</val>) or
-                           Claude, an AI model (<val>#claude</val>), as the
+                           the large language model (<val>#claude</val>), as the
                            <gi>titleStmt</gi> declares them.</desc>
                      </attDef>
                   </attList>
@@ -262,8 +262,8 @@
                            </valItem>
                            <valItem ident="unchecked">
                               <desc>not yet checked by the editor, e.g. an
-                                 advertisement transcribed and encoded by
-                                 Claude</desc>
+                                 advertisement transcribed and encoded by a
+                                 large language model</desc>
                            </valItem>
                         </valList>
                      </attDef>

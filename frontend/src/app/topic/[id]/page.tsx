@@ -39,7 +39,7 @@ export default async function TopicPage({ params }: Props) {
       resp: segment.resp,
       status: meta.status,
     })))
-  const byClaude = passages.filter(passage => passage.resp === '#claude').length
+  const byModel = passages.filter(passage => passage.resp === '#claude').length
 
   return (
     <Container component="main" maxWidth="md">
@@ -50,10 +50,10 @@ export default async function TopicPage({ params }: Props) {
         <Typography>
           {description || 'no description available'}
         </Typography>
-        {byClaude > 0 && (
+        {byModel > 0 && (
           <Typography variant="body2" component="p" sx={{ color: 'text.secondary' }}>
-            Passages marked AI ({byClaude} of {passages.length}) were assigned
-            to this topic by Claude, an AI model.
+            Passages marked AI ({byModel} of {passages.length}) were assigned
+            to this topic by a large language model.
           </Typography>
         )}
 

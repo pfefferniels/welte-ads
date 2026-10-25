@@ -64,7 +64,7 @@ describe("getAllMetadata", () => {
 
   it("reads who edited and transcribed an ad and whether it is checked", () => {
     const ads = Object.fromEntries(all.map(ad => [ad.slug, ad]))
-    const claude = { name: "Claude (AI model by Anthropic)", id: "claude" }
+    const claude = { name: "Large language model", id: "claude" }
     const editor = { name: "Niels Pfeffer", id: "np" }
 
     expect(ads.ad150.status).toBe("unchecked")
@@ -85,7 +85,7 @@ describe("getAllMetadata", () => {
   })
 
   // the ad pages say so of every unchecked ad
-  it("finds every unchecked ad transcribed and annotated by Claude", () => {
+  it("finds every unchecked ad transcribed and annotated by the language model", () => {
     const unchecked = all.filter(ad => ad.status === "unchecked")
     expect(unchecked.length).toBeGreaterThan(0)
     for (const ad of unchecked) {
