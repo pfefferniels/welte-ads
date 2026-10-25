@@ -7,7 +7,7 @@ import type { CloudName } from "../../lib/cloud"
 import type { YearTotal } from "../../lib/artists"
 import { artistLink } from "../../lib/anchors"
 import { Timeline, usePlayback } from "../../components/timeline"
-import { Chapter, ShowStory, StoryCard, chapterAt } from "../../components/narrative"
+import { ShowStory, StoryCard, TimelineChapter, chapterAt } from "../../components/narrative"
 
 interface Props {
   names: CloudName[]
@@ -16,7 +16,7 @@ interface Props {
   years: YearTotal[]
   // the width of the kernel that smooths the mentions, in years
   h: number
-  chapters: Chapter[]
+  chapters: TimelineChapter[]
 }
 
 const SPEED = 0.8 // how fast the timeline plays, in years per second

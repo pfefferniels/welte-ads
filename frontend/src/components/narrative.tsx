@@ -5,8 +5,8 @@ import Link from "next/link"
 import { Box, Button, Fade, IconButton, Typography } from "@mui/material"
 import { Close } from "@mui/icons-material"
 
-/** A chapter of the story, as a timeline shows it. */
-export interface Chapter {
+/** A chapter of the story, as a timeline shows it while it plays. */
+export interface TimelineChapter {
   id: string
   from: number
   to: number
@@ -14,6 +14,10 @@ export interface Chapter {
   caption: string
   // what the chapter is about, as the view knows it ("#place-5128581", a GND URI)
   focus: string[]
+}
+
+/** A chapter of the story, as a timeline and the list under it show it. */
+export interface Chapter extends TimelineChapter {
   // the figures of the chapter's years, e.g. "15 printings of 7 ads in 7 places"
   figures: string
   ads: { slug: string; periodical: string; year: number }[]
@@ -21,7 +25,7 @@ export interface Chapter {
 }
 
 /** The chapter that a year belongs to, if any. */
-export const chapterAt = (chapters: Chapter[], year: number | null) =>
+export const chapterAt = <C extends TimelineChapter>(chapters: C[], year: number | null) =>
   year === null ? undefined : chapters.find(chapter => chapter.from <= year && year <= chapter.to)
 
 const yearsOf = (chapter: Chapter) =>
@@ -58,7 +62,7 @@ const ChapterBody = ({ chapter }: { chapter: Chapter }) => (
 )
 
 interface StoryCardProps {
-  chapter: Chapter
+  chapter: TimelineChapter
   // the corner of the picture it stands in on a wide screen
   side?: 'left' | 'right'
   onHide: () => void
