@@ -283,6 +283,7 @@
          </langUsage>
       </profileDesc>
       <revisionDesc status="checked">
+         <change when="2026-10-25">Steinway &amp; Sons linked to the GND.</change>
          <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
          <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
          <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -365,7 +366,7 @@
       </div>
       <div facs="#eSc_textblock_0ca5f1e3">
          <ab><hi rendition="#c #uc">
-            <lb /><hi rendition="#in"><orgName>Steinway and Sons</orgName>,</hi>
+            <lb /><hi rendition="#in"><orgName corresp="https://d-nb.info/gnd/2032471-6">Steinway and Sons</orgName>,</hi>
             <lb />
             <address>
                <addrLine>Steinway Hall,</addrLine><lb /><addrLine>Lower Seymour Street, W.</addrLine>

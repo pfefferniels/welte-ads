@@ -214,6 +214,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-25">Steinway &amp; Sons linked to the GND.</change>
             <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -294,7 +295,7 @@
             <persName type="artist" corresp="https://d-nb.info/gnd/117621641">Leonard <lb />Borwick</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/116040378">Fanny Davies</persName>, etc.</ab> </div>
         <div facs="#eSc_textblock_6282f9b6">
-            <ab><lb /><orgName>Steinway &amp; Sons</orgName>
+            <ab><lb /><orgName corresp="https://d-nb.info/gnd/2032471-6">Steinway &amp; Sons</orgName>
             <lb />
             <address>
                 <addrLine>Steinway Hall</addrLine> <lb /><addrLine>15 &amp; 17 Lower

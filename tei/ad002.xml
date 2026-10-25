@@ -240,6 +240,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-25">Steinway &amp; Sons linked to the GND.</change>
             <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -387,14 +388,14 @@
         <div facs="#eSc_textblock_c6563afe">
             <head><lb />
             <hi rendition="#c #uc #larger">
-                <hi rendition="#in #larger #g"><orgName>Steinway &amp; Sons</orgName></hi>
+                <hi rendition="#in #larger #g"><orgName corresp="https://d-nb.info/gnd/2032471-6">Steinway &amp; Sons</orgName></hi>
             </hi></head>
             <ab><address>
                 <addrLine><hi rendition="#c #uc #larger"><lb />Steinway Hall</hi>
                 <hi rendition="#c #uc #in #larger"><lb />15 &amp; 17, Lower Seymour Street,
                 London, S.W.1</hi></addrLine>
             </address>
-            <hi rendition="#c #i"><lb /><orgName>Steinway &amp; Sons</orgName>
+            <hi rendition="#c #i"><lb /><orgName corresp="https://d-nb.info/gnd/2032471-6">Steinway &amp; Sons</orgName>
             and their Agents make it conveniently possible for
             music lovers to own a <name type="brand">Steinway</name>. Pianos
             <lb />of other makes taken in exchange. Write for particulars.
