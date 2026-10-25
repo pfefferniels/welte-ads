@@ -13,12 +13,6 @@ export const metadata = {
 }
 
 const contentStyles = {
-  "& p": {
-    textIndent: "2rem",
-  },
-  "& p:first-of-type, & h2 + p, & h3 + p, & h4 + p, & h5 + p, & h6 + p, & .noindent p": {
-    textIndent: "0",
-  },
   "& blockquote": {
     marginLeft: "5rem",
   },
