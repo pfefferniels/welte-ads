@@ -14,13 +14,13 @@ describe("chapterProblems", () => {
   })
 
   it("finds chapters without a caption or with one too long to read in passing", () => {
-    const long = { ...chapter("a", 1905, 1908), caption: "word ".repeat(16).trim() }
+    const long = { ...chapter("a", 1905, 1908), caption: "word ".repeat(21).trim() }
     expect(chapterProblems([long, { ...chapter("b", 1909, 1910), caption: "" }], 1905, 1912))
-      .toEqual(["a has a caption of more than 15 words", "b has no caption"])
+      .toEqual(["a has a caption of more than 20 words", "b has no caption"])
   })
 
   it("counts the words of a caption, not the markup of its links", () => {
-    const linked = { ...chapter("a", 1905, 1908), caption: inlineHtml(`${"word ".repeat(14)}[word](/topic/immortality/)`) }
+    const linked = { ...chapter("a", 1905, 1908), caption: inlineHtml(`${"word ".repeat(19)}[word](/topic/immortality/)`) }
     expect(chapterProblems([linked], 1905, 1912)).toEqual([])
   })
 
