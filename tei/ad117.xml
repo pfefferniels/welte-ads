@@ -247,6 +247,7 @@
       <langUsage><language ident="es">Spanish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">The two medals identified and described, with editorial notes on their sources.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -280,7 +281,8 @@
           <lb/>del gran arte</seg></hi></head>
       </div>
       <div type="illustration" facs="#zone_medal_left">
-        <figure xml:id="figure_1" ana="#world_renown" resp="#claude"><desc>Medal with a seated female harpist; the legend (a German exhibition medal, "…INSTRUMENTEN…") is illegible</desc></figure>
+        <figure xml:id="figure_1" ana="#world_renown" resp="#claude"><desc>Medal of the International Exhibition of Musical Instruments in Rotterdam, 1909: a seated woman playing the harp; legend "INTERNAT. TENTOONSTELL. V. MUZIEKINSTRUMENTEN 15 MEI – 1 JUNI 1909. ROTTERDAM"</desc></figure>
+        <note type="editorial" target="#figure_1" resp="#claude">The exhibition, the first of its kind in the Netherlands, closed on 1 June 1909; Henri Viotta, who gives 19 May as its opening, names the electrically driven “Mignon” among the many player pianos shown (<ref target="https://www.dbnl.org/tekst/_gid001190901_01/_gid001190901_01_0092.php">De Gids 73, 1909</ref>).</note>
       </div>
       <div type="illustration" facs="#zone_carreno">
         <figure xml:id="figure_2" ana="#testimonials" resp="#claude"><desc>Portrait drawing of Teresa Carreño</desc></figure>
@@ -333,7 +335,8 @@
           <lb/>que los poseen y han oído</seg>.</p>
       </div>
       <div type="illustration" facs="#zone_medal_right">
-        <figure xml:id="figure_5" ana="#world_renown" resp="#claude"><desc>Medal inscribed "EXPOSITION UNIVERSELLE DE MDCCCLXVII A PARIS" (partly legible), "WELTE &amp; FILS", "RECOMPENSES"</desc></figure>
+        <figure xml:id="figure_5" ana="#world_renown" resp="#claude"><desc>Reverse of the prize medal of the Exposition universelle, Paris 1867, engraved with the name of the firm: legend "EXPOSITION UNIVERSELLE DE MDCCCLXVII A PARIS · RECOMPENSES", in the centre "WELTE &amp; FILS"</desc></figure>
+        <note type="editorial" target="#figure_5" resp="#claude">At the Exposition universelle of 1867, where Berthold Welte represented it, the firm won a silver medal (Gerhard Dangel, “Die Firma Welte und die Welte-Philharmonie-Orgeln weltweit”, in: <title>Wie von Geisterhand. Aus Seewen in die Welt</title>, Seewen 2011).</note>
       </div>
       <div type="illustration" facs="#zone_liszt">
         <figure xml:id="figure_6" ana="#testimonials" resp="#claude"><desc>Portrait drawing of Franz Liszt</desc></figure>
