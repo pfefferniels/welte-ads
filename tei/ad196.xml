@@ -7,7 +7,7 @@
         <title type="main">Ad in "Neue Freie Presse"</title>
         <title type="sub">November 15 to December 20, 1913</title>
         <author>
-          <orgName key="kohn">Bernhard Kohn</orgName>
+          <orgName key="kohn" corresp="https://d-nb.info/gnd/125821864X">Bernhard Kohn</orgName>
         </author>
         <respStmt>
           <resp>Editor</resp>
@@ -296,7 +296,8 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring arguments and motifs are marked as
+               <att>corresp</att>; firms are linked to the GND or, where it
+               has no record of them, to Wikidata. Recurring arguments and motifs are marked as
                topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
                pointing to the taxonomy of topics. The taxonomy was induced by
                Claude in four blind readings of all advertisements, each in a
@@ -343,6 +344,7 @@
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
     <revisionDesc status="checked">
+      <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
       <change when="2026-10-25" who="#np">Checked against the scan by the editor; the piano bears no monogram.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
@@ -370,7 +372,7 @@
       </div>
       <div facs="#zone_band">
         <figure xml:id="figure_1" ana="#royal_patronage" resp="#claude"><desc>A diagonal band across the frame, with the double-headed imperial eagle of Austria at its lower end</desc></figure>
-        <ab><lb/><hi rendition="#i #in"><orgName>Bernhard Kohn</orgName></hi>
+        <ab><lb/><hi rendition="#i #in"><orgName corresp="https://d-nb.info/gnd/125821864X">Bernhard Kohn</orgName></hi>
           <address><addrLine><lb/><hi rendition="#i"><placeName>Wien</placeName> I. Himmelpfortgasse N<hi rendition="#sup #u">o</hi> 20</hi></addrLine></address></ab>
       </div>
       <div facs="#zone_slogan">

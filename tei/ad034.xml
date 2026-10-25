@@ -7,7 +7,7 @@
                 <title type="main">Ad in "Country Life"</title>
                 <title type="sub">October and December 1919</title>
                 <author>
-                    <orgName key="m.welte.sons">
+                    <orgName key="m.welte.sons" corresp="https://d-nb.info/gnd/5048495-3">
                         M. Welte &amp; Sons, Inc.
                     </orgName>
                 </author>
@@ -200,7 +200,8 @@
                      Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                      which describes them in a <gi>desc</gi>. Illustrations are
                      described in <gi>figure</gi>. Persons are linked to the GND with
-                     <att>corresp</att>. Recurring arguments and motifs are marked as
+                     <att>corresp</att>; firms are linked to the GND or, where it
+                     has no record of them, to Wikidata. Recurring arguments and motifs are marked as
                      topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
                      pointing to the taxonomy of topics. The taxonomy was induced by
                      Claude in four blind readings of all advertisements, each in a
@@ -272,6 +273,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
             <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
             <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
@@ -363,7 +365,7 @@
         </div>
         <div facs="#eSc_textblock_be4de09e">
             <ab><hi rendition="#c">
-                <lb /><hi rendition="#in"><orgName>M. Welte &amp; Sons, Inc.</orgName></hi>
+                <lb /><hi rendition="#in"><orgName corresp="https://d-nb.info/gnd/5048495-3">M. Welte &amp; Sons, Inc.</orgName></hi>
                 <lb />
                 <address>
                     <addrLine>Six Sixty Seven Fifth Ave.</addrLine>

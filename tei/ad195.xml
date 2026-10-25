@@ -7,7 +7,7 @@
         <title type="main">Ad in "Neue Freie Presse"</title>
         <title type="sub">November 9, 1913</title>
         <author>
-          <orgName key="kohn">Bernh. Kohn</orgName>
+          <orgName key="kohn" corresp="https://d-nb.info/gnd/125821864X">Bernh. Kohn</orgName>
         </author>
         <respStmt>
           <resp>Editor</resp>
@@ -148,7 +148,8 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring arguments and motifs are marked as
+               <att>corresp</att>; firms are linked to the GND or, where it
+               has no record of them, to Wikidata. Recurring arguments and motifs are marked as
                topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
                pointing to the taxonomy of topics. The taxonomy was induced by
                Claude in four blind readings of all advertisements, each in a
@@ -208,6 +209,7 @@
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -244,7 +246,7 @@
       </div>
       <div facs="#zone_signature">
         <ab><hi rendition="#c"><lb/><hi rendition="#b #larger">Besichtigung bei</hi>
-          <lb/><hi rendition="#in"><orgName>Bernh. Kohn</orgName></hi>
+          <lb/><hi rendition="#in"><orgName corresp="https://d-nb.info/gnd/125821864X">Bernh. Kohn</orgName></hi>
           <address><addrLine><lb/><hi rendition="#b"><placeName>Wien</placeName>, I., Himmelpfortgasse Nr. 20.</hi></addrLine></address></hi></ab>
       </div>
     </body>

@@ -7,7 +7,7 @@
         <title type="main">Ad in "Diario de la Marina"</title>
         <title type="sub">February 17 and 24, 1918</title>
         <author>
-          <orgName key="m.welte.sons">M. Welte &amp; Sons</orgName>
+          <orgName key="m.welte.sons" corresp="https://d-nb.info/gnd/5048495-3">M. Welte &amp; Sons</orgName>
         </author>
         <respStmt>
           <resp>Editor</resp>
@@ -176,7 +176,8 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring arguments and motifs are marked as
+               <att>corresp</att>; firms are linked to the GND or, where it
+               has no record of them, to Wikidata. Recurring arguments and motifs are marked as
                topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
                pointing to the taxonomy of topics. The taxonomy was induced by
                Claude in four blind readings of all advertisements, each in a
@@ -216,6 +217,7 @@
       <langUsage><language ident="es">Spanish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -253,7 +255,7 @@
           <lb/>de estos pianos.</hi></p>
       </div>
       <div facs="#zone_signature">
-        <ab><hi rendition="#c #b #in"><lb/><orgName>M. WELTE &amp; SONS.</orgName></hi>
+        <ab><hi rendition="#c #b #in"><lb/><orgName corresp="https://d-nb.info/gnd/5048495-3">M. WELTE &amp; SONS.</orgName></hi>
           <address><addrLine><lb/><hi rendition="#b #larger">667 Quinta Avenida.</hi></addrLine>
             <addrLine><hi rendition="#b #larger"><placeName>New York. City</placeName></hi></addrLine></address></ab>
       </div>

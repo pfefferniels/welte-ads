@@ -196,7 +196,8 @@
                      Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                      which describes them in a <gi>desc</gi>. Illustrations are
                      described in <gi>figure</gi>. Persons are linked to the GND with
-                     <att>corresp</att>. Recurring arguments and motifs are marked as
+                     <att>corresp</att>; firms are linked to the GND or, where it
+                     has no record of them, to Wikidata. Recurring arguments and motifs are marked as
                      topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
                      pointing to the taxonomy of topics. The taxonomy was induced by
                      Claude in four blind readings of all advertisements, each in a
@@ -359,6 +360,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
             <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -506,7 +508,7 @@
             <lb />On the
             accuracy and novelty of his chim-
             <lb />ing clocks, <persName corresp="https://d-nb.info/gnd/1128739232">Michael Welte</persName>, in 1832, founded
-            <lb />the firm of <orgName>M. Welte &amp; Sons</orgName>, a venerable in-
+            <lb />the firm of <orgName corresp="https://d-nb.info/gnd/5125268-5">M. Welte &amp; Sons</orgName>, a venerable in-
             <lb />stitution now located at <placeName>Freiburg, Germany</placeName>.
             <lb />The years elapsed and Welte's clocks
             <lb />chimed the passage of the hours from man-
@@ -543,7 +545,7 @@
             <lb />and high rank, came from afar to listen and
             <lb />marvel at <persName corresp="https://d-nb.info/gnd/1128739232">Michael Welte's</persName> astounding crea-
             <lb />tion.</seg> The firm expanded and the business of
-            <lb /><orgName>M. Welte &amp; Sons</orgName> attained large proportions.
+            <lb /><orgName corresp="https://d-nb.info/gnd/5125268-5">M. Welte &amp; Sons</orgName> attained large proportions.
             <lb />In 1865, <persName corresp="https://d-nb.info/gnd/1271366029">Emil Welte</persName>, a son of the founder,</ab>
         </div>
         <div facs="#eSc_textblock_d9110567">
@@ -617,7 +619,7 @@
         <div facs="#eSc_textblock_d1c98342">
             <ab><lb />the Welte reputation and business had been
             <lb />established.
-            <lb /><seg xml:id="topic_20" ana="#the_original" type="topic" resp="#claude">Thus <orgName>M. Welte &amp; Sons</orgName> were the origina-
+            <lb /><seg xml:id="topic_20" ana="#the_original" type="topic" resp="#claude">Thus <orgName corresp="https://d-nb.info/gnd/5125268-5">M. Welte &amp; Sons</orgName> were the origina-
             <lb />tors of the idea of reproducing the playing of
             <lb />pianists, and were granted the original, basic
             <lb />patents on reproducing mechanisms</seg> now em-

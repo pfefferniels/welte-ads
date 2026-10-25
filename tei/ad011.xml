@@ -7,7 +7,7 @@
               <title type="main">Ad in "The New York Herald" and "Omaha Daily Bee"</title>
               <title type="sub">May 1, 1921 and January 4, 1922</title>
               <author>
-                 <orgName key="hardman">
+                 <orgName key="hardman" corresp="https://www.wikidata.org/entity/Q5656258">
                     Hardman Welte-Mignon Licensee
                  </orgName>
               </author>
@@ -191,7 +191,8 @@
                     Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                     which describes them in a <gi>desc</gi>. Illustrations are
                     described in <gi>figure</gi>. Persons are linked to the GND with
-                    <att>corresp</att>. Recurring arguments and motifs are marked as
+                    <att>corresp</att>; firms are linked to the GND or, where it
+                    has no record of them, to Wikidata. Recurring arguments and motifs are marked as
                     topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
                     pointing to the taxonomy of topics. The taxonomy was induced by
                     Claude in four blind readings of all advertisements, each in a
@@ -254,6 +255,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+           <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
            <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -321,7 +323,7 @@
 
                 <app>
                   <rdg source="#source_1">
-                     <lb /><hi rendition="#b #in"><orgName>HARDMAN,PECK&amp;CO.</orgName></hi>
+                     <lb /><hi rendition="#b #in"><orgName corresp="https://www.wikidata.org/entity/Q5656258">HARDMAN,PECK&amp;CO.</orgName></hi>
                      <lb /><hi rendition="#uc #b #smaller">Founded 1842</hi>
                   </rdg>
                   <rdg source="#source_2">

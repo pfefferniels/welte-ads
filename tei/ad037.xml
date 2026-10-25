@@ -7,7 +7,7 @@
                 <title type="main">Ad in "Sport im Bild"</title>
                 <title type="sub">4.11.1921</title>
                 <author>
-                    <orgName key="m.welte">
+                    <orgName key="m.welte" corresp="https://d-nb.info/gnd/5125268-5">
                         M. Welte &amp; Söhne
                     </orgName>
                 </author>
@@ -476,7 +476,8 @@
                      Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                      which describes them in a <gi>desc</gi>. Illustrations are
                      described in <gi>figure</gi>. Persons are linked to the GND with
-                     <att>corresp</att>. Recurring arguments and motifs are marked as
+                     <att>corresp</att>; firms are linked to the GND or, where it
+                     has no record of them, to Wikidata. Recurring arguments and motifs are marked as
                      topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
                      pointing to the taxonomy of topics. The taxonomy was induced by
                      Claude in four blind readings of all advertisements, each in a
@@ -601,6 +602,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
             <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -734,7 +736,7 @@
         </div>
         <div facs="#eSc_textblock_c3c4b41d">
             <ab><hi rendition="#c">
-            <lb /><orgName>M. Welte &amp; Söhne</orgName>
+            <lb /><orgName corresp="https://d-nb.info/gnd/5125268-5">M. Welte &amp; Söhne</orgName>
             <lb />Fabrik pneumatischer Musikwerke
             <lb />Freiburg i. Br.
             <lb /><seg xml:id="topic_15" ana="#the_original" type="topic" resp="#claude">Gegründet 1832</seg>

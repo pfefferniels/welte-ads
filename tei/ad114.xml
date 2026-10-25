@@ -7,7 +7,7 @@
         <title type="main">Ad in "The Mexican Herald"</title>
         <title type="sub">May 19, 1907</title>
         <author>
-          <orgName key="wagner.levien">A. Wagner &amp; Levien, Sucs.</orgName>
+          <orgName key="wagner.levien" corresp="https://d-nb.info/gnd/1188279637">A. Wagner &amp; Levien, Sucs.</orgName>
         </author>
         <respStmt>
           <resp>Editor</resp>
@@ -143,7 +143,8 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring arguments and motifs are marked as
+               <att>corresp</att>; firms are linked to the GND or, where it
+               has no record of them, to Wikidata. Recurring arguments and motifs are marked as
                topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
                pointing to the taxonomy of topics. The taxonomy was induced by
                Claude in four blind readings of all advertisements, each in a
@@ -184,6 +185,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="checked">
+      <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20" who="#np">Checked against the scan by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
@@ -221,7 +223,7 @@
         <ab><hi rendition="#c"><lb/>General Agents for the Entire Mexican Republic:</hi></ab>
       </div>
       <div facs="#zone_signature">
-        <ab><hi rendition="#c"><lb/><hi rendition="#larger"><orgName>A. WAGNER &amp; LEVIEN; SUCS.</orgName></hi>
+        <ab><hi rendition="#c"><lb/><hi rendition="#larger"><orgName corresp="https://d-nb.info/gnd/1188279637">A. WAGNER &amp; LEVIEN; SUCS.</orgName></hi>
           <lb/><address><addrLine>Zuleta 13 y 14.</addrLine> <addrLine><placeName>MEXICO</placeName>.</addrLine></address></hi></ab>
       </div>
     </body>

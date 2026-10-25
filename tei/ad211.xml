@@ -7,7 +7,7 @@
         <title type="main">Ad in "Dziennik Poznański"</title>
         <title type="sub">November 18, 1906</title>
         <author>
-          <orgName key="ecke">Karola Ecke</orgName>
+          <orgName key="ecke" corresp="https://www.wikidata.org/entity/Q65058190">Karola Ecke</orgName>
         </author>
         <respStmt>
           <resp>Editor</resp>
@@ -161,7 +161,8 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring arguments and motifs are marked as
+               <att>corresp</att>; firms are linked to the GND or, where it
+               has no record of them, to Wikidata. Recurring arguments and motifs are marked as
                topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
                pointing to the taxonomy of topics. The taxonomy was induced by
                Claude in four blind readings of all advertisements, each in a
@@ -230,6 +231,7 @@
       <langUsage><language ident="pl">Polish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
       <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
@@ -274,7 +276,7 @@
       <div facs="#zone_signature">
         <p><hi rendition="#b"><lb/>„<name type="brand">Mignon</name>“ pokazuje się z grą na próbę chęt-
           <lb/>nie kazdego czasu w magazynie fortepianów</hi>
-          <lb/><hi rendition="#in"><orgName>Karola Ecke</orgName>,</hi> <hi rendition="#b"><address><addrLine>ul. Rycerska 39</addrLine></address> (jedyny za-
+          <lb/><hi rendition="#in"><orgName corresp="https://www.wikidata.org/entity/Q65058190">Karola Ecke</orgName>,</hi> <hi rendition="#b"><address><addrLine>ul. Rycerska 39</addrLine></address> (jedyny za-
           <lb/>stępca).</hi> — Prospekta rozsyla się
           <lb/>bezplatnie.</p>
       </div>

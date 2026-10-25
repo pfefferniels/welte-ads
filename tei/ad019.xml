@@ -7,7 +7,7 @@
               <title type="main">Ad in "Music Trade Review"</title>
               <title type="sub">November 10, 1928</title>
               <author>
-                 <orgName key="welte.mignon.corp">
+                 <orgName key="welte.mignon.corp" corresp="https://d-nb.info/gnd/5049218-4">
                     Welte Mignon Corporation
                  </orgName>
               </author>
@@ -160,7 +160,8 @@
                     Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                     which describes them in a <gi>desc</gi>. Illustrations are
                     described in <gi>figure</gi>. Persons are linked to the GND with
-                    <att>corresp</att>. Recurring arguments and motifs are marked as
+                    <att>corresp</att>; firms are linked to the GND or, where it
+                    has no record of them, to Wikidata. Recurring arguments and motifs are marked as
                     topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
                     pointing to the taxonomy of topics. The taxonomy was induced by
                     Claude in four blind readings of all advertisements, each in a
@@ -269,6 +270,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+           <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
            <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -378,7 +380,7 @@
                 exactly reproduced the play-
                 <lb />ing of the master pianists. . . .
             </seg>
-            <lb />Today—twenty-four years later—the <orgName>WELTE-
+            <lb />Today—twenty-four years later—the <orgName corresp="https://d-nb.info/gnd/5049218-4">WELTE-
             <lb />MIGNON Corporation</orgName> announces
             <seg xml:id="topic_7" ana="#epoch_making_invention" type="topic" resp="#claude">
                 the second
@@ -457,7 +459,7 @@
                 <hi rendition="#c #i #b">The New Instrument That Immortalizes the Playing of the Masters</hi>
             </seg>
             <hi rendition="#c">
-            <lb /><hi rendition="#in"><hi rendition="#in"><orgName>WELTE-MIGNON CORPORATION</orgName></hi></hi>
+            <lb /><hi rendition="#in"><hi rendition="#in"><orgName corresp="https://d-nb.info/gnd/5049218-4">WELTE-MIGNON CORPORATION</orgName></hi></hi>
             <lb /><persName><hi rendition="#uc">William C. Heaton</hi></persName>, <hi rendition="#i">Wholesale Sales Manager, Piano Division</hi>
             </hi>
             <lb />
@@ -468,7 +470,7 @@
         </div>
         <div facs="#eSc_textblock_5fe584b5">
             <ab><lb /><hi rendition="#i">The <name type="brand">Musicalle</name> is patented and controlled ex-
-            <lb />clusively by the <orgName>Welte-Mignon Corporation</orgName></hi></ab>
+            <lb />clusively by the <orgName corresp="https://d-nb.info/gnd/5049218-4">Welte-Mignon Corporation</orgName></hi></ab>
         </div>
         </body>
     </text>

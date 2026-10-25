@@ -7,7 +7,7 @@
         <title type="main">Ad in "Daily Telegraph Pictorial", "The Land" and "The Catholic Press"</title>
         <title type="sub">October 11, 1928 to May 2, 1929</title>
         <author>
-          <orgName key="paling">Paling's</orgName>
+          <orgName key="paling" corresp="https://d-nb.info/gnd/16082782-6">Paling's</orgName>
         </author>
         <respStmt>
           <resp>Editor</resp>
@@ -302,7 +302,8 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring arguments and motifs are marked as
+               <att>corresp</att>; firms are linked to the GND or, where it
+               has no record of them, to Wikidata. Recurring arguments and motifs are marked as
                topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
                pointing to the taxonomy of topics. The taxonomy was induced by
                Claude in four blind readings of all advertisements, each in a
@@ -386,6 +387,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -445,7 +447,7 @@
           <lb/>Art Catalogue?</hi></p>
       </div>
       <div facs="#zone_signature">
-        <ab><lb/><hi rendition="#in #i"><orgName>Palings</orgName></hi>
+        <ab><lb/><hi rendition="#in #i"><orgName corresp="https://d-nb.info/gnd/16082782-6">Palings</orgName></hi>
           <address><addrLine><lb/><hi rendition="#b">338 GEORGE STREET</hi></addrLine>
             <addrLine><lb/><hi rendition="#b">206 Pitt Street,</hi></addrLine>
             <addrLine><lb/><hi rendition="#b #right"><placeName>SYDNEY</placeName>.</hi></addrLine></address></ab>

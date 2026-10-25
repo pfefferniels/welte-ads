@@ -173,7 +173,8 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring arguments and motifs are marked as
+               <att>corresp</att>; firms are linked to the GND or, where it
+               has no record of them, to Wikidata. Recurring arguments and motifs are marked as
                topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
                pointing to the taxonomy of topics. The taxonomy was induced by
                Claude in four blind readings of all advertisements, each in a
@@ -254,6 +255,7 @@
       <langUsage><language ident="nl">Dutch</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -291,7 +293,7 @@
       </div>
       <div facs="#zone_text">
         <p><hi rendition="#i"><lb/>het ideaal.</hi></p>
-        <p><hi rendition="#i"><lb/><hi rendition="#b"><name type="brand">MIGNON</name></hi> <seg xml:id="topic_3" ana="#epoch_making_invention" type="topic" resp="#claude">de geniale vinding</seg> van de firma <hi rendition="#b"><orgName>Welte &amp; Söhne</orgName></hi>, reproduceert het Spel van
+        <p><hi rendition="#i"><lb/><hi rendition="#b"><name type="brand">MIGNON</name></hi> <seg xml:id="topic_3" ana="#epoch_making_invention" type="topic" resp="#claude">de geniale vinding</seg> van de firma <hi rendition="#b"><orgName corresp="https://d-nb.info/gnd/5125268-5">Welte &amp; Söhne</orgName></hi>, reproduceert het Spel van
           <lb/>de grootste pianisten; <seg xml:id="topic_9" ana="#how_it_works" type="topic" resp="#claude">aangesloten aan eene electrische lichtleiding of werkende op Accu-
           <lb/>mulatoren</seg> <seg xml:id="topic_4" ana="#effortless" type="topic" resp="#claude">is één druk op het contact voldoende</seg> <seg xml:id="topic_10" ana="#masters_at_home #faithful_reproduction" type="topic" resp="#claude">om het spel van de groote meesters
           <lb/>geheel natuurgetrouw in uwe woning te hooren</seg>.</hi></p>

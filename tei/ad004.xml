@@ -7,7 +7,7 @@
                 <title type="main">Ad in "Zeitschrift für Instrumentenbau"</title>
                 <title type="sub">Bd. 40, 1919/20</title>
                 <author>
-                    <orgName key="m.welte">
+                    <orgName key="m.welte" corresp="https://d-nb.info/gnd/5125268-5">
                         M. Welte &amp; Söhne G.m.b.H.
                     </orgName>
                 </author>
@@ -160,7 +160,8 @@
                      Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                      which describes them in a <gi>desc</gi>. Illustrations are
                      described in <gi>figure</gi>. Persons are linked to the GND with
-                     <att>corresp</att>. Recurring arguments and motifs are marked as
+                     <att>corresp</att>; firms are linked to the GND or, where it
+                     has no record of them, to Wikidata. Recurring arguments and motifs are marked as
                      topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
                      pointing to the taxonomy of topics. The taxonomy was induced by
                      Claude in four blind readings of all advertisements, each in a
@@ -231,6 +232,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
             <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -313,11 +315,11 @@
             erster Orgel-Virtuosen wiedergebend.</seg></hi></hi></ab>
         </div>
         <div facs="#eSc_textblock_1a33dd7c"><ab><hi rendition="#c">
-            <lb /><hi rendition="#b"><hi rendition="#in"><hi rendition="#in"><hi rendition="#in"><orgName>M. Welte &amp; Söhne G.m.b.H.</orgName></hi></hi></hi></hi>
+            <lb /><hi rendition="#b"><hi rendition="#in"><hi rendition="#in"><hi rendition="#in"><orgName corresp="https://d-nb.info/gnd/5125268-5">M. Welte &amp; Söhne G.m.b.H.</orgName></hi></hi></hi></hi>
             <lb /><seg xml:id="topic_4" ana="#the_original" type="topic" resp="#claude">Gegründet 1832.</seg><lb /><hi rendition="#in"><hi rendition="#in">Freiburg in Baden.</hi></hi>
             <lb />Vertreten an allen grösseren Plätzen der Welt. <seg xml:id="topic_5" ana="#quality" type="topic" resp="#claude">Erprobt in jedem Klima.</seg>
             <lb /><seg xml:id="topic_6" ana="#world_renown" type="topic" resp="#claude">Höchste Auszeichnungen auf allen Weltausstellungen.</seg>
-            <lb /><hi rendition="#in"><hi rendition="#larger">Ausstellung zur Messe</hi></hi> bei <hi rendition="#b"><hi rendition="#in"><hi rendition="#larger"><orgName>Hug &amp; Co.</orgName>,</hi></hi></hi>
+            <lb /><hi rendition="#in"><hi rendition="#larger">Ausstellung zur Messe</hi></hi> bei <hi rendition="#b"><hi rendition="#in"><hi rendition="#larger"><orgName corresp="https://d-nb.info/gnd/5336124-6">Hug &amp; Co.</orgName>,</hi></hi></hi>
             <hi rendition="#larger">Markgrafenstr.10.</hi></hi></ab>
         </div>
         </body>

@@ -6,7 +6,7 @@
                 <title type="main">Ad in "Music Trade Review"</title>
                 <title type="sub">December 6, 1919</title>
                 <author>
-                    <orgName key="m.welte.sons">
+                    <orgName key="m.welte.sons" corresp="https://d-nb.info/gnd/5048495-3">
                         M. Welte &amp; Sons, Inc.
                     </orgName>
                 </author>
@@ -159,7 +159,8 @@
                      Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                      which describes them in a <gi>desc</gi>. Illustrations are
                      described in <gi>figure</gi>. Persons are linked to the GND with
-                     <att>corresp</att>. Recurring arguments and motifs are marked as
+                     <att>corresp</att>; firms are linked to the GND or, where it
+                     has no record of them, to Wikidata. Recurring arguments and motifs are marked as
                      topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
                      pointing to the taxonomy of topics. The taxonomy was induced by
                      Claude in four blind readings of all advertisements, each in a
@@ -220,6 +221,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
             <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -332,7 +334,7 @@
         <div facs="#eSc_textblock_57d5d807">
             <ab><hi rendition="#c">
             <lb />
-            <hi rendition="#in"><hi rendition="#larger"><orgName><hi rendition="#uc">M. Welte &amp; Sons,</hi> <hi rendition="#i">Inc.</hi></orgName></hi></hi>
+            <hi rendition="#in"><hi rendition="#larger"><orgName corresp="https://d-nb.info/gnd/5048495-3"><hi rendition="#uc">M. Welte &amp; Sons,</hi> <hi rendition="#i">Inc.</hi></orgName></hi></hi>
             <lb />
             <address>
                 <addrLine><hi rendition="#uc #g">Six Sixty-Seven Fifth Ave., New York</hi></addrLine>

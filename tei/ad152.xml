@@ -7,7 +7,7 @@
         <title type="main">Ad in "Dagens Nyheter"</title>
         <title type="sub">December 5, 1921</title>
         <author>
-          <orgName key="nk">A/B Nordiska Kompaniet</orgName>
+          <orgName key="nk" corresp="https://d-nb.info/gnd/1248486-6">A/B Nordiska Kompaniet</orgName>
         </author>
         <respStmt>
           <resp>Editor</resp>
@@ -146,7 +146,8 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring arguments and motifs are marked as
+               <att>corresp</att>; firms are linked to the GND or, where it
+               has no record of them, to Wikidata. Recurring arguments and motifs are marked as
                topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
                pointing to the taxonomy of topics. The taxonomy was induced by
                Claude in four blind readings of all advertisements, each in a
@@ -175,6 +176,7 @@
       <langUsage><language ident="sv">Swedish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -212,7 +214,7 @@
         <figure><desc>The monogram "NK" in a circle, the mark of Nordiska Kompaniet</desc></figure>
       </div>
       <div facs="#zone_signature">
-        <ab><hi rendition="#c"><lb/><orgName>A/B NORDISKA KOMPANIET</orgName>
+        <ab><hi rendition="#c"><lb/><orgName corresp="https://d-nb.info/gnd/1248486-6">A/B NORDISKA KOMPANIET</orgName>
           <lb/><hi rendition="#i #smaller">MUSIK-AVD. 3 TR. UPP</hi></hi></ab>
       </div>
     </body>

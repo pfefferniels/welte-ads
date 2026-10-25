@@ -168,6 +168,14 @@
                            advertisement, by which the site groups the
                            advertisements.</desc>
                      </attDef>
+                     <attDef ident="corresp" mode="change">
+                        <desc>the URI of the firm in the Integrated Authority File
+                           (GND), e.g. <val>https://d-nb.info/gnd/2032471-6</val>
+                           (Steinway &amp; Sons), or, where the GND has no record
+                           of it, in Wikidata, e.g.
+                           <val>https://www.wikidata.org/entity/Q5700512</val>
+                           (Heintzman &amp; Co.).</desc>
+                     </attDef>
                   </attList>
                </elementSpec>
                <elementSpec ident="sourceDesc" mode="change">
