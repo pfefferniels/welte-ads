@@ -45,8 +45,6 @@ const Footnote = ({ mark, children }: Props) => {
                 lineHeight: 1.4,
                 maxWidth: 480,
                 p: 1.5,
-                '& p': { m: 0 },
-                '& p + p': { mt: 1 },
               },
             },
           }}>
