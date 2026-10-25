@@ -80,6 +80,33 @@ describe("computeLayout", () => {
     expect(layout.zones.almost.shape).toBeNull()
     expect(layout.zones.l.shape).toEqual([[0, 0], [400, 0], [400, 100], [200, 100], [200, 300], [0, 300]])
   })
+
+  it("turns a zone drawn as a slanted rectangle, its lines along the longer side", () => {
+    // a band from the lower left to the upper right, 500 long and 100 wide
+    const [cos, sin] = [Math.cos(Math.PI / 4), Math.sin(Math.PI / 4)]
+    const band: [number, number][] = [
+      [1000, 1000], [1000 + 500 * cos, 1000 - 500 * sin],
+      [1000 + 500 * cos + 100 * sin, 1000 - 500 * sin + 100 * cos], [1000 + 100 * sin, 1000 + 100 * cos],
+    ]
+    const layout = computeLayout({
+      surfaces: [{ url: "page.png", width: null, height: null }],
+      zones: [
+        { id: "band", surface: 0, points: band },
+        // one sloping side, as an automatic segmentation draws it
+        { id: "sloping", surface: 0, points: [[1765, 1977], [1552, 2511], [2408, 2516], [2408, 1977]] },
+      ],
+    }, 0)
+
+    const { left, top, width, height, rotation } = layout.zones.band
+    expect(width).toBeCloseTo(500)
+    expect(height).toBeCloseTo(100)
+    expect(rotation).toBeCloseTo(-45)
+    // turned about its centre, which stays where the band is
+    const [centreX, centreY] = [1000 + 250 * cos + 50 * sin, 1000 - 250 * sin + 50 * cos]
+    expect(left + width / 2 - layout.surfaces[0].left).toBeCloseTo(centreX - layout.surfaces[0].crop.left)
+    expect(top + height / 2).toBeCloseTo(centreY - layout.surfaces[0].crop.top)
+    expect(layout.zones.sloping).toMatchObject({ rotation: 0, width: 856, height: 539 })
+  })
 })
 
 describe("exclusions", () => {

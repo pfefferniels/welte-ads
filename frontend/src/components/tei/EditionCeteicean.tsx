@@ -434,7 +434,9 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, topics, imageLi
                   height={layout.height}
                   style={{ position: 'absolute', left: 0, top: 0, pointerEvents: 'none' }}>
                   {Object.values(layout.zones).map(zone => (
-                    <g key={zone.id}>
+                    <g key={zone.id} transform={zone.rotation
+                      ? `rotate(${zone.rotation} ${zone.left + zone.width / 2} ${zone.top + zone.height / 2})`
+                      : undefined}>
                       <rect
                         x={zone.left}
                         y={zone.top}

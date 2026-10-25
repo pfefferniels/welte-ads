@@ -361,6 +361,24 @@ tei-lb:before {
     content: none;
 }
 
+/* a picture among the lines of a zone, such as the emblem at the end of a
+   band: a square as high as the zone where the lines begin, its
+   description in the size of a caption */
+.layout .zone.div > tei-figure {
+    float: left;
+    height: 100%;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    margin-right: 0.15em;
+    padding: 0.3em;
+    overflow: hidden;
+    outline: 2px dashed gray;
+    outline-offset: -2px;
+    white-space: normal;
+    font-size: var(--caption);
+    line-height: 1.25;
+}
+
 .layout .zone tei-gap::before {
     content: '[…]';
     border: none;

@@ -49,6 +49,11 @@ export interface PlacedZone extends Rect {
   // text follow it, present only when the zone is noticeably not a rectangle
   shape: Point[] | null
   floats: Floats | null
+  // the angle in degrees (clockwise) of a zone drawn as a slanted
+  // rectangle, along whose longer side the lines run; its left, top, width
+  // and height are those of the rectangle before it is turned about its
+  // centre. 0 for every other zone
+  rotation: number
 }
 
 interface Layout {
@@ -94,6 +99,45 @@ const polygonArea = (points: Point[]) => {
 // around an illustration, for instance) get a shape.
 const isShaped = (points: Point[], box: Rect) =>
   points.length > 4 && polygonArea(points) < 0.93 * box.width * box.height
+
+const degrees = ([x, y]: Point) => Math.atan2(y, x) * 180 / Math.PI
+
+// how far a line is turned from the nearest axis, in degrees
+const tilt = (side: Point) => {
+  const angle = ((degrees(side) % 90) + 90) % 90
+  return Math.min(angle, 90 - angle)
+}
+
+/**
+ * A zone drawn as a rectangle turned by more than a few degrees, such as a
+ * band set diagonally across an advertisement: its centre, its size along
+ * and across its longer side, and the angle of that side, turned so that
+ * the lines read from left to right. Null for any other zone, including
+ * the near-rectangles of an automatic segmentation with one sloping side.
+ */
+function slantedRect(points: Point[], minTilt = 5) {
+  if (points.length !== 4) return null
+  const sides = points.map(([x, y], i) => {
+    const [nextX, nextY] = points[(i + 1) % 4]
+    return [nextX - x, nextY - y] as Point
+  })
+  if (sides.some(side => tilt(side) < minTilt)) return null
+
+  const [a, b, c, d] = sides.map(([x, y]) => Math.hypot(x, y))
+  const similar = (u: number, v: number) => Math.abs(u - v) <= 0.1 * Math.max(u, v)
+  const [first, second] = sides
+  const cos = (first[0] * second[0] + first[1] * second[1]) / (a * b)
+  if (!similar(a, c) || !similar(b, d) || Math.abs(cos) > Math.sin(minTilt * Math.PI / 180)) return null
+
+  const along = a + c >= b + d ? first : second
+  const rotation = degrees(along)
+  return {
+    centre: [points.reduce((sum, [x]) => sum + x, 0) / 4, points.reduce((sum, [, y]) => sum + y, 0) / 4] as Point,
+    width: Math.max(a + c, b + d) / 2,
+    height: Math.min(a + c, b + d) / 2,
+    rotation: rotation > 90 ? rotation - 180 : rotation <= -90 ? rotation + 180 : rotation,
+  }
+}
 
 const union = (rects: Rect[]): Rect => {
   const left = Math.min(...rects.map(r => r.left))
@@ -168,8 +212,20 @@ export function computeLayout(facsimile: Facsimile, margin = 0.03): Layout {
         height: box.height,
         shape: null,
         floats: null,
+        rotation: 0,
       }
-      if (isShaped(zone.points, box)) {
+      const slanted = slantedRect(zone.points)
+      if (slanted) {
+        const [x, y] = slanted.centre
+        Object.assign(zones[zone.id], {
+          left: x - slanted.width / 2 - crop.left + offset,
+          top: y - slanted.height / 2 - crop.top,
+          width: slanted.width,
+          height: slanted.height,
+          rotation: slanted.rotation,
+        })
+      }
+      else if (isShaped(zone.points, box)) {
         const shape = zone.points.map(([x, y]) => [x - box.left, y - box.top] as Point)
         const floats = exclusions(shape, box.width, box.height)
         if (floats) Object.assign(zones[zone.id], { shape, floats })

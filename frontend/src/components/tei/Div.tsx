@@ -129,14 +129,14 @@ const Div = ({ teiNode, availableRoutes, zoneGetter }: TEIProps & WithZoneGetter
     const isPlaceholder = !hasPrintedText(div)
     const ref = useRef<HTMLDivElement>(null)
 
+    // captions and placeholders should not grow to the size of the picture
+    const caption = zone && Math.max(8, Math.min(zone.width / 10, zone.height / 10, zone.pageWidth / 60))
+
     useLayoutEffect(() => {
         const el = ref.current
-        if (!el || !zone) return
+        if (!el || !zone || !caption) return
 
-        // captions and placeholders should not grow to the size of the picture
-        const max = isIllustration || isPlaceholder
-            ? Math.max(8, Math.min(zone.width / 10, zone.height / 10, zone.pageWidth / 60))
-            : Math.max(8, zone.height)
+        const max = isIllustration || isPlaceholder ? caption : Math.max(8, zone.height)
         // descriptions of illustrations and gaps are ours, not printed lines
         const fit = () => fitText(el, zone, max, !isIllustration && !isPlaceholder)
         fit()
@@ -148,7 +148,7 @@ const Div = ({ teiNode, availableRoutes, zoneGetter }: TEIProps & WithZoneGetter
         return () => {
             cancelled = true
         }
-    }, [zone, isIllustration, isPlaceholder])
+    }, [zone, caption, isIllustration, isPlaceholder])
 
     if (!zone) {
         return (
@@ -175,6 +175,9 @@ const Div = ({ teiNode, availableRoutes, zoneGetter }: TEIProps & WithZoneGetter
                     top: zone.top,
                     width: zone.width,
                     height: zone.height,
+                    transform: zone.rotation ? `rotate(${zone.rotation}deg)` : undefined,
+                    // the size of a picture's description among the lines
+                    ['--caption' as string]: `${caption}px`,
                 }}
                 data-zone={zone.id}
                 className={`zone ${isIllustration ? 'illustration' : 'div'} ${div.getAttribute('class') || ''}`}>

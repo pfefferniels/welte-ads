@@ -342,7 +342,8 @@
     <profileDesc>
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
-    <revisionDesc status="unchecked">
+    <revisionDesc status="checked">
+      <change when="2026-10-25" who="#np">Checked against the scan by the editor; the piano bears no monogram.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -361,7 +362,7 @@
   <text decls="#source_1">
     <body>
       <div type="illustration" facs="#zone_piano">
-        <figure><desc>Small drawing of a grand piano in a roundel at the top of the frame; the music desk bears a monogram, not legible on the scan</desc></figure>
+        <figure><desc>Small drawing of a grand piano in a roundel at the top of the frame</desc></figure>
       </div>
       <div facs="#zone_headline">
         <head><hi rendition="#b #larger"><lb/><name type="brand">Welte-</name></hi>
