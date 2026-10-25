@@ -246,7 +246,8 @@
     <profileDesc>
       <langUsage><language ident="es">Spanish</language></langUsage>
     </profileDesc>
-    <revisionDesc status="unchecked">
+    <revisionDesc status="checked">
+      <change when="2026-10-25" who="#np">Checked against the scan by the editor.</change>
       <change when="2026-10-25" who="#claude">The two medals identified and described, with editorial notes on their sources.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
