@@ -61,10 +61,9 @@ named after its first year (e.g. `1915-the-war.md`), and holds only front
 matter: the years it covers (`from`, `to`), its `caption` (the chapter's
 only text, a sentence or two of at most 20 words in Markdown, so that it can
 link, e.g. to a topic; shown on a card while the timeline plays through the
-chapter and, for the places, listed under the map), its `focus` (the places
-by their GeoNames URI, the artists by their GND URI), the `ads` that show it
-(by slug) and, where the caption needs them, its `sources` (`title` and
-`url`). The figures under each chapter of the places are computed. `npm test` fails when chapters
+chapter), its `focus` (the places by their GeoNames URI, the artists by
+their GND URI), the `ads` that show it (by slug) and, where the caption
+needs them, its `sources` (`title` and `url`). `npm test` fails when chapters
 overlap, lie outside the timeline, lack a caption or have a longer one, or
 name an ad, place, artist or topic that the collection does not have.
 

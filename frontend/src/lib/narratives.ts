@@ -4,7 +4,6 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import gfm from 'remark-gfm'
 import html from 'remark-html'
-import type { PlaceEntry } from './registers'
 
 /** A chapter of the story that a timeline tells, as its file gives it. */
 export interface ChapterSource {
@@ -14,8 +13,7 @@ export interface ChapterSource {
   from: number
   to: number
   // the chapter in a sentence or two, as HTML: on the card that shows it
-  // while the timeline plays, short enough to be read in passing, and in
-  // the story under the picture
+  // while the timeline plays, short enough to be read in passing
   caption: string
   // what the chapter is about: places by their GeoNames URI, artists by
   // their GND URI
@@ -74,29 +72,4 @@ export function chapterProblems(chapters: ChapterSource[], first: number, last: 
     chapter.to < chapter.from && `${chapter.id} ends before it begins`,
     i > 0 && chapter.from <= chapters[i - 1].to && `${chapter.id} overlaps ${chapters[i - 1].id}`,
   ].filter((problem): problem is string => Boolean(problem)))
-}
-
-// the year of a printing or an ad: that of its first date
-const yearOf = (dates: string[]) => Number([...dates].sort()[0]?.slice(0, 4))
-
-/** The ads of a chapter, each by the periodical and the year of its first printing. */
-export function adsOf(slugs: string[], ads: { slug: string; dates: string[]; periodicals: { title: string }[] }[]) {
-  return slugs.flatMap(slug => ads.filter(ad => ad.slug === slug)).map(ad => ({
-    slug: ad.slug,
-    periodical: ad.periodicals[0]?.title ?? '',
-    year: yearOf(ad.dates),
-  }))
-}
-
-/** The printings in the years of a chapter, and how many ads and places they are of. */
-export function placeFigures(places: PlaceEntry[], from: number, to: number) {
-  const inYears = places.map(place => place.periodicals
-    .flatMap(periodical => periodical.printings)
-    .filter(printing => from <= yearOf(printing.dates) && yearOf(printing.dates) <= to))
-  const printings = inYears.flat()
-  return {
-    printings: printings.length,
-    ads: new Set(printings.map(printing => printing.ad.slug)).size,
-    places: inYears.filter(list => list.length).length,
-  }
 }

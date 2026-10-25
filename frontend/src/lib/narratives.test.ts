@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { chapterProblems, getChapters, inlineHtml, placeFigures } from "./narratives"
+import { chapterProblems, getChapters, inlineHtml } from "./narratives"
 import type { ChapterSource } from "./narratives"
 import { getArtistRegister, getPlaceRegister } from "./registers"
 import { artistTimelines } from "./artists"
@@ -64,15 +64,5 @@ describe("the chapters of the collection", () => {
     const war = getChapters("places").find(chapter => chapter.id === "the-war")!
     expect(war.caption).toMatch(/^No printing for three years/)
     expect(war.sources[0].url).toMatch(/^https:/)
-  })
-})
-
-describe("placeFigures", () => {
-  it("counts the printings of the years, and their ads and places", () => {
-    const places = getPlaceRegister()
-    expect(placeFigures(places, 1915, 1918)).toEqual({ printings: 15, ads: 7, places: 7 })
-    const all = placeFigures(places, 1900, 1940)
-    expect(all.printings).toBe(places.reduce((sum, place) => sum + place.printings, 0))
-    expect(all.places).toBe(places.length)
   })
 })

@@ -1,8 +1,7 @@
 "use client"
 
 import React from "react"
-import Link from "next/link"
-import { Box, Button, Fade, IconButton, Typography } from "@mui/material"
+import { Box, Button, Fade, IconButton } from "@mui/material"
 import { Close } from "@mui/icons-material"
 
 /** A chapter of the story, as a timeline shows it while it plays. */
@@ -16,50 +15,9 @@ export interface TimelineChapter {
   focus: string[]
 }
 
-/** A chapter of the story, as a timeline and the list under it show it. */
-export interface Chapter extends TimelineChapter {
-  // the figures of the chapter's years, e.g. "15 printings of 7 ads in 7 places"
-  figures: string
-  ads: { slug: string; periodical: string; year: number }[]
-  sources: { title: string; url: string }[]
-}
-
 /** The chapter that a year belongs to, if any. */
 export const chapterAt = <C extends TimelineChapter>(chapters: C[], year: number | null) =>
   year === null ? undefined : chapters.find(chapter => chapter.from <= year && year <= chapter.to)
-
-const yearsOf = (chapter: Chapter) =>
-  chapter.from === chapter.to ? String(chapter.from) : `${chapter.from}–${chapter.to}`
-
-/** The caption of a chapter, its figures, its ads and its sources. */
-const ChapterBody = ({ chapter }: { chapter: Chapter }) => (
-  <>
-    <Box component="p" sx={{ m: 0, mb: 1 }} dangerouslySetInnerHTML={{ __html: chapter.caption }} />
-    <Typography variant="body2" sx={{ color: 'text.secondary' }}>{chapter.figures}</Typography>
-    {chapter.ads.length > 0 && (
-      <Typography variant="body2">
-        Ads:{' '}
-        {chapter.ads.map((ad, i) => (
-          <React.Fragment key={ad.slug}>
-            {i > 0 && '; '}
-            <Link href={`/${ad.slug}`}><i>{ad.periodical}</i>, {ad.year}</Link>
-          </React.Fragment>
-        ))}
-      </Typography>
-    )}
-    {chapter.sources.length > 0 && (
-      <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-        Sources:{' '}
-        {chapter.sources.map((source, i) => (
-          <React.Fragment key={source.url}>
-            {i > 0 && '; '}
-            <a href={source.url}>{source.title}</a>
-          </React.Fragment>
-        ))}
-      </Typography>
-    )}
-  </>
-)
 
 interface StoryCardProps {
   chapter: TimelineChapter
@@ -106,19 +64,4 @@ export const StoryCard = ({ chapter, side = 'left', onHide }: StoryCardProps) =>
 /** Brings the story back once the reader has hidden it. */
 export const ShowStory = ({ onShow }: { onShow: () => void }) => (
   <Button size="small" onClick={onShow} sx={{ mt: 0.5 }}>Show the story</Button>
-)
-
-/** All chapters as text, for reading, citing and finding without the timeline. */
-export const StoryList = ({ chapters }: { chapters: Chapter[] }) => (
-  <Box component="section" sx={{ mb: 3 }}>
-    <Typography variant="h5" component="h2" sx={{ mt: 3, mb: 1 }}>The story</Typography>
-    {chapters.map(chapter => (
-      <Box key={chapter.id} id={`chapter-${chapter.id}`} sx={{ mb: 2, fontSize: '1.1rem' }}>
-        <Typography variant="h6" component="h3" sx={{ lineHeight: 1.3, mb: 0.5 }}>
-          {yearsOf(chapter)}
-        </Typography>
-        <ChapterBody chapter={chapter} />
-      </Box>
-    ))}
-  </Box>
 )

@@ -7,9 +7,7 @@ import { languages } from "../../labels/languages"
 import { formatDate, yearFraction } from "../../lib/dates"
 import { Marker, WorldMap } from "../../components/worldMap"
 import { Initials, Letter, byInitial, count, entryStyle } from "../../components/register"
-import { Chapter, StoryList } from "../../components/narrative"
-import { adsOf, getChapters, placeFigures } from "../../lib/narratives"
-import { getAllMetadata } from "../../lib/tei"
+import { getChapters } from "../../lib/narratives"
 
 export const metadata = {
   title: 'Places',
@@ -143,18 +141,10 @@ export default function PlacesPage() {
   })
   // the story, with the places it is about as the map links them
   const idOf = new Map(places.map(place => [place.ref, place.id]))
-  const ads = getAllMetadata()
-  const chapters: Chapter[] = getChapters('places').map(chapter => {
-    const figures = placeFigures(places, chapter.from, chapter.to)
-    return {
-      ...chapter,
-      focus: chapter.focus.map(ref => `#${idOf.get(ref)}`),
-      figures: figures.printings
-        ? `${printingsOf(figures.printings, figures.ads)} in ${count(figures.places, 'place')}`
-        : 'no printings in the collection',
-      ads: adsOf(chapter.ads, ads),
-    }
-  })
+  const chapters = getChapters('places').map(chapter => ({
+    ...chapter,
+    focus: chapter.focus.map(ref => `#${idOf.get(ref)}`),
+  }))
 
   return (
     <Container component="main" maxWidth="md">
@@ -163,8 +153,6 @@ export default function PlacesPage() {
       <Box id="map" sx={{ scrollMarginTop: '1rem' }}>
         <WorldMap markers={markers} unit="Printings" timeline={timeline} chapters={chapters} groups={groups} />
       </Box>
-
-      <StoryList chapters={chapters} />
 
       <Initials initials={byInitial(places).map(([initial]) => initial)} />
 

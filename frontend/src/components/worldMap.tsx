@@ -5,7 +5,7 @@ import * as d3 from 'd3'
 import { Box, IconButton, Stack, Tooltip } from "@mui/material"
 import { Add, CenterFocusStrong, Remove } from "@mui/icons-material"
 import { Timeline, usePlayback } from "./timeline"
-import { Chapter, ShowStory, StoryCard, chapterAt } from "./narrative"
+import { ShowStory, StoryCard, TimelineChapter, chapterAt } from "./narrative"
 
 export interface Coordinate {
     lat: number
@@ -39,7 +39,7 @@ interface WorldMapProps {
     // shows all years at once only
     timeline?: { year: number; about: string }[]
     // the story that the timeline tells, its focus by the markers' hrefs
-    chapters?: Chapter[]
+    chapters?: TimelineChapter[]
     // the groups that colour the circles, each with its name for the legend
     // and the family that the legend files it under, if any; a circle of no
     // group is black
@@ -68,7 +68,7 @@ const legendValues = (max: number) => {
     return Array.from(new Set([1, middle, top]))
 }
 
-const NO_CHAPTERS: Chapter[] = []
+const NO_CHAPTERS: TimelineChapter[] = []
 const NO_GROUPS: NonNullable<WorldMapProps['groups']> = []
 
 export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS, groups = NO_GROUPS }: WorldMapProps) => {
