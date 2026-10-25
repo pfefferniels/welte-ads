@@ -158,9 +158,9 @@ export default function PlacesPage() {
       <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1, mb: 2 }}>
         A circle&apos;s size shows how many printings appeared in a place, its colour the language
         printed there most often; click it for the place below. Play the years to see where the ads
-        were printed year by year. With the story on, the timeline stops at each chapter and tells
-        what the map shows. The map shows where this collection found ads, and that depends on what
-        is digitised: many Australian, Dutch and Swedish papers are, few German ones.
+        were printed year by year; a card names the chapter of the story, which is told in full below.
+        The map shows where this collection found ads, and that depends on what is digitised: many
+        Australian, Dutch and Swedish papers are, few German ones.
       </Typography>
 
       <StoryList chapters={chapters} />

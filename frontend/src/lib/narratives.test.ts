@@ -6,11 +6,17 @@ import { artistTimelines } from "./artists"
 import { getAllMetadata, getTopics } from "./tei"
 
 const chapter = (id: string, from: number, to: number): ChapterSource =>
-  ({ id, from, to, title: id, html: "<p>Text</p>", focus: [], ads: [], sources: [] })
+  ({ id, from, to, title: id, caption: "A short caption.", html: "<p>Text</p>", focus: [], ads: [], sources: [] })
 
 describe("chapterProblems", () => {
   it("accepts chapters that follow each other within the timeline", () => {
     expect(chapterProblems([chapter("a", 1905, 1908), chapter("b", 1910, 1912)], 1905, 1912)).toEqual([])
+  })
+
+  it("finds chapters without a caption or with one too long to read in passing", () => {
+    const long = { ...chapter("a", 1905, 1908), caption: "word ".repeat(16).trim() }
+    expect(chapterProblems([long, { ...chapter("b", 1909, 1910), caption: "" }], 1905, 1912))
+      .toEqual(["a has a caption of more than 15 words", "b has no caption"])
   })
 
   it("finds chapters that overlap, lie outside the timeline or end before they begin", () => {

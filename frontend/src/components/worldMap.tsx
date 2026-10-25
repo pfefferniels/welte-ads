@@ -53,7 +53,7 @@ const height = 500
 // around it a circle gathers its counts (the width of a Gaussian kernel, in
 // years)
 const RESIZE = 400
-const SPEED = 1 / 1.2
+const SPEED = 0.7
 const SPREAD = 0.3
 
 // the values that the legend shows: 1, the largest round number up to the
@@ -75,7 +75,7 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS, grou
     const zoomRef = useRef<d3.ZoomBehavior<SVGSVGElement, unknown>>(null)
     // the marker pointed at, what it shows and where it is on the map
     const [active, setActive] = useState<{ label: string; about: string; x: number; y: number; r: number } | null>(null)
-    // told, the story stops the timeline at the start of each chapter
+    // told, the story shows the chapter of the time on a card
     const [story, setStory] = useState(true)
     const first = timeline?.[0]?.year ?? 0
     // playing starts at the first thing counted, so that the map is not empty
@@ -83,8 +83,7 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS, grou
         const times = markers.flatMap(marker => marker.times ?? [])
         return times.length ? Math.max(first, Math.min(...times)) : first
     }, [first, markers])
-    const stops = useMemo(() => story ? chapters.map(chapter => Math.max(chapter.from, start)) : [], [story, chapters, start])
-    const playback = usePlayback(first, timeline?.[timeline.length - 1]?.year ?? 0, SPEED, stops, start)
+    const playback = usePlayback(first, timeline?.[timeline.length - 1]?.year ?? 0, SPEED, start)
     const chapter = story ? chapterAt(chapters, playback.year) : undefined
     // sizes the circles for a time, or for all years, once the map is drawn
     const showTimeRef = useRef<(time: number | null) => void>(null)
@@ -256,7 +255,12 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS, grou
                 if (time === null && shown === 'time' && !still) circles.transition().duration(RESIZE).attr("r", d => d.r)
                 else circles.interrupt().attr("r", d => d.r)
                 const mode = time === null ? 'all' : 'time'
-                if (mode !== shown) drawLegend(size, time === null ? maxCount : maxAround, time === null ? unit : `${unit} around the time`)
+                // in a timeline the circles need no legend: they grow and
+                // fade with what happens around the time
+                if (mode !== shown) {
+                    if (time === null) drawLegend(size, maxCount, unit)
+                    else legend.selectAll("*").remove()
+                }
                 shown = mode
                 setActive(null)
             }
@@ -396,7 +400,7 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS, grou
                 </Stack>
             </Box>
             {chapter && (
-                <StoryCard key={`${chapter.id}-${playback.playing}`} chapter={chapter} playing={playback.playing}
+                <StoryCard key={chapter.id} chapter={chapter}
                     onHide={() => setStory(false)} />
             )}
         </Box>

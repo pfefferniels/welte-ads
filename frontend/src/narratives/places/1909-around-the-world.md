@@ -2,6 +2,7 @@
 from: 1909
 to: 1914
 title: Dealers around the world
+caption: "Local dealers advertise it from Los Angeles to Sydney, from Madrid to Batavia."
 focus:
   - https://www.geonames.org/5368361 # Los Angeles
   - https://www.geonames.org/2147714 # Sydney

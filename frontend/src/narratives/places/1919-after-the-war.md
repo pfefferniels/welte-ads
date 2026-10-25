@@ -2,6 +2,7 @@
 from: 1919
 to: 1923
 title: After the war
+caption: "The ads return in the north and in Havana; Welte advertises in Berlin and Petrograd."
 focus:
   - https://www.geonames.org/3553478 # La Habana
   - https://www.geonames.org/3143244 # Kristiania

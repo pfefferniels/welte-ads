@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useMemo, useState } from "react"
+import React, { useState } from "react"
 import { Box } from "@mui/material"
 import { CLOUD_WIDTH, fontSize, namedAround, rateAt } from "../../lib/cloud"
 import type { CloudName } from "../../lib/cloud"
@@ -19,7 +19,7 @@ interface Props {
   chapters: Chapter[]
 }
 
-const SPEED = 1 // how fast the timeline plays, in years per second
+const SPEED = 0.8 // how fast the timeline plays, in years per second
 // the grey of a name that no ad around the time names (138 of 255)
 const MUTED = 138
 
@@ -36,8 +36,7 @@ export default function ArtistsCloud({ names, height, years, h, chapters }: Prop
   const first = years[0].year
   const last = years[years.length - 1].year
   const [story, setStory] = useState(true)
-  const stops = useMemo(() => story ? chapters.map(chapter => chapter.from) : [], [story, chapters])
-  const playback = usePlayback(first, last, SPEED, stops)
+  const playback = usePlayback(first, last, SPEED)
   const { time, year } = playback
   const chapter = story ? chapterAt(chapters, year) : undefined
   const focus = new Set(chapter?.focus)
@@ -111,7 +110,7 @@ export default function ArtistsCloud({ names, height, years, h, chapters }: Prop
           </Box>
         </Box>
         {chapter && (
-          <StoryCard key={`${chapter.id}-${playback.playing}`} chapter={chapter} playing={playback.playing}
+          <StoryCard key={chapter.id} chapter={chapter}
             side={side} onHide={() => setStory(false)} />
         )}
       </Box>

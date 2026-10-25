@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react"
 import { Box, Button, IconButton, Slider, Tooltip } from "@mui/material"
 import { Pause, PlayArrow } from "@mui/icons-material"
 
-const NO_STOPS: number[] = []
 const MONTH = 1 / 12
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
   'August', 'September', 'October', 'November', 'December']
@@ -20,10 +19,9 @@ const monthOf = (time: number) => {
  * null for all years at once, and the year of that time. Playing runs the
  * time on from the start (by default, the start of the first year) to the
  * last month of the last year, frame by frame, at a speed in years per
- * second; it stops at the end and at each of the stops (memoize them, or
- * the frames start anew with every render).
+ * second.
  */
-export function usePlayback(first: number, last: number, speed: number, stops: number[] = NO_STOPS, start = first) {
+export function usePlayback(first: number, last: number, speed: number, start = first) {
   const end = last + 1 - MONTH
   const [time, setTime] = useState<number | null>(null)
   const [playing, setPlaying] = useState(false)
@@ -35,23 +33,18 @@ export function usePlayback(first: number, last: number, speed: number, stops: n
     let frame = 0
     let previous: number | null = null
     const tick = (now: number) => {
-      // the first frame only sets the clock; a frame never goes back, or
-      // the time would cross the stop it waited at once more
+      // the first frame only sets the clock, and a frame never goes back
       const elapsed = previous === null ? 0 : Math.max(0, now - previous)
       previous = now
-      const from = timeRef.current ?? start
-      const to = Math.min(from + elapsed / 1000 * speed, end)
-      // a stop that the time reaches halts it there, as does the end
-      const stop = stops.find(at => from < at && at <= to)
-      const next = stop ?? to
+      const next = Math.min((timeRef.current ?? start) + elapsed / 1000 * speed, end)
       timeRef.current = next
       setTime(next)
-      if (stop !== undefined || next >= end) setPlaying(false)
+      if (next >= end) setPlaying(false)
       else frame = requestAnimationFrame(tick)
     }
     frame = requestAnimationFrame(tick)
     return () => cancelAnimationFrame(frame)
-  }, [playing, start, end, speed, stops])
+  }, [playing, start, end, speed])
 
   const jump = (to: number | null) => {
     timeRef.current = to
@@ -64,13 +57,10 @@ export function usePlayback(first: number, last: number, speed: number, stops: n
     time,
     year: time === null ? null : Math.floor(time),
     playing,
-    // from where it was paused, or else from the start, which may be a
-    // stop itself
+    // from where it was paused, or else from the start
     play: () => {
-      if (time === null || time >= end) {
-        jump(start)
-        setPlaying(!stops.includes(start))
-      } else setPlaying(true)
+      if (time === null || time >= end) jump(start)
+      setPlaying(true)
     },
     pause: () => setPlaying(false),
     // a time, or null for all years
@@ -119,8 +109,15 @@ export const Timeline = ({ playback, about }: TimelineProps) => {
         valueLabelFormat={monthOf}
         getAriaValueText={monthOf}
         onChange={(_, value) => playback.show(value as number)}
-        // with all years shown, the slider waits to be moved
-        sx={{ flex: '1 1 240px', mx: 1, '& .MuiSlider-thumb': { opacity: time === null ? 0.35 : 1 } }}
+        // with all years shown, the slider waits to be moved; while playing,
+        // the thumb follows the time without its own transition, which
+        // would start anew with every frame and never get anywhere
+        sx={{
+          flex: '1 1 240px',
+          mx: 1,
+          '& .MuiSlider-thumb': { opacity: time === null ? 0.35 : 1 },
+          '& .MuiSlider-thumb, & .MuiSlider-track': playing ? { transition: 'none' } : {},
+        }}
       />
       <Box aria-live={playing ? 'off' : 'polite'} sx={{ minWidth: '14rem', fontSize: '1rem' }}>
         <strong>{year ?? 'All years'}</strong>

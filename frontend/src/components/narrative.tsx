@@ -1,8 +1,8 @@
 "use client"
 
-import React, { useState } from "react"
+import React from "react"
 import Link from "next/link"
-import { Box, Button, IconButton, Typography } from "@mui/material"
+import { Box, Button, Fade, IconButton, Typography } from "@mui/material"
 import { Close } from "@mui/icons-material"
 
 /** A chapter of the story, as a timeline shows it. */
@@ -11,6 +11,8 @@ export interface Chapter {
   from: number
   to: number
   title: string
+  // one short sentence, read while the timeline plays
+  caption: string
   // the text, as HTML
   html: string
   // what the chapter is about, as the view knows it ("#place-5128581", a GND URI)
@@ -28,15 +30,10 @@ export const chapterAt = (chapters: Chapter[], year: number | null) =>
 const yearsOf = (chapter: Chapter) =>
   chapter.from === chapter.to ? String(chapter.from) : `${chapter.from}–${chapter.to}`
 
-// the text of a chapter
-const ChapterText = ({ chapter }: { chapter: Chapter }) => (
-  <Box sx={{ '& p': { m: 0, mb: 1 } }} dangerouslySetInnerHTML={{ __html: chapter.html }} />
-)
-
 /** The text of a chapter, its figures, its ads and its sources. */
 const ChapterBody = ({ chapter }: { chapter: Chapter }) => (
   <>
-    <ChapterText chapter={chapter} />
+    <Box sx={{ '& p': { m: 0, mb: 1 } }} dangerouslySetInnerHTML={{ __html: chapter.html }} />
     <Typography variant="body2" sx={{ color: 'text.secondary' }}>{chapter.figures}</Typography>
     {chapter.ads.length > 0 && (
       <Typography variant="body2">
@@ -65,30 +62,25 @@ const ChapterBody = ({ chapter }: { chapter: Chapter }) => (
 
 interface StoryCardProps {
   chapter: Chapter
-  // a card opens while the timeline waits and folds to its title while it
-  // plays; the reader can open or fold it either way
-  playing: boolean
   // the corner of the picture it stands in on a wide screen
   side?: 'left' | 'right'
   onHide: () => void
 }
 
 /**
- * The chapter of the year shown, in a top corner of the picture on a wide
- * screen and below it on a narrower one; its ads and sources are in
- * the list of chapters. Give it a key of the chapter and whether the
- * timeline plays, so that it opens and folds with them.
+ * The chapter of the time shown, in a top corner of the picture on a wide
+ * screen and below it on a narrower one: its title and caption, short
+ * enough to be read while the timeline plays on, and a link to its text in
+ * the list of chapters. Give it the chapter's id as a key, so that it fades
+ * in anew with each chapter.
  */
-export const StoryCard = ({ chapter, playing, side = 'left', onHide }: StoryCardProps) => {
-  const [open, setOpen] = useState(!playing)
-  return (
-    <Box component="section" aria-label="Story" sx={{
+export const StoryCard = ({ chapter, side = 'left', onHide }: StoryCardProps) => (
+  <Fade in timeout={500}>
+    <Box component="section" aria-label="Story" aria-live="polite" sx={{
       position: { xs: 'static', md: 'absolute' },
       top: { md: 60 },
       [side]: { md: 4 },
       width: { md: '24%' },
-      maxHeight: { md: 'calc(100% - 64px)' },
-      overflowY: 'auto',
       mt: { xs: 1, md: 0 },
       px: 1.5,
       py: 1,
@@ -102,30 +94,17 @@ export const StoryCard = ({ chapter, playing, side = 'left', onHide }: StoryCard
       zIndex: 1,
     }}>
       <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 0.5 }}>
-        <Box component="button" aria-expanded={open} onClick={() => setOpen(!open)} sx={{
-          all: 'unset',
-          flex: 1,
-          cursor: 'pointer',
-          fontWeight: 600,
-          '&:focus-visible': { outline: '2px solid', outlineOffset: 2 },
-        }}>
-          {yearsOf(chapter)} · {chapter.title}
-        </Box>
+        <Box sx={{ flex: 1, fontWeight: 600 }}>{yearsOf(chapter)} · {chapter.title}</Box>
         <IconButton size="small" aria-label="Hide the story" title="Hide the story" onClick={onHide} sx={{ mt: -0.5, mr: -0.75 }}>
           <Close fontSize="small" />
         </IconButton>
       </Box>
-      {open && (
-        <Box sx={{ mt: 0.5 }}>
-          <ChapterText chapter={chapter} />
-          <Box sx={{ color: 'text.secondary' }}>
-            {chapter.figures} · <a href={`#chapter-${chapter.id}`}>ads and sources</a>
-          </Box>
-        </Box>
-      )}
+      <Box sx={{ mt: 0.5 }}>
+        {chapter.caption} <a href={`#chapter-${chapter.id}`}>More</a>
+      </Box>
     </Box>
-  )
-}
+  </Fade>
+)
 
 /** Brings the story back once the reader has hidden it. */
 export const ShowStory = ({ onShow }: { onShow: () => void }) => (
