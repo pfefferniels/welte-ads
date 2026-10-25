@@ -31,7 +31,7 @@ export default function HomePage() {
   const ads = getAllMetadata()
   const printings = ads.flatMap(ad => ad.dates)
   const years = printings.map(date => Number(date.slice(0, 4)))
-  const size = `At present, the collection holds ${ads.length} advertisements `
+  const size = `At present, the collection holds <a href="/overview/">${ads.length} advertisements</a> `
     + `in ${printings.length} printings from ${Math.min(...years)} to ${Math.max(...years)}.`
   const html = getMarkdownContent('introduction.md').html.replace('{{size}}', size)
 
