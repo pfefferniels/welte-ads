@@ -17,9 +17,3 @@ sources:
   - title: Welte-Mignon (Licensee) (Mechanical Music Digest)
     url: https://www.mmdigest.com/Pictures/Welte/Hist/licensee1.html
 ---
-For three years, from May 1914 to May 1917, the collection holds no
-printing at all. When ads return, they come from outside the fighting in
-Europe: Havana in 1917, then the neutral Netherlands, Switzerland and
-Norway in 1918. The Freiburg firm lost its American company in the war,
-which was seized as enemy property after the United States entered it in
-1917.

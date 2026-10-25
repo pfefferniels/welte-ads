@@ -13,11 +13,10 @@ export interface ChapterSource {
   // the first and the last year of the chapter
   from: number
   to: number
-  // one short sentence for the card that shows the chapter while the
-  // timeline plays, short enough to be read in passing
+  // the chapter in one short sentence, as HTML: on the card that shows it
+  // while the timeline plays, short enough to be read in passing, and in
+  // the story under the picture
   caption: string
-  // the text, as HTML
-  html: string
   // what the chapter is about: places by their GeoNames URI, artists by
   // their GND URI
   focus: string[]
@@ -29,21 +28,24 @@ export interface ChapterSource {
 
 type View = 'places' | 'artists'
 
+/** Markdown of a single sentence as HTML, without a paragraph around it. */
+export const inlineHtml = (markdown: string) =>
+  remark().use(gfm).use(html).processSync(markdown).toString().trim().replace(/^<p>([\s\S]*)<\/p>$/, '$1')
+
 /**
  * The chapters of the story of a view, in the order of their years: one
- * Markdown file each in src/narratives/<view>/, its years, caption, focus,
- * ads and sources in the front matter.
+ * Markdown file each in src/narratives/<view>/, its years, caption (in
+ * Markdown, so that it can link), focus, ads and sources in the front matter.
  */
 export function getChapters(view: View): ChapterSource[] {
   const dir = path.join(process.cwd(), 'src', 'narratives', view)
   return fs.readdirSync(dir).filter(file => file.endsWith('.md')).map(file => {
-    const { data, content } = matter(fs.readFileSync(path.join(dir, file), 'utf8'))
+    const { data } = matter(fs.readFileSync(path.join(dir, file), 'utf8'))
     return {
       id: file.replace(/^\d+-/, '').replace(/\.md$/, ''),
       from: Number(data.from),
       to: Number(data.to),
-      caption: String(data.caption ?? ''),
-      html: remark().use(gfm).use(html).processSync(content).toString(),
+      caption: inlineHtml(String(data.caption ?? '')),
       focus: data.focus ?? [],
       ads: data.ads ?? [],
       sources: data.sources ?? [],
@@ -55,17 +57,19 @@ export function getChapters(view: View): ChapterSource[] {
 // timeline plays on
 const CAPTION_WORDS = 15
 
+// the words of a caption, without the markup of its links
+const wordsOf = (caption: string) => caption.replace(/<[^>]*>/g, '').trim().split(/\s+/).length
+
 /**
  * What is wrong with the chapters of a timeline from the first year to the
- * last: chapters without a caption or text, with a caption too long
+ * last: chapters without a caption, with a caption too long
  * to be read in passing, outside the timeline, ending before they begin,
  * or overlapping the one before.
  */
 export function chapterProblems(chapters: ChapterSource[], first: number, last: number): string[] {
   return chapters.flatMap((chapter, i) => [
     !chapter.caption && `${chapter.id} has no caption`,
-    chapter.caption.split(/\s+/).length > CAPTION_WORDS && `${chapter.id} has a caption of more than ${CAPTION_WORDS} words`,
-    !chapter.html.trim() && `${chapter.id} has no text`,
+    wordsOf(chapter.caption) > CAPTION_WORDS && `${chapter.id} has a caption of more than ${CAPTION_WORDS} words`,
     (chapter.from < first || chapter.to > last) && `${chapter.id} lies outside ${first}–${last}`,
     chapter.to < chapter.from && `${chapter.id} ends before it begins`,
     i > 0 && chapter.from <= chapters[i - 1].to && `${chapter.id} overlaps ${chapters[i - 1].id}`,

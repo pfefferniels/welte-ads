@@ -1,12 +1,12 @@
 import { describe, expect, it } from "vitest"
-import { chapterProblems, getChapters, placeFigures } from "./narratives"
+import { chapterProblems, getChapters, inlineHtml, placeFigures } from "./narratives"
 import type { ChapterSource } from "./narratives"
 import { getArtistRegister, getPlaceRegister } from "./registers"
 import { artistTimelines } from "./artists"
 import { getAllMetadata, getTopics } from "./tei"
 
 const chapter = (id: string, from: number, to: number): ChapterSource =>
-  ({ id, from, to, caption: "A short caption.", html: "<p>Text</p>", focus: [], ads: [], sources: [] })
+  ({ id, from, to, caption: "A short caption.", focus: [], ads: [], sources: [] })
 
 describe("chapterProblems", () => {
   it("accepts chapters that follow each other within the timeline", () => {
@@ -17,6 +17,11 @@ describe("chapterProblems", () => {
     const long = { ...chapter("a", 1905, 1908), caption: "word ".repeat(16).trim() }
     expect(chapterProblems([long, { ...chapter("b", 1909, 1910), caption: "" }], 1905, 1912))
       .toEqual(["a has a caption of more than 15 words", "b has no caption"])
+  })
+
+  it("counts the words of a caption, not the markup of its links", () => {
+    const linked = { ...chapter("a", 1905, 1908), caption: inlineHtml(`${"word ".repeat(14)}[word](/topic/immortality/)`) }
+    expect(chapterProblems([linked], 1905, 1912)).toEqual([])
   })
 
   it("finds chapters that overlap, lie outside the timeline or end before they begin", () => {
@@ -48,14 +53,16 @@ describe("the chapters of the collection", () => {
       expect(chapters.flatMap(chapter => chapter.ads.filter(slug => !slugs.has(slug)))).toEqual([])
       expect(chapters.flatMap(chapter => chapter.focus.filter(key => !keys.has(key)))).toEqual([])
       const topics = getTopics()
-      const linked = chapters.flatMap(chapter => Array.from(chapter.html.matchAll(/href="\/topic\/([^/"]+)\/?"/g), match => match[1]))
+      const linked = chapters.flatMap(chapter => Array.from(chapter.caption.matchAll(/href="\/topic\/([^/"]+)\/?"/g), match => match[1]))
       expect(linked.filter(topic => !topics[`#${topic}`])).toEqual([])
     })
   }
 
-  it("render the Markdown of the text", () => {
+  it("render the Markdown of the caption, and give the sources", () => {
+    expect(inlineHtml("The ads promise [immortality](/topic/immortality/)."))
+      .toBe('The ads promise <a href="/topic/immortality/">immortality</a>.')
     const war = getChapters("places").find(chapter => chapter.id === "the-war")!
-    expect(war.html).toMatch(/^<p>For three years/)
+    expect(war.caption).toMatch(/^No printing for three years/)
     expect(war.sources[0].url).toMatch(/^https:/)
   })
 })

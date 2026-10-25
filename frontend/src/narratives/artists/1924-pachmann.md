@@ -13,8 +13,3 @@ sources:
   - title: Pachmann, Vladimir de (Encyclopedia.com)
     url: https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/pachmann-vladimir-de
 ---
-In the mid-1920s Vladimir de Pachmann becomes the second name after
-Paderewski; he made his last American tour in 1925. Most of these
-mentions come from long lists that the American licensee printed in the
-magazine *Singing*: one ad of June 1926 names 32 artists. They bring new
-names, among them Gieseking and Casella.

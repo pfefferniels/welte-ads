@@ -57,16 +57,16 @@ zones), and open the page with `?debug` (`npm run dev`, then
 The timelines of the places map and of the artists cloud tell a story in
 chapters. Each chapter is a Markdown file in
 `frontend/src/narratives/places/` or `frontend/src/narratives/artists/`,
-named after its first year (e.g. `1915-the-war.md`). Its front matter gives
-the years it covers (`from`, `to`), its `caption` (one sentence
-of at most 15 words, shown on a card while the timeline plays through the
-chapter), its `focus` (the places by their GeoNames URI, the artists by
-their GND URI), the `ads` that show it (by slug) and, where the text
-explains, its `sources` (`title` and `url`). The text below the front
-matter is the chapter in full, listed under the picture; the figures under
-it are computed. `npm test` fails when chapters overlap, lie outside the
-timeline, lack a caption or have a longer one, or name an ad, place, artist
-or topic that the collection does not have.
+named after its first year (e.g. `1915-the-war.md`), and holds only front
+matter: the years it covers (`from`, `to`), its `caption` (the chapter's
+only text, one sentence of at most 15 words in Markdown, so that it can
+link, e.g. to a topic; shown on a card while the timeline plays through the
+chapter and listed under the picture), its `focus` (the places by their
+GeoNames URI, the artists by their GND URI), the `ads` that show it (by
+slug) and, where the caption needs them, its `sources` (`title` and `url`).
+The figures under each chapter are computed. `npm test` fails when chapters
+overlap, lie outside the timeline, lack a caption or have a longer one, or
+name an ad, place, artist or topic that the collection does not have.
 
 ## Releases
 

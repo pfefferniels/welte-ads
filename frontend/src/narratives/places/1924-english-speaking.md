@@ -14,8 +14,3 @@ sources:
   - title: Welte-Mignon (Licensee) (Mechanical Music Digest)
     url: https://www.mmdigest.com/Pictures/Welte/Hist/licensee1.html
 ---
-In the mid-1920s the centre moves to the English-speaking world. In the
-United States, the Auto Pneumatic Action Company sold the Welte system
-under licence and advertised it from 1924, first in the *Atlantic
-Monthly* and later in *Vanity Fair*, *Vogue* and *House & Garden*.
-Dealers in Toronto, Montréal, Melbourne and Perth followed.
