@@ -5,6 +5,7 @@ import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
 import { getAllAds, getAdBySlug, getTopics } from "../../lib/tei"
 import { names } from "../../labels/names"
+import { authorityOf } from "../../lib/anchors"
 import { EDITOR } from "../../lib/site"
 import { currentRelease } from "../../lib/release"
 import EditionCeteicean from "../../components/tei/EditionCeteicean"
@@ -42,7 +43,9 @@ export default async function AdPage({ params }: { params: Promise<{ slug: strin
           {ad.title}
         </Typography>
         <Typography variant="subtitle1" component="p" sx={{ lineHeight: 1.4 }}>
-          {company} · {ad.titleMain}, {ad.titleSub}
+          {ad.company.uri
+            ? <a href={ad.company.uri} title={authorityOf(ad.company.uri) ?? undefined}>{company}</a>
+            : company} · {ad.titleMain}, {ad.titleSub}
         </Typography>
         <Typography variant="body2" component="p" sx={{ mt: 1, color: 'text.secondary' }}>
           {contributors.map((c, i) => (

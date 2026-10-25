@@ -336,7 +336,8 @@ interface Contributor {
 
 interface AdMetadata {
   slug: string
-  company: { name: string; link: string }
+  // the seller by its key, and its authority record (GND or Wikidata), if any
+  company: { name: string; uri: string }
   title: string
   // the title and subtitle of the TEI file: where and when the ad appeared
   titleMain: string
@@ -375,9 +376,10 @@ export function extractMetadata(xmlString: string): Omit<AdMetadata, 'slug'> {
   const dom = new JSDOM(xmlString, { contentType: 'text/xml' })
   const doc = dom.window.document
 
+  const seller = doc.querySelector('orgName[key]')
   const company = {
-    name: doc.querySelector('orgName[key]')?.getAttribute('key') || '',
-    link: doc.querySelector('pubPlace[ref]')?.getAttribute('ref') || '',
+    name: seller?.getAttribute('key') || '',
+    uri: (seller?.getAttribute('corresp') || '').trim(),
   }
   const text = (selector: string) =>
     (doc.querySelector(selector)?.textContent || '').replace(/\s+/g, ' ').trim()

@@ -1,6 +1,14 @@
 // the prefix of the URIs of the GND, the authority file of the German National Library
 export const GND = 'https://d-nb.info/gnd/'
 
+// the prefix of the URIs of Wikidata, the authority for what the GND does not know
+const WIKIDATA = 'https://www.wikidata.org/entity/'
+
+/** The name of the authority file that a URI points into: "GND", "Wikidata" or none. */
+export function authorityOf(uri: string): string | null {
+  return uri.startsWith(GND) ? 'GND' : uri.startsWith(WIKIDATA) ? 'Wikidata' : null
+}
+
 // any run of characters that are neither letters nor digits
 const SEPARATORS = new RegExp('[^\\p{L}\\p{N}]+', 'gu')
 

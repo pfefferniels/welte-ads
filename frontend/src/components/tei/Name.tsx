@@ -3,7 +3,7 @@ import { Behavior } from "./Behavior"
 import { TEINodes } from "react-teirouter"
 import { Popover } from "@mui/material"
 import { names } from "../../labels/names"
-import { GND, artistLink } from "../../lib/anchors"
+import { GND, artistLink, authorityOf } from "../../lib/anchors"
 
 interface TEIProps {
   teiNode: Node
@@ -54,9 +54,9 @@ const Name = ({ teiNode, availableRoutes }: TEIProps) => {
         }}
       >
         <div style={{ padding: '1rem' }}>
-          {target.startsWith(GND)
-            ? <a href={target} style={{ textDecoration: 'none' }}>→ GND</a>
-            : <i color='gray'>no GND link</i>
+          {authorityOf(target)
+            ? <a href={target} style={{ textDecoration: 'none' }}>→ {authorityOf(target)}</a>
+            : <i color='gray'>no authority link</i>
           }
           {isArtist && (
             <div>
