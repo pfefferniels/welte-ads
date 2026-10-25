@@ -1,7 +1,6 @@
 ---
 from: 1914
 to: 1923
-title: Names that outlive their bearers
 caption: "Daggers spread through the cloud, but the ads keep the names of the dead."
 focus:
   - https://d-nb.info/gnd/118697641 # Grieg

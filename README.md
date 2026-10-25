@@ -56,7 +56,7 @@ The timelines of the places map and of the artists cloud tell a story in
 chapters. Each chapter is a Markdown file in
 `frontend/src/narratives/places/` or `frontend/src/narratives/artists/`,
 named after its first year (e.g. `1915-the-war.md`). Its front matter gives
-the years it covers (`from`, `to`), its `title`, its `caption` (one sentence
+the years it covers (`from`, `to`), its `caption` (one sentence
 of at most 15 words, shown on a card while the timeline plays through the
 chapter), its `focus` (the places by their GeoNames URI, the artists by
 their GND URI), the `ads` that show it (by slug) and, where the text

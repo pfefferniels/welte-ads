@@ -6,7 +6,7 @@ import { artistTimelines } from "./artists"
 import { getAllMetadata, getTopics } from "./tei"
 
 const chapter = (id: string, from: number, to: number): ChapterSource =>
-  ({ id, from, to, title: id, caption: "A short caption.", html: "<p>Text</p>", focus: [], ads: [], sources: [] })
+  ({ id, from, to, caption: "A short caption.", html: "<p>Text</p>", focus: [], ads: [], sources: [] })
 
 describe("chapterProblems", () => {
   it("accepts chapters that follow each other within the timeline", () => {

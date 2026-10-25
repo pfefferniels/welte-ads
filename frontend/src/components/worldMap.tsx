@@ -40,9 +40,10 @@ interface WorldMapProps {
     timeline?: { year: number; about: string }[]
     // the story that the timeline tells, its focus by the markers' hrefs
     chapters?: Chapter[]
-    // the groups that colour the circles, each with its name for the legend;
-    // a circle of no group is black
-    groups?: { key: string; label: string; color: string }[]
+    // the groups that colour the circles, each with its name for the legend
+    // and the family that the legend files it under, if any; a circle of no
+    // group is black
+    groups?: { key: string; label: string; color: string; family?: string }[]
 }
 
 const width = 900
@@ -312,6 +313,14 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS, grou
         d3.select(svgRef.current).transition().duration(300).call(zoomRef.current.scaleBy, factor)
     }
 
+    // the groups of the legend, those of a family together
+    const families = groups.reduce<{ family?: string; members: typeof groups }[]>((list, group) => {
+        const previous = list[list.length - 1]
+        if (group.family && previous?.family === group.family) previous.members.push(group)
+        else list.push({ family: group.family, members: [group] })
+        return list
+    }, [])
+
     const resetZoom = () => {
         if (!svgRef.current || !zoomRef.current) return
         d3.select(svgRef.current).transition().duration(300).call(zoomRef.current.transform, d3.zoomIdentity)
@@ -409,13 +418,18 @@ export const WorldMap = ({ markers, unit, timeline, chapters = NO_CHAPTERS, grou
                 display: 'flex', flexWrap: 'wrap', gap: '0.25rem 1rem',
                 listStyle: 'none', p: 0, m: 0, mt: 0.5, fontSize: '0.95rem',
             }}>
-                {groups.map(group => (
-                    <Box component="li" key={group.key} sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                        <Box component="span" aria-hidden="true" sx={{
-                            width: 12, height: 12, borderRadius: '50%', border: 1,
-                            borderColor: group.color, backgroundColor: group.color, opacity: 0.75,
-                        }} />
-                        {group.label}
+                {families.map(({ family, members }) => (
+                    <Box component="li" key={members[0].key} sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                        {family && <Box component="span" sx={{ color: 'text.secondary' }}>{family}:</Box>}
+                        {members.map(group => (
+                            <React.Fragment key={group.key}>
+                                <Box component="span" aria-hidden="true" sx={{
+                                    width: 12, height: 12, borderRadius: '50%', border: 1, ml: family ? 0.25 : 0,
+                                    borderColor: group.color, backgroundColor: group.color, opacity: 0.75,
+                                }} />
+                                {group.label}
+                            </React.Fragment>
+                        ))}
                     </Box>
                 ))}
             </Box>

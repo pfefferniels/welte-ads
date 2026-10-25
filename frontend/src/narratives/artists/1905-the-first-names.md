@@ -1,7 +1,6 @@
 ---
 from: 1905
 to: 1913
-title: The first names
 caption: "The early ads are lists of famous names, led by Paderewski, Carreño and d'Albert."
 focus:
   - https://d-nb.info/gnd/118986724 # Paderewski

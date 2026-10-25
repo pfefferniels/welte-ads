@@ -10,7 +10,6 @@ export interface Chapter {
   id: string
   from: number
   to: number
-  title: string
   // one short sentence, read while the timeline plays
   caption: string
   // the text, as HTML
@@ -69,9 +68,9 @@ interface StoryCardProps {
 
 /**
  * The chapter of the time shown, in a top corner of the picture on a wide
- * screen and below it on a narrower one: its title and caption, short
- * enough to be read while the timeline plays on, and a link to its text in
- * the list of chapters. Give it the chapter's id as a key, so that it fades
+ * screen and below it on a narrower one: its caption, short enough to be
+ * read while the timeline plays on, and a link to its text in the list of
+ * chapters. Give it the chapter's id as a key, so that it fades
  * in anew with each chapter.
  */
 export const StoryCard = ({ chapter, side = 'left', onHide }: StoryCardProps) => (
@@ -94,13 +93,12 @@ export const StoryCard = ({ chapter, side = 'left', onHide }: StoryCardProps) =>
       zIndex: 1,
     }}>
       <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 0.5 }}>
-        <Box sx={{ flex: 1, fontWeight: 600 }}>{yearsOf(chapter)} · {chapter.title}</Box>
+        <Box sx={{ flex: 1 }}>
+          {chapter.caption} <a href={`#chapter-${chapter.id}`}>More</a>
+        </Box>
         <IconButton size="small" aria-label="Hide the story" title="Hide the story" onClick={onHide} sx={{ mt: -0.5, mr: -0.75 }}>
           <Close fontSize="small" />
         </IconButton>
-      </Box>
-      <Box sx={{ mt: 0.5 }}>
-        {chapter.caption} <a href={`#chapter-${chapter.id}`}>More</a>
       </Box>
     </Box>
   </Fade>
@@ -118,7 +116,7 @@ export const StoryList = ({ chapters }: { chapters: Chapter[] }) => (
     {chapters.map(chapter => (
       <Box key={chapter.id} id={`chapter-${chapter.id}`} sx={{ mb: 2, fontSize: '1.1rem' }}>
         <Typography variant="h6" component="h3" sx={{ lineHeight: 1.3, mb: 0.5 }}>
-          {yearsOf(chapter)} · {chapter.title}
+          {yearsOf(chapter)}
         </Typography>
         <ChapterBody chapter={chapter} />
       </Box>

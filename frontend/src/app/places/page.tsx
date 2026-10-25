@@ -33,17 +33,25 @@ const andList = (items: string[]) =>
 // "in English and French"
 const inLanguages = (codes: string[]) => `in ${andList(codes.map(code => languages[code] ?? code))}`
 
-// The languages printed most often have a colour each; the others share a
-// grey. On a map any two circles may meet, and no more than three colours
-// stay apart for every pair, also for readers with a colour vision deficiency.
-const COLOURED = [
-  { key: 'en', color: '#2a78d6' },
-  { key: 'de', color: '#eb6834' },
-  { key: 'nl', color: '#1baf7a' },
+// A colour for every language, in the order of the legend: English, German
+// and Dutch each a hue of its own, the other languages a hue for their
+// family and a shade each. Twelve colours cannot all stay apart wherever
+// circles meet, so the shades were chosen for the languages of places that
+// lie near each other: there, every pair stays apart also for readers with a
+// colour vision deficiency (OKLab ΔE ≥ 8 under protan and deutan), and the
+// families stay apart for everyone (ΔE ≥ 15). Shades of a family whose
+// places lie far apart are closer (Portuguese and Catalan); the legend,
+// the tooltips and the entries below name every language.
+const FAMILIES = [
+  { family: undefined, members: [['en', '#2a78d6']] },
+  { family: undefined, members: [['de', '#eb6834']] },
+  { family: undefined, members: [['nl', '#1baf7a']] },
+  { family: 'Scandinavian', members: [['sv', '#5c34a8'], ['da', '#a872fd'], ['no', '#a8a5ff']] },
+  { family: 'Romance', members: [['es', '#8b2947'], ['fr', '#ff7dbe'], ['pt', '#ae2288'], ['ca', '#dd4a9e']] },
+  { family: 'Slavic', members: [['pl', '#cbb04a'], ['ru', '#856200']] },
 ]
-const OTHER = 'other'
-// the colour group of the languages of a place: that of the most frequent
-const groupOf = (codes: string[]) => COLOURED.some(({ key }) => key === codes[0]) ? codes[0] : OTHER
+// the colour group of the languages of a place: its most frequent language
+const groupOf = (codes: string[]) => codes[0]
 
 const subheading = { fontWeight: 600, mt: 1.5, mb: 0.5 }
 const list = { m: 0, pl: 2.5, fontSize: '1rem', listStyleType: 'disc', '& li': { mb: 0.25 } }
@@ -117,11 +125,11 @@ export default function PlacesPage() {
       group: groupOf(languages),
     })),
   }] : [])
-  const others = new Set(places.flatMap(place => place.languages).filter(code => groupOf([code]) === OTHER))
-  const groups = [
-    ...COLOURED.map(({ key, color }) => ({ key, label: languages[key], color })),
-    { key: OTHER, label: `the ${others.size} other languages`, color: '#8a8a8a' },
-  ]
+  // the legend names the languages that colour a circle
+  const shown = new Set(places.flatMap(place => [groupOf(place.languages), ...place.years.map(year => groupOf(year.languages))]))
+  const groups = FAMILIES.flatMap(({ family, members }) => members
+    .filter(([key]) => shown.has(key))
+    .map(([key, color]) => ({ key, label: languages[key], color, family })))
   // every year from the first printing to the last, those without any too
   const years = places.flatMap(place => place.years.map(({ year }) => year))
   const first = Math.min(...years)

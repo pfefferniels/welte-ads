@@ -13,7 +13,6 @@ export interface ChapterSource {
   // the first and the last year of the chapter
   from: number
   to: number
-  title: string
   // one short sentence for the card that shows the chapter while the
   // timeline plays, short enough to be read in passing
   caption: string
@@ -32,8 +31,8 @@ type View = 'places' | 'artists'
 
 /**
  * The chapters of the story of a view, in the order of their years: one
- * Markdown file each in src/narratives/<view>/, its years, title, caption,
- * focus, ads and sources in the front matter.
+ * Markdown file each in src/narratives/<view>/, its years, caption, focus,
+ * ads and sources in the front matter.
  */
 export function getChapters(view: View): ChapterSource[] {
   const dir = path.join(process.cwd(), 'src', 'narratives', view)
@@ -43,7 +42,6 @@ export function getChapters(view: View): ChapterSource[] {
       id: file.replace(/^\d+-/, '').replace(/\.md$/, ''),
       from: Number(data.from),
       to: Number(data.to),
-      title: String(data.title ?? ''),
       caption: String(data.caption ?? ''),
       html: remark().use(gfm).use(html).processSync(content).toString(),
       focus: data.focus ?? [],
@@ -59,13 +57,12 @@ const CAPTION_WORDS = 15
 
 /**
  * What is wrong with the chapters of a timeline from the first year to the
- * last: chapters without a title, caption or text, with a caption too long
+ * last: chapters without a caption or text, with a caption too long
  * to be read in passing, outside the timeline, ending before they begin,
  * or overlapping the one before.
  */
 export function chapterProblems(chapters: ChapterSource[], first: number, last: number): string[] {
   return chapters.flatMap((chapter, i) => [
-    !chapter.title && `${chapter.id} has no title`,
     !chapter.caption && `${chapter.id} has no caption`,
     chapter.caption.split(/\s+/).length > CAPTION_WORDS && `${chapter.id} has a caption of more than ${CAPTION_WORDS} words`,
     !chapter.html.trim() && `${chapter.id} has no text`,

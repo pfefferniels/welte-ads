@@ -1,7 +1,6 @@
 ---
 from: 1924
 to: 1927
-title: The English-speaking peak
 caption: "The American licensee and dealers in Canada and Australia take the lead."
 focus:
   - https://www.geonames.org/5128581 # New York

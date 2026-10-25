@@ -1,7 +1,6 @@
 ---
 from: 1905
 to: 1908
-title: From Munich to the north and east
 caption: "The first ads appear in Munich, then in Poznań, Riga, Stockholm, Kristiania and St Petersburg."
 focus:
   - https://www.geonames.org/2867714 # München

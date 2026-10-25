@@ -1,7 +1,6 @@
 ---
 from: 1924
 to: 1929
-title: Pachmann and the New York lists
 caption: "Pachmann follows Paderewski; long New York lists bring new names like Gieseking."
 focus:
   - https://d-nb.info/gnd/116014490 # Pachmann

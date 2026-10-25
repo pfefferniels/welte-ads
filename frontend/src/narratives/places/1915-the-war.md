@@ -1,7 +1,6 @@
 ---
 from: 1915
 to: 1918
-title: The war
 caption: "No printing for three years; then only Havana and the neutral countries."
 focus:
   - https://www.geonames.org/3553478 # La Habana

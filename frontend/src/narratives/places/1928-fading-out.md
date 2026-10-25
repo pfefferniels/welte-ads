@@ -1,7 +1,6 @@
 ---
 from: 1928
 to: 1930
-title: Fading out
 caption: "The ads thin out; the last printing appears in Sydney in July 1930."
 focus:
   - https://www.geonames.org/2147714 # Sydney
