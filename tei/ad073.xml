@@ -332,6 +332,7 @@
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
         <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
         <rendition xml:id="right" scheme="css">text-align: right;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
@@ -362,6 +363,7 @@
       <langUsage><language ident="nl">Dutch</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
       <change when="2026-10-20" who="#claude">Merged with the former ad074 (Bataviaasch Nieuwsblad, October 7 and 10, 1911, a new setting of the same text); its printings are further sources, its readings are recorded with app.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
@@ -390,9 +392,9 @@
           <lb/><name type="brand"><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">WELTE-MIGNON</rdg><rdg source="#source_6 #source_7">Welte Mignon</rdg></app></name>.</hi></head>
       </div>
       <div facs="#zone_text">
-        <p><hi rendition="#b #smaller"><lb/>Dit is <seg xml:id="topic_1" ana="#superlatives #epoch_making_invention" type="topic" resp="#claude">het fraaiste, beste en nieuwste instrument</seg><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5"/><rdg source="#source_6 #source_7">,</rdg></app> dat tot heden op dat gebied in den
+        <p rendition="#j"><hi rendition="#b #smaller"><lb/>Dit is <seg xml:id="topic_1" ana="#superlatives #epoch_making_invention" type="topic" resp="#claude">het fraaiste, beste en nieuwste instrument</seg><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5"/><rdg source="#source_6 #source_7">,</rdg></app> dat tot heden op dat gebied in den
           <lb/>handel <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">is</rdg><rdg source="#source_6 #source_7"/></app> gebracht en <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">werd</rdg><rdg source="#source_6 #source_7"/></app> nog niet op <placeName>Java</placeName> <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">geïmporteerd</rdg><rdg source="#source_6 #source_7">geimporteerd is</rdg></app>.</hi></p>
-        <p><hi rendition="#b #smaller"><lb/><seg xml:id="topic_2" ana="#satisfied_owners" type="topic" resp="#claude">Het eerste exemplaar door mij nu verkocht aan een <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">administrateur</rdg><rdg source="#source_6 #source_7">Administrateur</rdg></app> in de <placeName>Preanger</placeName></seg><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">,</rdg><rdg source="#source_6 #source_7"/></app>
+        <p rendition="#j"><hi rendition="#b #smaller"><lb/><seg xml:id="topic_2" ana="#satisfied_owners" type="topic" resp="#claude">Het eerste exemplaar door mij nu verkocht aan een <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">administrateur</rdg><rdg source="#source_6 #source_7">Administrateur</rdg></app> in de <placeName>Preanger</placeName></seg><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5">,</rdg><rdg source="#source_6 #source_7"/></app>
           <lb/>wordt tot en met 15 October voor belangstellenden tentoongesteld bij den alleenvertegen-
           <lb/>woordiger<app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5"/><rdg source="#source_6 #source_7">.</rdg></app></hi></p>
       </div>

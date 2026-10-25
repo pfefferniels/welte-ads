@@ -225,6 +225,7 @@
       <tagsDecl>
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
       </tagsDecl>
       <classDecl>
@@ -250,6 +251,7 @@
       <langUsage><language ident="nl">Dutch</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -289,11 +291,11 @@
         </hi></ab>
       </div>
       <div facs="#zone_text">
-        <p><lb/>Van uit <placeName>Amerika</placeName> heeft de
+        <p rendition="#j"><lb/>Van uit <placeName>Amerika</placeName> heeft de
           <lb/><name type="brand">Estey-Welte</name> <seg xml:id="topic_2" ana="#world_renown" type="topic" resp="#claude">reeds een
           <lb/>triomftocht gemaakt door
           <lb/>de geheele wereld</seg>.</p>
-        <p><lb/>Iedereen die belang stelt,
+        <p rendition="#j"><lb/>Iedereen die belang stelt,
           <lb/>noodigen wij uit om te ko-
           <lb/>men zien en hooren.</p>
       </div>

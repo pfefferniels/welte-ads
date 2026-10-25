@@ -166,6 +166,7 @@
         <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
       </tagsDecl>
       <classDecl>
@@ -217,6 +218,7 @@
       <langUsage><language ident="nl">Dutch</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -246,7 +248,7 @@
         <head><hi rendition="#c #in #b"><lb/><name type="brand">Welte-Mignon</name></hi></head>
       </div>
       <div facs="#zone_text_1">
-        <p><lb/><seg xml:id="topic_1" ana="#faithful_reproduction" type="topic" resp="#claude">geeft natuurgetrouw het handspel der groote kunste-
+        <p rendition="#j"><lb/><seg xml:id="topic_1" ana="#faithful_reproduction" type="topic" resp="#claude">geeft natuurgetrouw het handspel der groote kunste-
           <lb/>naars weer</seg>. <seg xml:id="topic_6" ana="#world_renown" type="topic" resp="#claude">De loftuigingen der groote Meesters zijn
           <lb/>onbegrensd</seg> en <seg xml:id="topic_7" ana="#testimonials" type="topic" resp="#claude">Kunstenaars, als: <persName type="artist" corresp="https://d-nb.info/gnd/118501437">D’Albert</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116029579">Backhaus</persName>,
           <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118953915"><sic>Careno</sic></persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724"><sic>Paderewsky</sic></persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118598988">Reger</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-
@@ -258,7 +260,7 @@
         <ab><hi rendition="#c #in #b"><lb/><name type="brand">Welte-Mignon</name></hi></ab>
       </div>
       <div facs="#zone_text_2">
-        <p><lb/><seg xml:id="topic_2" ana="#the_artists_soul" type="topic" resp="#claude">de diep verborgen krachten van den kunstenaar</seg>, n.l.
+        <p rendition="#j"><lb/><seg xml:id="topic_2" ana="#the_artists_soul" type="topic" resp="#claude">de diep verborgen krachten van den kunstenaar</seg>, n.l.
           <lb/><seg xml:id="topic_3" ana="#touch_and_individuality" type="topic" resp="#claude">zijn individueele aanslag, zijn opvatting en dynamiek</seg>,
           <lb/>zich fascineerend openbaren, èn dat</p>
       </div>
@@ -266,7 +268,7 @@
         <ab><hi rendition="#c #in #b"><lb/><name type="brand">Welte-Mignon</name></hi></ab>
       </div>
       <div facs="#zone_text_3">
-        <p><lb/>het <seg xml:id="topic_4" ana="#unique_and_superior" type="topic" resp="#claude">eenige reproductie-instrument</seg> is, dat aanspraak
+        <p rendition="#j"><lb/>het <seg xml:id="topic_4" ana="#unique_and_superior" type="topic" resp="#claude">eenige reproductie-instrument</seg> is, dat aanspraak
           <lb/>kan maken op <seg xml:id="topic_5" ana="#faithful_reproduction" type="topic" resp="#claude">natuurgetrouwe weergave van het
           <lb/>handspel</seg>.</p>
       </div>

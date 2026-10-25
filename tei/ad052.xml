@@ -168,6 +168,7 @@
         <rendition xml:id="framed" scheme="css">border: 1px solid;</rendition>
         <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
         <rendition xml:id="sup" scheme="css">vertical-align: super; font-size: 70%;</rendition>
         <rendition xml:id="u" scheme="css">text-decoration: underline;</rendition>
@@ -218,6 +219,7 @@
       <langUsage><language ident="nl">Dutch</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
@@ -251,7 +253,7 @@
         </hi></ab>
       </div>
       <div facs="#zone_text">
-        <p><lb/><seg xml:id="topic_3" ana="#masters_at_home #domestic_comfort #gifts" type="topic" resp="#claude">Verschaft U zelf in <hi rendition="#framed">1921</hi> het genot de grootste
+        <p rendition="#j"><lb/><seg xml:id="topic_3" ana="#masters_at_home #domestic_comfort #gifts" type="topic" resp="#claude">Verschaft U zelf in <hi rendition="#framed">1921</hi> het genot de grootste
           <lb/>pianisten in Uwen huiselijken kring te hooren
           <lb/>spelen.</seg></p>
       </div>

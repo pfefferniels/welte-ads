@@ -166,6 +166,7 @@
         <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="right" scheme="css">text-align: right;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
       </tagsDecl>
@@ -187,6 +188,7 @@
       <langUsage><language ident="nl">Dutch</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -209,7 +211,7 @@
         <head><hi rendition="#c #b #in"><lb/><orgName>W. WOLTHERS’</orgName> PIANO’S,</hi></head>
       </div>
       <div facs="#zone_text">
-        <p><lb/>De <hi rendition="#b"><name type="brand">WELTE-MIGNON</name></hi> geeft het spel der grootste pianisten als <persName type="artist" corresp="https://d-nb.info/gnd/118518011">BUSONI</persName>,
+        <p rendition="#j"><lb/>De <hi rendition="#b"><name type="brand">WELTE-MIGNON</name></hi> geeft het spel der grootste pianisten als <persName type="artist" corresp="https://d-nb.info/gnd/118518011">BUSONI</persName>,
           <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118953915">CARRENO</persName> e.a. <seg xml:id="topic_1" ana="#faithful_reproduction" type="topic" resp="#claude"><hi rendition="#b">natuurgetrouw</hi> weer</seg>. Dit buitengewoon instrument is te
           <lb/>hooren op de 1e <hi rendition="#b"><placeName>GRONINGER RECLAME-TENTOONSTELLING</placeName>.</hi> <hi rendition="#right #smaller">—45</hi></p>
       </div>
