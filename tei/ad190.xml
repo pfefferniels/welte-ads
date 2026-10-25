@@ -172,6 +172,7 @@
         <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
         <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
       </tagsDecl>
@@ -234,6 +235,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="checked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
       <change when="2026-10-25" who="#np">Checked against the scan by the editor.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
@@ -266,21 +268,21 @@
         <figure xml:id="figure_1" ana="#evocative_scenes" resp="#claude"><desc>Drawing of a grand piano and a standard lamp, with three muses in flowing robes floating above them, one blowing a long trumpet</desc></figure>
       </div>
       <div facs="#zone_text">
-        <p><hi rendition="#b"><lb/><hi rendition="#dropcap">W</hi>HEN the beauty of tone and touch
+        <p rendition="#j"><hi rendition="#b"><lb/><hi rendition="#dropcap">W</hi>HEN the beauty of tone and touch
           <lb/>of a <name type="brand">Heintzman &amp; Co.</name> Piano is com-
           <lb/>bined with the <seg xml:id="topic_1" ana="#faithful_reproduction" type="topic" resp="#claude">recreative faithfulness</seg>
           <lb/>of the <name type="brand">Welte-Mignon</name> Reproducing action it
           <lb/>brings to your home a two-fold pleasure.</hi></p>
-        <p><hi rendition="#b"><lb/><seg xml:id="topic_6" ana="#still_a_piano" type="topic" resp="#claude">It permits you to interpret for yourself the
+        <p rendition="#j"><hi rendition="#b"><lb/><seg xml:id="topic_6" ana="#still_a_piano" type="topic" resp="#claude">It permits you to interpret for yourself the
           <lb/>music of your choice</seg>—or <seg xml:id="topic_7" ana="#masters_at_home" type="topic" resp="#claude">to hear the piano
           <lb/>reproduce for you the marvellous music of
           <lb/><persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, and other great
           <lb/>pianists</seg> <seg xml:id="topic_3" ana="#faithful_reproduction #illusion_of_presence" type="topic" resp="#claude">exactly as they would play if they
           <lb/>came into your home</seg>.</hi></p>
-        <p><hi rendition="#b"><lb/><seg xml:id="topic_8" ana="#unique_and_superior" type="topic" resp="#claude">Only through the medium of a <name type="brand">Heintzman &amp;
+        <p rendition="#j"><hi rendition="#b"><lb/><seg xml:id="topic_8" ana="#unique_and_superior" type="topic" resp="#claude">Only through the medium of a <name type="brand">Heintzman &amp;
           <lb/>Co. Welte-Mignon</name> Reproducing Piano is this
           <lb/>wonderful world of music open to you.</seg></hi></p>
-        <p><hi rendition="#b"><lb/>We invite you to visit our Music Salons and
+        <p rendition="#j"><hi rendition="#b"><lb/>We invite you to visit our Music Salons and
           <lb/>hear for yourself the compositions of your
           <lb/>choice—<seg xml:id="topic_4" ana="#repertoire" type="topic" resp="#claude">the classics, operatic or dance music</seg> as
           <lb/>interpreted by the <name type="brand">Heintzman &amp; Co. Welte-

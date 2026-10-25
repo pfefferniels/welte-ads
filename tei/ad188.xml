@@ -230,6 +230,7 @@
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
         <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
       </tagsDecl>
       <classDecl>
@@ -249,6 +250,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -281,7 +283,7 @@
           <lb/><hi rendition="#b">ADMISSION FREE.</hi></hi></ab>
       </div>
       <div facs="#zone_programme">
-        <p><lb/>A selected programme of Classical
+        <p rendition="#j"><lb/>A selected programme of Classical
           <lb/>Music, with interpretations of the world’s
           <lb/>greatest pianists, will be played on The
           <lb/><name type="brand">Welte-Mignon</name>.</p>
@@ -290,7 +292,7 @@
         <ab><gap reason="irrelevant"><desc resp="#claude">8 lines on the Pianola-Piano: "The Pianola-Piano is the only instrument in the world containing THE METROSTYLE … and THE THEMODIST …"</desc></gap></ab>
       </div>
       <div facs="#zone_closing">
-        <p><lb/><seg xml:id="topic_1" ana="#unique_and_superior" type="topic" resp="#claude">These are the only instruments of the
+        <p rendition="#j"><lb/><seg xml:id="topic_1" ana="#unique_and_superior" type="topic" resp="#claude">These are the only instruments of the
           <lb/>kind in <placeName>Canada</placeName></seg>, and a cordial invitation
           <lb/>is extended to all musically interested.</p>
       </div>
