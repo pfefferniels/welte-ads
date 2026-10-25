@@ -6,5 +6,7 @@ focus: []
 ads: [ad017, ad143, ad113]
 ---
 In the last years the ads hardly name artists: the 13 ads of 1928 name
-seven in all, the one of 1929 none. They speak of the home, of the touch
-of a button and of the price instead.
+seven in all, the one of 1929 none. They still promise [the great pianists
+in your home](/topic/masters_at_home/), but praise the instrument in
+[superlatives](/topic/superlatives/) and show it in scenes of [domestic
+comfort](/topic/domestic_comfort/).

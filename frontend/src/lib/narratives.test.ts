@@ -3,7 +3,7 @@ import { chapterProblems, getChapters, placeFigures } from "./narratives"
 import type { ChapterSource } from "./narratives"
 import { getArtistRegister, getPlaceRegister } from "./registers"
 import { artistTimelines } from "./artists"
-import { getAllMetadata } from "./tei"
+import { getAllMetadata, getTopics } from "./tei"
 
 const chapter = (id: string, from: number, to: number): ChapterSource =>
   ({ id, from, to, title: id, html: "<p>Text</p>", focus: [], ads: [], sources: [] })
@@ -38,9 +38,12 @@ describe("the chapters of the collection", () => {
       expect(chapterProblems(chapters, first, last)).toEqual([])
     })
 
-    it(`name only ads, places and artists of the collection (${view})`, () => {
+    it(`name only ads, places, artists and topics of the collection (${view})`, () => {
       expect(chapters.flatMap(chapter => chapter.ads.filter(slug => !slugs.has(slug)))).toEqual([])
       expect(chapters.flatMap(chapter => chapter.focus.filter(key => !keys.has(key)))).toEqual([])
+      const topics = getTopics()
+      const linked = chapters.flatMap(chapter => Array.from(chapter.html.matchAll(/href="\/topic\/([^/"]+)\/?"/g), match => match[1]))
+      expect(linked.filter(topic => !topics[`#${topic}`])).toEqual([])
     })
   }
 
