@@ -1,7 +1,7 @@
 ---
 from: 1914
 to: 1923
-caption: "Daggers spread through the cloud, but the ads keep the names of the dead."
+caption: "The ads promise the artists [immortality](/topic/immortality/); now many die, and the promise comes true."
 focus:
   - https://d-nb.info/gnd/118697641 # Grieg
   - https://d-nb.info/gnd/116429623 # Reisenauer
@@ -14,8 +14,3 @@ focus:
   - https://d-nb.info/gnd/118786253 # Nikisch
 ads: [ad130, ad002, ad014]
 ---
-In and after the war, daggers spread through the cloud: Pugno died in
-1914, Leschetizky in 1915, Reger in 1916, Carreño in 1917, Debussy in 1918,
-Saint-Saëns in 1921 and Nikisch in 1922. The ads kept the names, for a roll plays on: Grieg, who
-died in 1907, is named 21 times, 18 of them after his death (see the topic
-[immortality](/topic/immortality/)).

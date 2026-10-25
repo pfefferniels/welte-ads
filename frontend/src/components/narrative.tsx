@@ -10,10 +10,8 @@ export interface Chapter {
   id: string
   from: number
   to: number
-  // one short sentence, read while the timeline plays
+  // the chapter in one short sentence, as HTML, read while the timeline plays
   caption: string
-  // the text, as HTML
-  html: string
   // what the chapter is about, as the view knows it ("#place-5128581", a GND URI)
   focus: string[]
   // the figures of the chapter's years, e.g. "15 printings of 7 ads in 7 places"
@@ -29,10 +27,10 @@ export const chapterAt = (chapters: Chapter[], year: number | null) =>
 const yearsOf = (chapter: Chapter) =>
   chapter.from === chapter.to ? String(chapter.from) : `${chapter.from}–${chapter.to}`
 
-/** The text of a chapter, its figures, its ads and its sources. */
+/** The caption of a chapter, its figures, its ads and its sources. */
 const ChapterBody = ({ chapter }: { chapter: Chapter }) => (
   <>
-    <Box sx={{ '& p': { m: 0, mb: 1 } }} dangerouslySetInnerHTML={{ __html: chapter.html }} />
+    <Box component="p" sx={{ m: 0, mb: 1 }} dangerouslySetInnerHTML={{ __html: chapter.caption }} />
     <Typography variant="body2" sx={{ color: 'text.secondary' }}>{chapter.figures}</Typography>
     {chapter.ads.length > 0 && (
       <Typography variant="body2">
@@ -92,7 +90,7 @@ export const StoryCard = ({ chapter, side = 'left', onHide }: StoryCardProps) =>
       zIndex: 1,
     }}>
       <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 0.5 }}>
-        <Box sx={{ flex: 1 }}>{chapter.caption}</Box>
+        <Box sx={{ flex: 1 }} dangerouslySetInnerHTML={{ __html: chapter.caption }} />
         <IconButton size="small" aria-label="Hide the story" title="Hide the story" onClick={onHide} sx={{ mt: -0.5, mr: -0.75 }}>
           <Close fontSize="small" />
         </IconButton>

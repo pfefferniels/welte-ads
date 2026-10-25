@@ -14,8 +14,3 @@ focus:
   - https://www.geonames.org/3128760 # Barcelona
 ads: [ad130, ad199, ad035, ad000, ad200]
 ---
-From 1909 the Welte-Mignon is advertised in Los Angeles, Sydney,
-Montréal, Madrid, Batavia, Rio de Janeiro, Vienna and London. Almost all
-of these ads are by local dealers and piano firms; Welte's own companies
-placed only four of them. The last new ad before the war appeared in
-Barcelona in April 1914, the last printing in Zürich in May.
