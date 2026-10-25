@@ -12,3 +12,7 @@ frontend/.cache/
 
 # Python
 __pycache__/
+
+# Research reports and notes
+reports/
+research_notes/
