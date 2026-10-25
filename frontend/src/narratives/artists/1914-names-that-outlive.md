@@ -1,7 +1,7 @@
 ---
 from: 1914
 to: 1923
-caption: "The ads promise the artists [immortality](/topic/immortality/); now many die, and the promise comes true."
+caption: "The ads promise the artists [immortality](/topic/immortality/). In and after the war the promise becomes real for many of them."
 focus:
   - https://d-nb.info/gnd/118697641 # Grieg
   - https://d-nb.info/gnd/116429623 # Reisenauer

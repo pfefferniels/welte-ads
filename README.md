@@ -59,7 +59,7 @@ chapters. Each chapter is a Markdown file in
 `frontend/src/narratives/places/` or `frontend/src/narratives/artists/`,
 named after its first year (e.g. `1915-the-war.md`), and holds only front
 matter: the years it covers (`from`, `to`), its `caption` (the chapter's
-only text, one sentence of at most 15 words in Markdown, so that it can
+only text, a sentence or two of at most 20 words in Markdown, so that it can
 link, e.g. to a topic; shown on a card while the timeline plays through the
 chapter and, for the places, listed under the map), its `focus` (the places
 by their GeoNames URI, the artists by their GND URI), the `ads` that show it

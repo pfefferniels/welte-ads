@@ -10,7 +10,7 @@ export interface TimelineChapter {
   id: string
   from: number
   to: number
-  // the chapter in one short sentence, as HTML, read while the timeline plays
+  // the chapter in a sentence or two, as HTML, read while the timeline plays
   caption: string
   // what the chapter is about, as the view knows it ("#place-5128581", a GND URI)
   focus: string[]

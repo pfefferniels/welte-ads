@@ -13,7 +13,7 @@ export interface ChapterSource {
   // the first and the last year of the chapter
   from: number
   to: number
-  // the chapter in one short sentence, as HTML: on the card that shows it
+  // the chapter in a sentence or two, as HTML: on the card that shows it
   // while the timeline plays, short enough to be read in passing, and in
   // the story under the picture
   caption: string
@@ -55,7 +55,7 @@ export function getChapters(view: View): ChapterSource[] {
 
 // the most words a caption may have, so that it can be read while the
 // timeline plays on
-const CAPTION_WORDS = 15
+const CAPTION_WORDS = 20
 
 // the words of a caption, without the markup of its links
 const wordsOf = (caption: string) => caption.replace(/<[^>]*>/g, '').trim().split(/\s+/).length
