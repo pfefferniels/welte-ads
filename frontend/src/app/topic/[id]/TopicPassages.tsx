@@ -23,8 +23,8 @@ export interface Passage {
 // the mark of a passage that the language model assigned to the topic
 const ByModel = ({ status }: { status: Status }) => (
   <Tooltip title={status === 'unchecked'
-    ? 'Annotated by an AI model; not yet checked by the editor'
-    : 'Annotated by an AI model'}>
+    ? 'Annotated by an AI model and checked by the editor; the transcription is not yet checked against the scan'
+    : 'Annotated by an AI model and checked by the editor'}>
     <Chip component="span" label="AI" size="small" variant="outlined" sx={{ ml: 1, height: 20 }} />
   </Tooltip>
 )

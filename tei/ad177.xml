@@ -183,8 +183,10 @@
                knowledge of the editor's earlier taxonomy, which it replaced
                in October 2026; it keeps the topics that at least three of the
                readings found. The topics are an interpretation, assigned by
-               whom <att>resp</att> says, so far all by the language model;
-               the editor has not yet checked them.</p>
+               whom <att>resp</att> says, so far all by the language model.
+               The editor has checked them and left them as the model assigned
+               them, so that the same procedure can be run again when
+               advertisements are added.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -253,6 +255,7 @@
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
     <revisionDesc status="checked">
+      <change when="2026-10-25" who="#np">Topics checked by the editor and left as the language model assigned them.</change>
       <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
       <change when="2026-10-25" who="#np">Checked against the scan by the editor.</change>
       <change when="2026-10-25" who="#np">Underline corrected: only “ALLEIN” is underlined, twice.</change>
