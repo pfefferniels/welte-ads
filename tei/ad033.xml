@@ -222,6 +222,7 @@
                 <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
                 <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
                 <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+                <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
                 <rendition xml:id="k" scheme="css">font-variant: small-caps;</rendition>
                 <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
                 <rendition xml:id="right" scheme="css">text-align: right;</rendition>
@@ -362,6 +363,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
             <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
             <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
@@ -489,7 +491,7 @@
             <lb />The Clockmaker of Freiburg</hi></ab>
         </div>
         <div facs="#eSc_textblock_e5a2870f">
-            <ab><lb /><seg xml:id="topic_16" ana="#the_original #faithful_reproduction" type="topic" resp="#claude"><hi rendition="#k">To <persName corresp="https://d-nb.info/gnd/1128739232">Michael Welte</persName>,</hi>
+            <ab rendition="#j"><lb /><seg xml:id="topic_16" ana="#the_original #faithful_reproduction" type="topic" resp="#claude"><hi rendition="#k">To <persName corresp="https://d-nb.info/gnd/1128739232">Michael Welte</persName>,</hi>
             <lb />the chiming clock-
             <lb />maker of a dreamy
             <lb />hamlet in Germany,
@@ -505,7 +507,7 @@
             <lb />called on to design a musical chime for a</ab>
         </div>
         <div facs="#eSc_textblock_f0769516">
-            <ab><lb />clock, he conceived the idea of having the
+            <ab rendition="#j"><lb />clock, he conceived the idea of having the
             <lb />chimes play a tune.
             <lb />On the
             accuracy and novelty of his chim-
@@ -519,7 +521,7 @@
             <lb />continental prestige.</ab>
         </div>
         <div facs="#eSc_textblock_07d9cc5e">
-            <ab><lb /><hi rendition="#k">In</hi> 1849, after three years of patient toil,
+            <ab rendition="#j"><lb /><hi rendition="#k">In</hi> 1849, after three years of patient toil,
             <lb /><persName corresp="https://d-nb.info/gnd/1128739232">Michael Welte</persName> brought forth his first Orches-
             <lb />trion, the clumsy forerunner of the marvelous
             <lb />Philharmonic Organs of the present day.
@@ -554,7 +556,7 @@
             <ab><lb />Welte's Wonder Invention</ab>
         </div>
         <div facs="#eSc_textblock_9e212c90">
-            <ab><lb />came to America where success was instan-
+            <ab rendition="#j"><lb />came to America where success was instan-
             <lb />taneous. The demand for Welte's Orches-
             <lb />trions, coming now from two hemispheres, led,
             <lb />in 1872, to the removal to Freiburg, which
@@ -605,7 +607,7 @@
             </p>
         </div>
         <div facs="#eSc_textblock_afba7f08">
-            <ab><lb /><hi rendition="#dropcap">I</hi><hi rendition="#k">t</hi> was only natural that the artistic develop-
+            <ab rendition="#j"><lb /><hi rendition="#dropcap">I</hi><hi rendition="#k">t</hi> was only natural that the artistic develop-
             <lb />ment of Welte Orchestrions and Philhar-
             <lb />monic Organs should have led the thoughts
             <lb />of the Weltes onward and upward to the idea
@@ -619,7 +621,7 @@
             <lb />it from the large instruments on which</ab>
         </div>
         <div facs="#eSc_textblock_d1c98342">
-            <ab><lb />the Welte reputation and business had been
+            <ab rendition="#j"><lb />the Welte reputation and business had been
             <lb />established.
             <lb /><seg xml:id="topic_20" ana="#the_original" type="topic" resp="#claude">Thus <orgName corresp="https://d-nb.info/gnd/5125268-5">M. Welte &amp; Sons</orgName> were the origina-
             <lb />tors of the idea of reproducing the playing of
@@ -639,7 +641,7 @@
             </seg></hi></ab>
         </div>
         <div facs="#eSc_textblock_38047c95">
-            <ab>
+            <ab rendition="#j">
                 <lb /><seg xml:id="topic_21" ana="#how_it_works" type="topic" resp="#claude"><hi rendition="#k">The <name type="brand">Welte-Mignon</name>*</hi> method of recording
                 <lb />a player's performance is photographic.</seg>
                 <lb />Through this
@@ -661,7 +663,7 @@
             </ab>
         </div>
         <div facs="#eSc_textblock_f403edec">
-            <ab><lb />the vigor of fortissimo.
+            <ab rendition="#j"><lb />the vigor of fortissimo.
             <seg xml:id="topic_8" ana="#faithful_reproduction #how_it_works" resp="#claude" type="topic">
                 And this photo-
                 <lb />graphic record is so perfect–so identically
@@ -706,7 +708,7 @@
             <lb /><hi rendition="#smaller">*Licensed under original <name type="brand">Welte-Mignon</name> patents</hi></ab>
         </div>
         <div facs="#eSc_textblock_f606c738">
-            <ab><lb />a few of the great artists whose playing you
+            <ab rendition="#j"><lb />a few of the great artists whose playing you
             <lb />may hear on <hi rendition="#k"><name type="brand">Welte-Mignon.*</name></hi>
             <lb /><seg xml:id="topic_28" ana="#repertoire" type="topic" resp="#claude">The famed <name type="brand">Welte-Mignon* Library</name> of in-
             <lb />terpreted music is without a doubt the most

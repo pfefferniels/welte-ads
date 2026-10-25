@@ -225,6 +225,7 @@
               <rendition xml:id="g2" scheme="css">letter-spacing: 0.3em;</rendition>
               <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
               <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+              <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
               <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
               <rendition xml:id="right" scheme="css">text-align: right;</rendition>
               <rendition xml:id="uc" scheme="css">text-transform: uppercase;</rendition>
@@ -300,6 +301,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+           <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
            <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -362,7 +364,7 @@
             </hi></ab>
         </div>
         <div facs="#eSc_textblock_6a6a772a">
-            <ab><lb />
+            <ab rendition="#j"><lb />
             <seg xml:id="topic_3" ana="#entertaining_guests #refinement" resp="#claude" type="topic">
                 It is with pardonable pride that the
                 <lb />hostess calls attention to her <name type="brand">Welte-
@@ -381,7 +383,7 @@
         </div>
 
         <div facs="#eSc_textblock_f1136b4e">
-            <ab><lb /><seg xml:id="topic_9" ana="#hearing_is_believing" type="topic" resp="#claude">Your piano merchant will be happy
+            <ab rendition="#j"><lb /><seg xml:id="topic_9" ana="#hearing_is_believing" type="topic" resp="#claude">Your piano merchant will be happy
             <lb />to prove this to you.</seg> <seg xml:id="topic_10" ana="#still_a_piano" type="topic" resp="#claude"><name type="brand">Welte-Mignon
             <lb />Licensee Reproducing Pianos</name> are
             <lb />offered by 115 leading piano man-

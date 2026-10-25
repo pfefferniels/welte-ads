@@ -374,6 +374,7 @@
               <rendition xml:id="g2" scheme="css">letter-spacing: 0.3em;</rendition>
               <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
               <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+              <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
               <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
               <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
            </tagsDecl>
@@ -444,6 +445,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+           <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
            <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -490,7 +492,7 @@
             </hi></ab>
         </div>
         <div facs="#eSc_textblock_bab75d2b" rendition="#framed">
-            <p>
+            <p rendition="#j">
                 <lb /><seg xml:id="topic_8" ana="#wonder" type="topic" resp="#claude"><hi rendition="#in">Your</hi> whole conception of what a
                 <lb />musical instrument can do will be
                 <lb />changed</seg> when you hear a reproducing
@@ -509,7 +511,7 @@
                 </hi>
             </p>
 
-            <p>
+            <p rendition="#j">
                 <lb />Imagine
                 <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName>,
                 <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
@@ -526,7 +528,7 @@
                     actually seated at your piano.
                 </seg>
             </p>
-            <p>
+            <p rendition="#j">
                 <lb /><seg xml:id="topic_10" ana="#still_a_piano" type="topic" resp="#claude">You can have <name type="brand">WELTE-MIGNON*</name> in
                 <lb />112 different pianos.</seg> There are <name type="brand">WELTE-
                 <lb />MIGNON*</name> dealers everywhere.
