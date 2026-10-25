@@ -170,6 +170,7 @@
         <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+        <rendition xml:id="outline" scheme="css">-webkit-text-fill-color: transparent; -webkit-text-stroke: 0.03em;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
         <rendition xml:id="uc" scheme="css">text-transform: uppercase;</rendition>
       </tagsDecl>
@@ -229,7 +230,9 @@
     <profileDesc>
       <langUsage><language ident="fr">French</language></langUsage>
     </profileDesc>
-    <revisionDesc status="unchecked">
+    <revisionDesc status="checked">
+      <change when="2026-10-25" who="#claude">The portrait set at an angle given a slanted zone, and the ribbon with the name its own; DUO-PRATTE marked as set in outline letters.</change>
+      <change when="2026-10-25" who="#np">Checked against the scan by the editor.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -240,7 +243,8 @@
     <surface>
       <graphic url="ad192-0.jpg" width="4000px" height="5391px"/>
       <zone points="3628,2862 3758,2862 3758,3035 3628,3035" xml:id="zone_artist_note"/>
-      <zone points="3075,2920 3625,2920 3625,3512 3075,3512" xml:id="zone_portrait"/>
+      <zone points="3469,2901 3640,3379 3232,3525 3061,3047" xml:id="zone_portrait"/>
+      <zone points="3350,3415 3660,3415 3660,3466 3350,3466" xml:id="zone_ribbon"/>
       <zone points="3100,3632 3775,3632 3775,3945 3100,3945" xml:id="zone_gabrilowitsch"/>
       <zone points="3045,3948 3825,3948 3825,4152 3045,4152" xml:id="zone_brand"/>
       <zone points="3058,4185 3812,4185 3812,4495 3058,4495" xml:id="zone_quote"/>
@@ -258,8 +262,10 @@
           <lb/><name type="brand">Mignon</name>.</hi></p>
       </div>
       <div type="illustration" facs="#zone_portrait">
-        <figure xml:id="figure_1" ana="#testimonials" resp="#claude"><desc>Photograph of Ossip Gabrilowitsch in an ornamental frame set at an angle</desc>
-          <head><lb/><hi rendition="#smaller #uc"><persName type="artist" corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName></hi></head></figure>
+        <figure xml:id="figure_1" ana="#testimonials" resp="#claude"><desc>Photograph of Ossip Gabrilowitsch in an ornamental frame set at an angle, with a ribbon across its lower corner</desc></figure>
+      </div>
+      <div facs="#zone_ribbon">
+        <ab><hi rendition="#smaller #uc"><lb/><persName type="artist" corresp="https://d-nb.info/gnd/116327642">Ossip Gabrilowitsch</persName></hi></ab>
       </div>
       <div facs="#zone_gabrilowitsch">
         <head><hi rendition="#c"><lb/><hi rendition="#in #b"><persName type="artist" corresp="https://d-nb.info/gnd/116327642">OSSIP GABRILOWITSCH</persName></hi>
@@ -272,7 +278,7 @@
           <lb/>posséder un</hi></p>
       </div>
       <div facs="#zone_brand">
-        <ab><hi rendition="#c"><lb/><hi rendition="#in"><name type="brand">DUO-PRATTE</name></hi>
+        <ab><hi rendition="#c"><lb/><hi rendition="#in #outline"><name type="brand">DUO-PRATTE</name></hi>
           <lb/><hi rendition="#in"><name type="brand">Welte-Mignon</name></hi></hi></ab>
       </div>
       <div facs="#zone_quote">

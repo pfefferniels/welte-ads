@@ -41,7 +41,9 @@ deployed only when they pass.
 Each ad page has a layout view that places the text of every
 `<div facs="#zone">` into the bounding box of its zone and scales the text
 to fill it, using the encoded `<lb/>`s as line breaks. The page is cropped to
-the area the zones cover.
+the area the zones cover. A zone drawn as a slanted rectangle (four points)
+is turned: a picture set at an angle by the smaller turn, a zone of text so
+that its lines run along its longer side, as on a diagonal band.
 
 To check an encoding against its original, save the scan as
 `frontend/public/facs/<ad>-<surface>.png` (e.g. `ad009-0.png`), sized

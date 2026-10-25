@@ -1,7 +1,7 @@
-import React, { useLayoutEffect, useRef } from "react"
+import React, { useLayoutEffect, useMemo, useRef } from "react"
 import { Behavior } from "./Behavior"
 import { TEINodes } from "react-teirouter"
-import { PlacedZone } from "../../lib/facsimile"
+import { PlacedZone, alongLongerSide } from "../../lib/facsimile"
 
 interface TEIProps {
     teiNode: Node
@@ -123,10 +123,14 @@ const hasPrintedText = (node: Node): boolean => {
 
 const Div = ({ teiNode, availableRoutes, zoneGetter }: TEIProps & WithZoneGetter) => {
     const div = teiNode as Element
-    const zone = zoneGetter((div.getAttribute('facs') || '').trim().replace(/^#/, ''))
+    const placed = zoneGetter((div.getAttribute('facs') || '').trim().replace(/^#/, ''))
     const isIllustration = div.getAttribute('type') === 'illustration'
     // a zone holding only a <gap/> or a figure, perhaps with a description
     const isPlaceholder = !hasPrintedText(div)
+    // a picture set at an angle is turned the shorter way; the lines of a
+    // slanted zone of text run along its longer side
+    const zone = useMemo(() => placed && !isIllustration && !isPlaceholder ? alongLongerSide(placed) : placed,
+        [placed, isIllustration, isPlaceholder])
     const ref = useRef<HTMLDivElement>(null)
 
     // captions and placeholders should not grow to the size of the picture

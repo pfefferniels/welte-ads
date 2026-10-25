@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { computeLayout, exclusions, parsePoints } from "./facsimile"
+import { alongLongerSide, computeLayout, exclusions, parsePoints } from "./facsimile"
 
 describe("parsePoints", () => {
   it("reads TEI points, tolerating line breaks", () => {
@@ -81,31 +81,49 @@ describe("computeLayout", () => {
     expect(layout.zones.l.shape).toEqual([[0, 0], [400, 0], [400, 100], [200, 100], [200, 300], [0, 300]])
   })
 
-  it("turns a zone drawn as a slanted rectangle, its lines along the longer side", () => {
-    // a band from the lower left to the upper right, 500 long and 100 wide
-    const [cos, sin] = [Math.cos(Math.PI / 4), Math.sin(Math.PI / 4)]
-    const band: [number, number][] = [
-      [1000, 1000], [1000 + 500 * cos, 1000 - 500 * sin],
-      [1000 + 500 * cos + 100 * sin, 1000 - 500 * sin + 100 * cos], [1000 + 100 * sin, 1000 + 100 * cos],
-    ]
+  // a rectangle from the corner, its first side so long and turned so far
+  // (clockwise, in degrees), its second side so long
+  const slanted = ([x, y]: [number, number], long: number, degrees: number, short: number): [number, number][] => {
+    const [cos, sin] = [Math.cos(degrees * Math.PI / 180), Math.sin(degrees * Math.PI / 180)]
+    return [[x, y], [x + long * cos, y + long * sin], [x + long * cos - short * sin, y + long * sin + short * cos], [x - short * sin, y + short * cos]]
+  }
+
+  it("turns a zone drawn as a slanted rectangle the shorter way, about its centre", () => {
     const layout = computeLayout({
       surfaces: [{ url: "page.png", width: null, height: null }],
       zones: [
-        { id: "band", surface: 0, points: band },
+        // a picture 400 wide and 500 high, turned 20° anticlockwise
+        { id: "picture", surface: 0, points: slanted([1000, 1000], 400, -20, 500) },
         // one sloping side, as an automatic segmentation draws it
         { id: "sloping", surface: 0, points: [[1765, 1977], [1552, 2511], [2408, 2516], [2408, 1977]] },
       ],
     }, 0)
 
-    const { left, top, width, height, rotation } = layout.zones.band
-    expect(width).toBeCloseTo(500)
-    expect(height).toBeCloseTo(100)
-    expect(rotation).toBeCloseTo(-45)
-    // turned about its centre, which stays where the band is
-    const [centreX, centreY] = [1000 + 250 * cos + 50 * sin, 1000 - 250 * sin + 50 * cos]
-    expect(left + width / 2 - layout.surfaces[0].left).toBeCloseTo(centreX - layout.surfaces[0].crop.left)
-    expect(top + height / 2).toBeCloseTo(centreY - layout.surfaces[0].crop.top)
+    const { left, top, width, height, rotation } = layout.zones.picture
+    expect([width, height, rotation].map(n => Math.round(n))).toEqual([400, 500, -20])
+    const centre = layout.surfaces[0].crop
+    const [x, y] = slanted([1000, 1000], 400, -20, 500)[2]
+    expect(left + width / 2 + centre.left).toBeCloseTo((1000 + x) / 2)
+    expect(top + height / 2 + centre.top).toBeCloseTo((1000 + y) / 2)
     expect(layout.zones.sloping).toMatchObject({ rotation: 0, width: 856, height: 539 })
+  })
+})
+
+describe("alongLongerSide", () => {
+  const zone = { id: "z", pageWidth: 1000, left: 0, top: 0, shape: null, floats: null }
+
+  it("turns a slanted band of text so that its lines run along it, from left to right", () => {
+    // a band 100 wide and 500 long, rising to the right at 55°
+    const band = alongLongerSide({ ...zone, width: 100, height: 500, rotation: 35 })
+    expect(band).toMatchObject({ left: -200, top: 200, width: 500, height: 100, rotation: -55 })
+    expect(alongLongerSide({ ...zone, width: 100, height: 500, rotation: -30 }).rotation).toBe(60)
+  })
+
+  it("leaves a zone that is wider than high, or not slanted, as it is", () => {
+    const wide = { ...zone, width: 500, height: 100, rotation: 10 }
+    expect(alongLongerSide(wide)).toBe(wide)
+    const upright = { ...zone, width: 100, height: 500, rotation: 0 }
+    expect(alongLongerSide(upright)).toBe(upright)
   })
 })
 

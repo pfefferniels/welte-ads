@@ -153,6 +153,7 @@
             <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
             <rendition xml:id="k" scheme="css">font-variant: small-caps;</rendition>
             <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
+            <rendition xml:id="outline" scheme="css">-webkit-text-fill-color: transparent; -webkit-text-stroke: 0.03em;</rendition>
             <rendition xml:id="right" scheme="css">text-align: right;</rendition>
             <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
             <rendition xml:id="sup" scheme="css">vertical-align: super; font-size: 70%;</rendition>

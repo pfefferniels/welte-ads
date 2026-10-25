@@ -445,3 +445,9 @@ tei-lb:before {
     color: #6b6b6b;
     font-size: 0.9em;
 }
+
+/* letters drawn only in outline, e.g. rendition="#outline" */
+.outline {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.03em;
+}

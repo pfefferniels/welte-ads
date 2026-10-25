@@ -50,9 +50,9 @@ export interface PlacedZone extends Rect {
   shape: Point[] | null
   floats: Floats | null
   // the angle in degrees (clockwise) of a zone drawn as a slanted
-  // rectangle, along whose longer side the lines run; its left, top, width
-  // and height are those of the rectangle before it is turned about its
-  // centre. 0 for every other zone
+  // rectangle, by the smaller turn, as a picture set at an angle is turned;
+  // its left, top, width and height are those of the rectangle before it is
+  // turned about its centre. 0 for every other zone
   rotation: number
 }
 
@@ -108,12 +108,15 @@ const tilt = (side: Point) => {
   return Math.min(angle, 90 - angle)
 }
 
+// an angle as the turn of a line, between -90° and 90°
+const turn = (angle: number) => angle > 90 ? angle - 180 : angle <= -90 ? angle + 180 : angle
+
 /**
  * A zone drawn as a rectangle turned by more than a few degrees, such as a
- * band set diagonally across an advertisement: its centre, its size along
- * and across its longer side, and the angle of that side, turned so that
- * the lines read from left to right. Null for any other zone, including
- * the near-rectangles of an automatic segmentation with one sloping side.
+ * picture set at an angle: its centre, its angle by the smaller turn, and
+ * its size along and across the side so turned. Null for any other zone,
+ * including the near-rectangles of an automatic segmentation with one
+ * sloping side.
  */
 function slantedRect(points: Point[], minTilt = 5) {
   if (points.length !== 4) return null
@@ -129,13 +132,30 @@ function slantedRect(points: Point[], minTilt = 5) {
   const cos = (first[0] * second[0] + first[1] * second[1]) / (a * b)
   if (!similar(a, c) || !similar(b, d) || Math.abs(cos) > Math.sin(minTilt * Math.PI / 180)) return null
 
-  const along = a + c >= b + d ? first : second
-  const rotation = degrees(along)
+  const [firstTurn, secondTurn] = [turn(degrees(first)), turn(degrees(second))]
+  const firstIsLevel = Math.abs(firstTurn) <= Math.abs(secondTurn)
   return {
     centre: [points.reduce((sum, [x]) => sum + x, 0) / 4, points.reduce((sum, [, y]) => sum + y, 0) / 4] as Point,
-    width: Math.max(a + c, b + d) / 2,
-    height: Math.min(a + c, b + d) / 2,
-    rotation: rotation > 90 ? rotation - 180 : rotation <= -90 ? rotation + 180 : rotation,
+    width: firstIsLevel ? (a + c) / 2 : (b + d) / 2,
+    height: firstIsLevel ? (b + d) / 2 : (a + c) / 2,
+    rotation: firstIsLevel ? firstTurn : secondTurn,
+  }
+}
+
+/**
+ * A slanted zone turned so that its lines run along its longer side, as
+ * those of a band of text set diagonally do, and read from left to right.
+ * Any other zone as it is.
+ */
+export function alongLongerSide(zone: PlacedZone): PlacedZone {
+  if (!zone.rotation || zone.height <= zone.width) return zone
+  return {
+    ...zone,
+    left: zone.left + (zone.width - zone.height) / 2,
+    top: zone.top + (zone.height - zone.width) / 2,
+    width: zone.height,
+    height: zone.width,
+    rotation: turn(zone.rotation - 90),
   }
 }
 
