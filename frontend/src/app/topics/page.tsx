@@ -29,10 +29,11 @@ export default function TopicsPage() {
       <Typography>
         Topics are the recurring arguments and motifs of the advertisements,
         such as the promise that the great pianists play in your own home,
-        or the phantom hands at the keyboard. Claude, an AI model, found
-        them in four blind readings of all advertisements and assigned
-        them; the editor has not yet checked them. The area of each circle
-        grows with the number of passages and pictures marked with its topic.
+        or the phantom hands at the keyboard. They were found by a large
+        language model in four blind readings of all advertisements and
+        then assigned by it; the editor has not yet checked them. The area
+        of each circle grows with the number of passages and pictures
+        marked with its topic.
       </Typography>
 
       <WeighedCircles data={weighedTopics} />
