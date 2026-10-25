@@ -264,7 +264,6 @@
       <langUsage><language ident="nl">Dutch</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
-      <change when="2026-10-25" who="#np">Topics checked by the editor and left as the language model assigned them.</change>
       <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
       <change when="2026-10-20" who="#claude">Merged with the former ad051 (Algemeen Handelsblad, June 19, Het Vaderland, July 3, and Arnhemsche Courant, July 17, 1918, new settings of the same text); its printings are further sources, compared on the scans, and their readings are recorded with app.</change>

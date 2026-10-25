@@ -1184,7 +1184,6 @@
       <langUsage><language ident="ru">Russian</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
-      <change when="2026-10-25" who="#np">Topics checked by the editor and left as the language model assigned them.</change>
       <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
       <change when="2026-10-20" who="#claude">Merged with the former ad123 (2–22 February 1908, the column set anew), ad124 (23 February 1908, set anew across the full width) and ad125 (24–28 February 1908, set anew across the full width in a frame), new settings of the same text; their printings are further sources, their readings are recorded with app.</change>
