@@ -197,6 +197,7 @@
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
         <rendition xml:id="sup" scheme="css">vertical-align: super; font-size: 70%;</rendition>
         <rendition xml:id="u" scheme="css">text-decoration: underline;</rendition>
+        <rendition xml:id="uu" scheme="css">text-decoration: underline double;</rendition>
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
@@ -249,6 +250,7 @@
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#np">Underline corrected: only “ALLEIN” is underlined, twice.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -270,7 +272,7 @@
           <lb/><hi rendition="#in #b"><name type="brand">Welte-Mignon</name></hi></hi></head>
       </div>
       <div facs="#zone_agency">
-        <ab><lb/><hi rendition="#c #b #u">ALLEIN-VERTRETUNG:</hi>
+        <ab><lb/><hi rendition="#c #b"><hi rendition="#uu">ALLEIN</hi>-VERTRETUNG:</hi>
           <lb/><hi rendition="#in #i"><orgName>Hug &amp; C<hi rendition="#sup">o</hi></orgName></hi>
           <address><addrLine><hi rendition="#b #larger"><placeName>Zürich</placeName></hi></addrLine>
             <addrLine><lb/><hi rendition="#b">Sonnenquai.</hi></addrLine></address></ab>
