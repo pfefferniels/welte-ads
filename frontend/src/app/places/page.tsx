@@ -163,13 +163,6 @@ export default function PlacesPage() {
       <Box id="map" sx={{ scrollMarginTop: '1rem' }}>
         <WorldMap markers={markers} unit="Printings" timeline={timeline} chapters={chapters} groups={groups} />
       </Box>
-      <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1, mb: 2 }}>
-        A circle&apos;s size shows how many printings appeared in a place, its colour the language
-        printed there most often; click it for the place below. Play the years to see where the ads
-        were printed year by year; a card names the chapter of the story, which is told in full below.
-        The map shows where this collection found ads, and that depends on what is digitised: many
-        Australian, Dutch and Swedish papers are, few German ones.
-      </Typography>
 
       <StoryList chapters={chapters} />
 
