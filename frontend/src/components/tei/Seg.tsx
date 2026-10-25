@@ -16,9 +16,9 @@ const Seg = ({ teiNode, availableRoutes }: TEIProps) => {
   const seg = teiNode as Element
   // a segment can stand for several topics
   const topics = (seg.getAttribute("ana") || '').split(/\s+/).filter(Boolean)
-  // who assigned the topics: the editor or Claude
+  // who assigned the topics: the editor or the language model
   const resp = seg.getAttribute("resp")
-  const annotator = resp === '#claude' ? 'Claude, an AI model' : resp === '#np' ? EDITOR.name : null
+  const annotator = resp === '#claude' ? 'a large language model' : resp === '#np' ? EDITOR.name : null
   const type = seg.getAttribute('type') || ''
 
   const definitions = useContext(TopicsContext)

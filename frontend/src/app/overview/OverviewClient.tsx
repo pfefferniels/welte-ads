@@ -20,7 +20,7 @@ type Column = 'company' | 'title' | 'date'
 // which ads the table shows: all, or only the checked or unchecked ones
 type Filter = 'all' | Status
 
-const UNCHECKED = 'Transcribed, encoded and annotated by Claude, an AI model; not yet checked against the scan by the editor'
+const UNCHECKED = 'Transcribed, encoded and annotated by a large language model; not yet checked against the scan by the editor'
 
 // the mark of an ad that the editor has not yet checked
 const Unchecked = () => (
@@ -124,8 +124,8 @@ export default function OverviewClient({ rows }: { rows: Row[] }) {
         </ToggleButtonGroup>
         <Typography variant="body2" component="p" sx={{ flex: '1 1 20rem', color: 'text.secondary' }}>
           Ads marked <Unchecked /> were transcribed, encoded and annotated by
-          Claude, an AI model, and are not yet checked against the scan by the
-          editor (see the <Link href="/guidelines/">guidelines</Link>).
+          a large language model and are not yet checked against the scan by
+          the editor (see the <Link href="/guidelines/">guidelines</Link>).
         </Typography>
       </Box>
       <TableContainer>

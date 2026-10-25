@@ -105,16 +105,16 @@ describe("STYLES", () => {
     ].join('\n')])
   })
 
-  it("says in every style that an unchecked ad is Claude's transcription", () => {
+  it("says in every style that an unchecked ad is the transcription of an AI model", () => {
     for (const style of Object.keys(STYLES) as Style[]) {
       for (const form of cite(style, { status: 'unchecked' })) {
-        expect(form, style).toMatch(/Claude \((AI model|KI-Modell)\)/)
+        expect(form, style).toMatch(/von einem KI-Modell|by an AI model/)
       }
     }
     expect(cite('chicago', { status: 'unchecked' })[1])
-      .toContain('November 15, 1910. Transcribed by Claude (AI model), not yet checked by the editor. In ')
+      .toContain('November 15, 1910. Transcribed by an AI model, not yet checked by the editor. In ')
     expect(cite('apa', { status: 'unchecked' })[0])
-      .toContain('[Advertisement by Alfred Schmid Nachf., November 15, 1910; transcribed by Claude (AI model), not yet checked by the editor].')
+      .toContain('[Advertisement by Alfred Schmid Nachf., November 15, 1910; transcribed by an AI model, not yet checked by the editor].')
   })
 
   it("leaves out the day of access until it is known", () => {

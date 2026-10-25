@@ -13,7 +13,7 @@ export interface Cited {
   company: string
   // when the ad appeared, as the subtitle of its file says, e.g. "October 6 and 9, 1908"
   date: string
-  // an unchecked ad is cited as Claude's transcription
+  // an unchecked ad is cited as the transcription of an AI model
   status: Status
   // the year of the edition's current release, if it has one
   year: string | null
@@ -34,8 +34,8 @@ const link = (href: string, text = href): Part => ({ link: href, text })
 const parts = (...items: (Part | false)[]) => items.filter((item): item is Part => item !== false)
 
 const UNCHECKED = {
-  en: 'transcribed by Claude (AI model), not yet checked by the editor',
-  de: 'transkribiert von Claude (KI-Modell), noch nicht vom Herausgeber geprüft',
+  en: 'transcribed by an AI model, not yet checked by the editor',
+  de: 'transkribiert von einem KI-Modell, noch nicht vom Herausgeber geprüft',
 }
 
 // the title without the quotation marks of a title that is a quotation, and
