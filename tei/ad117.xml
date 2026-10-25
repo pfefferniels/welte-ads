@@ -163,6 +163,7 @@
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
         <rendition xml:id="g2" scheme="css">letter-spacing: 0.3em;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
@@ -247,6 +248,7 @@
       <langUsage><language ident="es">Spanish</language></langUsage>
     </profileDesc>
     <revisionDesc status="checked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-25" who="#np">Checked against the scan by the editor.</change>
       <change when="2026-10-25" who="#claude">The two medals identified and described, with editorial notes on their sources.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
@@ -298,15 +300,15 @@
         <ab><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118779559">Leoncavallo</persName></ab>
       </div>
       <div facs="#zone_text">
-        <p><lb/>La <orgName>WELTE MIGNON CO.</orgName> <seg xml:id="topic_9" ana="#the_original" type="topic" resp="#claude">fué la primera fábrica en el
+        <p rendition="#j"><lb/>La <orgName>WELTE MIGNON CO.</orgName> <seg xml:id="topic_9" ana="#the_original" type="topic" resp="#claude">fué la primera fábrica en el
           <lb/>mundo que construyó y construye pianos REPRODUCTO-
           <lb/>RES</seg>, por cuya razón <seg xml:id="topic_1" ana="#the_original" type="topic" resp="#claude">conserva en su poder las patentes de
           <lb/>registros de expresión en los pianos Reproductores</seg>.</p>
-        <p><lb/>La <orgName>WELTE MIGNON CO.</orgName> <seg xml:id="topic_2" ana="#world_renown #superlatives" type="topic" resp="#claude">ha sido premiada en todas
+        <p rendition="#j"><lb/>La <orgName>WELTE MIGNON CO.</orgName> <seg xml:id="topic_2" ana="#world_renown #superlatives" type="topic" resp="#claude">ha sido premiada en todas
           <lb/>las Exposiciones Internacionales con Medallas de Oro, y ha
           <lb/>obtenido la más alta calificación entre distintos fabricantes
           <lb/>de pianos</seg>.</p>
-        <p><lb/><seg xml:id="topic_10" ana="#world_renown" type="topic" resp="#claude">Los más competentes Críticos, los más notables Artistas,
+        <p rendition="#j"><lb/><seg xml:id="topic_10" ana="#world_renown" type="topic" resp="#claude">Los más competentes Críticos, los más notables Artistas,
           <lb/>reconocen en el piano REPRODUCTOR “<name type="brand">WELTE MIGNON</name>”</seg>
           <lb/><seg xml:id="topic_3" ana="#faithful_reproduction #superlatives" type="topic" resp="#claude">el más fiel y exacto intérprete</seg>, como lo demuestran las decla-
           <lb/>raciones hechas a la <orgName>WELTE MIGNON CO</orgName>, por conocidos y
@@ -314,22 +316,22 @@
           <lb/>cuyo testimonio insertamos parte a continuación:</seg></p>
       </div>
       <div facs="#zone_testimonial">
-        <p><quote type="testimonial"><lb/>“Me siento <sic>impedido</sic> a escribir a ustedes cuán deleitado
+        <p rendition="#j"><quote type="testimonial"><lb/>“Me siento <sic>impedido</sic> a escribir a ustedes cuán deleitado
           <lb/>estaba yo con el “<name type="brand">WELTE MIGNON</name>” al oir reproducir el
           <lb/>“NOCTURNO” de <persName type="composer" corresp="https://d-nb.info/gnd/118520539">CHOPIN</persName> y su “POLONAISE Op. 23”. Es
           <lb/>ciertamente la primera vez que <seg xml:id="topic_4" ana="#artists_hear_themselves" type="topic" resp="#claude">puedo decir que me he oído a mí
           <lb/>mismo, pues sentí que todo emanaba de mí</seg>”.</quote></p>
       </div>
       <div facs="#zone_text2">
-        <p><lb/>A igual que la opinión del gran <persName type="artist" corresp="https://d-nb.info/gnd/116308621">PUGNO</persName> <seg xml:id="topic_12" ana="#testimonials #world_renown" type="topic" resp="#claude">es la de otros cé-
+        <p rendition="#j"><lb/>A igual que la opinión del gran <persName type="artist" corresp="https://d-nb.info/gnd/116308621">PUGNO</persName> <seg xml:id="topic_12" ana="#testimonials #world_renown" type="topic" resp="#claude">es la de otros cé-
           <lb/>lebres Artistas cuyos nombres aparecen al margen</seg>.</p>
-        <p><lb/>El piano Reproductor “<name type="brand">WELTE MIGNON</name>” ha hecho
+        <p rendition="#j"><lb/>El piano Reproductor “<name type="brand">WELTE MIGNON</name>” ha hecho
           <lb/>posible <seg xml:id="topic_5" ana="#masters_at_home #within_reach" type="topic" resp="#claude">llevar a todos los hogares</seg> y en cualquier país, <seg xml:id="topic_6" ana="#faithful_reproduction" type="topic" resp="#claude">el exac-
           <lb/>to modo de tocar de los más célebres Artistas</seg>; <seg xml:id="topic_13" ana="#touch_and_individuality" type="topic" resp="#claude">usted los oirá
           <lb/>tocar con todos sus detalles y escuchará cada una de sus fra-
           <lb/>ses; su propia nota</seg>, <seg xml:id="topic_7" ana="#illusion_of_presence" type="topic" resp="#claude">tal como si él estuviese presente, ejecutan-
           <lb/>do su poderío para usted</seg>.</p>
-        <p><lb/>Usted puede comprarlo, en su próxima salida, visite el
+        <p rendition="#j"><lb/>Usted puede comprarlo, en su próxima salida, visite el
           <lb/>QUINTO PISO del “Edificio Stowers” en SAN RAFAEL No.
           <lb/>29, Habana, y <seg xml:id="topic_14" ana="#hearing_is_believing #satisfied_owners" type="topic" resp="#claude">después de oir el Reproductor “<name type="brand">WELTE MIG-
           <lb/>NON</name>”, su opinión será igual que las de millares de personas

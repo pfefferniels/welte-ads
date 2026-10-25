@@ -186,6 +186,7 @@
                 <rendition xml:id="c" scheme="css">text-align: center;</rendition>
                 <rendition xml:id="et2" scheme="css">margin-left: 4em;</rendition>
                 <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+                <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
                 <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
                 <rendition xml:id="right" scheme="css">text-align: right;</rendition>
             </tagsDecl>
@@ -263,6 +264,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
             <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -336,7 +338,7 @@
             </quote>
             <lb /><seg xml:id="topic_16" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#right #b"><persName type="artist" corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>.</hi></seg></hi></ab></div>
         <div facs="#eSc_textblock_31285247">
-            <ab><lb />Mit dem <name type="brand">Welte Mignon</name>
+            <ab rendition="#j"><lb />Mit dem <name type="brand">Welte Mignon</name>
             ist, <seg xml:id="topic_11" ana="#world_renown" type="topic" resp="#claude">wie die berühmtesten Künstler anerkennen</seg>, ein phantastisch scheinender Gedanke
             <lb />verwirklicht, nämlich <seg xml:id="topic_12" ana="#touch_and_individuality" type="topic" resp="#claude">das Klavierspiel eines Künstlers mit all' seinen persönlichen Eigenschaften - des Anschlags,
             <lb />der Phrasierung, des Pedalgebrauchs etc.</seg>

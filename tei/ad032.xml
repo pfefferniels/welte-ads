@@ -180,6 +180,7 @@
                 <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
                 <rendition xml:id="c" scheme="css">text-align: center;</rendition>
                 <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
+                <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
                 <rendition xml:id="k" scheme="css">font-variant: small-caps;</rendition>
                 <rendition xml:id="right" scheme="css">text-align: right;</rendition>
             </tagsDecl>
@@ -255,6 +256,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
             <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -326,7 +328,7 @@
         </div>
 
         <div facs="#zone_intro">
-            <p>
+            <p rendition="#j">
                 <lb /><seg xml:id="topic_7" ana="#wonder #world_renown #the_original" type="topic" resp="#claude">The original instrument which astonished the
                 <lb />musical world</seg>, <seg xml:id="topic_8" ana="#composers_own_works" type="topic" resp="#claude">and for which scores and scores
                 <lb />of famous pianists and composers have played
@@ -350,7 +352,7 @@
         </div>
 
         <div facs="#zone_novelist">
-            <ab><hi rendition="#k">
+            <ab rendition="#j"><hi rendition="#k">
                 <lb />our distinguished novelist and a lover of the best in
                 <lb />music, has written the foreword to the newly pub-
                 <lb />lished <name type="brand">Welte-Mignon Catalog</name>, which is a little classic
@@ -360,7 +362,7 @@
         </div>
 
         <div facs="#zone_quote">
-            <ab><hi rendition="#i">
+            <ab rendition="#j"><hi rendition="#i">
             <lb />
             <quote>
                 "Some ten years or so ago a friend took me into her house and showed
@@ -397,7 +399,7 @@
         </div>
 
         <div facs="#zone_cordially">
-            <ab><hi rendition="#k">
+            <ab rendition="#j"><hi rendition="#k">
                 <lb />that
                 <seg xml:id="topic_4" ana="#masters_at_home" type="topic" resp="#claude">
                     you can have the most distinguished pian-

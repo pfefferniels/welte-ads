@@ -184,6 +184,7 @@
                 <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
                 <rendition xml:id="c" scheme="css">text-align: center;</rendition>
                 <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+                <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
                 <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
                 <rendition xml:id="u" scheme="css">text-decoration: underline;</rendition>
             </tagsDecl>
@@ -313,6 +314,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
             <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -353,7 +355,7 @@
         </div>
 
         <div facs="#eSc_textblock_fe5bb22e">
-            <ab><lb /><seg xml:id="topic_2" ana="#epoch_making_invention #national_pride" type="topic" resp="#claude">Deutschem Erfindungsgeist</seg> ist es geglückt, eine geradezu phantastisch er-
+            <ab rendition="#j"><lb /><seg xml:id="topic_2" ana="#epoch_making_invention #national_pride" type="topic" resp="#claude">Deutschem Erfindungsgeist</seg> ist es geglückt, eine geradezu phantastisch er-
             <lb />scheinende Idee - ein
             <seg xml:id="topic_3" ana="#how_it_works" resp="#claude" type="topic">
                 akustisches Seitenstück zur Platte des Photo-<lb />graphen

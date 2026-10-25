@@ -180,6 +180,7 @@
                 <rendition xml:id="c" scheme="css">text-align: center;</rendition>
                 <rendition xml:id="dropcap" scheme="css">float: left; font-size: 3.2em; line-height: 0.8;</rendition>
                 <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
+                <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
                 <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
                 <rendition xml:id="right" scheme="css">text-align: right;</rendition>
                 <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
@@ -271,6 +272,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
             <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -377,7 +379,7 @@
             </hi></ab>
         </div>
         <div facs="#eSc_textblock_2389efb5">
-            <ab><lb /><hi rendition="#dropcap">A</hi><hi rendition="#uc">ccept</hi> as soon as you can our cordial invita-
+            <ab rendition="#j"><lb /><hi rendition="#dropcap">A</hi><hi rendition="#uc">ccept</hi> as soon as you can our cordial invita-
             <lb />tion to spend a delightful hour or two with
             <lb />the masters of classic or popular music at our
             <lb />beautiful studios. We shall gladly play your fav-
@@ -388,7 +390,7 @@
             <lb />prices and on exceptional terms.</ab>
         </div>
         <div facs="#eSc_textblock_2cbb468e">
-            <ab><lb /><seg xml:id="topic_13" ana="#faithful_reproduction #masters_at_home" type="topic" resp="#claude">If <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
+            <ab rendition="#j"><lb /><seg xml:id="topic_13" ana="#faithful_reproduction #masters_at_home" type="topic" resp="#claude">If <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>
             played to you, on your own piano, ex-
             <lb />actly as he played at the very zenith of his career</seg> when
             <lb />those marvelous fingers performed miracles, you could
@@ -445,7 +447,7 @@
             </hi></ab>
         </div>
         <div facs="#eSc_textblock_80803b8a">
-            <ab><lb />Our stock includes many examples of fine standard
+            <ab rendition="#j"><lb />Our stock includes many examples of fine standard
             <lb />makes–
             <name type="brand">Welte</name>, <name type="brand">Estey</name>, <name type="brand">Conway</name>,
             and others–<seg xml:id="topic_15" ana="#furniture" type="topic" resp="#claude">shown in a
@@ -478,7 +480,7 @@
         <div facs="#eSc_textblock_53814f97">
             <ab><lb /><hi rendition="#b #i #u">WELTE TERMS</hi></ab></div>
         <div facs="#eSc_textblock_e007686d">
-            <ab><hi rendition="#i">
+            <ab rendition="#j"><hi rendition="#i">
             <lb /><seg xml:id="topic_16" ana="#within_reach" type="topic" resp="#claude">We maintain that if music is to be
             <lb />enjoyed by everyone, it must be with-
             <lb />in everyone's reach.</seg> So we placed
@@ -539,7 +541,7 @@
             </hi></ab>
         </div>
         <div facs="#eSc_textblock_17b7db97">
-            <ab><lb />No matter how many times you've visited the <orgName>Studios</orgName> before this,
+            <ab rendition="#j"><lb />No matter how many times you've visited the <orgName>Studios</orgName> before this,
             <lb />come in again; there's always something new to see and to hear. Re-
             <lb />member that you are never pressed to buy–just come in as you would
             <lb />visit a famous picture gallery. But if you cannot come today or to-

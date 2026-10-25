@@ -164,6 +164,7 @@
         <rendition xml:id="dropcap" scheme="css">float: left; font-size: 3.2em; line-height: 0.8;</rendition>
         <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
         <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
       </tagsDecl>
       <classDecl>
@@ -225,6 +226,7 @@
       <langUsage><language ident="es">Spanish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -255,7 +257,7 @@
           <lb/>sentido poético.</hi></ab>
       </div>
       <div facs="#zone_text">
-        <p><lb/><hi rendition="#dropcap">L</hi>A MARAVILLOSA <seg xml:id="topic_1" ana="#faithful_reproduction" type="topic" resp="#claude">fidelidad con que la <name type="brand"><sic>WELT-MIGNON</sic></name> recoge todos los detalles de la eje-
+        <p rendition="#j"><lb/><hi rendition="#dropcap">L</hi>A MARAVILLOSA <seg xml:id="topic_1" ana="#faithful_reproduction" type="topic" resp="#claude">fidelidad con que la <name type="brand"><sic>WELT-MIGNON</sic></name> recoge todos los detalles de la eje-
           <lb/>cución en el piano de los grandes artistas, y la exactitud con que los reproduce</seg>—<seg xml:id="topic_6" ana="#touch_and_individuality" type="topic" resp="#claude">tanto en los
           <lb/>arranques heroicos de bravura como en los más dulces y alados matices</seg>—han hecho que <seg xml:id="topic_7" ana="#superlatives" type="topic" resp="#claude">este
           <lb/>instrumento incomparable</seg> <seg xml:id="topic_5" ana="#education #world_renown" type="topic" resp="#claude">figure actualmente en los grandes conservatorios del mundo, para que

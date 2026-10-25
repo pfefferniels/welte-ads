@@ -185,6 +185,7 @@
               <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
               <rendition xml:id="c" scheme="css">text-align: center;</rendition>
               <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+              <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
               <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
               <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
            </tagsDecl>
@@ -254,6 +255,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+           <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
            <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -306,7 +308,7 @@
                         <lb /><hi rendition="#in #larger"><name type="brand">Welte-Mignon</name></hi> 
                     </hi>
                 </head>
-                <ab><hi rendition="#b">
+                <ab rendition="#j"><hi rendition="#b">
                 <lb />
                 <seg xml:id="topic_1" ana="#masters_at_home" resp="#claude" type="topic">
                     Brings to your home
@@ -327,7 +329,7 @@
             </div>
             
             <div facs="#eSc_textblock_b2073d40">
-                <p>
+                <p rendition="#j">
                     <seg xml:id="topic_2" ana="#epoch_making_invention #superlatives" resp="#claude" type="topic">
                         <lb />The science of musical reproduction has progressed
                         <lb />through the various stages–experiment, medioc-
@@ -340,7 +342,7 @@
                         <lb />possible to go.
                     </seg>
                 </p>
-                <p>
+                <p rendition="#j">
                     <lb />The <name type="brand">Welte-Mignon</name> brings to the
                     music-lover <lb />the actual performances of every great living pian-
                     <lb />ist.
@@ -352,7 +354,7 @@
                         <lb />but misty memories.
                     </seg>
                 </p>
-                <p>
+                <p rendition="#j">
                     <seg xml:id="topic_4" ana="#how_it_works" resp="#claude" type="topic">
                         <lb />What the <name type="brand">Victor</name> is doing for the famous singers
                         <lb />of the world the <name type="brand">Welte-Mignon</name> is
@@ -371,7 +373,7 @@
                         <lb />formances.
                     </seg>
                 </p>
-                <p>
+                <p rendition="#j">
                     <lb />The series of instruments containing the repro-
                     <lb />duction devices are the <name type="brand">Welte-Mignon</name>, as illustrated
                     <lb />above; the <name type="brand">Steinway-Welte</name>, an upright

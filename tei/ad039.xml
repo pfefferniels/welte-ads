@@ -187,6 +187,7 @@
            <tagsDecl>
               <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
               <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
+              <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
               <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
            </tagsDecl>
            <classDecl>
@@ -222,6 +223,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+           <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
            <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -262,7 +264,7 @@
         </div>
 
         <div facs="#zone_paragraph1">
-            <p>
+            <p rendition="#j">
                 <seg xml:id="topic_1" ana="#artists_hear_themselves #domestic_comfort" resp="#claude" type="topic">
                     <lb />–not while he sits at the piano, but
                     <lb />comfortably established in an easy
@@ -277,7 +279,7 @@
         </div>
 
         <div facs="#zone_paragraph2">
-            <p>
+            <p rendition="#j">
                 <lb />The wonderful
                 <name type="brand">Welte-Mignon</name>
                 <hi rendition="#i">auto-
@@ -299,7 +301,7 @@
         </div>
 
         <div facs="#zone_paragraph3">
-            <p>
+            <p rendition="#j">
                 <lb />You can hear these masters of the piano
                 <lb />whenever you may wish to enjoy a delight-
                 <lb />ful experience, at the Studio of 

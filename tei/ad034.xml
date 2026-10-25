@@ -221,6 +221,7 @@
                 <rendition xml:id="et" scheme="css">margin-left: 2em;</rendition>
                 <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
                 <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+                <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
                 <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
             </tagsDecl>
             <classDecl>
@@ -271,6 +272,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
             <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -319,7 +321,7 @@
             </figure>
         </div>
         <div facs="#eSc_textblock_562dfbcc">
-            <p>
+            <p rendition="#j">
                 <hi rendition="#i">
                     <lb />No living pianist has done more
                     <lb />to engender a love for music among
@@ -338,7 +340,7 @@
             <hi rendition="#larger #c"><seg xml:id="topic_5" ana="#world_renown" type="topic" resp="#claude">World Famous <name type="brand">Welte-Mignon</name></seg></hi></ab>
         </div>
         <div facs="#eSc_textblock_d9bf3380">
-            <p>
+            <p rendition="#j">
                 <seg xml:id="topic_1" ana="#epoch_making_invention #superlatives" resp="#claude" type="topic">
                     <lb />
                     <hi rendition="#in">T</hi>he highest achievement of the House

@@ -164,6 +164,7 @@
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
         <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
       </tagsDecl>
@@ -225,6 +226,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -259,14 +261,14 @@
           <lb/><seg xml:id="topic_2" ana="#entertaining_guests" type="topic" resp="#claude">for Home Entertainment</seg></hi></head>
       </div>
       <div facs="#zone_text">
-        <p><lb/>The <name type="brand">Welte-Mignon Reproducing Piano</name>
+        <p rendition="#j"><lb/>The <name type="brand">Welte-Mignon Reproducing Piano</name>
           <lb/><seg xml:id="topic_3" ana="#entertaining_guests" type="topic" resp="#claude">makes a simple problem of home enter-
           <lb/>taining</seg>. <seg xml:id="topic_7" ana="#masters_at_home" type="topic" resp="#claude">A program by the great <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pach-
           <lb/>mann</persName>—an evening with the incomparable
           <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName></seg>—or perhaps <seg xml:id="topic_4" ana="#entertaining_guests #repertoire" type="topic" resp="#claude">a delightful im-
           <lb/>promptu dance, with the <name type="brand">Welte-Mignon</name> to
           <lb/>furnish the music</seg>.</p>
-        <p><lb/>With the famous <name type="brand">Welte-Mignon</name> in your
+        <p rendition="#j"><lb/>With the famous <name type="brand">Welte-Mignon</name> in your
           <lb/>home you will possess <seg xml:id="topic_5" ana="#superlatives" type="topic" resp="#claude">the supreme instru-
           <lb/>ment of its kind</seg>. The <name type="brand">Welte-Mignon</name> was
           <lb/><seg xml:id="topic_8" ana="#the_original #superlatives #world_renown" type="topic" resp="#claude">the first reproducing mechanism pro-
@@ -275,7 +277,7 @@
           <lb/>standard for all other reproducing actions</seg>.</p>
       </div>
       <div facs="#zone_invitation">
-        <ab><hi rendition="#b #i #smaller"><lb/>Come to our Music Salon and
+        <ab rendition="#j"><hi rendition="#b #i #smaller"><lb/>Come to our Music Salon and
           <lb/>let the <name type="brand">Welte-Mignon</name> play
           <lb/>for you your favorite music.</hi></ab>
       </div>

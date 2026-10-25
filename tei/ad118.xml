@@ -190,6 +190,7 @@
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
         <rendition xml:id="framed" scheme="css">border: 1px solid;</rendition>
         <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="k" scheme="css">font-variant: small-caps;</rendition>
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
@@ -222,6 +223,7 @@
       <langUsage><language ident="es">Spanish</language></langUsage>
     </profileDesc>
     <revisionDesc status="checked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-25" who="#np">Checked against the scan by the editor.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
@@ -245,7 +247,7 @@
         <figure xml:id="figure_1" ana="#refinement" resp="#claude"><desc>Line drawing: a salon with a grand piano, a bust on a column, a framed picture, an arch and a hanging lantern; on the right, the head of a woman with bobbed hair and long earrings</desc></figure>
       </div>
       <div facs="#zone_text">
-        <p><hi rendition="#framed"><lb/>Una mujer y un piano no deben faltar en ninguna
+        <p rendition="#j"><hi rendition="#framed"><lb/>Una mujer y un piano no deben faltar en ninguna
           <lb/>casa... Y si al mencionar el piano nos referimos a una
           <lb/><name type="brand">WELTE-MIGNON</name>, esto equivale a decir que <seg xml:id="topic_2" ana="#masters_at_home" type="topic" resp="#claude">los más
           <lb/>célebres pianistas de hoy alegrarán la casa</seg> con sus

@@ -191,6 +191,7 @@
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
         <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
@@ -216,6 +217,7 @@
       <langUsage><language ident="pt">Portuguese</language></langUsage>
     </profileDesc>
     <revisionDesc status="checked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-25" who="#np">Checked against the scan by the editor.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
@@ -250,7 +252,7 @@
           </app></hi></ab>
       </div>
       <div facs="#zone_text">
-        <p><hi rendition="#b"><lb/>tem a honra de convidar os amadores de bôa
+        <p rendition="#j"><hi rendition="#b"><lb/>tem a honra de convidar os amadores de bôa
           <lb/>musica para virem ouvir este apparelho que
           <lb/><seg xml:id="topic_1" ana="#how_it_works" type="topic" resp="#claude">por meio da electricidade</seg> reproduz musicas
           <lb/><sic>interpretradas</sic> por <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewsky</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-Saens</persName>;
@@ -258,7 +260,7 @@
           <lb/>dades.</hi></p>
       </div>
       <div facs="#zone_audicoes">
-        <p><lb/><hi rendition="#b">Audições</hi> todos os dias das 2 horas da tarde em
+        <p rendition="#j"><lb/><hi rendition="#b">Audições</hi> todos os dias das 2 horas da tarde em
           <lb/>deante, na unica agencia <seg xml:id="topic_2" ana="#wonder" type="topic" resp="#claude">desta maravilha</seg> á</p>
       </div>
       <div facs="#zone_address">
