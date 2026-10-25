@@ -226,8 +226,7 @@
                knowledge of the editor's earlier taxonomy, which it replaced
                in October 2026; it keeps the topics that at least three of the
                readings found. The topics are an interpretation, assigned by
-               whom <att>resp</att> says, so far all by the language model;
-               the editor has not yet checked them.</p>
+               whom <att>resp</att> says, so far all by the language model.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,

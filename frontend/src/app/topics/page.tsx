@@ -42,9 +42,8 @@ export default function TopicsPage() {
           pp. 2956&ndash;2984,{' '}
           <a href="https://doi.org/10.18653/v1/2024.naacl-long.164">doi:10.18653/v1/2024.naacl-long.164</a>.
         </Footnote>
-        {' '}and then assigned by it; the editor has not yet checked them. The area
-        of each circle grows with the number of passages and pictures
-        marked with its topic.
+        {' '}and then assigned by it. The area of each circle grows with the
+        number of passages and pictures marked with its topic.
       </Typography>
 
       <WeighedCircles data={weighedTopics} />
