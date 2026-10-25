@@ -69,9 +69,8 @@ interface StoryCardProps {
 /**
  * The chapter of the time shown, in a top corner of the picture on a wide
  * screen and below it on a narrower one: its caption, short enough to be
- * read while the timeline plays on, and a link to its text in the list of
- * chapters. Give it the chapter's id as a key, so that it fades
- * in anew with each chapter.
+ * read while the timeline plays on. Give it the chapter's id as a key, so
+ * that it fades in anew with each chapter.
  */
 export const StoryCard = ({ chapter, side = 'left', onHide }: StoryCardProps) => (
   <Fade in timeout={500}>
@@ -93,9 +92,7 @@ export const StoryCard = ({ chapter, side = 'left', onHide }: StoryCardProps) =>
       zIndex: 1,
     }}>
       <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 0.5 }}>
-        <Box sx={{ flex: 1 }}>
-          {chapter.caption} <a href={`#chapter-${chapter.id}`}>More</a>
-        </Box>
+        <Box sx={{ flex: 1 }}>{chapter.caption}</Box>
         <IconButton size="small" aria-label="Hide the story" title="Hide the story" onClick={onHide} sx={{ mt: -0.5, mr: -0.75 }}>
           <Close fontSize="small" />
         </IconButton>
