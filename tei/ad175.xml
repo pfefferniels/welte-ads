@@ -167,6 +167,7 @@
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
         <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
         <rendition xml:id="right" scheme="css">text-align: right;</rendition>
       </tagsDecl>
@@ -244,6 +245,7 @@
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">The paragraphs of the text and of the judgements, and the note at the foot, marked as justified.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -268,7 +270,7 @@
           <lb/><hi rendition="#in #b"><name type="brand">WELTE-MIGNON</name>?</hi></hi></head>
       </div>
       <div facs="#zone_text">
-        <p><hi rendition="#b"><lb/><seg xml:id="topic_3" ana="#world_renown #wonder" type="topic" resp="#claude">Alle Welt hat von diesem wunderbaren Reproduktions-
+        <p rendition="#j"><hi rendition="#b"><lb/><seg xml:id="topic_3" ana="#world_renown #wonder" type="topic" resp="#claude">Alle Welt hat von diesem wunderbaren Reproduktions-
           <lb/>Piano sprechen gehört</seg> und doch, wie wenige kennen
           <lb/>es! <seg xml:id="topic_1" ana="#not_mechanical #the_artists_soul" type="topic" resp="#claude">Viele glauben vielleicht, es handle sich um ein
           <lb/>mechanisches, rein maschinenmässig spielendes In-
@@ -277,15 +279,15 @@
           <lb/>als eine solche Ansicht.</seg> <seg xml:id="topic_4" ana="#hearing_is_believing #superlatives" type="topic" resp="#claude">Wer einmal dem <name type="brand">WELTE-
           <lb/>MIGNON</name> gelauscht hat, der ist überzeugt von dessen
           <lb/>unvergleichlich <hi rendition="#g">hervorragender</hi> Wiedergabe des
-          <lb/>∴ <hi rendition="#c">Meister-Klavierspiels.</hi></seg> ∴</hi></p>
+          <lb/>∴ Meister-Klavierspiels.</seg> ∴</hi></p>
         <p><lb/><hi rendition="#c">◻ ◻ ◻</hi></p>
       </div>
       <div facs="#zone_judgements">
         <head><lb/><hi rendition="#c #b"><seg xml:id="topic_5" ana="#testimonials" type="topic" resp="#claude">Musikalische Grössen urteilen wie folgt:</seg></hi></head>
-        <p><lb/><hi rendition="#b"><persName type="composer" corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>:</hi> <quote type="testimonial"><seg xml:id="topic_6" ana="#epoch_making_invention" type="topic" resp="#claude"><name type="brand">Welte-Mignon</name> ist eine ganz ausserordentliche Erfindung</seg>, <seg xml:id="topic_7" ana="#unique_and_superior #not_mechanical" type="topic" resp="#claude"><hi rendition="#b">von
+        <p rendition="#j"><lb/><hi rendition="#b"><persName type="composer" corresp="https://d-nb.info/gnd/11861911X">Richard Strauss</persName>:</hi> <quote type="testimonial"><seg xml:id="topic_6" ana="#epoch_making_invention" type="topic" resp="#claude"><name type="brand">Welte-Mignon</name> ist eine ganz ausserordentliche Erfindung</seg>, <seg xml:id="topic_7" ana="#unique_and_superior #not_mechanical" type="topic" resp="#claude"><hi rendition="#b">von
           <lb/>allen</hi> derartigen Mechanismen der <hi rendition="#b">einzige</hi>, der auf künstlerische Bedeutung Anspruch
           <lb/>machen kann</seg>. Den Erfindern meine aufrichtigste Bewunderung.</quote></p>
-        <p><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/120890143">Theodor Leschetizky</persName>:</hi> <quote type="testimonial">Ich muss diese Erfindung, die <hi rendition="#b">sich so ganz einfach
+        <p rendition="#j"><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/120890143">Theodor Leschetizky</persName>:</hi> <quote type="testimonial">Ich muss diese Erfindung, die <hi rendition="#b">sich so ganz einfach
           <lb/>„<name type="brand">Welte-Mignon</name>“</hi>, nennt, <seg xml:id="topic_2" ana="#wonder" type="topic" resp="#claude">als ein wahres Wunder bezeichnen</seg>, <seg xml:id="topic_8" ana="#if_only_earlier" type="topic" resp="#claude"><hi rendition="#b">und muss es nur bedauern,
           <lb/>dass dieses Wunder nicht seit 100 Jahren</hi> geschehen ist</seg>. <seg xml:id="topic_9" ana="#education #if_only_earlier" type="topic" resp="#claude">Wieviel hätte <hi rendition="#b">„Alt und Jung“
           <lb/>daraus lernen</hi> können</seg>. Wie gerne möchte man jung sein und bleiben, um aus diesem
@@ -302,7 +304,7 @@
           <address><addrLine><lb/><hi rendition="#b #right">Sonnenquai.</hi></addrLine></address></hi></ab>
       </div>
       <div facs="#zone_memoria">
-        <p><hi rendition="#larger"><lb/><hi rendition="#b">Pro memoria!</hi> Heute abend 5 Uhr <name type="brand">Welte-Mignon</name>-Konzert in un-
+        <p rendition="#j"><hi rendition="#larger"><lb/><hi rendition="#b">Pro memoria!</hi> Heute abend 5 Uhr <name type="brand">Welte-Mignon</name>-Konzert in un-
           <lb/>serem Pianolasaale. Einlasskarten (kostenfrei) im Klavierladen.</hi></p>
       </div>
     </body>

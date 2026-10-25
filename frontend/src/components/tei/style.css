@@ -228,6 +228,18 @@ tei-text {
     text-align: right;
 }
 
+.j {
+    display: block;
+    text-align: justify;
+}
+
+/* in the layout view, the lines that end in an encoded line break run
+   flush to both edges as well; Div.tsx fills out the last line of the
+   block, so that it keeps its length */
+.layout .zone .j {
+    text-align-last: justify;
+}
+
 .sub {
     vertical-align: sub;
     font-size: .7em;
@@ -388,7 +400,9 @@ tei-lb:before {
 
 /* a caption printed under the picture */
 .layout .zone.illustration > tei-figure ~ tei-p:last-of-type,
-.layout .zone.illustration > tei-figure ~ tei-ab:last-of-type {
+.layout .zone.illustration > tei-figure ~ tei-ab:last-of-type,
+.layout .zone.illustration > .free > tei-figure ~ tei-p:last-of-type,
+.layout .zone.illustration > .free > tei-figure ~ tei-ab:last-of-type {
     position: absolute;
     left: 0;
     right: 0;

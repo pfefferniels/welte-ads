@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { alongLongerSide, computeLayout, exclusions, parsePoints } from "./facsimile"
+import { alongLongerSide, computeLayout, exclusions, freeRect, parsePoints } from "./facsimile"
 
 describe("parsePoints", () => {
   it("reads TEI points, tolerating line breaks", () => {
@@ -154,5 +154,38 @@ describe("exclusions", () => {
   it("ignores the sloppy corners of an automatic segmentation", () => {
     const sloppy: [number, number][] = [[10, 0], [400, 0], [400, 290], [390, 300], [0, 300], [0, 8]]
     expect(exclusions(sloppy, 400, 300)).toBeNull()
+  })
+})
+
+describe("freeRect", () => {
+  const rect = (x1: number, y1: number, x2: number, y2: number): [number, number][] =>
+    [[x1, y1], [x2, y1], [x2, y2], [x1, y2]]
+  const zonesOf = (zones: Record<string, [number, number][]>) => computeLayout({
+    surfaces: [{ url: "page.png", width: 2000, height: 2000 }],
+    zones: Object.entries(zones).map(([id, points]) => ({ id, surface: 0, points })),
+  }, 0).zones
+
+  it("finds the room below a headline printed over the top of a picture", () => {
+    const zones = zonesOf({ picture: rect(0, 0, 1000, 800), headline: rect(600, -20, 1100, 150) })
+    expect(freeRect(zones.picture, Object.values(zones))).toEqual({ left: 0, top: 150, width: 1000, height: 650 })
+  })
+
+  it("keeps clear of a band set diagonally across a picture", () => {
+    // the band runs between the lines x + y = 1000 and x + y = 1282
+    const zones = zonesOf({
+      picture: rect(0, 0, 1200, 1200),
+      band: [[0, 1000], [1000, 0], [1141, 141], [141, 1141]],
+    })
+    const { left, top, width, height } = freeRect(zones.picture, Object.values(zones))!
+    const sums = [left + top, left + width + top + height]
+    expect(sums[0] >= 1282 || sums[1] <= 1000).toBe(true)
+    expect(width * height).toBeGreaterThan(0.1 * 1200 * 1200)
+  })
+
+  it("is null where nothing covers the zone, or nearly all of it", () => {
+    const apart = zonesOf({ picture: rect(0, 0, 1000, 800), text: rect(0, 900, 1000, 1200) })
+    expect(freeRect(apart.picture, Object.values(apart))).toBeNull()
+    const covered = zonesOf({ picture: rect(100, 100, 900, 700), text: rect(0, 0, 1000, 800) })
+    expect(freeRect(covered.picture, Object.values(covered))).toBeNull()
   })
 })

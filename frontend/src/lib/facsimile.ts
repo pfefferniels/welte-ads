@@ -159,6 +159,80 @@ export function alongLongerSide(zone: PlacedZone): PlacedZone {
   }
 }
 
+// the outline of a placed zone on the canvas
+const outlineOf = (zone: PlacedZone): Point[] => {
+  if (zone.shape) return zone.shape.map(([x, y]) => [zone.left + x, zone.top + y] as Point)
+  const [cos, sin] = [Math.cos(zone.rotation * Math.PI / 180), Math.sin(zone.rotation * Math.PI / 180)]
+  return ([[-1, -1], [1, -1], [1, 1], [-1, 1]] as Point[]).map(([sx, sy]) => {
+    const [x, y] = [sx * zone.width / 2, sy * zone.height / 2]
+    return [zone.left + zone.width / 2 + x * cos - y * sin, zone.top + zone.height / 2 + x * sin + y * cos] as Point
+  })
+}
+
+const isInside = ([x, y]: Point, polygon: Point[]) => {
+  let inside = false
+  for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
+    const [xi, yi] = polygon[i]
+    const [xj, yj] = polygon[j]
+    if ((yi > y) !== (yj > y) && x < xi + (y - yi) / (yj - yi) * (xj - xi)) inside = !inside
+  }
+  return inside
+}
+
+/**
+ * The room that the other zones leave in a zone, relative to it: the
+ * largest rectangle that none of them covers, preferring one that is not
+ * narrower than it is high, as lines of text are. It is where the
+ * description of a picture goes when text is printed over the picture.
+ * Null when no other zone covers any of the zone (the whole zone is free),
+ * or when hardly any room is left. The zone must not be slanted.
+ */
+export function freeRect(zone: PlacedZone, zones: PlacedZone[], minShare = 0.05, steps = 12): Rect | null {
+  const { width, height } = zone
+  const covering = zones
+    .filter(other => other.id !== zone.id)
+    .map(other => outlineOf(other).map(([x, y]) => [x - zone.left, y - zone.top] as Point))
+
+  // a grid along the edges of the other zones and a few lines between,
+  // each cell taken or free
+  const lines = (values: number[], size: number) => Array.from(new Set([
+    0, size,
+    ...values.filter(value => value > 0 && value < size),
+    ...Array.from({ length: steps - 1 }, (_, i) => (i + 1) * size / steps),
+  ])).sort((a, b) => a - b)
+  const xs = lines(covering.flat().map(([x]) => x), width)
+  const ys = lines(covering.flat().map(([, y]) => y), height)
+  // a cell is taken when another zone covers its middle, a corner or the
+  // middle of a side, just within the cell
+  const samples = (from: number, to: number) => [from + 1e-3 * (to - from), (from + to) / 2, to - 1e-3 * (to - from)]
+  const taken = ys.slice(1).map((bottom, row) => xs.slice(1).map((right, column) =>
+    samples(xs[column], right).some(x => samples(ys[row], bottom).some(y =>
+      covering.some(polygon => isInside([x, y], polygon))))))
+  if (!taken.flat().some(Boolean)) return null
+
+  let best: Rect | null = null
+  let bestScore = 0
+  for (let first = 0; first < xs.length - 1; first++) {
+    // the rows that are free from the first column to the last so far
+    const free = taken.map(() => true)
+    for (let last = first; last < xs.length - 1; last++) {
+      taken.forEach((cells, row) => { free[row] = free[row] && !cells[last] })
+      const w = xs[last + 1] - xs[first]
+      let start = 0
+      for (let row = 0; row <= free.length; row++) {
+        if (row < free.length && free[row]) continue
+        const h = ys[row] - ys[start]
+        if (h > 0 && w * Math.min(w, h) > bestScore) {
+          bestScore = w * Math.min(w, h)
+          best = { left: xs[first], top: ys[start], width: w, height: h }
+        }
+        start = row + 1
+      }
+    }
+  }
+  return best && best.width * best.height >= minShare * width * height ? best : null
+}
+
 const union = (rects: Rect[]): Rect => {
   const left = Math.min(...rects.map(r => r.left))
   const top = Math.min(...rects.map(r => r.top))

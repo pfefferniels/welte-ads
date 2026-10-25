@@ -90,6 +90,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, topics, imageLi
   const [metadataOpen, setMetadataOpen] = useState(false)
 
   const layout = useMemo(() => computeLayout(facsimile), [facsimile])
+  const zones = useMemo(() => Object.values(layout.zones), [layout])
   const hasLayout = Object.keys(layout.zones).length > 0
   // a link to a passage, e.g. from a topic, opens the text, where the passage
   // can be scrolled to
@@ -131,7 +132,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, topics, imageLi
   const layoutRoutes: Routes = useMemo(() => ({
     "tei-tei": Tei,
     "tei-teiheader": Hidden,
-    "tei-div": (props) => <Div zoneGetter={id => layout.zones[id] || null} {...props} />,
+    "tei-div": (props) => <Div zoneGetter={id => layout.zones[id] || null} zones={zones} {...props} />,
     "tei-persname": Name,
     "tei-orgname": Name,
     "tei-seg": Seg,
@@ -139,7 +140,7 @@ const EditionCeteicean = ({ name, prefixed, elements, facsimile, topics, imageLi
     "tei-note": Note,
     "tei-ref": Ref,
     "tei-msidentifier": MsIdentifier
-  }), [layout])
+  }), [layout, zones])
 
   const textRoutes: Routes = useMemo(() => ({
     "tei-tei": Tei,

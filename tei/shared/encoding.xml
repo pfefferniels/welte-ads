@@ -151,6 +151,7 @@
             <rendition xml:id="g2" scheme="css">letter-spacing: 0.3em;</rendition>
             <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
             <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+            <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
             <rendition xml:id="k" scheme="css">font-variant: small-caps;</rendition>
             <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
             <rendition xml:id="outline" scheme="css">-webkit-text-fill-color: transparent; -webkit-text-stroke: 0.03em;</rendition>

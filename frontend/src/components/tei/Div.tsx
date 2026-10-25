@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useMemo, useRef } from "react"
 import { Behavior } from "./Behavior"
 import { TEINodes } from "react-teirouter"
-import { PlacedZone, alongLongerSide } from "../../lib/facsimile"
+import { PlacedZone, alongLongerSide, freeRect } from "../../lib/facsimile"
 
 interface TEIProps {
     teiNode: Node
@@ -10,6 +10,8 @@ interface TEIProps {
 
 interface WithZoneGetter {
     zoneGetter: (id: string) => PlacedZone | null
+    // all zones of the layout
+    zones: PlacedZone[]
 }
 
 const fits = (el: HTMLElement, width: number, height: number) =>
@@ -108,6 +110,41 @@ const fitText = (el: HTMLElement, zone: PlacedZone, max: number, keepLines: bool
     el.dataset.fit = `${mode} ${Math.round(size)}px`
 }
 
+const FILLER = 'last-line-filler'
+
+/**
+ * Fills out the last line of every justified block in the zone with an
+ * empty box, so that justifying it, as the lines before an encoded line
+ * break are justified, leaves it as long as it is. The zone must not be
+ * turned.
+ */
+const fillLastLines = (el: HTMLElement) => {
+    el.querySelectorAll<HTMLElement>('.j').forEach(block => {
+        // the lines as they are without justifying the last one
+        block.style.textAlignLast = 'start'
+        const range = document.createRange()
+        range.selectNodeContents(block)
+        const rects = Array.from(range.getClientRects()).filter(r => r.width > 0 && r.height > 0)
+        const box = block.getBoundingClientRect()
+        block.style.textAlignLast = ''
+        if (rects.length === 0 || block.offsetWidth === 0) return
+
+        const bottom = Math.max(...rects.map(r => r.top))
+        const end = Math.max(...rects.filter(r => r.top > bottom - r.height / 2).map(r => r.right))
+        // the layout is zoomed
+        const scale = box.width / block.offsetWidth
+        const filler = document.createElement('span')
+        filler.className = FILLER
+        filler.setAttribute('aria-hidden', 'true')
+        filler.style.display = 'inline-block'
+        filler.style.width = `${Math.max(0, (box.right - end) / scale - 1)}px`
+        block.appendChild(filler)
+    })
+}
+
+const removeFillers = (el: HTMLElement) =>
+    el.querySelectorAll(`.${FILLER}`).forEach(filler => filler.remove())
+
 // Whether the div holds any transcribed text, as opposed to editorial
 // descriptions of gaps and figures.
 const hasPrintedText = (node: Node): boolean => {
@@ -121,7 +158,7 @@ const hasPrintedText = (node: Node): boolean => {
     return false
 }
 
-const Div = ({ teiNode, availableRoutes, zoneGetter }: TEIProps & WithZoneGetter) => {
+const Div = ({ teiNode, availableRoutes, zoneGetter, zones }: TEIProps & WithZoneGetter) => {
     const div = teiNode as Element
     const placed = zoneGetter((div.getAttribute('facs') || '').trim().replace(/^#/, ''))
     const isIllustration = div.getAttribute('type') === 'illustration'
@@ -131,18 +168,28 @@ const Div = ({ teiNode, availableRoutes, zoneGetter }: TEIProps & WithZoneGetter
     // slanted zone of text run along its longer side
     const zone = useMemo(() => placed && !isIllustration && !isPlaceholder ? alongLongerSide(placed) : placed,
         [placed, isIllustration, isPlaceholder])
+    // where text of other zones is printed over a picture, its description
+    // keeps to the room they leave
+    const free = useMemo(() => zone && !zone.rotation && (isIllustration || isPlaceholder) ? freeRect(zone, zones) : null,
+        [zone, zones, isIllustration, isPlaceholder])
     const ref = useRef<HTMLDivElement>(null)
+    const freeRef = useRef<HTMLDivElement>(null)
 
     // captions and placeholders should not grow to the size of the picture
     const caption = zone && Math.max(8, Math.min(zone.width / 10, zone.height / 10, zone.pageWidth / 60))
 
     useLayoutEffect(() => {
-        const el = ref.current
+        const el = free ? freeRef.current : ref.current
         if (!el || !zone || !caption) return
 
+        const box = free ? { ...zone, ...free, floats: null } : zone
         const max = isIllustration || isPlaceholder ? caption : Math.max(8, zone.height)
         // descriptions of illustrations and gaps are ours, not printed lines
-        const fit = () => fitText(el, zone, max, !isIllustration && !isPlaceholder)
+        const fit = () => {
+            removeFillers(el)
+            fitText(el, box, max, !isIllustration && !isPlaceholder)
+            if (!zone.rotation) fillLastLines(el)
+        }
         fit()
 
         let cancelled = false
@@ -152,7 +199,7 @@ const Div = ({ teiNode, availableRoutes, zoneGetter }: TEIProps & WithZoneGetter
         return () => {
             cancelled = true
         }
-    }, [zone, caption, isIllustration, isPlaceholder])
+    }, [zone, free, caption, isIllustration, isPlaceholder])
 
     if (!zone) {
         return (
@@ -200,9 +247,23 @@ const Div = ({ teiNode, availableRoutes, zoneGetter }: TEIProps & WithZoneGetter
                             }} />
                     )
                 })}
-                <TEINodes
-                    teiNodes={teiNode.childNodes}
-                    availableRoutes={availableRoutes} />
+                {free
+                    ? (
+                        <div ref={freeRef} className="free" style={{
+                            position: 'absolute',
+                            left: free.left,
+                            top: free.top,
+                            width: free.width,
+                            height: free.height,
+                        }}>
+                            <TEINodes
+                                teiNodes={teiNode.childNodes}
+                                availableRoutes={availableRoutes} />
+                        </div>)
+                    : (
+                        <TEINodes
+                            teiNodes={teiNode.childNodes}
+                            availableRoutes={availableRoutes} />)}
             </div>
         </Behavior>
     )

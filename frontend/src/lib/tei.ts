@@ -152,7 +152,7 @@ function extractRenditionCSS(doc: Document, namespaces: Namespace[]): string {
 }
 
 const BLOCK_ELEMENTS = ['div', 'p', 'head', 'ab', 'figure']
-const BLOCK_RENDITIONS = ['c', 'right', 'et', 'et2', 'et3']
+const BLOCK_RENDITIONS = ['c', 'j', 'right', 'et', 'et2', 'et3']
 // elements that show up as a label without containing text
 const LABELLED_ELEMENTS = ['gap', 'space']
 
