@@ -2,25 +2,19 @@
 path: "/"
 ---
 
-This is a collection of mostly print advertisements for the
-Welte-Mignon reproducing piano, encoded in TEI. Work is still
-in progress. The project was created as part of my PhD project
-"Grünfelds Geist" at the University Tübingen which
-considers piano rolls as objects of a digital edition. It
-can be accessed [here](https://welte225.org).
+This is a collection of printed advertisements for the Welte-Mignon
+reproducing piano, encoded in TEI.
 
-## Choice of Material
-The present collection includes advertisements, which:
+{{size}} Each advertisement is transcribed from one of its printings,
+following its original layout and typography as closely as possible.
+Occasional differences between the printings are encoded with TEI's
+[critical apparatus](https://tei-c.org/release/doc/tei-p5-doc/en/html/TC.html).
+How the advertisements were found, transcribed and annotated is
+described in the [Guidelines](/guidelines/).
 
-- appear in print publications between 1905 and 1930
-- advertise the Welte-Mignon reproducing piano
-- are published by M. Welte & Sons, by one of its licensees, or
-  by a dealer or agent selling the instrument.
-
-{{size}} Each advertisement is transcribed from one of its printings;
-the others are listed as further sources. How the advertisements were
-found, transcribed and annotated is described in the
-[Guidelines](/guidelines/).
-
-
-
+Advertisements often return to the same promises and images. These
+[motifs](/topics/) can be followed through the collection. The
+Welte-Mignon was sold all over the world, and its advertisements
+appeared in many languages; the [Places](/places/) page tells this
+story. The [Artists](/artists/) page tells which pianists the
+advertisers counted on to sell the instrument.
