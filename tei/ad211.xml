@@ -181,6 +181,7 @@
         <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="right" scheme="css">text-align: right;</rendition>
       </tagsDecl>
       <classDecl>
@@ -229,6 +230,7 @@
       <langUsage><language ident="pl">Polish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -252,19 +254,19 @@
         <head><hi rendition="#c #in #b"><lb/>„<name type="brand">Mignon</name>”</hi></head>
       </div>
       <div facs="#zone_text">
-        <p><lb/><seg xml:id="topic_4" ana="#epoch_making_invention" type="topic" resp="#claude">ten sensacyjny reprodukcyjny fortepian</seg> wzbudza <seg xml:id="topic_1" ana="#faithful_reproduction" type="topic" resp="#claude">z powodu
+        <p rendition="#j"><lb/><seg xml:id="topic_4" ana="#epoch_making_invention" type="topic" resp="#claude">ten sensacyjny reprodukcyjny fortepian</seg> wzbudza <seg xml:id="topic_1" ana="#faithful_reproduction" type="topic" resp="#claude">z powodu
           <lb/>dokładnego oddawania gry pierwszorzędnych pianistów</seg> <seg xml:id="topic_5" ana="#world_renown" type="topic" resp="#claude">po-
           <lb/>dziw świata muzycznego</seg>. <hi rendition="#right">7894</hi></p>
       </div>
       <div facs="#zone_leschetizky">
-        <p><lb/><seg xml:id="topic_6" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#b">Profesor <persName type="artist" corresp="https://d-nb.info/gnd/120890143">Leszetycki</persName></hi></seg> w <placeName>Wiedniu</placeName> pisze: <quote type="testimonial">Wynalazek
+        <p rendition="#j"><lb/><seg xml:id="topic_6" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#b">Profesor <persName type="artist" corresp="https://d-nb.info/gnd/120890143">Leszetycki</persName></hi></seg> w <placeName>Wiedniu</placeName> pisze: <quote type="testimonial">Wynalazek
           <lb/>ten, nazywający się krótko „<name type="brand">Mignon</name>“, muszę jako <seg xml:id="topic_2" ana="#wonder" type="topic" resp="#claude">prawdzi-
           <lb/>wie cudowny</seg> oznaczyć i <seg xml:id="topic_7" ana="#if_only_earlier" type="topic" resp="#claude">ubolewać trzeba, że go już dawniej
           <lb/>nie dokonano</seg>, <seg xml:id="topic_3" ana="#if_only_earlier" type="topic" resp="#claude">ażeby grę wielkich mistrzów jak <persName type="artist" corresp="https://d-nb.info/gnd/118573527">Liszt</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118520539">Chopin</persName>
           <lb/>i innych także zdjąć było można</seg>.</quote></p>
       </div>
       <div facs="#zone_paderewski">
-        <p><lb/><seg xml:id="topic_8" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#b">Pianista <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName></hi></seg> pisze: <quote type="testimonial">Jedyne, co „<name type="brand">Migno-
+        <p rendition="#j"><lb/><seg xml:id="topic_8" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#b">Pianista <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName></hi></seg> pisze: <quote type="testimonial">Jedyne, co „<name type="brand">Migno-
           <lb/>nowi</name>“ zarzucić mogę, jest jego nazwa, ponieważ nie odpo-
           <lb/>wiada ona ani kolosalnemu skutkowi tego instrumentu, ani
           <lb/>też ogromnemu znaczeniu.</quote></p>

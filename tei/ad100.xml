@@ -304,6 +304,7 @@
         <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
       </tagsDecl>
@@ -429,6 +430,7 @@
       </langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -480,7 +482,7 @@
         <ab><hi rendition="#c #b #larger"><lb/><seg xml:id="topic_1" ana="#wonder" type="topic" resp="#claude">Es ist ein wahres Wunder der Welt.</seg></hi></ab>
       </div>
       <div facs="#zone_artists">
-        <p><lb/><seg xml:id="topic_23" ana="#world_renown" type="topic" resp="#claude">Künstler von Weltruf, die <hi rendition="#b"><name type="brand">MIGNON</name></hi> gehört und
+        <p rendition="#j"><lb/><seg xml:id="topic_23" ana="#world_renown" type="topic" resp="#claude">Künstler von Weltruf, die <hi rendition="#b"><name type="brand">MIGNON</name></hi> gehört und
           <lb/>die auch selbst eine grosse Anzahl Piècen für den
           <lb/>Apparat gespielt haben, spenden demselben ihr höchstes
           <lb/>Lob</seg> und <seg xml:id="topic_2" ana="#superlatives" type="topic" resp="#claude">bezeichnen ihn als das <hi rendition="#b">Vollendetste</hi>, was
@@ -490,7 +492,7 @@
         <head><hi rendition="#c #larger"><lb/><seg xml:id="topic_24" ana="#testimonials" type="topic" resp="#claude">Aus <name type="brand">MIGNON</name>'s Autographenmappe:</seg></hi></head>
       </div>
       <div facs="#zone_saint_saens">
-        <p><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Camille Saint-Saëns</persName>:</hi>
+        <p rendition="#j"><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Camille Saint-Saëns</persName>:</hi>
           <quote type="testimonial">Kennst du das Land?
           <lb/><foreign xml:lang="fr">Connais-tu le pays ou fleurit la merveille?</foreign> <seg xml:id="topic_25" ana="#wonder" type="topic" resp="#claude">Das
           <lb/>Wunder, das ist <hi rendition="#b">„<name type="brand">Mignon</name>“</hi></seg>, ein bescheidener Name
@@ -500,7 +502,7 @@
           <lb/><persName type="composer" corresp="https://d-nb.info/gnd/118508288">Beethoven</persName>, <persName type="composer" corresp="https://d-nb.info/gnd/118584596">Mozart</persName> und <persName type="composer" corresp="https://d-nb.info/gnd/118520539">Chopin</persName> selbst spielen hören</seg>.</quote></p>
       </div>
       <div facs="#zone_leschetitzky">
-        <p><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/120890143">Theodor Leschetitzky</persName>:</hi>
+        <p rendition="#j"><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/120890143">Theodor Leschetitzky</persName>:</hi>
           <quote type="testimonial"><seg xml:id="topic_27" ana="#wonder" type="topic" resp="#claude">Ich muss diese
           <lb/>Erfindung, die sich so ganz einfach <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> nennt,
           <lb/>als ein wahres Wunder bezeichnen</seg>, und <seg xml:id="topic_28" ana="#if_only_earlier" type="topic" resp="#claude">muss es nur
@@ -511,7 +513,7 @@
           <lb/>Ende schöpfen zu können.</quote></p>
       </div>
       <div facs="#zone_reisenauer">
-        <p><lb/>Prof. <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>:</hi>
+        <p rendition="#j"><lb/>Prof. <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/116429623">Alfred Reisenauer</persName>:</hi>
           <quote type="testimonial">Dass <seg xml:id="topic_5" ana="#artists_hear_themselves #education" type="topic" resp="#claude">das alt-
           <lb/>griechische Sprichwort „Erkenne dich selbst“ im
           <lb/>vollsten Umfange zu betätigen nun auch dem Pia-
@@ -535,7 +537,7 @@
         </lg>
       </div>
       <div facs="#zone_auer">
-        <p><lb/>Prof. <hi rendition="#b"><persName corresp="https://d-nb.info/gnd/118995022">L. Auer</persName>:</hi>
+        <p rendition="#j"><lb/>Prof. <hi rendition="#b"><persName corresp="https://d-nb.info/gnd/118995022">L. Auer</persName>:</hi>
           <quote type="testimonial">Nach meiner Meinung sollten
           <lb/>die Konservatorien, Musikschulen diesen Wunder-
           <lb/>Apparat <hi rendition="#b">„<name type="brand">Mignon</name>“</hi> genannt, <seg xml:id="topic_7" ana="#education" type="topic" resp="#claude">zu pädagogischen
@@ -543,7 +545,7 @@
           <lb/>giebt es kein Violin-<name type="brand">Mignon</name>?</quote></p>
       </div>
       <div facs="#zone_schmidt">
-        <p><lb/><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/117506338">Hans Schmidt</persName>:</hi>
+        <p rendition="#j"><lb/><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/117506338">Hans Schmidt</persName>:</hi>
           <quote type="testimonial"><seg xml:id="topic_30" ana="#immortality" type="topic" resp="#claude">So braucht auf diesem
           <lb/>Gebiete reproduktiver Kunst das Schöne nicht mehr
           <lb/>zu sterben!</seg> Die flüchtigsten aller Kunstgenüsse
@@ -553,7 +555,7 @@
           <lb/>Unsterblichkeit</seg>.</quote></p>
       </div>
       <div facs="#zone_reinecke">
-        <p><lb/>Prof. <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/119388472">Karl Reinecke</persName>:</hi>
+        <p rendition="#j"><lb/>Prof. <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/119388472">Karl Reinecke</persName>:</hi>
           <quote type="testimonial">Ich kann nicht umhin,
           <lb/>meine aufrichtige Bewunderung auszusprechen über
           <lb/><seg xml:id="topic_9" ana="#faithful_reproduction" type="topic" resp="#claude">den hohen Grad von Treue und Genauigkeit, mit
@@ -563,7 +565,7 @@
           <lb/>bis zu diesem Apparat</seg>.</quote></p>
       </div>
       <div facs="#zone_gruenfeld">
-        <p><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/116888652">Alfred Grünfeld</persName>:</hi>
+        <p rendition="#j"><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/116888652">Alfred Grünfeld</persName>:</hi>
           <quote type="testimonial">Es ist mir ein lebhaftes
           <lb/>Bedürfnis, meiner uneingeschränkten Bewunderung
           <lb/>für den mir heute vorgeführten neuen selbsttätigen
@@ -580,7 +582,7 @@
           <lb/>populär zu machen</seg>.</quote></p>
       </div>
       <div facs="#zone_slivinski">
-        <p><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/1080980598">Joseph Slivinski</persName>:</hi>
+        <p rendition="#j"><lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/1080980598">Joseph Slivinski</persName>:</hi>
           <quote type="testimonial"><seg xml:id="topic_32" ana="#artists_hear_themselves" type="topic" resp="#claude">Es ist bis jetzt der
           <lb/>sehnlichste Wunsch eines jeden Pianisten gewesen,
           <lb/>sich selbst hören zu können</seg>. Dank <seg xml:id="topic_33" ana="#epoch_making_invention" type="topic" resp="#claude">der genialen
@@ -594,7 +596,7 @@
           <lb/>hohe Begeisterung ausdrücken zu können.</quote></p>
       </div>
       <div facs="#zone_nikisch">
-        <p><lb/>Prof. <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>:</hi>
+        <p rendition="#j"><lb/>Prof. <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118786253">Artur Nikisch</persName>:</hi>
           <quote type="testimonial"><seg xml:id="topic_34" ana="#artists_hear_themselves" type="topic" resp="#claude">Ich habe mich gestern
           <lb/>durch Vermittelung des <name type="brand">Mignon</name>-Apparates selbst
           <lb/>Klavier spielen hören</seg>. Das war für mich eine
@@ -607,14 +609,14 @@
           <lb/>Erfindung!“</seg></quote></p>
       </div>
       <div facs="#zone_himmelstjerna">
-        <p><lb/><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/1212078756">Guido Samson v. Himmelstierna</persName>:</hi>
+        <p rendition="#j"><lb/><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/1212078756">Guido Samson v. Himmelstierna</persName>:</hi>
           <quote type="testimonial">Eine
           <lb/>äusserst <sic>interesante</sic> Erfindung — <seg xml:id="topic_18" ana="#if_only_earlier" type="topic" resp="#claude">schade dass es
           <lb/>zu Lebzeiten unserer verstorbenen grossen Meister
           <lb/>kein derartiges Instrument gegeben hat</seg>.</quote></p>
       </div>
       <div facs="#zone_waack">
-        <p><lb/><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/1140502735">Carl Waack</persName>:</hi>
+        <p rendition="#j"><lb/><hi rendition="#b"><persName corresp="https://d-nb.info/gnd/1140502735">Carl Waack</persName>:</hi>
           <quote type="testimonial"><seg xml:id="topic_35" ana="#not_mechanical" type="topic" resp="#claude">Ein fast lebendiger Mechanismus</seg>,
           <lb/>wie ich ihn vordem nie gehört noch gesehen....</quote></p>
       </div>

@@ -171,6 +171,7 @@
         <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
@@ -242,6 +243,7 @@
       <langUsage><language ident="no">Norwegian (Dano-Norwegian)</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -290,7 +292,7 @@
           <lb/>Lysledning</seg>.</hi></ab>
       </div>
       <div facs="#zone_text">
-        <ab><lb/><seg xml:id="topic_3" ana="#faithful_reproduction" type="topic" resp="#claude">Gjengiver direkte Virtuosernes Spil med alle Finheder</seg>
+        <ab rendition="#j"><lb/><seg xml:id="topic_3" ana="#faithful_reproduction" type="topic" resp="#claude">Gjengiver direkte Virtuosernes Spil med alle Finheder</seg>
           <lb/>og <seg xml:id="topic_4" ana="#touch_and_individuality" type="topic" resp="#claude">alle individuelle Karaktéregenskaber</seg>.</ab>
       </div>
       <div facs="#zone_extracts">
@@ -313,7 +315,7 @@
           </quote></ab>
       </div>
       <div facs="#zone_artists">
-        <ab><lb/><seg xml:id="topic_13" ana="#composers_own_works" type="topic" resp="#claude">Noderne er indspillet af alle store Componister og Pianister</seg> som:
+        <ab rendition="#j"><lb/><seg xml:id="topic_13" ana="#composers_own_works" type="topic" resp="#claude">Noderne er indspillet af alle store Componister og Pianister</seg> som:
           <lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/119110016">Dohnányi</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carréno</persName></hi> etc.</ab>
       </div>
       <div facs="#zone_demonstration">

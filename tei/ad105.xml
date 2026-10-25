@@ -191,6 +191,7 @@
         <rendition xml:id="dropcap" scheme="css">float: left; font-size: 3.2em; line-height: 0.8;</rendition>
         <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
       </tagsDecl>
       <classDecl>
@@ -255,6 +256,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -289,19 +291,19 @@
           <lb/><seg xml:id="topic_1" ana="#phantom_hands" type="topic" resp="#claude">Phantom Fingers Play</seg>—</hi></head>
       </div>
       <div facs="#zone_text">
-        <p><lb/><hi rendition="#dropcap">T</hi>HINK how many times it would be one of the
+        <p rendition="#j"><lb/><hi rendition="#dropcap">T</hi>HINK how many times it would be one of the
           <lb/>richest pleasures you would ask, to be able to
           <lb/>hear one of your favorite pieces, played by one
           <lb/>of your favorite pianists. “In the Gloaming,”
           <lb/>perhaps, or that beautiful composition of
           <lb/><persName type="composer">Bartlett</persName>’s “A Dream.”</p>
-        <p><lb/><seg xml:id="topic_2" ana="#evocative_scenes" type="topic" resp="#claude">As the old strains come forth, time slips back to a garden
+        <p rendition="#j"><lb/><seg xml:id="topic_2" ana="#evocative_scenes" type="topic" resp="#claude">As the old strains come forth, time slips back to a garden
           <lb/>of days gone by. Flowers in summer grandeur fringe a
           <lb/>winding path.</seg> Your <name type="brand">Mason &amp; Risch Welte-Mignon
           <lb/>Reproducing Piano</name> paints a picture of a girl who waited
           <lb/>there. How clearly her every feature stands out in your
           <lb/>memory!</p>
-        <p><lb/>But <seg xml:id="topic_10" ana="#repertoire" type="topic" resp="#claude">your enjoyment of the <name type="brand">Mason &amp; Risch Welte-Mignon</name>
+        <p rendition="#j"><lb/>But <seg xml:id="topic_10" ana="#repertoire" type="topic" resp="#claude">your enjoyment of the <name type="brand">Mason &amp; Risch Welte-Mignon</name>
           <lb/>is by no means confined to the simpler things</seg>. <seg xml:id="topic_3" ana="#masters_at_home" type="topic" resp="#claude">The
           <lb/>famous compositions of the ages, played by internationally
           <lb/>known pianists, are at your disposal</seg>. <seg xml:id="topic_4" ana="#masters_at_home #repertoire" type="topic" resp="#claude">The genius of
@@ -312,7 +314,7 @@
           <lb/>regarded</seg>.</p>
       </div>
       <div facs="#zone_invitation">
-        <p><lb/>The world’s master pianists will gladly play for you on
+        <p rendition="#j"><lb/>The world’s master pianists will gladly play for you on
           <lb/>the <name type="brand">Mason &amp; Risch Welte-Mignon</name> any time you call at
           <lb/>our sales rooms.</p>
       </div>
@@ -320,7 +322,7 @@
         <figure xml:id="figure_2" ana="#phantom_hands" resp="#claude"><desc>Two hands playing a piano keyboard, emerging from a dark vignette</desc></figure>
       </div>
       <div facs="#zone_caption">
-        <ab><hi rendition="#i #smaller"><lb/>These are the <seg xml:id="topic_6" ana="#phantom_hands" type="topic" resp="#claude">Phantom
+        <ab rendition="#j"><hi rendition="#i #smaller"><lb/>These are the <seg xml:id="topic_6" ana="#phantom_hands" type="topic" resp="#claude">Phantom
           <lb/>Hands</seg> of a thousand
           <lb/><seg xml:id="topic_7" ana="#immortality" type="topic" resp="#claude">immortal pianists, their
           <lb/>genius preserved forever</seg>

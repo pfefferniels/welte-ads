@@ -213,6 +213,7 @@
         <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
         <rendition xml:id="right" scheme="css">text-align: right;</rendition>
       </tagsDecl>
@@ -279,6 +280,7 @@
       <langUsage><language ident="pl">Polish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -309,9 +311,9 @@
           <lb/>zynie na życzenie usłyszeć mogą.</hi></hi></head>
       </div>
       <div facs="#zone_text">
-        <p><lb/><hi rendition="#b">„<name type="brand">Mignon</name>“</hi> <seg xml:id="topic_1" ana="#faithful_reproduction #touch_and_individuality" type="topic" resp="#claude">oddaje najdokładniej grę pierwszorzędnych pianistów z wszelkiemi indywi-
+        <p rendition="#j"><lb/><hi rendition="#b">„<name type="brand">Mignon</name>“</hi> <seg xml:id="topic_1" ana="#faithful_reproduction #touch_and_individuality" type="topic" resp="#claude">oddaje najdokładniej grę pierwszorzędnych pianistów z wszelkiemi indywi-
           <lb/>dualnemi właściwościami uderzenia jak i również dynamicznemi i rytmicznemi odcienami gry</seg>.</p>
-        <p><lb/><seg xml:id="topic_7" ana="#testimonials #wonder #world_renown" type="topic" resp="#claude">Najsławniejsi pianiści współcześni wydali o cudownym instrumencie nadzwyczaj po-
+        <p rendition="#j"><lb/><seg xml:id="topic_7" ana="#testimonials #wonder #world_renown" type="topic" resp="#claude">Najsławniejsi pianiści współcześni wydali o cudownym instrumencie nadzwyczaj po-
           <lb/>chlebny sąd:</seg> <hi rendition="#right">8515</hi></p>
       </div>
       <div facs="#zone_albert">

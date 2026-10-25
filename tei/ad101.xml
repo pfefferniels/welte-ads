@@ -208,6 +208,7 @@
         <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
       </tagsDecl>
@@ -266,6 +267,7 @@
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -302,7 +304,7 @@
         <ab><hi rendition="#c #b #larger"><lb/><seg xml:id="topic_1" ana="#wonder" type="topic" resp="#claude">Es ist ein wahres Wunder der Welt</seg><app><rdg source="#source_1"/><rdg source="#source_2">.</rdg></app></hi></ab>
       </div>
       <div facs="#zone_artists">
-        <p><lb/><seg xml:id="topic_6" ana="#world_renown" type="topic" resp="#claude">Künstler von Weltruf, die <hi rendition="#b"><name type="brand">MIGNON</name></hi> gehört und
+        <p rendition="#j"><lb/><seg xml:id="topic_6" ana="#world_renown" type="topic" resp="#claude">Künstler von Weltruf, die <hi rendition="#b"><name type="brand">MIGNON</name></hi> gehört und
           <lb/>die auch selbst eine grosse Anzahl Piècen für den
           <lb/>Apparat gespielt haben, spenden demselben ihr höchstes
           <lb/>Lob</seg> und <seg xml:id="topic_2" ana="#superlatives" type="topic" resp="#claude">bezeichnen ihn als das <hi rendition="#b">Vollendetste,</hi> was
@@ -313,7 +315,7 @@
       </div>
       <div facs="#zone_testimonial">
         <quote type="testimonial">
-          <p><lb/>Ich sehe den „<app><rdg source="#source_1"><name type="brand">MIGNON</name></rdg><rdg source="#source_2"><hi rendition="#b"><name type="brand">Mignon</name></hi></rdg></app>“-Apparat <seg xml:id="topic_3" ana="#wonder #epoch_making_invention" type="topic" resp="#claude">als das grösste Wunder
+          <p rendition="#j"><lb/>Ich sehe den „<app><rdg source="#source_1"><name type="brand">MIGNON</name></rdg><rdg source="#source_2"><hi rendition="#b"><name type="brand">Mignon</name></hi></rdg></app>“-Apparat <seg xml:id="topic_3" ana="#wonder #epoch_making_invention" type="topic" resp="#claude">als das grösste Wunder
             <lb/>der Jetztzeit</seg> an. <seg xml:id="topic_8" ana="#superlatives" type="topic" resp="#claude">Er ist in jeder Hinsicht über alles Lob
             <lb/>erhaben</seg> und <seg xml:id="topic_4" ana="#if_only_earlier" type="topic" resp="#claude">es ist nur zu bedauern, dass diese Erfindung
             <lb/>nicht siebzig Jahre früher gemacht wurde, als die beiden

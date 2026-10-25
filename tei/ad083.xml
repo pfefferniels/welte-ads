@@ -198,6 +198,7 @@
       <tagsDecl>
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
         <rendition xml:id="right" scheme="css">text-align: right;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
@@ -236,6 +237,7 @@
       </langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -273,7 +275,7 @@
           </app></hi></ab>
       </div>
       <div facs="#zone_text">
-        <ab><lb/><seg xml:id="topic_1" ana="#faithful_reproduction" type="topic" resp="#claude">EN ABSOLUT TRO
+        <ab rendition="#j"><lb/><seg xml:id="topic_1" ana="#faithful_reproduction" type="topic" resp="#claude">EN ABSOLUT TRO
           <lb/>GJENGIVELSE AV
           <lb/>VERDENSBERØMTE
           <lb/>PIANISTER'S</seg> <seg xml:id="topic_2" ana="#touch_and_individuality" type="topic" resp="#claude">PERSON-

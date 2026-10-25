@@ -192,6 +192,7 @@
         <rendition xml:id="dropcap" scheme="css">float: left; font-size: 3.2em; line-height: 0.8;</rendition>
         <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
       </tagsDecl>
       <classDecl>
@@ -251,6 +252,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -284,7 +286,7 @@
           <lb/>—When <seg xml:id="topic_1" ana="#phantom_hands" type="topic" resp="#claude">Phantom Fingers Play</seg></hi></head>
       </div>
       <div facs="#zone_text">
-        <p><lb/><hi rendition="#dropcap">W</hi>ATCH <seg xml:id="topic_2" ana="#phantom_hands" type="topic" resp="#claude">the keys of your piano moving, though no one
+        <p rendition="#j"><lb/><hi rendition="#dropcap">W</hi>ATCH <seg xml:id="topic_2" ana="#phantom_hands" type="topic" resp="#claude">the keys of your piano moving, though no one
           <lb/>sits before it!</seg> With every move comes forth the
           <lb/>pulsating rhythm of a colorful tango—beautiful
           <lb/>melody, strongly accented, native of the vast pampas
@@ -301,14 +303,14 @@
           <lb/>favored you personally</seg>.</p>
       </div>
       <div facs="#zone_invitation">
-        <p><lb/>We will gladly have the Masters play your favorite selections
+        <p rendition="#j"><lb/>We will gladly have the Masters play your favorite selections
           <lb/>for you any time you visit our show rooms.</p>
       </div>
       <div type="illustration" facs="#zone_vignette">
         <figure xml:id="figure_2" ana="#phantom_hands" resp="#claude"><desc>Two hands playing a piano keyboard, emerging from a dark vignette</desc></figure>
       </div>
       <div facs="#zone_caption">
-        <ab><hi rendition="#i #smaller"><lb/>These are the <seg xml:id="topic_8" ana="#phantom_hands" type="topic" resp="#claude">Phantom
+        <ab rendition="#j"><hi rendition="#i #smaller"><lb/>These are the <seg xml:id="topic_8" ana="#phantom_hands" type="topic" resp="#claude">Phantom
           <lb/>Hands</seg> of a thousand
           <lb/><seg xml:id="topic_9" ana="#immortality" type="topic" resp="#claude">immortal pianists, their
           <lb/>genius preserved forever</seg>
