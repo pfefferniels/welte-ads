@@ -185,6 +185,7 @@
               <rendition xml:id="dropcap" scheme="css">float: left; font-size: 3.2em; line-height: 0.8;</rendition>
               <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
               <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+              <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
               <rendition xml:id="k" scheme="css">font-variant: small-caps;</rendition>
               <rendition xml:id="right" scheme="css">text-align: right;</rendition>
               <rendition xml:id="uc" scheme="css">text-transform: uppercase;</rendition>
@@ -272,6 +273,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+           <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
            <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
@@ -337,7 +339,7 @@
         </div>
 
         <div facs="#eSc_textblock_e9d44931">
-            <ab><lb /><hi rendition="#k">Remember</hi> <hi rendition="#i">that you can
+            <ab rendition="#j"><lb /><hi rendition="#k">Remember</hi> <hi rendition="#i">that you can
             <lb />select unlimited pro-
             <lb />gram groups for the
             <lb /><name type="brand">Musicalle</name> from <seg xml:id="topic_14" ana="#superlatives #repertoire" type="topic" resp="#claude">the in-
@@ -374,7 +376,7 @@
             </seg></ab>
         </div>
         <div facs="#eSc_textblock_b142b74c">
-            <ab><lb /><seg xml:id="topic_17" ana="#the_original" type="topic" resp="#claude"><hi rendition="#dropcap">T</hi>URN BACK the calendar twenty-four
+            <ab rendition="#j"><lb /><seg xml:id="topic_17" ana="#the_original" type="topic" resp="#claude"><hi rendition="#dropcap">T</hi>URN BACK the calendar twenty-four
             <lb />years . . . From the <orgName>House of Welte</orgName>
             <lb />came the announcement in 1904 of an
             <lb />instrument</seg> which
@@ -421,7 +423,7 @@
             <lb />Musicalle</name> . . . . . . .</ab>
         </div>
         <div facs="#eSc_textblock_2aef91d9">
-            <ab><lb /><seg xml:id="topic_18" ana="#effortless #epoch_making_invention" type="topic" resp="#claude">Such simplicity of operation has never before
+            <ab rendition="#j"><lb /><seg xml:id="topic_18" ana="#effortless #epoch_making_invention" type="topic" resp="#claude">Such simplicity of operation has never before
             <lb />been achieved in musical reproduction.</seg>
             <seg xml:id="topic_12" ana="#effortless #how_it_works" resp="#claude" type="topic">
                 Every
@@ -471,7 +473,7 @@
             </address></ab>
         </div>
         <div facs="#eSc_textblock_5fe584b5">
-            <ab><lb /><hi rendition="#i">The <name type="brand">Musicalle</name> is patented and controlled ex-
+            <ab rendition="#j"><lb /><hi rendition="#i">The <name type="brand">Musicalle</name> is patented and controlled ex-
             <lb />clusively by the <orgName corresp="https://d-nb.info/gnd/5049218-4">Welte-Mignon Corporation</orgName></hi></ab>
         </div>
         </body>

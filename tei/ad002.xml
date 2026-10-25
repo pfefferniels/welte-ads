@@ -184,6 +184,7 @@
                 <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
                 <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
                 <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+                <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
                 <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
                 <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
                 <rendition xml:id="u" scheme="css">text-decoration: underline;</rendition>
@@ -243,6 +244,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
             <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
             <change when="2026-10-25">Steinway &amp; Sons linked to the GND.</change>
             <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
@@ -317,7 +319,7 @@
             </figure>
         </div>
         <div facs="#eSc_dummyblock_">
-            <ab><lb />The <name type="brand">Welte-Mignon</name>, which<lb />
+            <ab rendition="#j"><lb />The <name type="brand">Welte-Mignon</name>, which<lb />
             <seg xml:id="topic_1" ana="#faithful_reproduction" resp="#claude" type="topic">
                 reproduces absolutely the
                 <lb />Artists' original renderings
@@ -337,7 +339,7 @@
             by:</hi></ab>
         </div>
         <div facs="#eSc_textblock_6984ced5">
-            <ab><lb />
+            <ab rendition="#j"><lb />
             <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
             <persName type="artist" corresp="https://d-nb.info/gnd/116014490">Pachmann</persName>,
             <lb />
@@ -375,7 +377,7 @@
             <persName type="artist">Schumann</persName>, etc.</ab>
         </div>
         <div facs="#eSc_textblock_9478645f">
-            <ab><lb />
+            <ab rendition="#j"><lb />
             <seg xml:id="topic_2" type="topic" resp="#claude" ana="#not_mechanical #unique_and_superior">
                 <hi rendition="#dropcap">U</hi><hi rendition="#uc">ntil</hi> the <name type="brand">Welte-Mignon</name>
                 <lb />made its appearance all the

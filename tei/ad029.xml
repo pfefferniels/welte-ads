@@ -287,6 +287,7 @@
               <rendition xml:id="g2" scheme="css">letter-spacing: 0.3em;</rendition>
               <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
               <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+              <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
               <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
               <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
               <rendition xml:id="uc" scheme="css">text-transform: uppercase;</rendition>
@@ -350,6 +351,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+           <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
            <change when="2026-10-20">Marked as checked by the editor.</change>
@@ -395,7 +397,7 @@
             </figure>
         </div>
         <div facs="#eSc_textblock_79199ad6">
-            <ab><lb />
+            <ab rendition="#j"><lb />
             <quote type="testimonial">
                 <seg xml:id="topic_2" ana="#masters_at_home" resp="#claude" type="topic">
                     <hi rendition="#uc #g2">"<hi rendition="#in #larger">I</hi>t brings the world's greatest pianists into</hi>
@@ -417,7 +419,7 @@
         </div>
 
         <div facs="#eSc_textblock_611d3239">
-            <ab><lb /><seg xml:id="topic_8" ana="#still_a_piano" type="topic" resp="#claude"><name type="brand">Welte-Mignon Licensee Reproducing Pianos</name> are
+            <ab rendition="#j"><lb /><seg xml:id="topic_8" ana="#still_a_piano" type="topic" resp="#claude"><name type="brand">Welte-Mignon Licensee Reproducing Pianos</name> are
             <lb />offered by 115 leading piano manufacturers.</seg> Piano
             <lb />merchants everywhere are anxious to demonstrate to
             <lb />you. Send for our Book of Famous Artists. The

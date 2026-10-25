@@ -185,6 +185,7 @@
               <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
               <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
               <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+              <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
               <rendition xml:id="k" scheme="css">font-variant: small-caps;</rendition>
               <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
            </tagsDecl>
@@ -266,6 +267,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+           <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
            <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
@@ -354,7 +356,7 @@
         </div>
 
         <div facs="#zone_col1">
-            <ab><cb />
+            <ab rendition="#j"><cb />
             <lb /><seg xml:id="topic_5" ana="#superlatives" type="topic" resp="#claude"><name type="brand"><hi rendition="#k">The</hi> <hi rendition="#i">Original Welte-Mignon</hi> Reproduc-
             <lb />ing Piano</name> as manufactured by the new
             <lb /><orgName corresp="https://d-nb.info/gnd/5049218-4">Welte-Mignon Corp.</orgName> is the finest product
@@ -372,7 +374,7 @@
         </div>
 
         <div facs="#zone_col2">
-            <ab><cb/>
+            <ab rendition="#j"><cb/>
             <lb /><name type="brand"><hi rendition="#k">The</hi> <hi rendition="#i">Original Welte-Mignon</hi></name> as manufac-
             <lb />tured by the new <orgName corresp="https://d-nb.info/gnd/5049218-4">Welte-Mignon Corp.</orgName>
             <lb />not only <seg xml:id="topic_7" ana="#the_original" type="topic" resp="#claude">retains all the marvelous features

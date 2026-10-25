@@ -179,6 +179,7 @@
         <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
         <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
       </tagsDecl>
@@ -211,6 +212,7 @@
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
     <revisionDesc status="checked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
       <change when="2026-10-20" who="#np">Checked against the scan by the editor.</change>
@@ -242,7 +244,7 @@
         <head><hi rendition="#c #b #in #g"><lb/>„<name type="brand">MIGNON</name>“</hi></head>
       </div>
       <div facs="#zone_text">
-        <ab><hi rendition="#b #smaller"><lb/>ist <seg xml:id="topic_1" ana="#epoch_making_invention" type="topic" resp="#claude">eine sensationelle Erfindung</seg>, welche <seg xml:id="topic_2" ana="#faithful_reproduction" type="topic" resp="#claude">die Vorträge der grossen Klaviervirtuosen in wahrhaft täuschender Weise wieder-
+        <ab rendition="#j"><hi rendition="#b #smaller"><lb/>ist <seg xml:id="topic_1" ana="#epoch_making_invention" type="topic" resp="#claude">eine sensationelle Erfindung</seg>, welche <seg xml:id="topic_2" ana="#faithful_reproduction" type="topic" resp="#claude">die Vorträge der grossen Klaviervirtuosen in wahrhaft täuschender Weise wieder-
           <lb/>giebt</seg>, so dass man meint, <seg xml:id="topic_3" ana="#illusion_of_presence" type="topic" resp="#claude">den betreffenden Künstler wirklich in Person vor sich zu haben und ihn spielen zu hören</seg>.</hi></ab>
       </div>
       <div facs="#zone_repertoire">

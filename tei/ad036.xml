@@ -184,6 +184,7 @@
                 <rendition xml:id="g" scheme="css">letter-spacing: 0.125em;</rendition>
                 <rendition xml:id="i" scheme="css">font-style: italic;</rendition>
                 <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
+                <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
                 <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
                 <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
                 <rendition xml:id="uc" scheme="css">text-transform: uppercase;</rendition>
@@ -223,6 +224,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
             <change when="2026-10-25" who="#claude">The seller and the firms that the text names linked to their records in the GND or Wikidata.</change>
             <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
@@ -268,7 +270,7 @@
             </hi></ab>
         </div>
         <div facs="#eSc_textblock_4402ea80">
-            <ab>
+            <ab rendition="#j">
                 <lb /><seg xml:id="topic_3" ana="#education" type="topic" resp="#claude">The <hi rendition="#uc"><name type="brand">Welte-Mignon</name></hi> can be likened to a college for teaching
                 <lb />the art of playing the piano.</seg>
                 <lb />This college has a faculty of one hundred fifty-six instructors—the

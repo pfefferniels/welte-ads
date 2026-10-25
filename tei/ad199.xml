@@ -618,6 +618,7 @@
       <tagsDecl>
         <rendition xml:id="b" scheme="css">font-weight: bold;</rendition>
         <rendition xml:id="c" scheme="css">text-align: center;</rendition>
+        <rendition xml:id="j" scheme="css">text-align: justify;</rendition>
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
       </tagsDecl>
       <classDecl>
@@ -655,6 +656,7 @@
       <langUsage><language ident="es">Spanish</language></langUsage>
     </profileDesc>
     <revisionDesc status="checked">
+      <change when="2026-10-25" who="#claude">Justified blocks marked with #j.</change>
       <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by a large language model; not yet checked by the editor.</change>
       <change when="2026-10-23" who="#np">Checked against the scan by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
@@ -675,7 +677,7 @@
         <head><hi rendition="#c #b #larger"><lb/>PIANOS ELECTRICOS “<name type="brand">WELTE</name>„</hi></head>
       </div>
       <div facs="#zone_text">
-        <p><lb/><seg xml:id="topic_1" ana="#superlatives #unique_and_superior" type="topic" resp="#claude">Los más perfectos y <hi rendition="#b">únicos</hi> del mundo</seg> que <seg xml:id="topic_2" ana="#faithful_reproduction #touch_and_individuality" type="topic" resp="#claude">reproducen <hi rendition="#b">fielmente</hi> el toque y personalidad del
+        <p rendition="#j"><lb/><seg xml:id="topic_1" ana="#superlatives #unique_and_superior" type="topic" resp="#claude">Los más perfectos y <hi rendition="#b">únicos</hi> del mundo</seg> que <seg xml:id="topic_2" ana="#faithful_reproduction #touch_and_individuality" type="topic" resp="#claude">reproducen <hi rendition="#b">fielmente</hi> el toque y personalidad del
           <lb/>artista</seg>. Agencia y depósito: <hi rendition="#b"><orgName>C. SALVI, ANGELUS-HALL</orgName>, <address><addrLine>Sevilla, 12 y 14,</addrLine> <addrLine><placeName>MADRID</placeName>.</addrLine></address></hi></p>
       </div>
     </body>
