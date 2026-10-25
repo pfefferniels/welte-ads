@@ -73,8 +73,8 @@ export default function ArtistsPage() {
         How much of the advertising each artist received over time.
       </Typography>
       <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-        Size shows how often the ads name an artist around the year (Gaussian kernel,
-        σ = {h.toLocaleString('en-GB')} years); grey means only in neighbouring years.
+        Size shows how often the ads name an artist around the year; grey means only in
+        neighbouring years. Artists named early stand on the left, those named late on the right.
         {head && <>
           {' '}Shown are the {shown.length} of {named.length} artists named more often than the
           average of {format(head.mean)} times (<a href="https://doi.org/10.1080/00330124.2012.700499">head/tail breaks</a>).
