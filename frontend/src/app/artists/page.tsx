@@ -60,9 +60,6 @@ export default function ArtistsPage() {
   return (
     <Container component="main" maxWidth="md">
       <h1>Mentioned Artists</h1>
-      <Typography>
-        How much of the advertising each artist received over time.
-      </Typography>
       <Typography variant="body2" sx={{ color: 'text.secondary' }}>
         Size shows how often the ads name an artist around the year; grey means only in
         neighbouring years. Artists named early stand on the left, those named late on the right.
