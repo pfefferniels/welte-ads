@@ -18,6 +18,10 @@
                     <forename>Niels</forename>
                  </persName>
               </respStmt>
+              <respStmt>
+                 <resp>Annotation of topics</resp>
+                 <name xml:id="claude">Claude (AI model by Anthropic)</name>
+              </respStmt>
            </titleStmt>
            <publicationStmt>
               <publisher>
@@ -123,11 +127,12 @@
                  scan, in part transcribed by hand. The advertisements published
                  outside Germany, the United Kingdom and the United States, and a
                  few from Germany, were transcribed from the scans, encoded, given
-                 their regions and annotated with topics by Claude, an AI model;
-                 their revision history says so. Until the editor has checked such
-                 an advertisement against the scan, <att>status</att> on its
-                 <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-                 advertisement is <val>checked</val>.</p>
+                 their regions by Claude, an AI model; their revision history says
+                 so. Until the editor has checked such an advertisement against the
+                 scan, <att>status</att> on its <gi>revisionDesc</gi> is
+                 <val>unchecked</val>; that of every other advertisement is
+                 <val>checked</val>. The topics of all advertisements were assigned
+                 by Claude.</p>
               <correction>
                  <p>Errors of the original are not corrected but marked with
                     <gi>sic</gi>.</p>
@@ -155,10 +160,15 @@
                     Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                     which describes them in a <gi>desc</gi>. Illustrations are
                     described in <gi>figure</gi>. Persons are linked to the GND with
-                    <att>corresp</att>. Recurring motifs are marked as topics with
-                    <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                    the taxonomy of topics; these are an interpretation, by whom
-                    <att>resp</att> says.</p>
+                    <att>corresp</att>. Recurring arguments and motifs are marked as
+                    topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                    pointing to the taxonomy of topics. The taxonomy was induced by
+                    Claude in four blind readings of all advertisements, each in a
+                    different order and without knowledge of the editor's earlier
+                    taxonomy, which it replaced in October 2026; it keeps the topics
+                    that at least three of the readings found. The topics are an
+                    interpretation, assigned by whom <att>resp</att> says, so far
+                    all by Claude; the editor has not yet checked them.</p>
               </interpretation>
               <stdVals>
                  <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -177,15 +187,72 @@
            </tagsDecl>
            <classDecl>
               <taxonomy xml:id="topics">
-                 <desc>Topics: recurring motifs of the advertisements, in their texts
-                    and in their pictures</desc>
-                 <category xml:id="analogy_to_photography">
-                    <gloss>Analogy to Photography</gloss>
+                 <desc>Topics: the recurring arguments and motifs of the advertisements,
+                    in their texts and in their pictures</desc>
+                 <category xml:id="faithful_reproduction">
+                    <gloss>Faithful reproduction</gloss>
+                    <desc>The ad claims that the playing of the artist is reproduced exactly,
+                       faithfully, naturally or completely, as "the actual playing" of the
+                       pianist. A bare "reproduces the playing of …" without such a
+                       qualifier does not count.</desc>
+                 </category>
+                 <category xml:id="touch_and_individuality">
+                    <gloss>Touch, nuance and individuality</gloss>
+                    <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                       pedalling, dynamics, tempo, shading, tone colour, or the
+                       individuality and characteristic style of each pianist.</desc>
                  </category>
                  <category xml:id="immortality">
-                    <gloss>Immortality</gloss>
-                    <desc>This topic emphasizes the perdurance of the reproductions and
-                       how thus the recording artists become immortal.</desc>
+                    <gloss>Immortality and posterity</gloss>
+                    <desc>The playing is preserved for ever or for future generations; the
+                       artists become immortal, and dead artists still play.</desc>
+                 </category>
+                 <category xml:id="hearing_is_believing">
+                    <gloss>Hearing is believing</gloss>
+                    <desc>The reader is challenged to verify the claims by listening,
+                       comparing or testing ("must be heard to be believed", "hear it in
+                       comparison"). A bare invitation to a demonstration does not count.</desc>
+                 </category>
+                 <category xml:id="furniture">
+                    <gloss>Furniture and ornament</gloss>
+                    <desc>The case, its design or period style; the instrument as an ornament
+                       of the room.</desc>
+                 </category>
+                 <category xml:id="superlatives">
+                    <gloss>Superlative perfection</gloss>
+                    <desc>The instrument is called perfect, the best, the finest, supreme or
+                       unsurpassed, or the culmination of a line of progress.</desc>
+                 </category>
+                 <category xml:id="unique_and_superior">
+                    <gloss>Unique and superior to rivals</gloss>
+                    <desc>The instrument is "the only one", the standard for all others, it
+                       surpasses its rivals or has nothing in common with them, or the
+                       reader is warned against cheap or unknown makes.</desc>
+                 </category>
+                 <category xml:id="the_original">
+                    <gloss>The original</gloss>
+                    <desc>The Welte-Mignon is the original or the first reproducing piano,
+                       protected by the original patents; the history of the Welte firm
+                       and its founders guarantees it.</desc>
+                 </category>
+                 <category xml:id="how_it_works">
+                    <gloss>How it works</gloss>
+                    <desc>The ad explains or shows the technology: the recording process, the
+                       pneumatic or electric mechanism, the roll, the drive from a light
+                       socket, or it likens the recording to photography or the
+                       phonograph. A product label such as "electric reproducing piano"
+                       alone does not count.</desc>
+                 </category>
+                 <category xml:id="repertoire">
+                    <gloss>Breadth of repertoire</gloss>
+                    <desc>The range of music available: classics and dance music, jazz and
+                       opera, music for every mood and occasion, a library of thousands of
+                       rolls by hundreds of artists.</desc>
+                 </category>
+                 <category xml:id="quality">
+                    <gloss>Quality and durability</gloss>
+                    <desc>The instrument is reliable, well built and lasting, proven in use
+                       and in every climate, guaranteed.</desc>
                  </category>
               </taxonomy>
            </classDecl>
@@ -196,6 +263,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+           <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
            <change when="2026-10-20">Marked as checked by the editor.</change>
            <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
@@ -270,28 +338,28 @@
 
         <div facs="#zone_original">
             <ab><hi rendition="#c">
-                <lb /><hi rendition="#i">Is the</hi> <name type="brand"><hi rendition="#i">Original</hi>
-                <lb /><hi rendition="#in"><hi rendition="#in #g">REPRODUCING PIANO</hi></hi></name>
+                <lb /><seg xml:id="topic_3" ana="#the_original" type="topic" resp="#claude"><hi rendition="#i">Is the</hi> <name type="brand"><hi rendition="#i">Original</hi>
+                <lb /><hi rendition="#in"><hi rendition="#in #g">REPRODUCING PIANO</hi></hi></name></seg>
             </hi></ab>
         </div>
 
         <div facs="#zone_first">
             <ab><hi rendition="#c #g">
-                <lb />And Was the First Ever Sold in the World
+                <lb /><seg xml:id="topic_4" ana="#the_original" type="topic" resp="#claude">And Was the First Ever Sold in the World</seg>
             </hi></ab>
         </div>
 
         <div facs="#zone_col1">
             <ab><cb />
-            <lb /><name type="brand"><hi rendition="#k">The</hi> <hi rendition="#i">Original Welte-Mignon</hi> Reproduc-
+            <lb /><seg xml:id="topic_5" ana="#superlatives" type="topic" resp="#claude"><name type="brand"><hi rendition="#k">The</hi> <hi rendition="#i">Original Welte-Mignon</hi> Reproduc-
             <lb />ing Piano</name> as manufactured by the new
             <lb /><orgName>Welte-Mignon Corp.</orgName> is the finest product
-            <lb />of its kind in the world.
+            <lb />of its kind in the world.</seg>
             <lb />The new <orgName>Welte-Mignon Corp.</orgName> is not only
             <lb />strongly entrenched financially, but has a
             <lb />very able staff of executives of proven ability,
-            <lb />who are pursuing a policy of producing only
-            <lb />the highest quality instruments — Grand
+            <lb /><seg xml:id="topic_6" ana="#quality" type="topic" resp="#claude">who are pursuing a policy of producing only
+            <lb />the highest quality instruments</seg> — Grand
             <lb />Pianos under the name of <name type="brand">"Welte"</name>,
             <name type="brand">"Welte-
             <lb />Mignon"</name> Reproducing Pianos and Organs,
@@ -303,29 +371,29 @@
             <ab><cb/>
             <lb /><name type="brand"><hi rendition="#k">The</hi> <hi rendition="#i">Original Welte-Mignon</hi></name> as manufac-
             <lb />tured by the new <orgName>Welte-Mignon Corp.</orgName>
-            <lb />not only retains all the marvelous features
-            <lb />invented by <persName corresp="https://d-nb.info/gnd/13335492X">Edwin Welte</persName>, but also has many
-            <lb />refinements in manufacture which places it
+            <lb />not only <seg xml:id="topic_7" ana="#the_original" type="topic" resp="#claude">retains all the marvelous features
+            <lb />invented by <persName corresp="https://d-nb.info/gnd/13335492X">Edwin Welte</persName></seg>, but also has many
+            <lb />refinements in manufacture <seg xml:id="topic_8" ana="#unique_and_superior" type="topic" resp="#claude">which places it
             <lb />in its rightful position as THE <hi rendition="#i">reproducing</hi>
-            <lb />piano. We invite comparison.
+            <lb />piano.</seg> <seg xml:id="topic_9" ana="#hearing_is_believing" type="topic" resp="#claude">We invite comparison.</seg>
             <lb /><name type="brand">The <hi rendition="#i">Original Welte-Mignon</hi></name> is found in
-            <lb />grands of various sizes in conventional and
-            <lb />period designs. The <name type="brand">WELTE-MIGNON</name>
+            <lb /><seg xml:id="topic_10" ana="#furniture" type="topic" resp="#claude">grands of various sizes in conventional and
+            <lb />period designs.</seg> The <name type="brand">WELTE-MIGNON</name>
             <lb />franchise is a valuable one for the dealer.</ab>
         </div>
 
         <div facs="#zone_library">
             <ab><hi rendition="#c">
-                <hi rendition="#b #i #larger">
+                <seg xml:id="topic_11" ana="#repertoire" type="topic" resp="#claude"><hi rendition="#b #i #larger">
                     <lb />The <name type="brand">Welte-Mignon Library</name>
                 </hi>
-                <lb />Is Most Comprehensive. It Comprises Several Thousand Recordings That Reproduce
+                <lb />Is Most Comprehensive. It Comprises Several Thousand Recordings</seg> That Reproduce
                 <lb />
                 <seg xml:id="topic_1"
-                    ana="#analogy_to_photography" resp="#np" type="topic">
+                    ana="#faithful_reproduction #how_it_works" resp="#claude" type="topic">
                     With Photographic Accuracy
-                </seg> the Individual Playing of
-                the Master Pianists of the World
+                </seg> <seg xml:id="topic_12" ana="#touch_and_individuality" type="topic" resp="#claude">the Individual Playing of
+                the Master Pianists of the World</seg>
             </hi></ab>
         </div>
 
@@ -335,7 +403,7 @@
                     <lb /><name type="brand">THE ORIGINAL WELTE-MIGNON</name>
                 </hi>
                 <lb />
-                <seg xml:id="topic_2" ana="#immortality" resp="#np" type="topic">
+                <seg xml:id="topic_2" ana="#immortality" resp="#claude" type="topic">
                     "The Instrument That Immortalizes the Playing of the Masters"
                 </seg>
                 <lb />A Leader for Every Representative Music Merchant

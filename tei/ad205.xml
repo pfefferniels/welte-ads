@@ -563,11 +563,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -595,10 +596,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -615,22 +621,60 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <category xml:id="artists_hear_themselves">
+             <gloss>Artists hear themselves</gloss>
+             <desc>The artists vouch for their own recordings: they hear or recognise
+                their own playing, are deceived by it, sign the rolls as
+                autographs, or a demonstration proves that each pianist can be
+                recognised.</desc>
           </category>
-          <category xml:id="immediate_recognizability">
-             <gloss>Immediate Recognizability</gloss>
+          <category xml:id="refinement">
+             <gloss>Culture, refinement and distinction</gloss>
+             <desc>Owning the instrument marks culture, refinement or social standing
+                ("vornehmes Heim", "a visible token of culture"), or the picture
+                places it in an elegant upper-class setting.</desc>
           </category>
-          <category xml:id="popular">
-             <gloss>Popular</gloss>
+          <category xml:id="testimonials">
+             <gloss>Testimonials of famous musicians</gloss>
+             <desc>A named musician or other notable person is quoted or paraphrased
+                in praise of the instrument.</desc>
+          </category>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+          </category>
+          <category xml:id="satisfied_owners">
+             <gloss>Satisfied owners</gloss>
+             <desc>Ordinary owners, named or anonymous, or the number of owners vouch
+                for the instrument.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
+          </category>
+          <category xml:id="unique_and_superior">
+             <gloss>Unique and superior to rivals</gloss>
+             <desc>The instrument is "the only one", the standard for all others, it
+                surpasses its rivals or has nothing in common with them, or the
+                reader is warned against cheap or unknown makes.</desc>
+          </category>
+          <category xml:id="quality">
+             <gloss>Quality and durability</gloss>
+             <desc>The instrument is reliable, well built and lasting, proven in use
+                and in every climate, guaranteed.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -639,6 +683,7 @@
       <langUsage><language ident="es">Spanish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20" who="#claude">Merged with the former ad206 (Diario de la Marina, December 11, 1919 to January 4, 1920, a new setting of the same text); its printings are further sources, its readings are recorded with app.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -662,45 +707,45 @@
   <text decls="#source_1">
     <body>
       <div type="illustration" facs="#zone_pugno">
-        <figure><desc>Portrait drawing of Raoul Pugno, with the name written below: "Pugno"</desc></figure>
+        <figure xml:id="figure_1" ana="#testimonials" resp="#claude"><desc>Portrait drawing of Raoul Pugno, with the name written below: "Pugno"</desc></figure>
         <ab><lb/><persName type="artist" corresp="https://d-nb.info/gnd/116308621">Pugno</persName></ab>
-        <p><quote type="testimonial"><seg xml:id="topic_1" ana="#immediate_recognizability" type="topic" resp="#claude"><lb/>“Puedo decir que me he
+        <p><quote type="testimonial"><seg xml:id="topic_1" ana="#artists_hear_themselves" type="topic" resp="#claude"><lb/>“Puedo decir que me he
             <lb/>oído a mi mismo.”</seg></quote>
-          <lb/><hi rendition="#right #b">—<persName type="artist" corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>.</hi></p>
+          <lb/><seg xml:id="topic_5" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#right #b">—<persName type="artist" corresp="https://d-nb.info/gnd/116308621">Raoul Pugno</persName>.</hi></seg></p>
       </div>
       <div type="illustration" facs="#zone_carreno">
-        <figure><desc>Portrait drawing of Teresa Carreño, with the name written below: "Carreño"</desc></figure>
+        <figure xml:id="figure_2" ana="#testimonials" resp="#claude"><desc>Portrait drawing of Teresa Carreño, with the name written below: "Carreño"</desc></figure>
         <ab><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreño</persName></ab>
         <p><quote type="testimonial"><lb/>“Este nombre tiene una
             <lb/>significación colosal.”</quote>
-          <lb/><hi rendition="#right #b">—<persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreño</persName>.</hi></p>
+          <lb/><seg xml:id="topic_6" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#right #b">—<persName type="artist" corresp="https://d-nb.info/gnd/118953915">Teresa Carreño</persName>.</hi></seg></p>
       </div>
       <div type="illustration" facs="#zone_hofmann">
-        <figure><desc>Portrait drawing of Josef Hofmann, with the name written below: "Hofmann"</desc></figure>
+        <figure xml:id="figure_3" ana="#testimonials" resp="#claude"><desc>Portrait drawing of Josef Hofmann, with the name written below: "Hofmann"</desc></figure>
         <ab><lb/><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName></ab>
-        <p><quote type="testimonial"><lb/>“Incomparable.”</quote>
-          <lb/><hi rendition="#right #b">—<persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Joseph Hofmann</persName>.</hi></p>
+        <p><quote type="testimonial"><lb/><seg xml:id="topic_8" ana="#superlatives" type="topic" resp="#claude">“Incomparable.”</seg></quote>
+          <lb/><seg xml:id="topic_7" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#right #b">—<persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Joseph Hofmann</persName>.</hi></seg></p>
       </div>
       <div facs="#zone_headline">
-        <head><hi rendition="#in"><lb/>EL <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9"/><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16">PIANO “</rdg></app><name type="brand">WELTE MIGNON</name><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9"/><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16">”</rdg></app> ES <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9">EL UNICO</rdg><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16"/></app>
+        <head><hi rendition="#in"><lb/>EL <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9"/><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16">PIANO “</rdg></app><name type="brand">WELTE MIGNON</name><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9"/><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16">”</rdg></app> <seg xml:id="topic_9" ana="#unique_and_superior #world_renown" type="topic" resp="#claude">ES <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9">EL UNICO</rdg><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16"/></app>
           <lb/><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9">PIANO</rdg><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16"/></app> RECONOCIDO POR LOS GRAN-
-          <lb/>DES ARTISTAS, TALES COMO: <persName type="artist" corresp="https://d-nb.info/gnd/116308621">PUGNO</persName>,
-          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">HOFMANN</persName>, <persName corresp="https://d-nb.info/gnd/118573527"><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9">LISZT</rdg><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16"><sic>LISTZ</sic></rdg></app></persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118953915">CARREÑO</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118518011">BUS-<lb/>SONI</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116327642">GABRILOWICH</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/119281953">GANZ</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">PADE-<lb/>REWSKY</persName>, ETC.<app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9"/><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16">,</rdg></app> <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">COMO EL <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9">UNICO</rdg><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16">único</rdg></app> RE-
+          <lb/>DES ARTISTAS</seg>, TALES COMO: <persName type="artist" corresp="https://d-nb.info/gnd/116308621">PUGNO</persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">HOFMANN</persName>, <persName corresp="https://d-nb.info/gnd/118573527"><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9">LISZT</rdg><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16"><sic>LISTZ</sic></rdg></app></persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118953915">CARREÑO</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118518011">BUS-<lb/>SONI</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116327642">GABRILOWICH</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/119281953">GANZ</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">PADE-<lb/>REWSKY</persName>, ETC.<app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9"/><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16">,</rdg></app> <seg xml:id="topic_2" ana="#faithful_reproduction #unique_and_superior #artists_hear_themselves" type="topic" resp="#claude">COMO EL <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9">UNICO</rdg><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16">único</rdg></app> RE-
           <lb/>PRODUCTOR EXACTO DE SUS MAG-
-          <lb/><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9">NIFICAS</rdg><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16">níficas</rdg></app> OBRAS</seg>. NO GASTE SU DINE-
+          <lb/><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9">NIFICAS</rdg><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16">níficas</rdg></app> OBRAS</seg>. <seg xml:id="topic_10" ana="#unique_and_superior" type="topic" resp="#claude">NO GASTE SU DINE-
           <lb/>RO EN COMPRAR UN PIANO DE MAR-
-          <lb/>CA DESCONOCIDA<app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9">.</rdg><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16"/></app></hi></head>
+          <lb/>CA DESCONOCIDA</seg><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9">.</rdg><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16"/></app></hi></head>
       </div>
       <div facs="#zone_text">
         <p><lb/>Cuando usted puede adquirir los famosos pianos “<name type="brand">WELTE
           <lb/>MIGNON</name>,” “MASON &amp; HAMLIN,” “J. L. STOWERS,” “ESTEY
-          <lb/>COMPANY,” &amp; “R. S. HOWARD” los cuales son construídos espe-
+          <lb/>COMPANY,” &amp; “R. S. HOWARD” <seg xml:id="topic_11" ana="#quality" type="topic" resp="#claude">los cuales son construídos espe-
           <lb/>cialmente para el clima tropical, con caoba de Cuba teniendo todas
-          <lb/>las partes metálicas internas de cobre y bronce.</p>
+          <lb/>las partes metálicas internas de cobre y bronce.</seg></p>
         <p><lb/>Al adquirir usted un piano de estas marcas no solamente lo
           <lb/>hace a criterio propio, sino también bajo el mismo juicio de más
-          <lb/>de <seg xml:id="topic_3" ana="#popular" type="topic" resp="#claude">DIEZ MIL familias, que en esta República poseen estos pianos</seg>.</p>
-        <p><lb/><seg xml:id="topic_4" ana="#home" type="topic" resp="#claude">Uno de estos instrumentos en su hogar<unclear>,</unclear> es una representación
+          <lb/>de <seg xml:id="topic_3" ana="#satisfied_owners" type="topic" resp="#claude">DIEZ MIL familias, que en esta República poseen estos pianos</seg>.</p>
+        <p><lb/><seg xml:id="topic_4" ana="#refinement" type="topic" resp="#claude">Uno de estos instrumentos en su hogar<unclear>,</unclear> es una representación
           <lb/>evidente de su cultura musical</seg>.</p>
         <p><lb/>Pase a oirlos, o solicite <app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9">catálogos.</rdg><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16">catálog<unclear>o</unclear><gap reason="illegible"/></rdg></app></p>
       </div>
@@ -709,23 +754,23 @@
           <lb/><hi rendition="#c #b #in"><orgName>John L. Stowers.</orgName> <address><addrLine>San Rafael 29.</addrLine> <addrLine><placeName>Habana.</placeName></addrLine></address></hi></ab>
       </div>
       <div type="illustration" facs="#zone_ganz">
-        <figure><desc>Portrait drawing of Rudolph Ganz, with the name written below: "Ganz"</desc></figure>
+        <figure xml:id="figure_4" ana="#testimonials" resp="#claude"><desc>Portrait drawing of Rudolph Ganz, with the name written below: "Ganz"</desc></figure>
         <ab><lb/><persName type="artist" corresp="https://d-nb.info/gnd/119281953">Ganz</persName></ab>
         <p><quote type="testimonial"><lb/>“Es una cosa magnífica.”</quote>
-          <lb/><hi rendition="#right #b">—<persName type="artist" corresp="https://d-nb.info/gnd/119281953"><sic>Rudolh</sic> Ganz</persName><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9">.</rdg><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16"/></app></hi></p>
+          <lb/><seg xml:id="topic_12" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#right #b">—<persName type="artist" corresp="https://d-nb.info/gnd/119281953"><sic>Rudolh</sic> Ganz</persName><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9">.</rdg><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16"/></app></hi></seg></p>
       </div>
       <div type="illustration" facs="#zone_busoni">
-        <figure><desc>Portrait drawing of Ferruccio Busoni, with the name written below: "Busoni"</desc></figure>
+        <figure xml:id="figure_5" ana="#testimonials" resp="#claude"><desc>Portrait drawing of Ferruccio Busoni, with the name written below: "Busoni"</desc></figure>
         <ab><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName></ab>
         <p><quote type="testimonial"><lb/>“Causará gran placer al
             <lb/>público en general.”</quote>
-          <lb/><hi rendition="#right #b">—<persName type="artist" corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9">.</rdg><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16"/></app></hi></p>
+          <lb/><seg xml:id="topic_13" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#right #b">—<persName type="artist" corresp="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName><app><rdg source="#source_1 #source_2 #source_3 #source_4 #source_5 #source_6 #source_7 #source_8 #source_9">.</rdg><rdg source="#source_10 #source_11 #source_12 #source_13 #source_14 #source_15 #source_16"/></app></hi></seg></p>
       </div>
       <div type="illustration" facs="#zone_liszt">
-        <figure><desc>Portrait drawing of Franz Liszt, with the name written below: "Liszt"</desc></figure>
+        <figure xml:id="figure_6" ana="#testimonials" resp="#claude"><desc>Portrait drawing of Franz Liszt, with the name written below: "Liszt"</desc></figure>
         <ab><lb/><persName corresp="https://d-nb.info/gnd/118573527">Liszt</persName></ab>
         <p><quote type="testimonial"><lb/>“Estoy admiradísimo.”</quote>
-          <lb/><hi rendition="#right #b">—<persName corresp="https://d-nb.info/gnd/118573527">Liszt</persName>.</hi></p>
+          <lb/><seg xml:id="topic_14" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#right #b">—<persName corresp="https://d-nb.info/gnd/118573527">Liszt</persName>.</hi></seg></p>
       </div>
     </body>
   </text>

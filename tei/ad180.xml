@@ -110,11 +110,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -142,10 +143,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -162,26 +168,52 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="distinction_from_mechanical">
-             <gloss>Distinction from Mechanical</gloss>
-             <desc>Often, the adverts try to distinguish reproducing piano rolls
-                from mere mechanical methods (such as the player piano).</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="immortality">
-             <gloss>Immortality</gloss>
-             <desc>This topic emphasizes the perdurance of the reproductions and
-                how thus the recording artists become immortal.</desc>
+          <category xml:id="touch_and_individuality">
+             <gloss>Touch, nuance and individuality</gloss>
+             <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                pedalling, dynamics, tempo, shading, tone colour, or the
+                individuality and characteristic style of each pianist.</desc>
           </category>
-          <category xml:id="phantom_body">
-             <gloss>Phantom Body</gloss>
+          <category xml:id="the_artists_soul">
+             <gloss>The artist's soul</gloss>
+             <desc>The instrument is said to capture the soul, spirit, feeling or
+                inner life of the performer, a spiritual register beyond the
+                technical one of touch and nuance ("the living soul of the artist",
+                "Musikseele").</desc>
           </category>
-          <category xml:id="soulfulness">
-             <gloss>Soulfulness</gloss>
+          <category xml:id="not_mechanical">
+             <gloss>Art, not mechanism</gloss>
+             <desc>The instrument is set apart from mechanical, automatic or player-
+                piano playing: it is human, artistic, "not a surrogate", or the
+                prejudice that it is mechanical is refuted.</desc>
           </category>
-          <category xml:id="virtual_presence">
-             <gloss>Virtual Presence</gloss>
+          <category xml:id="illusion_of_presence">
+             <gloss>Illusion of presence</gloss>
+             <desc>The listener feels that the artist is present or seated at the
+                instrument ("as if he sat at your piano", "close your eyes"), or
+                cannot tell the reproduction from the live artist.</desc>
+          </category>
+          <category xml:id="epoch_making_invention">
+             <gloss>Epoch-making invention</gloss>
+             <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                the greatest of the age, a sensation, the newest thing.</desc>
+          </category>
+          <category xml:id="how_it_works">
+             <gloss>How it works</gloss>
+             <desc>The ad explains or shows the technology: the recording process, the
+                pneumatic or electric mechanism, the roll, the drive from a light
+                socket, or it likens the recording to photography or the
+                phonograph. A product label such as "electric reproducing piano"
+                alone does not count.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -190,6 +222,7 @@
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -209,18 +242,18 @@
         <head><lb/><hi rendition="#c #in #b"><name type="brand">WELTE-MIGNON</name></hi></head>
       </div>
       <div facs="#zone_text">
-        <p><lb/><hi rendition="#b">Ein sinnreicher Mechanismus</hi>, der in ein Piano eingebaut ist,
-          <lb/>setzt die Hämmer in Bewegung, <seg xml:id="topic_1" ana="#phantom_body" type="topic" resp="#claude">als ob ein Spieler vor den
-          <lb/>Tasten sässe</seg>. Der Mechanismus wird von einer Notenrolle,
-          <lb/>dem Gehirn des Apparates, gelenkt. Ihr ist sichtbarlich und
-          <lb/><seg xml:id="topic_2" ana="#immortality" type="topic" resp="#claude">unveränderlich das Spiel eines Meisters eingegraben</seg>. Die
-          <lb/>auswechselbare Notenrolle ist <seg xml:id="topic_3" ana="#soulfulness" type="topic" resp="#claude">die Musikseele des Meisters</seg>.
-          <lb/>:-: <hi rendition="#c">Er selbst könnte nicht anders spielen.</hi> :-:
-          <lb/><hi rendition="#b"><name type="brand">Welte-Mignon</name></hi> spielt menschlich, deshalb künstlerisch. <seg xml:id="topic_4" ana="#distinction_from_mechanical" type="topic" resp="#claude">Ihm
+        <p><lb/><seg xml:id="topic_6" ana="#how_it_works #epoch_making_invention" type="topic" resp="#claude"><hi rendition="#b">Ein sinnreicher Mechanismus</hi>, der in ein Piano eingebaut ist,
+          <lb/>setzt die Hämmer in Bewegung</seg>, <seg xml:id="topic_1" ana="#illusion_of_presence" type="topic" resp="#claude">als ob ein Spieler vor den
+          <lb/>Tasten sässe</seg>. <seg xml:id="topic_7" ana="#how_it_works" type="topic" resp="#claude">Der Mechanismus wird von einer Notenrolle,
+          <lb/>dem Gehirn des Apparates, gelenkt</seg>. Ihr ist sichtbarlich und
+          <lb/><seg xml:id="topic_2" ana="#how_it_works" type="topic" resp="#claude">unveränderlich das Spiel eines Meisters eingegraben</seg>. Die
+          <lb/>auswechselbare Notenrolle ist <seg xml:id="topic_3" ana="#the_artists_soul" type="topic" resp="#claude">die Musikseele des Meisters</seg>.
+          <lb/>:-: <hi rendition="#c"><seg xml:id="topic_8" ana="#faithful_reproduction" type="topic" resp="#claude">Er selbst könnte nicht anders spielen.</seg></hi> :-:
+          <lb/><seg xml:id="topic_9" ana="#not_mechanical" type="topic" resp="#claude"><hi rendition="#b"><name type="brand">Welte-Mignon</name></hi> spielt menschlich, deshalb künstlerisch</seg>. <seg xml:id="topic_4" ana="#not_mechanical" type="topic" resp="#claude">Ihm
           <lb/>haftet nichts von der kalten Regelmässigkeit eines automa-
-          <lb/>tischen Klaviers an</seg>. Schwankungen im Tempo, im Anschlag
-          <lb/>verraten Leben, <seg xml:id="topic_5" ana="#virtual_presence" type="topic" resp="#claude">als ob der Meister da wäre</seg>. Schliesst man
-          <lb/>:-: <hi rendition="#c">die Augen, so ist die Täuschung vollkommen.</hi> :-:</p>
+          <lb/>tischen Klaviers an</seg>. <seg xml:id="topic_10" ana="#touch_and_individuality" type="topic" resp="#claude">Schwankungen im Tempo, im Anschlag
+          <lb/>verraten Leben</seg>, <seg xml:id="topic_5" ana="#illusion_of_presence" type="topic" resp="#claude">als ob der Meister da wäre</seg>. <seg xml:id="topic_11" ana="#illusion_of_presence" type="topic" resp="#claude">Schliesst man
+          <lb/>:-: <hi rendition="#c">die Augen, so ist die Täuschung vollkommen.</hi></seg> :-:</p>
       </div>
       <div facs="#zone_signature">
         <ab><lb/><hi rendition="#b #g"><placeName>ZÜRICH</placeName></hi> <hi rendition="#in #b"><orgName>HUG &amp; C<hi rendition="#sup">o</hi></orgName></hi>

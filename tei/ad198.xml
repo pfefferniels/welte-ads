@@ -119,11 +119,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -151,10 +152,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -171,18 +177,30 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="home">
-             <gloss>Home</gloss>
-          </category>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
           <category xml:id="immortality">
-             <gloss>Immortality</gloss>
-             <desc>This topic emphasizes the perdurance of the reproductions and
-                how thus the recording artists become immortal.</desc>
+             <gloss>Immortality and posterity</gloss>
+             <desc>The playing is preserved for ever or for future generations; the
+                artists become immortal, and dead artists still play.</desc>
           </category>
-          <category xml:id="sitting_woman">
-             <gloss>Sitting Woman</gloss>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
+          </category>
+          <category xml:id="domestic_comfort">
+             <gloss>Domestic comfort and intimacy</gloss>
+             <desc>A private, comfortable scene: the fireside, an armchair, lamplight,
+                the family gathered, a quiet evening, in the text or in the
+                picture.</desc>
+          </category>
+          <category xml:id="refinement">
+             <gloss>Culture, refinement and distinction</gloss>
+             <desc>Owning the instrument marks culture, refinement or social standing
+                ("vornehmes Heim", "a visible token of culture"), or the picture
+                places it in an elegant upper-class setting.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -191,6 +209,7 @@
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-20">Topic of the picture attributed to Claude, who annotated it.</change>
@@ -215,14 +234,14 @@
           <lb/><hi rendition="#c #uc #b"><seg xml:id="topic_1" ana="#immortality" type="topic" resp="#claude">Die Instrumente der Unsterblichen</seg></hi></head>
       </div>
       <div type="illustration" facs="#zone_picture">
-        <figure xml:id="figure_1" ana="#sitting_woman" resp="#claude"><desc>A drawing of a salon: organ pipes behind a draped curtain, a grand piano at the left, a woman in an evening gown reclining on a cushioned seat with sheet music in her hand, and a man in evening dress standing behind her with his hand on her shoulder; a monogram at the lower left</desc></figure>
+        <figure xml:id="figure_1" ana="#refinement #domestic_comfort" resp="#claude"><desc>A drawing of a salon: organ pipes behind a draped curtain, a grand piano at the left, a woman in an evening gown reclining on a cushioned seat with sheet music in her hand, and a man in evening dress standing behind her with his hand on her shoulder; a monogram at the lower left</desc></figure>
       </div>
       <div facs="#zone_names">
         <ab><hi rendition="#c #uc"><lb/><persName type="artist" corresp="https://d-nb.info/gnd/118598988">Reger</persName> · <persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName> · <persName type="artist" corresp="https://d-nb.info/gnd/11875081X">Saint-Sa<unclear>ë</unclear>ns</persName> · <persName type="artist" corresp="https://d-nb.info/gnd/118786253">Nikisch</persName> · <persName type="artist" corresp="https://d-nb.info/gnd/116429623">Reisenauer</persName>
           <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118953915">Carreño</persName> · <persName type="artist" corresp="https://d-nb.info/gnd/120890143">Leschetizky</persName> · <persName type="artist" corresp="https://d-nb.info/gnd/116942037">Mottl</persName> ·</hi></ab>
       </div>
       <div facs="#zone_slogan">
-        <p><hi rendition="#c #uc #b #larger"><lb/><seg xml:id="topic_2" ana="#immortality" type="topic" resp="#claude">Ihre Kunst verewigt</seg> <seg xml:id="topic_3" ana="#home" type="topic" resp="#claude">im
+        <p><hi rendition="#c #uc #b #larger"><lb/><seg xml:id="topic_2" ana="#immortality" type="topic" resp="#claude">Ihre Kunst verewigt</seg> <seg xml:id="topic_3" ana="#masters_at_home #refinement" type="topic" resp="#claude">im
           <lb/>vornehmen Heim</seg></hi></p>
       </div>
       <div facs="#zone_signature">

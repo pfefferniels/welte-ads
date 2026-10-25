@@ -200,11 +200,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -232,10 +233,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -252,11 +258,24 @@
         <rendition xml:id="right" scheme="css">text-align: right;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
       </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="topics">
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
+          </category>
+        </taxonomy>
+      </classDecl>
     </encodingDesc>
     <profileDesc>
       <langUsage><language ident="nl">Dutch</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20" who="#claude">Merged with the former ad056 (Nieuwe Rotterdamsche Courant, June 10, 1923, a new setting of the same text); its printings are further sources, its readings are recorded with app.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -301,9 +320,9 @@
         </hi></ab>
       </div>
       <div facs="#zone_text">
-        <p><lb/>en dus ook voor hen, <app><rdg source="#source_1 #source_3 #source_4">die</rdg><rdg source="#source_2">welke</rdg></app> in
+        <p><lb/><seg xml:id="topic_1" ana="#masters_at_home" type="topic" resp="#claude">en dus ook voor hen, <app><rdg source="#source_1 #source_3 #source_4">die</rdg><rdg source="#source_2">welke</rdg></app> in
           <lb/>het bezit zijn van een Ameri-
-          <lb/>kaansche <name type="brand">Welte-Mignon</name><app><rdg source="#source_1 #source_2 #source_3">.</rdg><rdg source="#source_4"/></app></p>
+          <lb/>kaansche <name type="brand">Welte-Mignon</name></seg><app><rdg source="#source_1 #source_2 #source_3">.</rdg><rdg source="#source_4"/></app></p>
         <p><lb/>Zonder verplichting dagelijks
           <lb/>te hooren bij den vertegen-
           <lb/>woordiger voor <placeName>Rotterdam</placeName></p>

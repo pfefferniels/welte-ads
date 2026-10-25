@@ -140,11 +140,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -172,10 +173,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -194,21 +200,47 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
+          </category>
+          <category xml:id="touch_and_individuality">
+             <gloss>Touch, nuance and individuality</gloss>
+             <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                pedalling, dynamics, tempo, shading, tone colour, or the
+                individuality and characteristic style of each pianist.</desc>
+          </category>
+          <category xml:id="artists_hear_themselves">
+             <gloss>Artists hear themselves</gloss>
+             <desc>The artists vouch for their own recordings: they hear or recognise
+                their own playing, are deceived by it, sign the rolls as
+                autographs, or a demonstration proves that each pianist can be
+                recognised.</desc>
           </category>
           <category xml:id="immortality">
-             <gloss>Immortality</gloss>
-             <desc>This topic emphasizes the perdurance of the reproductions and
-                how thus the recording artists become immortal.</desc>
+             <gloss>Immortality and posterity</gloss>
+             <desc>The playing is preserved for ever or for future generations; the
+                artists become immortal, and dead artists still play.</desc>
           </category>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
+          </category>
+          <category xml:id="testimonials">
+             <gloss>Testimonials of famous musicians</gloss>
+             <desc>A named musician or other notable person is quoted or paraphrased
+                in praise of the instrument.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -217,6 +249,7 @@
       <langUsage><language ident="de">German</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -243,14 +276,14 @@
             <addrLine><lb/><hi rendition="#b">Sonnenquai.</hi></addrLine></address></ab>
       </div>
       <div facs="#zone_letter">
-        <head><lb/><hi rendition="#c #b #larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Eugen d’Albert</persName></hi></head>
+        <head><lb/><seg xml:id="topic_4" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#c #b #larger #u"><persName type="artist" corresp="https://d-nb.info/gnd/118501437">Eugen d’Albert</persName></hi></seg></head>
         <p><lb/><hi rendition="#c">schreibt in einem Brief vom 6. 6. 13:</hi>
-          <quote type="testimonial"><lb/>„Wie erstaunlich und tiefergreifend ist es, sein
+          <quote type="testimonial"><lb/>„<seg xml:id="topic_5" ana="#artists_hear_themselves #wonder" type="topic" resp="#claude">Wie erstaunlich und tiefergreifend ist es, sein
           <lb/>vor Jahren aufgenommenes Spiel in größter Vol-
           <lb/>lendung durch <hi rendition="#b">„<name type="brand">WELTE-MIGNON</name>“</hi> wiedergegeben
-          <lb/>zu hören! Der Ruf der <hi rendition="#b">„<name type="brand">WELTE-MIGNON</name>-Pianos“</hi>,
-          <lb/><seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">das Vollendetste zu sein auf diesem Gebiet</seg>, ist fest
-          <lb/>begründet in dieser <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">getreuen Wiedergabe des in-
+          <lb/>zu hören</seg>! Der Ruf der <hi rendition="#b">„<name type="brand">WELTE-MIGNON</name>-Pianos“</hi>,
+          <lb/><seg xml:id="topic_1" ana="#superlatives" type="topic" resp="#claude">das Vollendetste zu sein auf diesem Gebiet</seg>, ist fest
+          <lb/>begründet in dieser <seg xml:id="topic_2" ana="#faithful_reproduction #touch_and_individuality" type="topic" resp="#claude">getreuen Wiedergabe des in-
           <lb/>dividuellen Spiels</seg> und es ist mir eine künstlerische
           <lb/>Befriedigung und eine Freude, heute dem <hi rendition="#b">„<name type="brand">WELTE-
           <lb/>MIGNON</name>“</hi> ein reiches, vielseitiges Programm an-

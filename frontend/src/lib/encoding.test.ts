@@ -112,12 +112,13 @@ describe.each(ads)("$file", ({ file, xml }) => {
 
 describe("getTopics", () => {
   it("reads the label and description of a topic", () => {
-    const topic = getTopics()["#exact_reproduction"]
-    expect(topic.label).toBe("Exact Reproduction")
-    expect(topic.description).toMatch(/^In virtually all promotional materials/)
+    const topic = getTopics()["#faithful_reproduction"]
+    expect(topic.label).toBe("Faithful reproduction")
+    expect(topic.description).toMatch(/^The ad claims that the playing of the artist is reproduced exactly/)
   })
 
-  it("leaves out a description that is not given", () => {
-    expect(getTopics()["#home"]).toEqual({ label: "Home" })
+  // the description is the rule by which a topic is assigned
+  it("describes every topic", () => {
+    expect(Object.entries(getTopics()).filter(([, topic]) => !topic.description)).toEqual([])
   })
 })

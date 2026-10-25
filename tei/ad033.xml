@@ -18,6 +18,10 @@
                         <forename>Niels</forename>
                     </persName>
                 </respStmt>
+                <respStmt>
+                    <resp>Annotation of topics</resp>
+                    <name xml:id="claude">Claude (AI model by Anthropic)</name>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>
@@ -159,11 +163,12 @@
                   scan, in part transcribed by hand. The advertisements published
                   outside Germany, the United Kingdom and the United States, and a
                   few from Germany, were transcribed from the scans, encoded, given
-                  their regions and annotated with topics by Claude, an AI model;
-                  their revision history says so. Until the editor has checked such
-                  an advertisement against the scan, <att>status</att> on its
-                  <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-                  advertisement is <val>checked</val>.</p>
+                  their regions by Claude, an AI model; their revision history says
+                  so. Until the editor has checked such an advertisement against the
+                  scan, <att>status</att> on its <gi>revisionDesc</gi> is
+                  <val>unchecked</val>; that of every other advertisement is
+                  <val>checked</val>. The topics of all advertisements were assigned
+                  by Claude.</p>
                <correction>
                   <p>Errors of the original are not corrected but marked with
                      <gi>sic</gi>.</p>
@@ -191,10 +196,15 @@
                      Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                      which describes them in a <gi>desc</gi>. Illustrations are
                      described in <gi>figure</gi>. Persons are linked to the GND with
-                     <att>corresp</att>. Recurring motifs are marked as topics with
-                     <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                     the taxonomy of topics; these are an interpretation, by whom
-                     <att>resp</att> says.</p>
+                     <att>corresp</att>. Recurring arguments and motifs are marked as
+                     topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                     pointing to the taxonomy of topics. The taxonomy was induced by
+                     Claude in four blind readings of all advertisements, each in a
+                     different order and without knowledge of the editor's earlier
+                     taxonomy, which it replaced in October 2026; it keeps the topics
+                     that at least three of the readings found. The topics are an
+                     interpretation, assigned by whom <att>resp</att> says, so far
+                     all by Claude; the editor has not yet checked them.</p>
                </interpretation>
                <stdVals>
                   <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -217,39 +227,128 @@
             </tagsDecl>
             <classDecl>
                 <taxonomy xml:id="topics">
-                    <desc>Topics: recurring motifs of the advertisements, in their texts
-                       and in their pictures</desc>
-                    <category xml:id="analogy_to_photography">
-                       <gloss>Analogy to Photography</gloss>
+                    <desc>Topics: the recurring arguments and motifs of the advertisements,
+                       in their texts and in their pictures</desc>
+                    <category xml:id="faithful_reproduction">
+                       <gloss>Faithful reproduction</gloss>
+                       <desc>The ad claims that the playing of the artist is reproduced exactly,
+                          faithfully, naturally or completely, as "the actual playing" of the
+                          pianist. A bare "reproduces the playing of …" without such a
+                          qualifier does not count.</desc>
                     </category>
-                    <category xml:id="exact_reproduction">
-                       <gloss>Exact Reproduction</gloss>
-                       <desc>In virtually all promotional materials between 1905 and 1926,
-                          the claim of exact and faithful reproduction, of absolute
-                          accurateness is consistently emphasized.</desc>
+                    <category xml:id="touch_and_individuality">
+                       <gloss>Touch, nuance and individuality</gloss>
+                       <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                          pedalling, dynamics, tempo, shading, tone colour, or the
+                          individuality and characteristic style of each pianist.</desc>
                     </category>
-                    <category xml:id="listening">
-                       <gloss>Revelled Listening</gloss>
+                    <category xml:id="the_artists_soul">
+                       <gloss>The artist's soul</gloss>
+                       <desc>The instrument is said to capture the soul, spirit, feeling or
+                          inner life of the performer, a spiritual register beyond the
+                          technical one of touch and nuance ("the living soul of the artist",
+                          "Musikseele").</desc>
                     </category>
-                    <category xml:id="personality">
-                       <gloss>Personality</gloss>
+                    <category xml:id="not_mechanical">
+                       <gloss>Art, not mechanism</gloss>
+                       <desc>The instrument is set apart from mechanical, automatic or player-
+                          piano playing: it is human, artistic, "not a surrogate", or the
+                          prejudice that it is mechanical is refuted.</desc>
                     </category>
-                    <category xml:id="phantom_body">
-                       <gloss>Phantom Body</gloss>
+                    <category xml:id="illusion_of_presence">
+                       <gloss>Illusion of presence</gloss>
+                       <desc>The listener feels that the artist is present or seated at the
+                          instrument ("as if he sat at your piano", "close your eyes"), or
+                          cannot tell the reproduction from the live artist.</desc>
                     </category>
-                    <category xml:id="secret">
-                       <gloss>Secret</gloss>
-                       <desc>Perfect reproduction and its manufacturing is a secret
-                          possessed only by the Welte-Mignon company.</desc>
+                    <category xml:id="immortality">
+                       <gloss>Immortality and posterity</gloss>
+                       <desc>The playing is preserved for ever or for future generations; the
+                          artists become immortal, and dead artists still play.</desc>
                     </category>
-                    <category xml:id="soulfulness">
-                       <gloss>Soulfulness</gloss>
+                    <category xml:id="wonder">
+                       <gloss>Wonder, miracle and magic</gloss>
+                       <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                          causes astonishment, disbelief or speechlessness.</desc>
                     </category>
-                    <category xml:id="technical_invention">
-                       <gloss>Technical Invention</gloss>
+                    <category xml:id="phantom_hands">
+                       <gloss>Phantom hands</gloss>
+                       <desc>The absent performer appears as a phantom or spirit: ghostly or
+                          semi-transparent hands and figures, keys moving with no one seated,
+                          the artist summoned at will ("zitieren", "summon").</desc>
                     </category>
-                    <category xml:id="virtual_presence">
-                       <gloss>Virtual Presence</gloss>
+                    <category xml:id="hearing_is_believing">
+                       <gloss>Hearing is believing</gloss>
+                       <desc>The reader is challenged to verify the claims by listening,
+                          comparing or testing ("must be heard to be believed", "hear it in
+                          comparison"). A bare invitation to a demonstration does not count.</desc>
+                    </category>
+                    <category xml:id="masters_at_home">
+                       <gloss>The great pianists in your home</gloss>
+                       <desc>The famous pianists can be heard in your own home or on your own
+                          piano, at any time, as often as you wish, at your command ("The
+                          Master's Fingers on Your Piano", concerts at home).</desc>
+                    </category>
+                    <category xml:id="domestic_comfort">
+                       <gloss>Domestic comfort and intimacy</gloss>
+                       <desc>A private, comfortable scene: the fireside, an armchair, lamplight,
+                          the family gathered, a quiet evening, in the text or in the
+                          picture.</desc>
+                    </category>
+                    <category xml:id="world_renown">
+                       <gloss>World renown and recognition</gloss>
+                       <desc>The instrument is famous and admired throughout the world,
+                          acclaimed by all great artists, critics or the press, adopted by
+                          conservatories and other institutions, or decorated with medals and
+                          prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+                    </category>
+                    <category xml:id="royal_patronage">
+                       <gloss>Royal and aristocratic patronage</gloss>
+                       <desc>Royalty, the nobility or the court appear as listeners, owners or
+                          patrons, including titles of purveyor to the court
+                          ("Hoflieferant").</desc>
+                    </category>
+                    <category xml:id="epoch_making_invention">
+                       <gloss>Epoch-making invention</gloss>
+                       <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                          the greatest of the age, a sensation, the newest thing.</desc>
+                    </category>
+                    <category xml:id="superlatives">
+                       <gloss>Superlative perfection</gloss>
+                       <desc>The instrument is called perfect, the best, the finest, supreme or
+                          unsurpassed, or the culmination of a line of progress.</desc>
+                    </category>
+                    <category xml:id="unique_and_superior">
+                       <gloss>Unique and superior to rivals</gloss>
+                       <desc>The instrument is "the only one", the standard for all others, it
+                          surpasses its rivals or has nothing in common with them, or the
+                          reader is warned against cheap or unknown makes.</desc>
+                    </category>
+                    <category xml:id="the_original">
+                       <gloss>The original</gloss>
+                       <desc>The Welte-Mignon is the original or the first reproducing piano,
+                          protected by the original patents; the history of the Welte firm
+                          and its founders guarantees it.</desc>
+                    </category>
+                    <category xml:id="how_it_works">
+                       <gloss>How it works</gloss>
+                       <desc>The ad explains or shows the technology: the recording process, the
+                          pneumatic or electric mechanism, the roll, the drive from a light
+                          socket, or it likens the recording to photography or the
+                          phonograph. A product label such as "electric reproducing piano"
+                          alone does not count.</desc>
+                    </category>
+                    <category xml:id="still_a_piano">
+                       <gloss>Still a normal piano</gloss>
+                       <desc>The instrument remains an ordinary piano: it can be played by hand,
+                          the mechanism is invisible and leaves its look unchanged, it can be
+                          fitted to many makes of piano.</desc>
+                    </category>
+                    <category xml:id="repertoire">
+                       <gloss>Breadth of repertoire</gloss>
+                       <desc>The range of music available: classics and dance music, jazz and
+                          opera, music for every mood and occasion, a library of thousands of
+                          rolls by hundreds of artists.</desc>
                     </category>
                 </taxonomy>
             </classDecl>
@@ -260,6 +359,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
             <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
@@ -366,7 +466,7 @@
     <text decls="#source_1">
         <body>
         <div facs="#eSc_textblock_3d042e1f">
-            <ab><hi rendition="#c"><lb /><hi rendition="#in #larger">Welte's</hi><lb />Wonder-<lb />Invention</hi></ab></div>
+            <ab><hi rendition="#c"><seg xml:id="topic_15" ana="#wonder #epoch_making_invention" type="topic" resp="#claude"><lb /><hi rendition="#in #larger">Welte's</hi><lb />Wonder-<lb />Invention</seg></hi></ab></div>
         <div type="illustration" facs="#zone_orchestrion">
             <figure>
                 <desc>Welte's orchestrion, with three figures in Biedermeier dress</desc>
@@ -385,15 +485,15 @@
             <lb />The Clockmaker of Freiburg</hi></ab>
         </div>
         <div facs="#eSc_textblock_e5a2870f">
-            <ab><lb /><hi rendition="#k">To <persName corresp="https://d-nb.info/gnd/1128739232">Michael Welte</persName>,</hi>
+            <ab><lb /><seg xml:id="topic_16" ana="#the_original #faithful_reproduction" type="topic" resp="#claude"><hi rendition="#k">To <persName corresp="https://d-nb.info/gnd/1128739232">Michael Welte</persName>,</hi>
             <lb />the chiming clock-
             <lb />maker of a dreamy
             <lb />hamlet in Germany,
             <lb />belongs the distinction
             <lb />of conceiving and build-
             <lb />ing an instrument that would reproduce the
-            <lb />actual playing of a great pianist.
-            <seg xml:id="topic_1" ana="#technical_invention" resp="#np" type="topic">
+            <lb />actual playing of a great pianist.</seg>
+            <seg xml:id="topic_1" ana="#the_original" resp="#claude" type="topic">
                 <lb />Though a clock-maker by trade, Welte
                 <lb />was given to study and invention
             </seg>
@@ -431,7 +531,7 @@
                 <lb />impossible before."
             </quote>
             <lb />
-            <seg xml:id="topic_2" ana="#technical_invention" resp="#np" type="topic">
+            <seg xml:id="topic_2" ana="#the_original #world_renown" resp="#claude" type="topic">
                 Many years before <persName corresp="https://d-nb.info/gnd/118528912">Edison</persName> dreamed his
                 <lb />thrilling dream of the phonograph the fame
                 <lb />of Welte's new invention had traveled
@@ -439,10 +539,10 @@
             </seg> and soon the business of
             <lb />chiming clocks gave way to the making of
             <lb />mechanically operated musical instruments.
-            <lb />Dukes and statesmen, musicians of low rank
+            <lb /><seg xml:id="topic_17" ana="#royal_patronage #wonder" type="topic" resp="#claude">Dukes and statesmen, musicians of low rank
             <lb />and high rank, came from afar to listen and
             <lb />marvel at <persName corresp="https://d-nb.info/gnd/1128739232">Michael Welte's</persName> astounding crea-
-            <lb />tion. The firm expanded and the business of
+            <lb />tion.</seg> The firm expanded and the business of
             <lb /><orgName>M. Welte &amp; Sons</orgName> attained large proportions.
             <lb />In 1865, <persName corresp="https://d-nb.info/gnd/1271366029">Emil Welte</persName>, a son of the founder,</ab>
         </div>
@@ -458,7 +558,7 @@
             <lb />Eight years later <persName corresp="https://d-nb.info/gnd/1128739232">Michael Welte</persName>, the clock-
             <lb />maker, closed his eyes forever, leaving his
             <lb />sons endowed with his own inventive genius.
-            <seg xml:id="topic_3" ana="#technical_invention" resp="#np" type="topic">
+            <seg xml:id="topic_3" ana="#the_original #how_it_works" resp="#claude" type="topic">
                 <lb />In 1887, <persName corresp="https://d-nb.info/gnd/1271366029">Emil Welte</persName>
                 startled the world by the
                 <lb />invention of a paper music-roll in connection
@@ -469,7 +569,7 @@
             <lb />instrument an unlimited repertoire.</ab>
         </div>
         <div facs="#eSc_textblock_985e1b6b" type="illustration">
-            <figure>
+            <figure xml:id="figure_1" ana="#the_original" resp="#claude">
                 <desc>Portrait of Michael Welte</desc>
             </figure>
             <p>
@@ -482,7 +582,7 @@
                 <desc>Welte's workshop: Michael Welte and visitors around an orchestrion</desc>
             </figure>
             <p>
-                <lb />Welte's Workshop - <hi rendition="#i">The Mecca of Great Musicians</hi>
+                <lb />Welte's Workshop - <seg xml:id="topic_18" ana="#world_renown" type="topic" resp="#claude"><hi rendition="#i">The Mecca of Great Musicians</hi></seg>
             </p>
         </div>
         <div facs="#eSc_textblock_6286a23c" />
@@ -490,7 +590,7 @@
         <pb />
 
         <div facs="#eSc_textblock_fd6fe9ba" type="illustration">
-            <figure>
+            <figure xml:id="figure_2" ana="#domestic_comfort" resp="#claude">
                 <desc resp="#np">
                     A woman and a man sitting, listening to
                     a Welte Grand.
@@ -506,9 +606,9 @@
             <lb />monic Organs should have led the thoughts
             <lb />of the Weltes onward and upward to the idea
             <lb />of recording the playing of the musician
-            <lb />and applying to the piano a new principle
+            <lb />and <seg xml:id="topic_19" ana="#epoch_making_invention" type="topic" resp="#claude">applying to the piano a new principle
             <lb />-that of reproducing the artist's playing
-            <lb />by means of an automatic instrument.
+            <lb />by means of an automatic instrument.</seg>
             <lb />Thus was conceived <hi rendition="#k"><name type="brand">Welte-Mignon</name></hi>* (pro-
             <lb />nounced <hi rendition="#i">Well-tee Meen-yon</hi>) or "Little
             <lb />Welte," as it was designated to distinguish
@@ -517,10 +617,10 @@
         <div facs="#eSc_textblock_d1c98342">
             <ab><lb />the Welte reputation and business had been
             <lb />established.
-            <lb />Thus <orgName>M. Welte &amp; Sons</orgName> were the origina-
+            <lb /><seg xml:id="topic_20" ana="#the_original" type="topic" resp="#claude">Thus <orgName>M. Welte &amp; Sons</orgName> were the origina-
             <lb />tors of the idea of reproducing the playing of
             <lb />pianists, and were granted the original, basic
-            <lb />patents on reproducing mechanisms now em-
+            <lb />patents on reproducing mechanisms</seg> now em-
             <lb />ployed in the <name type="brand">Welte-Mignon* Reproducing
             <lb />Action</name> manufactured by the <orgName>Auto Pneumatic
             <lb />Action Company</orgName>, under a license granting
@@ -530,35 +630,35 @@
         </div>
         <div facs="#eSc_textblock_1a73062e">
             <ab><lb />
-            <hi rendition="#c"><seg xml:id="topic_4" ana="#exact_reproduction #secret" type="topic" resp="#np">
+            <hi rendition="#c"><seg xml:id="topic_4" ana="#faithful_reproduction" type="topic" resp="#claude">
                 Perfect Reproduction – <hi rendition="#i">The Secret of</hi> Welte Mignon*
             </seg></hi></ab>
         </div>
         <div facs="#eSc_textblock_38047c95">
-            <ab><seg xml:id="topic_5" ana="#analogy_to_photography" resp="#np" type="topic">
-                <lb /><hi rendition="#k">The <name type="brand">Welte-Mignon</name>*</hi> method of recording
-                <lb />a player's performance is photographic.
+            <ab>
+                <lb /><seg xml:id="topic_21" ana="#how_it_works" type="topic" resp="#claude"><hi rendition="#k">The <name type="brand">Welte-Mignon</name>*</hi> method of recording
+                <lb />a player's performance is photographic.</seg>
                 <lb />Through this
-                <seg xml:id="topic_6" ana="#secret" resp="#np" type="topic">
+                <seg xml:id="topic_6" ana="#how_it_works" resp="#claude" type="topic">
                     secret photographic process
                 </seg>-
-                <lb /><hi rendition="#i">possessed only by</hi> <hi rendition="#k"><name type="brand">Welte-Mignon,*</name></hi> <hi rendition="#i">available</hi>
-                <lb /><hi rendition="#i">only to</hi> <hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> - the artist's play-
+                <lb /><seg xml:id="topic_22" ana="#unique_and_superior" type="topic" resp="#claude"><hi rendition="#i">possessed only by</hi> <hi rendition="#k"><name type="brand">Welte-Mignon,*</name></hi> <hi rendition="#i">available</hi>
+                <lb /><hi rendition="#i">only to</hi> <hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi></seg> - <seg xml:id="topic_23" ana="#touch_and_individuality #how_it_works" type="topic" resp="#claude">the artist's play-
                 <lb />ing is actually photographed – his tempo, his
-                <lb />speaking notes, his dynamics,
-                <seg xml:id="topic_7" ana="#soulfulness" resp="#np" type="topic">
+                <lb />speaking notes, his dynamics,</seg>
+                <seg xml:id="topic_7" ana="#the_artists_soul" resp="#claude" type="topic">
                     those subtle
                     <lb />things that infuse an artist's very soul into
                     <lb />his playing.
                 </seg>
-                <lb />These photographs show <hi rendition="#i">precisely</hi> the pres-
-                <lb />sure with which the artist strikes the keys,
+                <lb /><seg xml:id="topic_24" ana="#touch_and_individuality" type="topic" resp="#claude">These photographs show <hi rendition="#i">precisely</hi> the pres-
+                <lb />sure with which the artist strikes the keys,</seg>
                 <lb />whether ever so lightly-pianissimo-or with
-            </seg></ab>
+            </ab>
         </div>
         <div facs="#eSc_textblock_f403edec">
             <ab><lb />the vigor of fortissimo.
-            <seg xml:id="topic_8" ana="#analogy_to_photography" resp="#np" type="topic">
+            <seg xml:id="topic_8" ana="#faithful_reproduction #how_it_works" resp="#claude" type="topic">
                 And this photo-
                 <lb />graphic record is so perfect–so identically
                 <lb />the physical impression of the master's per-
@@ -569,22 +669,22 @@
             <lb />recording of a great pianist is not necessary
             <lb />with <hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> and only with <hi rendition="#k"><name type="brand">Welte-
             <lb />Mignon</name>*</hi> is it <hi rendition="#i">not</hi> necessary.
-            <lb />Herein lies the vast difference between
+            <lb /><seg xml:id="topic_25" ana="#unique_and_superior" type="topic" resp="#claude">Herein lies the vast difference between
             <lb /><hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> recordings of great pianists
             <lb />and those of all other reproducing mechan-
-            <lb />isms.</ab>
+            <lb />isms.</seg></ab>
         </div>
         <div facs="#eSc_textblock_688779c3">
             <ab><hi rendition="#c"><lb /><hi rendition="#i">The World's Greatest Pianists record for</hi> <name type="brand">Welte-Mignon*</name></hi></ab>
         </div>
         <div facs="#eSc_textblock_cec6b76a">
-            <ab><lb /><hi rendition="#k">Many</hi> musicians and masters whose names
+            <ab><lb /><seg xml:id="topic_26" ana="#world_renown" type="topic" resp="#claude"><hi rendition="#k">Many</hi> musicians and masters whose names
             <lb />gleam like stars in the firmament of music
             <lb />have paid glowing tribute to <hi rendition="#k"><name type="brand">Welte-Mig-
-            <lb />non.*</name></hi> From every corner of the world come
+            <lb />non.*</name></hi></seg> <seg xml:id="topic_27" ana="#immortality #world_renown" type="topic" resp="#claude">From every corner of the world come
             <lb />musicians to inscribe their matchless art on
             <lb />the imperishable pages of <hi rendition="#k"><name type="brand">Welte-Mignon's*</name></hi>
-            <lb />ever-growing library of music.
+            <lb />ever-growing library of music.</seg>
             <hi rendition="#k"><persName type="artist" corresp="https://d-nb.info/gnd/116014490">
                 De Pach-
                 <lb />mann
@@ -604,10 +704,10 @@
         <div facs="#eSc_textblock_f606c738">
             <ab><lb />a few of the great artists whose playing you
             <lb />may hear on <hi rendition="#k"><name type="brand">Welte-Mignon.*</name></hi>
-            <lb />The famed <name type="brand">Welte-Mignon* Library</name> of in-
+            <lb /><seg xml:id="topic_28" ana="#repertoire" type="topic" resp="#claude">The famed <name type="brand">Welte-Mignon* Library</name> of in-
             <lb />terpreted music is without a doubt the most
             <lb />comprehensive in the world of music, con-
-            <lb />taining more than two thousand selections,
+            <lb />taining more than two thousand selections,</seg>
             <lb />embracing practically every musical compo-
             <lb />sition through which the master composers
             <lb />of the past two centuries have immortalized
@@ -618,46 +718,46 @@
         <pb />
 
         <div facs="#eSc_textblock_36a1467b" type="illustration">
-            <ab><seg xml:id="topic_9" ana="#phantom_body" resp="#np" type="topic">
-                <figure>
+            <ab>
+                <figure xml:id="figure_3" ana="#phantom_hands" resp="#claude">
                     <desc resp="#np">
                         Semi-transparent pianist sitting at an opened
                         Welte Grand.
                     </desc>
                 </figure>
-                    <lb />phantom hands of the Masters on your keyboard
-            </seg></ab>
+                    <lb /><seg xml:id="topic_29" ana="#phantom_hands #masters_at_home" type="topic" resp="#claude">phantom hands of the Masters on your keyboard</seg>
+            </ab>
         </div>
         <div facs="#eSc_textblock_10ec60b1">
-            <ab><hi rendition="#i"><seg xml:id="topic_10" ana="#phantom_body" resp="#np" type="topic">
+            <ab><hi rendition="#i"><seg xml:id="topic_10" ana="#phantom_hands #masters_at_home" resp="#claude" type="topic">
                 <lb /><hi rendition="#b"><name type="brand">Welte Mignon</name></hi> Puts the Phantom-
                 <lb />Hands of the Masters on your keyboard
             </seg></hi>
-            <lb /><hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> brings you living
+            <lb /><seg xml:id="topic_30" ana="#not_mechanical" type="topic" resp="#claude"><hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> brings you living
             <lb />music. <hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> makes hu-
             <lb />man the mechanical reproduction of
-            <lb />music.
-            <seg xml:id="topic_11" ana="#soulfulness #personality" resp="#np" type="topic">
+            <lb />music.</seg>
+            <seg xml:id="topic_11" ana="#the_artists_soul #touch_and_individuality" resp="#claude" type="topic">
                 It supplies the soul and the
                 <lb />personality which the individual art-
                 <lb />ist puts into his playing.
             </seg>
             No one sits
             <lb />at the piano.
-            <seg xml:id="topic_12" ana="#phantom_body" resp="#np" type="topic">
+            <seg xml:id="topic_12" ana="#phantom_hands" resp="#claude" type="topic">
                 Only the phantom<lb />hands of the masters touch the keys
             </seg>
-            <seg xml:id="topic_13" ana="#listening" resp="#np" type="topic">
+            <seg xml:id="topic_13" ana="#touch_and_individuality #hearing_is_believing" resp="#claude" type="topic">
                 <lb />-and you listen to the music as
                 <lb />masters play it-rhythm, tone, col-
                 <lb />or, quality, individuality. Just lis-
                 <lb />ten!
             </seg>
-            You will be amazed and con-
-            <lb />vinced because the spirit of <persName corresp="https://d-nb.info/gnd/1128739232">Michael
+            <seg xml:id="topic_31" ana="#wonder #hearing_is_believing" type="topic" resp="#claude">You will be amazed and con-
+            <lb />vinced</seg> because <seg xml:id="topic_32" ana="#the_original" type="topic" resp="#claude">the spirit of <persName corresp="https://d-nb.info/gnd/1128739232">Michael
             <lb />Welte</persName>, the chiming clock-maker of
             <lb /><placeName>Freiburg</placeName> lives in every <name type="brand">Welte-
-            <lb />Mignon Reproducing Action</name>.
+            <lb />Mignon Reproducing Action</name>.</seg>
             <hi rendition="#c"><lb /><hi rendition="#larger #b"><name type="brand">Welte Mignon*</name></hi>
             <lb /><hi rendition="#i"><hi rendition="#uc">The</hi> Reproducing Piano</hi></hi>
             <lb /><hi rendition="#k">With</hi> the <name type="brand">Welte-Mignon* Re-
@@ -668,16 +768,16 @@
             <ab><lb />equipped with the marvelous <name type="brand">Welte-
             <lb />Mignon Licensee Action</name> - a selec-
             <lb />tion is played for you
-            <seg xml:id="topic_14" ana="#virtual_presence" resp="#np" type="topic">
+            <seg xml:id="topic_14" ana="#illusion_of_presence #touch_and_individuality" resp="#claude" type="topic">
                 with all the
                 <lb />skill, warmth and color, and all the
                 <lb />delicate shades of tone as though
                 <lb />the pianist were seated at your piano
                 <lb />in person.
-            </seg> In this respect the <name type="brand">Welte-
+            </seg> <seg xml:id="topic_33" ana="#superlatives" type="topic" resp="#claude">In this respect the <name type="brand">Welte-
             <lb />Mignon Reproducing Piano</name> stands
             <lb />supreme. It has no peer. It is per-
-            <lb />fection.
+            <lb />fection.</seg>
             <hi rendition="#c #i"><lb /><hi rendition="#b">112 reasons why you should select
             <lb />a piano equipped with the</hi>
             <lb /><name type="brand"><hi rendition="#b">Welte Mignon*</hi>
@@ -686,10 +786,10 @@
             <lb />ducing Piano</name> first of all because it
             <lb />embodies the genius of <persName corresp="https://d-nb.info/gnd/1128739232">Michael
             <lb />Welte</persName>, and then, again, select it be-
-            <lb />cause 112 of America's most promi-
+            <lb />cause <seg xml:id="topic_34" ana="#world_renown #still_a_piano" type="topic" resp="#claude">112 of America's most promi-
             <lb />nent piano manufacturers have se-
             <lb />lected <hi rendition="#k"><name type="brand">Welte-Mignon*</name></hi> as the only
-            <lb />reproducing action for their piano.
+            <lb />reproducing action for their piano.</seg>
             <lb />This fact in itself is ample testimony
             <lb />of the greatness of <hi rendition="#k"><name type="brand">Welte-Mignon.*</name></hi></ab>
         </div>
@@ -705,7 +805,7 @@
                 <hi rendition="#in #larger"><hi rendition="#in #larger"><hi rendition="#larger">Welte-Mignon</hi></hi></hi>
                 <lb /><hi rendition="#i #smaller">(Licensee)</hi>
             </name>
-            <lb /><hi rendition="#uc #g #smaller"><seg type="slogan">The Master's Fingers on your piano.</seg></hi></hi></ab>
+            <lb /><hi rendition="#uc #g #smaller"><seg type="slogan"><seg xml:id="topic_35" ana="#masters_at_home" type="topic" resp="#claude">The Master's Fingers on your piano.</seg></seg></hi></hi></ab>
         </div>
         <div facs="#eSc_textblock_ea26bdd7" type="illustration">
             <figure>

@@ -1,0 +1,64 @@
+4/4 A1 Faithful reproduction (93) :: r2:Faithful reproduction(98) J0.91 C0.98* | r3:Faithful reproduction(102) J0.88 C0.98* | r4:Faithful reproduction(100) J0.91 C0.99*
+4/4 A2 Individual nuance & personality (52) :: r2:Touch, nuance and individual(57) J0.88 C0.98* | r3:Individuality, personality a(54) J0.77 C0.88* | r4:Faithful reproduction(100) J0.5 C0.98
+4/4 A4 Not mechanical (25) :: r2:Art, not mechanism(29) J0.64 C0.84* | r3:Beyond the mechanical(21) J0.84 C1.0* | r4:Art, not mechanism(28) J0.71 C0.88*
+4/4 A5 Presence illusion (31) :: r2:Illusion of the artist's pre(32) J0.85 C0.94* | r3:Illusion of presence(31) J0.94 C0.97* | r4:Illusion of the living artis(35) J0.83 C0.97*
+4/4 A6 Artist verification: self-recognition &  (22) :: r2:The artist hears himself(14) J0.44 C0.79* | r3:Artists hear themselves(14) J0.44 C0.79* | r4:The artist hears himself(16) J0.52 C0.81*
+4/4 B1 Immortality & posterity (42) :: r2:Immortality and posterity(41) J0.93 C0.98* | r3:Preserved for posterity(39) J0.93 C1.0* | r4:Immortality and posterity(40) J0.91 C0.97*
+4/4 B2 The counterfactual past (10) :: r2:If only it had existed for B(10) J1.0 C1.0* | r3:If only it had existed earli(10) J1.0 C1.0* | r4:If only it had come earlier(10) J1.0 C1.0*
+4/4 C1 Wonder, miracle, magic (72) :: r2:Wonder, miracle and magic(47) J0.61 C0.96* | r3:Wonder and astonishment(38) J0.53 C1.0* | r4:Wonder, miracle and magic(69) J0.86 C0.94*
+4/4 C2 Phantom hands & summoned spirits (27) :: r2:Phantom hands and the self-p(24) J0.55 C0.75* | r3:Phantom hands and the supern(22) J0.63 C0.86* | r4:Phantom hands and the invisi(18) J0.61 C0.94*
+4/4 D1 Great pianists in your home, at your com (68) :: r2:The great pianists in your h(66) J0.91 C0.97* | r3:Masters in your home(68) J0.92 C0.96* | r4:The masters at your command (61) J0.87 C0.98*
+4/4 D2 Effortless, no skill needed (22) :: r2:Effortless: push-button, no (19) J0.64 C0.84* | r3:Effortless: no skill, push o(17) J0.62 C0.88* | r4:Effortless: no skill needed(20) J0.62 C0.8*
+4/4 D3 Domestic comfort & intimacy (22) :: r2:Domestic comfort, leisure an(19) J0.58 C0.79* | r3:Private leisure and the hear(15) J0.48 C0.8* | r4:Domestic intimacy and leisur(9) J0.35 C0.89*
+4/4 D4 Entertaining guests (12) :: r2:Entertaining guests(15) J0.8 C1.0* | r3:Entertaining guests(17) J0.71 C1.0* | r4:Entertaining guests(9) J0.62 C0.89*
+4/4 D5 Status, refinement & culture (13) :: r2:Culture, refinement and dist(23) J0.57 C1.0* | r3:Distinction and refinement(12) J0.92 C1.0* | r4:Refinement and social distin(24) J0.54 C1.0*
+4/4 D6 Furniture & ornament (12) :: r2:Furniture and decorative des(12) J1.0 C1.0* | r3:Instrument as furniture(13) J0.92 C1.0* | r4:Ornament and furniture desig(13) J0.92 C1.0*
+4/4 E1 Quoted testimonials (43) :: r2:Endorsement by famous musici(62) J0.67 C0.98* | r3:Endorsement by great musicia(58) J0.68 C0.95* | r4:Testimonials of famous music(43) J1.0 C1.0*
+4/4 E2 Collective acclaim & world fame (38) :: r2:Endorsement by famous musici(62) J0.47 C0.84 | r3:Endorsement by great musicia(58) J0.48 C0.82 | r4:Collective and institutional(34) J0.57 C0.76*
+4/4 E4 Royal & aristocratic patronage (11) :: r2:Royal and aristocratic patro(11) J1.0 C1.0* | r3:Royal and aristocratic patro(11) J1.0 C1.0* | r4:Royal and aristocratic prest(11) J1.0 C1.0*
+4/4 E5 Satisfied owners / social proof (10) :: r2:Satisfied owners and social (13) J0.77 C1.0* | r3:Owners' testimonials and soc(12) J0.83 C1.0* | r4:Owners' satisfaction and soc(11) J0.91 C1.0*
+4/4 F1 Sensational, epoch-making invention (50) :: r2:Epoch-making invention and p(35) J0.57 C0.89* | r3:Epoch-making invention and p(53) J0.75 C0.88* | r4:Landmark invention, novelty (45) J0.79 C0.93*
+4/4 F2 Perfection & superlatives (74) :: r2:Superlative perfection(76) J0.81 C0.91* | r3:Superlatives(71) J0.79 C0.9* | r4:Best in the world(77) J0.68 C0.82*
+4/4 F4 Originality & priority (21) :: r2:The original and the first(17) J0.65 C0.88* | r3:The original: priority and W(18) J0.5 C0.72* | r4:The original and the first(16) J0.68 C0.94*
+4/4 G1 Education & study (18) :: r2:Educational value(18) J1.0 C1.0* | r3:Pedagogical value(18) J1.0 C1.0* | r4:Education and study(18) J1.0 C1.0*
+4/4 G2 Uses beyond the private home (8) :: r2:Uses beyond private listenin(11) J0.73 C1.0* | r3:Uses beyond the home(11) J0.73 C1.0* | r4:Versatile uses and venues(8) J1.0 C1.0*
+4/4 G3 Dual use & unobtrusive integration (30) :: r2:Still a normal piano(17) J0.57 C1.0* | r3:Compatibility and versatilit(39) J0.77 C1.0* | r4:Still a normal piano(17) J0.57 C1.0*
+4/4 G4 Breadth of repertoire & moods (17) :: r2:Evocative musical imagery(9) J0.44 C0.89 | r3:Dance and popular music(10) J0.42 C0.8* | r4:Repertoire breadth and evoca(14) J0.82 C1.0*
+4/4 H1 Evocative scenes (7) :: r2:Evocative musical imagery(9) J0.78 C1.0* | r3:Evocative scenes and moods(8) J0.88 C1.0* | r4:Repertoire breadth and evoca(14) J0.5 C1.0
+4/4 I1 Within everyone's reach (9) :: r2:Music for everyone: affordab(11) J0.82 C1.0* | r3:Within reach: affordability (9) J0.8 C0.89* | r4:Within everyone's reach(9) J0.8 C0.89*
+4/4 I2 Quality & durability (8) :: r2:Reliability, quality and gua(17) J0.47 C1.0* | r3:Quality and durability(9) J0.7 C0.88* | r4:Quality and durability(7) J0.88 C1.0*
+4/4 J2 National & local pride (13) :: r2:National and local pride(8) J0.5 C0.88* | r3:National framing(6) J0.46 C1.0* | r4:National pride(4) J0.31 C1.0*
+3/4 A3 The artist's soul / living art (17) :: r2:Soul and life of the playing(17) J0.79 C0.88* | r3:Individuality, personality a(54) J0.27 C0.88 | r4:Soul and personality of the (26) J0.48 C0.82*
+3/4 C3 Hearing is believing (18) :: r2:Hearing is believing(16) J0.79 C0.94* | r3:Wonder and astonishment(38) J0.3 C0.72 | r4:Hear it and be convinced(12) J0.67 C1.0*
+3/4 F3 Uniqueness & superiority (38) :: r2:Superiority over rivals and (41) J0.8 C0.92* | r3:The only one(23) J0.49 C0.87* | r4:Best in the world(77) J0.34 C0.76
+3/4 F5 Photography analogy (9) :: r2:If only it had existed for B(10) J0.27 C0.44 | r3:How it works: mechanism, rec(14) J0.64 C1.0* | r4:Technology and the secret pr(31) J0.29 C1.0*
+3/4 I3 Gift & seasonal occasion (7) :: r2:Evocative musical imagery(9) J0.14 C0.29 | r3:Seasons, holidays and gifts(6) J0.86 C1.0* | r4:Seasonal occasions and gifts(5) J0.71 C1.0*
+2/4 J1 The modest name (9) :: r2:The name 'Mignon' is too mod(8) J0.89 C1.0* | r3:If only it had existed earli(10) J0.27 C0.44 | r4:If only it had come earlier(10) J0.27 C0.44
+1/4 E3 Institutional recognition (14) :: r2:Educational value(18) J0.33 C0.57 | r3:Public recognition: awards, (30) J0.33 C0.79 | r4:Education and study(18) J0.33 C0.57
+1/4 F6 Heritage & founder legend (8) :: r2:Immortality and posterity(41) J0.2 C1.0 | r3:The original: priority and W(18) J0.3 C0.75 | r4:Maker's heritage and awards(10) J0.38 C0.62*
+1/4 F7 Electricity & technical modernity (36) :: r2:How it works: technology and(28) J0.36 C0.61* | r3:Epoch-making invention and p(53) J0.2 C0.42 | r4:Technology and the secret pr(31) J0.26 C0.45
+1/4 G5 The machine as concert performer (28) :: r2:Novelty, the latest thing(23) J0.16 C0.3 | r3:The only one(23) J0.16 C0.3 | r4:Composers play their own wor(7) J0.17 C0.71
+
+ORPHANS (topics of runs 2-4 without a run-1 match):
+r2 C3 Novelty, the latest thing (23) best r1 F1 Sensational, epoch-making J0.35 C0.83 | r3:D3J0.23 r4:C3J0.36
+r2 C5 How it works: technology and recording (28) best r1 F7 Electricity & technical m J0.36 C0.61 | r3:D4J0.4 r4:C4J0.64
+r2 D6 World renown, awards and public success (24) best r1 E2 Collective acclaim & worl J0.29 C0.58 | r3:B5J0.59 r4:C6J0.71
+r2 D7 Heritage and standing of the firm (38) best r1 D3 Domestic comfort & intima J0.22 C0.5 | r3:B1J0.23 r4:C7J0.2
+r2 E8 Women at the piano (15) best r1 D3 Domestic comfort & intima J0.28 C0.53 | r3:E4J0.28 r4:D6J1.0
+r2 F3 Composers playing their own works (7) best r1 D6 Furniture & ornament J0.12 C0.29 | r3:B4J0.64 r4:E6J0.4
+r3 B3 Star pianists foregrounded (27) best r1 B1 Immortality & posterity J0.28 C0.56 | r2:B1J0.26 r4:B5J0.54
+r3 B4 Composers at the keyboard (11) best r1 D6 Furniture & ornament J0.15 C0.27 | r2:F3J0.64 r4:E6J0.64
+r3 B5 Public recognition: awards, institutions, pre (30) best r1 E2 Collective acclaim & worl J0.39 C0.63 | r2:D6J0.59 r4:C6J0.38
+r3 E2 At your command (28) best r1 D1 Great pianists in your ho J0.37 C0.93 | r2:E1J0.38 r4:D1J0.39
+r3 E8 Abundant and varied repertoire (18) best r1 G4 Breadth of repertoire & m J0.35 C0.53 | r2:E9J0.53 r4:D11J0.28
+r3 F2 Cultural uplift and art for all (6) best r1 E5 Satisfied owners / social J0.23 C0.5 | r2:A6J0.25 r4:A5J0.22
+r3 G3 Outclassing rivals; invitation to compare (30) best r1 F3 Uniqueness & superiority J0.39 C0.63 | r2:D2J0.51 r4:A4J0.35
+r3 H1 Allegorical and classical ornament (4) best r1 H1 Evocative scenes J0.22 C0.5 | r2:E10J0.18 r4:D11J0.2
+r4 B5 Star pianist in the spotlight (16) best r1 B1 Immortality & posterity J0.21 C0.62 | r2:A6J0.2 r3:B3J0.54
+r4 B6 Proof in public performance (8) best r1 E3 Institutional recognition J0.22 C0.5 | r2:F2J0.36 r3:F6J0.36
+r4 C6 World renown (17) best r1 E2 Collective acclaim & worl J0.28 C0.71 | r2:D6J0.71 r3:B5J0.38
+r4 C7 Maker's heritage and awards (10) best r1 F6 Heritage & founder legend J0.38 C0.62 | r2:C5J0.23 r3:G4J0.27
+r4 D6 Women as owners, hostesses and listeners (15) best r1 D3 Domestic comfort & intima J0.28 C0.53 | r2:E8J1.0 r3:E4J0.28
+r4 D7 Listening-circle imagery (14) best r1 D4 Entertaining guests J0.3 C0.5 | r2:E5J0.45 r3:E4J0.55
+r4 E4 Artistic enjoyment and cultural uplift (14) best r1 E1 Quoted testimonials J0.24 C0.79 | r2:D4J0.23 r3:B1J0.2
+r4 E6 Composers play their own works (7) best r1 J2 National & local pride J0.18 C0.43 | r2:F3J0.4 r3:B4J0.64

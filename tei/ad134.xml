@@ -176,11 +176,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -208,10 +209,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -232,24 +238,43 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="affordability">
-             <gloss>Affordability</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="distinction_from_mechanical">
-             <gloss>Distinction from Mechanical</gloss>
-             <desc>Often, the adverts try to distinguish reproducing piano rolls
-                from mere mechanical methods (such as the player piano).</desc>
+          <category xml:id="not_mechanical">
+             <gloss>Art, not mechanism</gloss>
+             <desc>The instrument is set apart from mechanical, automatic or player-
+                piano playing: it is human, artistic, "not a surrogate", or the
+                prejudice that it is mechanical is refuted.</desc>
           </category>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
           </category>
-          <category xml:id="virtual_presence">
-             <gloss>Virtual Presence</gloss>
+          <category xml:id="domestic_comfort">
+             <gloss>Domestic comfort and intimacy</gloss>
+             <desc>A private, comfortable scene: the fireside, an armchair, lamplight,
+                the family gathered, a quiet evening, in the text or in the
+                picture.</desc>
+          </category>
+          <category xml:id="within_reach">
+             <gloss>Within everyone's reach</gloss>
+             <desc>The instrument, or the music it plays, is accessible to all, its
+                value exceeds its price. Prices and terms of payment themselves are
+                not a topic.</desc>
+          </category>
+          <category xml:id="gifts">
+             <gloss>Seasonal occasions and gifts</gloss>
+             <desc>The ad ties the instrument to Christmas, the New Year, a holiday or
+                a season, or offers it as a gift.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -258,6 +283,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -281,7 +307,7 @@
         <head><hi rendition="#c #g2"><lb/><orgName>SAVERY'S PIANOS LIMITED</orgName>.</hi></head>
       </div>
       <div facs="#zone_headline">
-        <head><hi rendition="#c"><lb/><hi rendition="#in"><seg xml:id="topic_1" ana="#virtual_presence" type="topic" resp="#claude">Spend a part of your Winter Evening</seg></hi>
+        <head><hi rendition="#c"><lb/><hi rendition="#in"><seg xml:id="topic_1" ana="#domestic_comfort #gifts #masters_at_home" type="topic" resp="#claude">Spend a part of your Winter Evening</seg></hi>
           <lb/><hi rendition="#larger">with</hi></hi></head>
       </div>
       <div type="illustration" facs="#zone_portrait">
@@ -294,9 +320,9 @@
           <lb/>when at the zenith of his fame.</p>
       </div>
       <div facs="#zone_text">
-        <p><hi rendition="#b #i"><lb/>This instrument <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">faithfully reflects the master's technique</seg>
-          <lb/><seg xml:id="topic_3" ana="#distinction_from_mechanical" type="topic" resp="#claude">without the slightest indication of mechanical blemish</seg>.</hi></p>
-        <p><lb/>We can offer this master <sic>intrument</sic> <seg xml:id="topic_4" ana="#affordability" type="topic" resp="#claude">at the price of an
+        <p><hi rendition="#b #i"><lb/>This instrument <seg xml:id="topic_2" ana="#faithful_reproduction" type="topic" resp="#claude">faithfully reflects the master's technique</seg>
+          <lb/><seg xml:id="topic_3" ana="#not_mechanical" type="topic" resp="#claude">without the slightest indication of mechanical blemish</seg>.</hi></p>
+        <p><lb/>We can offer this master <sic>intrument</sic> <seg xml:id="topic_4" ana="#within_reach" type="topic" resp="#claude">at the price of an
           <lb/>ordinary Player Piano</seg>, and will be pleased to make a
           <lb/>liberal allowance on any piano taken as part payment.</p>
         <p><hi rendition="#c"><lb/>Please phone 284, or 4812 for Catalogue.</hi></p>

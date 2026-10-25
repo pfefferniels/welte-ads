@@ -1,0 +1,557 @@
+=== cluster 0  size=156  ads=83  firms=50  figs=1  early(<=1914)=81  mean_cos=0.465
+  langs: de:65, en:17, nl:17, no:17, fr:13, sv:12, da:7, ru:6, pt:1, es:1
+  top ads: ad168:10, ad167:6, ad041:5, ad077:5, ad127:5, ad159:5
+  keywords: freiburg, söhne, reutemann, grieg, hug, zürich, flügel, spillet, jul, alleinvertreter
+  units with hand topic: 13/156; topics: virtual_presence:4, exact_reproduction:3, superiority:3, technical_invention:1, touch_of_a_button:1, home:1
+   - [ad166.3 de 1909] die Vertretung der Firma: M. Welte & Söhne Freiburg i. B. ◆ New-York R. REUTEMANN Pianofabrik  
+   - [ad100.44 de 1908] Bereitwilligste Vorführung beim Alleinvertreter Jul. Heinr. Zimmermann, Riga,  
+   - [ad101.8 de 1909] Bereitwilligste Vorführung beim Alleinvertreter Jul. Heinr. Zimmermann,  
+   - [ad102.6 de 1909] Bereitwilligste Vorführung beim Alleinvertreter Jul. Heinr. Zimmermann,  
+   - [ad037.13 de 1921] M. Welte & Söhne Fabrik pneumatischer Musikwerke Freiburg i. Br.  
+   - [ad197.2 de 1923] M. Welte & Söhne, Freiburg i. B. Fabrik pneumatischer Musikwerke.  
+=== cluster 1  size=90  ads=57  firms=32  figs=1  early(<=1914)=23  mean_cos=0.582
+  langs: en:64, de:6, nl:5, sv:5, da:4, no:2, es:2, fr:2
+  top ads: ad033:8, ad041:5, ad002:4, ad017:3, ad035:3, ad049:3
+  keywords: reproducing, piano, welte, mignon, steinway, licensee, original, autograph, pianos, master
+  units with hand topic: 18/90; topics: exact_reproduction:4, superiority:4, entertainment:2, technical_invention:2, distinction_from_mechanical:1, immortality:1
+   - [ad109.0 en 1927] Welte-Mignon (Licensee) Reproducing Pianos  
+   - [ad108.0 en 1927] Welte-Mignon (Licensee) Reproducing Pianos  
+   - [ad106.0 en 1926] Welte-Mignon (Licensee) The Greatest Reproducing Piano  
+   - [ad012.6 en 1920] The Welte-Mignon Reproducing Piano  
+   - [ad110.0 en 1927] The HEINTZMAN Welte-Mignon (Licensee) Reproducing Piano  
+   - [ad040.9 en 1927] Welte-Mignon Licensee Reproducing Piano  
+=== cluster 2  size=65  ads=47  firms=32  figs=0  early(<=1914)=39  mean_cos=0.447
+  langs: de:28, en:13, nl:6, no:5, da:5, fr:3, sv:2, es:2, pl:1
+  top ads: ad100:6, ad009:5, ad005:2, ad010:2, ad037:2, ad067:2
+  keywords: künstler, wiedergabe, künstlers, spil, gespielten, vollendetste, künstlerische, apparat, erkennen, spiel
+  units with hand topic: 50/65; topics: exact_reproduction:28, personality:10, superiority:10, immortality:7, virtual_presence:4, immediate_recognizability:3
+   - [ad037.7 de 1921] Die Wiedergabe der von einem Künstler in den Apparat gespielten Tonstücke ist nach jeder Richtung, sowohl was das rein technisch-virtuose, wie auch was das musikalisch-poetische Element betrifft, eine so verblüffend natürlich, daß man wirklich meint, den betr.  ['virtual_presence']
+   - [ad009.4 de 1905] Ueber die blosse Fingerfertigkeit vermag dieses Wunderklavier alles, was an der Leistung eines Künstlers das Persönliche und Charakteristische ausmacht, zur Geltung zu bringen; es handelt sich also nicht um ein Surrogat, sondern um eine vollwertige Vertretung.  ['miracle']
+   - [ad010.2 de 1907] Ueber die blosse Fingerfertigkeit vermag dieses Wunderklavier alles, was an der Leistung eines Künstlers das Persönliche und Charakteristische ausmacht, zur Geltung zu bringen; es handelt sich also nicht um ein Surrogat, sondern um eine vollwertige Vertretung.  
+   - [ad005.16 de 1910] Mit dem Welte Mignon ist, wie die berühmtesten Künstler anerkennen, ein phantastisch scheinender Gedanke verwirklicht, nämlich das Klavierspiel eines Künstlers mit all' seinen persönlichen Eigenschaften – des Anschlags, der Phrasierung, des Pedalgebrauchs etc.  ['immortality']
+   - [ad008.9 de 1910] Mit dem Welte Mignon ist, wie die berühmtesten Künstler anerkennen, ein phantastisch scheinender Gedanke verwirklicht, nämlich das Klavierspiel eines Künstlers mit all' seinen persönlichen Eigenschaften - des Anschlags, der Phrasierung, des Pedalgebrauchs etc.  ['immortality']
+   - [ad099.3 da 1926] Dets Gengivelse af Kunstnerens Spil er saa nøjagtigt og fuldendt, som sad han selv foran Instrumentet  ['exact_reproduction', 'virtual_presence']
+=== cluster 3  size=47  ads=46  firms=21  figs=0  early(<=1914)=7  mean_cos=0.634
+  langs: en:43, es:3, fr:1
+  top ads: ad011:2, ad000:1, ad001:1, ad002:1, ad006:1, ad007:1
+  keywords: street, york, west, fifth, ave, avenue, catherine, city, hall, george
+  units with hand topic: 0/47; topics: 
+   - [ad021.10 en 1926] 653 W. 51st Street, New York  
+   - [ad014.18 en 1926] 653 West 51st Street, New York  
+   - [ad016.11 en 1926] 653 West 51st Street, New York  
+   - [ad022.23 en 1926] 653 West 51st Street, New York City  
+   - [ad025.27 en 1926] 653 West 51st Street, New York City  
+   - [ad033.56 en 1926] 653 West 51st St., New York  
+=== cluster 4  size=42  ads=34  firms=27  figs=0  early(<=1914)=29  mean_cos=0.479
+  langs: en:14, de:7, sv:7, fr:5, ru:3, nl:2, pt:2, no:1, ca:1
+  top ads: ad127:3, ad005:2, ad006:2, ad008:2, ad139:2, ad151:2
+  keywords: uhr, june, sonntag, thursday, nachmittag, konsertsalonger, tarde, nachmittags, tisdag, daily
+  units with hand topic: 7/42; topics: home:3, virtual_presence:2, miracle:1, superiority:1
+   - [ad159.3 sv 1908] konsertera medelst ”Mignon-Apparat” å flygel Onsdagen 4 Nov. kl. 8 e. m.  ['virtual_presence']
+   - [ad160.2 sv 1908] konsertera medelst ”Mignon-Apparat” å flygel, Onsdagen 11 Nov. kl. 8 e. m. i K. F. U. M:s hörsal.  ['virtual_presence']
+   - [ad127.16 ru 1923] 133—50 и в дни концертов с 7 ч. веч. при входе в зал.  
+   - [ad005.25 de 1910] Donnerstag Nachmittag ab 3 1/2 Uhr auch am Saaleingang.  
+   - [ad008.13 de 1910] Vorführung Sonntag, d. 20. November Nachmittag 4 Uhr im Konzertsaal des Bayerischen Hofes  
+   - [ad047.0 nl 1908] INVITATIE Mignon-Concert DINSDAG 27 OCT. des avonds 8 u. IN DE KLEINE ZAAL VAN HET CONCERTGEBOUW.  
+=== cluster 5  size=42  ads=37  firms=28  figs=0  early(<=1914)=14  mean_cos=0.605
+  langs: en:24, de:5, fr:3, no:3, es:3, nl:1, da:1, sv:1, pl:1
+  top ads: ad006:2, ad011:2, ad012:2, ad022:2, ad208:2, ad001:1
+  keywords: paderewski, hofmann, pachmann, albert, busoni, carreno, home, grieg, casella, genius
+  units with hand topic: 27/42; topics: exact_reproduction:12, home:7, touch_of_a_button:4, immortality:3, soulfulness:2, personality:2
+   - [ad176.0 de 1912] Das persönliche Klavierspiel der grossen Meister, wie PADEREWSKI BUSONI D’ALBERT und vieler anderer wird auf dem Reproduktions-Piano WELTE-MIGNON  
+   - [ad021.3 en 1926] Welte-Mignon Licensee brings to your home flawless interpretations by the great geniuses of the pianoforte: De Pachmann, Paderewski, Gieseking, Casella,  ['home']
+   - [ad112.2 en 1928] Through the Welte-Mignon Reproducing Piano, the genius of Paderewski, De Pachmann, and hundreds of others of the musically great, is transported to your home for your entertainment.  ['home']
+   - [ad035.4 en 1912] " To know the Welte-Mignon Autograph Piano you must hear its reproductions of the actual playing of such artists as Ignace J. Paderewski, Josef Hofmann, Teresa Carreno, Vladimir de Pachmann, Fannie Bloomfield-Zeisler and others.  
+   - [ad011.3 en 1921] Paderewski, Hofmann, Gabrilowitsch, Saint-Saens and the most celebrated pianists have expressed their conceptions of the world's classics on the Welte-Mignon.  
+   - [ad184.2 fr 1927] Auditions permanentes des œuvres jouées par les grands pianistes: Paderewski, Raoul Pugno, Busoni, Stavenhagen, etc.  
+=== cluster 6  size=38  ads=29  firms=22  figs=0  early(<=1914)=18  mean_cos=0.678
+  langs: en:23, de:5, sv:4, pl:2, no:1, da:1, ca:1, es:1
+  top ads: ad131:4, ad130:3, ad137:3, ad136:2, ad139:2, ad007:1
+  keywords: pianist, pianists, world, actual, great, executant, played, instrument, individual, classical
+  units with hand topic: 28/38; topics: exact_reproduction:13, technical_invention:5, personality:2, immortality:2, virtual_presence:2, touch_of_a_button:2
+   - [ad145.3 en 1928] This beautiful instrument reproduces with marvellous fidelity the actual personal playing of the great Master Pianists.  ['exact_reproduction']
+   - [ad211.1 pl 1906] ten sensacyjny reprodukcyjny fortepian wzbudza z powodu dokładnego oddawania gry pierwszorzędnych pianistów podziw świata muzycznego.  ['exact_reproduction']
+   - [ad144.2 en 1928] This beautiful instrument reproduces the actual playing of the World's great Pianists.  ['exact_reproduction']
+   - [ad174.1 de 1911] Das vollkommenste Musikinstrument auf dem Gebiete der mechanischen Wiedergabe von durch Künstlerhand gespielter Klaviermusik  ['superiority']
+   - [ad201.6 es 1917] que constituye una verdadera obra artística porque interpreta, con la mayor exactitud y alma, la música de los grandes pianistas, tales  ['exact_reproduction']
+   - [ad140.2 en 1927] A new musical instrument embracing the Pianoforte and the art of the Pianist with bewildering effect.  ['technical_invention']
+=== cluster 7  size=37  ads=35  firms=29  figs=0  early(<=1914)=12  mean_cos=0.601
+  langs: en:13, nl:9, pl:4, no:3, de:3, sv:2, da:1, fr:1, es:1
+  top ads: ad016:2, ad135:2, ad006:1, ad020:1, ad023:1, ad024:1
+  keywords: reproductie, electrische, installed, nieuwe, kunstspel, piano, instrument, famous, lysledning, magazynie
+  units with hand topic: 14/37; topics: technical_invention:4, home:3, affordability:2, unreached_ideal:2, touch_of_a_button:1, exact_reproduction:1
+   - [ad006.10 en 1920] This is what the WELTE MIGNON Reproducing Piano will do for you.  
+   - [ad016.7 en 1926] The famous WELTE-MIGNON* Reproducing Action can be installed in your grand piano.  
+   - [ad020.7 en 1926] The famous WELTE-MIGNON* Reproducing Action can be installed in your grand piano.  
+   - [ad195.1 de 1913] zählt der neue, künstlerisch vollkommene Klavierspielapparat „Welte-Mignon“  
+   - [ad154.1 sv 1922] underbara reproduktionspianinon o. flyglar ävensom apparater att montera på vanl. flyglar o. pianon.  ['miracle']
+   - [ad058.0 nl 1924] Als Reproductie Piano is de  
+=== cluster 8  size=37  ads=32  firms=24  figs=33  early(<=1914)=6  mean_cos=0.585
+  langs: en:23, nl:4, es:4, de:3, no:1, sv:1, fr:1
+  top ads: ad104:2, ad105:2, ad111:2, ad135:2, ad208:2, ad007:1
+  keywords: grand, framed, pipes, panel, lid, frame, roll, faun, drawing, piano
+  units with hand topic: 8/37; topics: home:6, atmosphere:1, touch_of_a_button:1
+   - [ad108.f0 en 1927] A grand piano, in a ruled frame with ornamental bands above and below  
+   - [ad195.f1 de 1913] Drawing of a grand piano with an oval, latticed music desk and fluted column legs  
+   - [ad208.f3 es 1926] Drawing of a grand piano in Louis XVI style with fluted legs, the lid open and a music roll visible above the keyboard  
+   - [ad020.f1 en 1926] Small picture of a grand piano.  
+   - [ad111.f0 en 1928] A grand piano, in a ruled frame  
+   - [ad145.f0 en 1928] Photograph of a grand piano with its lid raised and the pedal lyre showing  
+=== cluster 9  size=31  ads=15  firms=9  figs=27  early(<=1914)=2  mean_cos=0.534
+  langs: en:16, es:10, de:4, fr:1
+  top ads: ad022:5, ad023:5, ad117:3, ad201:3, ad205:3, ad004:2
+  keywords: portrait, drawing, hofmann, named, josef, corner, written, brard, franz, brash
+  units with hand topic: 0/31; topics: 
+   - [ad117.f2 es 1924] Portrait drawing of Josef Hofmann  
+   - [ad007.f0 en 1920] Oval portrait of Josef Hofmann.  
+   - [ad034.f1 en 1919] Portrait of Hofmann  
+   - [ad022.f4 en 1926] Portrait of Hofmann  
+   - [ad023.f3 en 1926] Portrait of Hofmann  
+   - [ad004.f2 de 1919] Porträt Alfred Reisenauer (oval)  
+=== cluster 10  size=28  ads=26  firms=19  figs=0  early(<=1914)=17  mean_cos=0.412
+  langs: de:9, nl:7, en:5, sv:2, pl:2, fr:1, no:1, es:1
+  top ads: ad048:2, ad172:2, ad006:1, ad013:1, ad017:1, ad032:1
+  keywords: verstrekt, toegangsbewijzen, nunmehr, vertretung, zeigen, wykonaniach, übertragen, aanbieden, vertegenwoordigers, vereeniging
+  units with hand topic: 2/28; topics: superiority:1, affordability:1
+   - [ad073.6 nl 1911] Attesten liggen ter inzage.  
+   - [ad072.18 fr 1928] GRANDES FACILITÉS DE PAIEMENT  ['affordability']
+   - [ad185.3 de 1927] Wir zeigen WELTE-MIGNON unverbindlich in unserer  
+   - [ad058.2 nl 1924] in elk opzicht een Meesterstuk  ['superiority']
+   - [ad075.5 no 1907] Uddrag af nogle Udtalelser:  
+   - [ad176.4 de 1912] Vorführung sowie aufklärende und belehrende Drucksachen nur durch die General-Vertretung  
+=== cluster 11  size=28  ads=21  firms=11  figs=0  early(<=1914)=20  mean_cos=0.540
+  langs: de:21, en:5, da:2
+  top ads: ad009:4, ad008:2, ad100:2, ad170:2, ad171:2, ad005:1
+  keywords: wunder, apparat, finde, herrlich, erfindung, mignon, werte, unsagbarem, mechanismen, gereicht
+  units with hand topic: 10/28; topics: miracle:7, technical_invention:3, superiority:1
+   - [ad008.1 de 1910] Das Welte Mignon ist eine unbedingt geniale Erfindung , und hat einen hohen künstlerischen Wert.  ['technical_invention']
+   - [ad172.5 de 1911] Herr Volkmar Andreæ schreibt über das Welte-Mignon: Den „Mignon“-Apparat finde ich herrlich.  
+   - [ad009.23 de 1905] Frederic Lamond: Ich sehe den Mignon-Apparat als das grösste Wunder der Jetztzeit an .  ['miracle']
+   - [ad100.7 de 1908] Das Wunder, das ist „Mignon“, ein bescheidener Name einer bewunderungswürdigen Sache.  
+   - [ad171.2 de 1910] Den „Mignon“-Apparat finde ich herrlich.  
+   - [ad005.2 de 1910] Das Welte Mignon ist das Wunder der Wunder.  ['miracle']
+=== cluster 12  size=26  ads=25  firms=16  figs=26  early(<=1914)=1  mean_cos=0.649
+  langs: en:12, de:5, es:4, da:2, sv:2, no:1
+  top ads: ad006:2, ad014:1, ad029:1, ad030:1, ad033:1, ad038:1
+  keywords: woman, dress, seated, grand, left, evening, listening, standing, drawing, right
+  units with hand topic: 15/26; topics: listening:5, sitting_woman:4, home:3, entertainment:2, dance:1, atmosphere:1
+   - [ad158.f0 sv 1923] A drawing room with a tall window: a woman seated at a grand piano, a woman in an armchair at the left, a man in evening dress standing between them and a bearded man standing behind the piano  
+   - [ad156.f0 sv 1922] A woman seated at a grand piano in a room with a tall window; a man in evening dress stands at the left, and a bearded man stands behind the piano  
+   - [ad006.f0 en 1920] A woman playing a grand piano, a man seated and a woman standing beside her listening; a lamp and a picture in the background.  
+   - [ad099.f0 da 1926] A woman in evening dress playing a grand piano; a man in an armchair at left and a man seated on a stool at right listen  ['sitting_woman', 'listening']
+   - [ad029.f0 en 1927] Four persons facing a grand piano. Two women in dresses are sitting in chairs. One man leaning on the piano, another man standing next to the left sitting woman.  ['sitting_woman']
+   - [ad030.f0 en 1927] Woman in a dress sitting in a chair, a man standing next to her. A grand piano.  ['sitting_woman']
+=== cluster 13  size=24  ads=18  firms=14  figs=4  early(<=1914)=8  mean_cos=0.509
+  langs: en:16, es:5, de:2, fr:1
+  top ads: ad130:3, ad131:3, ad022:2, ad201:2, ad015:1, ad019:1
+  keywords: singer, musicians, seen, testimonies, opinions, words, famous, musician, música, dream
+  units with hand topic: 6/24; topics: analogy_to_photography:2, exact_reproduction:2, suit_every_mood:1, virtual_presence:1, superiority:1
+   - [ad175.7 de 1912] Musikalische Grössen urteilen wie folgt:  
+   - [ad131.12 en 1909] OPINIONS OF THE WORLD'S FAMOUS MUSICIANS:  
+   - [ad130.8 en 1909] In the words of a well-known musician, “It is a photograph.”  ['analogy_to_photography']
+   - [ad037.8 de 1921] Künstler in Person vor sich zu haben und ihn spielen zu hören.  ['virtual_presence']
+   - [ad207.3 es 1923] Fieles intérpretes de los grandes genios del Arte Musical.  ['exact_reproduction']
+   - [ad023.f2 en 1926] Portrait of Singer  
+=== cluster 14  size=23  ads=14  firms=10  figs=11  early(<=1914)=12  mean_cos=0.487
+  langs: en:9, es:6, de:5, sv:3
+  top ads: ad117:3, ad133:3, ad159:3, ad205:3, ad168:2, ad004:1
+  keywords: portrait, busoni, teresa, miss, carreño, drawing, pugno, ferruccio, spelad, written
+  units with hand topic: 1/23; topics: virtual_presence:1
+   - [ad004.f0 de 1919] Porträt Ferruccio Busoni (oval)  
+   - [ad117.f1 es 1924] Portrait drawing of Teresa Carreño  
+   - [ad205.f1 es 1919] Portrait drawing of Teresa Carreño, with the name written below: "Carreño"  
+   - [ad022.f7 en 1926] Portrait of Busoni  
+   - [ad023.f7 en 1926] Portrait of Busoni  
+   - [ad035.f1 en 1912] Oval portrait of a woman pianist (Teresa Carreño?)  
+=== cluster 15  size=23  ads=17  firms=14  figs=0  early(<=1914)=8  mean_cos=0.638
+  langs: en:20, sv:1, fr:1, pl:1
+  top ads: ad036:4, ad013:2, ad025:2, ad034:2, ad000:1, ad007:1
+  keywords: interpretation, world, pianists, faculty, programme, greatest, famous, interpretations, classical, great
+  units with hand topic: 14/23; topics: exact_reproduction:6, educational_use:5, immortality:3, analogy_to_phonograph:1, analysis:1, repeatability:1
+   - [ad000.2 en 1913] The Welte-Mignon faithfully reproduces the individual interpretation of the greatest Pianists  ['exact_reproduction']
+   - [ad187.7 en 1909] A classical programme will be performed on the Welte-Mignon, which gives the absolutely true reproduction of the individual interpretation of the world’s most famous pianists.  ['exact_reproduction']
+   - [ad025.20 en 1926] The magic reproduction of Welte-Mignon Licensee makes available for professional or student the authentic interpretation of the world's foremost pianists.  ['educational_use']
+   - [ad023.9 en 1926] The masterpieces of the world's most famous pianists are presented through the extensive Welte-Mignon (Licensee) Library of Music.  
+   - [ad013.5 en 1909] The Welte-Mignon brings to the music-lover the actual performances of every great living pianist.  
+   - [ad189.6 en 1910] A selected programme of Classical Music, with interpretations of the world’s greatest pianists, will be played on the Welte-Mignon.  
+=== cluster 16  size=22  ads=16  firms=12  figs=2  early(<=1914)=2  mean_cos=0.573
+  langs: en:15, fr:2, no:2, da:1, sv:1, es:1
+  top ads: ad006:3, ad028:3, ad032:2, ad082:2, ad012:1, ad013:1
+  keywords: studios, comparison, mignon, welte, grands, hear, flygel, tillfällighetsköp, rouleaux, sizes
+  units with hand topic: 3/22; topics: exact_reproduction:1, affordability:1, superiority:1
+   - [ad082.8 no 1919] The Welte-Mignon faaes i følgende utførelser:  
+   - [ad028.8 en 1924] See the Welte-Mignon* today.  
+   - [ad013.f0 en 1909] Illustration of a Welte-Mignon.  
+   - [ad027.12 en 1924] Welte-Mignon (Licensee) Hear it-in comparison.  
+   - [ad192.0 fr 1927] Un Artiste du Welte-Mignon.  
+   - [ad006.0 en 1920] The Welte Mignon Studios  
+=== cluster 17  size=21  ads=13  firms=10  figs=0  early(<=1914)=3  mean_cos=0.533
+  langs: en:12, da:4, de:3, no:2
+  top ads: ad006:4, ad012:3, ad085:2, ad097:2, ad145:2, ad090:1
+  keywords: terms, price, buy, instrument, instruments, reason, lowest, pick, fine, really
+  units with hand topic: 4/21; topics: affordability:3, superiority:2, home:1
+   - [ad012.2 en 1920] A really satisfactory way to buy musical instruments  
+   - [ad106.8 en 1926] These instruments may be purchased on your own terms in reason.  ['affordability']
+   - [ad006.24 en 1920] Pick out any instrument you like, from lowest to highest price, and buy it on terms that are practically your own.  
+   - [ad099.4 da 1926] Vi realiserer forskellige fine 1ste Kl.s selvspillende Instrumenter og Forsatsapparater til meget billige Priser.  
+   - [ad195.0 de 1913] Zu den vornehmsten Musikinstrumenten  ['superiority']
+   - [ad097.4 da 1924] Kan tillige benyttes som almindeligt Instrument.  
+=== cluster 18  size=20  ads=17  firms=11  figs=0  early(<=1914)=2  mean_cos=0.547
+  langs: en:16, de:2, sv:1, fr:1
+  top ads: ad006:3, ad012:2, ad013:1, ad032:1, ad104:1, ad105:1
+  keywords: gladly, play, music, visit, salons, favorite, descriptive, hear, selections, masters
+  units with hand topic: 1/20; topics: suit_every_mood:1
+   - [ad109.7 en 1927] Come to our Music Salon and let the Welte-Mignon play for you your favorite music.  
+   - [ad191.5 fr 1926] Venez à nos salons de musique entendre le merveilleux Welte-Mignon vous jouer la musique des maitres—ou écrivez-nous et nous vous enverrons une brochurette descriptive.  
+   - [ad108.5 en 1927] Come to our Music Salons and hear the wonderful Welte-Mignon play for you the music of the masters—or write for descriptive literature.  
+   - [ad112.13 en 1928] Visit our Music Salon and hear the wonderful Heintzman Welte-Mignon play for you the music of the masters.  
+   - [ad113.3 en 1929] If you will visit our Music Salons the Heintzman & Co. Welte-Mignon Reproducing Piano will gladly play for you the music you like best.  
+   - [ad190.5 en 1926] We invite you to visit our Music Salons and hear for yourself the compositions of your choice—the classics, operatic or dance music as interpreted by the Heintzman & Co. Welte-Mignon Reproducing Piano.  ['suit_every_mood']
+=== cluster 19  size=18  ads=17  firms=14  figs=0  early(<=1914)=6  mean_cos=0.446
+  langs: en:9, nl:2, de:2, fr:1, no:1, ca:1, es:1, pl:1
+  top ads: ad144:2, ad006:1, ad032:1, ad045:1, ad049:1, ad058:1
+  keywords: obligation, shall, cordially, invited, demonstration, catalogue, visit, send, rozsyla, stelt
+  units with hand topic: 0/18; topics: 
+   - [ad182.2 de 1924] Höfliche Einladung zur Besichtigung Generalvertretung:  
+   - [ad045.6 fr 1927] , qui enverra des invitations à toutes personnes qui en feront la demande.  
+   - [ad201.10 es 1917] Queda el lector invitado a hacer una visita a la exhibición de los mismos, donde será merecida-  
+   - [ad186.5 de 1928] — Dann kommen Sie bitte zu einer freien Vorführung.  
+   - [ad032.20 en 1924] You are cordially invited to a demonstration at any time.  
+   - [ad049.11 nl 1912] Belangstellenden worden beleefdelijk uitgenoodigd.  
+=== cluster 20  size=18  ads=12  firms=6  figs=6  early(<=1914)=1  mean_cos=0.405
+  langs: en:14, nl:2, de:1, fr:1
+  top ads: ad026:3, ad104:3, ad028:2, ad053:2, ad024:1, ad027:1
+  keywords: phantom, fingers, pointing, thunder, melody, lure, gaucho, play, simple, hands
+  units with hand topic: 11/18; topics: phantom_body:8, suit_every_mood:2, touch_of_a_button:1, dance:1
+   - [ad104.0 en 1924] Rhythmic Beat of a Gaucho Dance —When Phantom Fingers Play  ['phantom_body']
+   - [ad028.0 en 1924] Rhythmic beat of a Gaucho dance -when Phantom Fingers play  
+   - [ad105.0 en 1924] A Garden Quaint of Long Ago, When Phantom Fingers Play—  ['phantom_body']
+   - [ad026.7 en 1924] Their phantom fingers perform, again, at your command.  ['phantom_body', 'touch_of_a_button']
+   - [ad029.f1 en 1927] Phantom Fingers.  ['phantom_body']
+   - [ad030.f1 en 1927] Phantom Fingers.  ['phantom_body']
+=== cluster 21  size=17  ads=15  firms=11  figs=0  early(<=1914)=3  mean_cos=0.520
+  langs: en:10, da:2, de:1, nl:1, no:1, pt:1, fr:1
+  top ads: ad006:2, ad012:2, ad009:1, ad019:1, ad022:1, ad025:1
+  keywords: recordings, singing, afford, support, notable, competent, daglig, maintain, accompanists, demonstreres
+  units with hand topic: 7/17; topics: home:4, touch_of_a_button:2, artistic_accompaniment:1, repeatability:1, listening:1, technical_invention:1
+   - [ad094.3 da 1923] Demonstreres daglig, og indbydes enhver musikinteresseret til at høre dette fremragende Instrument.  
+   - [ad026.3 en 1924] played by the master musicians of the century in your own home, whenever you wish.  ['touch_of_a_button', 'home']
+   - [ad141.3 en 1928] are given daily, and we invite all lovers of music TO HEAR THIS WONDERFUL INSTRUMENT reproduce the compositions of the world's artists.  
+   - [ad092.4 da 1921] Instrumentet demonstreres og forevises daglig og indbyder vi alle Musikinteresserede til et Besøg i vort Magasin.  
+   - [ad183.1 fr 1925] chez soi et entendre les meilleurs artistes. tels que PADEREWSKY, Busoni, Pugno, etc. il suffit de faire l’acquisition du merveilleux instrument  ['home']
+   - [ad009.10 de 1905] Nicht nur, dass man in seinem Heim sich jeden Augenblick von den obengenannten Künstlern vorspielen lassen kann , wer singt oder geigt etc. wird sich sogar künstlerisch vollendet begleiten lassen können.  ['touch_of_a_button', 'artistic_accompaniment', 'home']
+=== cluster 22  size=17  ads=17  firms=14  figs=0  early(<=1914)=5  mean_cos=0.630
+  langs: en:11, de:1, nl:1, no:1, ru:1, sv:1, pl:1
+  top ads: ad010:1, ad014:1, ad019:1, ad027:1, ad028:1, ad031:1
+  keywords: celebrated, famous, pianists, satisfied, internationally, wonders, writes, pianist, backhaus, ages
+  units with hand topic: 9/17; topics: touch_of_a_button:3, miracle:2, immortality:1, suit_every_mood:1, dance:1, popular:1
+   - [ad031.3 en 1913] the greatest living pianists  
+   - [ad055.7 nl 1923] De beroemdste Pianisten der Wereld spelen voor  
+   - [ad112.1 en 1928] The famous compositions of the ages played by internationally famous pianists are at your command.  ['touch_of_a_button']
+   - [ad212.2 pl 1907] Najsławniejsi pianiści współcześni wydali o cudownym instrumencie nadzwyczaj pochlebny sąd: 8515  
+   - [ad150.1 sv 1908] är världens erkändt bästa själfsp. pianino.  ['superiority']
+   - [ad105.8 en 1924] The famous compositions of the ages, played by internationally known pianists, are at your disposal.  ['touch_of_a_button']
+=== cluster 23  size=17  ads=17  firms=3  figs=0  early(<=1914)=0  mean_cos=0.819
+  langs: en:16, da:1
+  top ads: ad014:1, ad015:1, ad016:1, ad020:1, ad021:1, ad022:1
+  keywords: pneumatic, auto, heaton, president, action, company, pres, pneumat, forretning, førende
+  units with hand topic: 0/17; topics: 
+   - [ad030.8 en 1927] The Auto Pneumatic Action Co. , W. C. Heaton , President,  
+   - [ad022.22 en 1926] The Auto Pneumatic Action Company– W. C. Heaton, President  
+   - [ad029.8 en 1927] The Auto Pneumatic Action Company, W. C. Heaton, President;  
+   - [ad040.7 en 1927] The Auto Pneumatic Action Company , W. C. Heaton, President,  
+   - [ad027.10 en 1924] Auto-Pneumatic Action Co., W. C. Heaton, President ,  
+   - [ad026.11 en 1924] Auto-Pneumatic Action Co., W. C. Heaton, President,  
+=== cluster 24  size=16  ads=13  firms=12  figs=0  early(<=1914)=1  mean_cos=0.646
+  langs: en:9, es:3, sv:2, da:1, de:1
+  top ads: ad006:2, ad135:2, ad205:2, ad002:1, ad012:1, ad017:1
+  keywords: pianos, taken, adquirir, pianinon, player, flyglar, terms, världsberömda, tagas, tages
+  units with hand topic: 5/16; topics: affordability:3, superiority:1, popular:1
+   - [ad006.20 en 1920] Pianos and Player-Pianos at the Prices You Expect to Pay  
+   - [ad002.11 en 1922] Pianos of other makes taken in exchange.  
+   - [ad204.3 es 1918] , donde se encuentran en exhibición nuestros modelos de pianos  
+   - [ad017.1 en 1928] For Dealers Who Desire a Reproducing Piano for a Leader  
+   - [ad157.3 sv 1922] Vanliga pianinon & flyglar tagas i byte till högsta värdering.  
+   - [ad099.7 da 1926] Brugte Flygler og Pianoer tages i Bytte.  
+=== cluster 25  size=16  ads=15  firms=15  figs=0  early(<=1914)=9  mean_cos=0.631
+  langs: en:6, de:5, nl:4, es:1
+  top ads: ad048:2, ad002:1, ad003:1, ad007:1, ad009:1, ad021:1
+  keywords: busoni, pugno, paderewski, grieg, albert, saint, reger, grünfeld, carreño, reisenauer
+  units with hand topic: 3/16; topics: touch_of_a_button:3, virtual_presence:1
+   - [ad002.6 en 1922] Paderewski, Pachmann, Busoni, Josef Hofmann, Mark Hambourg, Pouishnoff, Fanny Davies, d'Albert , Bloomfield-Zeisler, Carreño, Debussy , Dohnányi , Grieg, Grünfeld, Lamond, Leschetizky, Lhevinne, Pugno, Saint-Saens, Samaroff, Sapellnikoff, Scharwenka, Schelling  
+   - [ad201.7 es 1917] como: Paderewski, Hofmann, Busoni, Ganz, Saint Saens, Carreño,  
+   - [ad009.8 de 1905] Eugen d'Albert, Konrad Ansorge, Ferruccio Busoni, Teresa Carreno, Ernst von Dohnányi, Artur Friedheim, Ossip Gabrilowitsch, Alfred Grünfeld, Heinrich Grünfeld, Clotilde Kleeberg, Alexander Krah, Frederic Lamond, Artur Nikisch, Egon Petri, Raoul Pugno, Max Rege  
+   - [ad007.4 en 1920] Ignace J. Paderewski Josef Hofmann Teresa Carreno Fannie Bloomfield-Zeisler Ferruccio Busoni Vladimir Pachmann Ossip Gabrilowitsch Edward Grieg Raoul Pugno Dr. Richard Strauss  
+   - [ad172.9 de 1911] d’ALBERT, BUSONI, Frau CARRENO, GABRILOWITSCH, CALSTON, GRIEG, GRÜNFELD, HAMBOURG, Paula HEGNER, HOFMANN, HUMPERDINK, Clotilde KLEEBERG, LAMBRINO, LAMOND, MOTTL, NIKISCH, PADEREWSKI, PUGNO, REGER, SCHARWENKA, SCHNABEL, RICH.  
+   - [ad048.4 nl 1910] RAOUL PUGNO, CLOTILDEKLEEBERG, Prof. MAX PAUER, FERRUCCIO BUSONI,  
+=== cluster 26  size=16  ads=13  firms=5  figs=0  early(<=1914)=0  mean_cos=0.522
+  langs: en:15, es:1
+  top ads: ad016:2, ad020:2, ad033:2, ad014:1, ad017:1, ad019:1
+  keywords: licensed, patents, dealer, original, dealers, nearby, welte, mignon, passage, patented
+  units with hand topic: 0/16; topics: 
+   - [ad027.13 en 1924] There's a nearby dealer *Licensed under the original Welte-Mignon patents.  
+   - [ad028.14 en 1924] There's a nearby dealer *Licensed under the original Welte-Mignon patents.  
+   - [ad026.15 en 1924] There's a nearby dealer *Licensed under the original Welte-Mignon patents.  
+   - [ad021.7 en 1926] There are Welte-Mignon Licensee dealers everywhere.  
+   - [ad024.10 en 1926] There are Welte-Mignon Licensee dealers everywhere.  
+   - [ad016.12 en 1926] *Licensed under original Welte-Mignon patents  
+=== cluster 27  size=16  ads=12  firms=6  figs=0  early(<=1914)=2  mean_cos=0.525
+  langs: es:15, en:1
+  top ads: ad116:2, ad118:2, ad204:2, ad207:2, ad114:1, ad117:1
+  keywords: rafael, cuba, san, stowers, john, habana, exclusivo, representante, depósito, edificio
+  units with hand topic: 0/16; topics: 
+   - [ad209.7 es 1926] San Rafael, no 29 HABANA (Cuba)  
+   - [ad117.16 es 1924] EDIFICIO “STOWERS” San Rafael No. 29. Teléfono A-3962 HABANA  
+   - [ad118.3 es 1926] San Rafael No. 29 HABANA  
+   - [ad116.3 es 1923] Representantes Exclusivos en la República de Cuba: JOHN L. STOWERS  
+   - [ad204.2 es 1918] San Rafael No. 29, Habana  
+   - [ad207.6 es 1923] JOHN L. STOWERS Representante Exclusivo en Cuba.  
+=== cluster 28  size=16  ads=11  firms=10  figs=0  early(<=1914)=6  mean_cos=0.430
+  langs: en:10, de:3, es:2, ru:1
+  top ads: ad032:5, ad117:2, ad006:1, ad030:1, ad031:1, ad122:1
+  keywords: hear, иллюзіей, личной, ихъ, ustedes, sustained, poderío, tiefergreifend, reproducir, realism
+  units with hand topic: 9/16; topics: virtual_presence:5, listening:2, repeatability:1, soulfulness:1, exact_reproduction:1, immediate_recognizability:1
+   - [ad122.3 ru 1908] съ полной иллюзіей ихъ личной игры можно слышать въ передачѣ  ['virtual_presence']
+   - [ad117.10 es 1924] usted los oirá tocar con todos sus detalles y escuchará cada una de sus frases; su propia nota, tal como si él estuviese presente, ejecutando su poderío para usted.  ['virtual_presence']
+   - [ad177.4 de 1913] schreibt in einem Brief vom 6. 6. 13: „Wie erstaunlich und tiefergreifend ist es, sein vor Jahren aufgenommenes Spiel in größter Vollendung durch „WELTE-MIGNON“ wiedergegeben zu hören!  
+   - [ad032.12 en 1924] Just listening to him.  ['listening']
+   - [ad130.22 en 1909] This INSTRUMENT is for you to SEE and HEAR.  
+   - [ad131.21 en 1909] This INSTRUMENT is for you to SEE and HEAR.  
+=== cluster 29  size=15  ads=11  firms=10  figs=0  early(<=1914)=8  mean_cos=0.382
+  langs: en:7, de:4, sv:2, nl:1, es:1
+  top ads: ad019:3, ad100:3, ad032:1, ad041:1, ad049:1, ad111:1
+  keywords: stum, silence, står, hört, seelen, sluit, strangeness, volkomen, schreef, mignonapparates
+  units with hand topic: 10/15; topics: miracle:3, touch_of_a_button:2, invisibility:1, virtual_presence:1, affordability:1, distinction_from_mechanical:1
+   - [ad148.3 sv 1907] Den som hört det, står stum inför detta under — —».  ['miracle']
+   - [ad151.9 sv 1908] Den som hört det, står stum inför detta under.  ['miracle']
+   - [ad049.10 nl 1912] DE LANGE schreef o. m.: „Inderdaad de illusie is volkomen, sluit men de oogen dan is het of men de Personen zelf hoort”,  ['virtual_presence']
+   - [ad100.39 de 1908] Man soll kein Wunder glauben!  ['miracle']
+   - [ad019.17 en 1928] Silence for a moment . . .  ['touch_of_a_button']
+   - [ad205.1 es 1919] “Puedo decir que me he oído a mi mismo.”  ['immediate_recognizability']
+=== cluster 30  size=15  ads=13  firms=11  figs=0  early(<=1914)=10  mean_cos=0.439
+  langs: de:7, en:5, fr:1, nl:1, no:1
+  top ads: ad009:2, ad100:2, ad005:1, ad010:1, ad013:1, ad029:1
+  keywords: zugleich, technisches, untergehen, vollendetster, tage, spätere, philosophisches, leisten, gelöst, früchte
+  units with hand topic: 9/15; topics: miracle:4, immortality:2, technical_invention:1, popular:1, unreached_ideal:1
+   - [ad101.5 de 1909] Ich sehe den „MIGNON“-Apparat als das grösste Wunder der Jetztzeit an.  ['miracle']
+   - [ad010.8 de 1907] Was grosse Meister unserer Tage leisten, kann nun nicht mehr untergehen und spätere Generationen werden die Früchte dieser genialen Erfindung geniessen."  ['immortality']
+   - [ad046.0 fr 1927] Le grand succès du  
+   - [ad009.28 de 1905] Was grosse Meister unserer Tage leisten, kann nun nicht mehr untergehen und spätere Generationen werden die Früchte dieser genialen Erfindung geniessen.  ['immortality']
+   - [ad100.2 de 1908] Es ist ein wahres Wunder der Welt.  ['miracle']
+   - [ad013.4 en 1909] But today the science has reached its apex, the goal has been attained and beyond the splendid achievement realized in the Welte-Mignon it is impossible to go.  ['technical_invention']
+=== cluster 31  size=15  ads=15  firms=5  figs=0  early(<=1914)=3  mean_cos=0.593
+  langs: en:14, de:1
+  top ads: ad000:1, ad013:1, ad014:1, ad016:1, ad020:1, ad021:1
+  keywords: brochure, write, beautiful, send, copy, artists, portraits, request, book, interesting
+  units with hand topic: 0/15; topics: 
+   - [ad022.20 en 1926] Write for the beautiful brochure.  
+   - [ad025.25 en 1926] Write for the beautiful brochure.  
+   - [ad021.8 en 1926] Send for copy of our beautiful brochure containing portraits of the great artists.  
+   - [ad014.16 en 1926] Send for the beautiful art brochure  
+   - [ad020.8 en 1926] Our beautiful brochure sent on request.  
+   - [ad016.8 en 1926] Our beautiful brochure sent on request.  
+=== cluster 32  size=15  ads=15  firms=7  figs=0  early(<=1914)=1  mean_cos=0.732
+  langs: en:14, da:1
+  top ads: ad013:1, ad032:1, ad033:1, ad034:1, ad036:1, ad090:1
+  keywords: olde, firme, heintzman, sons, geo, geisler, proportions, droop, expanded, cecilian
+  units with hand topic: 0/15; topics: 
+   - [ad109.8 en 1927] Ye Olde Firme Heintzman & Co  
+   - [ad106.10 en 1926] Ye Olde Firme Heintzman & Co.  
+   - [ad113.4 en 1929] Ye Olde Firme Heintzman & Co.  
+   - [ad190.0 en 1926] Ye Olde Firme Heintzman & Co.  
+   - [ad111.11 en 1928] Ye Olde Firme Heintzman & Co.  
+   - [ad110.7 en 1927] Ye Olde Firme Heintzman & Co.  
+=== cluster 33  size=15  ads=14  firms=13  figs=0  early(<=1914)=1  mean_cos=0.369
+  langs: en:10, fr:1, nl:1, da:1, es:1, sv:1
+  top ads: ad006:2, ad017:1, ad029:1, ad030:1, ad032:1, ad038:1
+  keywords: terms, sold, priser, bought, ventas, synnerl, voorwaarden, ögonblicket, sell, representation
+  units with hand topic: 9/15; topics: affordability:9
+   - [ad156.3 sv 1922] För ögonblicket synnerl. låga priser,  ['affordability']
+   - [ad190.6 en 1926] * Prices and Terms within the Reach of All.  ['affordability']
+   - [ad107.0 en 1927] ONLY ONCE IN A WHILE will you find a Bargain Price on an  ['affordability']
+   - [ad063.5 nl 1924] Vraagt onze speciale Aankoop Voorwaarden.  ['affordability']
+   - [ad006.16 en 1920] And bear in mind that the Welte is within your means, for it is sold on terms–your own within reason.  ['affordability']
+   - [ad099.6 da 1926] Vore Priser er de billigste, vore Betalingsvilkaar yderst kulante og vor Garanti den mest betryggende  ['affordability']
+=== cluster 34  size=15  ads=10  firms=7  figs=1  early(<=1914)=0  mean_cos=0.600
+  langs: en:13, no:1, es:1
+  top ads: ad033:5, ad023:2, ad006:1, ad007:1, ad012:1, ad025:1
+  keywords: musicians, record, library, workshop, rank, music, recorded, selections, welte, artists
+  units with hand topic: 1/15; topics: listening:1
+   - [ad033.35 en 1926] Many musicians and masters whose names gleam like stars in the firmament of music have paid glowing tribute to Welte-Mignon.* From every corner of the world come musicians to inscribe their matchless art on the imperishable pages of Welte-Mignon's* ever-growin  
+   - [ad007.2 en 1920] Among those who have recorded their wonderful playing for the Welte Mignon are  
+   - [ad023.8 en 1926] Now Possible ~ Through the Welte-Mignon (Licensee) Library of Music  
+   - [ad025.0 en 1926] A Veritable Army of Artists Record for Welte-Mignon  
+   - [ad082.5 no 1919] Efter at ha endt min concertturne i U. S. A. har jeg idag for første gang hørt gjengit de kompositioner som jeg spilte for The Welte Mignon —  
+   - [ad111.4 en 1928] Through the Welte-Mignon a new world of music is open.  
+=== cluster 35  size=15  ads=9  firms=9  figs=0  early(<=1914)=5  mean_cos=0.534
+  langs: ca:5, es:4, nl:3, fr:2, en:1
+  top ads: ad200:5, ad072:2, ad115:2, ad033:1, ad057:1, ad061:1
+  keywords: automatiques, autopiano, vleugels, vigor, série, uniques, verticales, vente, quejas, reja
+  units with hand topic: 1/15; topics: technical_invention:1
+   - [ad066.0 nl 1926] DE ORIGINEELE AUTOPIANO’S WELTE MIGNON  
+   - [ad072.10 fr 1928] "PIANOS AUTOMATIQUES" met en vente à des CONDITIONS UNIQUES UNE SÉRIE TRÈS LIMITÉE  
+   - [ad115.1 es 1924] VERTICALES Y DE COLA  
+   - [ad057.3 nl 1923] HOORT DE RONDO-ART (WELTE-MIGNON) MET COMBINEERENDE PATENTEN VAN WELTE EN AUTO-PIANO CO.  ['technical_invention']
+   - [ad121.6 es 1922] de la afamada fábrica: THE AUTOPIANO Co.  
+   - [ad200.28 ca 1914] 2. «Coloquio en la reja». . .  
+=== cluster 36  size=14  ads=14  firms=7  figs=0  early(<=1914)=2  mean_cos=0.585
+  langs: en:14
+  top ads: ad016:1, ad020:1, ad021:1, ad024:1, ad026:1, ad027:1
+  keywords: secret, reproduction, possesses, perfect, provides, uncanny, actions, fidelity, standard, today
+  units with hand topic: 10/14; topics: exact_reproduction:8, secret:5, superiority:2, virtual_presence:1
+   - [ad020.4 en 1926] Only Welte-Mignon* possesses this secret of perfect reproduction.  ['exact_reproduction', 'secret']
+   - [ad033.26 en 1926] Perfect Reproduction – The Secret of Welte Mignon*  ['exact_reproduction', 'secret']
+   - [ad021.2 en 1926] Only Welte-Mignon Licensee possesses the secret of perfect reproduction.  ['exact_reproduction', 'secret']
+   - [ad024.6 en 1926] Only Welte-Mignon Licensee possesses the secret of perfect reproduction .  ['exact_reproduction', 'secret']
+   - [ad016.3 en 1926] For, only WELTE-MIGNON* possesses the secret of perfect reproduction.  ['exact_reproduction', 'secret']
+   - [ad027.5 en 1924] The Welte-Mignon* satisfies in this respect as well as in the uncanny fidelity with which it reproduces  ['exact_reproduction']
+=== cluster 37  size=14  ads=13  firms=11  figs=0  early(<=1914)=3  mean_cos=0.747
+  langs: en:7, de:3, nl:1, no:1, da:1, es:1
+  top ads: ad143:2, ad003:1, ad022:1, ad029:1, ad052:1, ad083:1
+  keywords: home, ersten, heim, pianists, privacy, möglichkeit, bietet, summon, pianisten, originalspiel
+  units with hand topic: 11/14; topics: home:8, virtual_presence:3, touch_of_a_button:2, exact_reproduction:1
+   - [ad086.2 da 1912] byder Muligheden at høre Verdens første Pianister i Ens eget Hjem.  ['home']
+   - [ad197.1 de 1923] wenn das WELTE-MIGNON ton- und klanggetreu das Meister-Spiel der ersten Klavierkünstler in Ihrem Heim erklingen läßt.  ['exact_reproduction', 'home']
+   - [ad103.2 de 1911] bietet die Möglichkeit, das Originalspiel der ersten Pianisten der Welt im eigenen Heim zu hören  ['home']
+   - [ad003.2 de 1909] bietet die Möglichkeit, das Originalspiel der ersten Pianisten der Welt im eigenen Heim zu hören.  ['home']
+   - [ad115.2 es 1924] CAMBIE USTED SU PIANO por un magnífico Reproductor eléctrico “BALDWIN-WELTE MIGNON” Venga Ud. a oír a los grandes pianistas de fama mundial el día que guste a nuestro salón de exposición.  
+   - [ad143.1 en 1928] In the privacy and comfort of your home with your intimate friends around, you can summon in an instant the Master Pianists of the World to reveal for you and your guests the grandeur and beauty of the music of the Great Composers.  ['home', 'touch_of_a_button']
+=== cluster 38  size=13  ads=13  firms=2  figs=0  early(<=1914)=0  mean_cos=0.793
+  langs: en:13
+  top ads: ad014:1, ad015:1, ad016:1, ad020:1, ad021:1, ad022:1
+  keywords: pianos, select, manufacturers, leading, different, makes, licensee, action, offered, reproducing
+  units with hand topic: 0/13; topics: 
+   - [ad024.8 en 1926] You can have Welte-Mignon Licensee in 115 different pianos.  
+   - [ad025.24 en 1926] The Welte-Mignon Licensee Action may be obtained in 115 makes of pianos.  
+   - [ad029.5 en 1927] Welte-Mignon Licensee Reproducing Pianos are offered by 115 leading piano manufacturers.  
+   - [ad030.6 en 1927] Welte-Mignon Licensee Reproducing Pianos are offered by 115 leading piano manufacturers.  
+   - [ad040.6 en 1927] Welte-Mignon Licensee Reproducing Pianos are offered by 115 leading piano manufacturers.  
+   - [ad023.16 en 1926] The Welte-Mignon (Licensee) reproducing action may now be obtained in 115 leading makes of pianos.  
+=== cluster 39  size=13  ads=11  firms=10  figs=8  early(<=1914)=5  mean_cos=0.687
+  langs: en:7, es:3, no:1, sv:1, pl:1
+  top ads: ad011:2, ad208:2, ad023:1, ad024:1, ad035:1, ad039:1
+  keywords: paderewski, ignacy, jan, portrait, poland, upper, prowincyą, poznań, newspapers, neumann
+  units with hand topic: 1/13; topics: phantom_body:1
+   - [ad024.f0 en 1926] Portrait of Paderewski  
+   - [ad023.f4 en 1926] Portrait of Paderewski  
+   - [ad035.f0 en 1912] Oval portrait of Ignace J. Paderewski  
+   - [ad134.f0 en 1923] Portrait drawing of Ignacy Jan Paderewski in profile  
+   - [ad159.23 sv 1908] Spelad af J. J. Paderewski.  
+   - [ad208.f1 es 1926] Facsimile of Paderewski's signature  
+=== cluster 40  size=12  ads=11  firms=5  figs=0  early(<=1914)=0  mean_cos=0.779
+  langs: en:12
+  top ads: ad014:2, ad006:1, ad016:1, ad020:1, ad021:1, ad024:1
+  keywords: fingers, master, keys, undying, lamps, twilight, spell, presence, burning, alter
+  units with hand topic: 7/12; topics: virtual_presence:4, listening:2, phantom_body:2, exact_reproduction:1, atmosphere:1
+   - [ad014.1 en 1926] The Master's Fingers on Your Piano  ['virtual_presence']
+   - [ad040.10 en 1927] The Master's Fingers on Your Piano  
+   - [ad143.6 en 1928] The Master's Fingers On Your Piano  ['phantom_body']
+   - [ad021.11 en 1926] The Master's Fingers On Your Piano  
+   - [ad020.0 en 1926] The Master's Fingers On your Piano  ['virtual_presence']
+   - [ad016.0 en 1926] THE MASTER'S FINGERS ON YOUR PIANO  
+=== cluster 41  size=11  ads=9  firms=7  figs=11  early(<=1914)=7  mean_cos=0.550
+  langs: en:4, sv:3, de:2, es:2
+  top ads: ad000:2, ad207:2, ad034:1, ad134:1, ad147:1, ad148:1
+  keywords: frame, lyre, order, star, hatched, decoration, austria, shaped, drapery, double
+  units with hand topic: 0/11; topics: 
+   - [ad000.f0 en 1913] Top of the hatched frame, with a Steinway lyre emblem in each corner  
+   - [ad034.f0 en 1919] Bird (ornament on top of the decorative frame)  
+   - [ad207.f2 es 1923] Cross-shaped order decoration hanging from a ribbon; the inscription on the central medallion is not legible  
+   - [ad196.f1 de 1913] A diagonal band across the frame, with the double-headed imperial eagle of Austria at its lower end  
+   - [ad147.f0 sv 1907] Logo of the firm: a tall ornamented cartouche with a crest of scrollwork, inscribed "DAHLSTRÖMS ORGEL- OCH PIANO-MAGASIN"  
+   - [ad134.f1 en 1923] Ornamental cartouche with the name "SAVERY'S"  
+=== cluster 42  size=11  ads=10  firms=4  figs=9  early(<=1914)=0  mean_cos=0.747
+  langs: en:10, fr:1
+  top ads: ad033:2, ad015:1, ad016:1, ad020:1, ad021:1, ad026:1
+  keywords: hands, keyboard, vignette, emerging, phantom, dark, pair, semitransparent, ghost, white
+  units with hand topic: 7/11; topics: phantom_body:7
+   - [ad016.f1 en 1926] Illustration of semi-transparent hands on a piano.  ['phantom_body']
+   - [ad033.f6 en 1926] Framed vignette: a hand at a piano keyboard  
+   - [ad026.f1 en 1924] Phantom hands at a piano.  ['phantom_body']
+   - [ad104.f1 en 1924] Two hands playing a piano keyboard, emerging from a dark vignette  ['phantom_body']
+   - [ad105.f1 en 1924] Two hands playing a piano keyboard, emerging from a dark vignette  ['phantom_body']
+   - [ad020.f0 en 1926] Black arched column; a pair of hands in white cuffs playing on a piano keyboard.  
+=== cluster 43  size=11  ads=10  firms=8  figs=0  early(<=1914)=8  mean_cos=0.578
+  langs: de:9, en:1, pl:1
+  top ads: ad005:2, ad008:1, ad009:1, ad037:1, ad100:1, ad102:1
+  keywords: pädagogischen, konservatorium, künstlerischen, wien, wert, erfindung, studienzwecken, zwecken, konservatorien, hervorragenden
+  units with hand topic: 9/11; topics: educational_use:8, technical_invention:1, touch_of_a_button:1, virtual_presence:1
+   - [ad008.11 de 1910] Dass es sich um eine Erfindung von ausserordentlicher künstlerischer Bedeutung handelt, beweist ihr Gebrauch im K. K. Konservatorium in Wien zu Studienzwecken .  ['educational_use']
+   - [ad005.18 de 1910] Dass es sich um eine Erfindung von ausserordentlicher künstlerischer Bedeutung handelt, beweist ihr Gebrauch im K. K. Konservatorium in Wien zu Studienzwecken.  ['educational_use']
+   - [ad212.4 pl 1907] Wynalazek ten ma nie tylko wielką doniosłość artystyczną, ale również zarazem i pedagogiczną.  ['educational_use']
+   - [ad185.2 de 1927] Arthur Nikisch sagt: Der Wert dieser Erfindung besteht nicht nur in dem eminent pädagogischen Einfluss auf den Lernenden, sondern in hervorragender Weise auch für denjenigen, welcher, um eine Stunde künstlerischen Genusses bequem sich zu verschaffen, irgend ei  ['educational_use', 'virtual_presence']
+   - [ad037.9 de 1921] Der Wert der Erfindung besteht demnach nicht nur in dem eminent pädagogischen Einfluß auf den Lernenden , sondern in ganz hervorragender Weise auch für denjenigen, welcher, um eine Stunde künstlerischen Genusses bequem sich zu verschaffen, irgendeinen hervorra  ['touch_of_a_button', 'educational_use']
+   - [ad169.10 de 1909] Das bekannte k. k. Konservatorium in Wien hat die hohe Bedeutung des Instrumentes für Mnsikstudierende gewürdigt, indem es ein Welte-Mignon für Studienzwecke anschaffte.  
+=== cluster 44  size=11  ads=11  firms=10  figs=0  early(<=1914)=3  mean_cos=0.472
+  langs: en:5, de:3, no:2, nl:1
+  top ads: ad038:1, ad067:1, ad075:1, ad076:1, ad106:1, ad110:1
+  keywords: pryd, entertain, salon, enhver, guests, sommeraufenthalts, täglich, vergangenen, schloss, search
+  units with hand topic: 8/11; topics: home:3, unreached_ideal:1, virtual_presence:1, hostess:1, repeatability:1, entertainment:1
+   - [ad145.5 en 1928] An ideal Instrument for homes where frequent social functions demand much entertaining, the WELTE will interest your guests and relieve the strain of hospitality.  ['hostess']
+   - [ad181.5 de 1921] — Im Saal für Kunstspiel-Klaviere, im Helmhaus, wird Welte-Mignon jederzeit bereitwilligst vorgeführt.  
+   - [ad076.2 no 1907] Ved sit elegante Ydre en Pryd for enhver Salon.  ['home']
+   - [ad110.5 en 1927] Come to our Salon and let it entertain you.  
+   - [ad197.0 de 1923] Ihre Gäste sind ganz entzückt  ['entertainment']
+   - [ad038.4 en 1923] Really, with a Welte-Mignon at home, one has no desire and certainly no need to search elsewhere for a satisfactory place in which to entertain one's guests.  
+=== cluster 45  size=10  ads=9  firms=6  figs=0  early(<=1914)=10  mean_cos=0.721
+  langs: de:8, en:2
+  top ads: ad170:2, ad005:1, ad008:1, ad009:1, ad130:1, ad131:1
+  keywords: übertrifft, erfindern, ansicht, erfindungen, gebiete, bewunderung, bears, admiration, unlimited, erfindung
+  units with hand topic: 3/10; topics: superiority:2, technical_invention:1
+   - [ad130.15 en 1909] “My ADMIRATION of the greatest invention, which bears the name of ‘STEINWAY-WELTE,’ is unlimited.  
+   - [ad131.13 en 1909] “My ADMIRATION of the greatest invention which bears the name of ‘WELTE’ is unlimited.  
+   - [ad008.7 de 1910] Den Erfindern meine aufrichtige Bewunderung.  
+   - [ad175.9 de 1912] Den Erfindern meine aufrichtigste Bewunderung.  
+   - [ad005.26 de 1910] Diese Erfindung ist das unglaublichste an Vollendung, das man sich denken kann.  
+   - [ad171.3 de 1910] Nach meiner Ansicht übertrifft er alle andern Erfindungen auf diesem Gebiete.  ['superiority']
+=== cluster 46  size=10  ads=8  firms=8  figs=0  early(<=1914)=10  mean_cos=0.637
+  langs: en:6, de:1, nl:1, sv:1, pl:1
+  top ads: ad130:2, ad131:2, ad009:1, ad035:1, ad041:1, ad073:1
+  keywords: musical, invention, age, opinion, hitherto, field, amazing, create, sensation, doubt
+  units with hand topic: 7/10; topics: technical_invention:6, analogy_to_photography:1, superiority:1
+   - [ad041.11 en 1913] The Welte-Mignon is, without doubt, the most remarkable musical invention of our age.  
+   - [ad131.14 en 1909] In my opinion it is the most amazing of all inventions which have hitherto been made in the field of musical instruments, and its name will become known and create the greatest sensation throughout the world.”  ['technical_invention']
+   - [ad130.16 en 1909] In my opinion it is the most amazing of all inventions which have hitherto been made in the field of Musical Instruments, and its name will become known and create the greatest sensation throughout the world.—TERESA CARRENNO.”  ['technical_invention']
+   - [ad035.3 en 1912] Walter Damrosch says: "The Welte is without a doubt the most remarkable musical invention of our age.  ['technical_invention']
+   - [ad210.2 pl 1906] Najsłynniejsi artyści uznają „Mignon“ za wynalazek epokowy, który największy podziw wzbudzi w całym świecie muzycznym.  ['technical_invention']
+   - [ad009.1 de 1905] Deutschem Erfindungsgeist ist es geglückt, eine geradezu phantastisch erscheinende Idee - ein akustisches Seitenstück zur Platte des Photographen - zu verwirklichen.  ['analogy_to_photography', 'technical_invention']
+=== cluster 47  size=10  ads=7  firms=5  figs=6  early(<=1914)=0  mean_cos=0.494
+  langs: en:8, sv:1, fr:1
+  top ads: ad019:4, ad006:1, ad012:1, ad107:1, ad111:1, ad153:1
+  keywords: chair, woman, armchair, lamp, window, sitting, revels, relaxes, depths, big
+  units with hand topic: 8/10; topics: sitting_woman:5, listening:2, atmosphere:1, home:1
+   - [ad012.f0 en 1920] Woman sitting in a chair in front of an upright piano.  ['sitting_woman']
+   - [ad107.f0 en 1927] A woman in an evening gown reclining in an armchair beside a grand piano and its bench; a window and a table lamp behind  ['sitting_woman']
+   - [ad193.f0 fr 1927] A young woman with bobbed hair playing a grand piano in front of a tall arched window with a curtain drawn aside; a lamp stands on the piano  ['sitting_woman', 'home']
+   - [ad019.23 en 1928] For an hour or more, she revels in the world's great piano music . . .  ['listening']
+   - [ad006.f2 en 1920] A girl playing an upright piano.  
+   - [ad153.f1 sv 1922] A man in evening dress standing behind an armchair, a sheet of music in his hand  
+=== cluster 48  size=10  ads=10  firms=8  figs=8  early(<=1914)=8  mean_cos=0.665
+  langs: de:4, en:3, no:2, sv:1
+  top ads: ad019:1, ad075:1, ad076:1, ad100:1, ad102:1, ad103:1
+  keywords: cabinet, vorsetzer, player, case, glitter, pierced, polished, striped, doors, art
+  units with hand topic: 0/10; topics: 
+   - [ad075.f0 no 1907] The Welte-Mignon cabinet player (Vorsetzer) in an Art Nouveau case  
+   - [ad076.f0 no 1907] The Welte-Mignon cabinet player (Vorsetzer) in an Art Nouveau case  
+   - [ad100.f0 de 1908] The Welte-Mignon cabinet player (Vorsetzer)  
+   - [ad102.f0 de 1909] The Welte-Mignon cabinet player (Vorsetzer)  
+   - [ad103.f0 de 1911] The Welte-Mignon cabinet player (Vorsetzer)  
+   - [ad133.5 en 1911] By their Welte Cabinet Player Reproduction Instrument.  
+=== cluster 49  size=10  ads=2  firms=1  figs=10  early(<=1914)=0  mean_cos=0.656
+  langs: es:10
+  top ads: ad207:8, ad117:2
+  keywords: medal, inscribed, female, legible, figure, partly, legend, exposition, institute, universelle
+  units with hand topic: 0/10; topics: 
+   - [ad207.f3 es 1923] Medal with a standing female figure, inscribed "PREIS FÜR VERDIENSTVOLLE ARBEIT"  
+   - [ad117.f0 es 1924] Medal with a seated female harpist; the legend (a German exhibition medal, "…INSTRUMENTEN…") is illegible  
+=== cluster -1  size=445  ads=143  firms=68  figs=20  early(<=1914)=163  mean_cos=nan
+  langs: en:226, de:103, sv:30, es:29, fr:13, nl:13, da:12, pl:8, ru:5, no:3, pt:2, ca:1
+  top ads: ad033:25, ad100:24, ad019:19, ad135:14, ad009:9, ad031:8
+  keywords: mignon, welte, playing, instrument, piano, artist, reproducing, erfindung, forever, home
+  units with hand topic: 183/445; topics: exact_reproduction:32, immortality:26, home:20, virtual_presence:17, superiority:16, technical_invention:14
+   - [ad000.1 en 1913] After many inventions and many failures the perfect instrument  ['technical_invention']
+   - [ad001.2 en 1922] The Instrument of the Immortals  ['immortality']
+   - [ad001.6 en 1922] Branches and Agencies throughout the World Write for particulars  
+   - [ad002.0 en 1922] The Instrument of the Immortals  ['immortality']
+   - [ad002.2 en 1922] The Welte-Mignon, which reproduces absolutely the Artists' original renderings , retains its position amongst the World's foremost and greatest reproducing instruments.  ['exact_reproduction']
+   - [ad002.13 en 1922] Branches and Agencies throughout the World.  

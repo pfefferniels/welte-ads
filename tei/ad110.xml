@@ -110,11 +110,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -142,10 +143,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -164,28 +170,44 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <category xml:id="the_artists_soul">
+             <gloss>The artist's soul</gloss>
+             <desc>The instrument is said to capture the soul, spirit, feeling or
+                inner life of the performer, a spiritual register beyond the
+                technical one of touch and nuance ("the living soul of the artist",
+                "Musikseele").</desc>
           </category>
-          <category xml:id="touch_of_a_button">
-             <gloss>Touch of a Button</gloss>
-             <desc>The Welte-Mignon is permanently available and "objectified"
-                for the entertainment of the owner – on the touch of a
-                button.</desc>
+          <category xml:id="illusion_of_presence">
+             <gloss>Illusion of presence</gloss>
+             <desc>The listener feels that the artist is present or seated at the
+                instrument ("as if he sat at your piano", "close your eyes"), or
+                cannot tell the reproduction from the live artist.</desc>
           </category>
-          <category xml:id="unreached_ideal">
-             <gloss>Ideal Instrument</gloss>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
           </category>
-          <category xml:id="virtual_presence">
-             <gloss>Virtual Presence</gloss>
+          <category xml:id="domestic_comfort">
+             <gloss>Domestic comfort and intimacy</gloss>
+             <desc>A private, comfortable scene: the fireside, an armchair, lamplight,
+                the family gathered, a quiet evening, in the text or in the
+                picture.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -194,6 +216,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-20">Topic of the picture attributed to Claude, who annotated it.</change>
@@ -220,17 +243,17 @@
           <lb/><hi rendition="#b #larger">Reproducing Piano</hi></name></hi></head>
       </div>
       <div type="illustration" facs="#zone_picture">
-        <figure xml:id="figure_1" ana="#home" resp="#claude"><desc>A grand piano in a room, a framed portrait of a seventeenth-century gentleman on the wall, a side table with a lamp and a vase</desc></figure>
+        <figure xml:id="figure_1" ana="#domestic_comfort" resp="#claude"><desc>A grand piano in a room, a framed portrait of a seventeenth-century gentleman on the wall, a side table with a lamp and a vase</desc></figure>
       </div>
       <div facs="#zone_text">
         <p><lb/>With the <name type="brand">Heintzman Welte-Mignon</name> in your
-          <lb/>home, <seg xml:id="topic_1" ana="#virtual_presence" type="topic" resp="#claude">you can have the companionship of the
-          <lb/>world’s greatest pianists</seg>. <seg xml:id="topic_2" ana="#touch_of_a_button" type="topic" resp="#claude"><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pach-
+          <lb/>home, <seg xml:id="topic_1" ana="#masters_at_home" type="topic" resp="#claude">you can have the companionship of the
+          <lb/>world’s greatest pianists</seg>. <seg xml:id="topic_2" ana="#masters_at_home" type="topic" resp="#claude"><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pach-
           <lb/>mann</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/11918625X"><sic>Hoffman</sic></persName> and a host of others await your
           <lb/>beck and call</seg>. Though they cannot appear in
-          <lb/>person, <seg xml:id="topic_3" ana="#virtual_presence" type="topic" resp="#claude">their spirit will pervade the room</seg>—<seg xml:id="topic_4" ana="#exact_reproduction" type="topic" resp="#claude">so
+          <lb/>person, <seg xml:id="topic_3" ana="#illusion_of_presence #the_artists_soul" type="topic" resp="#claude">their spirit will pervade the room</seg>—<seg xml:id="topic_4" ana="#faithful_reproduction" type="topic" resp="#claude">so
           <lb/>exact is <name type="brand">Welte-Mignon</name> reproduction</seg>. The <name type="brand">Welte-
-          <lb/>Mignon</name> is <seg xml:id="topic_5" ana="#unreached_ideal" type="topic" resp="#claude">the ultimate in musical perfection—
+          <lb/>Mignon</name> is <seg xml:id="topic_5" ana="#superlatives" type="topic" resp="#claude">the ultimate in musical perfection—
           <lb/>it is the outstanding and supreme instrument in
           <lb/>its field</seg>.</p>
       </div>

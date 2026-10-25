@@ -110,11 +110,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -142,10 +143,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -164,22 +170,37 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <category xml:id="touch_and_individuality">
+             <gloss>Touch, nuance and individuality</gloss>
+             <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                pedalling, dynamics, tempo, shading, tone colour, or the
+                individuality and characteristic style of each pianist.</desc>
           </category>
-          <category xml:id="personality">
-             <gloss>Personality</gloss>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
           </category>
-          <category xml:id="unreached_ideal">
-             <gloss>Ideal Instrument</gloss>
+          <category xml:id="domestic_comfort">
+             <gloss>Domestic comfort and intimacy</gloss>
+             <desc>A private, comfortable scene: the fireside, an armchair, lamplight,
+                the family gathered, a quiet evening, in the text or in the
+                picture.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -188,6 +209,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-20">Topic of the picture attributed to Claude, who annotated it.</change>
@@ -207,7 +229,7 @@
   <text decls="#source_1">
     <body>
       <div type="illustration" facs="#zone_picture">
-        <figure xml:id="figure_1" ana="#home" resp="#claude"><desc>A grand piano in a room, a curtained leaded window, an armchair and a vase of flowers behind</desc></figure>
+        <figure xml:id="figure_1" ana="#domestic_comfort" resp="#claude"><desc>A grand piano in a room, a curtained leaded window, an armchair and a vase of flowers behind</desc></figure>
       </div>
       <div facs="#zone_headline">
         <head><lb/><hi rendition="#larger">Ye Olde Firme</hi>
@@ -216,11 +238,11 @@
       </div>
       <div facs="#zone_text">
         <p><hi rendition="#g #smaller"><lb/>The <name type="brand">Heintzman &amp; Co. Welte-Mignon Reproducing Piano</name>
-          <lb/>represents <seg xml:id="topic_1" ana="#unreached_ideal" type="topic" resp="#claude">the ultimate in musical perfection</seg>. It brings
-          <lb/><seg xml:id="topic_2" ana="#home" type="topic" resp="#claude">the actual playing of the world’s greatest artists into
-          <lb/>your home</seg>, <seg xml:id="topic_3" ana="#exact_reproduction" type="topic" resp="#claude">reproducing each composition with absolute
-          <lb/>faithfulness</seg>—with all the ease and grace, the power and
-          <lb/>force, <seg xml:id="topic_4" ana="#personality" type="topic" resp="#claude">by which the artists wove their own personality
+          <lb/>represents <seg xml:id="topic_1" ana="#superlatives" type="topic" resp="#claude">the ultimate in musical perfection</seg>. It brings
+          <lb/><seg xml:id="topic_2" ana="#faithful_reproduction #masters_at_home" type="topic" resp="#claude">the actual playing of the world’s greatest artists into
+          <lb/>your home</seg>, <seg xml:id="topic_3" ana="#faithful_reproduction" type="topic" resp="#claude">reproducing each composition with absolute
+          <lb/>faithfulness</seg>—with <seg xml:id="topic_5" ana="#touch_and_individuality" type="topic" resp="#claude">all the ease and grace, the power and
+          <lb/>force</seg>, <seg xml:id="topic_4" ana="#touch_and_individuality" type="topic" resp="#claude">by which the artists wove their own personality
           <lb/>into the playing</seg>.
           <lb/>If you will visit our Music Salons the <name type="brand">Heintzman &amp; Co.
           <lb/>Welte-Mignon Reproducing Piano</name> will gladly play for

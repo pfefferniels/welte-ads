@@ -113,11 +113,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -145,10 +146,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -165,16 +171,36 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
+          </category>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
+          </category>
+          <category xml:id="unique_and_superior">
+             <gloss>Unique and superior to rivals</gloss>
+             <desc>The instrument is "the only one", the standard for all others, it
+                surpasses its rivals or has nothing in common with them, or the
+                reader is warned against cheap or unknown makes.</desc>
+          </category>
+          <category xml:id="gifts">
+             <gloss>Seasonal occasions and gifts</gloss>
+             <desc>The ad ties the instrument to Christmas, the New Year, a holiday or
+                a season, or offers it as a gift.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -183,6 +209,7 @@
       <langUsage><language ident="fr">French</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -199,20 +226,20 @@
   <text decls="#source_1">
     <body>
       <div facs="#zone_vacances">
-        <head><hi rendition="#c"><lb/><hi rendition="#larger">Pendant les</hi>
-          <lb/><hi rendition="#in #b">VACANCES</hi>
+        <head><hi rendition="#c"><lb/><seg xml:id="topic_3" ana="#gifts" type="topic" resp="#claude"><hi rendition="#larger">Pendant les</hi>
+          <lb/><hi rendition="#in #b">VACANCES</hi></seg>
           <lb/>pour avoir des
           <lb/><hi rendition="#larger #b #g">CONCERTS</hi></hi></head>
-        <p><hi rendition="#c"><lb/><hi rendition="#larger"><seg xml:id="topic_1" ana="#home" type="topic" resp="#claude">chez soi</seg> et entendre les meilleurs artistes.</hi>
+        <p><hi rendition="#c"><lb/><hi rendition="#larger"><seg xml:id="topic_4" ana="#masters_at_home" type="topic" resp="#claude">chez soi et entendre les meilleurs artistes.</seg></hi>
           <lb/><hi rendition="#larger">tels que <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118986724">PADEREWSKY</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118518011">Busoni</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116308621">Pugno</persName></hi>, etc.</hi>
-          <lb/>il suffit de faire l’acquisition du merveilleux
-          <lb/>instrument</hi></p>
+          <lb/>il suffit de faire l’acquisition du <seg xml:id="topic_5" ana="#wonder" type="topic" resp="#claude">merveilleux
+          <lb/>instrument</seg></hi></p>
       </div>
       <div facs="#zone_brand">
         <head><lb/><hi rendition="#c #in #b"><name type="brand">Welte-Mignon</name></hi></head>
       </div>
       <div facs="#zone_seul">
-        <p><lb/><hi rendition="#b">LE SEUL</hi> qui <seg xml:id="topic_2" ana="#exact_reproduction" type="topic" resp="#claude">reproduise fidèlement le jeu des grands
+        <p><lb/><seg xml:id="topic_6" ana="#unique_and_superior" type="topic" resp="#claude"><hi rendition="#b">LE SEUL</hi> qui</seg> <seg xml:id="topic_2" ana="#faithful_reproduction" type="topic" resp="#claude">reproduise fidèlement le jeu des grands
           <lb/>maîtres du clavier</seg>. Renseignements et auditions:
           <lb/><hi rendition="#c"><orgName>Magasin de pianos</orgName> — <address><addrLine>Passage du Terraillet</addrLine></address></hi></p>
       </div>

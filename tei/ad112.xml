@@ -110,11 +110,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -142,10 +143,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -164,19 +170,47 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
           </category>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
           </category>
-          <category xml:id="touch_of_a_button">
-             <gloss>Touch of a Button</gloss>
-             <desc>The Welte-Mignon is permanently available and "objectified"
-                for the entertainment of the owner – on the touch of a
-                button.</desc>
+          <category xml:id="domestic_comfort">
+             <gloss>Domestic comfort and intimacy</gloss>
+             <desc>A private, comfortable scene: the fireside, an armchair, lamplight,
+                the family gathered, a quiet evening, in the text or in the
+                picture.</desc>
+          </category>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
+          </category>
+          <category xml:id="the_original">
+             <gloss>The original</gloss>
+             <desc>The Welte-Mignon is the original or the first reproducing piano,
+                protected by the original patents; the history of the Welte firm
+                and its founders guarantees it.</desc>
+          </category>
+          <category xml:id="national_pride">
+             <gloss>National and local pride</gloss>
+             <desc>An appeal to national or local identity: domestic industry or
+                inventive genius, national honour, national artists and composers.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -185,6 +219,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-20">Topic of the picture attributed to Claude, who annotated it.</change>
@@ -208,7 +243,7 @@
   <text decls="#source_1">
     <body>
       <div type="illustration" facs="#zone_picture">
-        <figure xml:id="figure_1" ana="#home" resp="#claude"><desc>A grand piano in a room, a framed portrait of a seventeenth-century gentleman on the wall, a side table with a lamp</desc></figure>
+        <figure xml:id="figure_1" ana="#domestic_comfort" resp="#claude"><desc>A grand piano in a room, a framed portrait of a seventeenth-century gentleman on the wall, a side table with a lamp</desc></figure>
       </div>
       <div facs="#zone_headline">
         <head><hi rendition="#c"><lb/><hi rendition="#in">The <name type="brand">HEINTZMAN</name></hi>
@@ -216,21 +251,21 @@
           <lb/><hi rendition="#g">REPRODUCING PIANO</hi></hi></head>
       </div>
       <div facs="#zone_text">
-        <p><lb/><seg xml:id="topic_1" ana="#touch_of_a_button" type="topic" resp="#claude">The famous compositions of the ages played by
+        <p><lb/><seg xml:id="topic_1" ana="#masters_at_home" type="topic" resp="#claude">The famous compositions of the ages played by
           <lb/>internationally famous pianists are at your com-
           <lb/>mand</seg>. Through the <name type="brand">Welte-Mignon Reproducing
-          <lb/>Piano</name>, <seg xml:id="topic_2" ana="#home" type="topic" resp="#claude">the genius of <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName>,
+          <lb/>Piano</name>, <seg xml:id="topic_2" ana="#masters_at_home" type="topic" resp="#claude">the genius of <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De Pachmann</persName>,
           <lb/>and hundreds of others of the musically great, is
           <lb/>transported to your home</seg> for your entertainment.
-          <lb/><seg xml:id="topic_3" ana="#superiority" type="topic" resp="#claude"><name type="brand">Welte Mignon</name> was the first reproducing piano pro-
+          <lb/><seg xml:id="topic_3" ana="#the_original #superlatives #world_renown" type="topic" resp="#claude"><name type="brand">Welte Mignon</name> was the first reproducing piano pro-
           <lb/>nounced perfect by great artists—it is still so
           <lb/>regarded</seg>.</p>
       </div>
       <div facs="#zone_stewart">
-        <ab><hi rendition="#c"><lb/><hi rendition="#b #larger"><persName type="artist">Reginald Stewart</persName></hi>
+        <ab><hi rendition="#c"><lb/><seg xml:id="topic_4" ana="#national_pride" type="topic" resp="#claude"><hi rendition="#b #larger"><persName type="artist">Reginald Stewart</persName></hi>
           <lb/><hi rendition="#b #i">Famous Canadian Concert Pianist
           <lb/>is an exclusive <name type="brand">Welte-Mignon</name>
-          <lb/>Artist.</hi>
+          <lb/>Artist.</hi></seg>
           <lb/><hi rendition="#i #smaller">The following Recordings by
           <lb/><persName type="artist">Reginald Stewart</persName> are now
           <lb/>obtainable at Heintzman Hall.</hi></hi></ab>
@@ -251,8 +286,8 @@
         <figure><desc>Photographic portrait of Reginald Stewart in profile</desc></figure>
       </div>
       <div facs="#zone_invitation">
-        <ab><hi rendition="#c #b #i #smaller"><lb/>Visit our Music Salon and hear the wonderful <name type="brand">Heintzman
-          <lb/>Welte-Mignon</name> play for you the music of the masters.</hi></ab>
+        <ab><hi rendition="#c #b #i #smaller"><lb/>Visit our Music Salon and hear <seg xml:id="topic_5" ana="#wonder" type="topic" resp="#claude">the wonderful <name type="brand">Heintzman
+          <lb/>Welte-Mignon</name></seg> play for you the music of the masters.</hi></ab>
       </div>
       <div facs="#zone_signature">
         <ab><hi rendition="#c"><lb/><hi rendition="#b #i">Ye Olde Firme</hi>

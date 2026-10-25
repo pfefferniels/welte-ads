@@ -18,6 +18,10 @@
                     <forename>Niels</forename>
                  </persName>
               </respStmt>
+              <respStmt>
+                 <resp>Annotation of topics</resp>
+                 <name xml:id="claude">Claude (AI model by Anthropic)</name>
+              </respStmt>
            </titleStmt>
            <publicationStmt>
               <publisher>
@@ -154,11 +158,12 @@
                  scan, in part transcribed by hand. The advertisements published
                  outside Germany, the United Kingdom and the United States, and a
                  few from Germany, were transcribed from the scans, encoded, given
-                 their regions and annotated with topics by Claude, an AI model;
-                 their revision history says so. Until the editor has checked such
-                 an advertisement against the scan, <att>status</att> on its
-                 <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-                 advertisement is <val>checked</val>.</p>
+                 their regions by Claude, an AI model; their revision history says
+                 so. Until the editor has checked such an advertisement against the
+                 scan, <att>status</att> on its <gi>revisionDesc</gi> is
+                 <val>unchecked</val>; that of every other advertisement is
+                 <val>checked</val>. The topics of all advertisements were assigned
+                 by Claude.</p>
               <correction>
                  <p>Errors of the original are not corrected but marked with
                     <gi>sic</gi>.</p>
@@ -186,10 +191,15 @@
                     Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                     which describes them in a <gi>desc</gi>. Illustrations are
                     described in <gi>figure</gi>. Persons are linked to the GND with
-                    <att>corresp</att>. Recurring motifs are marked as topics with
-                    <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                    the taxonomy of topics; these are an interpretation, by whom
-                    <att>resp</att> says.</p>
+                    <att>corresp</att>. Recurring arguments and motifs are marked as
+                    topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                    pointing to the taxonomy of topics. The taxonomy was induced by
+                    Claude in four blind readings of all advertisements, each in a
+                    different order and without knowledge of the editor's earlier
+                    taxonomy, which it replaced in October 2026; it keeps the topics
+                    that at least three of the readings found. The topics are an
+                    interpretation, assigned by whom <att>resp</att> says, so far
+                    all by Claude; the editor has not yet checked them.</p>
               </interpretation>
               <stdVals>
                  <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -211,27 +221,29 @@
            </tagsDecl>
            <classDecl>
               <taxonomy xml:id="topics">
-                 <desc>Topics: recurring motifs of the advertisements, in their texts
-                    and in their pictures</desc>
-                 <category xml:id="affordability">
-                    <gloss>Affordability</gloss>
-                 </category>
-                 <category xml:id="home">
-                    <gloss>Home</gloss>
-                 </category>
+                 <desc>Topics: the recurring arguments and motifs of the advertisements,
+                    in their texts and in their pictures</desc>
                  <category xml:id="immortality">
-                    <gloss>Immortality</gloss>
-                    <desc>This topic emphasizes the perdurance of the reproductions and
-                       how thus the recording artists become immortal.</desc>
+                    <gloss>Immortality and posterity</gloss>
+                    <desc>The playing is preserved for ever or for future generations; the
+                       artists become immortal, and dead artists still play.</desc>
                  </category>
-                 <category xml:id="miracle">
-                    <gloss>Miracle</gloss>
+                 <category xml:id="wonder">
+                    <gloss>Wonder, miracle and magic</gloss>
+                    <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                       causes astonishment, disbelief or speechlessness.</desc>
                  </category>
-                 <category xml:id="phantom_body">
-                    <gloss>Phantom Body</gloss>
+                 <category xml:id="phantom_hands">
+                    <gloss>Phantom hands</gloss>
+                    <desc>The absent performer appears as a phantom or spirit: ghostly or
+                       semi-transparent hands and figures, keys moving with no one seated,
+                       the artist summoned at will ("zitieren", "summon").</desc>
                  </category>
-                 <category xml:id="repeatability">
-                    <gloss>Repeatability</gloss>
+                 <category xml:id="masters_at_home">
+                    <gloss>The great pianists in your home</gloss>
+                    <desc>The famous pianists can be heard in your own home or on your own
+                       piano, at any time, as often as you wish, at your command ("The
+                       Master's Fingers on Your Piano", concerts at home).</desc>
                  </category>
               </taxonomy>
            </classDecl>
@@ -242,6 +254,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+           <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
            <change when="2026-10-20">Marked as checked by the editor.</change>
            <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
@@ -273,25 +286,25 @@
         <div facs="#eSc_textblock_fa5427b3">
             <lb />
             <head><hi rendition="#b #i #in #larger">
-                <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> WILL
-                <lb /><hi rendition="#right">Play Again</hi>
+                <seg xml:id="topic_7" ana="#immortality" type="topic" resp="#claude"><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> WILL
+                <lb /><hi rendition="#right">Play Again</hi></seg>
             </hi></head>
             <ab><lb />
-            <seg xml:id="topic_1" ana="#miracle" resp="#np" type="topic">
+            <seg xml:id="topic_1" ana="#wonder" resp="#claude" type="topic">
                 Thanks to the wizardry of <name type="brand">Hardman Welte-
                 <lb />Mignon(licensee) Reproducing Pianos</name>
             </seg>
-            <seg xml:id="topic_2" ana="#immortality" resp="#np" type="topic">
+            <seg xml:id="topic_2" ana="#immortality" resp="#claude" type="topic">
                 the
                 <lb />art of <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName> is imperishable
             </seg>.
-            <seg xml:id="topic_3" ana="#repeatability" resp="#np" type="topic">
+            <seg xml:id="topic_3" ana="#masters_at_home" resp="#claude" type="topic">
                 He will
                 <lb />play again, again and yet again for you -
                 <lb />tonight, tomorrow night and other nights
             </seg>
             <lb />-
-            <seg xml:id="topic_4" ana="#home" resp="#np" type="topic">
+            <seg xml:id="topic_4" ana="#masters_at_home" resp="#claude" type="topic">
                 in your own home.
             </seg>
             <lb /><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
@@ -304,7 +317,7 @@
             <hi rendition="#c">
                 Write for catalog.
                 <lb />
-                <seg xml:id="topic_5" ana="#affordability" resp="#np" type="topic"><hi rendition="#uc #b #smaller">Convenient Terms</hi></seg>
+                <hi rendition="#uc #b #smaller">Convenient Terms</hi>
 
                 <app>
                   <rdg source="#source_1">
@@ -343,8 +356,8 @@
         
         </div>
         <div facs="#eSc_textblock_eeb83339" type="illustration">
-            <ab><seg xml:id="topic_6" ana="#phantom_body" resp="#np" type="topic">
-                <figure>
+            <ab>
+                <figure xml:id="figure_1" ana="#immortality #phantom_hands" resp="#claude">
                     <desc>
                         In the background: newspapers with headlines such as
                         "Paderewski here, will play no more", "Paderewski says
@@ -353,7 +366,7 @@
                         figure of Paderewski playing the piano.
                     </desc>
                 </figure>
-            </seg></ab>
+            </ab>
         </div>
         </body>
     </text>

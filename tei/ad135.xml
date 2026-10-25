@@ -145,11 +145,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -177,10 +178,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -201,13 +207,43 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="affordability">
-             <gloss>Affordability</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="furniture">
+             <gloss>Furniture and ornament</gloss>
+             <desc>The case, its design or period style; the instrument as an ornament
+                of the room.</desc>
           </category>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
+          </category>
+          <category xml:id="unique_and_superior">
+             <gloss>Unique and superior to rivals</gloss>
+             <desc>The instrument is "the only one", the standard for all others, it
+                surpasses its rivals or has nothing in common with them, or the
+                reader is warned against cheap or unknown makes.</desc>
+          </category>
+          <category xml:id="how_it_works">
+             <gloss>How it works</gloss>
+             <desc>The ad explains or shows the technology: the recording process, the
+                pneumatic or electric mechanism, the roll, the drive from a light
+                socket, or it likens the recording to photography or the
+                phonograph. A product label such as "electric reproducing piano"
+                alone does not count.</desc>
+          </category>
+          <category xml:id="quality">
+             <gloss>Quality and durability</gloss>
+             <desc>The instrument is reliable, well built and lasting, proven in use
+                and in every climate, guaranteed.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -216,6 +252,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -254,46 +291,46 @@
           <lb/>and stucco it may seem a bargain. But after you've lived
           <lb/>in it a year or two you begin to doubt the wisdom of your in-
           <lb/>vestment.</p>
-        <p><lb/>It's the same with the jerry-built Player Piano—the cheap,
-          <lb/>inefficient instrument of which great numbers are now offered
+        <p><lb/>It's the same with <seg xml:id="topic_4" ana="#unique_and_superior" type="topic" resp="#claude">the jerry-built Player Piano—the cheap,
+          <lb/>inefficient instrument</seg> of which great numbers are now offered
           <lb/>to the public. It may look all right in the glitter of its new and
           <lb/>polished case. It may even sound all right—at first. But time
           <lb/>finds it out. A year or two and its poor construction and in-
           <lb/>ferior quality manifest themselves—to your regret.</p>
-        <p><lb/>Avoid, then, the jerry-built instrument. When you buy a
-          <lb/>player look for and insist on quality. Choose a make which
-          <lb/>time has proven.</p>
+        <p><lb/><seg xml:id="topic_5" ana="#unique_and_superior" type="topic" resp="#claude">Avoid, then, the jerry-built instrument</seg>. When you buy a
+          <lb/>player <seg xml:id="topic_6" ana="#quality" type="topic" resp="#claude">look for and insist on quality. Choose a make which
+          <lb/>time has proven</seg>.</p>
       </div>
       <div facs="#zone_linconola">
         <head><lb/>Buy a
           <hi rendition="#c"><lb/><hi rendition="#b #in"><name type="brand">LINCONOLA</name>
           <lb/>PLAYER PIANO</hi>
-          <lb/><hi rendition="#larger"><seg xml:id="topic_1" ana="#superiority" type="topic" resp="#claude">World Famed for Quality</seg></hi></hi></head>
+          <lb/><hi rendition="#larger"><seg xml:id="topic_1" ana="#world_renown #quality" type="topic" resp="#claude">World Famed for Quality</seg></hi></hi></head>
       </div>
       <div facs="#zone_text2">
         <p><lb/><hi rendition="#dropcap">T</hi>HE <name type="brand">LINCONOLA</name> has been on the market for many years.
-          <lb/>Its excellent worth and long-lasting quality are uni-
-          <lb/>versally appreciated. It will give you lifetime satisfaction and
-          <lb/><sic>rquires</sic> no more attention than a high-grade piano</p>
-        <p><lb/>Every <name type="brand">Linconola</name> is fully guaranteed—our reputation is
+          <lb/><seg xml:id="topic_7" ana="#quality #world_renown" type="topic" resp="#claude">Its excellent worth and long-lasting quality are uni-
+          <lb/>versally appreciated</seg>. <seg xml:id="topic_8" ana="#quality" type="topic" resp="#claude">It will give you lifetime satisfaction and
+          <lb/><sic>rquires</sic> no more attention than a high-grade piano</seg></p>
+        <p><lb/><seg xml:id="topic_9" ana="#quality" type="topic" resp="#claude">Every <name type="brand">Linconola</name> is fully guaranteed</seg>—our reputation is
           <lb/>behind every instrument sold.</p>
         <p><lb/><name type="brand">Linconola</name> has the famous <name type="brand">Welte-Mignon</name> Reproducing
           <lb/>System. Remarkable accentuation is furnished by the pedals.
-          <lb/>The instrument has fixed valves (instead of the small collapsing
-          <lb/>bellow type, which is necessarily short-lived). In brief, through-
-          <lb/>out, <seg xml:id="topic_2" ana="#superiority" type="topic" resp="#claude">the <name type="brand">Linconola</name> <sic>represnts</sic> <sic>th</sic> utmost in high-grade production</seg>.</p>
+          <lb/><seg xml:id="topic_10" ana="#how_it_works #quality" type="topic" resp="#claude">The instrument has fixed valves (instead of the small collapsing
+          <lb/>bellow type, which is necessarily short-lived)</seg>. In brief, through-
+          <lb/>out, <seg xml:id="topic_2" ana="#superlatives #quality" type="topic" resp="#claude">the <name type="brand">Linconola</name> <sic>represnts</sic> <sic>th</sic> utmost in high-grade production</seg>.</p>
       </div>
       <div facs="#zone_models">
         <head><hi rendition="#c"><lb/><hi rendition="#b #in">Magnificent New Models</hi>
-          <lb/><hi rendition="#larger">In Period and Modern Designs</hi></hi></head>
+          <lb/><hi rendition="#larger"><seg xml:id="topic_11" ana="#furniture" type="topic" resp="#claude">In Period and Modern Designs</seg></hi></hi></head>
       </div>
       <div facs="#zone_casing">
-        <p><hi rendition="#c"><lb/>Beautiful casing is a feature of the <name type="brand">Linconola</name>, and new
+        <p><hi rendition="#c"><lb/><seg xml:id="topic_12" ana="#furniture" type="topic" resp="#claude">Beautiful casing is a feature of the <name type="brand">Linconola</name>, and new
           <lb/>shipments just opened include many models of exquisite
-          <lb/>design.</hi></p>
+          <lb/>design</seg>.</hi></p>
       </div>
       <div facs="#zone_terms">
-        <ab><hi rendition="#c"><lb/><hi rendition="#b #in"><seg xml:id="topic_3" ana="#affordability" type="topic" resp="#claude">Terms can be Arranged</seg></hi>
+        <ab><hi rendition="#c"><lb/><hi rendition="#b #in">Terms can be Arranged</hi>
           <lb/><hi rendition="#b">Your Silent Piano taken as Deposit.</hi></hi></ab>
       </div>
       <div facs="#zone_signature">
@@ -301,7 +338,7 @@
           <address><addrLine><lb/><hi rendition="#b">108 ELIZABETH-STREET.</hi></addrLine></address></hi></ab>
       </div>
       <div type="illustration" facs="#zone_picture_piano">
-        <figure><desc>Drawing of an upright player piano in a figured wooden case, with a roll visible in the opening above the keyboard and the pedals folded out</desc></figure>
+        <figure xml:id="figure_1" ana="#furniture" resp="#claude"><desc>Drawing of an upright player piano in a figured wooden case, with a roll visible in the opening above the keyboard and the pedals folded out</desc></figure>
       </div>
     </body>
   </text>

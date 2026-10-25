@@ -183,11 +183,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -215,10 +216,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -234,20 +240,12 @@
         <rendition xml:id="in" scheme="css">font-size: 150%;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
       </tagsDecl>
-      <classDecl>
-        <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="virtual_presence">
-             <gloss>Virtual Presence</gloss>
-          </category>
-        </taxonomy>
-      </classDecl>
     </encodingDesc>
     <profileDesc>
       <langUsage><language ident="ru">Russian</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20" who="#claude">Merged with the former ad128 (Жизнь искусства, October 23, 1923) and ad129 (Театр, October 23, 1923), new settings of the same advertisement; their printings are further sources, their readings are recorded with app.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -283,8 +281,8 @@
           <lb/><hi rendition="#in #b #g"><name type="brand"><app><rdg source="#source_1">Вельте-Миньон</rdg><rdg source="#source_2 #source_3">ВЕЛЬТЕ-МИНЬОН</rdg></app></name></hi><app><rdg source="#source_1 #source_2"/><rdg source="#source_3"> 3 КОНЦЕРТА</rdg></app></hi></head>
       </div>
       <div facs="#zone_artists">
-        <ab><hi rendition="#c"><lb/><seg xml:id="topic_1" ana="#virtual_presence" type="topic" resp="#claude">В ИСПОЛНЕНИИ: <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">ГОФМАНА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118518011">БУЗОНИ</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116584319">ЕСИПОВОЙ</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118501437">д‘АЛЬБЕРА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116977108"><app><rdg source="#source_1">ЗАУЭРА</rdg><rdg source="#source_2"><sic>ЗАУЗРА</sic></rdg><rdg source="#source_3">ЗАУЕР</rdg></app></persName>,
-          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118614916">СКРЯБИНА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116429623"><app><rdg source="#source_1 #source_3">РЕЙЗЕНАУЭРА</rdg><rdg source="#source_2"><sic>РЕЙЗЕНАУЗРА</sic></rdg></app></persName></hi> и <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118986724">ПАДЕРЕВСКОГО</persName></hi></seg><hi rendition="#b">.</hi></hi></ab>
+        <ab><hi rendition="#c"><lb/>В ИСПОЛНЕНИИ: <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/11918625X">ГОФМАНА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118518011">БУЗОНИ</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116584319">ЕСИПОВОЙ</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118501437">д‘АЛЬБЕРА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116977108"><app><rdg source="#source_1">ЗАУЭРА</rdg><rdg source="#source_2"><sic>ЗАУЗРА</sic></rdg><rdg source="#source_3">ЗАУЕР</rdg></app></persName>,
+          <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118614916">СКРЯБИНА</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116429623"><app><rdg source="#source_1 #source_3">РЕЙЗЕНАУЭРА</rdg><rdg source="#source_2"><sic>РЕЙЗЕНАУЗРА</sic></rdg></app></persName></hi> и <hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118986724">ПАДЕРЕВСКОГО</persName></hi><hi rendition="#b">.</hi></hi></ab>
       </div>
       <div facs="#zone_programmes">
         <ab><hi rendition="#c"><lb/><app><rdg source="#source_1">ПОДРОБНЫЕ ПРОГРАММЫ в ТЕКСТЕ стр. 20</rdg><rdg source="#source_2">ПРОГРАММЫ КОНЦЕРТОВ СМ. В ТЕКСТЕ</rdg><rdg source="#source_3">(ПРОГРАММЫ КОНЦЕРТОВ В ТЕКСТЕ)</rdg></app>.</hi></ab>

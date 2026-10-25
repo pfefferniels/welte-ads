@@ -200,11 +200,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -232,10 +233,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -250,20 +256,12 @@
         <rendition xml:id="larger" scheme="css">font-size: 120%;</rendition>
         <rendition xml:id="smaller" scheme="css">font-size: 83%;</rendition>
       </tagsDecl>
-      <classDecl>
-        <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="technical_invention">
-             <gloss>Technical Invention</gloss>
-          </category>
-        </taxonomy>
-      </classDecl>
     </encodingDesc>
     <profileDesc>
       <langUsage><language ident="nl">Dutch</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20" who="#claude">Merged with the former ad051 (Algemeen Handelsblad, June 19, Het Vaderland, July 3, and Arnhemsche Courant, July 17, 1918, new settings of the same text); its printings are further sources, compared on the scans, and their readings are recorded with app.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -287,7 +285,7 @@
         <ab><hi rendition="#c">
           <hi rendition="#b #smaller"><lb/><app><rdg source="#source_1 #source_4">van</rdg><rdg source="#source_2">Van</rdg><rdg source="#source_3">VAN</rdg></app> een zoo goed als <app><rdg source="#source_1 #source_2">nieuwe</rdg><rdg source="#source_3">NIEUWE</rdg><rdg source="#source_4">nieuw</rdg></app></hi>
           <hi rendition="#b #larger"><lb/>KUNSTSPEL-PIANO „<name type="brand">WELTE-MIGNON</name>”<app><rdg source="#source_1 #source_3">,</rdg><rdg source="#source_2 #source_4"/></app></hi>
-          <app><rdg source="#source_1"/><rdg source="#source_2 #source_3 #source_4">(speelt door <seg xml:id="topic_1" ana="#technical_invention" type="topic" resp="#claude">electrische beweegkracht</seg>)</rdg></app>
+          <app><rdg source="#source_1"/><rdg source="#source_2 #source_3 #source_4">(speelt door electrische beweegkracht)</rdg></app>
           <hi rendition="#b #smaller"><lb/>met <app><rdg source="#source_1">Motor</rdg><rdg source="#source_2 #source_3 #source_4">motor</rdg></app>, 62 <app><rdg source="#source_1">Muziekrollen</rdg><rdg source="#source_2 #source_3 #source_4">muziekrollen</rdg></app> en <app><rdg source="#source_1">Rollenkast</rdg><rdg source="#source_2 #source_3 #source_4">rollenkast</rdg></app>.</hi>
         </hi></ab>
       </div>

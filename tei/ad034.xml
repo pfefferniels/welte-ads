@@ -18,6 +18,10 @@
                         <forename>Niels</forename>
                     </persName>
                 </respStmt>
+                <respStmt>
+                    <resp>Annotation of topics</resp>
+                    <name xml:id="claude">Claude (AI model by Anthropic)</name>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>
@@ -163,11 +167,12 @@
                   scan, in part transcribed by hand. The advertisements published
                   outside Germany, the United Kingdom and the United States, and a
                   few from Germany, were transcribed from the scans, encoded, given
-                  their regions and annotated with topics by Claude, an AI model;
-                  their revision history says so. Until the editor has checked such
-                  an advertisement against the scan, <att>status</att> on its
-                  <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-                  advertisement is <val>checked</val>.</p>
+                  their regions by Claude, an AI model; their revision history says
+                  so. Until the editor has checked such an advertisement against the
+                  scan, <att>status</att> on its <gi>revisionDesc</gi> is
+                  <val>unchecked</val>; that of every other advertisement is
+                  <val>checked</val>. The topics of all advertisements were assigned
+                  by Claude.</p>
                <correction>
                   <p>Errors of the original are not corrected but marked with
                      <gi>sic</gi>.</p>
@@ -195,10 +200,15 @@
                      Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                      which describes them in a <gi>desc</gi>. Illustrations are
                      described in <gi>figure</gi>. Persons are linked to the GND with
-                     <att>corresp</att>. Recurring motifs are marked as topics with
-                     <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                     the taxonomy of topics; these are an interpretation, by whom
-                     <att>resp</att> says.</p>
+                     <att>corresp</att>. Recurring arguments and motifs are marked as
+                     topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                     pointing to the taxonomy of topics. The taxonomy was induced by
+                     Claude in four blind readings of all advertisements, each in a
+                     different order and without knowledge of the editor's earlier
+                     taxonomy, which it replaced in October 2026; it keeps the topics
+                     that at least three of the readings found. The topics are an
+                     interpretation, assigned by whom <att>resp</att> says, so far
+                     all by Claude; the editor has not yet checked them.</p>
                </interpretation>
                <stdVals>
                   <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -215,21 +225,42 @@
             </tagsDecl>
             <classDecl>
                 <taxonomy xml:id="topics">
-                    <desc>Topics: recurring motifs of the advertisements, in their texts
-                       and in their pictures</desc>
-                    <category xml:id="exact_reproduction">
-                       <gloss>Exact Reproduction</gloss>
-                       <desc>In virtually all promotional materials between 1905 and 1926,
-                          the claim of exact and faithful reproduction, of absolute
-                          accurateness is consistently emphasized.</desc>
+                    <desc>Topics: the recurring arguments and motifs of the advertisements,
+                       in their texts and in their pictures</desc>
+                    <category xml:id="faithful_reproduction">
+                       <gloss>Faithful reproduction</gloss>
+                       <desc>The ad claims that the playing of the artist is reproduced exactly,
+                          faithfully, naturally or completely, as "the actual playing" of the
+                          pianist. A bare "reproduces the playing of …" without such a
+                          qualifier does not count.</desc>
                     </category>
                     <category xml:id="immortality">
-                       <gloss>Immortality</gloss>
-                       <desc>This topic emphasizes the perdurance of the reproductions and
-                          how thus the recording artists become immortal.</desc>
+                       <gloss>Immortality and posterity</gloss>
+                       <desc>The playing is preserved for ever or for future generations; the
+                          artists become immortal, and dead artists still play.</desc>
                     </category>
-                    <category xml:id="technical_invention">
-                       <gloss>Technical Invention</gloss>
+                    <category xml:id="world_renown">
+                       <gloss>World renown and recognition</gloss>
+                       <desc>The instrument is famous and admired throughout the world,
+                          acclaimed by all great artists, critics or the press, adopted by
+                          conservatories and other institutions, or decorated with medals and
+                          prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+                    </category>
+                    <category xml:id="epoch_making_invention">
+                       <gloss>Epoch-making invention</gloss>
+                       <desc>The instrument is framed as an invention: epoch-making, ingenious,
+                          the greatest of the age, a sensation, the newest thing.</desc>
+                    </category>
+                    <category xml:id="superlatives">
+                       <gloss>Superlative perfection</gloss>
+                       <desc>The instrument is called perfect, the best, the finest, supreme or
+                          unsurpassed, or the culmination of a line of progress.</desc>
+                    </category>
+                    <category xml:id="repertoire">
+                       <gloss>Breadth of repertoire</gloss>
+                       <desc>The range of music available: classics and dance music, jazz and
+                          opera, music for every mood and occasion, a library of thousands of
+                          rolls by hundreds of artists.</desc>
                     </category>
                 </taxonomy>
             </classDecl>
@@ -240,6 +271,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+            <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
             <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
             <change when="2026-10-20">Marked as checked by the editor.</change>
             <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
@@ -295,36 +327,36 @@
                     <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">
                         Josef Hof-
                         <lb />mann
-                    </persName>, whose art at the zenith of
+                    </persName>, <seg xml:id="topic_4" ana="#immortality" type="topic" resp="#claude">whose art at the zenith of
                     <lb />his great career has been pre-
-                    <lb />served by the <name type="brand">Welte-Mignon</name>.
+                    <lb />served by the <name type="brand">Welte-Mignon</name>.</seg>
                 </hi>
             </p>
         </div>
         <div facs="#eSc_textblock_4271fc05">
             <ab><lb />
-            <hi rendition="#larger #c">World Famous <name type="brand">Welte-Mignon</name></hi></ab>
+            <hi rendition="#larger #c"><seg xml:id="topic_5" ana="#world_renown" type="topic" resp="#claude">World Famous <name type="brand">Welte-Mignon</name></seg></hi></ab>
         </div>
         <div facs="#eSc_textblock_d9bf3380">
             <p>
-                <seg xml:id="topic_1" ana="#technical_invention" resp="#np" type="topic">
+                <seg xml:id="topic_1" ana="#epoch_making_invention #superlatives" resp="#claude" type="topic">
                     <lb />
                     <hi rendition="#in">T</hi>he highest achievement of the House
                     <lb /><hi rendition="#et">of Welte in the world of music in-</hi>
                     <lb />vention
                 </seg>
-                <seg xml:id="topic_2" ana="#immortality" resp="#np" type="topic">
+                <seg xml:id="topic_2" ana="#immortality" resp="#claude" type="topic">
                     whereby generations yet unborn may
                     <lb />listen to
                 </seg>
-                <seg xml:id="topic_3" ana="#exact_reproduction" resp="#np" type="topic">
+                <seg xml:id="topic_3" ana="#faithful_reproduction" resp="#claude" type="topic">
                     accurate and authentic interpreta-
                     <lb />tions upon the piano,
                 </seg>
-                of over five thousand
+                <seg xml:id="topic_6" ana="#repertoire" type="topic" resp="#claude">of over five thousand
                 <lb />musical compositions, as played by more than
                 <lb />one hundred and fifty of the most distinguished
-                <lb />pianists of the past two decades.
+                <lb />pianists of the past two decades.</seg>
             </p>
         </div>
         <div facs="#eSc_textblock_be4de09e">

@@ -137,11 +137,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -169,10 +170,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -189,33 +195,58 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="atmosphere">
-             <gloss>Atmosphere</gloss>
-          </category>
-          <category xml:id="home">
-             <gloss>Home</gloss>
-          </category>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
           <category xml:id="immortality">
-             <gloss>Immortality</gloss>
-             <desc>This topic emphasizes the perdurance of the reproductions and
-                how thus the recording artists become immortal.</desc>
+             <gloss>Immortality and posterity</gloss>
+             <desc>The playing is preserved for ever or for future generations; the
+                artists become immortal, and dead artists still play.</desc>
           </category>
-          <category xml:id="miracle">
-             <gloss>Miracle</gloss>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
           </category>
-          <category xml:id="phantom_body">
-             <gloss>Phantom Body</gloss>
+          <category xml:id="phantom_hands">
+             <gloss>Phantom hands</gloss>
+             <desc>The absent performer appears as a phantom or spirit: ghostly or
+                semi-transparent hands and figures, keys moving with no one seated,
+                the artist summoned at will ("zitieren", "summon").</desc>
           </category>
-          <category xml:id="superiority">
-             <gloss>Superiority</gloss>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
           </category>
-          <category xml:id="touch_of_a_button">
-             <gloss>Touch of a Button</gloss>
-             <desc>The Welte-Mignon is permanently available and "objectified"
-                for the entertainment of the owner – on the touch of a
-                button.</desc>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+          </category>
+          <category xml:id="superlatives">
+             <gloss>Superlative perfection</gloss>
+             <desc>The instrument is called perfect, the best, the finest, supreme or
+                unsurpassed, or the culmination of a line of progress.</desc>
+          </category>
+          <category xml:id="the_original">
+             <gloss>The original</gloss>
+             <desc>The Welte-Mignon is the original or the first reproducing piano,
+                protected by the original patents; the history of the Welte firm
+                and its founders guarantees it.</desc>
+          </category>
+          <category xml:id="repertoire">
+             <gloss>Breadth of repertoire</gloss>
+             <desc>The range of music available: classics and dance music, jazz and
+                opera, music for every mood and occasion, a library of thousands of
+                rolls by hundreds of artists.</desc>
+          </category>
+          <category xml:id="evocative_scenes">
+             <gloss>Evocative scenes and moods</gloss>
+             <desc>The copy or the picture paints what the music conjures up: a storm
+                at sea, the Valkyries, a gaucho dance, a garden of long ago.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -224,6 +255,7 @@
       <langUsage><language ident="en">English</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-20">Topics of the pictures attributed to Claude, who annotated them.</change>
@@ -249,12 +281,12 @@
   <text decls="#source_1">
     <body>
       <div type="illustration" facs="#zone_picture">
-        <figure xml:id="figure_1" ana="#atmosphere" resp="#claude"><desc>A couple in crinoline-period dress embracing on a bench beside a garden fountain, trees and a house behind; at the lower right a grand piano projecting beyond the frame of the picture</desc></figure>
+        <figure xml:id="figure_1" ana="#evocative_scenes" resp="#claude"><desc>A couple in crinoline-period dress embracing on a bench beside a garden fountain, trees and a house behind; at the lower right a grand piano projecting beyond the frame of the picture</desc></figure>
       </div>
       <div facs="#zone_headline">
-        <head><hi rendition="#i #in"><lb/>A Garden Quaint
-          <lb/>of Long Ago, When
-          <lb/><seg xml:id="topic_1" ana="#phantom_body" type="topic" resp="#claude">Phantom Fingers Play</seg>—</hi></head>
+        <head><hi rendition="#i #in"><lb/><seg xml:id="topic_9" ana="#evocative_scenes" type="topic" resp="#claude">A Garden Quaint
+          <lb/>of Long Ago</seg>, When
+          <lb/><seg xml:id="topic_1" ana="#phantom_hands" type="topic" resp="#claude">Phantom Fingers Play</seg>—</hi></head>
       </div>
       <div facs="#zone_text">
         <p><lb/><hi rendition="#dropcap">T</hi>HINK how many times it would be one of the
@@ -263,19 +295,19 @@
           <lb/>of your favorite pianists. “In the Gloaming,”
           <lb/>perhaps, or that beautiful composition of
           <lb/><persName type="composer">Bartlett</persName>’s “A Dream.”</p>
-        <p><lb/><seg xml:id="topic_2" ana="#atmosphere" type="topic" resp="#claude">As the old strains come forth, time slips back to a garden
+        <p><lb/><seg xml:id="topic_2" ana="#evocative_scenes" type="topic" resp="#claude">As the old strains come forth, time slips back to a garden
           <lb/>of days gone by. Flowers in summer grandeur fringe a
           <lb/>winding path.</seg> Your <name type="brand">Mason &amp; Risch Welte-Mignon
           <lb/>Reproducing Piano</name> paints a picture of a girl who waited
           <lb/>there. How clearly her every feature stands out in your
           <lb/>memory!</p>
-        <p><lb/>But your enjoyment of the <name type="brand">Mason &amp; Risch Welte-Mignon</name>
-          <lb/>is by no means confined to the simpler things. <seg xml:id="topic_3" ana="#touch_of_a_button" type="topic" resp="#claude">The
+        <p><lb/>But <seg xml:id="topic_10" ana="#repertoire" type="topic" resp="#claude">your enjoyment of the <name type="brand">Mason &amp; Risch Welte-Mignon</name>
+          <lb/>is by no means confined to the simpler things</seg>. <seg xml:id="topic_3" ana="#masters_at_home" type="topic" resp="#claude">The
           <lb/>famous compositions of the ages, played by internationally
-          <lb/>known pianists, are at your disposal</seg>. <seg xml:id="topic_4" ana="#home" type="topic" resp="#claude">The genius of
+          <lb/>known pianists, are at your disposal</seg>. <seg xml:id="topic_4" ana="#masters_at_home #repertoire" type="topic" resp="#claude">The genius of
           <lb/><persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/116014490">DePachmann</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/11918625X">Hofmann</persName> and hundreds of
           <lb/>others is transported to your home</seg> in the famous <name type="brand">Mason
-          <lb/>&amp; Risch Welte-Mignon</name>. <seg xml:id="topic_5" ana="#superiority" type="topic" resp="#claude">It was the first reproducer
+          <lb/>&amp; Risch Welte-Mignon</name>. <seg xml:id="topic_5" ana="#the_original #superlatives #world_renown" type="topic" resp="#claude">It was the first reproducer
           <lb/>pronounced perfection by great artists, and it is still so
           <lb/>regarded</seg>.</p>
       </div>
@@ -285,14 +317,14 @@
           <lb/>our sales rooms.</p>
       </div>
       <div type="illustration" facs="#zone_vignette">
-        <figure xml:id="figure_2" ana="#phantom_body" resp="#claude"><desc>Two hands playing a piano keyboard, emerging from a dark vignette</desc></figure>
+        <figure xml:id="figure_2" ana="#phantom_hands" resp="#claude"><desc>Two hands playing a piano keyboard, emerging from a dark vignette</desc></figure>
       </div>
       <div facs="#zone_caption">
-        <ab><hi rendition="#i #smaller"><lb/>These are the <seg xml:id="topic_6" ana="#phantom_body" type="topic" resp="#claude">Phantom
+        <ab><hi rendition="#i #smaller"><lb/>These are the <seg xml:id="topic_6" ana="#phantom_hands" type="topic" resp="#claude">Phantom
           <lb/>Hands</seg> of a thousand
           <lb/><seg xml:id="topic_7" ana="#immortality" type="topic" resp="#claude">immortal pianists, their
           <lb/>genius preserved forever</seg>
-          <lb/><seg xml:id="topic_8" ana="#miracle" type="topic" resp="#claude">through the miracle of
+          <lb/><seg xml:id="topic_8" ana="#wonder" type="topic" resp="#claude">through the miracle of
           <lb/><name type="brand">Welte-Mignon</name> reproduc-
           <lb/>tion</seg>.</hi></ab>
       </div>

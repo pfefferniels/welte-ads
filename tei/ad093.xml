@@ -140,11 +140,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -172,10 +173,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -190,13 +196,25 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="affordability">
-             <gloss>Affordability</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
           </category>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <category xml:id="world_renown">
+             <gloss>World renown and recognition</gloss>
+             <desc>The instrument is famous and admired throughout the world,
+                acclaimed by all great artists, critics or the press, adopted by
+                conservatories and other institutions, or decorated with medals and
+                prizes. The bare epithet "the famous Welte-Mignon" does not count.</desc>
+          </category>
+          <category xml:id="quality">
+             <gloss>Quality and durability</gloss>
+             <desc>The instrument is reliable, well built and lasting, proven in use
+                and in every climate, guaranteed.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -205,6 +223,7 @@
       <langUsage><language ident="da">Danish</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-16" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -231,11 +250,11 @@
         <head><hi rendition="#c #b #in"><lb/>KUNSTMUSIK</hi></head>
       </div>
       <div facs="#zone_subhead">
-        <ab><hi rendition="#c #b"><lb/><seg xml:id="topic_1" ana="#home" type="topic" resp="#claude">i Hjemmet</seg>.</hi></ab>
+        <ab><hi rendition="#c #b"><lb/><seg xml:id="topic_1" ana="#masters_at_home" type="topic" resp="#claude">i Hjemmet</seg>.</hi></ab>
       </div>
       <div facs="#zone_text">
-        <ab><hi rendition="#c"><lb/>Eneforhandling af det verdens-
-          <lb/>kendte Kunstspilleapparat</hi></ab>
+        <ab><hi rendition="#c"><lb/>Eneforhandling af <seg xml:id="topic_5" ana="#world_renown" type="topic" resp="#claude">det verdens-
+          <lb/>kendte Kunstspilleapparat</seg></hi></ab>
       </div>
       <div facs="#zone_brand">
         <ab><hi rendition="#c #b #in"><lb/><name type="brand">Welte Mignon</name>,</hi></ab>
@@ -243,15 +262,15 @@
       <div facs="#zone_text2">
         <p><lb/>indbygget i <hi rendition="#b"><name type="brand">Steinway</name> Flygler</hi>
           <lb/>og <hi rendition="#b">Pianoer</hi> og som <hi rendition="#b">Forsats-
-          <lb/>apparat</hi> anbefalet af Nutidens
-          <lb/>berømte Musikautoriteter.</p>
+          <lb/>apparat</hi> <seg xml:id="topic_3" ana="#world_renown" type="topic" resp="#claude">anbefalet af Nutidens
+          <lb/>berømte Musikautoriteter</seg>.</p>
       </div>
       <div facs="#zone_other">
         <ab><gap reason="irrelevant"><desc resp="#claude">4 lines on other new and used instruments in stock (Angelus, Estrella, Pianola, Ducanola m. fl.)</desc></gap></ab>
       </div>
       <div facs="#zone_terms">
-        <ab><hi rendition="#c"><lb/>Fineste Garanti.
-          <lb/><seg xml:id="topic_2" ana="#affordability" type="topic" resp="#claude">Lempelige Betalingsvilkaar</seg>.</hi></ab>
+        <ab><hi rendition="#c"><lb/><seg xml:id="topic_4" ana="#quality" type="topic" resp="#claude">Fineste Garanti.</seg>
+          <lb/>Lempelige Betalingsvilkaar.</hi></ab>
       </div>
       <div facs="#zone_signature">
         <ab><hi rendition="#c #b #in"><lb/><orgName>A/S Chr. Winther</orgName>,</hi></ab>

@@ -155,11 +155,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -187,10 +188,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -205,25 +211,48 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="exact_reproduction">
-             <gloss>Exact Reproduction</gloss>
-             <desc>In virtually all promotional materials between 1905 and 1926,
-                the claim of exact and faithful reproduction, of absolute
-                accurateness is consistently emphasized.</desc>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="faithful_reproduction">
+             <gloss>Faithful reproduction</gloss>
+             <desc>The ad claims that the playing of the artist is reproduced exactly,
+                faithfully, naturally or completely, as "the actual playing" of the
+                pianist. A bare "reproduces the playing of …" without such a
+                qualifier does not count.</desc>
           </category>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <category xml:id="touch_and_individuality">
+             <gloss>Touch, nuance and individuality</gloss>
+             <desc>The ad names what is kept beyond the notes: touch, phrasing,
+                pedalling, dynamics, tempo, shading, tone colour, or the
+                individuality and characteristic style of each pianist.</desc>
           </category>
-          <category xml:id="miracle">
-             <gloss>Miracle</gloss>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
           </category>
-          <category xml:id="personality">
-             <gloss>Personality</gloss>
+          <category xml:id="furniture">
+             <gloss>Furniture and ornament</gloss>
+             <desc>The case, its design or period style; the instrument as an ornament
+                of the room.</desc>
           </category>
-          <category xml:id="technical_invention">
-             <gloss>Technical Invention</gloss>
+          <category xml:id="testimonials">
+             <gloss>Testimonials of famous musicians</gloss>
+             <desc>A named musician or other notable person is quoted or paraphrased
+                in praise of the instrument.</desc>
+          </category>
+          <category xml:id="composers_own_works">
+             <gloss>Composers play their own works</gloss>
+             <desc>The ad stresses that composers themselves recorded, or are heard
+                playing, their own compositions.</desc>
+          </category>
+          <category xml:id="how_it_works">
+             <gloss>How it works</gloss>
+             <desc>The ad explains or shows the technology: the recording process, the
+                pneumatic or electric mechanism, the roll, the drive from a light
+                socket, or it likens the recording to photography or the
+                phonograph. A product label such as "electric reproducing piano"
+                alone does not count.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -232,6 +261,7 @@
       <langUsage><language ident="no">Norwegian (Dano-Norwegian)</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20" who="#claude">Merged with the former ad078 (Aftenposten, January 10, 1908, a new setting of the same text, in part reworded and shortened); its printing is a further source, its readings are recorded with app.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
@@ -261,7 +291,7 @@
         <head><hi rendition="#c #b #in"><lb/><app><rdg source="#source_1">“</rdg><rdg source="#source_2"/></app><name type="brand"><app><rdg source="#source_1">Mignon</rdg><rdg source="#source_2">Welte-Mignon</rdg></app></name><app><rdg source="#source_1">“</rdg><rdg source="#source_2"/></app></hi></head>
       </div>
       <div facs="#zone_left">
-        <ab><hi rendition="#c"><seg xml:id="topic_1" ana="#home" type="topic" resp="#claude"><lb/><app><rdg source="#source_1">Ved sit</rdg><rdg source="#source_2"/></app>
+        <ab><hi rendition="#c"><seg xml:id="topic_1" ana="#furniture" type="topic" resp="#claude"><lb/><app><rdg source="#source_1">Ved sit</rdg><rdg source="#source_2"/></app>
           <lb/><app><rdg source="#source_1">elegante</rdg><rdg source="#source_2">Elegant</rdg></app>
           <lb/>Ydre<app><rdg source="#source_1">
           <lb/>en Pryd
@@ -270,23 +300,23 @@
           <lb/>Salon.</rdg><rdg source="#source_2"/></app></seg></hi></ab>
       </div>
       <div type="illustration" facs="#zone_picture">
-        <figure><desc>The Welte-Mignon cabinet player (Vorsetzer) in an Art Nouveau case</desc></figure>
+        <figure xml:id="figure_1" ana="#furniture" resp="#claude"><desc>The Welte-Mignon cabinet player (Vorsetzer) in an Art Nouveau case</desc></figure>
       </div>
       <div facs="#zone_right">
-        <ab><hi rendition="#c"><seg xml:id="topic_2" ana="#technical_invention" type="topic" resp="#claude"><lb/>Drives ved
+        <ab><hi rendition="#c"><seg xml:id="topic_2" ana="#how_it_works" type="topic" resp="#claude"><lb/>Drives ved
           <lb/>Elektro-
           <lb/>motor</seg><app><rdg source="#source_1">,
-          <lb/>der kan
+          <lb/><seg xml:id="topic_7" ana="#how_it_works" type="topic" resp="#claude">der kan
           <lb/>tilkobles
           <lb/>enhver
-          <lb/>Lysledning.</rdg><rdg source="#source_2"/></app></hi></ab>
+          <lb/>Lysledning</seg>.</rdg><rdg source="#source_2"/></app></hi></ab>
       </div>
       <div facs="#zone_text">
-        <p><lb/><seg xml:id="topic_3" ana="#exact_reproduction" type="topic" resp="#claude">Gjengiver direkte Virtuosernes Spil med alle Finheder</seg> og med <seg xml:id="topic_4" ana="#personality" type="topic" resp="#claude">alle in-
+        <p><lb/><seg xml:id="topic_3" ana="#faithful_reproduction" type="topic" resp="#claude">Gjengiver direkte Virtuosernes Spil med alle Finheder</seg> og med <seg xml:id="topic_4" ana="#touch_and_individuality" type="topic" resp="#claude">alle in-
           <lb/>dividuelle <app><rdg source="#source_1">Karaktéregenskaber</rdg><rdg source="#source_2">Karakteregenskaber</rdg></app></seg>.
-          <lb/><app><rdg source="#source_1">Klavérstykkerne</rdg><rdg source="#source_2">Klaverstykkerne</rdg></app> er forespillet af Verdens første Componister som:
-          <lb/><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/119110016"><app><rdg source="#source_1"><sic>Donányi</sic></rdg><rdg source="#source_2">Dohnanyi</rdg></app></persName></hi> etc., der alle har <seg xml:id="topic_5" ana="#miracle" type="topic" resp="#claude"><app><rdg source="#source_1">udtrykt</rdg><rdg source="#source_2"><sic>ndtrykt</sic></rdg></app> sin Forbau-
-          <lb/>selse og Beundring</seg> over <seg xml:id="topic_6" ana="#exact_reproduction" type="topic" resp="#claude">den i mindste Detail nøiagtige Gjengivelse</seg>.</p>
+          <lb/><seg xml:id="topic_8" ana="#composers_own_works" type="topic" resp="#claude"><app><rdg source="#source_1">Klavérstykkerne</rdg><rdg source="#source_2">Klaverstykkerne</rdg></app> er forespillet af Verdens første Componister</seg> som:
+          <lb/><seg xml:id="topic_9" ana="#testimonials" type="topic" resp="#claude"><hi rendition="#b"><persName type="artist" corresp="https://d-nb.info/gnd/118697641">Grieg</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>, <persName type="artist" corresp="https://d-nb.info/gnd/119110016"><app><rdg source="#source_1"><sic>Donányi</sic></rdg><rdg source="#source_2">Dohnanyi</rdg></app></persName></hi></seg> etc., der alle har <seg xml:id="topic_5" ana="#wonder" type="topic" resp="#claude"><app><rdg source="#source_1">udtrykt</rdg><rdg source="#source_2"><sic>ndtrykt</sic></rdg></app> sin Forbau-
+          <lb/>selse og Beundring</seg> over <seg xml:id="topic_6" ana="#faithful_reproduction" type="topic" resp="#claude">den i mindste Detail nøiagtige Gjengivelse</seg>.</p>
       </div>
       <div facs="#zone_demonstration">
         <ab><hi rendition="#c"><lb/>Forespilles daglig Interessenter.</hi></ab>

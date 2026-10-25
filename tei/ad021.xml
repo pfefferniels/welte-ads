@@ -18,6 +18,10 @@
                     <forename>Niels</forename>
                  </persName>
               </respStmt>
+              <respStmt>
+                 <resp>Annotation of topics</resp>
+                 <name xml:id="claude">Claude (AI model by Anthropic)</name>
+              </respStmt>
            </titleStmt>
            <publicationStmt>
               <publisher>
@@ -247,11 +251,12 @@
                  scan, in part transcribed by hand. The advertisements published
                  outside Germany, the United Kingdom and the United States, and a
                  few from Germany, were transcribed from the scans, encoded, given
-                 their regions and annotated with topics by Claude, an AI model;
-                 their revision history says so. Until the editor has checked such
-                 an advertisement against the scan, <att>status</att> on its
-                 <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-                 advertisement is <val>checked</val>.</p>
+                 their regions by Claude, an AI model; their revision history says
+                 so. Until the editor has checked such an advertisement against the
+                 scan, <att>status</att> on its <gi>revisionDesc</gi> is
+                 <val>unchecked</val>; that of every other advertisement is
+                 <val>checked</val>. The topics of all advertisements were assigned
+                 by Claude.</p>
               <correction>
                  <p>Errors of the original are not corrected but marked with
                     <gi>sic</gi>.</p>
@@ -279,10 +284,15 @@
                     Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                     which describes them in a <gi>desc</gi>. Illustrations are
                     described in <gi>figure</gi>. Persons are linked to the GND with
-                    <att>corresp</att>. Recurring motifs are marked as topics with
-                    <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-                    the taxonomy of topics; these are an interpretation, by whom
-                    <att>resp</att> says.</p>
+                    <att>corresp</att>. Recurring arguments and motifs are marked as
+                    topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+                    pointing to the taxonomy of topics. The taxonomy was induced by
+                    Claude in four blind readings of all advertisements, each in a
+                    different order and without knowledge of the editor's earlier
+                    taxonomy, which it replaced in October 2026; it keeps the topics
+                    that at least three of the readings found. The topics are an
+                    interpretation, assigned by whom <att>resp</att> says, so far
+                    all by Claude; the editor has not yet checked them.</p>
               </interpretation>
               <stdVals>
                  <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -304,27 +314,38 @@
            </tagsDecl>
            <classDecl>
               <taxonomy xml:id="topics">
-                 <desc>Topics: recurring motifs of the advertisements, in their texts
-                    and in their pictures</desc>
-                 <category xml:id="exact_reproduction">
-                    <gloss>Exact Reproduction</gloss>
-                    <desc>In virtually all promotional materials between 1905 and 1926,
-                       the claim of exact and faithful reproduction, of absolute
-                       accurateness is consistently emphasized.</desc>
+                 <desc>Topics: the recurring arguments and motifs of the advertisements,
+                    in their texts and in their pictures</desc>
+                 <category xml:id="faithful_reproduction">
+                    <gloss>Faithful reproduction</gloss>
+                    <desc>The ad claims that the playing of the artist is reproduced exactly,
+                       faithfully, naturally or completely, as "the actual playing" of the
+                       pianist. A bare "reproduces the playing of …" without such a
+                       qualifier does not count.</desc>
                  </category>
-                 <category xml:id="home">
-                    <gloss>Home</gloss>
+                 <category xml:id="phantom_hands">
+                    <gloss>Phantom hands</gloss>
+                    <desc>The absent performer appears as a phantom or spirit: ghostly or
+                       semi-transparent hands and figures, keys moving with no one seated,
+                       the artist summoned at will ("zitieren", "summon").</desc>
                  </category>
-                 <category xml:id="phantom_body">
-                    <gloss>Phantom Body</gloss>
+                 <category xml:id="masters_at_home">
+                    <gloss>The great pianists in your home</gloss>
+                    <desc>The famous pianists can be heard in your own home or on your own
+                       piano, at any time, as often as you wish, at your command ("The
+                       Master's Fingers on Your Piano", concerts at home).</desc>
                  </category>
-                 <category xml:id="secret">
-                    <gloss>Secret</gloss>
-                    <desc>Perfect reproduction and its manufacturing is a secret
-                       possessed only by the Welte-Mignon company.</desc>
+                 <category xml:id="unique_and_superior">
+                    <gloss>Unique and superior to rivals</gloss>
+                    <desc>The instrument is "the only one", the standard for all others, it
+                       surpasses its rivals or has nothing in common with them, or the
+                       reader is warned against cheap or unknown makes.</desc>
                  </category>
-                 <category xml:id="superiority">
-                    <gloss>Superiority</gloss>
+                 <category xml:id="still_a_piano">
+                    <gloss>Still a normal piano</gloss>
+                    <desc>The instrument remains an ordinary piano: it can be played by hand,
+                       the mechanism is invisible and leaves its look unchanged, it can be
+                       fitted to many makes of piano.</desc>
                  </category>
               </taxonomy>
            </classDecl>
@@ -335,6 +356,7 @@
            </langUsage>
         </profileDesc>
         <revisionDesc status="checked">
+           <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
            <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
            <change when="2026-10-20">Marked as checked by the editor.</change>
            <change when="2026-10-20">Date of the edition brought up to date; the revisions below give the earlier history.</change>
@@ -374,32 +396,32 @@
       <body>
       <div facs="#eSc_textblock_c6e9cfe9">
         <ab><hi rendition="#c">
-                <lb/>The <seg xml:id="topic_1" ana="#superiority">superiority</seg> of any
+                <lb/><seg xml:id="topic_5" ana="#unique_and_superior" type="topic" resp="#claude">The superiority of any
                 <lb/><hi rendition="#i">reproducing</hi> piano
                 <lb/>is assured if it
                 <lb/>contains the
                 <lb/><name type="brand"><hi rendition="#in #larger"><hi rendition="#in">Welte-Mignon</hi></hi>
                 <lb/><hi rendition="#b #smaller">LICENSEE</hi>
                 <lb/>reproducing
-                <lb/>action</name>
+                <lb/>action</name></seg>
             </hi></ab>
       </div>
       <div facs="#eSc_textblock_5f73df5d">
-         <ab><lb/>Before buying any reproducing
+         <ab><lb/><seg xml:id="topic_6" ana="#unique_and_superior" type="topic" resp="#claude">Before buying any reproducing
          <lb/>piano ascertain whether or not
          <lb/>it contains the famous <name type="brand">WELTE-
          <lb/>MIGNON LICENSEE REPRODUCING
-         <lb/>ACTION</name>.
-         <seg xml:id="topic_2" ana="#exact_reproduction #secret" resp="#np" type="topic">
+         <lb/>ACTION</name>.</seg>
+         <seg xml:id="topic_2" ana="#faithful_reproduction #unique_and_superior" resp="#claude" type="topic">
             <hi rendition="#i">Only <name type="brand">Welte-Mignon Licensee</name>
             <lb/>possesses the secret of perfect reproduc-
             <lb/>tion.</hi>
         </seg>
-        <seg xml:id="topic_3" ana="#home" resp="#np" type="topic">
+        <seg xml:id="topic_3" ana="#masters_at_home" resp="#claude" type="topic">
             <name type="brand">Welte-Mignon Licensee</name> brings to
             <lb/>your home
-        </seg> flawless interpretations by
-        <lb/>the great geniuses of the pianoforte:
+        </seg> <seg xml:id="topic_7" ana="#faithful_reproduction" type="topic" resp="#claude">flawless interpretations by
+        <lb/>the great geniuses of the pianoforte</seg>:
         <persName type="artist" corresp="https://d-nb.info/gnd/116014490">De<lb/>Pachmann</persName>,
         <persName type="artist" corresp="https://d-nb.info/gnd/118986724">Paderewski</persName>,
         <persName type="artist" corresp="https://d-nb.info/gnd/118694820">Gieseking</persName>,
@@ -410,9 +432,9 @@
          <lb/>
          <persName type="artist" corresp="https://d-nb.info/gnd/134788370">Pouishnoff</persName>
          and many others.
-         <lb/>You can now have <name type="brand">Welte-Mignon
+         <lb/><seg xml:id="topic_8" ana="#still_a_piano" type="topic" resp="#claude">You can now have <name type="brand">Welte-Mignon
          <lb/>Licensee</name> in one hundred and fifteen
-         <lb/>different pianos. The famous
+         <lb/>different pianos.</seg> The famous
          <lb/><name type="brand">Welte-Mignon Licensee Reproduc-
          <lb/>ing Action</name> can be installed in your
          <lb/>own grand piano. There are <name type="brand">Welte-
@@ -434,7 +456,7 @@
       </div>
       <div facs="#eSc_textblock_68da9219">
          <ab><lb/>
-         <hi rendition="#uc #g"><seg type="slogan">The Master's Fingers On Your Piano</seg></hi></ab>
+         <hi rendition="#uc #g"><seg xml:id="topic_9" ana="#masters_at_home" type="topic" resp="#claude"><seg type="slogan">The Master's Fingers On Your Piano</seg></seg></hi></ab>
       </div>
       <div facs="#eSc_textblock_4697302e"/>
 
@@ -446,7 +468,7 @@
         </figure>
       </div>
       <div facs="#eSc_textblock_ae66d627" type="illustration">
-        <figure xml:id="topic_4" ana="#phantom_body" resp="#np">
+        <figure xml:id="topic_4" ana="#phantom_hands" resp="#claude">
             <desc resp="#np">
                 
                     Ghost hands on a piano.

@@ -113,11 +113,12 @@
             scan, in part transcribed by hand. The advertisements published
             outside Germany, the United Kingdom and the United States, and a
             few from Germany, were transcribed from the scans, encoded, given
-            their regions and annotated with topics by Claude, an AI model;
-            their revision history says so. Until the editor has checked such
-            an advertisement against the scan, <att>status</att> on its
-            <gi>revisionDesc</gi> is <val>unchecked</val>; that of every other
-            advertisement is <val>checked</val>.</p>
+            their regions by Claude, an AI model; their revision history says
+            so. Until the editor has checked such an advertisement against the
+            scan, <att>status</att> on its <gi>revisionDesc</gi> is
+            <val>unchecked</val>; that of every other advertisement is
+            <val>checked</val>. The topics of all advertisements were assigned
+            by Claude.</p>
          <correction>
             <p>Errors of the original are not corrected but marked with
                <gi>sic</gi>.</p>
@@ -145,10 +146,15 @@
                Welte-Mignon are not transcribed but marked with <gi>gap</gi>,
                which describes them in a <gi>desc</gi>. Illustrations are
                described in <gi>figure</gi>. Persons are linked to the GND with
-               <att>corresp</att>. Recurring motifs are marked as topics with
-               <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>, pointing to
-               the taxonomy of topics; these are an interpretation, by whom
-               <att>resp</att> says.</p>
+               <att>corresp</att>. Recurring arguments and motifs are marked as
+               topics with <att>ana</att> on <gi>seg</gi> and <gi>figure</gi>,
+               pointing to the taxonomy of topics. The taxonomy was induced by
+               Claude in four blind readings of all advertisements, each in a
+               different order and without knowledge of the editor's earlier
+               taxonomy, which it replaced in October 2026; it keeps the topics
+               that at least three of the readings found. The topics are an
+               interpretation, assigned by whom <att>resp</att> says, so far
+               all by Claude; the editor has not yet checked them.</p>
          </interpretation>
          <stdVals>
             <p>Dates of publication are given in ISO 8601 in <att>when</att>,
@@ -169,21 +175,41 @@
       </tagsDecl>
       <classDecl>
         <taxonomy xml:id="topics">
-          <desc>Topics: recurring motifs of the advertisements, in their texts
-             and in their pictures</desc>
-          <category xml:id="home">
-             <gloss>Home</gloss>
+          <desc>Topics: the recurring arguments and motifs of the advertisements,
+             in their texts and in their pictures</desc>
+          <category xml:id="not_mechanical">
+             <gloss>Art, not mechanism</gloss>
+             <desc>The instrument is set apart from mechanical, automatic or player-
+                piano playing: it is human, artistic, "not a surrogate", or the
+                prejudice that it is mechanical is refuted.</desc>
           </category>
           <category xml:id="immortality">
-             <gloss>Immortality</gloss>
-             <desc>This topic emphasizes the perdurance of the reproductions and
-                how thus the recording artists become immortal.</desc>
+             <gloss>Immortality and posterity</gloss>
+             <desc>The playing is preserved for ever or for future generations; the
+                artists become immortal, and dead artists still play.</desc>
           </category>
-          <category xml:id="sitting_woman">
-             <gloss>Sitting Woman</gloss>
+          <category xml:id="wonder">
+             <gloss>Wonder, miracle and magic</gloss>
+             <desc>The instrument is called a wonder, miracle, marvel or magic, or it
+                causes astonishment, disbelief or speechlessness.</desc>
           </category>
-          <category xml:id="virtual_presence">
-             <gloss>Virtual Presence</gloss>
+          <category xml:id="masters_at_home">
+             <gloss>The great pianists in your home</gloss>
+             <desc>The famous pianists can be heard in your own home or on your own
+                piano, at any time, as often as you wish, at your command ("The
+                Master's Fingers on Your Piano", concerts at home).</desc>
+          </category>
+          <category xml:id="domestic_comfort">
+             <gloss>Domestic comfort and intimacy</gloss>
+             <desc>A private, comfortable scene: the fireside, an armchair, lamplight,
+                the family gathered, a quiet evening, in the text or in the
+                picture.</desc>
+          </category>
+          <category xml:id="unique_and_superior">
+             <gloss>Unique and superior to rivals</gloss>
+             <desc>The instrument is "the only one", the standard for all others, it
+                surpasses its rivals or has nothing in common with them, or the
+                reader is warned against cheap or unknown makes.</desc>
           </category>
         </taxonomy>
       </classDecl>
@@ -192,6 +218,7 @@
       <langUsage><language ident="fr">French</language></langUsage>
     </profileDesc>
     <revisionDesc status="unchecked">
+      <change when="2026-10-24" who="#claude">Topics replaced by a new taxonomy, induced and assigned by Claude; not yet checked by the editor.</change>
       <change when="2026-10-20">Licence changed to CC BY 4.0.</change>
       <change when="2026-10-20">Marked as not yet checked by the editor.</change>
       <change when="2026-10-18" who="#claude">Transcribed from the scan, encoded, zones drawn and topics annotated by Claude; not yet checked by the editor.</change>
@@ -229,30 +256,30 @@
           <lb/>maitres du clavier.</hi></ab>
       </div>
       <div facs="#zone_play">
-        <p><hi rendition="#b #larger"><lb/><seg xml:id="topic_1" ana="#virtual_presence" type="topic" resp="#claude">Joueront pour vous
+        <p><hi rendition="#b #larger"><lb/><seg xml:id="topic_1" ana="#masters_at_home" type="topic" resp="#claude">Joueront pour vous
           <lb/>sur votre propre
           <lb/>Piano</seg></hi></p>
       </div>
       <div facs="#zone_text">
-        <p><hi rendition="#smaller"><lb/>Certains de ces prodiges
+        <p><hi rendition="#smaller"><lb/><seg xml:id="topic_3" ana="#immortality #wonder" type="topic" resp="#claude">Certains de ces prodiges
           <lb/>sont disparus; mais grâce
           <lb/>au merveilleux "Piano
           <lb/>des Artistes", aidé par
           <lb/>l’action du <name type="brand">WELTE-
           <lb/>MIGNON</name>, vous pouvez
-          <lb/>jouir de <seg xml:id="topic_2" ana="#immortality" type="topic" resp="#claude">leur magistrale
-          <lb/>exécution</seg>. Cette heureu-
+          <lb/>jouir de leur magistrale
+          <lb/>exécution.</seg> <seg xml:id="topic_4" ana="#unique_and_superior" type="topic" resp="#claude">Cette heureu-
           <lb/>se combinaison, vous la
-          <lb/>trouvez uniquement dans</hi></p>
+          <lb/>trouvez uniquement dans</seg></hi></p>
       </div>
       <div type="illustration" facs="#zone_picture">
-        <figure xml:id="figure_1" ana="#sitting_woman #home" resp="#claude"><desc>A young woman with bobbed hair playing a grand piano in front of a tall arched window with a curtain drawn aside; a lamp stands on the piano</desc></figure>
+        <figure xml:id="figure_1" ana="#domestic_comfort" resp="#claude"><desc>A young woman with bobbed hair playing a grand piano in front of a tall arched window with a curtain drawn aside; a lamp stands on the piano</desc></figure>
       </div>
       <div facs="#zone_brand">
         <ab><hi rendition="#c"><lb/><hi rendition="#in"><name type="brand">DUO-PRATTE</name></hi>
           <lb/><hi rendition="#in"><name type="brand">Welte-Mignon</name></hi>
-          <lb/>Le piano reproducteur
-          <lb/>vraiment artistique.</hi></ab>
+          <lb/><seg xml:id="topic_5" ana="#not_mechanical" type="topic" resp="#claude">Le piano reproducteur
+          <lb/>vraiment artistique.</seg></hi></ab>
       </div>
       <div facs="#zone_also">
         <ab rendition="#framed"><gap reason="irrelevant"><desc resp="#claude">Small box «Aussi:—» listing other goods of the shop: "L’ORTHOPHONIC, le ROGERS BATTERYLESS, le PIANO LANGELIER", with "Conditions les plus faciles en ville"</desc></gap></ab>
