@@ -7,10 +7,9 @@ import { getArtistRegister, PersonEntry } from "../../lib/registers"
 import { GND } from "../../lib/anchors"
 import { formatDate } from "../../lib/dates"
 import { names } from "../../labels/names"
-import { Entry, Initials, Letter, byInitial, count } from "../../components/register"
-import { Chapter, StoryList } from "../../components/narrative"
+import { Entry, Initials, Letter, byInitial } from "../../components/register"
 import { artistCloud } from "../../lib/cloud"
-import { adsOf, getChapters } from "../../lib/narratives"
+import { getChapters } from "../../lib/narratives"
 import { deaths } from "../../labels/deaths"
 import ArtistsCloud from "./ArtistsCloud"
 
@@ -56,15 +55,7 @@ export default function ArtistsPage() {
   const shown = head ? named.filter(artist => head.isHead(artist.mentions)) : named
   const cloud = artistCloud(shown, years, h, deaths)
   const register = byInitial(getArtistRegister())
-  const chapters: Chapter[] = getChapters('artists').map(chapter => {
-    const inYears = years.filter(year => chapter.from <= year.year && year.year <= chapter.to)
-    const sum = (key: 'ads' | 'mentions') => inYears.reduce((total, year) => total + year[key], 0)
-    return {
-      ...chapter,
-      figures: `${count(sum('ads'), 'ad')}, ${count(sum('mentions'), 'mention')} of artists`,
-      ads: adsOf(chapter.ads, ads),
-    }
-  })
+  const chapters = getChapters('artists')
 
   return (
     <Container component="main" maxWidth="md">
@@ -86,8 +77,6 @@ export default function ArtistsPage() {
       </Typography>
 
       <ArtistsCloud names={cloud.names} height={cloud.height} years={years} h={h} chapters={chapters} />
-
-      <StoryList chapters={chapters} />
 
       <Typography variant="h5" component="h2" sx={{ mt: 5, mb: 1 }}>
         All artists
