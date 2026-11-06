@@ -23,6 +23,26 @@ Listening page (all versions, with the pitch of each drawn over Grünfeld's note
 
 The audio (one MP3 per version) is on the listening page; the scripts regenerate it.
 
+## Grünfeld hums along: a vocal map inside the MPM
+
+`data/performance_hummed.mpm` is the reconstruction with one more map in its global `<dated>`
+section: a `<vocalMap>`, dated in ticks like the other maps, so the voice follows Grünfeld's
+tempo and rubato through the same date-to-time mapping as the piano. Its events are `pitch`
+(naming the note it sings; a `portamento.ref` names the `<ornament>` whose arpeggio span the
+slide takes), `posture` (a mouth/tongue shape), `velum`, `glottis` (voice quality), `pressure`
+(lung pressure, dPa), `lips` (closures for re-articulation), `inflection` (scoops into phrases,
+falls at their ends) and `breath`. The header's `<vocalStyles>` say how the voice does things:
+synthesiser, transposition, time constants, wobble, and the posture shapes (fitted, like the
+inflection sizes in `data/profile.json`, from a recorded hum). This is a proposal, not part of
+the MPM standard; espressivo ignores the map, and the piano renders identically with it.
+
+`scripts/hummer/hummer.py` writes the map from the performance (rules in its docstring) and
+converts it to a VocalTractLab gestural score (`data/performance_hummed.ges`, with a speaker
+file holding the postures); `run_hummer.py` renders it in phrase chunks and corrects the lung
+pressure once from the measured note levels. `profile.py` and `step1`–`step5_ges.py` are the
+analysis-by-synthesis of the recorded hum that the style comes from (the recording itself is not
+in this repository).
+
 ## Pipeline
 
 1. `scripts/render.mjs`, `scripts/render_curve.mjs` (Node, espressivo 0.11): render

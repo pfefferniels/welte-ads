@@ -105,8 +105,10 @@ if __name__ == '__main__':
         to_mp3(y, v['id'])
         print('mastered', v['id'], f'{len(y) / SR:.1f}s', flush=True)
     # the DiffSinger hum is a minor sixth lower, so its accompaniment is too
-    for hum, out, acc in [('ds_kiritan_hum', 'mix_ds_piano', 'piano_accomp_m8'), ('lf_hum', 'mix_lf_piano', 'piano_accomp')]:
+    for hum, out, acc, rel in [('ds_kiritan_hum', 'mix_ds_piano', 'piano_accomp_m8', -7.0),
+                               ('lf_hum', 'mix_lf_piano', 'piano_accomp', -7.0),
+                               ('vtl_hummer', 'mix_vtl_piano_full', 'piano_full', 7.0)]:   # the hum under the piano
         if (only and out not in only) or not os.path.exists(f'final/{hum}.wav'):
             continue
-        to_mp3(mix(hum, out, acc), out)
+        to_mp3(mix(hum, out, acc, rel), out)
         print('mixed', out, flush=True)

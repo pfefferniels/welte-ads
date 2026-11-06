@@ -9,6 +9,18 @@ os.makedirs(f'{SITE}/audio', exist_ok=True)
 data = json.load(open('page_data.json'))
 tpl = open('page_template.html', encoding='utf-8').read()
 blob = json.dumps(data, separators=(',', ':'), ensure_ascii=False).replace('</', '<\\/')
+import html as _html
+vm_path = '../work_rec/performance_hummed.mpm'
+excerpt = ''
+if os.path.exists(vm_path):
+    mt = open(vm_path, encoding='utf-8').read()
+    st = re.search(r'\s*<vocalStyles>.*?</vocalStyles>', mt, re.S).group(0).strip('\n')
+    st_lines = [l if len(l) < 170 else l[:160] + ' …' for l in st.splitlines()]
+    st_lines = [l for i, l in enumerate(st_lines) if 'postureDef' not in l or i < 6]
+    vmap = re.search(r'\s*<vocalMap.*?</vocalMap>', mt, re.S).group(0).strip('\n').splitlines()
+    excerpt = '\n'.join(['    <header>', '      …'] + st_lines + ['    </header>', '    <dated>', '      …  (tempoMap, dynamicsMap, articulationMap, ornamentationMap …)']
+                        + vmap[:34] + ['          …', vmap[-1]] + ['    </dated>'])
+tpl = tpl.replace('/*VOCALMAP*/', _html.escape(excerpt))
 open(f'{SITE}/index.html', 'w', encoding='utf-8').write(tpl.replace('/*DATA*/', blob))
 for v in data['versions']:
     shutil.copy(f'mp3/{v["id"]}.mp3', f'{SITE}/audio/{v["id"]}.mp3')

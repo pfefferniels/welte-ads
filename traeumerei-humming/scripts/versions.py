@@ -99,6 +99,18 @@ VERSIONS = [
     dict(id='ddsp_flute', family='Neural instrument (DDSP)', title='DDSP flute, same curves',
          file='ddsp_flute.wav', transpose=0, control=['timing', 'f0', 'dyn'],
          how='The same with the solo-flute model.'),
+    # --- the pianist hums along ---------------------------------------------------------------
+    dict(id='vtl_hummer', family='Grünfeld hums along', title='The hum alone (VocalTractLab, vocal map)',
+         file='vtl_gruenfeld_hum.wav', transpose=-12, control=['timing', 'vocalmap', 'dyn', 'dyn-level'],
+         how='A &lt;vocalMap&gt; written into the MPM and rendered as a VocalTractLab gestural score, an octave '
+             'lower, in the style of a recorded hum: postures fitted from that recording, its wobble, '
+             'scoops and falls, breathy voice. Rolled chords become portamenti over the arpeggio\'s span; '
+             'the mouth opens on the louder stretches; the pedal changes move the articulation; detached '
+             'and repeated notes are re-articulated with the lips; breaths at the phrase breaks.'),
+    dict(id='mix_vtl_piano_full', family='Grünfeld hums along', title='Grünfeld plays and hums',
+         file='mix_vtl_piano_full.wav', transpose=-12, control=['timing', 'vocalmap', 'dyn'], analyse=False,
+         how='The whole roll on the piano with the hum underneath, 7 dB below it, as a pianist humming '
+             'while he plays.'),
     # --- with Grünfeld's accompaniment --------------------------------------------------------
     dict(id='mix_ds_piano', family='With the roll\'s accompaniment', title='DiffSinger hum + Grünfeld\'s accompaniment (minor sixth lower)',
          file='mix_ds_piano.wav', transpose=-8, control=['timing', 'f0', 'dyn-post'], analyse=False,

@@ -121,6 +121,7 @@ canvas { display: block; width: 100%; cursor: pointer; touch-action: manipulatio
 .credits { columns: 2 18rem; column-gap: 2.4rem; font-size: 0.92rem; color: var(--ink-2); }
 .credits p { break-inside: avoid; margin-bottom: 0.55rem; }
 code, .mono { font-family: var(--font-data); font-size: 0.86em; }
+pre.xml { margin: 0; background: var(--panel); border-radius: 6px; padding: 0.9rem 1rem; overflow-x: auto; font: 0.78rem/1.5 var(--font-data); color: var(--ink); max-height: 32rem; }
 
 @media (max-width: 760px) {
   .answer, .method { grid-template-columns: minmax(0, 1fr); gap: 1.2rem; }
@@ -184,6 +185,15 @@ code, .mono { font-family: var(--font-data); font-size: 0.86em; }
   </section>
   </div>
 
+  <section aria-labelledby="h-vocalmap">
+    <h2 id="h-vocalmap">The vocal map inside the MPM</h2>
+    <div class="measure" style="display:grid;gap:0.8rem">
+      <p>The hum is not a separate file: it is one more map in the performance, next to the tempo, dynamics, articulation and ornamentation maps, dated in the same ticks. Rendering it goes through the same date-to-time mapping as the piano, so the voice cannot drift from Grünfeld's rubato. A portamento names the &lt;ornament&gt; whose arpeggio it rides; pitches name their notes; values in milliseconds carry an <span class="mono">Ms</span> suffix, as in MPM. The style in the header says how this voice does things: its synthesiser, transposition and time constants, its wobble, and its mouth postures (here fitted from a recorded hum). A converter turns the map into a VocalTractLab gestural score.</p>
+      <p class="small">Proposed, not part of the MPM standard. espressivo ignores the map: with it inserted, all 476 notes of the piano render exactly as before.</p>
+    </div>
+    <pre class="xml" tabindex="0">/*VOCALMAP*/</pre>
+  </section>
+
   <section aria-labelledby="h-method">
     <h2 id="h-method">How the versions were made</h2>
     <div class="method">
@@ -230,10 +240,11 @@ code, .mono { font-family: var(--font-data); font-size: 0.86em; }
 <script>
 (() => {
   const D = JSON.parse(document.getElementById('page-data').textContent);
-  const FAMILY_ORDER = ['Reference', 'Signal processing', 'Articulatory', 'Neural singing synthesis',
+  const FAMILY_ORDER = ['Grünfeld hums along', 'Reference', 'Signal processing', 'Articulatory', 'Neural singing synthesis',
     'Voice conversion', 'Pre-neural singing synthesis', 'Neural instrument (DDSP)',
     "With the roll's accompaniment", 'Where the models break'];
   const FAMILY_TEXT = {
+    'Grünfeld hums along': 'The pianist humming while he plays, written into the MPM as one more map: a &lt;vocalMap&gt; of postures, velum, voice quality, pitch, pressure, lip closures and breaths, dated in ticks like the dynamics and the ornaments, so it follows Grünfeld\u2019s tempo and rubato. Each rolled chord under a melody note is a portamento over exactly the arpeggio\u2019s span. Rendered as a VocalTractLab gestural score in the style of a recorded hum.',
     'Reference': 'The roll itself, and the data stripped bare. The deadpan sine is the yardstick: the score at one tempo and one level.',
     'Signal processing': 'Formant synthesis: a glottal source and the resonances of a nasal or vowel tract, computed directly. Every parameter is known, so pitch, timing and loudness follow the voice model exactly.',
     'Articulatory': 'A physical model of the vocal tract: the sound comes from simulated air flow through a 3D tract shaped for [m] or [u], a self-oscillating glottis and the lung pressure the dynamics set. This is the kind of model RL agents are trained to play.',
@@ -244,7 +255,7 @@ code, .mono { font-family: var(--font-data); font-size: 0.86em; }
     "With the roll's accompaniment": 'Because the onsets are Grünfeld’s, a hum fits under his own left hand.',
     'Where the models break': 'The same open models at the edge of their training: Träumerei climbs to B♭5, beyond what their singers recorded.'
   };
-  const DEFAULT = 'espnet_kurumi_hum';
+  const DEFAULT = 'mix_vtl_piano_full';
   const V = new Map(D.versions.map(v => [v.id, v]));
   const audio = document.getElementById('audio');
   let cur = V.get(DEFAULT) || D.versions[0];
@@ -287,7 +298,7 @@ code, .mono { font-family: var(--font-data); font-size: 0.86em; }
   const ctlText = v => {
     const c = v.control;
     const timing = v.timing === 'deadpan' ? 'deadpan score' : (c.includes('timing') ? 'Grünfeld' : '—');
-    const pitch = v.family === 'Reference' ? 'written' : (c.includes('f0') ? 'shared contour' : 'model’s own');
+    const pitch = v.family === 'Reference' ? 'written' : c.includes('vocalmap') ? 'vocal map' : (c.includes('f0') ? 'shared contour' : 'model’s own');
     const dyn = c.includes('dyn-level') ? 'drive the voice, levelled' : c.includes('dyn') ? 'drive the voice' : (c.includes('dyn-post') ? 'set afterwards' : 'none');
     return `<span>timing <b>${timing}</b></span><span>pitch <b>${pitch}</b></span><span>dynamics <b>${dyn}</b></span>`;
   };

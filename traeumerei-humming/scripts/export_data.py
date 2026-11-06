@@ -56,7 +56,7 @@ if __name__ == '__main__':
             print('skip', v['id'])
             continue
         info = sf.info(path)
-        src = {'mix_ds_piano': ('ds_kiritan_hum', -8), 'mix_lf_piano': ('lf_hum', 0)}.get(v['id'])
+        src = {'mix_ds_piano': ('ds_kiritan_hum', -8), 'mix_lf_piano': ('lf_hum', 0), 'mix_vtl_piano_full': ('vtl_hummer', -12)}.get(v['id'])
         if v['id'] == 'piano_full':
             f0 = None
         elif src:
