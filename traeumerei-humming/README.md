@@ -21,7 +21,9 @@ Listening page (all versions, with the pitch of each drawn over Grünfeld's note
 | `data/analysis.json` | per version: pitch accuracy, onset arrival, dynamics correlation |
 | `data/versions.json` | per version: how it was made and what it takes from the roll |
 
-The audio (one MP3 per version) is on the listening page; the scripts regenerate it.
+The scripts regenerate the audio of every version. The published page now holds only the hum:
+its spectrogram, scrolling under a playhead, mixed live against the piano roll with two faders
+(`scripts/mix_page.html`, with the tiles from `spectrogram_tiles.py`).
 
 ## Grünfeld hums along: a vocal map inside the MPM
 
@@ -101,7 +103,8 @@ holds one tone.
 5. `master.py`: one level and one small hall for all; for the neural singers without a
    loudness input, note levels are moved to the MPM levels (at most 18 dB down, 9 dB up).
 6. `analysis.py`: WORLD Harvest pitch tracking of every version against the notes.
-7. `export_data.py`, `build_page.py`, `page_template.html`: the listening page.
+7. `export_data.py`, `build_page.py`, `page_template.html`: the full listening page with every
+   version; `spectrogram_tiles.py` and `mix_page.html`: the hum-and-piano mixer.
 
 Each renderer needs its own Python environment (TensorFlow 2.11 for DDSP, PyTorch ≥ 2.6 for
 ESPnet, onnxruntime for DiffSinger, pysinsy for Sinsy, vocaltractlab for VTL); the model

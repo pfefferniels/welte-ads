@@ -1,0 +1,379 @@
+<title>Träumerei, hummed</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@1,8..60,400&display=swap">
+<style>
+/* Layout: one instrument panel. A sonogram strip scrolls under a fixed playhead; transport and two faders sit beneath it. */
+:root {
+  --bg: #e9edf1;          /* cool paper */
+  --panel: #dfe5eb;
+  --fg: #18202c;
+  --muted: #5a6575;
+  --rule: #c3ccd6;
+  --accent: #b5600b;      /* amber playhead and controls */
+  --spec-lo: #dfe5eb;
+  --spec-mid: #6c7f9c;
+  --spec-hi: #0c1424;
+  --font-label: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1318; --panel: #0a0d11; --fg: #e4e8ee; --muted: #8b95a4; --rule: #29313c;
+    --accent: #f0a73a; --spec-lo: #0a0d11; --spec-mid: #46628a; --spec-hi: #eef3ff;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1318; --panel: #0a0d11; --fg: #e4e8ee; --muted: #8b95a4; --rule: #29313c;
+  --accent: #f0a73a; --spec-lo: #0a0d11; --spec-mid: #46628a; --spec-hi: #eef3ff;
+  color-scheme: dark;
+}
+html, body { height: 100%; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-data); font-size: 13px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px;
+  box-sizing: border-box;
+}
+.deck { max-width: 1280px; margin: 0 auto; display: grid; gap: 18px; }
+.strip {
+  position: relative; height: clamp(220px, 56vh, 460px);
+  background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; overflow: hidden;
+}
+#spec { display: block; width: 100%; height: 100%; cursor: grab; touch-action: pan-y; }
+#spec.dragging { cursor: grabbing; }
+#spec:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.transport { display: flex; align-items: center; gap: 14px; }
+#play {
+  flex: none; width: 48px; height: 48px; border-radius: 50%;
+  border: 1.5px solid var(--accent); background: transparent; color: var(--accent);
+  display: grid; place-items: center; cursor: pointer;
+}
+#play:hover:not(:disabled) { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+#play:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+#play:disabled { opacity: 0.45; cursor: progress; }
+#play svg { width: 18px; height: 18px; fill: currentColor; }
+#play svg[hidden] { display: none; }
+.seek { flex: 1; min-width: 0; display: grid; gap: 6px; }
+.readout { display: flex; justify-content: space-between; gap: 12px; color: var(--muted);
+  font-variant-numeric: tabular-nums; letter-spacing: 0.02em; font-size: 12px; }
+.readout b { color: var(--fg); font-weight: 500; }
+.faders { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 32px; }
+.fader { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; }
+.fader label { font-family: var(--font-label); font-style: italic; font-size: 17px; min-width: 5.2em; }
+.fader output { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 5.5ch; text-align: right; font-size: 12px; }
+
+input[type="range"] {
+  -webkit-appearance: none; appearance: none; width: 100%; min-width: 0; height: 24px;
+  background: transparent; margin: 0; cursor: pointer; --p: 0%;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 4px; border-radius: 2px;
+  background: linear-gradient(to right, var(--accent) var(--p), var(--rule) var(--p));
+}
+input[type="range"]::-moz-range-track { height: 4px; border-radius: 2px; background: var(--rule); }
+input[type="range"]::-moz-range-progress { height: 4px; border-radius: 2px; background: var(--accent); }
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 16px; height: 16px; margin-top: -6px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--accent);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent);
+}
+input[type="range"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+input[type="range"]:disabled { opacity: 0.45; cursor: progress; }
+#status { color: var(--muted); font-size: 12px; min-height: 1.2em; }
+@media (max-width: 560px) {
+  .faders { grid-template-columns: minmax(0, 1fr); }
+  .fader label { font-size: 16px; }
+}
+</style>
+
+<div class="deck">
+  <div class="strip">
+    <canvas id="spec" tabindex="0" role="img"
+      aria-label="Spectrogram of the hum. Drag sideways, or use the arrow keys, to move through the piece."></canvas>
+  </div>
+
+  <div class="transport">
+    <button id="play" type="button" aria-label="Play" disabled>
+      <svg id="icon-play" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 2.5v13l11-6.5z"/></svg>
+      <svg id="icon-pause" viewBox="0 0 18 18" aria-hidden="true" hidden><path d="M3.5 2.5h4v13h-4zM10.5 2.5h4v13h-4z"/></svg>
+    </button>
+    <div class="seek">
+      <input id="pos" type="range" min="0" max="165" step="0.01" value="0" aria-label="Position in the piece" disabled>
+      <div class="readout"><span id="bar">Upbeat</span><span><b id="now">0:00</b> / <span id="total">2:45</span></span></div>
+    </div>
+  </div>
+
+  <div class="faders">
+    <div class="fader">
+      <label for="g-piano">Piano</label>
+      <input id="g-piano" type="range" min="0" max="100" step="1" value="75">
+      <output id="o-piano" for="g-piano">−5.0 dB</output>
+    </div>
+    <div class="fader">
+      <label for="g-hum">Humming</label>
+      <input id="g-hum" type="range" min="0" max="100" step="1" value="90">
+      <output id="o-hum" for="g-hum">−1.8 dB</output>
+    </div>
+  </div>
+  <div id="status" role="status">Loading the audio…</div>
+</div>
+
+<script>
+(() => {
+  const SPEC = { tiles: ["hum_00.jpg","hum_01.jpg","hum_02.jpg","hum_03.jpg","hum_04.jpg","hum_05.jpg","hum_06.jpg","hum_07.jpg","hum_08.jpg"],
+                 tile: 2048, colsPerSec: 100, rows: 360, fmin: 70, fmax: 4500, seconds: 164.78 };
+  const BARS = [[1.56,"1"],[5.58,"2"],[10.72,"3"],[15.48,"4"],[20.01,"5"],[23.79,"6"],[28.71,"7"],[33.64,"8"],[39.62,"1'"],[43.45,"2'"],[48.62,"3'"],[53.02,"4'"],[57.33,"5'"],[61.49,"6'"],[66.91,"7'"],[72.19,"8'"],[77.57,"9"],[81.47,"10"],[85.36,"11"],[89.54,"12"],[94.11,"13"],[98.27,"14"],[102.54,"15"],[107.28,"16"],[113.91,"17"],[118.1,"18"],[123.22,"19"],[128.28,"20"],[133.15,"21"],[137.54,"22"],[144.89,"23"],[152.1,"24"]];
+  const NOTES = [["C3",130.81],["C4",261.63],["C5",523.25],["C6",1046.5],["C7",2093.0],["C8",4186.0]];
+
+  const $ = id => document.getElementById(id);
+  const canvas = $("spec"), g = canvas.getContext("2d");
+  const playBtn = $("play"), pos = $("pos");
+  let dur = SPEC.seconds;
+
+  /* ---------- theme-coloured spectrogram tiles ---------- */
+  const tiles = SPEC.tiles.map(() => ({ gray: null, canvas: null, w: 0 }));
+  function cssColor(name) {
+    const probe = document.createElement("span");
+    probe.style.color = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    document.body.appendChild(probe);
+    const m = getComputedStyle(probe).color.match(/[\d.]+/g).map(Number);
+    probe.remove();
+    return m.slice(0, 3);
+  }
+  let lut = null;
+  function buildLut() {
+    const lo = cssColor("--spec-lo"), mid = cssColor("--spec-mid"), hi = cssColor("--spec-hi");
+    lut = new Uint8ClampedArray(256 * 3);
+    for (let i = 0; i < 256; i++) {
+      const x = i / 255, [a, b, t] = x < 0.45 ? [lo, mid, x / 0.45] : [mid, hi, (x - 0.45) / 0.55];
+      for (let c = 0; c < 3; c++) lut[i * 3 + c] = a[c] + (b[c] - a[c]) * t;
+    }
+  }
+  function colorize(tile) {
+    if (!tile.gray) return;
+    const { data, width, height } = tile.gray;
+    const out = new ImageData(width, height), o = out.data;
+    for (let i = 0; i < data.length; i += 4) {
+      const k = data[i] * 3;
+      o[i] = lut[k]; o[i + 1] = lut[k + 1]; o[i + 2] = lut[k + 2]; o[i + 3] = 255;
+    }
+    const c = tile.canvas || (tile.canvas = document.createElement("canvas"));
+    c.width = width; c.height = height;
+    c.getContext("2d").putImageData(out, 0, 0);
+  }
+  function recolorAll() { buildLut(); tiles.forEach(colorize); draw(); }
+  buildLut();
+  SPEC.tiles.forEach((name, i) => {
+    const img = new Image();
+    img.onload = () => {
+      const c = document.createElement("canvas");
+      c.width = img.naturalWidth; c.height = img.naturalHeight;
+      const cx = c.getContext("2d"); cx.drawImage(img, 0, 0);
+      tiles[i].gray = cx.getImageData(0, 0, c.width, c.height);
+      tiles[i].w = c.width;
+      colorize(tiles[i]); draw();
+    };
+    img.src = "spec/" + name;
+  });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", recolorAll);
+  new MutationObserver(recolorAll).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
+  /* ---------- drawing ---------- */
+  let W = 0, H = 0, dpr = 1;
+  const pps = () => Math.max(36, Math.min(90, W / 16));       // CSS px per second
+  const playX = () => Math.round(W * 0.3);
+  function resize() {
+    dpr = window.devicePixelRatio || 1;
+    const r = canvas.getBoundingClientRect();
+    W = r.width; H = r.height;
+    canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+    draw();
+  }
+  new ResizeObserver(resize).observe(canvas);
+
+  const yOf = f => (Math.log(SPEC.fmax) - Math.log(f)) / (Math.log(SPEC.fmax) - Math.log(SPEC.fmin)) * H;
+  function draw() {
+    if (!W) return;
+    const t = position(), s = pps(), px = playX();
+    const t0 = t - px / s, t1 = t + (W - px) / s;
+    const styles = getComputedStyle(document.documentElement);
+    const muted = styles.getPropertyValue("--muted").trim(), accent = styles.getPropertyValue("--accent").trim();
+    const lo = styles.getPropertyValue("--spec-lo").trim();
+    g.setTransform(dpr, 0, 0, dpr, 0, 0);
+    g.fillStyle = lo; g.fillRect(0, 0, W, H);
+    g.imageSmoothingEnabled = true;
+    tiles.forEach((tile, i) => {
+      if (!tile.canvas) return;
+      const ts = i * SPEC.tile / SPEC.colsPerSec, te = ts + tile.w / SPEC.colsPerSec;
+      if (te < t0 || ts > t1) return;
+      const a = Math.max(ts, t0), b = Math.min(te, t1);
+      const sx = (a - ts) * SPEC.colsPerSec, sw = (b - a) * SPEC.colsPerSec;
+      g.drawImage(tile.canvas, sx, 0, sw, tile.canvas.height, px + (a - t) * s, 0, (b - a) * s, H);
+    });
+    // pitch guides at the left edge (the sung pitch, an octave below the written melody)
+    g.font = "500 10px " + getComputedStyle(document.body).fontFamily;
+    g.textBaseline = "middle"; g.fillStyle = muted; g.strokeStyle = muted;
+    g.globalAlpha = 0.85;
+    NOTES.forEach(([n, f]) => {
+      const y = yOf(f);
+      if (y < 10 || y > H - 8) return;
+      g.globalAlpha = 0.75; g.fillStyle = lo; g.fillRect(0, y - 7, 30, 14);
+      g.globalAlpha = 0.9; g.fillStyle = muted;
+      g.fillRect(0, Math.round(y), 6, 1);
+      g.fillText(n, 9, y);
+    });
+    // bar lines and numbers along the top
+    g.textBaseline = "top";
+    BARS.forEach(([bt, label]) => {
+      if (bt < t0 - 1 || bt > t1) return;
+      const x = Math.round(px + (bt - t) * s) + 0.5;
+      g.globalAlpha = 0.35; g.beginPath(); g.moveTo(x, 18); g.lineTo(x, H); g.lineWidth = 1; g.stroke();
+      g.globalAlpha = 0.9; g.fillText(label, x + 3, 5);
+    });
+    // playhead
+    g.globalAlpha = 1; g.fillStyle = accent;
+    g.fillRect(px - 1, 0, 2, H);
+    g.beginPath(); g.moveTo(px - 6, 0); g.lineTo(px + 6, 0); g.lineTo(px, 7); g.closePath(); g.fill();
+  }
+
+  /* ---------- audio: two stems, mixed live ---------- */
+  const AC = window.AudioContext || window.webkitAudioContext;
+  const ctx = new AC();
+  const limiter = ctx.createDynamicsCompressor();
+  limiter.threshold.value = -3; limiter.knee.value = 0; limiter.ratio.value = 20;
+  limiter.attack.value = 0.003; limiter.release.value = 0.15;
+  const master = ctx.createGain(); master.gain.value = 0.8;
+  master.connect(limiter); limiter.connect(ctx.destination);
+  const stems = { piano: { url: "audio/piano_full.mp3" }, hum: { url: "audio/vtl_hummer.mp3" } };
+  for (const k in stems) { stems[k].gain = ctx.createGain(); stems[k].gain.connect(master); }
+
+  let playing = false, startAt = 0, offset = 0, sources = [];
+  function position() { return playing ? Math.min(dur, offset + Math.max(0, ctx.currentTime - startAt)) : offset; }
+  function stopSources() { sources.forEach(s => { try { s.onended = null; s.stop(); } catch (e) {} }); sources = []; }
+  function startAt_(t) {
+    stopSources();
+    const when = ctx.currentTime + 0.05;
+    for (const k in stems) {
+      const s = ctx.createBufferSource();
+      s.buffer = stems[k].buffer; s.connect(stems[k].gain); s.start(when, t);
+      sources.push(s);
+    }
+    startAt = when; offset = t;
+  }
+  function play() {
+    if (offset >= dur - 0.05) offset = 0;
+    ctx.resume();
+    startAt_(offset); playing = true; setIcon(); loop();
+  }
+  function pause() { offset = position(); playing = false; stopSources(); setIcon(); draw(); }
+  function seek(t) {
+    t = Math.max(0, Math.min(dur, t));
+    if (playing) startAt_(t); else offset = t;
+    updateReadout(); draw();
+  }
+  function setIcon() {
+    $("icon-play").hidden = playing; $("icon-pause").hidden = !playing;
+    playBtn.setAttribute("aria-label", playing ? "Pause" : "Play");
+  }
+  function loop() {
+    if (!playing) return;
+    if (position() >= dur) { playing = false; offset = dur; stopSources(); setIcon(); }
+    updateReadout(); draw();
+    requestAnimationFrame(loop);
+  }
+
+  // fader position -> gain: squared, so the travel feels even; shown in dB
+  function fader(id, out, stem) {
+    const el = $(id), o = $(out);
+    const apply = () => {
+      const x = el.value / 100, gain = x * x;
+      stems[stem].gain.gain.setTargetAtTime(gain, ctx.currentTime, 0.02);
+      o.value = gain === 0 ? "off" : (20 * Math.log10(gain)).toFixed(1).replace("-", "−") + " dB";
+      el.style.setProperty("--p", el.value + "%");
+    };
+    el.addEventListener("input", apply); apply();
+  }
+  fader("g-piano", "o-piano", "piano");
+  fader("g-hum", "o-hum", "hum");
+
+  /* ---------- readout and seek bar ---------- */
+  const fmt = t => Math.floor(t / 60) + ":" + String(Math.floor(t % 60)).padStart(2, "0");
+  let seeking = false;
+  function updateReadout() {
+    const t = position();
+    $("now").textContent = fmt(t);
+    let bar = "Upbeat";
+    for (const [bt, label] of BARS) if (bt <= t + 0.02) bar = "Bar " + label;
+    $("bar").textContent = bar;
+    if (!seeking) { pos.value = t; pos.style.setProperty("--p", (t / dur * 100) + "%"); }
+    pos.setAttribute("aria-valuetext", fmt(t) + ", " + bar.toLowerCase());
+  }
+  pos.addEventListener("pointerdown", () => { seeking = true; });
+  pos.addEventListener("input", () => { pos.style.setProperty("--p", (pos.value / dur * 100) + "%"); seek(+pos.value); });
+  pos.addEventListener("change", () => { seeking = false; });
+  window.addEventListener("pointerup", () => { seeking = false; });
+
+  playBtn.addEventListener("click", () => (playing ? pause() : play()));
+
+  // drag the spectrogram to move through the piece
+  let drag = null;
+  canvas.addEventListener("pointerdown", e => {
+    drag = { x: e.clientX, t: position(), wasPlaying: playing, moved: false };
+    if (playing) { offset = position(); playing = false; stopSources(); }
+    canvas.setPointerCapture(e.pointerId); canvas.classList.add("dragging");
+  });
+  canvas.addEventListener("pointermove", e => {
+    if (!drag) return;
+    const dx = e.clientX - drag.x;
+    if (Math.abs(dx) > 2) drag.moved = true;
+    offset = Math.max(0, Math.min(dur, drag.t - dx / pps()));
+    updateReadout(); draw();
+  });
+  const endDrag = () => {
+    if (!drag) return;
+    canvas.classList.remove("dragging");
+    if (drag.wasPlaying) { startAt_(offset); playing = true; loop(); }
+    drag = null; setIcon();
+  };
+  canvas.addEventListener("pointerup", endDrag);
+  canvas.addEventListener("pointercancel", endDrag);
+  canvas.addEventListener("wheel", e => {
+    if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;     // leave vertical scrolling to the page
+    e.preventDefault(); seek(position() + e.deltaX / pps());
+  }, { passive: false });
+  canvas.addEventListener("keydown", e => {
+    if (e.key === "ArrowRight") { seek(position() + 5); e.preventDefault(); }
+    else if (e.key === "ArrowLeft") { seek(position() - 5); e.preventDefault(); }
+    else if (e.key === " " && !playBtn.disabled) { playing ? pause() : play(); e.preventDefault(); }
+  });
+
+  /* ---------- load ---------- */
+  function decode(buf) {
+    return new Promise((res, rej) => {
+      const p = ctx.decodeAudioData(buf, res, rej);
+      if (p && p.then) p.then(res, rej);
+    });
+  }
+  Promise.all(Object.values(stems).map(s =>
+    fetch(s.url).then(r => { if (!r.ok) throw new Error(r.status); return r.arrayBuffer(); })
+      .then(decode).then(b => { s.buffer = b; })))
+    .then(() => {
+      dur = Math.max(stems.piano.buffer.duration, stems.hum.buffer.duration);
+      pos.max = dur.toFixed(2); $("total").textContent = fmt(dur);
+      playBtn.disabled = false; pos.disabled = false;
+      $("status").textContent = "";
+      updateReadout();
+    })
+    .catch(() => { $("status").textContent = "The audio did not load. Reload the page to try again."; });
+
+  $("total").textContent = fmt(dur);
+  updateReadout();
+})();
+</script>
