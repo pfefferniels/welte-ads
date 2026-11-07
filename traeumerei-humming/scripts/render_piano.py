@@ -49,7 +49,7 @@ def render(notes, sustain, pad=0.6, tail=3.0):
     sv = np.array([p[1] for p in sustain])
     for n in notes:
         on = n['milliseconds']['date'] / 1000
-        off = n['milliseconds']['end'] / 1000
+        off = max(n['milliseconds']['end'] / 1000, on + 0.3)   # a note that ends before it starts sounds briefly
         # damper: the key's release, held while the pedal is down (value >= 64)
         i = np.searchsorted(st, off, side='right') - 1
         if i >= 0 and sv[i] >= 64:

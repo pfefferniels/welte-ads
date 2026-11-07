@@ -86,6 +86,31 @@ Render the scores in pieces, as `run_hummer.py` does (cut at breaths, about 30 s
 pass over the whole 164 s, VocalTractLab 2.4 stops following the score after about a minute and
 holds one tone.
 
+## Exaggeration
+
+The mixer page has an exaggeration slider with five positions. Each is the whole chain run
+again on an MPM that espressivo's `exaggerateMpm` has transformed, with every expressive dimension
+scaled by the same factor (`weightedFactors(s, {})`): 0 is no expression (every deviation at its
+neutral), 1 is Grünfeld as encoded, 2 doubles every deviation. For each level
+(`scripts/exag_render.mjs`, `scripts/exag_build_level.sh`) the melody is extracted again, the
+vocal map is generated again from that performance (so breaths, pulses, stops, slides, portamenti
+and the mouth all follow the new timing and dynamics), the hum is rendered in one VocalTractLab pass
+with level 1's per-note calibration, and the piano is rendered from the same performance.
+`data/exaggerated/` holds each level's MPM with its vocal map and `levels.json`, the score-position
+maps the page uses to switch levels mid-performance without losing its place.
+
+| level | length | breaths | pulses and stops |
+|---|---|---|---|
+| 0 | 2:42 | 8 | 9 |
+| ½ | 2:31 | 10 | 40 |
+| 1 | 2:45 | 14 | 41 |
+| 1½ | 3:01 | 18 | 37 |
+| 2 | 3:23 | 25 | 30 |
+
+VocalTractLab cannot render on the spot (here about 3.5 minutes per pass for the 2:45 piece), so
+the levels are rendered ahead of time. At s = 2, espressivo 0.11 ends the last three notes of the
+piece (the final chord) before they start; `data/exaggerated/x200_PATCHED.txt` records the patch.
+
 ## Pipeline
 
 1. `scripts/render.mjs`, `scripts/render_curve.mjs` (Node, espressivo 0.11): render

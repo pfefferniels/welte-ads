@@ -35,8 +35,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'work'))
 
 NS = 'http://www.cemfi.de/mpm/ns/1.0'
-WORK = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'work')
-DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
+# where the performance lives: HUMMER_WORK holds melody.json (with ../render/performed.json
+# beside it), HUMMER_DATA the performance.mpm the vocal map is written into
+WORK = os.environ.get('HUMMER_WORK', os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'work'))
+DATA = os.environ.get('HUMMER_DATA', os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data'))
 PAD = 0.6            # s of silence before the first note, as in every other rendering
 TRANSPOSE = -12
 LEGATO_WITHIN_MS, STOP_FROM_MS, SLUR_FROM_MS = 15.0, 110.0, 30.0   # articulation thresholds
@@ -303,7 +305,7 @@ def to_gestures(path, calibration=None):
     for n in notes:
         by_date.setdefault(n['date'], []).append(n)
     T = lambda d: clock.ms(d) + PAD * 1000 - lat
-    end_ms = max(n['milliseconds']['end'] for n in notes) + PAD * 1000 + 1500
+    end_ms = max(max(n['milliseconds']['end'], n['milliseconds']['date']) for n in notes) + PAD * 1000 + 1500
     tiers = {t: [] for t in ['vowel', 'lip', 'velic', 'glottal', 'f0', 'pressure']}
     # pitch events: resolve note.ref (first or repeated rendition by date) and portamento.ref
     pitch_ev = []

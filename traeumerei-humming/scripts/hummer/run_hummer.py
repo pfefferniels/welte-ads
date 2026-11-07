@@ -111,10 +111,14 @@ if __name__ == '__main__':
     for _, tag, _ in ev:
         counts[tag] = counts.get(tag, 0) + 1
     print('vocalMap:', len(ev), 'events', counts)
-    y = render(MPM_OUT, 'pass 1')
-    cal = calibrate(y)
-    json.dump(cal, open('hummer_calibration.json', 'w'))
-    y = render(MPM_OUT, 'pass 2', cal)
+    if '--calibration' in sys.argv:              # one pass, with another rendering's calibration
+        cal = {int(k): v for k, v in json.load(open(sys.argv[sys.argv.index('--calibration') + 1])).items()}
+        y = render(MPM_OUT, 'one pass', cal)
+    else:
+        y = render(MPM_OUT, 'pass 1')
+        cal = calibrate(y)
+        json.dump(cal, open('hummer_calibration.json', 'w'))
+        y = render(MPM_OUT, 'pass 2', cal)
     lv = note_levels(y)
     d = np.array([t - m for m_t in lv if m_t for m, t in [m_t]])
     print(f'  level error after calibration: median |{np.median(np.abs(d - np.median(d))):.2f}| dB, '
