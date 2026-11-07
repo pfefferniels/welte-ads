@@ -33,7 +33,8 @@ tempo and rubato through the same date-to-time mapping as the piano. Its events 
 (naming the note it sings; a `portamento.ref` names the `<ornament>` whose arpeggio span the
 slide takes), `posture` (a closed-hum shape, the open shape it leans toward, an `amount` and a
 `transitionMs`), `velum`, `pressure` (factors shaping the voice's effort: a swell into each
-phrase, a release at its end), `lips` (closures for re-articulation), `inflection` (scoops into phrases,
+phrase, a release at its end), `articulation` (breath pulses and stops between notes), `lips`
+(an "m" into a detached note where the mouth is open), `inflection` (scoops into phrases,
 falls at their ends) and `breath`. The header's `<vocalStyles>` say how the voice does things:
 synthesiser, transposition, time constants, wobble, how the effort follows the dynamics
 (`<effortDef>`), and the posture shapes (fitted, like the
@@ -56,6 +57,15 @@ from breathy (velocity 33) to modal (48), which together make the hum's level fo
 convention of 40 log10 velocity. So the hum swells and fades inside held notes, which the piano
 cannot: on notes where the curve moves, the voice's level change follows it at r = 0.71 (0.16
 when pressure was set once per note).
+
+Articulation follows the fingers: the time Grünfeld's keys leave between two melody notes, as
+espressivo renders the articulationMap, is the time the voice leaves. Where the keys overlap by
+more than 30 ms, the voice slides into the next note over half the overlap (`glideMs` on the
+pitch, 30–120 ms); within 15 ms it sings legato; a gap of 15–110 ms, or a repeated pitch, becomes
+a breath pulse, the pressure dipping for the gap, deeper the longer it is ("hm-hm", 4 dB in the
+level typically); from 110 ms the voice stops for the gap (about 40 dB down). Inside phrases that
+gives 27 overlapping joins (14 slides; the other 13 already slide over their arpeggio), 79 legato
+ones, 29 pulses and 12 stops.
 
 How far the mouth opens follows the dynamics smoothed over ±1.5 s, capped at 30 % of the way
 from parted lips to the open postures (not the widest jaw) and scaled down on high notes (to a

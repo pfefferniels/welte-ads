@@ -17,7 +17,13 @@ How the MPM is read as a voice (the generator's rules):
               so it stays nasal; each
               phrase starts closed and closes again as it fades; a new closed shape at every
               change of the sustain pedal and halfway through long notes
-  lips        detached notes and repeated notes are re-articulated with a lip closure ("m")
+  articulation  the gap the fingers leave between two melody notes is the gap the voice leaves:
+              keys overlapping by more than 30 ms -> the voice slides into the next note over half
+              the overlap (glideMs on the pitch, 30-120 ms); within 15 ms -> legato; a gap of
+              15-110 ms, or a repeated pitch -> a breath pulse, the pressure dipping for the gap
+              (at least 70 ms) to 0.55-0.15 of itself, deeper the longer the gap ("hm-hm");
+              110 ms or more -> the voice stops for the gap, with an "m" from the lips where the
+              mouth is open
   effort      follows the dynamicsMap continuously, also inside held notes (espressivo's
               sub-note rendering of it), plus each note's own velocity offset: lung pressure with
               velocity^1.5, the glottis from breathy (soft) to modal (loud)
@@ -33,6 +39,7 @@ WORK = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'work')
 DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
 PAD = 0.6            # s of silence before the first note, as in every other rendering
 TRANSPOSE = -12
+LEGATO_WITHIN_MS, STOP_FROM_MS, SLUR_FROM_MS = 15.0, 110.0, 30.0   # articulation thresholds
 OPEN_MAX = 0.3      # the most the mouth opens: under a third of the way from parted lips to the open postures
 
 
@@ -182,10 +189,28 @@ def build_vocal_map(profile, palette_names):
             first = min(c['milliseconds']['date'] for c in chord)
             if n['onset_ms'] - first > 25 and int(date) in orn:
                 a['portamento.ref'] = '#' + orn[int(date)]
+        # --- articulation: the time the fingers leave between two melody notes (espressivo's
+        # rendering of the articulationMap) is the time the voice leaves
+        if k > 0 and not v.breath_before:
+            gap = n['onset_ms'] - src[k - 1]['key_off_ms']          # < 0: the keys overlap
+            same = n['pitch'] == src[k - 1]['pitch']
+            if gap >= STOP_FROM_MS:                                  # detached: the voice stops
+                add('articulation', clock.date(src[k - 1]['key_off_ms']), type='stop',
+                    durationMs=int(round(gap)))
+                if cur > 0.05:                                       # mouth open: an "m" into the note
+                    add('lips', clock.date(on_ms - min(gap, 120)), value='closure',
+                        durationMs=int(min(gap, 120)))
+            elif gap > LEGATO_WITHIN_MS or same:                     # non-legato, or a struck repeat:
+                dur = max(70.0, gap)                                 # a breath pulse, deeper the longer:
+                x = max(0.0, gap - LEGATO_WITHIN_MS) / (STOP_FROM_MS - LEGATO_WITHIN_MS)
+                depth = 0.55 - 0.4 * x                               # -5 dB .. -16 dB of pressure
+                if same:
+                    depth = min(depth, 0.35)
+                add('articulation', clock.date(on_ms - dur), type='pulse', depth=f'{depth:.2f}',
+                    durationMs=int(round(dur)))
+            elif gap < -SLUR_FROM_MS and 'portamento.ref' not in a:  # the keys overlap: the voice
+                a['glideMs'] = int(np.clip(-gap * 0.5, 30, 120))    # slides into the note
         add('pitch', date, **a)
-        # --- articulation: re-articulate repeated or detached notes with the lips
-        if k > 0 and not v.breath_before and (v.repeated_in or v.on - prev.key_off > 0.08):
-            add('lips', clock.date(on_ms - 70), value='closure', durationMs=70)
         # --- breath support: the effort itself follows the dynamicsMap (see <effortDef>); these
         # events only shape it: a swell into each phrase and a release at its end
         if v.breath_before or k == 0:                # at the sung onset: on a rolled chord the
@@ -295,6 +320,9 @@ def to_gestures(path, calibration=None):
             od = orn_date[a['portamento.ref'][1:]]
             first = min(c['milliseconds']['date'] for c in by_date[od]) + PAD * 1000 - lat
             glide = (first, on)
+        elif 'glideMs' in a:                         # overlapping keys: a slide across the onset
+            g = float(a['glideMs'])
+            glide = (on - g / 2, on + g / 2)
         pitch_ev.append([on, st, glide, n])
     infl = [(T(d), a) for d, tag, a in ev if tag == 'inflection']
     # f0 tier: targets with wobble steps, scoops, falls and portamenti
@@ -313,7 +341,7 @@ def to_gestures(path, calibration=None):
             # the previous note gives way where the arpeggio begins
             f0 = [(a_, min(b_, glide[0]), v_, s_) for a_, b_, v_, s_ in f0 if a_ < glide[0]]
             f0.append((glide[0], glide[1], prev_st, (st - prev_st) / max(1e-3, (glide[1] - glide[0]) / 1000)))
-        t0 = on
+        t0 = max(on, glide[1]) if glide and i > 0 else on
         # a scoop belongs to the first pitch at or shortly after its date (an arpeggio can delay it)
         sc = [a for t, a in infl if a['type'] == 'scoop' and on - 300 <= t <= on + 50]
         if sc:
@@ -340,7 +368,8 @@ def to_gestures(path, calibration=None):
     tiers['velic'] = [(s, e, v, 0.0) for (s, v), (e, _) in zip(pts, pts[1:] + [(end_ms, None)])]
     # lung pressure and glottal adduction: the effort, following the dynamics continuously
     tiers['pressure'], tiers['glottal'], effort = effort_tracks(
-        [(T(d), a) for d, t_, a in ev if t_ == 'pressure'], pitch_ev, voice, end_ms, lat, calibration)
+        [(T(d), a) for d, t_, a in ev if t_ == 'pressure'], pitch_ev, voice, end_ms, lat, calibration,
+        [(T(d), a) for d, t_, a in ev if t_ == 'articulation'])
     # breaths: glottis 'h', a little pressure, the posture of the phrase to come
     for d, tag, a in ev:
         if tag == 'breath':
@@ -354,7 +383,7 @@ def to_gestures(path, calibration=None):
     return tiers, postures, end_ms, voice, opening
 
 
-def effort_tracks(pev, pitch_ev, voice, end_ms, lat, calibration=None):
+def effort_tracks(pev, pitch_ev, voice, end_ms, lat, calibration=None, articulations=()):
     """The voice's effort, from the dynamicsMap as espressivo renders it below the note level
     (subNoteDynamics): the curve moves inside held notes, which the piano cannot follow. Each
     note keeps its own velocity offset from the curve (metrical accents, articulations).
@@ -404,10 +433,22 @@ def effort_tracks(pev, pitch_ev, voice, end_ms, lat, calibration=None):
         F[:] = [p for p in F if p[0] < tt - 0.5] + [(tt - 0.5, before), (tt, start),
                                                      (tt + max(1.0, float(a.get('transitionMs', 0))), float(a['factor']))]
     fac = np.interp(t, [p[0] for p in F], [p[1] for p in F])
-    pressure = np.minimum(15000.0, pressure * fac)
+    # articulation between notes: a pulse dips the pressure to `depth` for its duration, a stop
+    # takes it away (down in 25 ms, back in 25-35 ms, so the next note starts on time)
+    dip = np.ones_like(t)
+    fine = []
+    for s0, a in articulations:
+        d = float(a['durationMs']); depth = 0.0 if a['type'] == 'stop' else float(a['depth'])
+        down, up = min(25.0, d / 3), min(35.0 if depth > 0 else 25.0, d / 3)
+        env = np.interp(t, [s0, s0 + down, s0 + d - up, s0 + d], [1.0, depth, depth, 1.0], left=1.0, right=1.0)
+        dip = np.minimum(dip, env)
+        fine += list(np.arange(s0 - 10, s0 + d + 10, 10.0))
+    pressure = np.minimum(15000.0, pressure * fac * dip)
     add = np.clip((v - a0) / (a1 - a0), 0, 1)
     # gestures every stepMs, merged where nothing changes
     grid = np.arange(0.0, end_ms, step)
+    if fine:                                         # 10 ms steps through the articulations
+        grid = np.unique(np.concatenate([grid, np.clip(np.round(fine), 0, end_ms - 1)]))
     pq = [0.0 if p < 1 else round(float(np.exp(np.round(np.log(p) / np.log(1.005)) * np.log(1.005))), 1)
           for p in pressure[grid.astype(int)]]
     gq = [f'g{int(round(x * 20)):02d}' for x in add[grid.astype(int)]]

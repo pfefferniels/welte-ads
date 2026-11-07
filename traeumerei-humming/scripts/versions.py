@@ -108,8 +108,9 @@ VERSIONS = [
              'follows the MPM dynamics continuously, also inside held notes, where the piano cannot. '
              'Rolled chords become portamenti over the arpeggio\'s span; '
              'on the louder stretches the closed hum opens slowly, a little, and stays nasal (at most a third of the '
-             'way to an open vowel, less on high notes, over 1-2 s, closing again as the phrase fades); the pedal changes move the articulation; detached '
-             'and repeated notes are re-articulated with the lips; breaths at the phrase breaks.'),
+             'way to an open vowel, less on high notes, over 1-2 s, closing again as the phrase fades); the pedal changes move the mouth; the '
+             'joins between notes follow the fingers: where the keys overlap the voice slides, short gaps become breath pulses, '
+             'long ones stop the voice; breaths at the phrase breaks.'),
     dict(id='mix_vtl_piano_full', family='Grünfeld hums along', title='Grünfeld plays and hums',
          file='mix_vtl_piano_full.wav', transpose=-12, control=['timing', 'vocalmap', 'dyn'], analyse=False,
          how='The whole roll on the piano with the hum underneath, 7 dB below it, as a pianist humming '

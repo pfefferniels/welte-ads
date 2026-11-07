@@ -291,7 +291,7 @@
    "dyn",
    "dyn-level"
   ],
-  "how": "A &lt;vocalMap&gt; written into the MPM and rendered as a VocalTractLab gestural score, an octave lower, in the style of a recorded hum: postures fitted from that recording, its wobble, scoops and falls, breathy voice. The voice's effort (lung pressure, how firmly the vocal folds close) follows the MPM dynamics continuously, also inside held notes, where the piano cannot. Rolled chords become portamenti over the arpeggio's span; on the louder stretches the closed hum opens slowly, a little, and stays nasal (at most a third of the way to an open vowel, less on high notes, over 1-2 s, closing again as the phrase fades); the pedal changes move the articulation; detached and repeated notes are re-articulated with the lips; breaths at the phrase breaks."
+  "how": "A &lt;vocalMap&gt; written into the MPM and rendered as a VocalTractLab gestural score, an octave lower, in the style of a recorded hum: postures fitted from that recording, its wobble, scoops and falls, breathy voice. The voice's effort (lung pressure, how firmly the vocal folds close) follows the MPM dynamics continuously, also inside held notes, where the piano cannot. Rolled chords become portamenti over the arpeggio's span; on the louder stretches the closed hum opens slowly, a little, and stays nasal (at most a third of the way to an open vowel, less on high notes, over 1-2 s, closing again as the phrase fades); the pedal changes move the mouth; the joins between notes follow the fingers: where the keys overlap the voice slides, short gaps become breath pulses, long ones stop the voice; breaths at the phrase breaks."
  },
  {
   "id": "mix_vtl_piano_full",
