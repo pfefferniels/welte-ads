@@ -12,22 +12,24 @@
   --muted: #5a6575;
   --rule: #c3ccd6;
   --accent: #b5600b;      /* amber playhead and controls */
-  --spec-lo: #dfe5eb;
-  --spec-mid: #6c7f9c;
-  --spec-hi: #0c1424;
+  --spec-lo: #ffffff;     /* the spectrogram: black on white, in both themes */
+  --spec-mid: #8c8c8c;
+  --spec-hi: #000000;
+  --spec-label: #4d4d4d;
+  --spec-head: #c85a0a;
   --font-label: "Source Serif 4", Georgia, "Times New Roman", serif;
   --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0f1318; --panel: #0a0d11; --fg: #e4e8ee; --muted: #8b95a4; --rule: #29313c;
-    --accent: #f0a73a; --spec-lo: #0a0d11; --spec-mid: #46628a; --spec-hi: #eef3ff;
+    --accent: #f0a73a;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0f1318; --panel: #0a0d11; --fg: #e4e8ee; --muted: #8b95a4; --rule: #29313c;
-  --accent: #f0a73a; --spec-lo: #0a0d11; --spec-mid: #46628a; --spec-hi: #eef3ff;
+  --accent: #f0a73a;
   color-scheme: dark;
 }
 html, body { height: 100%; }
@@ -42,7 +44,7 @@ body {
 .deck { max-width: 1280px; margin: 0 auto; display: grid; gap: 18px; }
 .strip {
   position: relative; height: clamp(220px, 56vh, 460px);
-  background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; overflow: hidden;
+  background: var(--spec-lo); border: 1px solid var(--rule); border-radius: 4px; overflow: hidden;
 }
 #spec { display: block; width: 100%; height: 100%; cursor: grab; touch-action: pan-y; }
 #spec.dragging { cursor: grabbing; }
@@ -204,7 +206,7 @@ input[type="range"]:disabled { opacity: 0.45; cursor: progress; }
     const t = position(), s = pps(), px = playX();
     const t0 = t - px / s, t1 = t + (W - px) / s;
     const styles = getComputedStyle(document.documentElement);
-    const muted = styles.getPropertyValue("--muted").trim(), accent = styles.getPropertyValue("--accent").trim();
+    const muted = styles.getPropertyValue("--spec-label").trim(), accent = styles.getPropertyValue("--spec-head").trim();
     const lo = styles.getPropertyValue("--spec-lo").trim();
     g.setTransform(dpr, 0, 0, dpr, 0, 0);
     g.fillStyle = lo; g.fillRect(0, 0, W, H);
