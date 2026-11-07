@@ -1,4 +1,5 @@
-"""Generate the vocal map, render it with VTL (phrase chunks in parallel), correct each note's
+"""Generate the vocal map, render it with VTL (phrase chunks in parallel; the score twice, lips
+held closed and lips following the opening, mixed by the opening weight), correct each note's
 lung pressure once from the measured levels, render again. Writes performance_hummed.mpm,
 hummer_full.ges, hummer.speaker and ../work/dry/vtl_gruenfeld_hum.wav."""
 import json, os, re, sys
@@ -6,9 +7,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import numpy as np, soundfile as sf
 from multiprocessing import Pool
 import hummer as H
+from align_tracks import align
 
 SR = 44100
 MPM_OUT = 'performance_hummed.mpm'
+LAST_TRACKS = None
 
 
 def render_chunk(args):
@@ -19,9 +22,12 @@ def render_chunk(args):
 
 
 def render(mpm, tag):
-    tiers, postures, end_ms, voice = H.to_gestures(mpm)
+    tiers, postures, end_ms, voice, (t_ms, weight) = H.to_gestures(mpm)
     H.write_speaker(postures, 'hummer.speaker')
     H.write_ges(tiers, voice, 0.0, end_ms, 'hummer_full.ges')
+    H.write_ges(tiers, voice, 0.0, end_ms, 'hummer_full_closed.ges', lips_closed=True)
+    np.savetxt('hummer_opening.csv', np.c_[t_ms[::10] / 1000, weight[::10]], fmt='%.2f,%.3f',
+               header='time_s,weight_of_the_open_rendering', comments='')
     # chunks: cut at breath starts with silence around them
     perf, mel, notes, sus = H.load_performance()
     clock = H.Clock(notes, sus)
@@ -34,16 +40,29 @@ def render(mpm, tag):
             merged.append(b)
     merged.append(end_ms)
     jobs = []
-    for i, (a, b) in enumerate(zip(merged[:-1], merged[1:])):
-        H.write_ges(tiers, voice, a, b, f'hummer_chunk{i}.ges')
-        jobs.append((f'hummer_chunk{i}.ges', 'hummer.speaker'))
+    for closed in (False, True):
+        for i, (a, b) in enumerate(zip(merged[:-1], merged[1:])):
+            nm = f'hummer_chunk{i}{"_closed" if closed else ""}.ges'
+            H.write_ges(tiers, voice, a, b, nm, lips_closed=closed)
+            jobs.append((nm, 'hummer.speaker'))
     with Pool(4) as pool:
         parts = pool.map(render_chunk, jobs)
-    y = np.zeros(int(end_ms / 1000 * SR) + SR)
-    for (a, b), x in zip(zip(merged[:-1], merged[1:]), parts):
-        i0 = int(a / 1000 * SR)
-        y[i0: i0 + len(x)] += x[: len(y) - i0]
-    print(f'{tag}: {len(jobs)} chunks, {len(y) / SR:.1f} s')
+    n = len(merged) - 1
+    tracks = []
+    for parts_ in (parts[:n], parts[n:]):
+        y = np.zeros(int(end_ms / 1000 * SR) + SR)
+        for (a, b), x in zip(zip(merged[:-1], merged[1:]), parts_):
+            i0 = int(a / 1000 * SR)
+            y[i0: i0 + len(x)] += x[: len(y) - i0]
+        tracks.append(y)
+    # the two glottal cycles drift apart by up to ~1 ms (the glottis oscillates against a
+    # different tract): line the open rendering up with the closed one before mixing
+    tracks[0] = align(tracks[1], tracks[0], SR)[0]
+    w = np.interp(np.arange(len(tracks[0])) / SR * 1000, t_ms, weight)
+    y = w * tracks[0] + (1 - w) * tracks[1]
+    print(f'{tag}: {len(jobs)} chunks, {len(y) / SR:.1f} s, open for {np.mean(w > 0.05) * 100:.0f} % of the time')
+    global LAST_TRACKS
+    LAST_TRACKS = (tracks[0], tracks[1], w)
     return y
 
 

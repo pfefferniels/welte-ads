@@ -105,7 +105,8 @@ VERSIONS = [
          how='A &lt;vocalMap&gt; written into the MPM and rendered as a VocalTractLab gestural score, an octave '
              'lower, in the style of a recorded hum: postures fitted from that recording, its wobble, '
              'scoops and falls, breathy voice. Rolled chords become portamenti over the arpeggio\'s span; '
-             'the mouth opens on the louder stretches; the pedal changes move the articulation; detached '
+             'on the louder stretches the closed hum opens slowly, a little, and stays nasal (at most a third of the '
+             'way to an open vowel, less on high notes, over 1-2 s, closing again as the phrase fades); the pedal changes move the articulation; detached '
              'and repeated notes are re-articulated with the lips; breaths at the phrase breaks.'),
     dict(id='mix_vtl_piano_full', family='Grünfeld hums along', title='Grünfeld plays and hums',
          file='mix_vtl_piano_full.wav', transpose=-12, control=['timing', 'vocalmap', 'dyn'], analyse=False,

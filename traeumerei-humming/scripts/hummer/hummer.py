@@ -11,9 +11,12 @@ How the MPM is read as a voice (the generator's rules):
               previous pitch over exactly the arpeggio's span (portamento.ref -> the <ornament>)
   breath      at the phrase starts and where Grünfeld lifts his hand (the shared voice model)
   inflection  a scoop into each phrase and a fall at its end, sized from the recorded hum
-  posture     closed hum when the dynamics are soft; the mouth opens on the louder stretches and
-              phrase climaxes; a new position at every change of the sustain pedal and halfway
-              through long notes; each phrase starts closed
+  posture     a closed hum that opens a little, slowly, where the dynamics (smoothed over +-1.5 s)
+              are louder, a little more at a phrase's climax, much less on high notes: never
+              more than OPEN_MAX of the way to an open posture, over 1-2 s, with the velum open,
+              so it stays nasal; each
+              phrase starts closed and closes again as it fades; a new closed shape at every
+              change of the sustain pedal and halfway through long notes
   lips        detached notes and repeated notes are re-articulated with a lip closure ("m")
   glottis     breathy when soft, less breathy when louder
   pressure    from the MPM dynamics (curve plus each note's velocity offset), with the recorded
@@ -29,6 +32,7 @@ WORK = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'work')
 DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
 PAD = 0.6            # s of silence before the first note, as in every other rendering
 TRANSPOSE = -12
+OPEN_MAX = 0.3      # the most the mouth opens: under a third of the way from parted lips to the open postures
 
 
 # ------------------------------------------------------------------ performance timing
@@ -75,7 +79,6 @@ def build_vocal_map(profile, palette_names):
     src = mel['notes']
     ct, cv = vm.dynamics_curve(mel)
     hums = [n for n in palette_names if n.startswith('hum')]
-    opens = [n for n in palette_names if n.startswith('open')]
     by_date = {}
     for n in notes:
         by_date.setdefault(n['date'], []).append(n)
@@ -90,7 +93,12 @@ def build_vocal_map(profile, palette_names):
     add('style', 0, **{'name.ref': 'hummer'})
     rng = np.random.default_rng(7)
     scoops = [s for s in profile['f0_scoop_all'] if s < 0] or [-2.0]
-    mode, hum_i, open_i = 'hum', 0, 0
+    hum_i = 0
+    # the macro dynamics, smoothed over +-1.5 s: how open the mouth is follows the long line,
+    # not the single note
+    tg = np.arange(0, ct[-1] + 0.05, 0.05)
+    kk = int(1.5 / 0.05)
+    cs = np.convolve(np.pad(np.interp(tg, ct, cv), kk, mode='edge'), np.ones(2 * kk + 1) / (2 * kk + 1), 'valid')
     phrase_peak = {}
     k0 = 0
     for k, v in enumerate(vnotes):                   # the highest note of each phrase
@@ -102,11 +110,19 @@ def build_vocal_map(profile, palette_names):
         top = max(ks, key=lambda k: (src[k]['pitch'], vnotes[k].off - vnotes[k].on))
         for k in ks:
             peak_of[k] = top
+    order = ['open2', 'open4', 'open1']              # higher phrases, a more open jaw to open toward
+                                                     # (never open3, the widest jaw: too much of a vowel)
+    cur, base, toward = 0.0, hums[0], order[0]
+
+    def ramp_ms(delta):
+        return int(np.clip(abs(delta) * 6000, 1000, 2000))
+
+    def moves(want, cur):                            # opens readily, closes reluctantly
+        return want - cur >= 0.08 or cur - want >= 0.12
 
     for k, (v, n) in enumerate(zip(vnotes, src)):
         on_ms, off_ms = v.on * 1000, v.off * 1000
         date = n['date']
-        level_vel = float(np.interp(v.on, ct, cv))
         prev = vnotes[k - 1] if k else None
         # --- breath before the phrase
         if v.breath_before:
@@ -115,34 +131,49 @@ def build_vocal_map(profile, palette_names):
                 add('breath', clock.date(gap_start + 0.35 * (on_ms - gap_start)),
                     duration=round(clock.date(on_ms - 25) - clock.date(gap_start + 0.35 * (on_ms - gap_start)), 2),
                     through='nose')
-            mode = 'hum'
             add('inflection', date, type='scoop', depthSt=round(float(scoops[k % len(scoops)]) * 0.8, 2), durationMs=220)
-        # --- posture: open on the louder stretches and on phrase climaxes, closed when soft
+        # --- posture: a closed hum that opens a little, slowly, on the louder stretches. The amount
+        # follows the smoothed dynamics (capped at OPEN_MAX), with a little more at a phrase's
+        # climax; every phrase starts closed and closes again as it fades.
         long_ = (v.off - v.on) >= 0.8
-        want_open = level_vel >= 41 or (peak_of[k] == k and long_ and level_vel >= 37.5)
-        if mode == 'hum' and want_open and not v.breath_before:
-            mode = 'open'
-        elif mode == 'open' and level_vel < 37:
-            mode = 'hum'
+        L = float(np.interp(v.on, tg, cs))
+        x = float(np.clip((L - 37.5) / 9.5, 0, 1))
+        want = OPEN_MAX * x * x * (3 - 2 * x)
+        if peak_of[k] == k and long_ and L >= 37.0:
+            want += 0.08
+        # high notes need much less: there the closed hum is nearly a sine, and parting the
+        # lips at all brings up the 2nd and 3rd harmonics by ~20 dB. Looking 2.5 s ahead, so
+        # that the mouth does not open on the way up and close again at the top
+        p_ahead = max(src[j]['pitch'] for j in range(k, len(src)) if vnotes[j].on <= v.on + 2.5)
+        want *= float(np.clip(1 - (p_ahead - 74) * 0.1, 0.25, 1))
+        want = round(min(OPEN_MAX, want), 2)
+        if want < 0.06:
+            want = 0.0
         press = np.any((presses > (src[k - 1]['date'] if k else -1)) & (presses <= date))
-        if v.breath_before or press or k == 0 or (mode == 'open') != (ev_last_mode.get('m') == 'open'):
-            if mode == 'hum':
-                hum_i = (hum_i + 1) % len(hums); posture = hums[hum_i]
-            else:
-                rank = np.clip((v.pitch - 60) / 22, 0, 0.999)            # higher notes, more open jaw
-                order = ['open2', 'open1', 'open4', 'open3']
-                posture = order[int(rank * len(order))] if open_i % 3 else order[min(3, int(rank * len(order)) + 1)]
-                open_i += 1
-            add('posture', date, value=posture)
-            add('velum', date, value=0.30 if mode == 'hum' else 0.02)
-            ev_last_mode['m'] = mode
+        if v.breath_before or k == 0:
+            pk = src[peak_of[k]]['pitch']
+            toward = order[int(np.clip((pk - 60) / 22, 0, 0.999) * len(order))]
+            hum_i = (hum_i + 1) % len(hums); base = hums[hum_i]
+            add('posture', date, value=base, toward=toward, amount='0.00', transitionMs=200)
+            cur = 0.0
+            if want > 0:                             # open slowly into the phrase
+                add('posture', clock.date(on_ms + 300), value=base, toward=toward, amount=f'{want:.2f}',
+                    transitionMs=ramp_ms(want) + 400)
+                cur = want
+        elif press or moves(want, cur):
+            if press:                                # a new position at a pedal change
+                hum_i = (hum_i + 1) % len(hums); base = hums[hum_i]
+            amt = want if moves(want, cur) else cur
+            add('posture', date, value=base, toward=toward, amount=f'{amt:.2f}',
+                transitionMs=ramp_ms(amt - cur) if amt != cur else 400)
+            cur = amt
+        if k == 0:
+            add('velum', date, value=0.30)           # the velum stays open: nasal, even when open
         # a second position halfway through long notes
         if (v.off - v.on) >= 1.0:
             mid = clock.date(on_ms + 0.55 * (off_ms - on_ms))
-            if mode == 'hum':
-                hum_i = (hum_i + 1) % len(hums); add('posture', mid, value=hums[hum_i])
-            else:
-                add('posture', mid, value=opens[(open_i + 1) % len(opens)]); open_i += 1
+            hum_i = (hum_i + 1) % len(hums); base = hums[hum_i]
+            add('posture', mid, value=base, toward=toward, amount=f'{cur:.2f}', transitionMs=600)
         # --- pitch, with the arpeggio as portamento
         a = {'note.ref': '#' + n['id'].split('-rend')[0]}
         chord = by_date.get(date, [])
@@ -168,14 +199,17 @@ def build_vocal_map(profile, palette_names):
         if nxt is None or nxt.breath_before:
             rel = max(on_ms + 0.5 * (off_ms - on_ms), off_ms - profile['release_s'] * 1000)
             add('pressure', clock.date(rel), value=round(pr * 0.45))
+            if cur > 0:                              # close while fading, over at least 0.6 s
+                cl = max(on_ms, min(rel, off_ms - 600))
+                add('posture', clock.date(cl), value=base, toward=toward, amount='0.00',
+                    transitionMs=int(max(300, off_ms - cl)))
+                cur = 0.0
             add('inflection', clock.date(rel), type='fall', depthSt=round(-abs(rng.uniform(1.5, 3.5)), 2),
                 durationMs=round(off_ms - rel))
             add('pressure', clock.date(off_ms), value=0)
     ev.sort(key=lambda e: e[0])
     return ev, clock
 
-
-ev_last_mode = {}
 
 
 def vocal_map_xml(ev):
@@ -191,8 +225,9 @@ def vocal_styles_xml(profile, palette):
     import vtlfit as V
     p = ['        <vocalStyles>', '          <styleDef name="hummer">',
          f'            <voiceDef synthesizer="VocalTractLab 2.4" speaker="JD3" transposition="{TRANSPOSE}" '
-         f'timeConstantMs.pitch="30" timeConstantMs.posture="18" timeConstantMs.pressure="12" latencyMs="15"/>',
-         f'            <wobbleDef rmsCents="{profile["wobble_cents_rms"] * 0.8:.1f}" stepMs="125" seed="1"/>']
+         f'timeConstantMs.pitch="30" timeConstantMs.posture="30" timeConstantMs.glottis="30" timeConstantMs.pressure="12" latencyMs="15"/>',
+         f'            <wobbleDef rmsCents="{profile["wobble_cents_rms"] * 0.8:.1f}" stepMs="125" seed="1"/>',
+         '            <openingDef partedLipDistance="0.11" crossfadeBelow="0.3" rampStepMs="60"/>']
     for name, vals in palette.items():
         p.append(f'            <postureDef name="{name}">' + ''.join(f'<param name="{n}" value="{x:.4f}"/>' for n, x in zip(V.TN, vals)) + '</postureDef>')
     p += ['          </styleDef>', '        </vocalStyles>']
@@ -222,6 +257,8 @@ def read_vocal_map(path):
     style = re.search(r'<styleDef name="hummer">.*?</styleDef>', text, re.S).group(0)
     voice = dict(re.findall(r'([\w.]+)="([^"]*)"', re.search(r'<voiceDef[^>]*/>', style).group(0)))
     wobble = dict(re.findall(r'([\w.]+)="([^"]*)"', re.search(r'<wobbleDef[^>]*/>', style).group(0)))
+    m = re.search(r'<openingDef[^>]*/>', style)
+    voice.update({'opening.' + k: x for k, x in re.findall(r'([\w.]+)="([^"]*)"', m.group(0))} if m else {})
     postures = {nm: dict(re.findall(r'<param name="(\w+)" value="([^"]+)"/>', body_))
                 for nm, body_ in re.findall(r'<postureDef name="([^"]+)">(.*?)</postureDef>', style)}
     orn = ornaments(text)
@@ -294,8 +331,11 @@ def to_gestures(path):
             f0.append((t, t + d, st, float(a['depthSt']) / (d / 1000)))
             f0.append((t + d, nxt_on, st + float(a['depthSt']), 0.0))
     tiers['f0'] = f0
-    # posture, velum, glottis, pressure: each event holds until the next one of its tier
-    for tag, tier in [('posture', 'vowel'), ('velum', 'velic'), ('glottis', 'glottal'), ('pressure', 'pressure')]:
+    # posture: ramps, rendered twice (lips closed / lips following the opening), see posture_tracks()
+    tiers['vowel'], tiers['vowel_closed'], opening, postures = posture_tracks(
+        [(T(d), a) for d, t_, a in ev if t_ == 'posture'], postures, end_ms, voice)
+    # velum, glottis, pressure: each event holds until the next one of its tier
+    for tag, tier in [('velum', 'velic'), ('glottis', 'glottal'), ('pressure', 'pressure')]:
         pts = [(T(d), a['value']) for d, t_, a in ev if t_ == tag]
         tiers[tier] = [(s, e, v, 0.0) for (s, v), (e, _) in zip(pts, pts[1:] + [(end_ms, None)])]
     # breaths: glottis 'h', a little pressure, the posture of the phrase to come
@@ -308,7 +348,86 @@ def to_gestures(path):
         if tag == 'lips':
             s = T(d)
             tiers['lip'].append((s, s + float(a['durationMs']), 'll-labial-closure', 0.0))
-    return tiers, postures, end_ms, voice
+    return tiers, postures, end_ms, voice, opening
+
+
+def posture_tracks(pev, postures, end_ms, voice):
+    """Posture events -> two vowel tiers and the weight that mixes them.
+
+    Every event ramps, over transitionMs, from wherever the tract is to
+    (1 - b) * base + b * toward, and VocalTractLab takes each ramp as steps of rampStepMs
+    (its gestures cannot take time constants above ~50 ms). VTL's lips, though, part with a
+    jump: the lip area goes from closed to 0.07 cm2 at once, an 11 dB change in the spectrum.
+    So the opening is rendered twice: the 'closed' tier keeps the lips shut (the base postures
+    only), the 'open' tier starts from lips already parted (b at partedLipDistance) and opens
+    further with the amount. The two renderings are mixed with a weight that rises with the
+    amount up to crossfadeBelow, the way a real lip opening adds the mouth's sound to the nose's.
+    """
+    import vtlfit as V
+    step = float(voice.get('opening.rampStepMs', 60))
+    ld_open = float(voice.get('opening.partedLipDistance', 0.11))
+    xf = float(voice.get('opening.crossfadeBelow', 0.2))
+    tc = float(voice['timeConstantMs.posture'])
+    vec = {nm: np.array([float(p[t]) for t in V.TN]) for nm, p in postures.items()}
+    hums = sorted(nm for nm in vec if nm.startswith('hum'))
+    ld = V.TN.index('LD')
+    # piecewise-linear trajectories: amount, base weights (over the hum postures), toward
+    A = [(0.0, 0.0)]; W = [(0.0, np.eye(len(hums))[0])]; tow = [(0.0, None)]
+    def at(pts, t):
+        ts = [p[0] for p in pts]
+        i = np.searchsorted(ts, t, side='right') - 1
+        if i + 1 < len(pts):
+            (t0, v0), (t1, v1) = pts[i], pts[i + 1]
+            return v0 + (v1 - v0) * (t - t0) / max(1e-9, t1 - t0)
+        return pts[i][1]
+    for t, a in sorted(pev, key=lambda e: e[0]):
+        D = float(a.get('transitionMs', 200))
+        amt = float(a.get('amount', 0))
+        w = np.eye(len(hums))[hums.index(a['value'])]
+        a0, w0 = at(A, t), at(W, t)
+        A = [p for p in A if p[0] < t] + [(t, a0), (t + D, amt)]
+        W = [p for p in W if p[0] < t] + [(t, w0), (t + D, w)]
+        tow.append((t, a.get('toward')))
+    tow[0] = (0.0, tow[1][1] if len(tow) > 1 else None)
+    def toward_at(t):
+        return [x for s, x in tow if s <= t][-1]
+    new_shapes, key2name = {}, {}
+    def name_for(key, shape):
+        if key not in key2name:
+            key2name[key] = f'p{len(key2name):04d}'
+            new_shapes[key2name[key]] = {p: f'{x:.4f}' for p, x in zip(V.TN, shape)}
+        return key2name[key]
+    grid = np.arange(0.0, end_ms, step)
+    open_seq, closed_seq, amt_stair = [], [], []
+    for t in grid:
+        w = np.round(at(W, t) * 20) / 20                 # base mix in 5 % steps
+        w = w / w.sum()
+        amt = round(float(at(A, t)), 2)
+        C = sum(wi * vec[h] for wi, h in zip(w, hums))
+        T_ = toward_at(t) or 'open1'
+        b0 = float(np.clip((ld_open - C[ld]) / (vec[T_][ld] - C[ld]), 0, 1))
+        b = b0 + amt * (1 - b0)
+        kc = ('c',) + tuple(w)
+        ko = ('o', T_, amt) + tuple(w)
+        closed_seq.append(name_for(kc, C))
+        open_seq.append(name_for(ko, (1 - b) * C + b * vec[T_]))
+        amt_stair.append(amt)
+    def runs(names):
+        out, s = [], 0
+        for i in range(1, len(names) + 1):
+            if i == len(names) or names[i] != names[s]:
+                out.append((grid[s], grid[i] if i < len(names) else end_ms, names[s], 0.0)); s = i
+        return out
+    # the mixing weight follows the amount through the same 5th-order lag VTL applies
+    t_ms = np.arange(0.0, end_ms, 1.0)
+    x = np.asarray(amt_stair)[np.minimum((t_ms // step).astype(int), len(grid) - 1)]
+    from scipy.signal import lfilter
+    alpha = 1.0 / max(1.0, tc)
+    for _ in range(5):
+        x = lfilter([alpha], [1.0, alpha - 1.0], x)
+    weight = np.clip(x / xf, 0, 1)
+    all_postures = dict(postures); all_postures.update(new_shapes)
+    return runs(open_seq), runs(closed_seq), (t_ms, weight), all_postures
 
 
 def splice(seq, s, e, value):
@@ -339,8 +458,11 @@ def fill(seq, start, end, neutral):
     return out
 
 
-def write_ges(tiers, voice, start, end, path):
-    tc = {'vowel': float(voice['timeConstantMs.posture']), 'lip': 12.0, 'velic': 15.0, 'glottal': 12.0,
+def write_ges(tiers, voice, start, end, path, lips_closed=False):
+    if lips_closed:
+        tiers = dict(tiers, vowel=tiers['vowel_closed'])
+    tc = {'vowel': float(voice['timeConstantMs.posture']), 'lip': 12.0, 'velic': 15.0,
+          'glottal': float(voice.get('timeConstantMs.glottis', 12.0)),
           'f0': float(voice['timeConstantMs.pitch']), 'pressure': float(voice['timeConstantMs.pressure'])}
     neutral = {'vowel': 'hum1', 'lip': '', 'velic': 0.0, 'glottal': 'breathy', 'f0': 12 * np.log2(130.0), 'pressure': 0.0}
     names = {'vowel': ('vowel-gestures', ''), 'lip': ('lip-gestures', ''), 'velic': ('velic-gestures', ''),

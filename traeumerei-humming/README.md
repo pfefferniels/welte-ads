@@ -29,7 +29,8 @@ The audio (one MP3 per version) is on the listening page; the scripts regenerate
 section: a `<vocalMap>`, dated in ticks like the other maps, so the voice follows Grünfeld's
 tempo and rubato through the same date-to-time mapping as the piano. Its events are `pitch`
 (naming the note it sings; a `portamento.ref` names the `<ornament>` whose arpeggio span the
-slide takes), `posture` (a mouth/tongue shape), `velum`, `glottis` (voice quality), `pressure`
+slide takes), `posture` (a closed-hum shape, the open shape it leans toward, an `amount` and a
+`transitionMs`), `velum`, `glottis` (voice quality), `pressure`
 (lung pressure, dPa), `lips` (closures for re-articulation), `inflection` (scoops into phrases,
 falls at their ends) and `breath`. The header's `<vocalStyles>` say how the voice does things:
 synthesiser, transposition, time constants, wobble, and the posture shapes (fitted, like the
@@ -37,11 +38,31 @@ inflection sizes in `data/profile.json`, from a recorded hum). This is a proposa
 the MPM standard; espressivo ignores the map, and the piano renders identically with it.
 
 `scripts/hummer/hummer.py` writes the map from the performance (rules in its docstring) and
-converts it to a VocalTractLab gestural score (`data/performance_hummed.ges`, with a speaker
-file holding the postures); `run_hummer.py` renders it in phrase chunks and corrects the lung
+converts it to a VocalTractLab gestural score (`data/performance_hummed.ges`; the speaker file
+it needs, VocalTractLab's JD3 with the postures and the steps of each transition added, is written
+by `run_hummer.py`); `run_hummer.py` renders it in phrase chunks and corrects the lung
 pressure once from the measured note levels. `profile.py` and `step1`–`step5_ges.py` are the
 analysis-by-synthesis of the recorded hum that the style comes from (the recording itself is not
 in this repository).
+
+How far the mouth opens follows the dynamics smoothed over ±1.5 s, capped at 30 % of the way
+from parted lips to the open postures (not the widest jaw) and scaled down on high notes (to a
+quarter on the top ones, where the closed hum is nearly a sine and any opening brings up the
+upper harmonics by some 20 dB), with the velum kept open, so the open sound stays nasal; it
+opens over 1–2 s and closes as each phrase fades. VocalTractLab cannot take a gesture time
+constant above about 50 ms, so the converter writes each transition as steps of 60 ms; and its
+lips part with a jump (the lip area goes from closed to 0.07 cm² at once, an 11 dB change in the
+spectrum). The converter therefore writes two gestural scores, identical except for the vowel
+tier: lips held closed (`performance_hummed_closed.ges`) and lips following the opening
+(`performance_hummed.ges`), and `data/performance_hummed_opening.csv` gives the weight of the
+second in the mix (rising with the amount up to `crossfadeBelow` in the `<openingDef>`).
+Before mixing, the open rendering is lined up with the closed one (`align_tracks.py`): the
+self-oscillating glottis runs a little differently against the two tracts, and their glottal
+cycles drift apart by up to a millisecond, which would otherwise flange.
+
+Render the scores in pieces, as `run_hummer.py` does (cut at breaths, about 30 s each): in one
+pass over the whole 164 s, VocalTractLab 2.4 stops following the score after about a minute and
+holds one tone.
 
 ## Pipeline
 
