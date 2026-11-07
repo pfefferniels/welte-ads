@@ -6,11 +6,11 @@
 <style>
 /* Layout: one instrument panel. A sonogram strip scrolls under a fixed playhead; transport and two faders sit beneath it. */
 :root {
-  --bg: #e9edf1;          /* cool paper */
-  --panel: #dfe5eb;
+  --bg: #ffffff;          /* one look in both themes: white page */
+  --panel: #ffffff;
   --fg: #18202c;
   --muted: #5a6575;
-  --rule: #c3ccd6;
+  --rule: #d5dae1;
   --accent: #b5600b;      /* amber playhead and controls */
   --spec-lo: #ffffff;     /* the spectrogram: black on white, in both themes */
   --spec-mid: #8c8c8c;
@@ -19,18 +19,6 @@
   --spec-head: #c85a0a;
   --font-label: "Source Serif 4", Georgia, "Times New Roman", serif;
   --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0f1318; --panel: #0a0d11; --fg: #e4e8ee; --muted: #8b95a4; --rule: #29313c;
-    --accent: #f0a73a;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0f1318; --panel: #0a0d11; --fg: #e4e8ee; --muted: #8b95a4; --rule: #29313c;
-  --accent: #f0a73a;
-  color-scheme: dark;
 }
 html, body { height: 100%; }
 body {
@@ -120,8 +108,8 @@ input[type="range"]:disabled { opacity: 0.45; cursor: progress; }
     </div>
     <div class="fader">
       <label for="g-hum">Humming</label>
-      <input id="g-hum" type="range" min="0" max="100" step="1" value="90">
-      <output id="o-hum" for="g-hum">−1.8 dB</output>
+      <input id="g-hum" type="range" min="0" max="100" step="1" value="40">
+      <output id="o-hum" for="g-hum">−15.9 dB</output>
     </div>
   </div>
   <div id="status" role="status">Loading the audio…</div>
