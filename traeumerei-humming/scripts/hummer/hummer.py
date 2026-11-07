@@ -18,9 +18,10 @@ How the MPM is read as a voice (the generator's rules):
               phrase starts closed and closes again as it fades; a new closed shape at every
               change of the sustain pedal and halfway through long notes
   lips        detached notes and repeated notes are re-articulated with a lip closure ("m")
-  glottis     breathy when soft, less breathy when louder
-  pressure    from the MPM dynamics (curve plus each note's velocity offset), with the recorded
-              hum's slow swell into a phrase and its quick release
+  effort      follows the dynamicsMap continuously, also inside held notes (espressivo's
+              sub-note rendering of it), plus each note's own velocity offset: lung pressure with
+              velocity^1.5, the glottis from breathy (soft) to modal (loud)
+  pressure    factors on that effort: the recorded hum's swell into a phrase, its release
 """
 import json, os, re, sys
 import numpy as np
@@ -185,20 +186,15 @@ def build_vocal_map(profile, palette_names):
         # --- articulation: re-articulate repeated or detached notes with the lips
         if k > 0 and not v.breath_before and (v.repeated_in or v.on - prev.key_off > 0.08):
             add('lips', clock.date(on_ms - 70), value='closure', durationMs=70)
-        # --- glottis
-        add('glottis', date, value='breathy' if n['velocity'] < 37 else ('breathy60' if n['velocity'] < 44 else 'modal'))
-        # --- pressure: dynamics, swell into a phrase, release at its end
-        L = vm.vel_to_db(n['velocity'])
-        pr = 4200 * 10 ** ((L + 21.0) / 25)
-        if v.breath_before:
-            add('pressure', date, value=round(pr * 0.5))
-            add('pressure', clock.date(on_ms + min(400, 0.6 * (off_ms - on_ms))), value=round(pr))
-        else:
-            add('pressure', date, value=round(pr))
+        # --- breath support: the effort itself follows the dynamicsMap (see <effortDef>); these
+        # events only shape it: a swell into each phrase and a release at its end
+        if v.breath_before or k == 0:                # at the sung onset: on a rolled chord the
+            add('pressure', clock.date(on_ms), factor='1.00', **{'from': '0.50'},   # melody comes late
+                transitionMs=int(min(400, 0.6 * (off_ms - on_ms))))
         nxt = vnotes[k + 1] if k + 1 < len(vnotes) else None
         if nxt is None or nxt.breath_before:
             rel = max(on_ms + 0.5 * (off_ms - on_ms), off_ms - profile['release_s'] * 1000)
-            add('pressure', clock.date(rel), value=round(pr * 0.45))
+            add('pressure', clock.date(rel), factor='0.45', transitionMs=int(off_ms - rel))
             if cur > 0:                              # close while fading, over at least 0.6 s
                 cl = max(on_ms, min(rel, off_ms - 600))
                 add('posture', clock.date(cl), value=base, toward=toward, amount='0.00',
@@ -206,7 +202,7 @@ def build_vocal_map(profile, palette_names):
                 cur = 0.0
             add('inflection', clock.date(rel), type='fall', depthSt=round(-abs(rng.uniform(1.5, 3.5)), 2),
                 durationMs=round(off_ms - rel))
-            add('pressure', clock.date(off_ms), value=0)
+            add('pressure', clock.date(off_ms), factor='0.00', transitionMs=40)
     ev.sort(key=lambda e: e[0])
     return ev, clock
 
@@ -227,7 +223,9 @@ def vocal_styles_xml(profile, palette):
          f'            <voiceDef synthesizer="VocalTractLab 2.4" speaker="JD3" transposition="{TRANSPOSE}" '
          f'timeConstantMs.pitch="30" timeConstantMs.posture="30" timeConstantMs.glottis="30" timeConstantMs.pressure="12" latencyMs="15"/>',
          f'            <wobbleDef rmsCents="{profile["wobble_cents_rms"] * 0.8:.1f}" stepMs="125" seed="1"/>',
-         '            <openingDef partedLipDistance="0.11" crossfadeBelow="0.3" rampStepMs="60"/>']
+         '            <openingDef partedLipDistance="0.11" crossfadeBelow="0.3" rampStepMs="60"/>',
+         '            <effortDef source="dynamicsMap" noteVelocities="true" velocity.ref="45" pressure.ref="7000" '
+         'pressure.exponent="1.5" adduction.breathyAt="33" adduction.modalAt="48" stepMs="30"/>']
     for name, vals in palette.items():
         p.append(f'            <postureDef name="{name}">' + ''.join(f'<param name="{n}" value="{x:.4f}"/>' for n, x in zip(V.TN, vals)) + '</postureDef>')
     p += ['          </styleDef>', '        </vocalStyles>']
@@ -257,16 +255,19 @@ def read_vocal_map(path):
     style = re.search(r'<styleDef name="hummer">.*?</styleDef>', text, re.S).group(0)
     voice = dict(re.findall(r'([\w.]+)="([^"]*)"', re.search(r'<voiceDef[^>]*/>', style).group(0)))
     wobble = dict(re.findall(r'([\w.]+)="([^"]*)"', re.search(r'<wobbleDef[^>]*/>', style).group(0)))
-    m = re.search(r'<openingDef[^>]*/>', style)
-    voice.update({'opening.' + k: x for k, x in re.findall(r'([\w.]+)="([^"]*)"', m.group(0))} if m else {})
+    for tag, key in [('openingDef', 'opening.'), ('effortDef', 'effort.')]:
+        m = re.search(r'<%s[^>]*/>' % tag, style)
+        voice.update({key + k: x for k, x in re.findall(r'([\w.]+)="([^"]*)"', m.group(0))} if m else {})
     postures = {nm: dict(re.findall(r'<param name="(\w+)" value="([^"]+)"/>', body_))
                 for nm, body_ in re.findall(r'<postureDef name="([^"]+)">(.*?)</postureDef>', style)}
     orn = ornaments(text)
     return ev, voice, wobble, postures, {v: k for k, v in orn.items()}
 
 
-def to_gestures(path):
-    """vocalMap -> per-tier lists of (start_ms, end_ms, value, slope) on the audio timeline."""
+def to_gestures(path, calibration=None):
+    """vocalMap -> per-tier lists of (start_ms, end_ms, value, slope) on the audio timeline.
+    calibration: optional {melody note index: dB}, a rendering correction of each note's level
+    (not part of the map)."""
     perf, mel, notes, sus = load_performance()
     clock = Clock(notes, sus)
     ev, voice, wobble, postures, orn_date = read_vocal_map(path)
@@ -294,14 +295,14 @@ def to_gestures(path):
             od = orn_date[a['portamento.ref'][1:]]
             first = min(c['milliseconds']['date'] for c in by_date[od]) + PAD * 1000 - lat
             glide = (first, on)
-        pitch_ev.append([on, st, glide])
+        pitch_ev.append([on, st, glide, n])
     infl = [(T(d), a) for d, tag, a in ev if tag == 'inflection']
     # f0 tier: targets with wobble steps, scoops, falls and portamenti
     rng = np.random.default_rng(int(wobble['seed']))
     step = float(wobble['stepMs'])
     amp = float(wobble['rmsCents']) / 100 * np.sqrt(2)
     f0 = []
-    for i, (on, st, glide) in enumerate(pitch_ev):
+    for i, (on, st, glide, _n) in enumerate(pitch_ev):
         nxt_on = pitch_ev[i + 1][0] if i + 1 < len(pitch_ev) else end_ms
         if glide and i > 0:
             prev_st = pitch_ev[i - 1][1]
@@ -334,10 +335,12 @@ def to_gestures(path):
     # posture: ramps, rendered twice (lips closed / lips following the opening), see posture_tracks()
     tiers['vowel'], tiers['vowel_closed'], opening, postures = posture_tracks(
         [(T(d), a) for d, t_, a in ev if t_ == 'posture'], postures, end_ms, voice)
-    # velum, glottis, pressure: each event holds until the next one of its tier
-    for tag, tier in [('velum', 'velic'), ('glottis', 'glottal'), ('pressure', 'pressure')]:
-        pts = [(T(d), a['value']) for d, t_, a in ev if t_ == tag]
-        tiers[tier] = [(s, e, v, 0.0) for (s, v), (e, _) in zip(pts, pts[1:] + [(end_ms, None)])]
+    # velum: each event holds until the next one
+    pts = [(T(d), a['value']) for d, t_, a in ev if t_ == 'velum']
+    tiers['velic'] = [(s, e, v, 0.0) for (s, v), (e, _) in zip(pts, pts[1:] + [(end_ms, None)])]
+    # lung pressure and glottal adduction: the effort, following the dynamics continuously
+    tiers['pressure'], tiers['glottal'], effort = effort_tracks(
+        [(T(d), a) for d, t_, a in ev if t_ == 'pressure'], pitch_ev, voice, end_ms, lat, calibration)
     # breaths: glottis 'h', a little pressure, the posture of the phrase to come
     for d, tag, a in ev:
         if tag == 'breath':
@@ -349,6 +352,72 @@ def to_gestures(path):
             s = T(d)
             tiers['lip'].append((s, s + float(a['durationMs']), 'll-labial-closure', 0.0))
     return tiers, postures, end_ms, voice, opening
+
+
+def effort_tracks(pev, pitch_ev, voice, end_ms, lat, calibration=None):
+    """The voice's effort, from the dynamicsMap as espressivo renders it below the note level
+    (subNoteDynamics): the curve moves inside held notes, which the piano cannot follow. Each
+    note keeps its own velocity offset from the curve (metrical accents, articulations).
+    Lung pressure goes with a power of the velocity (VocalTractLab's hum gains about 0.9 x
+    20 log10 of the pressure, and closing the glottis from breathy to modal, as the velocity
+    rises, adds ~2 dB more; exponent 1.5 makes the two together follow the MIDI convention of
+    40 log10 velocity). The <pressure> events of the map are factors on
+    top: a swell into each phrase, a release at its end."""
+    import voicemodel as vm
+    mel = json.load(open(os.path.join(WORK, 'melody.json')))
+    ct, cv = vm.dynamics_curve(mel)
+    step = float(voice.get('effort.stepMs', 30))
+    v_ref = float(voice.get('effort.velocity.ref', 45)); p_ref = float(voice.get('effort.pressure.ref', 7000))
+    expo = float(voice.get('effort.pressure.exponent', 2))
+    a0, a1 = float(voice.get('effort.adduction.breathyAt', 33)), float(voice.get('effort.adduction.modalAt', 48))
+    use_notes = voice.get('effort.noteVelocities', 'true') == 'true'
+    t = np.arange(0.0, end_ms, 1.0)                              # audio timeline, ms
+    vel = np.interp((t - PAD * 1000 + lat) / 1000, ct, cv)        # the curve
+    off = np.zeros_like(t); hz = np.full_like(t, 130.0); cal = np.zeros_like(t)
+    ons = [p[0] for p in pitch_ev]
+    for k, (on, st, glide, n) in enumerate(pitch_ev):
+        i0 = int(max(0, on)); i1 = int(ons[k + 1]) if k + 1 < len(ons) else len(t)
+        i0 = 0 if k == 0 else i0
+        curve_on = np.interp(n['milliseconds']['date'] / 1000, ct, cv)
+        off[i0:i1] = (n['velocity'] - curve_on) if use_notes else 0.0
+        hz[i0:i1] = 2 ** (st / 12)
+        if calibration:
+            cal[i0:i1] = calibration.get(k, 0.0)
+    k60 = np.ones(60) / 60                                         # note-to-note changes over 60 ms
+    off = np.convolve(np.pad(off, 30, mode='edge'), k60, 'same')[30:-30]
+    cal = np.convolve(np.pad(cal, 30, mode='edge'), k60, 'same')[30:-30]
+    v = np.maximum(1.0, vel + off)
+    # the synthesiser's own level by pitch (closed hum, modal, 7000 dPa): made up in pressure
+    comp_db = np.interp(np.log2(hz), np.log2([175, 260, 400]), [-0.8, 0.0, -3.1])
+    pressure = p_ref * (v / v_ref) ** expo * 10 ** ((cal - comp_db) / 20)
+    # the shaping factors of the map: piecewise-linear ramps
+    F = [(0.0, 0.0)]
+    def at(tt):
+        ts = [p[0] for p in F]; i = np.searchsorted(ts, tt, side='right') - 1
+        if i + 1 < len(F):
+            (t0, f0_), (t1, f1) = F[i], F[i + 1]
+            return f0_ + (f1 - f0_) * (tt - t0) / max(1e-9, t1 - t0)
+        return F[i][1]
+    for tt, a in sorted(pev, key=lambda e: e[0]):
+        before = at(tt - 0.5)
+        start = float(a['from']) if 'from' in a else at(tt)    # 'from': jump there first
+        F[:] = [p for p in F if p[0] < tt - 0.5] + [(tt - 0.5, before), (tt, start),
+                                                     (tt + max(1.0, float(a.get('transitionMs', 0))), float(a['factor']))]
+    fac = np.interp(t, [p[0] for p in F], [p[1] for p in F])
+    pressure = np.minimum(15000.0, pressure * fac)
+    add = np.clip((v - a0) / (a1 - a0), 0, 1)
+    # gestures every stepMs, merged where nothing changes
+    grid = np.arange(0.0, end_ms, step)
+    pq = [0.0 if p < 1 else round(float(np.exp(np.round(np.log(p) / np.log(1.005)) * np.log(1.005))), 1)
+          for p in pressure[grid.astype(int)]]
+    gq = [f'g{int(round(x * 20)):02d}' for x in add[grid.astype(int)]]
+    def runs(vals):
+        out, s0 = [], 0
+        for i in range(1, len(vals) + 1):
+            if i == len(vals) or vals[i] != vals[s0]:
+                out.append((grid[s0], grid[i] if i < len(vals) else end_ms, vals[s0], 0.0)); s0 = i
+        return out
+    return runs(pq), runs(gq), dict(t=t, velocity=v, pressure=pressure, adduction=add)
 
 
 def posture_tracks(pev, postures, end_ms, voice):
@@ -464,7 +533,7 @@ def write_ges(tiers, voice, start, end, path, lips_closed=False):
     tc = {'vowel': float(voice['timeConstantMs.posture']), 'lip': 12.0, 'velic': 15.0,
           'glottal': float(voice.get('timeConstantMs.glottis', 12.0)),
           'f0': float(voice['timeConstantMs.pitch']), 'pressure': float(voice['timeConstantMs.pressure'])}
-    neutral = {'vowel': 'hum1', 'lip': '', 'velic': 0.0, 'glottal': 'breathy', 'f0': 12 * np.log2(130.0), 'pressure': 0.0}
+    neutral = {'vowel': 'hum1', 'lip': '', 'velic': 0.0, 'glottal': 'g00', 'f0': 12 * np.log2(130.0), 'pressure': 0.0}
     names = {'vowel': ('vowel-gestures', ''), 'lip': ('lip-gestures', ''), 'velic': ('velic-gestures', ''),
              'glottal': ('glottal-shape-gestures', ''), 'f0': ('f0-gestures', 'st'), 'pressure': ('lung-pressure-gestures', 'dPa')}
     x = ['<gestural_score>\n']
@@ -522,8 +591,10 @@ def write_speaker(postures, path):
     sp = sp[:i] + xml + sp[i:]
     gv = {nm: np.asarray(v.get_shape(nm, 'glottis'), dtype=float) for nm in ['modal', 'breathy']}
     gn = [p['name'] for p in v.get_param_info('glottis')]
-    g = 0.4 * gv['modal'] + 0.6 * gv['breathy']
-    gxml = '        <shape name="breathy60">\n' + ''.join(f'          <control_param name="{p}" value="{x:.6f}"/>\n' for p, x in zip(gn, g)) + '        </shape>\n'
+    gxml = ''                                        # g00 breathy ... g20 modal, for the effort
+    for i in range(21):
+        g = (i / 20) * gv['modal'] + (1 - i / 20) * gv['breathy']
+        gxml += f'        <shape name="g{i:02d}">\n' + ''.join(f'          <control_param name="{p}" value="{x:.6f}"/>\n' for p, x in zip(gn, g)) + '        </shape>\n'
     g0 = sp.index('<glottis_model type="Geometric glottis"')
     j = sp.index('      </shapes>', g0)
     sp = sp[:j] + gxml + sp[j:]

@@ -30,20 +30,30 @@ section: a `<vocalMap>`, dated in ticks like the other maps, so the voice follow
 tempo and rubato through the same date-to-time mapping as the piano. Its events are `pitch`
 (naming the note it sings; a `portamento.ref` names the `<ornament>` whose arpeggio span the
 slide takes), `posture` (a closed-hum shape, the open shape it leans toward, an `amount` and a
-`transitionMs`), `velum`, `glottis` (voice quality), `pressure`
-(lung pressure, dPa), `lips` (closures for re-articulation), `inflection` (scoops into phrases,
+`transitionMs`), `velum`, `pressure` (factors shaping the voice's effort: a swell into each
+phrase, a release at its end), `lips` (closures for re-articulation), `inflection` (scoops into phrases,
 falls at their ends) and `breath`. The header's `<vocalStyles>` say how the voice does things:
-synthesiser, transposition, time constants, wobble, and the posture shapes (fitted, like the
+synthesiser, transposition, time constants, wobble, how the effort follows the dynamics
+(`<effortDef>`), and the posture shapes (fitted, like the
 inflection sizes in `data/profile.json`, from a recorded hum). This is a proposal, not part of
 the MPM standard; espressivo ignores the map, and the piano renders identically with it.
 
 `scripts/hummer/hummer.py` writes the map from the performance (rules in its docstring) and
 converts it to a VocalTractLab gestural score (`data/performance_hummed.ges`; the speaker file
 it needs, VocalTractLab's JD3 with the postures and the steps of each transition added, is written
-by `run_hummer.py`); `run_hummer.py` renders it in phrase chunks and corrects the lung
-pressure once from the measured note levels. `profile.py` and `step1`–`step5_ges.py` are the
+by `run_hummer.py`); `run_hummer.py` renders it in phrase chunks and calibrates each note's lung
+pressure once from the measured note levels (a rendering correction, not part of the map). `profile.py` and `step1`–`step5_ges.py` are the
 analysis-by-synthesis of the recorded hum that the style comes from (the recording itself is not
 in this repository).
+
+The dynamics are not copied into the map. `<effortDef source="dynamicsMap">` says that the
+voice's effort follows the performance's own dynamicsMap, as espressivo renders it below the
+note level (`subNoteDynamics`, the curve in `data/melody.json`), plus each note's own velocity
+offset from it (metrical accents, articulations): lung pressure with velocity^1.5 and the glottis
+from breathy (velocity 33) to modal (48), which together make the hum's level follow the MIDI
+convention of 40 log10 velocity. So the hum swells and fades inside held notes, which the piano
+cannot: on notes where the curve moves, the voice's level change follows it at r = 0.71 (0.16
+when pressure was set once per note).
 
 How far the mouth opens follows the dynamics smoothed over ±1.5 s, capped at 30 % of the way
 from parted lips to the open postures (not the widest jaw) and scaled down on high notes (to a

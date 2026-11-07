@@ -1,6 +1,7 @@
 """Generate the vocal map, render it with VTL (phrase chunks in parallel; the score twice, lips
 held closed and lips following the opening, mixed by the opening weight), correct each note's
-lung pressure once from the measured levels, render again. Writes performance_hummed.mpm,
+lung pressure once from the measured levels (a per-note calibration, not part of the map),
+render again. Writes performance_hummed.mpm,
 hummer_full.ges, hummer.speaker and ../work/dry/vtl_gruenfeld_hum.wav."""
 import json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -21,8 +22,8 @@ def render_chunk(args):
     return np.asarray(v.gesture_file_to_audio(os.path.abspath(path)), dtype=float)
 
 
-def render(mpm, tag):
-    tiers, postures, end_ms, voice, (t_ms, weight) = H.to_gestures(mpm)
+def render(mpm, tag, calibration=None):
+    tiers, postures, end_ms, voice, (t_ms, weight) = H.to_gestures(mpm, calibration)
     H.write_speaker(postures, 'hummer.speaker')
     H.write_ges(tiers, voice, 0.0, end_ms, 'hummer_full.ges')
     H.write_ges(tiers, voice, 0.0, end_ms, 'hummer_full_closed.ges', lips_closed=True)
@@ -67,10 +68,12 @@ def render(mpm, tag):
 
 
 def note_levels(y):
-    """level of each melody note (80th percentile of 40 ms RMS in its middle), and its target"""
+    """each melody note's level (80th percentile of 40 ms RMS over 30-85 % of it) and the level
+    the dynamics ask for over the same stretch (the curve inside the note plus the note's offset)"""
     import voicemodel as vm
     mel = json.load(open(os.path.join(H.WORK, 'melody.json')))
     vn = vm.build_notes(mel)
+    ct, cv = vm.dynamics_curve(mel)
     e = np.sqrt(np.convolve(y ** 2, np.ones(1764) / 1764, mode='same')) + 1e-9
     out = []
     for v, n in zip(vn, mel['notes']):
@@ -79,30 +82,23 @@ def note_levels(y):
         i0, i1 = int((a + 0.3 * d) * SR), int((b - 0.15 * d) * SR)
         if i1 - i0 < 441:
             out.append(None); continue
-        out.append((20 * np.log10(np.percentile(e[i0:i1], 80)), vm.vel_to_db(n['velocity'])))
+        tt = np.linspace(v.on + 0.3 * d, v.off - 0.15 * d, 20)
+        want = vm.vel_to_db(np.interp(tt, ct, cv) + n['velocity'] - np.interp(v.on, ct, cv))
+        out.append((20 * np.log10(np.percentile(e[i0:i1], 80)), float(np.percentile(want, 80))))
     return out
 
 
-def correct_pressures(mpm, y):
-    """scale each note's pressure events by the level it missed (relative to the median)"""
+def calibrate(y):
+    """per-note level corrections (dB) for the second pass: what each note missed, relative to
+    the median, as a factor on its lung pressure (the hum's level goes with 20 log10 of it)"""
     lv = note_levels(y)
-    diffs = np.array([t - m for m_t in lv if m_t for m, t in [m_t]])
-    med = np.median(diffs)
-    text = open(mpm, encoding='utf-8').read()
-    mel = json.load(open(os.path.join(H.WORK, 'melody.json')))
-    dates = [n['date'] for n in mel['notes']]
-    factors = []
-    for k, m_t in enumerate(lv):
-        f = 1.0 if m_t is None else float(np.clip(10 ** (((m_t[1] - m_t[0]) - med) / 25), 0.4, 2.5))
-        factors.append(f)
-    def fix(m):
-        date = float(m.group(1)); val = float(m.group(2))
-        k = max(0, np.searchsorted(dates, date + 1e-6) - 1)
-        return f'<pressure date="{m.group(1)}" value="{round(min(15000, val * factors[k]))}"'
-    text = re.sub(r'<pressure date="([^"]+)" value="([^"]+)"', fix, text)
-    open(mpm, 'w', encoding='utf-8').write(text)
-    err = np.array([(t - m) - med for m_t in lv if m_t for m, t in [m_t]])
-    print(f'  level error before correction: median |{np.median(np.abs(err)):.2f}| dB, spread {np.std(err):.2f} dB')
+    d = np.array([t - m for m_t in lv if m_t for m, t in [m_t]])
+    med = np.median(d)
+    cal = {k: float(np.clip((m_t[1] - m_t[0]) - med, -8, 8)) for k, m_t in enumerate(lv) if m_t}
+    err = d - med
+    print(f'  level error before calibration: median |{np.median(np.abs(err)):.2f}| dB, '
+          f'90th pct |{np.percentile(np.abs(err), 90):.2f}| dB')
+    return cal
 
 
 if __name__ == '__main__':
@@ -116,11 +112,12 @@ if __name__ == '__main__':
         counts[tag] = counts.get(tag, 0) + 1
     print('vocalMap:', len(ev), 'events', counts)
     y = render(MPM_OUT, 'pass 1')
-    correct_pressures(MPM_OUT, y)
-    y = render(MPM_OUT, 'pass 2')
+    cal = calibrate(y)
+    json.dump(cal, open('hummer_calibration.json', 'w'))
+    y = render(MPM_OUT, 'pass 2', cal)
     lv = note_levels(y)
     d = np.array([t - m for m_t in lv if m_t for m, t in [m_t]])
-    print(f'  level error after correction: spread {np.std(d - np.median(d)):.2f} dB; '
-          f'r = {np.corrcoef([m for m_t in lv if m_t for m, t in [m_t]], [t for m_t in lv if m_t for m, t in [m_t]])[0, 1]:.2f}')
+    print(f'  level error after calibration: median |{np.median(np.abs(d - np.median(d))):.2f}| dB, '
+          f'90th pct |{np.percentile(np.abs(d - np.median(d)), 90):.2f}| dB')
     sf.write(os.path.join(H.WORK, 'dry', 'vtl_gruenfeld_hum.wav'), (y / (np.abs(y).max() + 1e-9) * 0.9).astype(np.float32), SR)
     print('written', MPM_OUT, 'hummer_full.ges', 'hummer.speaker', 'dry/vtl_gruenfeld_hum.wav')

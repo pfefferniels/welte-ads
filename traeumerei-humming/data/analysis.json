@@ -212,11 +212,11 @@
  "vtl_hummer": {
   "id": "vtl_hummer",
   "n": 161,
-  "pitch_median_abs_cents": 9.536549509384713,
+  "pitch_median_abs_cents": 8.927372405641108,
   "pitch_within_50": 0.9751552795031055,
-  "arrival_median_ms": 190.7638251725885,
-  "arrival_iqr_ms": 215.70423719116076,
-  "arrival_n": 106,
-  "dynamics_r": 0.9433864164738409
+  "arrival_median_ms": 190.99840898826415,
+  "arrival_iqr_ms": 213.91454001879052,
+  "arrival_n": 110,
+  "dynamics_r": 0.9435556745104666
  }
 }

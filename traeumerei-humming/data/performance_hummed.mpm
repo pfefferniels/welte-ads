@@ -5,6 +5,7 @@
             <voiceDef synthesizer="VocalTractLab 2.4" speaker="JD3" transposition="-12" timeConstantMs.pitch="30" timeConstantMs.posture="30" timeConstantMs.glottis="30" timeConstantMs.pressure="12" latencyMs="15"/>
             <wobbleDef rmsCents="28.8" stepMs="125" seed="1"/>
             <openingDef partedLipDistance="0.11" crossfadeBelow="0.3" rampStepMs="60"/>
+            <effortDef source="dynamicsMap" noteVelocities="true" velocity.ref="45" pressure.ref="7000" pressure.exponent="1.5" adduction.breathyAt="33" adduction.modalAt="48" stepMs="30"/>
             <postureDef name="hum1"><param name="HX" value="0.2212"/><param name="HY" value="-5.7047"/><param name="JX" value="-0.0597"/><param name="JA" value="-5.0188"/><param name="LP" value="0.6777"/><param name="LD" value="-0.2904"/><param name="VS" value="0.4412"/><param name="VO" value="0.1754"/><param name="TCX" value="1.9645"/><param name="TCY" value="-1.5217"/><param name="TTX" value="4.3089"/><param name="TTY" value="-1.5032"/><param name="TBX" value="3.2555"/><param name="TBY" value="-0.1900"/><param name="TRX" value="-0.5104"/><param name="TRY" value="-1.6024"/><param name="TS1" value="0.2379"/><param name="TS2" value="0.0637"/><param name="TS3" value="0.1490"/></postureDef>
             <postureDef name="hum2"><param name="HX" value="0.2133"/><param name="HY" value="-5.3446"/><param name="JX" value="-0.0593"/><param name="JA" value="-4.9552"/><param name="LP" value="0.6097"/><param name="LD" value="-0.3340"/><param name="VS" value="0.4992"/><param name="VO" value="0.4822"/><param name="TCX" value="1.9712"/><param name="TCY" value="-1.4272"/><param name="TTX" value="4.2580"/><param name="TTY" value="-1.5135"/><param name="TBX" value="3.1877"/><param name="TBY" value="-0.2395"/><param name="TRX" value="-0.6015"/><param name="TRY" value="-1.7612"/><param name="TS1" value="0.2151"/><param name="TS2" value="0.0851"/><param name="TS3" value="0.1458"/></postureDef>
             <postureDef name="hum3"><param name="HX" value="0.2239"/><param name="HY" value="-4.3793"/><param name="JX" value="-0.0598"/><param name="JA" value="-4.5902"/><param name="LP" value="0.6303"/><param name="LD" value="-0.3018"/><param name="VS" value="0.4447"/><param name="VO" value="0.2195"/><param name="TCX" value="1.8385"/><param name="TCY" value="-1.2817"/><param name="TTX" value="4.2550"/><param name="TTY" value="-1.5116"/><param name="TBX" value="3.2540"/><param name="TBY" value="-0.1815"/><param name="TRX" value="-0.3257"/><param name="TRY" value="-1.6033"/><param name="TS1" value="0.2399"/><param name="TS2" value="0.0639"/><param name="TS3" value="0.1479"/></postureDef>
@@ -21,720 +22,396 @@
           <posture date="0.00" value="hum2" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_2"/>
           <velum date="0.00" value="0.3" xml:id="vocal_3"/>
           <pitch date="0.00" note.ref="#npk4lw6" xml:id="vocal_4"/>
-          <glottis date="0.00" value="breathy60" xml:id="vocal_5"/>
-          <pressure date="0.00" value="2624" xml:id="vocal_6"/>
-          <posture date="223.71" value="hum2" toward="open1" amount="0.07" transitionMs="1400" xml:id="vocal_7"/>
-          <pressure date="298.28" value="5248" xml:id="vocal_8"/>
-          <pitch date="720.00" note.ref="#nxbdd6x" portamento.ref="#ornament_720" xml:id="vocal_9"/>
-          <glottis date="720.00" value="breathy60" xml:id="vocal_10"/>
-          <pressure date="720.00" value="4486" xml:id="vocal_11"/>
-          <posture date="1727.46" value="hum3" toward="open1" amount="0.07" transitionMs="600" xml:id="vocal_12"/>
-          <posture date="2520.00" value="hum1" toward="open1" amount="0.07" transitionMs="400" xml:id="vocal_13"/>
-          <pitch date="2520.00" note.ref="#nrbga5m" xml:id="vocal_14"/>
-          <glottis date="2520.00" value="breathy" xml:id="vocal_15"/>
-          <pressure date="2520.00" value="3888" xml:id="vocal_16"/>
-          <pitch date="2880.00" note.ref="#n1ogvejs" xml:id="vocal_17"/>
-          <glottis date="2880.00" value="breathy60" xml:id="vocal_18"/>
-          <pressure date="2880.00" value="4170" xml:id="vocal_19"/>
-          <pitch date="3240.00" note.ref="#n1qzl4hr" xml:id="vocal_20"/>
-          <glottis date="3240.00" value="breathy60" xml:id="vocal_21"/>
-          <pressure date="3240.00" value="4780" xml:id="vocal_22"/>
-          <pitch date="3600.00" note.ref="#n10g2bbj" xml:id="vocal_23"/>
-          <glottis date="3600.00" value="modal" xml:id="vocal_24"/>
-          <pressure date="3600.00" value="4413" xml:id="vocal_25"/>
-          <pitch date="3960.00" note.ref="#nv84jxp" xml:id="vocal_26"/>
-          <glottis date="3960.00" value="breathy60" xml:id="vocal_27"/>
-          <pressure date="3960.00" value="5147" xml:id="vocal_28"/>
-          <posture date="4320.00" value="hum2" toward="open1" amount="0.07" transitionMs="400" xml:id="vocal_29"/>
-          <pitch date="4320.00" note.ref="#n162mama" portamento.ref="#ornament_4320" xml:id="vocal_30"/>
-          <glottis date="4320.00" value="breathy60" xml:id="vocal_31"/>
-          <pressure date="4320.00" value="4674" xml:id="vocal_32"/>
-          <lips date="4347.99" value="closure" durationMs="70" xml:id="vocal_33"/>
-          <posture date="5199.89" value="hum3" toward="open1" amount="0.07" transitionMs="600" xml:id="vocal_34"/>
-          <pitch date="5760.00" note.ref="#n1nv0ztz" portamento.ref="#ornament_5760" xml:id="vocal_35"/>
-          <glottis date="5760.00" value="breathy60" xml:id="vocal_36"/>
-          <pressure date="5760.00" value="4027" xml:id="vocal_37"/>
-          <lips date="5823.36" value="closure" durationMs="70" xml:id="vocal_38"/>
-          <pitch date="6120.00" note.ref="#n105patq" portamento.ref="#ornament_6120" xml:id="vocal_39"/>
-          <glottis date="6120.00" value="breathy" xml:id="vocal_40"/>
-          <pressure date="6120.00" value="3220" xml:id="vocal_41"/>
-          <pitch date="6480.00" note.ref="#n1i66osm" portamento.ref="#ornament_6480" xml:id="vocal_42"/>
-          <glottis date="6480.00" value="breathy60" xml:id="vocal_43"/>
-          <pressure date="6480.00" value="3837" xml:id="vocal_44"/>
-          <lips date="6531.71" value="closure" durationMs="70" xml:id="vocal_45"/>
-          <posture date="6840.00" value="hum1" toward="open1" amount="0.07" transitionMs="400" xml:id="vocal_46"/>
-          <pitch date="6840.00" note.ref="#n1rph3w3" xml:id="vocal_47"/>
-          <glottis date="6840.00" value="breathy" xml:id="vocal_48"/>
-          <pressure date="6840.00" value="3706" xml:id="vocal_49"/>
-          <posture date="6840.00" value="hum1" toward="open1" amount="0.00" transitionMs="564" xml:id="vocal_50"/>
-          <pressure date="7068.66" value="1667" xml:id="vocal_51"/>
-          <inflection date="7068.66" type="fall" depthSt="-2.75" durationMs="268" xml:id="vocal_52"/>
-          <inflection date="7200.00" type="scoop" depthSt="-0.08" durationMs="220" xml:id="vocal_53"/>
-          <posture date="7200.00" value="hum2" toward="open4" amount="0.00" transitionMs="200" xml:id="vocal_54"/>
-          <pitch date="7200.00" note.ref="#n1sw27dc" xml:id="vocal_55"/>
-          <glottis date="7200.00" value="breathy60" xml:id="vocal_56"/>
-          <pressure date="7200.00" value="2926" xml:id="vocal_57"/>
-          <pressure date="7201.51" value="0" xml:id="vocal_58"/>
-          <breath date="7249.28" duration="73.84" through="nose" xml:id="vocal_59"/>
-          <pressure date="7521.91" value="5853" xml:id="vocal_60"/>
-          <pitch date="7560.00" note.ref="#ni5wp4g" xml:id="vocal_61"/>
-          <glottis date="7560.00" value="breathy" xml:id="vocal_62"/>
-          <pressure date="7560.00" value="4076" xml:id="vocal_63"/>
-          <pitch date="7920.00" note.ref="#n1ix0t3p" portamento.ref="#ornament_7920" xml:id="vocal_64"/>
-          <glottis date="7920.00" value="breathy60" xml:id="vocal_65"/>
-          <pressure date="7920.00" value="4167" xml:id="vocal_66"/>
-          <lips date="7936.15" value="closure" durationMs="70" xml:id="vocal_67"/>
-          <posture date="8280.00" value="hum3" toward="open4" amount="0.00" transitionMs="400" xml:id="vocal_68"/>
-          <pitch date="8280.00" note.ref="#n80m4vn" xml:id="vocal_69"/>
-          <glottis date="8280.00" value="breathy" xml:id="vocal_70"/>
-          <pressure date="8280.00" value="3374" xml:id="vocal_71"/>
-          <pitch date="8640.00" note.ref="#nlbef7n" portamento.ref="#ornament_8640" xml:id="vocal_72"/>
-          <glottis date="8640.00" value="breathy60" xml:id="vocal_73"/>
-          <pressure date="8640.00" value="4355" xml:id="vocal_74"/>
-          <lips date="8650.79" value="closure" durationMs="70" xml:id="vocal_75"/>
-          <pitch date="9000.00" note.ref="#nfl0rmk" portamento.ref="#ornament_9000" xml:id="vocal_76"/>
-          <glottis date="9000.00" value="breathy" xml:id="vocal_77"/>
-          <pressure date="9000.00" value="4663" xml:id="vocal_78"/>
-          <pitch date="9360.00" note.ref="#n171h9f6" portamento.ref="#ornament_9360" xml:id="vocal_79"/>
-          <glottis date="9360.00" value="breathy60" xml:id="vocal_80"/>
-          <pressure date="9360.00" value="4668" xml:id="vocal_81"/>
-          <posture date="9720.00" value="hum1" toward="open4" amount="0.00" transitionMs="400" xml:id="vocal_82"/>
-          <pitch date="9720.00" note.ref="#ntj2e8n" xml:id="vocal_83"/>
-          <glottis date="9720.00" value="breathy60" xml:id="vocal_84"/>
-          <pressure date="9720.00" value="3560" xml:id="vocal_85"/>
-          <pitch date="10080.00" note.ref="#nusg357" portamento.ref="#ornament_10080" xml:id="vocal_86"/>
-          <glottis date="10080.00" value="breathy60" xml:id="vocal_87"/>
-          <pressure date="10080.00" value="4907" xml:id="vocal_88"/>
-          <lips date="10168.42" value="closure" durationMs="70" xml:id="vocal_89"/>
-          <posture date="10780.46" value="hum2" toward="open4" amount="0.00" transitionMs="600" xml:id="vocal_90"/>
-          <pressure date="11209.86" value="2208" xml:id="vocal_91"/>
-          <inflection date="11209.86" type="fall" depthSt="-3.29" durationMs="268" xml:id="vocal_92"/>
-          <pressure date="11395.92" value="0" xml:id="vocal_93"/>
-          <breath date="11449.48" duration="82.08" through="nose" xml:id="vocal_94"/>
-          <inflection date="11520.00" type="scoop" depthSt="-2.19" durationMs="220" xml:id="vocal_95"/>
-          <posture date="11520.00" value="hum3" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_96"/>
-          <pitch date="11520.00" note.ref="#n3x6yrh" xml:id="vocal_97"/>
-          <glottis date="11520.00" value="breathy60" xml:id="vocal_98"/>
-          <pressure date="11520.00" value="2298" xml:id="vocal_99"/>
-          <pressure date="11827.16" value="4595" xml:id="vocal_100"/>
-          <posture date="11965.29" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_101"/>
-          <pitch date="12240.00" note.ref="#n3vsg4k" portamento.ref="#ornament_12240" xml:id="vocal_102"/>
-          <glottis date="12240.00" value="breathy60" xml:id="vocal_103"/>
-          <pressure date="12240.00" value="4875" xml:id="vocal_104"/>
-          <lips date="12268.35" value="closure" durationMs="70" xml:id="vocal_105"/>
-          <posture date="13261.22" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_106"/>
-          <posture date="14040.00" value="hum3" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_107"/>
-          <pitch date="14040.00" note.ref="#n115d2p7" xml:id="vocal_108"/>
-          <glottis date="14040.00" value="breathy60" xml:id="vocal_109"/>
-          <pressure date="14040.00" value="4686" xml:id="vocal_110"/>
-          <pitch date="14400.00" note.ref="#nmcrdu5" xml:id="vocal_111"/>
-          <glottis date="14400.00" value="breathy60" xml:id="vocal_112"/>
-          <pressure date="14400.00" value="5155" xml:id="vocal_113"/>
-          <pitch date="14760.00" note.ref="#nhbmeod" xml:id="vocal_114"/>
-          <glottis date="14760.00" value="breathy60" xml:id="vocal_115"/>
-          <pressure date="14760.00" value="5378" xml:id="vocal_116"/>
-          <pitch date="15120.00" note.ref="#n18bx34c" xml:id="vocal_117"/>
-          <glottis date="15120.00" value="modal" xml:id="vocal_118"/>
-          <pressure date="15120.00" value="4587" xml:id="vocal_119"/>
-          <pitch date="15480.00" note.ref="#n1nt4vth" xml:id="vocal_120"/>
-          <glottis date="15480.00" value="breathy60" xml:id="vocal_121"/>
-          <pressure date="15480.00" value="7242" xml:id="vocal_122"/>
-          <pressure date="15676.73" value="3258" xml:id="vocal_123"/>
-          <inflection date="15676.73" type="fall" depthSt="-3.05" durationMs="268" xml:id="vocal_124"/>
-          <pressure date="15829.69" value="0" xml:id="vocal_125"/>
-          <inflection date="15840.00" type="scoop" depthSt="-0.25" durationMs="220" xml:id="vocal_126"/>
-          <posture date="15840.00" value="hum1" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_127"/>
-          <pitch date="15840.00" note.ref="#n104mme9" xml:id="vocal_128"/>
-          <glottis date="15840.00" value="breathy60" xml:id="vocal_129"/>
-          <pressure date="15840.00" value="2874" xml:id="vocal_130"/>
-          <breath date="15866.82" duration="54.65" through="nose" xml:id="vocal_131"/>
-          <pressure date="16151.09" value="5746" xml:id="vocal_132"/>
-          <posture date="16488.67" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_133"/>
-          <posture date="16920.00" value="hum3" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_134"/>
-          <pitch date="16920.00" note.ref="#nt5mh08" xml:id="vocal_135"/>
-          <glottis date="16920.00" value="breathy" xml:id="vocal_136"/>
-          <pressure date="16920.00" value="4641" xml:id="vocal_137"/>
-          <pitch date="17280.00" note.ref="#nblqaln" xml:id="vocal_138"/>
-          <glottis date="17280.00" value="breathy" xml:id="vocal_139"/>
-          <pressure date="17280.00" value="3328" xml:id="vocal_140"/>
-          <posture date="17640.00" value="hum1" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_141"/>
-          <pitch date="17640.00" note.ref="#ndk2f5a" xml:id="vocal_142"/>
-          <glottis date="17640.00" value="breathy" xml:id="vocal_143"/>
-          <pressure date="17640.00" value="2645" xml:id="vocal_144"/>
-          <pitch date="18000.00" note.ref="#nu68um5" portamento.ref="#ornament_18000" xml:id="vocal_145"/>
-          <glottis date="18000.00" value="breathy" xml:id="vocal_146"/>
-          <pressure date="18000.00" value="3298" xml:id="vocal_147"/>
-          <pitch date="18360.00" note.ref="#n1wnssb3" xml:id="vocal_148"/>
-          <glottis date="18360.00" value="breathy" xml:id="vocal_149"/>
-          <pressure date="18360.00" value="4132" xml:id="vocal_150"/>
-          <posture date="18720.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_151"/>
-          <pitch date="18720.00" note.ref="#n9bflex" xml:id="vocal_152"/>
-          <glottis date="18720.00" value="breathy" xml:id="vocal_153"/>
-          <pressure date="18720.00" value="3474" xml:id="vocal_154"/>
-          <pitch date="19080.00" note.ref="#n1szwl1m" portamento.ref="#ornament_19080" xml:id="vocal_155"/>
-          <glottis date="19080.00" value="breathy60" xml:id="vocal_156"/>
-          <pressure date="19080.00" value="4527" xml:id="vocal_157"/>
-          <pitch date="19440.00" note.ref="#n4tf26j" portamento.ref="#ornament_19440" xml:id="vocal_158"/>
-          <glottis date="19440.00" value="breathy60" xml:id="vocal_159"/>
-          <pressure date="19440.00" value="4495" xml:id="vocal_160"/>
-          <posture date="20062.73" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_161"/>
-          <pitch date="20520.00" note.ref="#n1ynqscg" portamento.ref="#ornament_20520" xml:id="vocal_162"/>
-          <glottis date="20520.00" value="breathy" xml:id="vocal_163"/>
-          <pressure date="20520.00" value="3313" xml:id="vocal_164"/>
-          <pitch date="20880.00" note.ref="#nlnxt25" portamento.ref="#ornament_20880" xml:id="vocal_165"/>
-          <glottis date="20880.00" value="breathy60" xml:id="vocal_166"/>
-          <pressure date="20880.00" value="3481" xml:id="vocal_167"/>
-          <posture date="21224.44" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_168"/>
-          <pressure date="21460.61" value="1567" xml:id="vocal_169"/>
-          <inflection date="21460.61" type="fall" depthSt="-1.95" durationMs="268" xml:id="vocal_170"/>
-          <pressure date="21599.68" value="0" xml:id="vocal_171"/>
-          <inflection date="21600.00" type="scoop" depthSt="-0.97" durationMs="220" xml:id="vocal_172"/>
-          <posture date="21600.00" value="hum2" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_173"/>
-          <pitch date="21600.00" note.ref="#n1qoq9d6" xml:id="vocal_174"/>
-          <glottis date="21600.00" value="breathy60" xml:id="vocal_175"/>
-          <pressure date="21600.00" value="2373" xml:id="vocal_176"/>
-          <breath date="21628.72" duration="41.21" through="nose" xml:id="vocal_177"/>
-          <posture date="21834.90" value="hum2" toward="open1" amount="0.08" transitionMs="1400" xml:id="vocal_178"/>
-          <pressure date="21884.61" value="4747" xml:id="vocal_179"/>
-          <posture date="22055.82" value="hum3" toward="open1" amount="0.08" transitionMs="600" xml:id="vocal_180"/>
-          <posture date="22320.00" value="hum1" toward="open1" amount="0.08" transitionMs="400" xml:id="vocal_181"/>
-          <pitch date="22320.00" note.ref="#nc05e7t" portamento.ref="#ornament_22320" xml:id="vocal_182"/>
-          <glottis date="22320.00" value="breathy60" xml:id="vocal_183"/>
-          <pressure date="22320.00" value="3657" xml:id="vocal_184"/>
-          <posture date="23127.33" value="hum2" toward="open1" amount="0.08" transitionMs="600" xml:id="vocal_185"/>
-          <posture date="23478.16" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_186"/>
-          <pressure date="23642.18" value="1646" xml:id="vocal_187"/>
-          <inflection date="23642.18" type="fall" depthSt="-2.1" durationMs="268" xml:id="vocal_188"/>
-          <inflection date="23760.00" type="scoop" depthSt="-2.19" durationMs="220" xml:id="vocal_189"/>
-          <posture date="23760.00" value="hum3" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_190"/>
-          <pitch date="23760.00" note.ref="#nxbdd6x" xml:id="vocal_191"/>
-          <glottis date="23760.00" value="breathy60" xml:id="vocal_192"/>
-          <pressure date="23760.00" value="2351" xml:id="vocal_193"/>
-          <pressure date="23774.13" value="0" xml:id="vocal_194"/>
-          <breath date="23809.60" duration="54.1" through="nose" xml:id="vocal_195"/>
-          <pressure date="24125.82" value="4703" xml:id="vocal_196"/>
-          <posture date="24776.66" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_197"/>
-          <posture date="25560.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_198"/>
-          <pitch date="25560.00" note.ref="#nrbga5m" xml:id="vocal_199"/>
-          <glottis date="25560.00" value="breathy60" xml:id="vocal_200"/>
-          <pressure date="25560.00" value="4017" xml:id="vocal_201"/>
-          <pitch date="25920.00" note.ref="#n1ogvejs" xml:id="vocal_202"/>
-          <glottis date="25920.00" value="breathy60" xml:id="vocal_203"/>
-          <pressure date="25920.00" value="3890" xml:id="vocal_204"/>
-          <pitch date="26280.00" note.ref="#n1qzl4hr" xml:id="vocal_205"/>
-          <glottis date="26280.00" value="breathy" xml:id="vocal_206"/>
-          <pressure date="26280.00" value="4309" xml:id="vocal_207"/>
-          <pitch date="26640.00" note.ref="#n10g2bbj" xml:id="vocal_208"/>
-          <glottis date="26640.00" value="breathy" xml:id="vocal_209"/>
-          <pressure date="26640.00" value="3479" xml:id="vocal_210"/>
-          <pitch date="27000.00" note.ref="#nv84jxp" xml:id="vocal_211"/>
-          <glottis date="27000.00" value="breathy" xml:id="vocal_212"/>
-          <pressure date="27000.00" value="4400" xml:id="vocal_213"/>
-          <posture date="27360.00" value="hum3" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_214"/>
-          <pitch date="27360.00" note.ref="#n162mama" portamento.ref="#ornament_27360" xml:id="vocal_215"/>
-          <glottis date="27360.00" value="breathy" xml:id="vocal_216"/>
-          <pressure date="27360.00" value="3918" xml:id="vocal_217"/>
-          <lips date="27404.80" value="closure" durationMs="70" xml:id="vocal_218"/>
-          <posture date="28216.36" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_219"/>
-          <pitch date="28800.00" note.ref="#n1nv0ztz" portamento.ref="#ornament_28800" xml:id="vocal_220"/>
-          <glottis date="28800.00" value="breathy60" xml:id="vocal_221"/>
-          <pressure date="28800.00" value="5143" xml:id="vocal_222"/>
-          <pitch date="29160.00" note.ref="#n105patq" xml:id="vocal_223"/>
-          <glottis date="29160.00" value="breathy" xml:id="vocal_224"/>
-          <pressure date="29160.00" value="3656" xml:id="vocal_225"/>
-          <pitch date="29520.00" note.ref="#n1i66osm" portamento.ref="#ornament_29520" xml:id="vocal_226"/>
-          <glottis date="29520.00" value="breathy60" xml:id="vocal_227"/>
-          <pressure date="29520.00" value="4017" xml:id="vocal_228"/>
-          <lips date="29625.30" value="closure" durationMs="70" xml:id="vocal_229"/>
-          <posture date="29880.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_230"/>
-          <pitch date="29880.00" note.ref="#n1rph3w3" xml:id="vocal_231"/>
-          <glottis date="29880.00" value="breathy" xml:id="vocal_232"/>
-          <pressure date="29880.00" value="2973" xml:id="vocal_233"/>
-          <pitch date="30240.00" note.ref="#n1sw27dc" portamento.ref="#ornament_30240" xml:id="vocal_234"/>
-          <glottis date="30240.00" value="breathy60" xml:id="vocal_235"/>
-          <pressure date="30240.00" value="4536" xml:id="vocal_236"/>
-          <lips date="30309.08" value="closure" durationMs="70" xml:id="vocal_237"/>
-          <pitch date="30600.00" note.ref="#ni5wp4g" xml:id="vocal_238"/>
-          <glottis date="30600.00" value="breathy" xml:id="vocal_239"/>
-          <pressure date="30600.00" value="3814" xml:id="vocal_240"/>
-          <pitch date="30960.00" note.ref="#n1ix0t3p" portamento.ref="#ornament_30960" xml:id="vocal_241"/>
-          <glottis date="30960.00" value="breathy60" xml:id="vocal_242"/>
-          <pressure date="30960.00" value="4069" xml:id="vocal_243"/>
-          <lips date="30969.08" value="closure" durationMs="70" xml:id="vocal_244"/>
-          <posture date="31320.00" value="hum3" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_245"/>
-          <pitch date="31320.00" note.ref="#n80m4vn" xml:id="vocal_246"/>
-          <glottis date="31320.00" value="breathy60" xml:id="vocal_247"/>
-          <pressure date="31320.00" value="3465" xml:id="vocal_248"/>
-          <pitch date="31680.00" note.ref="#nlbef7n" portamento.ref="#ornament_31680" xml:id="vocal_249"/>
-          <glottis date="31680.00" value="breathy60" xml:id="vocal_250"/>
-          <pressure date="31680.00" value="4549" xml:id="vocal_251"/>
-          <pitch date="32040.00" note.ref="#nfl0rmk" portamento.ref="#ornament_32040" xml:id="vocal_252"/>
-          <glottis date="32040.00" value="breathy60" xml:id="vocal_253"/>
-          <pressure date="32040.00" value="4655" xml:id="vocal_254"/>
-          <posture date="32400.00" value="hum3" toward="open1" amount="0.08" transitionMs="1000" xml:id="vocal_255"/>
-          <pitch date="32400.00" note.ref="#n171h9f6" portamento.ref="#ornament_32400" xml:id="vocal_256"/>
-          <glottis date="32400.00" value="breathy60" xml:id="vocal_257"/>
-          <pressure date="32400.00" value="4400" xml:id="vocal_258"/>
-          <posture date="32760.00" value="hum1" toward="open1" amount="0.08" transitionMs="400" xml:id="vocal_259"/>
-          <pitch date="32760.00" note.ref="#ntj2e8n" xml:id="vocal_260"/>
-          <glottis date="32760.00" value="breathy60" xml:id="vocal_261"/>
-          <pressure date="32760.00" value="4487" xml:id="vocal_262"/>
-          <pitch date="33120.00" note.ref="#nusg357" portamento.ref="#ornament_33120" xml:id="vocal_263"/>
-          <glottis date="33120.00" value="breathy60" xml:id="vocal_264"/>
-          <pressure date="33120.00" value="5862" xml:id="vocal_265"/>
-          <lips date="33180.59" value="closure" durationMs="70" xml:id="vocal_266"/>
-          <posture date="33785.78" value="hum2" toward="open1" amount="0.08" transitionMs="600" xml:id="vocal_267"/>
-          <posture date="33921.89" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_268"/>
-          <pressure date="34167.09" value="2638" xml:id="vocal_269"/>
-          <inflection date="34167.09" type="fall" depthSt="-3.25" durationMs="268" xml:id="vocal_270"/>
-          <pressure date="34375.48" value="0" xml:id="vocal_271"/>
-          <breath date="34436.10" duration="92.9" through="nose" xml:id="vocal_272"/>
-          <inflection date="34560.00" type="scoop" depthSt="-2.19" durationMs="220" xml:id="vocal_273"/>
-          <posture date="34560.00" value="hum3" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_274"/>
-          <pitch date="34560.00" note.ref="#n3x6yrh" xml:id="vocal_275"/>
-          <glottis date="34560.00" value="breathy" xml:id="vocal_276"/>
-          <pressure date="34560.00" value="2298" xml:id="vocal_277"/>
-          <pressure date="34863.62" value="4596" xml:id="vocal_278"/>
-          <posture date="34995.21" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_279"/>
-          <pitch date="35280.00" note.ref="#n3vsg4k" portamento.ref="#ornament_35280" xml:id="vocal_280"/>
-          <glottis date="35280.00" value="breathy60" xml:id="vocal_281"/>
-          <pressure date="35280.00" value="4651" xml:id="vocal_282"/>
-          <posture date="36298.01" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_283"/>
-          <posture date="37080.00" value="hum3" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_284"/>
-          <pitch date="37080.00" note.ref="#n115d2p7" xml:id="vocal_285"/>
-          <glottis date="37080.00" value="breathy60" xml:id="vocal_286"/>
-          <pressure date="37080.00" value="4805" xml:id="vocal_287"/>
-          <pitch date="37440.00" note.ref="#nmcrdu5" xml:id="vocal_288"/>
-          <glottis date="37440.00" value="breathy60" xml:id="vocal_289"/>
-          <pressure date="37440.00" value="4936" xml:id="vocal_290"/>
-          <pitch date="37800.00" note.ref="#nhbmeod" xml:id="vocal_291"/>
-          <glottis date="37800.00" value="breathy60" xml:id="vocal_292"/>
-          <pressure date="37800.00" value="5192" xml:id="vocal_293"/>
-          <posture date="38160.00" value="hum1" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_294"/>
-          <pitch date="38160.00" note.ref="#n18bx34c" xml:id="vocal_295"/>
-          <glottis date="38160.00" value="breathy60" xml:id="vocal_296"/>
-          <pressure date="38160.00" value="3564" xml:id="vocal_297"/>
-          <pitch date="38520.00" note.ref="#n1nt4vth" xml:id="vocal_298"/>
-          <glottis date="38520.00" value="breathy60" xml:id="vocal_299"/>
-          <pressure date="38520.00" value="4987" xml:id="vocal_300"/>
-          <pressure date="38729.44" value="2245" xml:id="vocal_301"/>
-          <inflection date="38729.44" type="fall" depthSt="-1.51" durationMs="268" xml:id="vocal_302"/>
-          <inflection date="38880.00" type="scoop" depthSt="-0.25" durationMs="220" xml:id="vocal_303"/>
-          <posture date="38880.00" value="hum2" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_304"/>
-          <pitch date="38880.00" note.ref="#n104mme9" xml:id="vocal_305"/>
-          <glottis date="38880.00" value="breathy60" xml:id="vocal_306"/>
-          <pressure date="38880.00" value="2953" xml:id="vocal_307"/>
-          <pressure date="38880.05" value="0" xml:id="vocal_308"/>
-          <breath date="38966.98" duration="123.73" through="nose" xml:id="vocal_309"/>
-          <pressure date="39289.22" value="5906" xml:id="vocal_310"/>
-          <posture date="39654.19" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_311"/>
-          <lips date="39957.71" value="closure" durationMs="70" xml:id="vocal_312"/>
-          <pitch date="39960.00" note.ref="#nt5mh08" xml:id="vocal_313"/>
-          <glottis date="39960.00" value="breathy60" xml:id="vocal_314"/>
-          <pressure date="39960.00" value="5414" xml:id="vocal_315"/>
-          <pitch date="40320.00" note.ref="#nblqaln" xml:id="vocal_316"/>
-          <glottis date="40320.00" value="breathy60" xml:id="vocal_317"/>
-          <pressure date="40320.00" value="4203" xml:id="vocal_318"/>
-          <posture date="40680.00" value="hum1" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_319"/>
-          <pitch date="40680.00" note.ref="#ndk2f5a" xml:id="vocal_320"/>
-          <glottis date="40680.00" value="breathy" xml:id="vocal_321"/>
-          <pressure date="40680.00" value="3796" xml:id="vocal_322"/>
-          <pitch date="41040.00" note.ref="#nu68um5" portamento.ref="#ornament_41040" xml:id="vocal_323"/>
-          <glottis date="41040.00" value="breathy" xml:id="vocal_324"/>
-          <pressure date="41040.00" value="3998" xml:id="vocal_325"/>
-          <posture date="41400.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_326"/>
-          <pitch date="41400.00" note.ref="#n1wnssb3" xml:id="vocal_327"/>
-          <glottis date="41400.00" value="breathy" xml:id="vocal_328"/>
-          <pressure date="41400.00" value="4845" xml:id="vocal_329"/>
-          <pitch date="41760.00" note.ref="#n9bflex" xml:id="vocal_330"/>
-          <glottis date="41760.00" value="breathy" xml:id="vocal_331"/>
-          <pressure date="41760.00" value="3724" xml:id="vocal_332"/>
-          <lips date="42081.74" value="closure" durationMs="70" xml:id="vocal_333"/>
-          <pitch date="42120.00" note.ref="#n1szwl1m" portamento.ref="#ornament_42120" xml:id="vocal_334"/>
-          <glottis date="42120.00" value="breathy60" xml:id="vocal_335"/>
-          <pressure date="42120.00" value="4707" xml:id="vocal_336"/>
-          <pitch date="42480.00" note.ref="#n4tf26j" portamento.ref="#ornament_42480" xml:id="vocal_337"/>
-          <glottis date="42480.00" value="breathy60" xml:id="vocal_338"/>
-          <pressure date="42480.00" value="4207" xml:id="vocal_339"/>
-          <posture date="43066.74" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_340"/>
-          <lips date="43461.09" value="closure" durationMs="70" xml:id="vocal_341"/>
-          <posture date="43560.00" value="hum1" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_342"/>
-          <pitch date="43560.00" note.ref="#n1ynqscg" portamento.ref="#ornament_43560" xml:id="vocal_343"/>
-          <glottis date="43560.00" value="breathy60" xml:id="vocal_344"/>
-          <pressure date="43560.00" value="3853" xml:id="vocal_345"/>
-          <posture date="43920.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_346"/>
-          <pitch date="43920.00" note.ref="#nlnxt25" portamento.ref="#ornament_43920" xml:id="vocal_347"/>
-          <glottis date="43920.00" value="breathy60" xml:id="vocal_348"/>
-          <pressure date="43920.00" value="3884" xml:id="vocal_349"/>
-          <posture date="44318.78" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_350"/>
-          <pitch date="44640.00" note.ref="#n1qoq9d6" portamento.ref="#ornament_44640" xml:id="vocal_351"/>
-          <glottis date="44640.00" value="breathy60" xml:id="vocal_352"/>
-          <pressure date="44640.00" value="3920" xml:id="vocal_353"/>
-          <posture date="45042.13" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_354"/>
-          <posture date="45360.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_355"/>
-          <pitch date="45360.00" note.ref="#nc05e7t" portamento.ref="#ornament_45360" xml:id="vocal_356"/>
-          <glottis date="45360.00" value="breathy" xml:id="vocal_357"/>
-          <pressure date="45360.00" value="3286" xml:id="vocal_358"/>
-          <posture date="46173.82" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_359"/>
-          <pressure date="46571.42" value="1479" xml:id="vocal_360"/>
-          <inflection date="46571.42" type="fall" depthSt="-3.14" durationMs="268" xml:id="vocal_361"/>
-          <pressure date="46697.23" value="0" xml:id="vocal_362"/>
-          <breath date="46733.45" duration="55.92" through="nose" xml:id="vocal_363"/>
-          <inflection date="46800.00" type="scoop" depthSt="-2.19" durationMs="220" xml:id="vocal_364"/>
-          <posture date="46800.00" value="hum1" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_365"/>
-          <pitch date="46800.00" note.ref="#nq5a381" xml:id="vocal_366"/>
-          <glottis date="46800.00" value="modal" xml:id="vocal_367"/>
-          <pressure date="46800.00" value="2554" xml:id="vocal_368"/>
-          <posture date="47042.95" value="hum1" toward="open1" amount="0.16" transitionMs="1400" xml:id="vocal_369"/>
-          <pressure date="47117.17" value="5109" xml:id="vocal_370"/>
-          <posture date="47799.13" value="hum2" toward="open1" amount="0.16" transitionMs="600" xml:id="vocal_371"/>
-          <posture date="48600.00" value="hum3" toward="open1" amount="0.16" transitionMs="400" xml:id="vocal_372"/>
-          <pitch date="48600.00" note.ref="#n31oyt7" xml:id="vocal_373"/>
-          <glottis date="48600.00" value="modal" xml:id="vocal_374"/>
-          <pressure date="48600.00" value="4592" xml:id="vocal_375"/>
-          <pitch date="48960.00" note.ref="#n4pgv9b" xml:id="vocal_376"/>
-          <glottis date="48960.00" value="modal" xml:id="vocal_377"/>
-          <pressure date="48960.00" value="5387" xml:id="vocal_378"/>
-          <posture date="49320.00" value="hum3" toward="open1" amount="0.25" transitionMs="1000" xml:id="vocal_379"/>
-          <pitch date="49320.00" note.ref="#nicjai7" xml:id="vocal_380"/>
-          <glottis date="49320.00" value="breathy60" xml:id="vocal_381"/>
-          <pressure date="49320.00" value="5454" xml:id="vocal_382"/>
-          <pitch date="49680.00" note.ref="#nap2mb5" xml:id="vocal_383"/>
-          <glottis date="49680.00" value="breathy60" xml:id="vocal_384"/>
-          <pressure date="49680.00" value="4587" xml:id="vocal_385"/>
-          <pitch date="50040.00" note.ref="#nx5c5ea" portamento.ref="#ornament_50040" xml:id="vocal_386"/>
-          <glottis date="50040.00" value="breathy" xml:id="vocal_387"/>
-          <pressure date="50040.00" value="2421" xml:id="vocal_388"/>
-          <pitch date="50400.00" note.ref="#n1njss1z" portamento.ref="#ornament_50400" xml:id="vocal_389"/>
-          <glottis date="50400.00" value="breathy60" xml:id="vocal_390"/>
-          <pressure date="50400.00" value="3143" xml:id="vocal_391"/>
-          <lips date="50406.71" value="closure" durationMs="70" xml:id="vocal_392"/>
-          <posture date="51140.53" value="hum1" toward="open1" amount="0.25" transitionMs="600" xml:id="vocal_393"/>
-          <pitch date="51840.00" note.ref="#n1i5ujk" xml:id="vocal_394"/>
-          <glottis date="51840.00" value="modal" xml:id="vocal_395"/>
-          <pressure date="51840.00" value="3029" xml:id="vocal_396"/>
-          <pitch date="52200.00" note.ref="#nvlszd" portamento.ref="#ornament_52200" xml:id="vocal_397"/>
-          <glottis date="52200.00" value="breathy60" xml:id="vocal_398"/>
-          <pressure date="52200.00" value="4706" xml:id="vocal_399"/>
-          <pitch date="52560.00" note.ref="#nel8wtc" portamento.ref="#ornament_52560" xml:id="vocal_400"/>
-          <glottis date="52560.00" value="breathy60" xml:id="vocal_401"/>
-          <pressure date="52560.00" value="5777" xml:id="vocal_402"/>
-          <lips date="52584.96" value="closure" durationMs="70" xml:id="vocal_403"/>
-          <pitch date="52920.00" note.ref="#n1yjao9g" xml:id="vocal_404"/>
-          <glottis date="52920.00" value="breathy60" xml:id="vocal_405"/>
-          <pressure date="52920.00" value="3271" xml:id="vocal_406"/>
-          <posture date="53280.00" value="hum2" toward="open1" amount="0.25" transitionMs="400" xml:id="vocal_407"/>
-          <pitch date="53280.00" note.ref="#nq3miud" xml:id="vocal_408"/>
-          <glottis date="53280.00" value="breathy60" xml:id="vocal_409"/>
-          <pressure date="53280.00" value="4928" xml:id="vocal_410"/>
-          <pitch date="53640.00" note.ref="#n37omq0" portamento.ref="#ornament_53640" xml:id="vocal_411"/>
-          <glottis date="53640.00" value="breathy60" xml:id="vocal_412"/>
-          <pressure date="53640.00" value="5138" xml:id="vocal_413"/>
-          <posture date="54000.00" value="hum2" toward="open1" amount="0.10" transitionMs="1000" xml:id="vocal_414"/>
-          <pitch date="54000.00" note.ref="#n1th2zai" portamento.ref="#ornament_54000" xml:id="vocal_415"/>
-          <glottis date="54000.00" value="breathy60" xml:id="vocal_416"/>
-          <pressure date="54000.00" value="5081" xml:id="vocal_417"/>
-          <posture date="54590.71" value="hum3" toward="open1" amount="0.10" transitionMs="600" xml:id="vocal_418"/>
-          <posture date="55080.00" value="hum1" toward="open1" amount="0.10" transitionMs="400" xml:id="vocal_419"/>
-          <pitch date="55080.00" note.ref="#nzsoxz2" portamento.ref="#ornament_55080" xml:id="vocal_420"/>
-          <glottis date="55080.00" value="breathy60" xml:id="vocal_421"/>
-          <pressure date="55080.00" value="4919" xml:id="vocal_422"/>
-          <pitch date="55440.00" note.ref="#n8ktpzu" portamento.ref="#ornament_55440" xml:id="vocal_423"/>
-          <glottis date="55440.00" value="breathy" xml:id="vocal_424"/>
-          <pressure date="55440.00" value="4331" xml:id="vocal_425"/>
-          <posture date="56047.82" value="hum2" toward="open1" amount="0.10" transitionMs="600" xml:id="vocal_426"/>
-          <posture date="56520.00" value="hum3" toward="open1" amount="0.10" transitionMs="400" xml:id="vocal_427"/>
-          <pitch date="56520.00" note.ref="#n3cigbz" portamento.ref="#ornament_56520" xml:id="vocal_428"/>
-          <glottis date="56520.00" value="breathy" xml:id="vocal_429"/>
-          <pressure date="56520.00" value="4178" xml:id="vocal_430"/>
-          <posture date="57111.77" value="hum1" toward="open1" amount="0.10" transitionMs="600" xml:id="vocal_431"/>
-          <posture date="57198.72" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_432"/>
-          <pressure date="57423.77" value="1881" xml:id="vocal_433"/>
-          <inflection date="57423.77" type="fall" depthSt="-3.09" durationMs="268" xml:id="vocal_434"/>
-          <pressure date="57600.00" value="0" xml:id="vocal_435"/>
-          <breath date="57720.37" duration="211.14" through="nose" xml:id="vocal_436"/>
-          <inflection date="57960.00" type="scoop" depthSt="-0.25" durationMs="220" xml:id="vocal_437"/>
-          <posture date="57960.00" value="hum2" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_438"/>
-          <pitch date="57960.00" note.ref="#nd7zg49" xml:id="vocal_439"/>
-          <glottis date="57960.00" value="breathy60" xml:id="vocal_440"/>
-          <pressure date="57960.00" value="2311" xml:id="vocal_441"/>
-          <pressure date="58142.38" value="4622" xml:id="vocal_442"/>
-          <posture date="58320.00" value="hum2" toward="open1" amount="0.09" transitionMs="1000" xml:id="vocal_443"/>
-          <pitch date="58320.00" note.ref="#n1wyaxu1" portamento.ref="#ornament_58320" xml:id="vocal_444"/>
-          <glottis date="58320.00" value="breathy60" xml:id="vocal_445"/>
-          <pressure date="58320.00" value="5157" xml:id="vocal_446"/>
-          <posture date="59305.86" value="hum3" toward="open1" amount="0.09" transitionMs="600" xml:id="vocal_447"/>
-          <posture date="60120.00" value="hum1" toward="open1" amount="0.09" transitionMs="400" xml:id="vocal_448"/>
-          <pitch date="60120.00" note.ref="#nmr4y85" xml:id="vocal_449"/>
-          <glottis date="60120.00" value="breathy60" xml:id="vocal_450"/>
-          <pressure date="60120.00" value="5846" xml:id="vocal_451"/>
-          <pitch date="60480.00" note.ref="#ntbn0u4" xml:id="vocal_452"/>
-          <glottis date="60480.00" value="modal" xml:id="vocal_453"/>
-          <pressure date="60480.00" value="4976" xml:id="vocal_454"/>
-          <pitch date="60840.00" note.ref="#n1bpwvh2" xml:id="vocal_455"/>
-          <glottis date="60840.00" value="modal" xml:id="vocal_456"/>
-          <pressure date="60840.00" value="4391" xml:id="vocal_457"/>
-          <pitch date="61200.00" note.ref="#n1eir8lh" xml:id="vocal_458"/>
-          <glottis date="61200.00" value="modal" xml:id="vocal_459"/>
-          <pressure date="61200.00" value="5158" xml:id="vocal_460"/>
-          <pitch date="61560.00" note.ref="#n811bdd" portamento.ref="#ornament_61560" xml:id="vocal_461"/>
-          <glottis date="61560.00" value="modal" xml:id="vocal_462"/>
-          <pressure date="61560.00" value="7782" xml:id="vocal_463"/>
-          <pitch date="61920.00" note.ref="#n8ifr85" portamento.ref="#ornament_61920" xml:id="vocal_464"/>
-          <glottis date="61920.00" value="modal" xml:id="vocal_465"/>
-          <pressure date="61920.00" value="8584" xml:id="vocal_466"/>
-          <lips date="61950.10" value="closure" durationMs="70" xml:id="vocal_467"/>
-          <posture date="62711.67" value="hum2" toward="open1" amount="0.09" transitionMs="600" xml:id="vocal_468"/>
-          <pitch date="63360.00" note.ref="#n1y1ooj" portamento.ref="#ornament_63360" xml:id="vocal_469"/>
-          <glottis date="63360.00" value="breathy60" xml:id="vocal_470"/>
-          <pressure date="63360.00" value="6016" xml:id="vocal_471"/>
-          <pitch date="63720.00" note.ref="#nbg2wsu" portamento.ref="#ornament_63720" xml:id="vocal_472"/>
-          <glottis date="63720.00" value="breathy" xml:id="vocal_473"/>
-          <pressure date="63720.00" value="4678" xml:id="vocal_474"/>
-          <pitch date="64080.00" note.ref="#nps5o4g" portamento.ref="#ornament_64080" xml:id="vocal_475"/>
-          <glottis date="64080.00" value="breathy60" xml:id="vocal_476"/>
-          <pressure date="64080.00" value="3562" xml:id="vocal_477"/>
-          <pitch date="64440.00" note.ref="#n1cd1now" xml:id="vocal_478"/>
-          <glottis date="64440.00" value="breathy60" xml:id="vocal_479"/>
-          <pressure date="64440.00" value="6463" xml:id="vocal_480"/>
-          <posture date="64800.00" value="hum3" toward="open1" amount="0.09" transitionMs="400" xml:id="vocal_481"/>
-          <pitch date="64800.00" note.ref="#n18wt6zr" xml:id="vocal_482"/>
-          <glottis date="64800.00" value="breathy" xml:id="vocal_483"/>
-          <pressure date="64800.00" value="3105" xml:id="vocal_484"/>
-          <pitch date="65160.00" note.ref="#nkzo23o" portamento.ref="#ornament_65160" xml:id="vocal_485"/>
-          <glottis date="65160.00" value="breathy" xml:id="vocal_486"/>
-          <pressure date="65160.00" value="3426" xml:id="vocal_487"/>
-          <pitch date="65520.00" note.ref="#n1wnb9gd" portamento.ref="#ornament_65520" xml:id="vocal_488"/>
-          <glottis date="65520.00" value="breathy60" xml:id="vocal_489"/>
-          <pressure date="65520.00" value="4011" xml:id="vocal_490"/>
-          <posture date="66162.86" value="hum1" toward="open1" amount="0.09" transitionMs="600" xml:id="vocal_491"/>
-          <pitch date="66600.00" note.ref="#nccuymd" portamento.ref="#ornament_66600" xml:id="vocal_492"/>
-          <glottis date="66600.00" value="breathy60" xml:id="vocal_493"/>
-          <pressure date="66600.00" value="3374" xml:id="vocal_494"/>
-          <pitch date="66960.00" note.ref="#ncyeubn" portamento.ref="#ornament_66960" xml:id="vocal_495"/>
-          <glottis date="66960.00" value="breathy60" xml:id="vocal_496"/>
-          <pressure date="66960.00" value="3355" xml:id="vocal_497"/>
-          <posture date="67578.12" value="hum2" toward="open1" amount="0.09" transitionMs="600" xml:id="vocal_498"/>
-          <posture date="68040.00" value="hum3" toward="open1" amount="0.09" transitionMs="400" xml:id="vocal_499"/>
-          <pitch date="68040.00" note.ref="#nvfwbn8" portamento.ref="#ornament_68040" xml:id="vocal_500"/>
-          <glottis date="68040.00" value="breathy60" xml:id="vocal_501"/>
-          <pressure date="68040.00" value="4559" xml:id="vocal_502"/>
-          <lips date="68340.97" value="closure" durationMs="70" xml:id="vocal_503"/>
-          <pitch date="68400.00" note.ref="#nljgblh" portamento.ref="#ornament_68400" xml:id="vocal_504"/>
-          <glottis date="68400.00" value="breathy60" xml:id="vocal_505"/>
-          <pressure date="68400.00" value="4547" xml:id="vocal_506"/>
-          <posture date="68831.57" value="hum1" toward="open1" amount="0.09" transitionMs="600" xml:id="vocal_507"/>
-          <pitch date="69120.00" note.ref="#n1yr8ak2" portamento.ref="#ornament_69120" xml:id="vocal_508"/>
-          <glottis date="69120.00" value="breathy" xml:id="vocal_509"/>
-          <pressure date="69120.00" value="4218" xml:id="vocal_510"/>
-          <lips date="69159.81" value="closure" durationMs="70" xml:id="vocal_511"/>
-          <posture date="69557.81" value="hum2" toward="open1" amount="0.09" transitionMs="600" xml:id="vocal_512"/>
-          <posture date="69639.72" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_513"/>
-          <pressure date="69751.91" value="1898" xml:id="vocal_514"/>
-          <inflection date="69751.91" type="fall" depthSt="-2.44" durationMs="268" xml:id="vocal_515"/>
-          <inflection date="69840.00" type="scoop" depthSt="-0.25" durationMs="220" xml:id="vocal_516"/>
-          <posture date="69840.00" value="hum3" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_517"/>
-          <pitch date="69840.00" note.ref="#njybem0" xml:id="vocal_518"/>
-          <glottis date="69840.00" value="breathy60" xml:id="vocal_519"/>
-          <pressure date="69840.00" value="2237" xml:id="vocal_520"/>
-          <pressure date="69841.32" value="0" xml:id="vocal_521"/>
-          <breath date="69893.58" duration="88.46" through="nose" xml:id="vocal_522"/>
-          <pressure date="70205.92" value="4475" xml:id="vocal_523"/>
-          <posture date="70855.05" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_524"/>
-          <posture date="71640.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_525"/>
-          <pitch date="71640.00" note.ref="#n5irkqt" xml:id="vocal_526"/>
-          <glottis date="71640.00" value="breathy60" xml:id="vocal_527"/>
-          <pressure date="71640.00" value="4353" xml:id="vocal_528"/>
-          <pitch date="72000.00" note.ref="#n734q5i" xml:id="vocal_529"/>
-          <glottis date="72000.00" value="breathy60" xml:id="vocal_530"/>
-          <pressure date="72000.00" value="4325" xml:id="vocal_531"/>
-          <posture date="72360.00" value="hum3" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_532"/>
-          <pitch date="72360.00" note.ref="#njlj1ol" xml:id="vocal_533"/>
-          <glottis date="72360.00" value="breathy60" xml:id="vocal_534"/>
-          <pressure date="72360.00" value="4618" xml:id="vocal_535"/>
-          <pitch date="72720.00" note.ref="#n1wk0yl8" xml:id="vocal_536"/>
-          <glottis date="72720.00" value="breathy60" xml:id="vocal_537"/>
-          <pressure date="72720.00" value="3603" xml:id="vocal_538"/>
-          <pitch date="73080.00" note.ref="#n8io0h4" xml:id="vocal_539"/>
-          <glottis date="73080.00" value="breathy60" xml:id="vocal_540"/>
-          <pressure date="73080.00" value="4142" xml:id="vocal_541"/>
-          <lips date="73405.02" value="closure" durationMs="70" xml:id="vocal_542"/>
-          <posture date="73440.00" value="hum1" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_543"/>
-          <pitch date="73440.00" note.ref="#n1kq1vgo" portamento.ref="#ornament_73440" xml:id="vocal_544"/>
-          <glottis date="73440.00" value="breathy" xml:id="vocal_545"/>
-          <pressure date="73440.00" value="4398" xml:id="vocal_546"/>
-          <posture date="74202.56" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_547"/>
-          <pitch date="74880.00" note.ref="#n1a7tss7" portamento.ref="#ornament_74880" xml:id="vocal_548"/>
-          <glottis date="74880.00" value="breathy60" xml:id="vocal_549"/>
-          <pressure date="74880.00" value="4228" xml:id="vocal_550"/>
-          <pitch date="75240.00" note.ref="#nwzza18" portamento.ref="#ornament_75240" xml:id="vocal_551"/>
-          <glottis date="75240.00" value="breathy60" xml:id="vocal_552"/>
-          <pressure date="75240.00" value="3659" xml:id="vocal_553"/>
-          <pitch date="75600.00" note.ref="#n51m1q" portamento.ref="#ornament_75600" xml:id="vocal_554"/>
-          <glottis date="75600.00" value="breathy60" xml:id="vocal_555"/>
-          <pressure date="75600.00" value="3573" xml:id="vocal_556"/>
-          <posture date="75960.00" value="hum3" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_557"/>
-          <pitch date="75960.00" note.ref="#n16qnxnb" xml:id="vocal_558"/>
-          <glottis date="75960.00" value="breathy60" xml:id="vocal_559"/>
-          <pressure date="75960.00" value="4221" xml:id="vocal_560"/>
-          <pitch date="76320.00" note.ref="#n1fo3s7x" portamento.ref="#ornament_76320" xml:id="vocal_561"/>
-          <glottis date="76320.00" value="breathy60" xml:id="vocal_562"/>
-          <pressure date="76320.00" value="4354" xml:id="vocal_563"/>
-          <pitch date="76680.00" note.ref="#n1sdtoih" xml:id="vocal_564"/>
-          <glottis date="76680.00" value="breathy" xml:id="vocal_565"/>
-          <pressure date="76680.00" value="4161" xml:id="vocal_566"/>
-          <pitch date="77040.00" note.ref="#nr2w40x" portamento.ref="#ornament_77040" xml:id="vocal_567"/>
-          <glottis date="77040.00" value="breathy60" xml:id="vocal_568"/>
-          <pressure date="77040.00" value="4577" xml:id="vocal_569"/>
-          <lips date="77372.98" value="closure" durationMs="70" xml:id="vocal_570"/>
-          <posture date="77400.00" value="hum1" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_571"/>
-          <pitch date="77400.00" note.ref="#n6y72zs" xml:id="vocal_572"/>
-          <glottis date="77400.00" value="breathy" xml:id="vocal_573"/>
-          <pressure date="77400.00" value="3609" xml:id="vocal_574"/>
-          <posture date="77760.00" value="hum1" toward="open1" amount="0.08" transitionMs="1000" xml:id="vocal_575"/>
-          <pitch date="77760.00" note.ref="#n1z0ua2q" portamento.ref="#ornament_77760" xml:id="vocal_576"/>
-          <glottis date="77760.00" value="breathy60" xml:id="vocal_577"/>
-          <pressure date="77760.00" value="4890" xml:id="vocal_578"/>
-          <posture date="78120.00" value="hum1" toward="open1" amount="0.17" transitionMs="1000" xml:id="vocal_579"/>
-          <pitch date="78120.00" note.ref="#n1so03gq" portamento.ref="#ornament_78120" xml:id="vocal_580"/>
-          <glottis date="78120.00" value="breathy60" xml:id="vocal_581"/>
-          <pressure date="78120.00" value="5233" xml:id="vocal_582"/>
-          <pitch date="78480.00" note.ref="#n1eurgxv" portamento.ref="#ornament_78480" xml:id="vocal_583"/>
-          <glottis date="78480.00" value="breathy60" xml:id="vocal_584"/>
-          <pressure date="78480.00" value="6079" xml:id="vocal_585"/>
-          <posture date="78840.00" value="hum2" toward="open1" amount="0.17" transitionMs="400" xml:id="vocal_586"/>
-          <pitch date="78840.00" note.ref="#n1bu3z2m" xml:id="vocal_587"/>
-          <glottis date="78840.00" value="modal" xml:id="vocal_588"/>
-          <pressure date="78840.00" value="4992" xml:id="vocal_589"/>
-          <pitch date="79200.00" note.ref="#n24lxzb" xml:id="vocal_590"/>
-          <glottis date="79200.00" value="breathy60" xml:id="vocal_591"/>
-          <pressure date="79200.00" value="5689" xml:id="vocal_592"/>
-          <posture date="79865.24" value="hum3" toward="open1" amount="0.17" transitionMs="600" xml:id="vocal_593"/>
-          <posture date="80066.90" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_594"/>
-          <pressure date="80298.96" value="2560" xml:id="vocal_595"/>
-          <inflection date="80298.96" type="fall" depthSt="-2.11" durationMs="268" xml:id="vocal_596"/>
-          <pressure date="80474.05" value="0" xml:id="vocal_597"/>
-          <breath date="80524.44" duration="77.23" through="nose" xml:id="vocal_598"/>
-          <inflection date="80640.00" type="scoop" depthSt="-0.25" durationMs="220" xml:id="vocal_599"/>
-          <posture date="80640.00" value="hum1" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_600"/>
-          <pitch date="80640.00" note.ref="#n15u273y" xml:id="vocal_601"/>
-          <glottis date="80640.00" value="breathy60" xml:id="vocal_602"/>
-          <pressure date="80640.00" value="2242" xml:id="vocal_603"/>
-          <pressure date="80879.85" value="4483" xml:id="vocal_604"/>
-          <posture date="81054.47" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_605"/>
-          <pitch date="81360.00" note.ref="#nazvjqs" portamento.ref="#ornament_81360" xml:id="vocal_606"/>
-          <glottis date="81360.00" value="breathy60" xml:id="vocal_607"/>
-          <pressure date="81360.00" value="4253" xml:id="vocal_608"/>
-          <posture date="82339.91" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_609"/>
-          <posture date="83160.00" value="hum1" toward="open1" amount="0.09" transitionMs="1000" xml:id="vocal_610"/>
-          <pitch date="83160.00" note.ref="#np65yn7" xml:id="vocal_611"/>
-          <glottis date="83160.00" value="breathy60" xml:id="vocal_612"/>
-          <pressure date="83160.00" value="4890" xml:id="vocal_613"/>
-          <pitch date="83520.00" note.ref="#n1wi5y4d" xml:id="vocal_614"/>
-          <glottis date="83520.00" value="breathy60" xml:id="vocal_615"/>
-          <pressure date="83520.00" value="4925" xml:id="vocal_616"/>
-          <pitch date="83880.00" note.ref="#n1hd827s" xml:id="vocal_617"/>
-          <glottis date="83880.00" value="breathy60" xml:id="vocal_618"/>
-          <pressure date="83880.00" value="5194" xml:id="vocal_619"/>
-          <pitch date="84240.00" note.ref="#nln4n4s" xml:id="vocal_620"/>
-          <glottis date="84240.00" value="breathy60" xml:id="vocal_621"/>
-          <pressure date="84240.00" value="4309" xml:id="vocal_622"/>
-          <posture date="84600.00" value="hum2" toward="open1" amount="0.09" transitionMs="400" xml:id="vocal_623"/>
-          <pitch date="84600.00" note.ref="#nyugz05" xml:id="vocal_624"/>
-          <glottis date="84600.00" value="breathy" xml:id="vocal_625"/>
-          <pressure date="84600.00" value="6106" xml:id="vocal_626"/>
-          <posture date="84702.66" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_627"/>
-          <pressure date="84847.25" value="2748" xml:id="vocal_628"/>
-          <inflection date="84847.25" type="fall" depthSt="-2.06" durationMs="268" xml:id="vocal_629"/>
-          <inflection date="84960.00" type="scoop" depthSt="-3.54" durationMs="220" xml:id="vocal_630"/>
-          <posture date="84960.00" value="hum3" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_631"/>
-          <pitch date="84960.00" note.ref="#napoy3h" xml:id="vocal_632"/>
-          <glottis date="84960.00" value="breathy" xml:id="vocal_633"/>
-          <pressure date="84960.00" value="2612" xml:id="vocal_634"/>
-          <pressure date="84960.00" value="0" xml:id="vocal_635"/>
-          <breath date="85028.73" duration="114.73" through="nose" xml:id="vocal_636"/>
-          <pressure date="85309.49" value="5222" xml:id="vocal_637"/>
-          <posture date="85659.38" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_638"/>
-          <posture date="86040.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_639"/>
-          <pitch date="86040.00" note.ref="#n1xofq7a" xml:id="vocal_640"/>
-          <glottis date="86040.00" value="breathy" xml:id="vocal_641"/>
-          <pressure date="86040.00" value="4979" xml:id="vocal_642"/>
-          <posture date="86241.32" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_643"/>
-          <pitch date="86400.00" note.ref="#n9borlx" xml:id="vocal_644"/>
-          <glottis date="86400.00" value="breathy" xml:id="vocal_645"/>
-          <pressure date="86400.00" value="3854" xml:id="vocal_646"/>
-          <pitch date="86760.00" note.ref="#n1ajwzom" xml:id="vocal_647"/>
-          <glottis date="86760.00" value="breathy" xml:id="vocal_648"/>
-          <pressure date="86760.00" value="2844" xml:id="vocal_649"/>
-          <pressure date="86995.02" value="1280" xml:id="vocal_650"/>
-          <inflection date="86995.02" type="fall" depthSt="-2.01" durationMs="268" xml:id="vocal_651"/>
-          <pressure date="87119.98" value="0" xml:id="vocal_652"/>
-          <inflection date="87120.00" type="scoop" depthSt="-0.97" durationMs="220" xml:id="vocal_653"/>
-          <posture date="87120.00" value="hum1" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_654"/>
-          <pitch date="87120.00" note.ref="#nc829zl" xml:id="vocal_655"/>
-          <glottis date="87120.00" value="breathy60" xml:id="vocal_656"/>
-          <pressure date="87120.00" value="1865" xml:id="vocal_657"/>
-          <breath date="87144.69" duration="34.18" through="nose" xml:id="vocal_658"/>
-          <pressure date="87364.79" value="3729" xml:id="vocal_659"/>
-          <posture date="87480.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_660"/>
-          <pitch date="87480.00" note.ref="#niemthr" xml:id="vocal_661"/>
-          <glottis date="87480.00" value="breathy" xml:id="vocal_662"/>
-          <pressure date="87480.00" value="4124" xml:id="vocal_663"/>
-          <pitch date="87840.00" note.ref="#nax4mru" portamento.ref="#ornament_87840" xml:id="vocal_664"/>
-          <glottis date="87840.00" value="breathy60" xml:id="vocal_665"/>
-          <pressure date="87840.00" value="4478" xml:id="vocal_666"/>
-          <pitch date="88200.00" note.ref="#nomyb1w" xml:id="vocal_667"/>
-          <glottis date="88200.00" value="breathy60" xml:id="vocal_668"/>
-          <pressure date="88200.00" value="4063" xml:id="vocal_669"/>
-          <pitch date="88560.00" note.ref="#n1hcubn9" xml:id="vocal_670"/>
-          <glottis date="88560.00" value="breathy" xml:id="vocal_671"/>
-          <pressure date="88560.00" value="3915" xml:id="vocal_672"/>
-          <posture date="88920.00" value="hum3" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_673"/>
-          <pitch date="88920.00" note.ref="#n1pf4x9p" xml:id="vocal_674"/>
-          <glottis date="88920.00" value="breathy" xml:id="vocal_675"/>
-          <pressure date="88920.00" value="3164" xml:id="vocal_676"/>
-          <pitch date="89280.00" note.ref="#n1b1dxbk" portamento.ref="#ornament_89280" xml:id="vocal_677"/>
-          <glottis date="89280.00" value="breathy" xml:id="vocal_678"/>
-          <pressure date="89280.00" value="4542" xml:id="vocal_679"/>
-          <posture date="89473.93" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_680"/>
-          <posture date="89640.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_681"/>
-          <pitch date="89640.00" note.ref="#nl2s10u" portamento.ref="#ornament_89640" xml:id="vocal_682"/>
-          <glottis date="89640.00" value="breathy" xml:id="vocal_683"/>
-          <pressure date="89640.00" value="4210" xml:id="vocal_684"/>
-          <posture date="89830.52" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_685"/>
-          <pitch date="90000.00" note.ref="#nbfrkhj" portamento.ref="#ornament_90000" xml:id="vocal_686"/>
-          <glottis date="90000.00" value="breathy" xml:id="vocal_687"/>
-          <pressure date="90000.00" value="4123" xml:id="vocal_688"/>
-          <posture date="90200.27" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_689"/>
-          <posture date="90360.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_690"/>
-          <pitch date="90360.00" note.ref="#netx6tx" xml:id="vocal_691"/>
-          <glottis date="90360.00" value="breathy" xml:id="vocal_692"/>
-          <pressure date="90360.00" value="3309" xml:id="vocal_693"/>
-          <posture date="90546.26" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_694"/>
-          <pressure date="90628.83" value="1488" xml:id="vocal_695"/>
-          <inflection date="90628.83" type="fall" depthSt="-2.39" durationMs="268" xml:id="vocal_696"/>
-          <pressure date="90686.64" value="0" xml:id="vocal_697"/>
-          <breath date="90702.94" duration="24.61" through="nose" xml:id="vocal_698"/>
-          <inflection date="90720.00" type="scoop" depthSt="-0.97" durationMs="220" xml:id="vocal_699"/>
-          <posture date="90720.00" value="hum1" toward="open2" amount="0.00" transitionMs="200" xml:id="vocal_700"/>
-          <pitch date="90720.00" note.ref="#n5biyt4" xml:id="vocal_701"/>
-          <glottis date="90720.00" value="breathy" xml:id="vocal_702"/>
-          <pressure date="90720.00" value="1829" xml:id="vocal_703"/>
-          <pressure date="90813.68" value="3658" xml:id="vocal_704"/>
-          <posture date="90939.72" value="hum2" toward="open2" amount="0.00" transitionMs="600" xml:id="vocal_705"/>
-          <posture date="91080.00" value="hum3" toward="open2" amount="0.00" transitionMs="400" xml:id="vocal_706"/>
-          <pitch date="91080.00" note.ref="#n14kyg9r" portamento.ref="#ornament_91080" xml:id="vocal_707"/>
-          <glottis date="91080.00" value="breathy" xml:id="vocal_708"/>
-          <pressure date="91080.00" value="3240" xml:id="vocal_709"/>
-          <posture date="91305.24" value="hum1" toward="open2" amount="0.00" transitionMs="600" xml:id="vocal_710"/>
-          <posture date="91440.00" value="hum2" toward="open2" amount="0.00" transitionMs="400" xml:id="vocal_711"/>
-          <pitch date="91440.00" note.ref="#n1ennzqw" portamento.ref="#ornament_91440" xml:id="vocal_712"/>
-          <glottis date="91440.00" value="breathy" xml:id="vocal_713"/>
-          <pressure date="91440.00" value="8005" xml:id="vocal_714"/>
-          <posture date="91463.90" value="hum3" toward="open2" amount="0.00" transitionMs="600" xml:id="vocal_715"/>
-          <lips date="91463.90" value="closure" durationMs="70" xml:id="vocal_716"/>
-          <pressure date="91463.90" value="3602" xml:id="vocal_717"/>
-          <inflection date="91463.90" type="fall" depthSt="-2.51" durationMs="268" xml:id="vocal_718"/>
-          <pressure date="91463.90" value="0" xml:id="vocal_719"/>
+          <pressure date="0.00" factor="1.00" from="0.50" transitionMs="400" xml:id="vocal_5"/>
+          <posture date="223.71" value="hum2" toward="open1" amount="0.07" transitionMs="1400" xml:id="vocal_6"/>
+          <pitch date="720.00" note.ref="#nxbdd6x" portamento.ref="#ornament_720" xml:id="vocal_7"/>
+          <posture date="1727.46" value="hum3" toward="open1" amount="0.07" transitionMs="600" xml:id="vocal_8"/>
+          <posture date="2520.00" value="hum1" toward="open1" amount="0.07" transitionMs="400" xml:id="vocal_9"/>
+          <pitch date="2520.00" note.ref="#nrbga5m" xml:id="vocal_10"/>
+          <pitch date="2880.00" note.ref="#n1ogvejs" xml:id="vocal_11"/>
+          <pitch date="3240.00" note.ref="#n1qzl4hr" xml:id="vocal_12"/>
+          <pitch date="3600.00" note.ref="#n10g2bbj" xml:id="vocal_13"/>
+          <pitch date="3960.00" note.ref="#nv84jxp" xml:id="vocal_14"/>
+          <posture date="4320.00" value="hum2" toward="open1" amount="0.07" transitionMs="400" xml:id="vocal_15"/>
+          <pitch date="4320.00" note.ref="#n162mama" portamento.ref="#ornament_4320" xml:id="vocal_16"/>
+          <lips date="4347.99" value="closure" durationMs="70" xml:id="vocal_17"/>
+          <posture date="5199.89" value="hum3" toward="open1" amount="0.07" transitionMs="600" xml:id="vocal_18"/>
+          <pitch date="5760.00" note.ref="#n1nv0ztz" portamento.ref="#ornament_5760" xml:id="vocal_19"/>
+          <lips date="5823.36" value="closure" durationMs="70" xml:id="vocal_20"/>
+          <pitch date="6120.00" note.ref="#n105patq" portamento.ref="#ornament_6120" xml:id="vocal_21"/>
+          <pitch date="6480.00" note.ref="#n1i66osm" portamento.ref="#ornament_6480" xml:id="vocal_22"/>
+          <lips date="6531.71" value="closure" durationMs="70" xml:id="vocal_23"/>
+          <posture date="6840.00" value="hum1" toward="open1" amount="0.07" transitionMs="400" xml:id="vocal_24"/>
+          <pitch date="6840.00" note.ref="#n1rph3w3" xml:id="vocal_25"/>
+          <posture date="6840.00" value="hum1" toward="open1" amount="0.00" transitionMs="564" xml:id="vocal_26"/>
+          <pressure date="7068.66" factor="0.45" transitionMs="267" xml:id="vocal_27"/>
+          <inflection date="7068.66" type="fall" depthSt="-2.75" durationMs="268" xml:id="vocal_28"/>
+          <inflection date="7200.00" type="scoop" depthSt="-0.08" durationMs="220" xml:id="vocal_29"/>
+          <posture date="7200.00" value="hum2" toward="open4" amount="0.00" transitionMs="200" xml:id="vocal_30"/>
+          <pitch date="7200.00" note.ref="#n1sw27dc" xml:id="vocal_31"/>
+          <pressure date="7201.51" factor="0.00" transitionMs="40" xml:id="vocal_32"/>
+          <breath date="7249.28" duration="73.84" through="nose" xml:id="vocal_33"/>
+          <pressure date="7339.51" factor="1.00" from="0.50" transitionMs="288" xml:id="vocal_34"/>
+          <pitch date="7560.00" note.ref="#ni5wp4g" xml:id="vocal_35"/>
+          <pitch date="7920.00" note.ref="#n1ix0t3p" portamento.ref="#ornament_7920" xml:id="vocal_36"/>
+          <lips date="7936.15" value="closure" durationMs="70" xml:id="vocal_37"/>
+          <posture date="8280.00" value="hum3" toward="open4" amount="0.00" transitionMs="400" xml:id="vocal_38"/>
+          <pitch date="8280.00" note.ref="#n80m4vn" xml:id="vocal_39"/>
+          <pitch date="8640.00" note.ref="#nlbef7n" portamento.ref="#ornament_8640" xml:id="vocal_40"/>
+          <lips date="8650.79" value="closure" durationMs="70" xml:id="vocal_41"/>
+          <pitch date="9000.00" note.ref="#nfl0rmk" portamento.ref="#ornament_9000" xml:id="vocal_42"/>
+          <pitch date="9360.00" note.ref="#n171h9f6" portamento.ref="#ornament_9360" xml:id="vocal_43"/>
+          <posture date="9720.00" value="hum1" toward="open4" amount="0.00" transitionMs="400" xml:id="vocal_44"/>
+          <pitch date="9720.00" note.ref="#ntj2e8n" xml:id="vocal_45"/>
+          <pitch date="10080.00" note.ref="#nusg357" portamento.ref="#ornament_10080" xml:id="vocal_46"/>
+          <lips date="10168.42" value="closure" durationMs="70" xml:id="vocal_47"/>
+          <posture date="10780.46" value="hum2" toward="open4" amount="0.00" transitionMs="600" xml:id="vocal_48"/>
+          <pressure date="11209.86" factor="0.45" transitionMs="267" xml:id="vocal_49"/>
+          <inflection date="11209.86" type="fall" depthSt="-3.29" durationMs="268" xml:id="vocal_50"/>
+          <pressure date="11395.92" factor="0.00" transitionMs="40" xml:id="vocal_51"/>
+          <breath date="11449.48" duration="82.08" through="nose" xml:id="vocal_52"/>
+          <inflection date="11520.00" type="scoop" depthSt="-2.19" durationMs="220" xml:id="vocal_53"/>
+          <posture date="11520.00" value="hum3" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_54"/>
+          <pitch date="11520.00" note.ref="#n3x6yrh" xml:id="vocal_55"/>
+          <pressure date="11548.94" factor="1.00" from="0.50" transitionMs="400" xml:id="vocal_56"/>
+          <posture date="11965.29" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_57"/>
+          <pitch date="12240.00" note.ref="#n3vsg4k" portamento.ref="#ornament_12240" xml:id="vocal_58"/>
+          <lips date="12268.35" value="closure" durationMs="70" xml:id="vocal_59"/>
+          <posture date="13261.22" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_60"/>
+          <posture date="14040.00" value="hum3" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_61"/>
+          <pitch date="14040.00" note.ref="#n115d2p7" xml:id="vocal_62"/>
+          <pitch date="14400.00" note.ref="#nmcrdu5" xml:id="vocal_63"/>
+          <pitch date="14760.00" note.ref="#nhbmeod" xml:id="vocal_64"/>
+          <pitch date="15120.00" note.ref="#n18bx34c" xml:id="vocal_65"/>
+          <pitch date="15480.00" note.ref="#n1nt4vth" xml:id="vocal_66"/>
+          <pressure date="15676.73" factor="0.45" transitionMs="267" xml:id="vocal_67"/>
+          <inflection date="15676.73" type="fall" depthSt="-3.05" durationMs="268" xml:id="vocal_68"/>
+          <pressure date="15829.69" factor="0.00" transitionMs="40" xml:id="vocal_69"/>
+          <inflection date="15840.00" type="scoop" depthSt="-0.25" durationMs="220" xml:id="vocal_70"/>
+          <posture date="15840.00" value="hum1" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_71"/>
+          <pitch date="15840.00" note.ref="#n104mme9" xml:id="vocal_72"/>
+          <breath date="15866.82" duration="54.65" through="nose" xml:id="vocal_73"/>
+          <pressure date="15935.76" factor="1.00" from="0.50" transitionMs="400" xml:id="vocal_74"/>
+          <posture date="16488.67" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_75"/>
+          <posture date="16920.00" value="hum3" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_76"/>
+          <pitch date="16920.00" note.ref="#nt5mh08" xml:id="vocal_77"/>
+          <pitch date="17280.00" note.ref="#nblqaln" xml:id="vocal_78"/>
+          <posture date="17640.00" value="hum1" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_79"/>
+          <pitch date="17640.00" note.ref="#ndk2f5a" xml:id="vocal_80"/>
+          <pitch date="18000.00" note.ref="#nu68um5" portamento.ref="#ornament_18000" xml:id="vocal_81"/>
+          <pitch date="18360.00" note.ref="#n1wnssb3" xml:id="vocal_82"/>
+          <posture date="18720.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_83"/>
+          <pitch date="18720.00" note.ref="#n9bflex" xml:id="vocal_84"/>
+          <pitch date="19080.00" note.ref="#n1szwl1m" portamento.ref="#ornament_19080" xml:id="vocal_85"/>
+          <pitch date="19440.00" note.ref="#n4tf26j" portamento.ref="#ornament_19440" xml:id="vocal_86"/>
+          <posture date="20062.73" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_87"/>
+          <pitch date="20520.00" note.ref="#n1ynqscg" portamento.ref="#ornament_20520" xml:id="vocal_88"/>
+          <pitch date="20880.00" note.ref="#nlnxt25" portamento.ref="#ornament_20880" xml:id="vocal_89"/>
+          <posture date="21224.44" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_90"/>
+          <pressure date="21460.61" factor="0.45" transitionMs="267" xml:id="vocal_91"/>
+          <inflection date="21460.61" type="fall" depthSt="-1.95" durationMs="268" xml:id="vocal_92"/>
+          <pressure date="21599.68" factor="0.00" transitionMs="40" xml:id="vocal_93"/>
+          <inflection date="21600.00" type="scoop" depthSt="-0.97" durationMs="220" xml:id="vocal_94"/>
+          <posture date="21600.00" value="hum2" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_95"/>
+          <pitch date="21600.00" note.ref="#n1qoq9d6" xml:id="vocal_96"/>
+          <breath date="21628.72" duration="41.21" through="nose" xml:id="vocal_97"/>
+          <pressure date="21682.66" factor="1.00" from="0.50" transitionMs="400" xml:id="vocal_98"/>
+          <posture date="21834.90" value="hum2" toward="open1" amount="0.08" transitionMs="1400" xml:id="vocal_99"/>
+          <posture date="22055.82" value="hum3" toward="open1" amount="0.08" transitionMs="600" xml:id="vocal_100"/>
+          <posture date="22320.00" value="hum1" toward="open1" amount="0.08" transitionMs="400" xml:id="vocal_101"/>
+          <pitch date="22320.00" note.ref="#nc05e7t" portamento.ref="#ornament_22320" xml:id="vocal_102"/>
+          <posture date="23127.33" value="hum2" toward="open1" amount="0.08" transitionMs="600" xml:id="vocal_103"/>
+          <posture date="23478.16" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_104"/>
+          <pressure date="23642.18" factor="0.45" transitionMs="267" xml:id="vocal_105"/>
+          <inflection date="23642.18" type="fall" depthSt="-2.1" durationMs="268" xml:id="vocal_106"/>
+          <inflection date="23760.00" type="scoop" depthSt="-2.19" durationMs="220" xml:id="vocal_107"/>
+          <posture date="23760.00" value="hum3" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_108"/>
+          <pitch date="23760.00" note.ref="#nxbdd6x" xml:id="vocal_109"/>
+          <pressure date="23774.13" factor="0.00" transitionMs="40" xml:id="vocal_110"/>
+          <breath date="23809.60" duration="54.1" through="nose" xml:id="vocal_111"/>
+          <pressure date="23878.30" factor="1.00" from="0.50" transitionMs="400" xml:id="vocal_112"/>
+          <posture date="24776.66" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_113"/>
+          <posture date="25560.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_114"/>
+          <pitch date="25560.00" note.ref="#nrbga5m" xml:id="vocal_115"/>
+          <pitch date="25920.00" note.ref="#n1ogvejs" xml:id="vocal_116"/>
+          <pitch date="26280.00" note.ref="#n1qzl4hr" xml:id="vocal_117"/>
+          <pitch date="26640.00" note.ref="#n10g2bbj" xml:id="vocal_118"/>
+          <pitch date="27000.00" note.ref="#nv84jxp" xml:id="vocal_119"/>
+          <posture date="27360.00" value="hum3" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_120"/>
+          <pitch date="27360.00" note.ref="#n162mama" portamento.ref="#ornament_27360" xml:id="vocal_121"/>
+          <lips date="27404.80" value="closure" durationMs="70" xml:id="vocal_122"/>
+          <posture date="28216.36" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_123"/>
+          <pitch date="28800.00" note.ref="#n1nv0ztz" portamento.ref="#ornament_28800" xml:id="vocal_124"/>
+          <pitch date="29160.00" note.ref="#n105patq" xml:id="vocal_125"/>
+          <pitch date="29520.00" note.ref="#n1i66osm" portamento.ref="#ornament_29520" xml:id="vocal_126"/>
+          <lips date="29625.30" value="closure" durationMs="70" xml:id="vocal_127"/>
+          <posture date="29880.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_128"/>
+          <pitch date="29880.00" note.ref="#n1rph3w3" xml:id="vocal_129"/>
+          <pitch date="30240.00" note.ref="#n1sw27dc" portamento.ref="#ornament_30240" xml:id="vocal_130"/>
+          <lips date="30309.08" value="closure" durationMs="70" xml:id="vocal_131"/>
+          <pitch date="30600.00" note.ref="#ni5wp4g" xml:id="vocal_132"/>
+          <pitch date="30960.00" note.ref="#n1ix0t3p" portamento.ref="#ornament_30960" xml:id="vocal_133"/>
+          <lips date="30969.08" value="closure" durationMs="70" xml:id="vocal_134"/>
+          <posture date="31320.00" value="hum3" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_135"/>
+          <pitch date="31320.00" note.ref="#n80m4vn" xml:id="vocal_136"/>
+          <pitch date="31680.00" note.ref="#nlbef7n" portamento.ref="#ornament_31680" xml:id="vocal_137"/>
+          <pitch date="32040.00" note.ref="#nfl0rmk" portamento.ref="#ornament_32040" xml:id="vocal_138"/>
+          <posture date="32400.00" value="hum3" toward="open1" amount="0.08" transitionMs="1000" xml:id="vocal_139"/>
+          <pitch date="32400.00" note.ref="#n171h9f6" portamento.ref="#ornament_32400" xml:id="vocal_140"/>
+          <posture date="32760.00" value="hum1" toward="open1" amount="0.08" transitionMs="400" xml:id="vocal_141"/>
+          <pitch date="32760.00" note.ref="#ntj2e8n" xml:id="vocal_142"/>
+          <pitch date="33120.00" note.ref="#nusg357" portamento.ref="#ornament_33120" xml:id="vocal_143"/>
+          <lips date="33180.59" value="closure" durationMs="70" xml:id="vocal_144"/>
+          <posture date="33785.78" value="hum2" toward="open1" amount="0.08" transitionMs="600" xml:id="vocal_145"/>
+          <posture date="33921.89" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_146"/>
+          <pressure date="34167.09" factor="0.45" transitionMs="267" xml:id="vocal_147"/>
+          <inflection date="34167.09" type="fall" depthSt="-3.25" durationMs="268" xml:id="vocal_148"/>
+          <pressure date="34375.48" factor="0.00" transitionMs="40" xml:id="vocal_149"/>
+          <breath date="34436.10" duration="92.9" through="nose" xml:id="vocal_150"/>
+          <pressure date="34548.69" factor="1.00" from="0.50" transitionMs="400" xml:id="vocal_151"/>
+          <inflection date="34560.00" type="scoop" depthSt="-2.19" durationMs="220" xml:id="vocal_152"/>
+          <posture date="34560.00" value="hum3" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_153"/>
+          <pitch date="34560.00" note.ref="#n3x6yrh" xml:id="vocal_154"/>
+          <posture date="34995.21" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_155"/>
+          <pitch date="35280.00" note.ref="#n3vsg4k" portamento.ref="#ornament_35280" xml:id="vocal_156"/>
+          <posture date="36298.01" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_157"/>
+          <posture date="37080.00" value="hum3" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_158"/>
+          <pitch date="37080.00" note.ref="#n115d2p7" xml:id="vocal_159"/>
+          <pitch date="37440.00" note.ref="#nmcrdu5" xml:id="vocal_160"/>
+          <pitch date="37800.00" note.ref="#nhbmeod" xml:id="vocal_161"/>
+          <posture date="38160.00" value="hum1" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_162"/>
+          <pitch date="38160.00" note.ref="#n18bx34c" xml:id="vocal_163"/>
+          <pitch date="38520.00" note.ref="#n1nt4vth" xml:id="vocal_164"/>
+          <pressure date="38729.44" factor="0.45" transitionMs="267" xml:id="vocal_165"/>
+          <inflection date="38729.44" type="fall" depthSt="-1.51" durationMs="268" xml:id="vocal_166"/>
+          <inflection date="38880.00" type="scoop" depthSt="-0.25" durationMs="220" xml:id="vocal_167"/>
+          <posture date="38880.00" value="hum2" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_168"/>
+          <pitch date="38880.00" note.ref="#n104mme9" xml:id="vocal_169"/>
+          <pressure date="38880.05" factor="0.00" transitionMs="40" xml:id="vocal_170"/>
+          <breath date="38966.98" duration="123.73" through="nose" xml:id="vocal_171"/>
+          <pressure date="39102.38" factor="1.00" from="0.50" transitionMs="400" xml:id="vocal_172"/>
+          <posture date="39654.19" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_173"/>
+          <lips date="39957.71" value="closure" durationMs="70" xml:id="vocal_174"/>
+          <pitch date="39960.00" note.ref="#nt5mh08" xml:id="vocal_175"/>
+          <pitch date="40320.00" note.ref="#nblqaln" xml:id="vocal_176"/>
+          <posture date="40680.00" value="hum1" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_177"/>
+          <pitch date="40680.00" note.ref="#ndk2f5a" xml:id="vocal_178"/>
+          <pitch date="41040.00" note.ref="#nu68um5" portamento.ref="#ornament_41040" xml:id="vocal_179"/>
+          <posture date="41400.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_180"/>
+          <pitch date="41400.00" note.ref="#n1wnssb3" xml:id="vocal_181"/>
+          <pitch date="41760.00" note.ref="#n9bflex" xml:id="vocal_182"/>
+          <lips date="42081.74" value="closure" durationMs="70" xml:id="vocal_183"/>
+          <pitch date="42120.00" note.ref="#n1szwl1m" portamento.ref="#ornament_42120" xml:id="vocal_184"/>
+          <pitch date="42480.00" note.ref="#n4tf26j" portamento.ref="#ornament_42480" xml:id="vocal_185"/>
+          <posture date="43066.74" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_186"/>
+          <lips date="43461.09" value="closure" durationMs="70" xml:id="vocal_187"/>
+          <posture date="43560.00" value="hum1" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_188"/>
+          <pitch date="43560.00" note.ref="#n1ynqscg" portamento.ref="#ornament_43560" xml:id="vocal_189"/>
+          <posture date="43920.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_190"/>
+          <pitch date="43920.00" note.ref="#nlnxt25" portamento.ref="#ornament_43920" xml:id="vocal_191"/>
+          <posture date="44318.78" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_192"/>
+          <pitch date="44640.00" note.ref="#n1qoq9d6" portamento.ref="#ornament_44640" xml:id="vocal_193"/>
+          <posture date="45042.13" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_194"/>
+          <posture date="45360.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_195"/>
+          <pitch date="45360.00" note.ref="#nc05e7t" portamento.ref="#ornament_45360" xml:id="vocal_196"/>
+          <posture date="46173.82" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_197"/>
+          <pressure date="46571.42" factor="0.45" transitionMs="267" xml:id="vocal_198"/>
+          <inflection date="46571.42" type="fall" depthSt="-3.14" durationMs="268" xml:id="vocal_199"/>
+          <pressure date="46697.23" factor="0.00" transitionMs="40" xml:id="vocal_200"/>
+          <breath date="46733.45" duration="55.92" through="nose" xml:id="vocal_201"/>
+          <inflection date="46800.00" type="scoop" depthSt="-2.19" durationMs="220" xml:id="vocal_202"/>
+          <posture date="46800.00" value="hum1" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_203"/>
+          <pitch date="46800.00" note.ref="#nq5a381" xml:id="vocal_204"/>
+          <pressure date="46805.07" factor="1.00" from="0.50" transitionMs="400" xml:id="vocal_205"/>
+          <posture date="47042.95" value="hum1" toward="open1" amount="0.16" transitionMs="1400" xml:id="vocal_206"/>
+          <posture date="47799.13" value="hum2" toward="open1" amount="0.16" transitionMs="600" xml:id="vocal_207"/>
+          <posture date="48600.00" value="hum3" toward="open1" amount="0.16" transitionMs="400" xml:id="vocal_208"/>
+          <pitch date="48600.00" note.ref="#n31oyt7" xml:id="vocal_209"/>
+          <pitch date="48960.00" note.ref="#n4pgv9b" xml:id="vocal_210"/>
+          <posture date="49320.00" value="hum3" toward="open1" amount="0.25" transitionMs="1000" xml:id="vocal_211"/>
+          <pitch date="49320.00" note.ref="#nicjai7" xml:id="vocal_212"/>
+          <pitch date="49680.00" note.ref="#nap2mb5" xml:id="vocal_213"/>
+          <pitch date="50040.00" note.ref="#nx5c5ea" portamento.ref="#ornament_50040" xml:id="vocal_214"/>
+          <pitch date="50400.00" note.ref="#n1njss1z" portamento.ref="#ornament_50400" xml:id="vocal_215"/>
+          <lips date="50406.71" value="closure" durationMs="70" xml:id="vocal_216"/>
+          <posture date="51140.53" value="hum1" toward="open1" amount="0.25" transitionMs="600" xml:id="vocal_217"/>
+          <pitch date="51840.00" note.ref="#n1i5ujk" xml:id="vocal_218"/>
+          <pitch date="52200.00" note.ref="#nvlszd" portamento.ref="#ornament_52200" xml:id="vocal_219"/>
+          <pitch date="52560.00" note.ref="#nel8wtc" portamento.ref="#ornament_52560" xml:id="vocal_220"/>
+          <lips date="52584.96" value="closure" durationMs="70" xml:id="vocal_221"/>
+          <pitch date="52920.00" note.ref="#n1yjao9g" xml:id="vocal_222"/>
+          <posture date="53280.00" value="hum2" toward="open1" amount="0.25" transitionMs="400" xml:id="vocal_223"/>
+          <pitch date="53280.00" note.ref="#nq3miud" xml:id="vocal_224"/>
+          <pitch date="53640.00" note.ref="#n37omq0" portamento.ref="#ornament_53640" xml:id="vocal_225"/>
+          <posture date="54000.00" value="hum2" toward="open1" amount="0.10" transitionMs="1000" xml:id="vocal_226"/>
+          <pitch date="54000.00" note.ref="#n1th2zai" portamento.ref="#ornament_54000" xml:id="vocal_227"/>
+          <posture date="54590.71" value="hum3" toward="open1" amount="0.10" transitionMs="600" xml:id="vocal_228"/>
+          <posture date="55080.00" value="hum1" toward="open1" amount="0.10" transitionMs="400" xml:id="vocal_229"/>
+          <pitch date="55080.00" note.ref="#nzsoxz2" portamento.ref="#ornament_55080" xml:id="vocal_230"/>
+          <pitch date="55440.00" note.ref="#n8ktpzu" portamento.ref="#ornament_55440" xml:id="vocal_231"/>
+          <posture date="56047.82" value="hum2" toward="open1" amount="0.10" transitionMs="600" xml:id="vocal_232"/>
+          <posture date="56520.00" value="hum3" toward="open1" amount="0.10" transitionMs="400" xml:id="vocal_233"/>
+          <pitch date="56520.00" note.ref="#n3cigbz" portamento.ref="#ornament_56520" xml:id="vocal_234"/>
+          <posture date="57111.77" value="hum1" toward="open1" amount="0.10" transitionMs="600" xml:id="vocal_235"/>
+          <posture date="57198.72" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_236"/>
+          <pressure date="57423.77" factor="0.45" transitionMs="267" xml:id="vocal_237"/>
+          <inflection date="57423.77" type="fall" depthSt="-3.09" durationMs="268" xml:id="vocal_238"/>
+          <pressure date="57600.00" factor="0.00" transitionMs="40" xml:id="vocal_239"/>
+          <breath date="57720.37" duration="211.14" through="nose" xml:id="vocal_240"/>
+          <pressure date="57943.92" factor="1.00" from="0.50" transitionMs="400" xml:id="vocal_241"/>
+          <inflection date="57960.00" type="scoop" depthSt="-0.25" durationMs="220" xml:id="vocal_242"/>
+          <posture date="57960.00" value="hum2" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_243"/>
+          <pitch date="57960.00" note.ref="#nd7zg49" xml:id="vocal_244"/>
+          <posture date="58320.00" value="hum2" toward="open1" amount="0.09" transitionMs="1000" xml:id="vocal_245"/>
+          <pitch date="58320.00" note.ref="#n1wyaxu1" portamento.ref="#ornament_58320" xml:id="vocal_246"/>
+          <posture date="59305.86" value="hum3" toward="open1" amount="0.09" transitionMs="600" xml:id="vocal_247"/>
+          <posture date="60120.00" value="hum1" toward="open1" amount="0.09" transitionMs="400" xml:id="vocal_248"/>
+          <pitch date="60120.00" note.ref="#nmr4y85" xml:id="vocal_249"/>
+          <pitch date="60480.00" note.ref="#ntbn0u4" xml:id="vocal_250"/>
+          <pitch date="60840.00" note.ref="#n1bpwvh2" xml:id="vocal_251"/>
+          <pitch date="61200.00" note.ref="#n1eir8lh" xml:id="vocal_252"/>
+          <pitch date="61560.00" note.ref="#n811bdd" portamento.ref="#ornament_61560" xml:id="vocal_253"/>
+          <pitch date="61920.00" note.ref="#n8ifr85" portamento.ref="#ornament_61920" xml:id="vocal_254"/>
+          <lips date="61950.10" value="closure" durationMs="70" xml:id="vocal_255"/>
+          <posture date="62711.67" value="hum2" toward="open1" amount="0.09" transitionMs="600" xml:id="vocal_256"/>
+          <pitch date="63360.00" note.ref="#n1y1ooj" portamento.ref="#ornament_63360" xml:id="vocal_257"/>
+          <pitch date="63720.00" note.ref="#nbg2wsu" portamento.ref="#ornament_63720" xml:id="vocal_258"/>
+          <pitch date="64080.00" note.ref="#nps5o4g" portamento.ref="#ornament_64080" xml:id="vocal_259"/>
+          <pitch date="64440.00" note.ref="#n1cd1now" xml:id="vocal_260"/>
+          <posture date="64800.00" value="hum3" toward="open1" amount="0.09" transitionMs="400" xml:id="vocal_261"/>
+          <pitch date="64800.00" note.ref="#n18wt6zr" xml:id="vocal_262"/>
+          <pitch date="65160.00" note.ref="#nkzo23o" portamento.ref="#ornament_65160" xml:id="vocal_263"/>
+          <pitch date="65520.00" note.ref="#n1wnb9gd" portamento.ref="#ornament_65520" xml:id="vocal_264"/>
+          <posture date="66162.86" value="hum1" toward="open1" amount="0.09" transitionMs="600" xml:id="vocal_265"/>
+          <pitch date="66600.00" note.ref="#nccuymd" portamento.ref="#ornament_66600" xml:id="vocal_266"/>
+          <pitch date="66960.00" note.ref="#ncyeubn" portamento.ref="#ornament_66960" xml:id="vocal_267"/>
+          <posture date="67578.12" value="hum2" toward="open1" amount="0.09" transitionMs="600" xml:id="vocal_268"/>
+          <posture date="68040.00" value="hum3" toward="open1" amount="0.09" transitionMs="400" xml:id="vocal_269"/>
+          <pitch date="68040.00" note.ref="#nvfwbn8" portamento.ref="#ornament_68040" xml:id="vocal_270"/>
+          <lips date="68340.97" value="closure" durationMs="70" xml:id="vocal_271"/>
+          <pitch date="68400.00" note.ref="#nljgblh" portamento.ref="#ornament_68400" xml:id="vocal_272"/>
+          <posture date="68831.57" value="hum1" toward="open1" amount="0.09" transitionMs="600" xml:id="vocal_273"/>
+          <pitch date="69120.00" note.ref="#n1yr8ak2" portamento.ref="#ornament_69120" xml:id="vocal_274"/>
+          <lips date="69159.81" value="closure" durationMs="70" xml:id="vocal_275"/>
+          <posture date="69557.81" value="hum2" toward="open1" amount="0.09" transitionMs="600" xml:id="vocal_276"/>
+          <posture date="69639.72" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_277"/>
+          <pressure date="69751.91" factor="0.45" transitionMs="267" xml:id="vocal_278"/>
+          <inflection date="69751.91" type="fall" depthSt="-2.44" durationMs="268" xml:id="vocal_279"/>
+          <inflection date="69840.00" type="scoop" depthSt="-0.25" durationMs="220" xml:id="vocal_280"/>
+          <posture date="69840.00" value="hum3" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_281"/>
+          <pitch date="69840.00" note.ref="#njybem0" xml:id="vocal_282"/>
+          <pressure date="69841.32" factor="0.00" transitionMs="40" xml:id="vocal_283"/>
+          <breath date="69893.58" duration="88.46" through="nose" xml:id="vocal_284"/>
+          <pressure date="69994.84" factor="1.00" from="0.50" transitionMs="400" xml:id="vocal_285"/>
+          <posture date="70855.05" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_286"/>
+          <posture date="71640.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_287"/>
+          <pitch date="71640.00" note.ref="#n5irkqt" xml:id="vocal_288"/>
+          <pitch date="72000.00" note.ref="#n734q5i" xml:id="vocal_289"/>
+          <posture date="72360.00" value="hum3" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_290"/>
+          <pitch date="72360.00" note.ref="#njlj1ol" xml:id="vocal_291"/>
+          <pitch date="72720.00" note.ref="#n1wk0yl8" xml:id="vocal_292"/>
+          <pitch date="73080.00" note.ref="#n8io0h4" xml:id="vocal_293"/>
+          <lips date="73405.02" value="closure" durationMs="70" xml:id="vocal_294"/>
+          <posture date="73440.00" value="hum1" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_295"/>
+          <pitch date="73440.00" note.ref="#n1kq1vgo" portamento.ref="#ornament_73440" xml:id="vocal_296"/>
+          <posture date="74202.56" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_297"/>
+          <pitch date="74880.00" note.ref="#n1a7tss7" portamento.ref="#ornament_74880" xml:id="vocal_298"/>
+          <pitch date="75240.00" note.ref="#nwzza18" portamento.ref="#ornament_75240" xml:id="vocal_299"/>
+          <pitch date="75600.00" note.ref="#n51m1q" portamento.ref="#ornament_75600" xml:id="vocal_300"/>
+          <posture date="75960.00" value="hum3" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_301"/>
+          <pitch date="75960.00" note.ref="#n16qnxnb" xml:id="vocal_302"/>
+          <pitch date="76320.00" note.ref="#n1fo3s7x" portamento.ref="#ornament_76320" xml:id="vocal_303"/>
+          <pitch date="76680.00" note.ref="#n1sdtoih" xml:id="vocal_304"/>
+          <pitch date="77040.00" note.ref="#nr2w40x" portamento.ref="#ornament_77040" xml:id="vocal_305"/>
+          <lips date="77372.98" value="closure" durationMs="70" xml:id="vocal_306"/>
+          <posture date="77400.00" value="hum1" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_307"/>
+          <pitch date="77400.00" note.ref="#n6y72zs" xml:id="vocal_308"/>
+          <posture date="77760.00" value="hum1" toward="open1" amount="0.08" transitionMs="1000" xml:id="vocal_309"/>
+          <pitch date="77760.00" note.ref="#n1z0ua2q" portamento.ref="#ornament_77760" xml:id="vocal_310"/>
+          <posture date="78120.00" value="hum1" toward="open1" amount="0.17" transitionMs="1000" xml:id="vocal_311"/>
+          <pitch date="78120.00" note.ref="#n1so03gq" portamento.ref="#ornament_78120" xml:id="vocal_312"/>
+          <pitch date="78480.00" note.ref="#n1eurgxv" portamento.ref="#ornament_78480" xml:id="vocal_313"/>
+          <posture date="78840.00" value="hum2" toward="open1" amount="0.17" transitionMs="400" xml:id="vocal_314"/>
+          <pitch date="78840.00" note.ref="#n1bu3z2m" xml:id="vocal_315"/>
+          <pitch date="79200.00" note.ref="#n24lxzb" xml:id="vocal_316"/>
+          <posture date="79865.24" value="hum3" toward="open1" amount="0.17" transitionMs="600" xml:id="vocal_317"/>
+          <posture date="80066.90" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_318"/>
+          <pressure date="80298.96" factor="0.45" transitionMs="267" xml:id="vocal_319"/>
+          <inflection date="80298.96" type="fall" depthSt="-2.11" durationMs="268" xml:id="vocal_320"/>
+          <pressure date="80474.05" factor="0.00" transitionMs="40" xml:id="vocal_321"/>
+          <breath date="80524.44" duration="77.23" through="nose" xml:id="vocal_322"/>
+          <pressure date="80618.04" factor="1.00" from="0.50" transitionMs="400" xml:id="vocal_323"/>
+          <inflection date="80640.00" type="scoop" depthSt="-0.25" durationMs="220" xml:id="vocal_324"/>
+          <posture date="80640.00" value="hum1" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_325"/>
+          <pitch date="80640.00" note.ref="#n15u273y" xml:id="vocal_326"/>
+          <posture date="81054.47" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_327"/>
+          <pitch date="81360.00" note.ref="#nazvjqs" portamento.ref="#ornament_81360" xml:id="vocal_328"/>
+          <posture date="82339.91" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_329"/>
+          <posture date="83160.00" value="hum1" toward="open1" amount="0.09" transitionMs="1000" xml:id="vocal_330"/>
+          <pitch date="83160.00" note.ref="#np65yn7" xml:id="vocal_331"/>
+          <pitch date="83520.00" note.ref="#n1wi5y4d" xml:id="vocal_332"/>
+          <pitch date="83880.00" note.ref="#n1hd827s" xml:id="vocal_333"/>
+          <pitch date="84240.00" note.ref="#nln4n4s" xml:id="vocal_334"/>
+          <posture date="84600.00" value="hum2" toward="open1" amount="0.09" transitionMs="400" xml:id="vocal_335"/>
+          <pitch date="84600.00" note.ref="#nyugz05" xml:id="vocal_336"/>
+          <posture date="84702.66" value="hum2" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_337"/>
+          <pressure date="84847.25" factor="0.45" transitionMs="267" xml:id="vocal_338"/>
+          <inflection date="84847.25" type="fall" depthSt="-2.06" durationMs="268" xml:id="vocal_339"/>
+          <inflection date="84960.00" type="scoop" depthSt="-3.54" durationMs="220" xml:id="vocal_340"/>
+          <posture date="84960.00" value="hum3" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_341"/>
+          <pitch date="84960.00" note.ref="#napoy3h" xml:id="vocal_342"/>
+          <pressure date="84960.00" factor="0.00" transitionMs="40" xml:id="vocal_343"/>
+          <breath date="85028.73" duration="114.73" through="nose" xml:id="vocal_344"/>
+          <pressure date="85153.38" factor="1.00" from="0.50" transitionMs="400" xml:id="vocal_345"/>
+          <posture date="85659.38" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_346"/>
+          <posture date="86040.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_347"/>
+          <pitch date="86040.00" note.ref="#n1xofq7a" xml:id="vocal_348"/>
+          <posture date="86241.32" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_349"/>
+          <pitch date="86400.00" note.ref="#n9borlx" xml:id="vocal_350"/>
+          <pitch date="86760.00" note.ref="#n1ajwzom" xml:id="vocal_351"/>
+          <pressure date="86995.02" factor="0.45" transitionMs="267" xml:id="vocal_352"/>
+          <inflection date="86995.02" type="fall" depthSt="-2.01" durationMs="268" xml:id="vocal_353"/>
+          <pressure date="87119.98" factor="0.00" transitionMs="40" xml:id="vocal_354"/>
+          <inflection date="87120.00" type="scoop" depthSt="-0.97" durationMs="220" xml:id="vocal_355"/>
+          <posture date="87120.00" value="hum1" toward="open1" amount="0.00" transitionMs="200" xml:id="vocal_356"/>
+          <pitch date="87120.00" note.ref="#nc829zl" xml:id="vocal_357"/>
+          <breath date="87144.69" duration="34.18" through="nose" xml:id="vocal_358"/>
+          <pressure date="87190.47" factor="1.00" from="0.50" transitionMs="377" xml:id="vocal_359"/>
+          <posture date="87480.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_360"/>
+          <pitch date="87480.00" note.ref="#niemthr" xml:id="vocal_361"/>
+          <pitch date="87840.00" note.ref="#nax4mru" portamento.ref="#ornament_87840" xml:id="vocal_362"/>
+          <pitch date="88200.00" note.ref="#nomyb1w" xml:id="vocal_363"/>
+          <pitch date="88560.00" note.ref="#n1hcubn9" xml:id="vocal_364"/>
+          <posture date="88920.00" value="hum3" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_365"/>
+          <pitch date="88920.00" note.ref="#n1pf4x9p" xml:id="vocal_366"/>
+          <pitch date="89280.00" note.ref="#n1b1dxbk" portamento.ref="#ornament_89280" xml:id="vocal_367"/>
+          <posture date="89473.93" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_368"/>
+          <posture date="89640.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_369"/>
+          <pitch date="89640.00" note.ref="#nl2s10u" portamento.ref="#ornament_89640" xml:id="vocal_370"/>
+          <posture date="89830.52" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_371"/>
+          <pitch date="90000.00" note.ref="#nbfrkhj" portamento.ref="#ornament_90000" xml:id="vocal_372"/>
+          <posture date="90200.27" value="hum1" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_373"/>
+          <posture date="90360.00" value="hum2" toward="open1" amount="0.00" transitionMs="400" xml:id="vocal_374"/>
+          <pitch date="90360.00" note.ref="#netx6tx" xml:id="vocal_375"/>
+          <posture date="90546.26" value="hum3" toward="open1" amount="0.00" transitionMs="600" xml:id="vocal_376"/>
+          <pressure date="90628.83" factor="0.45" transitionMs="267" xml:id="vocal_377"/>
+          <inflection date="90628.83" type="fall" depthSt="-2.39" durationMs="268" xml:id="vocal_378"/>
+          <pressure date="90686.64" factor="0.00" transitionMs="40" xml:id="vocal_379"/>
+          <breath date="90702.94" duration="24.61" through="nose" xml:id="vocal_380"/>
+          <inflection date="90720.00" type="scoop" depthSt="-0.97" durationMs="220" xml:id="vocal_381"/>
+          <posture date="90720.00" value="hum1" toward="open2" amount="0.00" transitionMs="200" xml:id="vocal_382"/>
+          <pitch date="90720.00" note.ref="#n5biyt4" xml:id="vocal_383"/>
+          <pressure date="90732.73" factor="1.00" from="0.50" transitionMs="400" xml:id="vocal_384"/>
+          <posture date="90939.72" value="hum2" toward="open2" amount="0.00" transitionMs="600" xml:id="vocal_385"/>
+          <posture date="91080.00" value="hum3" toward="open2" amount="0.00" transitionMs="400" xml:id="vocal_386"/>
+          <pitch date="91080.00" note.ref="#n14kyg9r" portamento.ref="#ornament_91080" xml:id="vocal_387"/>
+          <posture date="91305.24" value="hum1" toward="open2" amount="0.00" transitionMs="600" xml:id="vocal_388"/>
+          <posture date="91440.00" value="hum2" toward="open2" amount="0.00" transitionMs="400" xml:id="vocal_389"/>
+          <pitch date="91440.00" note.ref="#n1ennzqw" portamento.ref="#ornament_91440" xml:id="vocal_390"/>
+          <posture date="91463.90" value="hum3" toward="open2" amount="0.00" transitionMs="600" xml:id="vocal_391"/>
+          <lips date="91463.90" value="closure" durationMs="70" xml:id="vocal_392"/>
+          <pressure date="91463.90" factor="0.45" transitionMs="267" xml:id="vocal_393"/>
+          <inflection date="91463.90" type="fall" depthSt="-2.51" durationMs="268" xml:id="vocal_394"/>
+          <pressure date="91463.90" factor="0.00" transitionMs="40" xml:id="vocal_395"/>
         </vocalMap>
       </dated></global></performance></mpm>
