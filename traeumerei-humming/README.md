@@ -111,6 +111,24 @@ VocalTractLab cannot render on the spot (here about 3.5 minutes per pass for the
 the levels are rendered ahead of time. At s = 2, espressivo 0.11 ends the last three notes of the
 piece (the final chord) before they start; `data/exaggerated/x200_PATCHED.txt` records the patch.
 
+## VocalTractLab in the browser (feasibility)
+
+`wasm/build.sh` compiles VocalTractLab's backend (2.4.2, unchanged; GPL-3.0) to WebAssembly with
+Emscripten, plus a plain-JavaScript fallback; `wasm/test_page.html` with `worker.js` and
+`vtl_bench.js` synthesizes 10 s of the hum in a browser and times it. On one core of a 2.1 GHz
+cloud Xeon:
+
+| path | native | WebAssembly (Node / Chromium) | plain JavaScript |
+|---|---|---|---|
+| VocalTractLab's own, geometry every 2.5 ms | 0.48× real time | 0.34–0.36× | 0.15× |
+| geometry only when the tract moves (> 0.01), acoustics from tube shapes | 1.20–1.31× | 1.18–1.23× | 0.56× |
+
+The geometry (3D tract to tube) is three quarters of the cost; the acoustics alone run at 1.87×
+real time natively. The WebAssembly output matches the native one within 0.07 dB up to 4 kHz;
+above that only the aspiration noise is drawn differently, and the tube path draws it 1.4–3 dB
+weaker. Two voices at once (the lips-closed and lips-open renderings) kept 1.1–1.2× each in
+Chromium on four cores.
+
 ## Pipeline
 
 1. `scripts/render.mjs`, `scripts/render_curve.mjs` (Node, espressivo 0.11): render
