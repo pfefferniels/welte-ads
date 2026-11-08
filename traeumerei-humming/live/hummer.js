@@ -8,8 +8,7 @@
   const PAD = 600, TRANSPOSE = -12, LAT = 15;                     // ms, semitones, ms
   const LEGATO_WITHIN = 15, STOP_FROM = 110, SLUR_FROM = 30;       // articulation thresholds, ms
   const OPEN_MAX = 0.3;
-  const PHRASE_STARTS = new Set([0, 21, 41, 61, 81, 98, 118, 138, 159]);
-  const BREATH_MIN = 0.12, BREATH_STEAL = 0.22, BREATH_SPACING = 3.0;
+  const AIR = { teeth: 8000, lips: 12000 };                       // dPa at depth 1 for the voiceless air: ~10 dB under the hum
   const TC = { posture: 30, glottis: 30, pitch: 30, pressure: 12 };
   const EFFORT = { vRef: 45, pRef: 7000, expo: 1.5, breathyAt: 33, modalAt: 48, stepMs: 30 };
   const HUMS = ['hum1', 'hum2', 'hum3'], ORDER = ['open2', 'open4', 'open1'];
@@ -35,28 +34,48 @@
   const velToDb = v => 40 * Math.log10(Math.max(v, 1) / 127);
 
   // ------------------------------------------------------------------ the performance
+  // espressivo 0.11, strongly exaggerated, can leave an arpeggio's note at its tick value as its onset
+  // (or tens of seconds past the end), or let a spread chord note end before it starts: put such a note
+  // back at the head of its chord and give it a length. Changes the notes in place.
+  function repair(data) {
+    const notes = data.parts.flatMap(p => p.notes), by = new Map();
+    for (const n of notes) { if (!by.has(n.date)) by.set(n.date, []); by.get(n.date).push(n); }
+    let fixed = 0;
+    for (const g of by.values()) {
+      const ms = g.map(n => n.milliseconds.date).sort((a, b) => a - b), med = ms[ms.length >> 1];
+      const stray = n => { const d = Math.abs(n.milliseconds.date - med); return d > 10000 || (d > 1000 && Math.abs(n.milliseconds.date - n.date) < 1e-6); };
+      const sane = g.filter(n => !stray(n)).map(n => n.milliseconds.date).sort((a, b) => a - b);
+      if (sane.length === g.length || !sane.length) continue;
+      const gap = sane.length > 1 ? Math.max(20, sane[1] - sane[0]) : 50;
+      for (const n of g) if (stray(n)) { n.milliseconds.date = Math.max(0, sane[0] - gap); fixed++; }
+    }
+    for (const n of notes) if (n.milliseconds.end <= n.milliseconds.date) { n.milliseconds.end = n.milliseconds.date + 1793; fixed++; }
+    return fixed;
+  }
+
   function perform(data, st) {
     const notes = data.parts.flatMap(p => p.notes);
-    for (const n of notes)                                           // espressivo 0.11 at s = 2 ends the
-      if (n.milliseconds.end <= n.milliseconds.date) n.milliseconds.end = n.milliseconds.date + 1793;   // final chord early
+    repair(data);
     const sus = data.parts[0].controlChanges.find(c => c.controller === 'sustain' || c.kind === 'sustain').points;
     const byId = new Map(notes.map(n => [n.id, n]));
-    const pedalAt = ms => { let v = 0; for (const p of sus) { if (p.milliseconds <= ms) v = p.value; else break; } return v; };
-    const releaseAfter = ms => { for (const p of sus) if (p.milliseconds > ms && p.value < 40) return p.milliseconds; return null; };
-    const melody = st.melody.map((m, k) => {
-      const n = byId.get(m.id);
-      const on = n.milliseconds.date, off = n.milliseconds.end;
-      const nxt = k + 1 < st.melody.length ? byId.get(st.melody[k + 1].id).milliseconds.date : null;
-      let snd = off;
-      if (pedalAt(off) >= 40) { const r = releaseAfter(off); snd = Math.max(off, r === null ? off : r); }
-      if (nxt !== null) snd = Math.min(snd, nxt);
-      return { id: m.id, pitch: n.pitch, date: n.date, duration: n.duration, onset_ms: on, key_off_ms: off,
-        sounding_off_ms: snd, velocity: n.velocity, measure: m.measure, rend2: m.rend2, ornamented: n.ornamented };
+    // the hummed line: the reduction's notes, each timed and voiced by the piano note it points to
+    const clock = new Clock(notes, sus), red = st.reduction, melody = [];
+    red.forEach((e, i) => {
+      if (e.k !== 'n') return;
+      const n = byId.get(e.id), prev = i > 0 ? red[i - 1] : null, on = n.milliseconds.date;
+      // the sung end: the piano's own release where the sung note is the whole written note;
+      // otherwise (a pedal, or cut for a breath or by the next choice) the score position, performed
+      const whole = !e.pedal && Math.abs(n.date + n.duration - e.e) < 1;
+      const off = Math.max(on + 40, whole ? n.milliseconds.end : clock.ms(e.e));
+      melody.push({ id: n.id, pitch: e.p, date: n.date, duration: e.e - e.s, onset_ms: on, key_off_ms: off, sounding_off_ms: off,
+        velocity: n.velocity, ornamented: n.ornamented, pedal: !!e.pedal,
+        breath_before: !prev || (prev.k === 'r' && prev.b) || prev.k === 'a' });
     });
+    const air = red.filter(e => e.k === 'a').map(e => ({ s: e.s, e: e.e, through: e.t }));
     const cv = data.curve;                                           // channel volume points (sub-note dynamics)
     let pts = cv.map(p => [p.milliseconds / 1000, p.value]).filter(p => p[1] !== 100 || p[0] === 0);
     pts = pts.filter((p, i) => i === pts.length - 1 || p[0] !== pts[i + 1][0]);
-    return { notes, sus, melody, ct: pts.map(p => p[0]), cv: pts.map(p => p[1]) };
+    return { notes, sus, melody, air, clock, ct: pts.map(p => p[0]), cv: pts.map(p => p[1]) };
   }
 
   class Clock {                                                      // ticks <-> performance ms
@@ -65,6 +84,10 @@
       const r4 = x => Math.round(x * 1e4) / 1e4;
       for (const n of notes) if (!n.ornamented) { const k = r4(n.date) + ':' + r4(n.milliseconds.date); if (!seen.has(k)) { seen.add(k); pts.push([r4(n.date), r4(n.milliseconds.date)]); } }
       for (const p of sus) { const k = r4(p.date) + ':' + r4(p.milliseconds); if (!seen.has(k)) { seen.add(k); pts.push([r4(p.date), r4(p.milliseconds)]); } }
+      // through the last chord to its written end, so a note or air there keeps its length
+      let last = -Infinity, lastMs = 0;
+      for (const n of notes) { const e = r4(n.date + n.duration); if (e > last) { last = e; lastMs = 0; } if (e === last) lastMs = Math.max(lastMs, n.milliseconds.end); }
+      if (isFinite(last)) pts.push([last, r4(lastMs)]);
       pts.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
       const d = [], m = [];
       pts.forEach((p, i) => { if (i === 0 || (p[0] > pts[i - 1][0] && p[1] > pts[i - 1][1])) { d.push(p[0]); m.push(p[1]); } });
@@ -75,27 +98,15 @@
     date(ms) { return interp(ms, this.m, this.d); }
   }
 
-  // the shared voice model: voice notes, breaths, legato
+  // the voice notes: a breath where the reduction rests (or after air), legato elsewhere
   function buildNotes(mel) {
     const notes = mel.map((n, k) => ({ index: k, pitch: n.pitch, on: n.onset_ms / 1000, off: n.sounding_off_ms / 1000,
-      key_off: n.key_off_ms / 1000, velocity: n.velocity, legato_in: false, repeated_in: false, breath_before: false, phrase_start: false }));
-    const breaths = new Set([...PHRASE_STARTS].filter(k => k < notes.length));
-    const lifts = [];
-    for (let k = 1; k < notes.length - 1; k++) {
-      const prev = notes[k - 1], gap = notes[k].on - prev.key_off;
-      if (gap >= BREATH_MIN && prev.key_off - prev.on >= 0.5 && !PHRASE_STARTS.has(k - 1)) lifts.push([gap, k]);
-    }
-    lifts.sort((a, b) => b[0] - a[0] || b[1] - a[1]);
-    for (const [, k] of lifts) if ([...breaths].every(j => Math.abs(notes[k].on - notes[j].on) >= BREATH_SPACING)) breaths.add(k);
+      key_off: n.key_off_ms / 1000, velocity: n.velocity, legato_in: false, repeated_in: false, breath_before: k === 0 || n.breath_before, phrase_start: false }));
     notes.forEach((n, k) => {
-      n.phrase_start = PHRASE_STARTS.has(k);
-      if (k === 0) { n.breath_before = true; return; }
-      const prev = notes[k - 1], lifted = n.on - prev.key_off >= BREATH_MIN;
-      if (breaths.has(k)) {
-        n.breath_before = true;
-        if (lifted) prev.off = Math.min(prev.off, prev.key_off);
-        else prev.off = Math.min(prev.off, n.on - Math.min(BREATH_STEAL, 0.35 * (n.on - prev.on)));
-      } else { prev.off = n.on; n.legato_in = true; n.repeated_in = Math.abs(n.pitch - prev.pitch) < 0.01; }
+      if (k === 0) return;
+      const prev = notes[k - 1];
+      if (n.breath_before) prev.off = Math.min(prev.off, prev.key_off, n.on - 0.12);
+      else { prev.off = n.on; n.legato_in = true; n.repeated_in = Math.abs(n.pitch - prev.pitch) < 0.01; }
     });
     return notes;
   }
@@ -129,9 +140,11 @@
       const n = src[k], onMs = v.on * 1000, offMs = v.off * 1000, date = n.date, prev = k ? vn[k - 1] : null;
       if (v.breath_before) {
         const gapStart = prev ? prev.off * 1000 : Math.max(0, onMs - 900);
-        if (onMs - gapStart > 120) {
+        if (onMs - gapStart > 100) {
           const bs = clock.date(gapStart + 0.35 * (onMs - gapStart));
-          add('breath', bs, { duration: Math.round((clock.date(onMs - 25) - bs) * 100) / 100, through: 'nose' });
+          // a deeper, longer-sounding breath before a louder stretch
+          const depth = clip((interp(v.on, tg, cs) - 30) / 15, 0.5, 1.3);
+          add('breath', bs, { duration: Math.round((clock.date(onMs - 25) - bs) * 100) / 100, through: 'nose', depth: depth.toFixed(2) });
         }
         add('inflection', date, { type: 'scoop', depthSt: Math.round(scoops[k % scoops.length] * 0.8 * 100) / 100, durationMs: 220 });
       }
@@ -160,7 +173,7 @@
         humI = (humI + 1) % HUMS.length; base = HUMS[humI];
         add('posture', clock.date(onMs + 0.55 * (offMs - onMs)), { value: base, toward, amount: cur.toFixed(2), transitionMs: 600 });
       }
-      const a = { 'note.ref': '#' + baseId(n.id) };
+      const a = { 'note.ref': '#' + baseId(n.id), pitch: n.pitch };
       const chord = byDate.get(date) || [];
       if (n.ornamented && chord.length > 1 && k > 0 && !v.breath_before) {
         const first = Math.min(...chord.map(c => c.milliseconds.date));
@@ -193,6 +206,10 @@
         add('pressure', clock.date(offMs), { factor: '0.00', transitionMs: 40 });
       }
     });
+    for (const x of P.air) {                         // voiceless air, as loud as the dynamics there
+      const depth = clip((interp(clock.ms(x.s) / 1000, tg, cs) - 30) / 15, 0.4, 1.2);
+      add('air', x.s, { durationTicks: x.e - x.s, through: x.through, depth: depth.toFixed(2) });
+    }
     ev.forEach((e, i) => e.push(i));
     ev.sort((a, b) => a[0] - b[0] || a[3] - b[3]);
     return { ev: ev.map(e => e.slice(0, 3)), clock, vn };
@@ -213,7 +230,7 @@
       if (tag !== 'pitch') continue;
       const nid = a['note.ref'].slice(1);
       const n = notes.find(x => baseId(x.id) === nid && Math.abs(x.date - date) < 1);
-      const st_ = 12 * Math.log2(440 * Math.pow(2, (n.pitch + TRANSPOSE - 69) / 12));
+      const st_ = 12 * Math.log2(440 * Math.pow(2, ((a.pitch !== undefined ? a.pitch : n.pitch + TRANSPOSE) - 69) / 12));
       const on = n.milliseconds.date + PAD - LAT;
       let glide = null;
       if (a['portamento.ref']) {
@@ -251,7 +268,20 @@
     for (const [d, tag, a] of ev) if (tag === 'breath') {
       const s = T(d), e = T(d + a.duration);
       tiers.glottal = splice(tiers.glottal, s, e, 'h');
-      tiers.pressure = splice(tiers.pressure, s + 0.3 * (e - s), e - 40, 1400);
+      tiers.pressure = splice(tiers.pressure, s + 0.3 * (e - s), e - 40, Math.round(1400 * Number(a.depth || 1)));
+    }
+    tiers.tt = [];
+    for (const [d, tag, a] of ev) if (tag === 'air') {
+      // the glottis open, the velum closed, the air through the teeth (s) or lips on teeth (f),
+      // with the lips parted: the open tube, fully, for the length of it
+      const s = T(d), e = T(d + a.durationTicks), W = tiers.weight;
+      tiers.glottal = splice(tiers.glottal, s, e, 'voiceless-fricative');
+      tiers.velic = splice(tiers.velic, s - 30, e, 0.0);
+      tiers.pressure = splice(tiers.pressure, s + 30, e - 40, Math.round(AIR[a.through] * Number(a.depth)));
+      if (a.through === 'lips') tiers.lip.push([s, e, 'll-dental-fricative', 0]);
+      else tiers.tt.push([s, e, 'tt-alveolar-fricative', 0]);
+      for (let i = Math.max(0, Math.floor(s - 80)); i < Math.min(W.length, Math.ceil(e + 80)); i++)
+        W[i] = Math.max(W[i], Math.min(1, (i - (s - 80)) / 80, (e + 80 - i) / 80));
     }
     for (const [d, tag, a] of ev) if (tag === 'lips') { const s = T(d); tiers.lip.push([s, s + a.durationMs, 'll-labial-closure', 0]); }
     return { tiers, endMs, pitchEv };
@@ -378,14 +408,14 @@
 
   // a gestural score; `vowel` picks the closed or the open vowel tier
   function gesText(tiers, endMs, vowel) {
-    const tc = { vowel: TC.posture, lip: 12, velic: 15, glottal: TC.glottis, f0: TC.pitch, pressure: TC.pressure };
-    const neutral = { vowel: 'c10_0', lip: '', velic: 0, glottal: 'g00', f0: 12 * Math.log2(130), pressure: 0 };
-    const names = { vowel: ['vowel-gestures', ''], lip: ['lip-gestures', ''], velic: ['velic-gestures', ''],
+    const tc = { vowel: TC.posture, lip: 12, 'tongue-tip': 12, velic: 15, glottal: TC.glottis, f0: TC.pitch, pressure: TC.pressure };
+    const neutral = { vowel: 'c10_0', lip: '', 'tongue-tip': '', velic: 0, glottal: 'g00', f0: 12 * Math.log2(130), pressure: 0 };
+    const names = { vowel: ['vowel-gestures', ''], lip: ['lip-gestures', ''], 'tongue-tip': ['tongue-tip-gestures', ''], velic: ['velic-gestures', ''],
       glottal: ['glottal-shape-gestures', ''], f0: ['f0-gestures', 'st'], pressure: ['lung-pressure-gestures', 'dPa'] };
-    const src = Object.assign({}, tiers, { vowel: vowel === 'open' ? tiers.vowelOpen : tiers.vowelClosed });
+    const src = Object.assign({}, tiers, { vowel: vowel === 'open' ? tiers.vowelOpen : tiers.vowelClosed, 'tongue-tip': tiers.tt || [] });
     const x = ['<gestural_score>\n'];
     for (const tier of ['vowel', 'lip', 'tongue-tip', 'tongue-body', 'velic', 'glottal', 'f0', 'pressure']) {
-      if (tier === 'tongue-tip' || tier === 'tongue-body') { x.push(`  <gesture_sequence type="${tier}-gestures" unit="">\n  </gesture_sequence>\n`); continue; }
+      if (tier === 'tongue-body') { x.push(`  <gesture_sequence type="${tier}-gestures" unit="">\n  </gesture_sequence>\n`); continue; }
       const [nm, unit] = names[tier];
       x.push(`  <gesture_sequence type="${nm}" unit="${unit}">\n`);
       const gs = fill(src[tier], 0, endMs, neutral[tier]), merged = [];
@@ -400,7 +430,7 @@
         else { v = Number(v); if (tier === 'pressure') v = Math.min(15000, Math.max(0, v)); val = v.toFixed(6); }
         const tcs = tier === 'pressure' && val === '0.000000' ? 12 : tc[tier];
         if (tier === 'f0') sl = Math.max(-80, Math.min(80, sl));
-        x.push(`    <gesture value="${val}" slope="${sl.toFixed(6)}" duration_s="${((b - a) / 1000).toFixed(6)}" time_constant_s="${(tcs / 1000).toFixed(6)}" neutral="${neu && tier === 'lip' ? 1 : 0}" />\n`);
+        x.push(`    <gesture value="${val}" slope="${sl.toFixed(6)}" duration_s="${((b - a) / 1000).toFixed(6)}" time_constant_s="${(tcs / 1000).toFixed(6)}" neutral="${neu && (tier === 'lip' || tier === 'tongue-tip') ? 1 : 0}" />\n`);
       }
       x.push('  </gesture_sequence>\n');
     }
@@ -408,14 +438,9 @@
     return x.join('');
   }
 
-  // bars for the display: the first melody note of each measure (MEI measure 1 is the upbeat)
-  function bars(P) {
-    const seen = new Set(), out = [];
-    P.melody.forEach(n => {
-      const m = Number(n.measure) - 1, label = n.rend2 ? `${m}'` : String(m);
-      if (label !== '0' && !seen.has(label)) { seen.add(label); out.push([n.onset_ms / 1000 + PAD / 1000, label]); }
-    });
-    return out;
+  // bars for the display: each measure's downbeat, performed
+  function bars(st, clock) {
+    return st.bars.map(([label, tick]) => [clock.ms(tick) / 1000 + PAD / 1000, label]);
   }
 
   // everything for one exaggeration: performance -> map -> two gestural scores
@@ -423,8 +448,8 @@
     const P = perform(data, st);
     const M = vocalMap(P, st);
     const G = gestures(P, st, M);
-    return { P, M, G, closed: gesText(G.tiers, G.endMs, 'closed'), open: gesText(G.tiers, G.endMs, 'open'), bars: bars(P), endMs: G.endMs };
+    return { P, M, G, closed: gesText(G.tiers, G.endMs, 'closed'), open: gesText(G.tiers, G.endMs, 'open'), bars: bars(st, M.clock), endMs: G.endMs };
   }
 
-  root.Hummer = { render, perform, vocalMap, gestures, gesText, bars, Clock, PAD, LAT, OPEN_MAX, interp };
+  root.Hummer = { render, repair, perform, vocalMap, gestures, gesText, bars, Clock, PAD, LAT, OPEN_MAX, AIR, interp };
 })(typeof self !== 'undefined' ? self : globalThis);

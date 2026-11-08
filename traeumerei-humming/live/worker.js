@@ -34,6 +34,7 @@ function prepare(R, s) {
   const ex = factors => espressivo.exaggerateMpm(R.mpm, { factors }).mpm;
   const perf = mpm => espressivo.performMsmToData({ msm: R.msm, mpm });
   const pianoData = perf(Math.abs(s - 1) < 1e-9 ? R.mpm : ex(espressivo.weightedFactors(s, {})));
+  Hummer.repair(pianoData);
   const voiceMpm = ex(Object.fromEntries(DIMENSIONS.map(d => [d, TIMING.has(d) ? s : s + LEAD])));
   const data = perf(voiceMpm);
   data.curve = perf(voiceMpm.replace(/<dynamics /g, '<dynamics subNoteDynamics="true" ')).parts[0].controlChanges.find(c => c.kind === 'channelVolume').points;
@@ -54,7 +55,7 @@ function prepare(R, s) {
     return [on + Hummer.PAD / 1000, off - on, n.pitch, n.velocity];
   }).sort((a, b) => a[0] - b[0]);
   return { s, voiceS: s + LEAD, S, weight: H.G.tiers.weight, bars: H.bars, clock: { d: H.M.clock.d, m: H.M.clock.m }, piano,
-    dur: S.closed.n * STEP / SR, times: { espressivo: t1 - t0, hummer: t2 - t1, gestures: t3 - t2 } };
+    dur: (S.closed.n - 1) * STEP / SR, times: { espressivo: t1 - t0, hummer: t2 - t1, gestures: t3 - t2 } };
 }
 
 // spectrogram columns, black on white, as on the offline tiles
@@ -110,8 +111,10 @@ async function render(R, id, s, tick, startSec) {
   postMessage({ type: 'plan', id, s, voiceS: L.voiceS, dur: L.dur, bars: L.bars, clock: L.clock, piano: L.piano, times: L.times, startSec });
   const audio = new Float32Array(Math.ceil(L.dur * SR));
   const gain = R.st.gain, n = L.S.closed.n;
-  const start = Math.max(0, Math.min(n - 1, Math.floor(startSec * SR / STEP)));
-  const segments = [[Math.max(0, start - Math.round(PREROLL * SR / STEP)), start, n], [0, 0, start]];
+  // the first state at or before the 10 ms slot of the start: the page counts sound per slot
+  const start = Math.max(0, Math.min(n - 1, Math.floor(Math.floor(startSec * 100) * (SR / 100) / STEP)));
+  // states from..to sound from `from` to to-1, so the wrap-around runs one state further, to meet the start
+  const segments = [[Math.max(0, start - Math.round(PREROLL * SR / STEP)), start, n], [0, 0, start > 0 ? start + 1 : 0]];
   for (const [from, keepFrom, to] of segments) {
     if (to <= from) continue;
     let lastCol = Math.floor(keepFrom * STEP / SPEC.hop);
@@ -128,6 +131,13 @@ async function render(R, id, s, tick, startSec) {
       }
       await yieldNow();
       if (id !== current) return;
+    }
+    if (keepFrom === 0 && start > 0) {                           // where the two passes meet: the columns
+      const upto = Math.min(Math.floor(audio.length / SPEC.hop), Math.floor(start * STEP / SPEC.hop) + Math.ceil(SPEC.win / 2 / SPEC.hop));
+      if (upto > lastCol) {                                      // the first pass drew without the sound before
+        const spec = columns(audio, lastCol, upto);
+        postMessage({ type: 'audio', id, start: 0, data: new Float32Array(0), spec, col: lastCol, cols: upto - lastCol }, [spec.buffer]);
+      }
     }
   }
   postMessage({ type: 'done', id });

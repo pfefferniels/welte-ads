@@ -1,5 +1,7 @@
 """Static data for the live page (run with the offline pipeline's working directory as WORKDIR): score, MPM, the melody's note list, ornaments, the hum style,
-calibration, the speaker with a lattice of mouth shapes, and trimmed piano samples."""
+calibration, the speaker with a lattice of mouth shapes, and trimmed piano samples.
+Then ../reduction/reduction_to_json.py replaces the melody with what is hummed (reduction.mei), and
+calibrate.cjs measures the voice and sets the per-note calibration and the gain."""
 import json, os, re, shutil, subprocess, sys
 import numpy as np
 S = os.environ.get('WORKDIR', '.') + '/'   # the offline pipeline's working directory

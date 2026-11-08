@@ -20,6 +20,8 @@ Listening page (all versions, with the pitch of each drawn over Grünfeld's note
 | `data/melody.json` | the 162 melody notes as Grünfeld plays them, the MPM dynamics curve and the sustain pedal |
 | `data/analysis.json` | per version: pitch accuracy, onset arrival, dynamics correlation |
 | `data/versions.json` | per version: how it was made and what it takes from the roll |
+| `reduction/` | what the live voice hums: a reduction for a pianist's bass voice, as MEI, and the scripts around it |
+| `live/` | the live page: worker, hummer, VocalTractLab engine, static data, build and calibration |
 
 The scripts regenerate the audio of every version. The published page now holds only the hum:
 its spectrogram, scrolling under a playhead, mixed live against the piano roll with two faders
@@ -112,6 +114,51 @@ VocalTractLab cannot render on the spot (here about 3.5 minutes per pass for the
 the levels are rendered ahead of time. At s = 2, espressivo 0.11 ends the last three notes of the
 piece (the final chord) before they start; `data/exaggerated/x200_PATCHED.txt` records the patch.
 
+## What is hummed: a reduction for a pianist's voice
+
+The live voice no longer sings the top line. A pianist humming along is no singer: about an octave,
+low, and a breath wherever the line changes hands. `reduction/reduction.mei` is what is hummed,
+written as its own MEI: one bass staff, 114 notes from E2 to A3 (mostly F2 to G3), each pointing
+with `@corresp` to the note of the transcription it comes from (the repeat's notes as `…-rend2`).
+That is how the performance reaches it: a sung note takes its onset and dynamics from that piano
+note and, where it is the whole written note, the piano's release too.
+
+![the reduction](reduction/reduction.png)
+
+The draft (`reduction/build_reduction.py`) is a list of choices read from the score and from
+Grünfeld's playing: which voice to follow from where, an octave shift where the range needs it,
+sung pedal notes where the harmony holds still, rests to breathe, and air in a few places.
+- **A (1–8):** the opening motif an octave down; the tenor's answer (2–3); the bass walk Grünfeld
+  leans on (4); F2 held under the restarting melody (5); A3 (6); the tenor's rise D3 F3 G3 A3 (7);
+  the bass (8).
+- **A repeated (1′–8′):** the melody itself, two octaves down (1′–3′); the bass; F2; in 6′, under the
+  climb to A5, only air through the teeth; then as in 7–8.
+- **B (9–16):** F2, then the melody at mf; the tenor C3 D3 F♯3 G3 … (10–12); air through the teeth
+  at the quiet turn in 12; B♭2 over Grünfeld's low B♭1 (13); A2 under the climax (14); D3 C♯3 D3
+  (15); the ritardando A2 B♭2 C3 (16).
+- **A and the close (17–24):** as before, with F2 pedals; air through the teeth over the fermata
+  (22); the last F2, then a stream of air through lips and teeth as the chord fades.
+
+How the voice does it:
+- **Breaths:** 31 rests are breaths (`<rest type="breath">`, with a `<breath>`). Where the voice
+  changes without a written rest, the end of the note before is cut by about 0.45 s at Grünfeld's
+  tempo there (a sixteenth at least). No stretch runs over 8 s without a breath; the longest is
+  7.9 s. Because the rest is a score position, the tempo times it: a breath in a slower passage
+  lasts longer. The dynamics set its depth: an audible, deeper intake before a louder stretch
+  (0.5 to 1.3 of the default, from the dynamics smoothed over ±1.5 s).
+- **Pedal notes** (`@type="pedal"`) are held to their written end, not to the piano key's release.
+- **Air** is written as x noteheads, `@type` `air-teeth` or `air-lips`. The glottis is open, the
+  velum closed, and the tongue tip (an s) or the lower lip (an f) is at the teeth. The pressure
+  follows the dynamics there, so the air sits about 10 dB under the hum around it.
+
+To change what is hummed, edit `reduction.mei` (or the list in `build_reduction.py`, then run it
+with the transcription and the performed notes), then:
+
+```
+python3 reduction/reduction_to_json.py reduction/reduction.mei live/data/static.json
+node live/calibrate.cjs <live dir with vtl.js and espressivo.js built>   # per-note levels, gain
+```
+
 ## Live in the browser
 
 The published page now renders the voice while it plays, for any exaggeration from 0 to 2, in the
@@ -130,19 +177,23 @@ rubato, asynchrony, arpeggio spread and spacing), which it shares with the piano
 same onsets to the millisecond; the voice's dynamics, accents and articulation go further.
 
 Three things differ from the offline version:
-- The decisions stay in memory; nothing is written into an MPM. On the unexaggerated performance
-  they match the Python vocal map event for event (dates to 0.00 ticks).
+- The decisions stay in memory; nothing is written into an MPM. On the top-line melody it sang
+  before the reduction, they matched the Python vocal map event for event (dates to 0.00 ticks).
+- espressivo 0.11, strongly exaggerated, leaves a few arpeggiated notes with impossible times: from
+  about x1.8, an onset equal to the note's tick position or tens of seconds past the end, or an end
+  before the onset. `Hummer.repair` puts such a note back at the head of its chord, and gives a note
+  that ends too early a length, before the piano or the voice uses it.
 - The lips: instead of rendering lips-closed and lips-open separately and crossfading, the engine
   blends the two tube shapes by the opening amount, so the lips part gradually, in one voice.
 - Speed: VocalTractLab's geometry (3D tract to tube) is computed at 10 ms keyframes, only where the
   tract has moved, and interpolated; the acoustics run every 2.5 ms as usual. Against computing it
   every step, the spectrum changes by under 0.02 dB.
 
-The voice's note levels match the dynamics within 0.01 dB median (0.06 dB at the 90th percentile)
-after one calibration of the live chain (`live/data/static.json`). `live/build.sh` builds
+The voice's note levels match the dynamics within 0.01 dB at the 90th percentile after the
+calibration of the live chain (`live/calibrate.cjs`, into `live/data/static.json`). `live/build.sh` builds
 VocalTractLab with `live/vocaltractlab.patch` (the 240 s limit, and `vtlGesturalScoreToStates`, which
 returns a score's tract states in memory) and bundles espressivo; `live/prep_static.py` prepares
-the score, the MPM, the melody's note list, the speaker with a lattice of 264 mouth shapes, and the
+the score, the MPM, the speaker with a lattice of 264 mouth shapes, and the
 piano samples.
 
 ## VocalTractLab in the browser (feasibility)
