@@ -82,13 +82,14 @@ Before mixing, the open rendering is lined up with the closed one (`align_tracks
 self-oscillating glottis runs a little differently against the two tracts, and their glottal
 cycles drift apart by up to a millisecond, which would otherwise flange.
 
-Render the scores in pieces, as `run_hummer.py` does (cut at breaths, about 30 s each): in one
-pass over the whole 164 s, VocalTractLab 2.4 stops following the score after about a minute and
-holds one tone.
+Render the scores in pieces, as `run_hummer.py` does (cut at breaths, about 30 s each): VocalTractLab
+2.4's gestural model keeps its parameter curves for 60 s at most (`MAX_CURVE_SAMPLES` in
+`GesturalScore.h`), so in one pass over the whole 164 s every parameter freezes after a minute
+and the voice holds one tone. The browser build below raises the limit to 240 s.
 
 ## Exaggeration
 
-The mixer page has an exaggeration slider with five positions. Each is the whole chain run
+Before the page rendered live (next section), it offered five exaggerations rendered here. Each was the whole chain run
 again on an MPM that espressivo's `exaggerateMpm` has transformed, with every expressive dimension
 scaled by the same factor (`weightedFactors(s, {})`): 0 is no expression (every deviation at its
 neutral), 1 is Grünfeld as encoded, 2 doubles every deviation. For each level
@@ -110,6 +111,34 @@ maps the page uses to switch levels mid-performance without losing its place.
 VocalTractLab cannot render on the spot (here about 3.5 minutes per pass for the 2:45 piece), so
 the levels are rendered ahead of time. At s = 2, espressivo 0.11 ends the last three notes of the
 piece (the final chord) before they start; `data/exaggerated/x200_PATCHED.txt` records the patch.
+
+## Live in the browser
+
+The published page now renders the voice while it plays, for any exaggeration from 0 to 2, in the
+browser (`live/`). A worker runs the whole chain for each slider position: espressivo
+(`exaggerateMpm`, `performMsmToData`, bundled) performs the exaggerated MPM; `hummer.js`, a port of
+`hummer.py` and `voicemodel.py`, turns the performance into the vocal decisions (breaths, pulses,
+stops, slides, portamenti, the mouth) and two gestural scores, lips closed and lips open; and
+VocalTractLab in WebAssembly turns the scores into tract states and then into sound. The page plays
+the voice as it streams in, draws its spectrogram as it is rendered, plays the roll on a piano
+sampler from the same performance, and crossfades to a new exaggeration at the same place in the
+score. On a recent laptop it renders about twice as fast as real time.
+
+Three things differ from the offline version:
+- The decisions stay in memory; nothing is written into an MPM. On the unexaggerated performance
+  they match the Python vocal map event for event (dates to 0.00 ticks).
+- The lips: instead of rendering lips-closed and lips-open separately and crossfading, the engine
+  blends the two tube shapes by the opening amount, so the lips part gradually, in one voice.
+- Speed: VocalTractLab's geometry (3D tract to tube) is computed at 10 ms keyframes, only where the
+  tract has moved, and interpolated; the acoustics run every 2.5 ms as usual. Against computing it
+  every step, the spectrum changes by under 0.02 dB.
+
+The voice's note levels match the dynamics within 0.01 dB median (0.06 dB at the 90th percentile)
+after one calibration of the live chain (`live/data/static.json`). `live/build.sh` builds
+VocalTractLab with `live/vocaltractlab.patch` (the 240 s limit, and `vtlGesturalScoreToStates`, which
+returns a score's tract states in memory) and bundles espressivo; `live/prep_static.py` prepares
+the score, the MPM, the melody's note list, the speaker with a lattice of 264 mouth shapes, and the
+piano samples.
 
 ## VocalTractLab in the browser (feasibility)
 

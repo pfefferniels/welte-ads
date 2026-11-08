@@ -1,0 +1,399 @@
+<title>Träumerei, hummed</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@1,8..60,400&display=swap">
+<style>
+/* Layout: one instrument panel. A sonogram strip scrolls under a fixed playhead; transport and three faders sit beneath it. */
+:root {
+  --bg: #ffffff;          /* one look in both themes: white page */
+  --fg: #18202c;
+  --muted: #5a6575;
+  --rule: #d5dae1;
+  --accent: #b5600b;      /* amber playhead and controls */
+  --spec-lo: #ffffff;     /* the spectrogram: black on white */
+  --spec-label: #4d4d4d;
+  --spec-head: #c85a0a;
+  --font-label: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+html, body { height: 100%; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-data); font-size: 13px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px;
+  box-sizing: border-box;
+}
+.deck { max-width: 1280px; margin: 0 auto; display: grid; gap: 18px; }
+.strip { position: relative; height: clamp(220px, 56vh, 460px); background: var(--spec-lo); overflow: hidden; }
+#spec { display: block; width: 100%; height: 100%; cursor: grab; touch-action: pan-y; }
+#spec.dragging { cursor: grabbing; }
+#spec:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.transport { display: flex; align-items: center; gap: 14px; }
+#play {
+  flex: none; width: 48px; height: 48px; border-radius: 50%;
+  border: 1.5px solid var(--accent); background: transparent; color: var(--accent);
+  display: grid; place-items: center; cursor: pointer;
+}
+#play:hover:not(:disabled) { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+#play:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+#play:disabled { opacity: 0.45; cursor: progress; }
+#play svg { width: 18px; height: 18px; fill: currentColor; }
+#play svg[hidden] { display: none; }
+.seek { flex: 1; min-width: 0; display: grid; gap: 6px; }
+.readout { display: flex; justify-content: space-between; gap: 12px; color: var(--muted);
+  font-variant-numeric: tabular-nums; letter-spacing: 0.02em; font-size: 12px; }
+.readout b { color: var(--fg); font-weight: 500; }
+.faders { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px 32px; }
+.fader { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px; }
+.fader label { font-family: var(--font-label); font-style: italic; font-size: 17px; min-width: 5.2em; }
+.fader output { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 8.5ch; text-align: right; font-size: 12px; }
+.fader.exag output { color: var(--fg); }
+
+input[type="range"] {
+  -webkit-appearance: none; appearance: none; width: 100%; min-width: 0; height: 24px;
+  background: transparent; margin: 0; cursor: pointer; --p: 0%;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 4px; border-radius: 2px;
+  background: linear-gradient(to right, var(--accent) var(--p), var(--rule) var(--p));
+}
+input[type="range"]::-moz-range-track { height: 4px; border-radius: 2px; background: var(--rule); }
+input[type="range"]::-moz-range-progress { height: 4px; border-radius: 2px; background: var(--accent); }
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 16px; height: 16px; margin-top: -6px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--accent);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent);
+}
+input[type="range"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+input[type="range"]:disabled { opacity: 0.45; cursor: progress; }
+#status { color: var(--muted); font-size: 12px; min-height: 1.2em; font-variant-numeric: tabular-nums; }
+.credit { margin: 8px 0 0; color: var(--muted); font-size: 11px; line-height: 1.5; max-width: 60rem; }
+.credit a { color: inherit; }
+@media (max-width: 560px) { .fader label { font-size: 16px; } }
+</style>
+
+<div class="deck">
+  <div class="strip">
+    <canvas id="spec" tabindex="0" role="img"
+      aria-label="Spectrogram of the hum, drawn as it is rendered. Drag sideways, or use the arrow keys, to move through the piece."></canvas>
+  </div>
+
+  <div class="transport">
+    <button id="play" type="button" aria-label="Play" disabled>
+      <svg id="icon-play" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 2.5v13l11-6.5z"/></svg>
+      <svg id="icon-pause" viewBox="0 0 18 18" aria-hidden="true" hidden><path d="M3.5 2.5h4v13h-4zM10.5 2.5h4v13h-4z"/></svg>
+    </button>
+    <div class="seek">
+      <input id="pos" type="range" min="0" max="165" step="0.01" value="0" aria-label="Position in the piece" disabled>
+      <div class="readout"><span id="bar">Upbeat</span><span><b id="now">0:00</b> / <span id="total">2:45</span></span></div>
+    </div>
+  </div>
+
+  <div class="faders">
+    <div class="fader">
+      <label for="g-piano">Piano</label>
+      <input id="g-piano" type="range" min="0" max="100" step="1" value="75">
+      <output id="o-piano" for="g-piano">−5.0 dB</output>
+    </div>
+    <div class="fader">
+      <label for="g-hum">Humming</label>
+      <input id="g-hum" type="range" min="0" max="100" step="1" value="40">
+      <output id="o-hum" for="g-hum">−15.9 dB</output>
+    </div>
+    <div class="fader exag">
+      <label for="exag">Exaggeration</label>
+      <input id="exag" type="range" min="0" max="2" step="0.05" value="1" disabled>
+      <output id="o-exag" for="exag">×1.00</output>
+    </div>
+  </div>
+  <div id="status" role="status">Starting VocalTractLab…</div>
+  <p class="credit">The voice is rendered here, in your browser, by <a href="https://github.com/TUD-STKS/VocalTractLabBackend-dev" target="_blank" rel="noopener">VocalTractLab</a> 2.4.2 (GPL-3.0, Peter Birkholz et al.), compiled to WebAssembly with two changes: gestural scores up to 240 s instead of 60 s, and a function that returns a score's tract states. The performance comes from espressivo.</p>
+</div>
+
+<script>
+(() => {
+  const SR = 44100, PAD = 0.6, LOOKAHEAD = 0.6, SEG = 0.25;
+  const NOTES = [["C3",130.81],["C4",261.63],["C5",523.25],["C6",1046.5],["C7",2093.0],["C8",4186.0]];
+  const SPEC = { rows: 360, colsPerSec: 100, tile: 2048, fmin: 70, fmax: 4500 };
+  const PIANO = { bases: [33, 36, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81], layers: [3, 5, 7, 9], k: 3.6754 };
+  const $ = id => document.getElementById(id);
+  const canvas = $("spec"), g = canvas.getContext("2d");
+  const playBtn = $("play"), pos = $("pos"), exag = $("exag"), statusEl = $("status");
+  const fmt = t => Math.floor(t / 60) + ":" + String(Math.floor(t % 60)).padStart(2, "0");
+  const interp = (x, xs, ys) => { const n = xs.length; if (x <= xs[0]) return ys[0]; if (x >= xs[n - 1]) return ys[n - 1];
+    let lo = 0, hi = n - 1; while (hi - lo > 1) { const m = (lo + hi) >> 1; if (xs[m] <= x) lo = m; else hi = m; }
+    return ys[lo] + (ys[hi] - ys[lo]) * (x - xs[lo]) / (xs[hi] - xs[lo]); };
+
+  /* ---------- audio graph ---------- */
+  const ctx = new (window.AudioContext || window.webkitAudioContext)();
+  const limiter = ctx.createDynamicsCompressor();
+  limiter.threshold.value = -3; limiter.knee.value = 0; limiter.ratio.value = 20; limiter.attack.value = 0.003; limiter.release.value = 0.15;
+  const master = ctx.createGain(); master.connect(limiter); limiter.connect(ctx.destination);
+  const bus = ctx.createGain(), hall = ctx.createConvolver(), wet = ctx.createGain();
+  hall.normalize = false; hall.buffer = roomIR(); wet.gain.value = Math.pow(10, -16 / 20) * 3;
+  bus.connect(master); bus.connect(hall); hall.connect(wet); wet.connect(master);
+  const gains = { piano: ctx.createGain(), hum: ctx.createGain() };
+  for (const k in gains) gains[k].connect(bus);
+  function roomIR() {                              // a small hall: rt60 1.1 s, darkened above 5 kHz
+    const sr = ctx.sampleRate, rt = 1.1, n = Math.floor(rt * 1.3 * sr), buf = ctx.createBuffer(2, n, sr), a = 1 - Math.exp(-2 * Math.PI * 5000 / sr);
+    for (let ch = 0; ch < 2; ch++) { const d = buf.getChannelData(ch); let y = 0, e = 0;
+      for (let i = 0; i < n; i++) { const x = i < 0.012 * sr ? 0 : (Math.random() * 2 - 1) * Math.exp(-6.9 * i / sr / rt); y += a * (x - y); d[i] = y; e += y * y; }
+      const k = 1 / Math.sqrt(e); for (let i = 0; i < n; i++) d[i] *= k; }
+    return buf;
+  }
+
+  /* ---------- piano samples ---------- */
+  const samples = new Map();
+  const pianoReady = Promise.all(PIANO.bases.flatMap(b => PIANO.layers.map(l =>
+    fetch(`piano/p${b}v${l}.mp3`).then(r => r.arrayBuffer()).then(x => new Promise((res, rej) => {
+      const p = ctx.decodeAudioData(x, res, rej); if (p && p.then) p.then(res, rej); })).then(buf => samples.set(b + ':' + l, buf)))));
+  function pianoNote(note, when, from) {          // note: [onset s, duration s, pitch, velocity]
+    const [, d, p, v] = note;
+    const base = PIANO.bases.reduce((a, b) => Math.abs(b - p) < Math.abs(a - p) ? b : a);
+    const want = Math.max(1, Math.min(16, Math.round(v / 127 * 15) + 1));
+    const layer = PIANO.layers.reduce((a, b) => Math.abs(b - want) < Math.abs(a - want) ? b : a);
+    const buf = samples.get(base + ':' + layer); if (!buf) return null;
+    const src = ctx.createBufferSource(), env = ctx.createGain();
+    src.buffer = buf; src.playbackRate.value = Math.pow(2, (p - base) / 12);
+    const amp = v / 127 * PIANO.k, left = d - from;
+    env.gain.setValueAtTime(amp, when);
+    env.gain.setValueAtTime(amp, when + Math.max(0, left));
+    env.gain.linearRampToValueAtTime(0, when + Math.max(0, left) + 0.12);
+    src.connect(env); env.connect(gains.piano);
+    src.start(when, from * src.playbackRate.value); src.stop(when + Math.max(0, left) + 0.15);
+    return src;
+  }
+
+  /* ---------- renderings, streamed from the worker ---------- */
+  const worker = new Worker("worker.js");
+  let nextId = 1, cur = null, pending = null;
+  const renders = new Map();
+  function request(s, opts) {
+    const id = nextId++;
+    worker.postMessage(Object.assign({ type: "render", id, s }, opts));
+    pending = { id, s, want: opts.want || null, received: 0, t0: performance.now() };
+    for (const k of [...renders.keys()]) if (k !== (cur && cur.id)) renders.delete(k);
+    return id;
+  }
+  worker.onmessage = e => {
+    const m = e.data;
+    if (m.type === "error") { statusEl.textContent = "VocalTractLab stopped: " + m.message; return; }
+    if (m.type === "plan") {
+      const R = { id: m.id, s: m.s, dur: m.dur, bars: m.bars, clock: m.clock, piano: m.piano, startSec: m.startSec,
+        audio: new Float32Array(Math.ceil(m.dur * SR)), have: new Uint16Array(Math.ceil(m.dur * 100) + 1),
+        tiles: [], times: m.times, samples: 0, t0: performance.now() };
+      renders.set(m.id, R);
+      return;
+    }
+    const R = renders.get(m.id); if (!R) return;
+    if (m.type === "audio") {
+      R.audio.set(m.data, m.start);
+      const a = m.start, b = m.start + m.data.length;            // samples per 10 ms slot
+      for (let c = Math.floor(a / 441); c <= Math.floor((b - 1) / 441); c++)
+        R.have[c] += Math.min(b, (c + 1) * 441) - Math.max(a, c * 441);
+      R.samples += m.data.length;
+      if (m.spec) putColumns(R, m.col, m.cols, m.spec);
+      if (pending && pending.id === m.id) maybeSwitch();
+      if (cur === R) draw();
+    } else if (m.type === "done") R.done = true;
+  };
+  const rendered = (R, t0, t1) => { const a = Math.max(0, Math.floor(t0 * 100)), b = Math.min(R.have.length - 1, Math.ceil(t1 * 100));
+    for (let c = a; c < b; c++) if (R.have[c] < Math.min(441, R.audio.length - c * 441)) return false; return true; };
+  function putColumns(R, col, n, data) {
+    for (let k = 0; k < n; k++) {
+      const c = col + k, ti = Math.floor(c / SPEC.tile), x = c % SPEC.tile;
+      if (!R.tiles[ti]) { const cv = document.createElement("canvas"); cv.width = SPEC.tile; cv.height = SPEC.rows;
+        const cx = cv.getContext("2d"); cx.fillStyle = "#fff"; cx.fillRect(0, 0, SPEC.tile, SPEC.rows); R.tiles[ti] = { cv, cx, img: cx.createImageData(1, SPEC.rows) }; }
+      const T = R.tiles[ti], d = T.img.data;
+      for (let r = 0; r < SPEC.rows; r++) { const v = data[k * SPEC.rows + r]; d[r * 4] = d[r * 4 + 1] = d[r * 4 + 2] = v; d[r * 4 + 3] = 255; }
+      T.cx.putImageData(T.img, x, 0);
+    }
+  }
+
+  // the score position under a time of rendering R, and back
+  const toTick = (R, t) => interp((t - PAD) * 1000, R.clock.m, R.clock.d);
+  const toSec = (R, k) => interp(k, R.clock.d, R.clock.m) / 1000 + PAD;
+
+  /* ---------- transport: voice from the stream, piano from the notes ---------- */
+  let playing = false, waiting = false, startAt = 0, offset = 0, voiceUntil = 0, pianoFrom = 0, active = [];
+  function position() { return playing && !waiting ? Math.min(cur.dur, offset + Math.max(0, ctx.currentTime - startAt)) : offset; }
+  function stopAll() { active.forEach(s => { try { s.stop(); } catch (e) {} }); active = []; }
+  function startFrom(t) {
+    stopAll(); offset = t; startAt = ctx.currentTime + 0.06; voiceUntil = t; pianoFrom = t; waiting = false;
+    // notes already sounding at t (held by the pedal) come in where they are
+    for (const n of cur.piano) if (n[0] < t && n[0] + n[1] > t + 0.05) { const s = pianoNote(n, startAt, t - n[0]); if (s) active.push(s); }
+    schedule();
+  }
+  const ctxTime = t => startAt + (t - offset);
+  function schedule() {
+    if (!playing || !cur || waiting) return;
+    const t = position(), horizon = t + LOOKAHEAD;
+    while (voiceUntil < horizon && voiceUntil < cur.dur) {
+      const t1 = Math.min(cur.dur, voiceUntil + SEG);
+      if (!rendered(cur, voiceUntil, t1)) break;
+      const a = Math.floor(voiceUntil * SR), b = Math.floor(t1 * SR);
+      const buf = ctx.createBuffer(1, b - a, SR); buf.getChannelData(0).set(cur.audio.subarray(a, b));
+      const s = ctx.createBufferSource(); s.buffer = buf; s.connect(gains.hum); s.start(ctxTime(voiceUntil)); active.push(s);
+      voiceUntil = t1;
+    }
+    for (const n of cur.piano) if (n[0] >= pianoFrom && n[0] < Math.min(horizon, voiceUntil)) { const s = pianoNote(n, ctxTime(n[0]), 0); if (s) active.push(s); }
+    pianoFrom = Math.max(pianoFrom, Math.min(horizon, voiceUntil));
+    if (active.length > 400) active = active.slice(-300);
+    if (voiceUntil < cur.dur && voiceUntil - t < 0.05) {   // the voice has not been rendered this far yet
+      offset = t; waiting = true; stopAll(); statusEl.textContent = "Waiting for VocalTractLab…";
+    }
+  }
+  const aheadOf = (R, t) => { let x = t; while (x < R.dur && rendered(R, x, x + 0.1)) x += 0.1; return x - t; };
+  setInterval(() => {
+    if (pending) maybeSwitch();
+    if (playing && waiting && cur && rendered(cur, offset, offset + 0.5)) { startFrom(offset); statusEl.textContent = ""; }
+    schedule();
+    if (playing && !waiting && position() >= cur.dur - 0.01) { playing = false; offset = cur.dur; stopAll(); setIcon(); }
+  }, 50);
+
+  function play() { if (!cur) return; if (offset >= cur.dur - 0.05) offset = 0; ctx.resume(); playing = true; setIcon(); startFrom(offset); loop(); }
+  function pause() { offset = position(); playing = false; waiting = false; stopAll(); setIcon(); draw(); }
+  function seek(t) {
+    t = Math.max(0, Math.min(cur.dur, t));
+    if (!rendered(cur, t, t + 0.3)) request(cur.s, { startSec: t, want: { kind: "seek", sec: t } });
+    if (playing) { offset = t; startFrom(t); } else offset = t;
+    updateReadout(); draw();
+  }
+  function setIcon() { $("icon-play").hidden = playing; $("icon-pause").hidden = !playing; playBtn.setAttribute("aria-label", playing ? "Pause" : "Play"); }
+  function loop() { if (!playing) return; updateReadout(); draw(); requestAnimationFrame(loop); }
+
+  // a new rendering takes over at the same place in the score, once it has sound there
+  function maybeSwitch() {
+    const R = renders.get(pending.id); if (!R) return;
+    if (!cur) { if (rendered(R, 0, 0.5)) adopt(R, 0); return; }
+    let t = toSec(R, toTick(cur, position()));
+    if (t < R.startSec - 0.01) {                    // not there yet: wait while the old voice plays on,
+      if (playing && !waiting) return;              // take over at the new start once it has stopped
+      t = R.startSec;
+    }
+    if (rendered(R, t, t + 0.4)) adopt(R, t);
+  }
+  function adopt(R, t) {
+    const was = cur; cur = R; pending = null;
+    pos.max = R.dur.toFixed(2); $("total").textContent = fmt(R.dur);
+    if (was && was !== R) renders.delete(was.id);
+    if (playing) { master.gain.setTargetAtTime(0, ctx.currentTime, 0.01);
+      setTimeout(() => { startFrom(t); master.gain.setTargetAtTime(1, ctx.currentTime + 0.05, 0.02); }, 40); }
+    else offset = t;
+    playBtn.disabled = false; pos.disabled = false; exag.disabled = false;
+    const sp = R.samples / SR / ((performance.now() - R.t0) / 1000);
+    statusEl.textContent = `×${R.s.toFixed(2)}: espressivo ${(R.times.espressivo / 1000).toFixed(1)} s, vocal map ${(R.times.hummer / 1000).toFixed(1)} s, gestures ${(R.times.gestures / 1000).toFixed(1)} s`;
+    updateReadout(); draw();
+  }
+  setInterval(() => {                               // how fast the voice is coming
+    if (pending) { statusEl.textContent = `Rendering ×${pending.s.toFixed(2)}…`; return; }
+    if (!cur || cur.done || statusEl.textContent.startsWith("Waiting")) return;
+    const sp = cur.samples / SR / ((performance.now() - cur.t0) / 1000);
+    const ahead = aheadOf(cur, position());
+    statusEl.textContent = `×${cur.s.toFixed(2)} · VocalTractLab ${sp.toFixed(2)}× real time · ${ahead.toFixed(0)} s rendered ahead`;
+  }, 1000);
+
+  /* ---------- faders ---------- */
+  function fader(id, out, stem) {
+    const el = $(id), o = $(out);
+    const apply = () => { const x = el.value / 100, gain = x * x;
+      gains[stem].gain.setTargetAtTime(gain, ctx.currentTime, 0.02);
+      o.value = gain === 0 ? "off" : (20 * Math.log10(gain)).toFixed(1).replace("-", "−") + " dB";
+      el.style.setProperty("--p", el.value + "%"); };
+    el.addEventListener("input", apply); apply();
+  }
+  fader("g-piano", "o-piano", "piano"); fader("g-hum", "o-hum", "hum");
+  let exagTimer = 0;
+  const showExag = () => { $("o-exag").value = "×" + Number(exag.value).toFixed(2); exag.style.setProperty("--p", (exag.value / 2 * 100) + "%"); };
+  exag.addEventListener("input", () => {
+    showExag(); clearTimeout(exagTimer);
+    exagTimer = setTimeout(() => {
+      const s = Number(exag.value);
+      if (cur && Math.abs(s - cur.s) < 1e-9) return;
+      // start the new voice a little ahead, where the playhead will be when it is ready
+      // as far as the old voice can still carry the music, at most 1.2 s
+      const lead = playing && cur ? Math.max(0, Math.min(1.2, aheadOf(cur, position()) - 0.3)) : 0;
+      const t = cur ? Math.min(cur.dur, position() + lead) : 0;
+      request(s, { tick: cur ? toTick(cur, t) : 0 });
+      statusEl.textContent = `Rendering ×${s.toFixed(2)}…`;
+    }, 250);
+  });
+  showExag();
+
+  /* ---------- drawing ---------- */
+  let W = 0, H = 0, dpr = 1;
+  const pps = () => Math.max(36, Math.min(90, W / 16)), playX = () => Math.round(W * 0.3);
+  function resize() { dpr = window.devicePixelRatio || 1; const r = canvas.getBoundingClientRect(); W = r.width; H = r.height;
+    canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr); draw(); }
+  new ResizeObserver(resize).observe(canvas);
+  const yOf = f => (Math.log(SPEC.fmax) - Math.log(f)) / (Math.log(SPEC.fmax) - Math.log(SPEC.fmin)) * H;
+  function draw() {
+    if (!W) return;
+    const t = cur ? position() : 0, s = pps(), px = playX(), t0 = t - px / s, t1 = t + (W - px) / s;
+    const st = getComputedStyle(document.documentElement);
+    const ink = st.getPropertyValue("--spec-label").trim(), head = st.getPropertyValue("--spec-head").trim(), paper = st.getPropertyValue("--spec-lo").trim();
+    g.setTransform(dpr, 0, 0, dpr, 0, 0); g.globalAlpha = 1; g.fillStyle = paper; g.fillRect(0, 0, W, H);
+    if (cur) {
+      g.imageSmoothingEnabled = true;
+      cur.tiles.forEach((T, i) => {
+        if (!T) return;
+        const ts = i * SPEC.tile / SPEC.colsPerSec, te = ts + SPEC.tile / SPEC.colsPerSec;
+        if (te < t0 || ts > t1) return;
+        const a = Math.max(ts, t0), b = Math.min(te, t1);
+        g.drawImage(T.cv, (a - ts) * SPEC.colsPerSec, 0, (b - a) * SPEC.colsPerSec, SPEC.rows, px + (a - t) * s, 0, (b - a) * s, H);
+      });
+    }
+    g.font = "500 10px " + getComputedStyle(document.body).fontFamily; g.textBaseline = "middle";
+    NOTES.forEach(([n, f]) => { const y = yOf(f); if (y < 10 || y > H - 8) return;
+      g.globalAlpha = 0.75; g.fillStyle = paper; g.fillRect(0, y - 7, 30, 14);
+      g.globalAlpha = 0.9; g.fillStyle = ink; g.fillRect(0, Math.round(y), 6, 1); g.fillText(n, 9, y); });
+    if (cur) {
+      g.textBaseline = "top"; g.strokeStyle = ink; g.fillStyle = ink;
+      cur.bars.forEach(([bt, label]) => { if (bt < t0 - 1 || bt > t1) return;
+        const x = Math.round(px + (bt - t) * s) + 0.5;
+        g.globalAlpha = 0.35; g.beginPath(); g.moveTo(x, 18); g.lineTo(x, H); g.lineWidth = 1; g.stroke();
+        g.globalAlpha = 0.9; g.fillText(label, x + 3, 5); });
+    }
+    g.globalAlpha = 1; g.fillStyle = head; g.fillRect(px - 1, 0, 2, H);
+    g.beginPath(); g.moveTo(px - 6, 0); g.lineTo(px + 6, 0); g.lineTo(px, 7); g.closePath(); g.fill();
+  }
+
+  /* ---------- readout, seek bar, dragging ---------- */
+  let seeking = false;
+  function updateReadout() {
+    if (!cur) return;
+    const t = position(); $("now").textContent = fmt(t);
+    let bar = "Upbeat"; for (const [bt, label] of cur.bars) if (bt <= t + 0.02) bar = "Bar " + label;
+    $("bar").textContent = bar;
+    if (!seeking) { pos.value = t; pos.style.setProperty("--p", (t / cur.dur * 100) + "%"); }
+    pos.setAttribute("aria-valuetext", fmt(t) + ", " + bar.toLowerCase());
+  }
+  pos.addEventListener("pointerdown", () => { seeking = true; });
+  pos.addEventListener("input", () => { pos.style.setProperty("--p", (pos.value / cur.dur * 100) + "%"); seek(+pos.value); });
+  pos.addEventListener("change", () => { seeking = false; });
+  window.addEventListener("pointerup", () => { seeking = false; });
+  playBtn.addEventListener("click", () => (playing ? pause() : play()));
+  let drag = null;
+  canvas.addEventListener("pointerdown", e => { if (!cur) return; drag = { x: e.clientX, t: position(), wasPlaying: playing };
+    if (playing) pause(); canvas.setPointerCapture(e.pointerId); canvas.classList.add("dragging"); });
+  canvas.addEventListener("pointermove", e => { if (!drag) return; offset = Math.max(0, Math.min(cur.dur, drag.t - (e.clientX - drag.x) / pps())); updateReadout(); draw(); });
+  const endDrag = () => { if (!drag) return; canvas.classList.remove("dragging"); const was = drag.wasPlaying; drag = null; seek(offset); if (was) play(); };
+  canvas.addEventListener("pointerup", endDrag); canvas.addEventListener("pointercancel", endDrag);
+  canvas.addEventListener("wheel", e => { if (!cur || Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return; e.preventDefault(); seek(position() + e.deltaX / pps()); }, { passive: false });
+  canvas.addEventListener("keydown", e => {
+    if (!cur) return;
+    if (e.key === "ArrowRight") { seek(position() + 5); e.preventDefault(); }
+    else if (e.key === "ArrowLeft") { seek(position() - 5); e.preventDefault(); }
+    else if (e.key === " " && !playBtn.disabled) { playing ? pause() : play(); e.preventDefault(); }
+  });
+
+  /* ---------- start: Grünfeld as played ---------- */
+  pianoReady.catch(() => { statusEl.textContent = "The piano samples did not load. Reload the page to try again."; });
+  request(1, { startSec: 0 });
+})();
+</script>
