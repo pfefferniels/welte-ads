@@ -124,6 +124,11 @@ the voice as it streams in, draws its spectrogram as it is rendered, plays the r
 sampler from the same performance, and crossfades to a new exaggeration at the same place in the
 score. On a recent laptop it renders about twice as fast as real time.
 
+The voice is the inner guide of the playing: it is always 0.3 more exaggerated than the piano
+(the slider sets the piano), except in the dimensions that move notes in time (tempo, tempo shape,
+rubato, asynchrony, arpeggio spread and spacing), which it shares with the piano. The two keep the
+same onsets to the millisecond; the voice's dynamics, accents and articulation go further.
+
 Three things differ from the offline version:
 - The decisions stay in memory; nothing is written into an MPM. On the unexaggerated performance
   they match the Python vocal map event for event (dates to 0.00 ticks).

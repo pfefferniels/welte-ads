@@ -6,14 +6,14 @@
 <style>
 /* Layout: one instrument panel. A sonogram strip scrolls under a fixed playhead; transport and three faders sit beneath it. */
 :root {
-  --bg: #ffffff;          /* one look in both themes: white page */
-  --fg: #18202c;
-  --muted: #5a6575;
-  --rule: #d5dae1;
-  --accent: #b5600b;      /* amber playhead and controls */
+  --bg: #ffffff;          /* one look in both themes: white page, black and greys */
+  --fg: #111111;
+  --muted: #666666;
+  --rule: #d4d4d4;
+  --accent: #111111;      /* controls in black */
   --spec-lo: #ffffff;     /* the spectrogram: black on white */
   --spec-label: #4d4d4d;
-  --spec-head: #c85a0a;
+  --spec-head: #000000;
   --font-label: "Source Serif 4", Georgia, "Times New Roman", serif;
   --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 }
@@ -72,8 +72,6 @@ input[type="range"]::-moz-range-thumb {
 input[type="range"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 input[type="range"]:disabled { opacity: 0.45; cursor: progress; }
 #status { color: var(--muted); font-size: 12px; min-height: 1.2em; font-variant-numeric: tabular-nums; }
-.credit { margin: 8px 0 0; color: var(--muted); font-size: 11px; line-height: 1.5; max-width: 60rem; }
-.credit a { color: inherit; }
 @media (max-width: 560px) { .fader label { font-size: 16px; } }
 </style>
 
@@ -112,7 +110,6 @@ input[type="range"]:disabled { opacity: 0.45; cursor: progress; }
     </div>
   </div>
   <div id="status" role="status">Starting VocalTractLab…</div>
-  <p class="credit">The voice is rendered here, in your browser, by <a href="https://github.com/TUD-STKS/VocalTractLabBackend-dev" target="_blank" rel="noopener">VocalTractLab</a> 2.4.2 (GPL-3.0, Peter Birkholz et al.), compiled to WebAssembly with two changes: gestural scores up to 240 s instead of 60 s, and a function that returns a score's tract states. The performance comes from espressivo.</p>
 </div>
 
 <script>
@@ -184,7 +181,7 @@ input[type="range"]:disabled { opacity: 0.45; cursor: progress; }
     const m = e.data;
     if (m.type === "error") { statusEl.textContent = "VocalTractLab stopped: " + m.message; return; }
     if (m.type === "plan") {
-      const R = { id: m.id, s: m.s, dur: m.dur, bars: m.bars, clock: m.clock, piano: m.piano, startSec: m.startSec,
+      const R = { id: m.id, s: m.s, voiceS: m.voiceS, dur: m.dur, bars: m.bars, clock: m.clock, piano: m.piano, startSec: m.startSec,
         audio: new Float32Array(Math.ceil(m.dur * SR)), have: new Uint16Array(Math.ceil(m.dur * 100) + 1),
         tiles: [], times: m.times, samples: 0, t0: performance.now() };
       renders.set(m.id, R);
@@ -287,7 +284,7 @@ input[type="range"]:disabled { opacity: 0.45; cursor: progress; }
     else offset = t;
     playBtn.disabled = false; pos.disabled = false; exag.disabled = false;
     const sp = R.samples / SR / ((performance.now() - R.t0) / 1000);
-    statusEl.textContent = `×${R.s.toFixed(2)}: espressivo ${(R.times.espressivo / 1000).toFixed(1)} s, vocal map ${(R.times.hummer / 1000).toFixed(1)} s, gestures ${(R.times.gestures / 1000).toFixed(1)} s`;
+    statusEl.textContent = `piano ×${R.s.toFixed(2)}, voice ×${R.voiceS.toFixed(2)}: espressivo ${(R.times.espressivo / 1000).toFixed(1)} s, voice decisions ${(R.times.hummer / 1000).toFixed(1)} s, gestures ${(R.times.gestures / 1000).toFixed(1)} s`;
     updateReadout(); draw();
   }
   setInterval(() => {                               // how fast the voice is coming
@@ -295,7 +292,7 @@ input[type="range"]:disabled { opacity: 0.45; cursor: progress; }
     if (!cur || cur.done || statusEl.textContent.startsWith("Waiting")) return;
     const sp = cur.samples / SR / ((performance.now() - cur.t0) / 1000);
     const ahead = aheadOf(cur, position());
-    statusEl.textContent = `×${cur.s.toFixed(2)} · VocalTractLab ${sp.toFixed(2)}× real time · ${ahead.toFixed(0)} s rendered ahead`;
+    statusEl.textContent = `piano ×${cur.s.toFixed(2)}, voice ×${cur.voiceS.toFixed(2)} · VocalTractLab ${sp.toFixed(2)}× real time · ${ahead.toFixed(0)} s rendered ahead`;
   }, 1000);
 
   /* ---------- faders ---------- */
@@ -359,7 +356,8 @@ input[type="range"]:disabled { opacity: 0.45; cursor: progress; }
         g.globalAlpha = 0.35; g.beginPath(); g.moveTo(x, 18); g.lineTo(x, H); g.lineWidth = 1; g.stroke();
         g.globalAlpha = 0.9; g.fillText(label, x + 3, 5); });
     }
-    g.globalAlpha = 1; g.fillStyle = head; g.fillRect(px - 1, 0, 2, H);
+    g.globalAlpha = 1; g.fillStyle = paper; g.fillRect(px - 2, 0, 4, H);   // the playhead, edged in white
+    g.fillStyle = head; g.fillRect(px - 1, 0, 2, H);
     g.beginPath(); g.moveTo(px - 6, 0); g.lineTo(px + 6, 0); g.lineTo(px, 7); g.closePath(); g.fill();
   }
 

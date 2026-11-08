@@ -21,13 +21,22 @@ async function init() {
   return { st, msm, mpm, E: VTLEngine(M, speaker) };
 }
 
+// The voice is the inner guide of the playing: always LEAD more exaggerated than the piano, except
+// in the dimensions that move notes in time, which it shares with the piano so the two stay together
+const LEAD = 0.3;
+const DIMENSIONS = ['tempo', 'tempoShape', 'dynamics', 'dynamicsShape', 'rubato', 'articulation', 'accentuation', 'ornamentSpread',
+  'ornamentSpacing', 'ornamentDynamics', 'asynchrony', 'imprecisionTiming', 'imprecisionDynamics', 'imprecisionDuration', 'pedalShape'];
+const TIMING = new Set(['tempo', 'tempoShape', 'rubato', 'asynchrony', 'ornamentSpread', 'ornamentSpacing', 'imprecisionTiming']);
+
 // one exaggeration level, from the MPM to tract states (cached: a seek reuses it)
 function prepare(R, s) {
   const t0 = performance.now();
-  const mpm = Math.abs(s - 1) < 1e-9 ? R.mpm : espressivo.exaggerateMpm(R.mpm, { factors: espressivo.weightedFactors(s, {}) }).mpm;
-  const data = espressivo.performMsmToData({ msm: R.msm, mpm });
-  data.curve = espressivo.performMsmToData({ msm: R.msm, mpm: mpm.replace(/<dynamics /g, '<dynamics subNoteDynamics="true" ') })
-    .parts[0].controlChanges.find(c => c.kind === 'channelVolume').points;
+  const ex = factors => espressivo.exaggerateMpm(R.mpm, { factors }).mpm;
+  const perf = mpm => espressivo.performMsmToData({ msm: R.msm, mpm });
+  const pianoData = perf(Math.abs(s - 1) < 1e-9 ? R.mpm : ex(espressivo.weightedFactors(s, {})));
+  const voiceMpm = ex(Object.fromEntries(DIMENSIONS.map(d => [d, TIMING.has(d) ? s : s + LEAD])));
+  const data = perf(voiceMpm);
+  data.curve = perf(voiceMpm.replace(/<dynamics /g, '<dynamics subNoteDynamics="true" ')).parts[0].controlChanges.find(c => c.kind === 'channelVolume').points;
   const t1 = performance.now();
   const H = Hummer.render(data, R.st);
   const t2 = performance.now();
@@ -35,15 +44,16 @@ function prepare(R, s) {
   const S = { closed: R.E.states(H.closed, maxStates), open: R.E.states(H.open, maxStates) };
   const t3 = performance.now();
   // the piano: every note, held by the sustain pedal as on the roll
-  const sus = H.P.sus.map(p => [p.milliseconds / 1000, p.value]);
-  const maxEnd = Math.max(...H.P.notes.map(n => n.milliseconds.end)) / 1000;
-  const piano = H.P.notes.map(n => {
+  const pianoNotes = pianoData.parts.flatMap(p => p.notes);
+  const sus = pianoData.parts[0].controlChanges.find(c => c.controller === 'sustain' || c.kind === 'sustain').points.map(p => [p.milliseconds / 1000, p.value]);
+  const maxEnd = Math.max(...pianoNotes.map(n => n.milliseconds.end)) / 1000;
+  const piano = pianoNotes.map(n => {
     const on = n.milliseconds.date / 1000; let off = Math.max(n.milliseconds.end / 1000, on + 0.3);
     let i = -1; while (i + 1 < sus.length && sus[i + 1][0] <= off) i++;
     if (i >= 0 && sus[i][1] >= 64) { let j = i; while (j < sus.length && sus[j][1] >= 64) j++; off = j < sus.length ? sus[j][0] : maxEnd + 0.6; }
     return [on + Hummer.PAD / 1000, off - on, n.pitch, n.velocity];
   }).sort((a, b) => a[0] - b[0]);
-  return { s, S, weight: H.G.tiers.weight, bars: H.bars, clock: { d: H.M.clock.d, m: H.M.clock.m }, piano,
+  return { s, voiceS: s + LEAD, S, weight: H.G.tiers.weight, bars: H.bars, clock: { d: H.M.clock.d, m: H.M.clock.m }, piano,
     dur: S.closed.n * STEP / SR, times: { espressivo: t1 - t0, hummer: t2 - t1, gestures: t3 - t2 } };
 }
 
@@ -97,7 +107,7 @@ async function render(R, id, s, tick, startSec) {
   if (id !== current) return;
   if (tick !== undefined && tick !== null)                       // a place in the score -> this timeline
     startSec = Hummer.interp(tick, L.clock.d, L.clock.m) / 1000 + Hummer.PAD / 1000;
-  postMessage({ type: 'plan', id, s, dur: L.dur, bars: L.bars, clock: L.clock, piano: L.piano, times: L.times, startSec });
+  postMessage({ type: 'plan', id, s, voiceS: L.voiceS, dur: L.dur, bars: L.bars, clock: L.clock, piano: L.piano, times: L.times, startSec });
   const audio = new Float32Array(Math.ceil(L.dur * SR));
   const gain = R.st.gain, n = L.S.closed.n;
   const start = Math.max(0, Math.min(n - 1, Math.floor(startSec * SR / STEP)));
