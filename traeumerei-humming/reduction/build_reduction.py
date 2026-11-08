@@ -43,9 +43,7 @@ DRAFT = [
     ("3'", 4.5, 'rest'),
     ("4'", 1, 'take', '2.2', 0),                # F3 C3 D3 C3 Bb2 G2 A2
     ("5'", 1, 'pedal', '2.2', 0),               # F2
-    ("6'", 1, 'rest'),
-    ("6'", 2, 'air', 'teeth'),                  # under the climb to A5: only air through the teeth
-    ("6'", 4, 'rest'),
+    ("6'", 1, 'rest'),                          # silent under the climb to A5: the voice listens
     ("7'", 1, 'take', '2.1', 0, 'bottom'),      # D3 F3 G3 A3
     ("8'", 1, 'take', '2.2', 0, 'bottom'),      # G3 C3 D3 Bb2 G2
     # B: the left hand, which Grünfeld plays loudest here
@@ -54,7 +52,7 @@ DRAFT = [
     ('9', 3.5, 'take', '1.1', -12),             # the melody, mf: E3 F3 A3
     ('10', 1, 'rest'),
     ('10', 1.5, 'take', '2.1', 0),              # C3 D3 . F#3 | G3 F#3 G3 Eb3 | D3 D3 G3
-    ('12', 2.5, 'air', 'teeth'),                # the quiet turn: air through the teeth
+    ('12', 2.5, 'air', 'teeth'),                # the quiet turn: a short breath out through the teeth
     ('12', 3.5, 'rest'),
     ('12', 4, 'take', '2.2', 0),                # G2 A2
     ('13', 1, 'pedal', '2.1', 12),              # Bb2, over Grünfeld's low Bb1
@@ -70,9 +68,7 @@ DRAFT = [
     ('19', 4.5, 'rest'),
     ('20', 1, 'take', '2.2', 0),                # F3 C3 D3 C3 Bb2 G2 A2
     ('21', 1, 'pedal', '2.2', 0),               # F2
-    ('22', 1, 'rest'),
-    ('22', 2, 'air', 'teeth'),                  # the fermata: held breath through the teeth
-    ('22', 4, 'rest'),
+    ('22', 1, 'rest'),                          # silent through the fermata
     ('23', 1, 'take', '2.2', -12),              # C3 Bb2 A2 G2
     ('23', 4, 'take', '2.1', 0, 'bottom'),      # Bb2 D3
     ('24', 1, 'take', '2.1', 0, 'bottom'),      # G3 C3

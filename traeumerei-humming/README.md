@@ -132,15 +132,15 @@ sung pedal notes where the harmony holds still, rests to breathe, and air in a f
   leans on (4); F2 held under the restarting melody (5); A3 (6); the tenor's rise D3 F3 G3 A3 (7);
   the bass (8).
 - **A repeated (1′–8′):** the melody itself, two octaves down (1′–3′); the bass; F2; in 6′, under the
-  climb to A5, only air through the teeth; then as in 7–8.
-- **B (9–16):** F2, then the melody at mf; the tenor C3 D3 F♯3 G3 … (10–12); air through the teeth
-  at the quiet turn in 12; B♭2 over Grünfeld's low B♭1 (13); A2 under the climax (14); D3 C♯3 D3
+  climb to A5, the voice is silent; then as in 7–8.
+- **B (9–16):** F2, then the melody at mf; the tenor C3 D3 F♯3 G3 … (10–12); a short breath out
+  through the teeth at the quiet turn in 12; B♭2 over Grünfeld's low B♭1 (13); A2 under the climax (14); D3 C♯3 D3
   (15); the ritardando A2 B♭2 C3 (16).
-- **A and the close (17–24):** as before, with F2 pedals; air through the teeth over the fermata
-  (22); the last F2, then a stream of air through lips and teeth as the chord fades.
+- **A and the close (17–24):** as before, with F2 pedals; silent through the fermata (22); the last
+  F2, then a breath out through lips and teeth as the chord fades.
 
 How the voice does it:
-- **Breaths:** 31 rests are breaths (`<rest type="breath">`, with a `<breath>`). Where the voice
+- **Breaths:** 29 rests are breaths (`<rest type="breath">`, with a `<breath>`). Where the voice
   changes without a written rest, the end of the note before is cut by about 0.45 s at Grünfeld's
   tempo there (a sixteenth at least). No stretch runs over 8 s without a breath; the longest is
   7.9 s. Because the rest is a score position, the tempo times it: a breath in a slower passage
@@ -148,8 +148,10 @@ How the voice does it:
   (0.5 to 1.3 of the default, from the dynamics smoothed over ±1.5 s).
 - **Pedal notes** (`@type="pedal"`) are held to their written end, not to the piano key's release.
 - **Air** is written as x noteheads, `@type` `air-teeth` or `air-lips`. The glottis is open, the
-  velum closed, and the tongue tip (an s) or the lower lip (an f) is at the teeth. The pressure
-  follows the dynamics there, so the air sits about 10 dB under the hum around it.
+  velum closed, and the tongue tip (an s) or the lower lip (an f) is at the teeth. It is a breath
+  out, not a held hiss: it comes in over 120 ms, starts about 20 dB under the hum around it (with
+  the dynamics there), and fades by a further 12 dB over its length (`AIR` in `hummer.js`). Long
+  passages of it (3–4 s, in 6′ and over the fermata in 22) sounded comical and were taken out.
 
 To change what is hummed, edit `reduction.mei` (or the list in `build_reduction.py`, then run it
 with the transcription and the performed notes), then:

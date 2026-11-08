@@ -8,7 +8,7 @@
   const PAD = 600, TRANSPOSE = -12, LAT = 15;                     // ms, semitones, ms
   const LEGATO_WITHIN = 15, STOP_FROM = 110, SLUR_FROM = 30;       // articulation thresholds, ms
   const OPEN_MAX = 0.3;
-  const AIR = { teeth: 8000, lips: 12000 };                       // dPa at depth 1 for the voiceless air: ~10 dB under the hum
+  const AIR = { teeth: 4000, lips: 8000, fade: 0.25 };            // dPa at depth 1 for the voiceless air (~20 dB under the hum), and where it fades to
   const TC = { posture: 30, glottis: 30, pitch: 30, pressure: 12 };
   const EFFORT = { vRef: 45, pRef: 7000, expo: 1.5, breathyAt: 33, modalAt: 48, stepMs: 30 };
   const HUMS = ['hum1', 'hum2', 'hum3'], ORDER = ['open2', 'open4', 'open1'];
@@ -277,7 +277,14 @@
       const s = T(d), e = T(d + a.durationTicks), W = tiers.weight;
       tiers.glottal = splice(tiers.glottal, s, e, 'voiceless-fricative');
       tiers.velic = splice(tiers.velic, s - 30, e, 0.0);
-      tiers.pressure = splice(tiers.pressure, s + 30, e - 40, Math.round(AIR[a.through] * Number(a.depth)));
+      // a breath out, not a held hiss: in over 120 ms, then fading to AIR.fade of it by the end
+      const p0 = AIR[a.through] * Number(a.depth), a0 = s + 30, a1 = Math.min(a0 + 120, e - 40), STEPS = 10;
+      tiers.pressure = splice(tiers.pressure, a0, a0 + (a1 - a0) / 2, Math.round(0.5 * p0));
+      tiers.pressure = splice(tiers.pressure, a0 + (a1 - a0) / 2, a1, Math.round(p0));
+      for (let k = 0; k < STEPS; k++) {
+        const x0 = a1 + (e - 40 - a1) * k / STEPS, x1 = a1 + (e - 40 - a1) * (k + 1) / STEPS;
+        if (x1 > x0) tiers.pressure = splice(tiers.pressure, x0, x1, Math.round(p0 * Math.pow(AIR.fade, (k + 1) / STEPS)));
+      }
       if (a.through === 'lips') tiers.lip.push([s, e, 'll-dental-fricative', 0]);
       else tiers.tt.push([s, e, 'tt-alveolar-fricative', 0]);
       for (let i = Math.max(0, Math.floor(s - 80)); i < Math.min(W.length, Math.ceil(e + 80)); i++)

@@ -193,21 +193,18 @@
             <measure n="7" label="6'" corresp="transcription.mei#ml2hjyp-rend2" xml:id="m6r">
               <staff n="1">
                 <layer n="1">
-                  <rest dur="4" type="breath"/>
-                  <note dur="2" xml:id="h62" pname="d" oct="3" head.shape="x" type="air-teeth" stem.visible="false"/>
-                  <rest dur="4" type="breath"/>
+                  <rest dur="1" type="breath"/>
                 </layer>
               </staff>
               <breath staff="1" tstamp="1"/>
-              <breath staff="1" tstamp="4"/>
             </measure>
             <measure n="8" label="7'" corresp="transcription.mei#m1adm5ab-rend2" xml:id="m7r">
               <staff n="1">
                 <layer n="1">
-                  <note dur="4" dots="1" xml:id="h63" pname="d" oct="3" corresp="transcription.mei#n1t9pywj-rend2"/>
-                  <note dur="8" xml:id="h64" pname="f" oct="3" corresp="transcription.mei#n1eudopy-rend2"/>
-                  <note dur="4" dots="1" xml:id="h65" pname="g" oct="3" corresp="transcription.mei#n5fmh88-rend2"/>
-                  <note dur="16" xml:id="h66" pname="a" oct="3" corresp="transcription.mei#n1f7pg0g-rend2"/>
+                  <note dur="4" dots="1" xml:id="h62" pname="d" oct="3" corresp="transcription.mei#n1t9pywj-rend2"/>
+                  <note dur="8" xml:id="h63" pname="f" oct="3" corresp="transcription.mei#n1eudopy-rend2"/>
+                  <note dur="4" dots="1" xml:id="h64" pname="g" oct="3" corresp="transcription.mei#n5fmh88-rend2"/>
+                  <note dur="16" xml:id="h65" pname="a" oct="3" corresp="transcription.mei#n1f7pg0g-rend2"/>
                   <rest dur="16" type="breath"/>
                 </layer>
               </staff>
@@ -216,22 +213,22 @@
             <measure n="9" label="8'" corresp="transcription.mei#m13r6o0h-rend2" xml:id="m8r">
               <staff n="1">
                 <layer n="1">
-                  <note dur="2" xml:id="h67" pname="g" oct="3" corresp="transcription.mei#n72gs54-rend2"/>
-                  <note dur="8" xml:id="h68" pname="c" oct="3" corresp="transcription.mei#n1qu7m3y-rend2"/>
-                  <note dur="8" xml:id="h69" pname="d" oct="3" corresp="transcription.mei#no9jks4-rend2"/>
-                  <note dur="8" xml:id="h70" pname="b" oct="2" accid.ges="f" corresp="transcription.mei#neu2xna-rend2"/>
-                  <note dur="8" xml:id="h71" pname="g" oct="2" corresp="transcription.mei#nalznu1-rend2"/>
+                  <note dur="2" xml:id="h66" pname="g" oct="3" corresp="transcription.mei#n72gs54-rend2"/>
+                  <note dur="8" xml:id="h67" pname="c" oct="3" corresp="transcription.mei#n1qu7m3y-rend2"/>
+                  <note dur="8" xml:id="h68" pname="d" oct="3" corresp="transcription.mei#no9jks4-rend2"/>
+                  <note dur="8" xml:id="h69" pname="b" oct="2" accid.ges="f" corresp="transcription.mei#neu2xna-rend2"/>
+                  <note dur="8" xml:id="h70" pname="g" oct="2" corresp="transcription.mei#nalznu1-rend2"/>
                 </layer>
               </staff>
             </measure>
             <measure n="10" label="9" corresp="transcription.mei#m1u7mee4" xml:id="m9">
               <staff n="1">
                 <layer n="1">
-                  <note dur="2" xml:id="h72" pname="f" oct="2" corresp="transcription.mei#n1qt93kv" type="pedal"/>
+                  <note dur="2" xml:id="h71" pname="f" oct="2" corresp="transcription.mei#n1qt93kv" type="pedal"/>
                   <rest dur="8" type="breath"/>
-                  <note dur="8" xml:id="h73" pname="e" oct="3" corresp="transcription.mei#n31oyt7"/>
-                  <note dur="8" xml:id="h74" pname="f" oct="3" corresp="transcription.mei#n4pgv9b"/>
-                  <note dur="8" xml:id="h75" pname="a" oct="3" corresp="transcription.mei#nicjai7"/>
+                  <note dur="8" xml:id="h72" pname="e" oct="3" corresp="transcription.mei#n31oyt7"/>
+                  <note dur="8" xml:id="h73" pname="f" oct="3" corresp="transcription.mei#n4pgv9b"/>
+                  <note dur="8" xml:id="h74" pname="a" oct="3" corresp="transcription.mei#nicjai7"/>
                 </layer>
               </staff>
               <breath staff="1" tstamp="3"/>
@@ -240,10 +237,10 @@
               <staff n="1">
                 <layer n="1">
                   <rest dur="8" type="breath"/>
-                  <note dur="8" xml:id="h76" pname="c" oct="3" corresp="transcription.mei#ny3j1yd"/>
-                  <note dur="2" xml:id="h77" pname="d" oct="3" corresp="transcription.mei#nkpzuzt"/>
+                  <note dur="8" xml:id="h75" pname="c" oct="3" corresp="transcription.mei#ny3j1yd"/>
+                  <note dur="2" xml:id="h76" pname="d" oct="3" corresp="transcription.mei#nkpzuzt"/>
                   <rest dur="8" type="breath"/>
-                  <note dur="8" xml:id="h78" pname="f" oct="3" accid="s" corresp="transcription.mei#n1d8eyr1"/>
+                  <note dur="8" xml:id="h77" pname="f" oct="3" accid="s" corresp="transcription.mei#n1d8eyr1"/>
                 </layer>
               </staff>
               <breath staff="1" tstamp="1"/>
@@ -252,22 +249,22 @@
             <measure n="12" label="11" corresp="transcription.mei#mieprmt" xml:id="m11">
               <staff n="1">
                 <layer n="1">
-                  <note dur="4" dots="1" xml:id="h79" pname="g" oct="3" corresp="transcription.mei#nzj3vm0"/>
-                  <note dur="8" xml:id="h80" pname="f" oct="3" accid="s" corresp="transcription.mei#n12igpp6"/>
-                  <note dur="4" dots="1" xml:id="h81" pname="g" oct="3" corresp="transcription.mei#nyt9pai"/>
-                  <note dur="8" xml:id="h82" pname="e" oct="3" accid="f" corresp="transcription.mei#nf58gnm"/>
+                  <note dur="4" dots="1" xml:id="h78" pname="g" oct="3" corresp="transcription.mei#nzj3vm0"/>
+                  <note dur="8" xml:id="h79" pname="f" oct="3" accid="s" corresp="transcription.mei#n12igpp6"/>
+                  <note dur="4" dots="1" xml:id="h80" pname="g" oct="3" corresp="transcription.mei#nyt9pai"/>
+                  <note dur="8" xml:id="h81" pname="e" oct="3" accid="f" corresp="transcription.mei#nf58gnm"/>
                 </layer>
               </staff>
             </measure>
             <measure n="13" label="12" corresp="transcription.mei#m11kpkv8" xml:id="m12">
               <staff n="1">
                 <layer n="1">
-                  <note dur="4" dots="1" xml:id="h83" pname="d" oct="3" corresp="transcription.mei#nrq15ic"/>
-                  <note dur="8" dots="1" xml:id="h84" pname="d" oct="3" head.shape="x" type="air-teeth" stem.visible="false" tie="i"/>
-                  <note dur="16" xml:id="h85" pname="d" oct="3" head.shape="x" type="air-teeth" stem.visible="false" tie="t"/>
+                  <note dur="4" dots="1" xml:id="h82" pname="d" oct="3" corresp="transcription.mei#nrq15ic"/>
+                  <note dur="8" dots="1" xml:id="h83" pname="d" oct="3" head.shape="x" type="air-teeth" stem.visible="false" tie="i"/>
+                  <note dur="16" xml:id="h84" pname="d" oct="3" head.shape="x" type="air-teeth" stem.visible="false" tie="t"/>
                   <rest dur="8" type="breath"/>
-                  <note dur="8" xml:id="h86" pname="g" oct="2" corresp="transcription.mei#ncfgztu"/>
-                  <note dur="16" xml:id="h87" pname="a" oct="2" corresp="transcription.mei#n19iiwko"/>
+                  <note dur="8" xml:id="h85" pname="g" oct="2" corresp="transcription.mei#ncfgztu"/>
+                  <note dur="16" xml:id="h86" pname="a" oct="2" corresp="transcription.mei#n19iiwko"/>
                   <rest dur="16" type="breath"/>
                 </layer>
               </staff>
@@ -277,7 +274,7 @@
             <measure n="14" label="13" corresp="transcription.mei#m7aznkt" xml:id="m13">
               <staff n="1">
                 <layer n="1">
-                  <note dur="1" xml:id="h88" pname="b" oct="2" accid.ges="f" corresp="transcription.mei#nvzg0f1" type="pedal"/>
+                  <note dur="1" xml:id="h87" pname="b" oct="2" accid.ges="f" corresp="transcription.mei#nvzg0f1" type="pedal"/>
                 </layer>
               </staff>
             </measure>
@@ -285,7 +282,7 @@
               <staff n="1">
                 <layer n="1">
                   <rest dur="4" type="breath"/>
-                  <note dur="2" dots="1" xml:id="h89" pname="a" oct="2" corresp="transcription.mei#n12abewe" type="pedal"/>
+                  <note dur="2" dots="1" xml:id="h88" pname="a" oct="2" corresp="transcription.mei#n12abewe" type="pedal"/>
                 </layer>
               </staff>
               <breath staff="1" tstamp="1"/>
@@ -293,9 +290,9 @@
             <measure n="16" label="15" corresp="transcription.mei#m1kbhkkm" xml:id="m15">
               <staff n="1">
                 <layer n="1">
-                  <note dur="4" dots="1" xml:id="h90" pname="d" oct="3" corresp="transcription.mei#n1jvwgn1"/>
-                  <note dur="8" xml:id="h91" pname="c" oct="3" accid="s" corresp="transcription.mei#ne23mm"/>
-                  <note dur="4" dots="1" xml:id="h92" pname="d" oct="3" corresp="transcription.mei#ns7w3yx"/>
+                  <note dur="4" dots="1" xml:id="h89" pname="d" oct="3" corresp="transcription.mei#n1jvwgn1"/>
+                  <note dur="8" xml:id="h90" pname="c" oct="3" accid="s" corresp="transcription.mei#ne23mm"/>
+                  <note dur="4" dots="1" xml:id="h91" pname="d" oct="3" corresp="transcription.mei#ns7w3yx"/>
                   <rest dur="8" type="breath"/>
                 </layer>
               </staff>
@@ -304,11 +301,11 @@
             <measure n="17" label="16" corresp="transcription.mei#m1mnhqrh" xml:id="m16">
               <staff n="1">
                 <layer n="1">
-                  <note dur="2" xml:id="h93" pname="a" oct="2" corresp="transcription.mei#n7qjuyp" tie="i"/>
-                  <note dur="8" xml:id="h94" pname="a" oct="2" tie="t"/>
-                  <note dur="8" xml:id="h95" pname="b" oct="2" accid.ges="f" corresp="transcription.mei#n1n8d528"/>
-                  <note dur="8" xml:id="h96" pname="c" oct="3" accid="n" corresp="transcription.mei#n1wmk5oy"/>
-                  <note dur="16" xml:id="h97" pname="c" oct="3" corresp="transcription.mei#nrx4267"/>
+                  <note dur="2" xml:id="h92" pname="a" oct="2" corresp="transcription.mei#n7qjuyp" tie="i"/>
+                  <note dur="8" xml:id="h93" pname="a" oct="2" tie="t"/>
+                  <note dur="8" xml:id="h94" pname="b" oct="2" accid.ges="f" corresp="transcription.mei#n1n8d528"/>
+                  <note dur="8" xml:id="h95" pname="c" oct="3" accid="n" corresp="transcription.mei#n1wmk5oy"/>
+                  <note dur="16" xml:id="h96" pname="c" oct="3" corresp="transcription.mei#nrx4267"/>
                   <rest dur="16" type="breath"/>
                 </layer>
               </staff>
@@ -317,7 +314,7 @@
             <measure n="18" label="17" corresp="transcription.mei#mc5hhmk" xml:id="m17">
               <staff n="1">
                 <layer n="1">
-                  <note dur="1" xml:id="h98" pname="f" oct="2" corresp="transcription.mei#n106t88r" type="pedal"/>
+                  <note dur="1" xml:id="h97" pname="f" oct="2" corresp="transcription.mei#n106t88r" type="pedal"/>
                 </layer>
               </staff>
             </measure>
@@ -325,11 +322,11 @@
               <staff n="1">
                 <layer n="1">
                   <rest dur="4" type="breath"/>
-                  <note dur="4" dots="1" xml:id="h99" pname="d" oct="3" corresp="transcription.mei#nlynh35" tie="i"/>
-                  <note dur="16" xml:id="h100" pname="d" oct="3" tie="t"/>
+                  <note dur="4" dots="1" xml:id="h98" pname="d" oct="3" corresp="transcription.mei#nlynh35" tie="i"/>
+                  <note dur="16" xml:id="h99" pname="d" oct="3" tie="t"/>
                   <rest dur="16" type="breath"/>
-                  <note dur="8" xml:id="h101" pname="c" oct="3" corresp="transcription.mei#n1o2z40g"/>
-                  <note dur="8" xml:id="h102" pname="b" oct="2" accid.ges="f" corresp="transcription.mei#n1mrqvbh"/>
+                  <note dur="8" xml:id="h100" pname="c" oct="3" corresp="transcription.mei#n1o2z40g"/>
+                  <note dur="8" xml:id="h101" pname="b" oct="2" accid.ges="f" corresp="transcription.mei#n1mrqvbh"/>
                 </layer>
               </staff>
               <breath staff="1" tstamp="1"/>
@@ -338,11 +335,11 @@
             <measure n="20" label="19" corresp="transcription.mei#m17rydmu" xml:id="m19">
               <staff n="1">
                 <layer n="1">
-                  <note dur="4" xml:id="h103" pname="a" oct="2" corresp="transcription.mei#nwx023v"/>
-                  <note dur="8" xml:id="h104" pname="b" oct="2" accid.ges="f" corresp="transcription.mei#na5fmln"/>
-                  <note dur="8" xml:id="h105" pname="a" oct="2" corresp="transcription.mei#nkn8twe"/>
-                  <note dur="4" xml:id="h106" pname="g" oct="2" corresp="transcription.mei#n1upvcik"/>
-                  <note dur="8" xml:id="h107" pname="f" oct="2" corresp="transcription.mei#n1i60aan"/>
+                  <note dur="4" xml:id="h102" pname="a" oct="2" corresp="transcription.mei#nwx023v"/>
+                  <note dur="8" xml:id="h103" pname="b" oct="2" accid.ges="f" corresp="transcription.mei#na5fmln"/>
+                  <note dur="8" xml:id="h104" pname="a" oct="2" corresp="transcription.mei#nkn8twe"/>
+                  <note dur="4" xml:id="h105" pname="g" oct="2" corresp="transcription.mei#n1upvcik"/>
+                  <note dur="8" xml:id="h106" pname="f" oct="2" corresp="transcription.mei#n1i60aan"/>
                   <rest dur="8" type="breath"/>
                 </layer>
               </staff>
@@ -351,14 +348,14 @@
             <measure n="21" label="20" corresp="transcription.mei#mugtmcl" xml:id="m20">
               <staff n="1">
                 <layer n="1">
-                  <note dur="8" dots="1" xml:id="h108" pname="f" oct="3" corresp="transcription.mei#nvo7t6h"/>
+                  <note dur="8" dots="1" xml:id="h107" pname="f" oct="3" corresp="transcription.mei#nvo7t6h"/>
                   <rest dur="16" type="breath"/>
-                  <note dur="8" xml:id="h109" pname="c" oct="3" corresp="transcription.mei#notbuk2"/>
-                  <note dur="8" xml:id="h110" pname="d" oct="3" corresp="transcription.mei#n1kr29sz"/>
-                  <note dur="8" xml:id="h111" pname="c" oct="3" corresp="transcription.mei#ngipoh7"/>
-                  <note dur="8" xml:id="h112" pname="b" oct="2" accid.ges="f" corresp="transcription.mei#n96slkt"/>
-                  <note dur="8" xml:id="h113" pname="g" oct="2" corresp="transcription.mei#ninh7ne"/>
-                  <note dur="8" xml:id="h114" pname="a" oct="2" corresp="transcription.mei#nv57jn4"/>
+                  <note dur="8" xml:id="h108" pname="c" oct="3" corresp="transcription.mei#notbuk2"/>
+                  <note dur="8" xml:id="h109" pname="d" oct="3" corresp="transcription.mei#n1kr29sz"/>
+                  <note dur="8" xml:id="h110" pname="c" oct="3" corresp="transcription.mei#ngipoh7"/>
+                  <note dur="8" xml:id="h111" pname="b" oct="2" accid.ges="f" corresp="transcription.mei#n96slkt"/>
+                  <note dur="8" xml:id="h112" pname="g" oct="2" corresp="transcription.mei#ninh7ne"/>
+                  <note dur="8" xml:id="h113" pname="a" oct="2" corresp="transcription.mei#nv57jn4"/>
                 </layer>
               </staff>
               <breath staff="1" tstamp="1.75"/>
@@ -366,31 +363,28 @@
             <measure n="22" label="21" corresp="transcription.mei#mgv7bvv" xml:id="m21">
               <staff n="1">
                 <layer n="1">
-                  <note dur="1" xml:id="h115" pname="f" oct="2" corresp="transcription.mei#n1rd0xeb" type="pedal"/>
+                  <note dur="1" xml:id="h114" pname="f" oct="2" corresp="transcription.mei#n1rd0xeb" type="pedal"/>
                 </layer>
               </staff>
             </measure>
             <measure n="23" label="22" corresp="transcription.mei#m114vcmq" xml:id="m22">
               <staff n="1">
                 <layer n="1">
-                  <rest dur="4" type="breath"/>
-                  <note dur="2" xml:id="h116" pname="d" oct="3" head.shape="x" type="air-teeth" stem.visible="false"/>
-                  <rest dur="4" type="breath"/>
+                  <rest dur="1" type="breath"/>
                 </layer>
               </staff>
               <breath staff="1" tstamp="1"/>
-              <breath staff="1" tstamp="4"/>
             </measure>
             <measure n="24" label="23" corresp="transcription.mei#mevbmxj" xml:id="m23">
               <staff n="1">
                 <layer n="1">
-                  <note dur="4" xml:id="h117" pname="c" oct="3" corresp="transcription.mei#noul1y4"/>
-                  <note dur="8" xml:id="h118" pname="b" oct="2" accid.ges="f" corresp="transcription.mei#n104n1t1"/>
-                  <note dur="8" xml:id="h119" pname="a" oct="2" corresp="transcription.mei#n1kmo182"/>
-                  <note dur="8" dots="1" xml:id="h120" pname="g" oct="2" corresp="transcription.mei#n1dj8c44"/>
+                  <note dur="4" xml:id="h115" pname="c" oct="3" corresp="transcription.mei#noul1y4"/>
+                  <note dur="8" xml:id="h116" pname="b" oct="2" accid.ges="f" corresp="transcription.mei#n104n1t1"/>
+                  <note dur="8" xml:id="h117" pname="a" oct="2" corresp="transcription.mei#n1kmo182"/>
+                  <note dur="8" dots="1" xml:id="h118" pname="g" oct="2" corresp="transcription.mei#n1dj8c44"/>
                   <rest dur="16" type="breath"/>
-                  <note dur="8" xml:id="h121" pname="b" oct="2" accid.ges="f" corresp="transcription.mei#nh7btqp"/>
-                  <note dur="8" xml:id="h122" pname="d" oct="3" corresp="transcription.mei#n158xhp4"/>
+                  <note dur="8" xml:id="h119" pname="b" oct="2" accid.ges="f" corresp="transcription.mei#nh7btqp"/>
+                  <note dur="8" xml:id="h120" pname="d" oct="3" corresp="transcription.mei#n158xhp4"/>
                 </layer>
               </staff>
               <breath staff="1" tstamp="3.75"/>
@@ -398,12 +392,12 @@
             <measure n="25" label="24" corresp="transcription.mei#m1vq3035" xml:id="m24">
               <staff n="1">
                 <layer n="1">
-                  <note dur="8" dots="1" xml:id="h123" pname="g" oct="3" corresp="transcription.mei#n1cc677x"/>
+                  <note dur="8" dots="1" xml:id="h121" pname="g" oct="3" corresp="transcription.mei#n1cc677x"/>
                   <rest dur="16" type="breath"/>
-                  <note dur="8" dots="1" xml:id="h124" pname="c" oct="3" corresp="transcription.mei#n16w4euy"/>
+                  <note dur="8" dots="1" xml:id="h122" pname="c" oct="3" corresp="transcription.mei#n16w4euy"/>
                   <rest dur="16" type="breath"/>
-                  <note dur="4" xml:id="h125" pname="f" oct="2" corresp="transcription.mei#n1qurr9w" type="pedal"/>
-                  <note dur="4" xml:id="h126" pname="d" oct="3" head.shape="x" type="air-lips" stem.visible="false"/>
+                  <note dur="4" xml:id="h123" pname="f" oct="2" corresp="transcription.mei#n1qurr9w" type="pedal"/>
+                  <note dur="4" xml:id="h124" pname="d" oct="3" head.shape="x" type="air-lips" stem.visible="false"/>
                 </layer>
               </staff>
               <breath staff="1" tstamp="1.75"/>
